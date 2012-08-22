@@ -6,11 +6,7 @@
 .titled-pane {
     -fx-effect: dropshadow(three-pass-box, #9F9F9F, 15, 0, 0, 0);
     -fx-animated: true;
-    -fx-text-fill: #606060;
-}
-
-.titled-pane:focused {
-    -fx-text-fill: black;
+    -fx-text-fill: #505050;
 }
 
 .titled-pane > .title  {
