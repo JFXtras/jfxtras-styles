@@ -1,0 +1,65 @@
+
+/**
+ * JavaFX CSS light grey/white theme.
+ */
+ 
+.titled-pane {
+    -fx-effect: dropshadow(three-pass-box, #9F9F9F, 15, 0, 0, 0);
+    -fx-animated: true;
+    -fx-text-fill: #606060;
+}
+
+.titled-pane:focused {
+    -fx-text-fill: black;
+}
+
+.titled-pane > .title  {
+    -fx-background-radius: 0, 0, 0;
+    -fx-font: bold 14px System;
+    
+    /* stop the background from being blue on focus */
+    -fx-background-color: ladder(
+            red,
+            black 20%,
+            derive(#d0d0d0,-30%) 30%
+        ), 
+        linear-gradient(
+        to bottom,
+            ladder(#d0d0d0, 
+                derive(#d0d0d0,80%) 60%, 
+                white 82%) 0%,
+            ladder(#d0d0d0, 
+                derive(#d0d0d0,20%) 10%, 
+                derive(#d0d0d0,-10%) 80%) 100%
+        ), linear-gradient(
+            to bottom,
+            derive(#d0d0d0,34%) 0%,
+            derive(#d0d0d0,-18%) 100%
+        );
+}
+
+.titled-pane:focused > .title > .arrow-button .arrow {
+    /* do not highlight the title pane arrow on focus */
+    -fx-background-color: #606060;
+}
+
+.tree-cell:odd {
+    /* shade every other line in a tree view */
+    -fx-background-color: #EEEEEE;
+}
+
+.button {
+    /* buttons do not have rounded corners */
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.menu-button {
+    /* the left side of the menu button is not rounded */
+    -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
+}
+
+.combo-box-base  {
+    /* the left side of the combo box is not rounded */
+    -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
+}
+
