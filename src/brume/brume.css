@@ -41,7 +41,22 @@
 
 .tree-cell:odd {
     /* shade every other line in a tree view */
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: derive(-fx-control-inner-background,-5%);
+}
+
+/* the previous css to shade every other cell overrides the selection 
+   colour, so put it back for odd cells */
+.tree-view:focused .tree-cell:filled:focused:selected:odd{
+    -fx-background-color: -fx-focus-color, -fx-cell-focus-inner-border, -fx-selection-bar;
+}
+
+/*  if you have labels within your tree nodes, then make the text light so 
+    that it stands out from the selection colour. */
+.tree-view:focused .tree-cell:filled:focused:selected:odd .label {
+    -fx-text-fill: -fx-light-text-color;
+}
+.tree-view:focused .tree-cell:filled:focused:selected:even .label {
+    -fx-text-fill: -fx-light-text-color;
 }
 
 .button {
