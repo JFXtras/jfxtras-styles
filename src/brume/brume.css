@@ -74,3 +74,23 @@
     -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
 }
 
+/* make the tooltip a slightly transparent black rectange with white text */
+.tooltip {
+    -fx-background-color: black;
+	-fx-opacity: 0.6;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0 0 0 0;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+	-fx-wrap-text:false;
+}
+.tooltip .label {
+	-fx-text-fill: white;
+}
+/* remove the turned page effect */
+.page-corner {
+    -fx-padding: 0;
+    -fx-background-color: null;
+    -fx-shape: null;
+    -fx-effect: null;
+}
+
