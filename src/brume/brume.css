@@ -1,6 +1,6 @@
 
 /**
- * JavaFX CSS light grey/white theme.
+ * JavaFX CSS Brume, light grey/white theme.
  */
  
 .titled-pane {
@@ -9,9 +9,10 @@
     -fx-text-fill: #505050;
 }
 
-.titled-pane > .title  {
+.titled-pane .title  {
     -fx-background-radius: 0, 0, 0;
     -fx-font: bold 14px System;
+    -fx-padding: 0.3em 0.833333em 0.35em 0.833333em;
     
     /* stop the background from being blue on focus */
     -fx-background-color: ladder(
@@ -61,12 +62,14 @@
 
 .button {
     /* buttons do not have rounded corners */
-    -fx-background-radius: 0, 0, 0, 0;
+    -fx-background-radius: 0;
+    -fx-label-padding: 0.3em 0.833333em 0.35em 0.833333em;
 }
 
 .menu-button {
     /* the left side of the menu button is not rounded */
     -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
+    -fx-label-padding: 0.3em 0.833333em 0.35em 0.833333em;
 }
 
 .combo-box-base  {
@@ -74,12 +77,16 @@
     -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
 }
 
+.combo-box .list-cell {
+    -fx-padding: 6 6 6 6;
+}
+
 /* make the tooltip a slightly transparent black rectange with white text */
 .tooltip {
     -fx-background-color: black;
 	-fx-opacity: 0.6;
     -fx-background-insets: 0,1,2;
-    -fx-background-radius: 0 0 0 0;
+    -fx-background-radius: 0;
     -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
 	-fx-wrap-text:false;
 }
@@ -94,3 +101,15 @@
     -fx-effect: null;
 }
 
+.toggle-button {
+    -fx-background-radius: 0;
+    -fx-label-padding: 0.3em 0.833333em 0.35em 0.833333em;
+}
+.check-box {
+    -fx-background-radius: 0;
+}
+
+.choice-box {
+	/* TODO add padding */
+    -fx-background-radius: 0;
+}
