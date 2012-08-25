@@ -69,16 +69,19 @@
 .menu-button {
     /* the left side of the menu button is not rounded */
     -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
-    -fx-label-padding: 0.3em 0.833333em 0.35em 0.833333em;
+}
+
+.menu-button .label {
+    -fx-label-padding: 0.23em 0.2em 0.24em 0.2em;
 }
 
 .combo-box-base  {
-    /* the left side of the combo box is not rounded */
+   the left side of the combo box is not rounded */
     -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
 }
 
 .combo-box .list-cell {
-    -fx-padding: 6 6 6 6;
+     /* -fx-padding: 6 6 6 6; */
 }
 
 /* make the tooltip a slightly transparent black rectange with white text */
