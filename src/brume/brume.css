@@ -76,7 +76,7 @@
 }
 
 .combo-box-base  {
-   the left side of the combo box is not rounded */
+    /* the left side of the combo box is not rounded */
     -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
 }
 
