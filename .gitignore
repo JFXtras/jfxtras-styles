@@ -1,6 +1,14 @@
 *.class
 
+
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Scene builder backup files
+*.bak
+
+# windows thumbnail files
+*.db
+

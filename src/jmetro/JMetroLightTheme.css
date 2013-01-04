@@ -415,6 +415,20 @@
     -fx-opacity: 0.4;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * ScrollPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-pane {
+    -fx-background-color: transparent,-fx-background;
+}
+
+.scroll-pane .corner {
+    -fx-background-color: white, #f0f0f0;
+}
+
 
 
 
