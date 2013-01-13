@@ -81,6 +81,55 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Toggle Button                                                               *
+ *                                                                             *
+ ******************************************************************************/
+
+.toggle-button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: #1d1d1d;
+  
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+}
+
+.toggle-button:focused {
+    -fx-border-color: white, white;
+
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.toggle-button:hover {
+    -fx-text-fill: #d8d8d8;
+    -fx-background-color: #3a3a3a;
+}
+
+.toggle-button:selected {
+    -fx-background-color: white;
+    -fx-text-fill: #1d1d1d;
+}
+
+.toggle-button:selected:hover {
+    -fx-background-color: #eee;
+    -fx-text-fill: #1d1d1d;
+    
+    -fx-border-color: #eee;
+}
+.toggle-button:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Check Box                                                                   *
  *                                                                             *
  ******************************************************************************/

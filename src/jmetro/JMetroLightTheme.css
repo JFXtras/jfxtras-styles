@@ -77,6 +77,52 @@
     -fx-background-color: #219297;
 }
 
+
+/*******************************************************************************
+ *                                                                             *
+ * Toggle Button                                                               *
+ *                                                                             *
+ ******************************************************************************/
+
+.toggle-button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-style: null; 
+    -fx-background-radius: 0;
+
+    -fx-background-color: #cccccc;
+  
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: black;
+}
+
+.toggle-button:focused {
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-border-style: segments(1, 1);
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;   
+}
+
+.toggle-button:hover {
+    -fx-background-color: #d8d8d8;
+    -fx-text-fill: black;
+}
+
+.toggle-button:selected {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected:hover {
+    -fx-background-color: #666;
+    -fx-text-fill: white;
+}
+
+.toggle-button:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+
 /*******************************************************************************
  *                                                                             *
  * Check Box                                                                   *
@@ -345,7 +391,7 @@
 
 /* The following is not working. Maybe related to RT-10521*/
 .scroll-bar .thumb:pressed {
-    -fx-color: #606060;
+    -fx-background-color: #606060;
 }
 
 
