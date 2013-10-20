@@ -12,3 +12,8 @@
 # windows thumbnail files
 *.db
 
+# Scenic View auxiliary file
+scenicView.properties
+
+# Intellij IDE output dir
+src/out/

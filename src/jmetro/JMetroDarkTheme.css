@@ -153,7 +153,7 @@
     -fx-background-insets: 0;
     
     -fx-padding:7px;
-    -fx-shape: "M1,10L3,8L7,12L14,5L16,7L7,16Z"
+    -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z"
 }
 
 .check-box:focused .box{
@@ -162,7 +162,7 @@
     -fx-background-radius: 0;
     -fx-border-color: white, #d1d1d1;
     -fx-border-width: 1, 2;
-    -fx-border-style: segments(1, 1), solid;
+    -fx-border-style: segments(1, 2), solid;
     -fx-border-insets: -3, 0;
 }
 

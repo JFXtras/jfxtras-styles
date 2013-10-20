@@ -148,7 +148,7 @@
     -fx-background-insets: 0;
     
     -fx-padding:7px;
-    -fx-shape: "M1,10L3,8L7,12L14,5L16,7L7,16Z"
+    -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z"
 }
 
 .check-box:focused .box{
@@ -157,7 +157,7 @@
     -fx-background-radius: 0;
     -fx-border-color: black, #bababa;
     -fx-border-width: 1, 2;
-    -fx-border-style: segments(1, 1), solid;
+    -fx-border-style: segments(1, 2), solid;
     -fx-border-insets: -3, 0;
 }
 
@@ -536,6 +536,60 @@
 {
     -fx-background-color: #d3d3d3;
     -fx-text-fill: #1d1d1d;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * ListSpinner (Jfxtras)                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.ListSpinner { 
+    -fx-skin: "jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.266667em 0.233333em 0.25em 0.233333em;
+    -fx-text-fill: #212121;
+}
+
+.ListSpinner:hover {
+    -fx-color: #f0f0f0;
+}
+
+.ListSpinner:focused { 
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;	
+}
+
+.ListSpinner .valuePane { 
+    -fx-padding: 0.0em 0.2em 0.0em 0.2em;
+}
+
+.ListSpinner .left-arrow { 
+    -fx-shape: "M4,-4 L0,0 L4,4 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .right-arrow { 
+    -fx-shape: "M0,-4 L4,0 L0,4 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .down-arrow { 
+    -fx-shape: "M-4,-2 L0,2 L4,-2 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .up-arrow { 
+    -fx-shape: "M4,2 L-4,2 L0,-2 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .idle {
+    -fx-background-color: -fx-mark-color;
+}
+.ListSpinner .clicked { 
+    -fx-background-color: -fx-focus-color;
 }
 
 
