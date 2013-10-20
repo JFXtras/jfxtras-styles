@@ -12,3 +12,10 @@
 # windows thumbnail files
 *.db
 
+# Scenic view auxiliary file
+scenicView.properties
+
+# Intellij IDEA output dir
+src/out/
+
+
