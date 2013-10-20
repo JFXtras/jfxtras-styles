@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet JMetroDarkTheme.css?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="373.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Radio Button">
+      <font>
+        <Font name="Segoe UI" size="30.0" />
+      </font>
+    </Label>
+    <Label layoutX="248.0" layoutY="132.0" styleClass="item-title" text="selected" textFill="WHITE">
+      <font>
+        <Font name="Segoe UI" size="12.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="40.0" layoutY="245.0" styleClass="item-title" text="Disabled unselected">
+      <textFill>
+        <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Label font="$x1" layoutX="248.0" layoutY="245.0" styleClass="item-title" text="Disabled selected" textFill="$x2" />
+    <Label font="$x1" layoutX="40.0" layoutY="132.0" styleClass="item-title" text="unselected" textFill="WHITE" />
+    <RadioButton layoutX="40.0" layoutY="162.0" mnemonicParsing="false" text="RadioButton" />
+    <RadioButton layoutX="248.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="RadioButton" />
+    <RadioButton disable="true" layoutX="43.0" layoutY="278.0" mnemonicParsing="false" text="RadioButton" />
+    <RadioButton disable="true" layoutX="248.0" layoutY="278.0" mnemonicParsing="false" selected="true" text="RadioButton" />
+  </children>
+</AnchorPane>
