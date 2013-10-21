@@ -24,6 +24,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -60,7 +61,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -74,9 +74,16 @@
         <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="15" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.3430878">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetro CheckBox.fxml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="JMetro CheckBox.fxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro/JMetro CheckBox.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="158" selection-start="896" selection-end="896" vertical-scroll-proportion="0.5816485">
+            <state line="11" column="147" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,29 +110,7 @@
         <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1382298864833" expanded="true" signature="10373:10397" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="10771:10870" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="10893:10987" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="11307:11500" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="11614:11691" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="12008:12025" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="12223:12271" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="12391:12395" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="12446:12582" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="12787:12841" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="13209:13373" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="13648:13849" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="13895:13900" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="13955:14058" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="14182:14252" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="14307:14429" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="14455:14539" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="14565:14633" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="14657:14734" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="14754:14855" placeholder="{...}" />
-                <marker date="1382298864833" expanded="true" signature="14878:14920" placeholder="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +118,7 @@
       <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="35" selection-start="4145" selection-end="4145" vertical-scroll-proportion="0.0">
+            <state line="164" column="35" selection-start="4213" selection-end="4213" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,8 +140,8 @@
         <option value="$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml" />
         <option value="$PROJECT_DIR$/jmetro/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/JMetroDarkTheme.css" />
-        <option value="$PROJECT_DIR$/jmetro/Main.java" />
         <option value="$PROJECT_DIR$/jmetro/JMetro CheckBox.fxml" />
+        <option value="$PROJECT_DIR$/jmetro/Main.java" />
       </list>
     </option>
   </component>
@@ -180,7 +165,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -195,8 +180,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,6 +214,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,6 +250,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -291,19 +289,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -405,8 +390,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6705998" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32940018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6715831" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284169" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -485,9 +470,14 @@
     <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="67" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -498,9 +488,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
+    <entry file="file://$PROJECT_DIR$/jmetro/JMetro CheckBox.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="35" selection-start="4145" selection-end="4145" vertical-scroll-proportion="0.0">
+        <state line="11" column="147" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -508,35 +498,55 @@
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1382298864833" expanded="true" signature="10373:10397" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="10771:10870" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="10893:10987" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="11307:11500" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="11614:11691" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="12008:12025" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="12223:12271" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="12391:12395" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="12446:12582" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="12787:12841" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="13209:13373" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="13648:13849" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="13895:13900" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="13955:14058" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="14182:14252" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="14307:14429" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="14455:14539" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="14565:14633" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="14657:14734" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="14754:14855" placeholder="{...}" />
-            <marker date="1382298864833" expanded="true" signature="14878:14920" placeholder="{...}" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="35" selection-start="4213" selection-end="4213" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="73" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetro CheckBox.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="158" selection-start="896" selection-end="896" vertical-scroll-proportion="0.5816485">
+        <state line="11" column="147" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="35" selection-start="4213" selection-end="4213" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="15" selection-start="2377" selection-end="2377" vertical-scroll-proportion="0.3430878">
           <folding />
         </state>
       </provider>

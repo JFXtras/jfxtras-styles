@@ -12,6 +12,7 @@
 # windows thumbnail files
 *.db
 
+<<<<<<< HEAD
 # Scenic view auxiliary file
 scenicView.properties
 
@@ -19,3 +20,10 @@ scenicView.properties
 src/out/
 
 
+=======
+# Scenic View auxiliary file
+scenicView.properties
+
+# Intellij IDE output dir
+src/out/
+>>>>>>> refs/heads/jmetro
