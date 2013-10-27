@@ -36,8 +36,14 @@ import javafx.stage.Stage;
 import org.scenicview.ScenicView;
 
 public class Main extends Application {
-    static final String RESOURCE = "JMetro CheckBox.fxml";
-    static final String STYLE_SHEET = "JMetroLightTheme.css";
+    static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
+    static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
+    static final String RESOURCE = CONTEXT_MENU_RESOURCE;
+
+    static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
+    static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
+
+    static final String STYLE_SHEET = DARK_STYLE_SHEET;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
