@@ -159,15 +159,15 @@
     -fx-border-insets: -3, 0;
 }
 
-.check-box:selected > .box > .mark {
-    -fx-background-color: yellow;
+.check-box:indeterminate > .box > .mark {
+    -fx-background-color: black !important; /* TODO: There is css code in Modena that is using important so have to do this so far - come back when it gets changed in Modena */
+    -fx-background-insets: 2.8;
+    -fx-padding:7px;
+    -fx-shape: null;
 }
 
-.check-box:indeterminate > .box > .mark {
-   -fx-background-color: black; 
-   -fx-background-insets: 2.8; 
-   -fx-padding:7px;
-   -fx-shape: null;
+.check-box:selected > .box > .mark{
+    -fx-background-color: black !important; /* TODO: There is css code in Modena that is using important so have to do this so far - come back when it gets changed in Modena */
 }
 
 .check-box:disabled
@@ -179,7 +179,6 @@
 {
     -fx-background-color: #cdcdcd;
     -fx-border-color: #aaa;
-
 }
 
 .check-box:armed > .box
@@ -187,7 +186,22 @@
     -fx-background-color: white, black;
     -fx-background-insets: -1, 2;
     -fx-background-radius: 0, 0;
+    -fx-border-color: black;
 }
+
+.check-box:pressed:selected > .box > .mark
+{
+    -fx-background-color: white !important; /* TODO: There is css code in Modena that is using important so have to do this so far - come back when it gets changed in Modena */
+}
+
+.check-box:armed > .box > .mark
+{
+    -fx-background-color: black;
+}
+
+
+
+
 
 /*.check-box:armed > .box > .mark*/
 /*{*/
