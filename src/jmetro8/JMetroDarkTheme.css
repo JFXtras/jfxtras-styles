@@ -178,7 +178,7 @@
 
 .check-box:indeterminate > .box > .mark {
    -fx-background-color: black !important;
-   -fx-background-insets: 2.8; 
+   -fx-background-insets: 2.8;
    -fx-padding:7px;
    -fx-shape: null;
 }

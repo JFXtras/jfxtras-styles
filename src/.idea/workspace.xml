@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro.iml" afterPath="$PROJECT_DIR$/jmetro.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383092560066" ignored="false" />
+    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383095243889" ignored="false" />
     <file path="/Controller.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381051202" ignored="false" />
     <file path="/sample.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381080865" ignored="false" />
-    <file path="/fragment.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382294028614" ignored="false" />
+    <file path="/fragment.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383095139726" ignored="false" />
     <file path="/JMetro ComboBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288192753" ignored="false" />
     <file path="/JMetro CheckBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288260919" ignored="false" />
-    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383086334657" ignored="false" />
+    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383095647445" ignored="false" />
     <file path="/JMetroLightTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383086684956" ignored="false" />
-    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383082338744" ignored="false" />
+    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383095116759" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,46 +78,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="80" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.38694993">
+            <state line="46" column="54" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetro ComboBox.fxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml">
+      <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="73" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JMetro CheckBox.fxml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmetro/JMetro CheckBox.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="147" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="34" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="24" selection-start="939" selection-end="990" vertical-scroll-proportion="0.0">
+            <state line="161" column="54" selection-start="4095" selection-end="4095" vertical-scroll-proportion="0.35508347">
               <folding />
             </state>
           </provider>
@@ -144,6 +122,8 @@
         <option value="$PROJECT_DIR$/jmetro/JMetroDarkTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/Main.java" />
+        <option value="$PROJECT_DIR$/jmetro8/Main.java" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
       </list>
     </option>
   </component>
@@ -182,7 +162,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,13 +190,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jmetro" />
+              <option name="myItemId" value="jmetro8" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,7 +209,7 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -507,29 +487,134 @@
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="164" column="35" selection-start="4213" selection-end="4213" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="67" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml">
@@ -549,55 +634,288 @@
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="164" column="35" selection-start="4213" selection-end="4213" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.01711984" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="73" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0">
+        <state line="18" column="73" selection-start="758" selection-end="758" vertical-scroll-proportion="0.02631579">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetro CheckBox.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="147" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.01711984">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="24" selection-start="939" selection-end="990" vertical-scroll-proportion="0.0">
+        <state line="11" column="147" selection-start="461" selection-end="461" vertical-scroll-proportion="0.13157895">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="34" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.0">
+        <state line="44" column="34" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.025796661">
+          <folding>
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359070886000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="24" selection-start="989" selection-end="989" vertical-scroll-proportion="0.025796661">
+          <folding>
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1359305134000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="54" selection-start="2296" selection-end="2296" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="80" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.38694993">
+        <state line="161" column="54" selection-start="4095" selection-end="4095" vertical-scroll-proportion="0.35508347">
           <folding />
         </state>
       </provider>
