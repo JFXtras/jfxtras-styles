@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro/Main.java" afterPath="$PROJECT_DIR$/jmetro/Main.java" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383092560066" ignored="false" />
@@ -78,7 +76,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="14" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.6191199">
+            <state line="45" column="80" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.38694993">
               <folding />
             </state>
           </provider>
@@ -599,7 +597,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="14" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.6191199">
+        <state line="45" column="80" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.38694993">
           <folding />
         </state>
       </provider>

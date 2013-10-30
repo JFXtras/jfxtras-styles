@@ -31,7 +31,6 @@
 
 .button {
     -fx-padding: 5 22 5 22;   
-
     -fx-border-color: #e2e2e2;
     -fx-border-width: 2;
 
@@ -57,8 +56,8 @@
 .button:focused
 {
     -fx-border-color: white, white;
-    -fx-border-width: 1, 2;
-    -fx-border-style: solid, segments(1, 2);
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
     -fx-border-radius: 0, 0;
     -fx-border-insets: 1 1 1 1, 0;
 }
@@ -139,7 +138,7 @@
     -fx-text-fill: white;
 }
 
-.check-box > .box {
+.check-box .box {
     -fx-background-color: #d1d1d1;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
@@ -149,35 +148,30 @@
     -fx-padding: 1;
 }
 
-.check-box > .box > .mark {
+.check-box .mark {
     -fx-background-color: transparent;
     -fx-background-insets: 0;
     
     -fx-padding:7px;
-    -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z"
+    -fx-shape: "M1,10L3,8L7,12L14,5L16,7L7,16Z"
 }
 
-.check-box:focused > .box{
+.check-box:focused .box{
     -fx-background-color: #d1d1d1;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
     -fx-border-color: white, #d1d1d1;
     -fx-border-width: 1, 2;
-    -fx-border-style: segments(1, 2), solid;
+    -fx-border-style: segments(1, 1), solid;
     -fx-border-insets: -3, 0;
 }
 
-.check-box:pressed > .box{
-    -fx-border-color: white, white;
-
+.check-box:selected .mark {
+    -fx-background-color: #202020;
 }
 
-.check-box:selected > .box > .mark {
-    -fx-background-color: black !important;
-}
-
-.check-box:indeterminate > .box > .mark {
-   -fx-background-color: black !important;
+.check-box:indeterminate .mark {
+   -fx-background-color: black; 
    -fx-background-insets: 2.8; 
    -fx-padding:7px;
    -fx-shape: null;
@@ -188,19 +182,13 @@
     -fx-opacity: 0.4;
 }
 
-.check-box:disabled > .box
+.check-box:disabled .box
 {
     -fx-border-color: white;
     -fx-background-color: white;
 }
 
-.check-box:disabled:selected > .box > .mark
-{
-    -fx-background-color: #4c4c4c !important;
-    -fx-opacity: 0.5;
-}
-
-.check-box:armed > .box
+.check-box:armed .box
 {
     -fx-background-color: transparent, white;
     -fx-background-insets: -1, 2;
@@ -332,7 +320,7 @@
 
 /*******************************************************************************
  *                                                                             *
- * Context Menu                                                                *
+ * PopupMenu                                                                   *
  *                                                                             *
  ******************************************************************************/
 
@@ -340,7 +328,7 @@
     -fx-background-color: white;
     -fx-background-insets: 0, 1, 2;
     -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
-    -fx-padding: 0.5em 0em 0.5em 0em; /* 6 0 6 0 */
+    -fx-padding: 0.333333em 0em 0.333333em 0em; /* 4 1 4 1 */
     
     /* TODO: the border color below is not being respected - it appears as gray instead of black. After this gets fixed remove the comments so that
        the border will become black.
@@ -349,18 +337,21 @@
     -fx-border-style: solid;*/
 }
 
-.context-menu .separator {
-    -fx-padding: 0.58333275em 1.333332em 0.58333275em 1.333332em;  /*7 16 7 16 */
+.context-menu .separator .line{
+    -fx-padding: 0.0em 0.333333em 0.0em 0.333333em;  /*0 4 0 4 */
+    -fx-border-style: solid;
+    -fx-background-color: #c2c2c2;
+    -fx-border-width: 0.5px;
 }
 
 /* TODO: try to scope the menu-item style to the contextmenu */
 .menu-item {
     -fx-background-color: transparent;
-    -fx-padding: 0.666666em 1.333332em 0.666666em 1.333332em;   /*8 16 8 16 */
+    -fx-padding: 0.666666em 0.999999em 0.4999995em 0.999999em;   /*6 12 6 12 */
 }
 
 .menu-item .label {
-    -fx-padding: 0em 1.333332em 0em 0em;
+    -fx-padding: 0em 0.5em 0em 0em;
     -fx-text-fill: #212121;
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
@@ -559,22 +550,99 @@
     -fx-text-fill: #1d1d1d;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * ListSpinner (Jfxtras)                                                       *
+ *                                                                             *
+ ******************************************************************************/
 
+.list-spinner { 
+    -fx-skin: "jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0em 0em 0em 0em;
+    
+    -fx-border-color: white;
+    -fx-border-width: 3pt;
+    -fx-border-style: solid;
+    
+    -fx-text-fill: white;
+}
 
+/*.list-spinner:hover {
+    -fx-background-color: #727272;
+}*/
 
+/*.ListSpinner:focused { 
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;	
+}*/
 
+.list-spinner .value-pane { 
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
 
+.list-spinner .decrement-button, .list-spinner .increment-button
+{
+    -fx-background-color: transparent;
+    -fx-padding: 1.2500em 0.2500em 1.2500em 0.2500em; /* 15 3 15 3*/
+}
 
+.list-spinner .left-arrow { 
+    -fx-shape: "M301,415.5l-4.5,4.5l4.5,4.5h-3l-4.5-4.5l4.5-4.5H301z";
+    -fx-scale-shape: false;
+}
 
+.list-spinner .decrement-button:hover {
+    -fx-background-color: #cacaca;
+}
 
+.list-spinner .decrement-button:pressed {
+    -fx-background-color: #1e1e1e;
+    
+}
+.list-spinner .decrement-button:pressed .left-arrow{ 
+    -fx-background-color: white;
+}
 
+.list-spinner .right-arrow { 
+    -fx-shape: "M296.5,415.5l4.5,4.5l-4.5,4.5h-3l4.5-4.5l-4.5-4.5H296.5z";
+    -fx-scale-shape: false;
+}
 
+.list-spinner .increment-button:hover {
+    -fx-background-color: #cacaca;
+}
 
+.list-spinner .increment-button:pressed {
+    -fx-background-color: #1e1e1e;
+    
+}
+.list-spinner .increment-button:pressed .right-arrow {
+    -fx-background-color: white;
+}
 
+.list-spinner .down-arrow { 
+    -fx-shape: "M292.5,416.25l4.5,4.5l4.5-4.5v3l-4.5,4.5l-4.5-4.5V416.25z";
+    -fx-scale-shape: false;
+}
+.list-spinner .up-arrow { 
+    -fx-shape: "M292.5,420.75l4.5-4.5l4.5,4.5v3l-4.5-4.5l-4.5,4.5V420.75z";
+    -fx-scale-shape: false;
+}
 
+.list-spinner .label
+{
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: white;    
+}
 
-
-
-
+.list-spinner:disabled {
+    -fx-opacity: .4;
+    
+}
 
 
