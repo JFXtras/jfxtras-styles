@@ -38,13 +38,14 @@ import org.scenicview.ScenicView;
 public class Main extends Application {
     static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
     static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
-    static final String PUSH_BUTTON_RESOURCE = "JMetro Push_Button.fxml";
-    static final String RESOURCE = CHECK_BOX_RESOURCE;
+    static final String PUSH_BUTTON_RESOURCE = "JMetro PushButton.fxml";
+    static final String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
+    static final String RESOURCE = RADIO_BUTTON_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
 
-    static final String STYLE_SHEET = DARK_STYLE_SHEET;
+    static final String STYLE_SHEET = LIGHT_STYLE_SHEET;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

@@ -33,8 +33,6 @@
 .button {
     -fx-padding: 5 22 5 22;
 
-    /*-fx-border-style: null;*/
-    /*-fx-border-width: 1;*/
     -fx-border-color: transparent;
     -fx-border-width: 2;
 
@@ -64,12 +62,6 @@
     -fx-border-style: solid, segments(1, 2);
     -fx-border-radius: 0, 0;
     -fx-border-insets: 1 1 1 1, 0;
-
-    /*-fx-border-color: white, white;*/
-    /*-fx-border-width: 1, 2;*/
-    /*-fx-border-style: solid, segments(1, 2);*/
-    /*-fx-border-radius: 0, 0;*/
-    /*-fx-border-insets: 1 1 1 1, 0;*/
 }
 
 .button:disabled, .button:default:disabled
@@ -211,14 +203,6 @@
     -fx-background-color: black;
 }
 
-
-
-
-
-/*.check-box:armed > .box > .mark*/
-/*{*/
-  /*-fx-background-color: white;*/
-/*}*/
 
 /*******************************************************************************
  *                                                                             *
