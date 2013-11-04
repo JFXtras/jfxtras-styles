@@ -217,7 +217,7 @@
     -fx-text-fill: white;
 }
 
-.radio-button .radio  {
+.radio-button > .radio  {
    -fx-background-color: #cfcfcf;
    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
    -fx-background-insets: 0;
@@ -228,21 +228,20 @@
    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
 }
 
-.radio-button:hover .radio {
+.radio-button:hover > .radio {
     -fx-background-color: #e0e0e0;
     -fx-border-color: #e0e0e0;
 }
 
-
-.radio-button .dot {
+.radio-button > .radio > .dot {
    -fx-background-color: transparent;
    -fx-background-insets: 0;
    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
    -fx-padding: 6px; /* 3 -- radius of the inner black dot when selected */
 }
 
-.radio-button:selected .dot {
-   -fx-background-color: #212121;
+.radio-button:selected > .radio > .dot {
+   -fx-background-color: #212121 !important; /* TODO: There is css code in Modena that is using important so have to do this so far - come back when it gets changed in Modena */
 }
 
 .radio-button:disabled
@@ -250,19 +249,25 @@
     -fx-opacity: 0.5;
 }
 
-.radio-button:disabled .radio
+.radio-button:disabled > .radio
 {
     -fx-background-color: #e6e6e6;
     -fx-border-color: #d9d9d9;
 }
 
-.radio-button:focused .radio
+.radio-button:disabled:selected > .radio > .dot
+{
+    -fx-background-color: #484848 !important; /* TODO: There is css code in Modena that is using important so have to do this so far - come back when it gets changed in Modena */
+}
+
+
+.radio-button:focused > .radio
 {
    -fx-background-color: #cfcfcf;
    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
    -fx-background-insets: 0;
    
-   -fx-border-style: solid, segments(1, 1);
+   -fx-border-style: solid, segments(1, 2);
    -fx-border-radius: 1.0em, 0;
    -fx-border-color: #cfcfcf, white;
    -fx-border-insets: 0px, -2px;
@@ -271,40 +276,27 @@
    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
 }
 
-.radio-button:armed .radio {
-    -fx-background-color: white;
-    -fx-border-color: white;
+.radio-button:focused:hover > .radio
+{
+    -fx-border-color: #e0e0e0, #e0e0e0;
+    -fx-background-color: #e0e0e0;
 }
 
-.radio-button:pressed:selected .radio
+.radio-button:focused:pressed > .radio
+{
+    -fx-border-color: white, white;
+    -fx-background-color: white;
+}
+
+.radio-button:pressed > .radio
 {
     -fx-background-color: white;
     -fx-border-color: white;
 }
 
-.radio-button:pressed:selected .dot
+.radio-button:pressed:selected > .radio > .dot
 {
     -fx-background-color: black;
-}
-
-.radio-button:armed .dot
-{
-    -fx-background-color: white;
-}
-
-.radio-button:focused:armed .radio
-{
-   -fx-background-color: white;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-background-insets: 0;
-   
-   -fx-border-style: solid, segments(1, 1);
-   -fx-border-radius: 1.0em, 0;
-   -fx-border-color: white, white;
-   -fx-border-insets: 0px, -2px;
-   -fx-border-width: 1px, 1px;
-    
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
 }
 
 /*******************************************************************************
