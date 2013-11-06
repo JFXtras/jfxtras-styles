@@ -40,7 +40,9 @@ public class Main extends Application {
     static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
     static final String PUSH_BUTTON_RESOURCE = "JMetro PushButton.fxml";
     static final String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
-    static final String RESOURCE = RADIO_BUTTON_RESOURCE;
+    static final String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
+
+    static final String RESOURCE = SCROLL_BAR_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";

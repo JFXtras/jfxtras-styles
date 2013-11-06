@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\Pedro\Documents\Jfxtras\jfxtras-styles\src\jmetro8\JMetro Scroll_Bar.fxml" afterPath="$PROJECT_DIR$/jmetro8/JMetro ScrollBar.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
@@ -9,38 +10,38 @@
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383232761928" ignored="false" />
+    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383699822277" ignored="false" />
     <file path="/Controller.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381051202" ignored="false" />
     <file path="/sample.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381080865" ignored="false" />
-    <file path="/fragment.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383524319089" ignored="false" />
+    <file path="/fragment.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613810734" ignored="false" />
     <file path="/JMetro ComboBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288192753" ignored="false" />
     <file path="/JMetro CheckBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288260919" ignored="false" />
-    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383515124132" ignored="false" />
-    <file path="/JMetroLightTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383503385742" ignored="false" />
-    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383596639814" ignored="false" />
+    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383698995599" ignored="false" />
+    <file path="/JMetroLightTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383692217433" ignored="false" />
+    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383690872985" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ExtendedLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179351867" ignored="false" />
     <file path="/ExtendedLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383180389953" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/SelectableLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383180390713" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383524338141" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/SelectableLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383606981045" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383597310093" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ISelectableLineChartListener.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179713078" ignored="false" />
     <file path="/ISelectableLineChartListener.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179713078" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ModellusLegendItem.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179727480" ignored="false" />
     <file path="/ModellusLegendItem.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179681407" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ModellusLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179665540" ignored="false" />
-    <file path="/SelectableLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383180019633" ignored="false" />
-    <file path="/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383524269538" ignored="false" />
+    <file path="/SelectableLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383606979966" ignored="false" />
+    <file path="/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613059201" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ChartInternalFrame.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181156061" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/SeriesRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383180877437" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181024046" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/HorizontalAxisBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261657009" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/ModeBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261674241" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/ChartRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383267063912" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/OptionsBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261677864" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/VerticalAxisBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261681305" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383263184271" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/SeriesRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383496797582" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/HorizontalAxisBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/ModeBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/ChartRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/OptionsBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/VerticalAxisBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618203354" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/SeriesRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383612942933" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Vector/VectorPropertiesTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181268176" ignored="false" />
-    <file path="/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383263176925" ignored="false" />
+    <file path="/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618202151" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/AnimationComponentSituationPickerWrapper.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181521719" ignored="false" />
     <file path="/AnimationComponentSituationPickerWrapper.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181522029" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Text/TextValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264882659" ignored="false" />
@@ -51,7 +52,7 @@
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Variable/VariableValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264806596" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Analog/AnalogValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264787744" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/LevelIndicator/LevelValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264781326" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Particle/ParticleValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264747050" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Particle/ParticleValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613656207" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Origin/OriginValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264816578" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/GeometricObject/GeometricObjectValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264754237" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Pencil/PencilValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264736937" ignored="false" />
@@ -60,20 +61,57 @@
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Cases/VariableSituationComponent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383184087254" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/RibbonSituationPicker.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383184149483" ignored="false" />
     <file path="/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383232761925" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/modena/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383232773178" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/modena/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/LineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261322745" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/lineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383262655957" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/lineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383609519035" ignored="false" />
     <file path="/lineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383262651035" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/titles.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264702450" ignored="false" />
     <file path="/titles.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264702450" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modelllus.ModellusFrame/src/ModellusFrame.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383263644093" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/ModellusMainPanel.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383263641726" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/LineChartInternalFrame.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264730009" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/LineChartInternalFrame.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383610600770" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Particle/ParticleContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383519545917" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/SeriesContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383523786929" ignored="false" />
-    <file path="/SeriesContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383523785857" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/SeriesContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613992341" ignored="false" />
+    <file path="/SeriesContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613991424" ignored="false" />
     <file path="/a.dummy" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383524319089" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/XYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383524338141" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/XYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383619000758" ignored="false" />
+    <file path="/SeriesRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383612942234" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/java/modena/SamplePage.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/graphics/src/main/java/javafx/scene/Node.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/swing/src/main/java/javafx/embed/swing/JFXPanel.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/java/modena/Modena.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/resources/modena/simple-window.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/caspian/caspian.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/java/modena/SimpleWindowPage.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
+    <file path="/XYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618993763" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/Controller/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613065905" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/Controller/LineChartSeriesController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617902519" ignored="false" />
+    <file path="/LineChartSeriesController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617898046" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationPanel.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383606439429" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Utils/UI/Ribbon/ExtendedRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383607093335" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/DeleteBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613112356" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/ViewBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613030201" ignored="false" />
+    <file path="/DeleteBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613046119" ignored="false" />
+    <file path="/ViewBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613002921" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/ImageComponent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Particle/CustomAnimationViewFactory.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Selection/RotatingAxesSelection.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Animator/RibbonTask/BackgroundBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Particle/CustomImageViewFactory.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Selection/UniformResizeSelection.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Utils/SwingUtils.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617970831" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/AnimationComponent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationPropertyPainter.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/GridPersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/AnimatorPersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/ParticlePersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Selection/ResizeSelection.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/BackgroundPersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/IXYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618165407" ignored="false" />
+    <file path="/IXYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618164981" ignored="false" />
+    <file path="/SwingUtils.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617968531" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Utils/ModellusColorPallete.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618702605" ignored="false" />
+    <file path="/ModellusColorPallete.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618610057" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +126,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -124,7 +163,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -137,7 +175,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="51" selection-start="2759" selection-end="2759" vertical-scroll-proportion="0.46223566">
+            <state line="49" column="54" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.48865354">
               <folding />
             </state>
           </provider>
@@ -146,7 +184,7 @@
       <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="0" selection-start="6509" selection-end="6509" vertical-scroll-proportion="0.0">
+            <state line="441" column="21" selection-start="12322" selection-end="12322" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,7 +193,7 @@
       <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="0" selection-start="5142" selection-end="5142" vertical-scroll-proportion="0.0">
+            <state line="457" column="4" selection-start="12650" selection-end="12667" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -187,8 +225,8 @@
         <option value="$PROJECT_DIR$/jmetro/JMetroDarkTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/Main.java" />
-        <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/Main.java" />
       </list>
     </option>
@@ -228,6 +266,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -263,7 +302,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -283,9 +321,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -300,6 +338,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -328,19 +379,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -441,33 +479,33 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6741904" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32580963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32580963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -605,21 +643,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="0" selection-start="5142" selection-end="5142" vertical-scroll-proportion="0.0">
+        <state line="457" column="4" selection-start="12650" selection-end="12667" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="0" selection-start="6509" selection-end="6509" vertical-scroll-proportion="0.0">
+        <state line="441" column="21" selection-start="12322" selection-end="12322" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="51" selection-start="2759" selection-end="2759" vertical-scroll-proportion="0.46223566">
+        <state line="49" column="54" selection-start="2443" selection-end="2443" vertical-scroll-proportion="0.48865354">
           <folding />
         </state>
       </provider>
