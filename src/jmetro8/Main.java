@@ -41,13 +41,14 @@ public class Main extends Application {
     static final String PUSH_BUTTON_RESOURCE = "JMetro PushButton.fxml";
     static final String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
     static final String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
+    static final String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
 
-    static final String RESOURCE = SCROLL_BAR_RESOURCE;
+    static final String RESOURCE = SCROLL_PANE_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
 
-    static final String STYLE_SHEET = DARK_STYLE_SHEET;
+    static final String STYLE_SHEET = LIGHT_STYLE_SHEET;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -58,7 +59,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-//        ScenicView.show(scene);
+        ScenicView.show(scene);
     }
 
 

@@ -464,11 +464,17 @@
  ******************************************************************************/
 
 .scroll-pane {
-    -fx-background-color: transparent,-fx-background;
+    -fx-background-color: transparent, transparent;
 }
 
+/*.scroll-pane .corner {*/
+    /*-fx-background-color: white, #f0f0f0;*/
+/*}*/
+
 .scroll-pane .corner {
-    -fx-background-color: white, #f0f0f0;
+    -fx-background-radius: 0 0 0 0;
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 1 0 0 1; /* have the square on the corner be centered */
 }
 
 
