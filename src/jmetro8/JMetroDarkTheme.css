@@ -104,7 +104,7 @@
     -fx-border-color: white, white;
 
     -fx-border-width: 1, 1;
-    -fx-border-style: solid, segments(1, 1);
+    -fx-border-style: solid, segments(1, 2);
     -fx-border-radius: 0, 0;
     -fx-border-insets: 1 1 1 1, 0;
 }
@@ -126,7 +126,7 @@
     -fx-border-color: #eee;
 }
 .toggle-button:disabled {
-    -fx-opacity: -fx-disabled-opacity;
+    -fx-opacity: 0.4;
 }
 
 /*******************************************************************************
