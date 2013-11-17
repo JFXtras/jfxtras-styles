@@ -43,13 +43,15 @@ public class Main extends Application {
     static final String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
     static final String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
     static final String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
+    static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
+    static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
 
-    static final String RESOURCE = TOGGLE_BUTTON_RESOURCE;
+    static final String RESOURCE = COMBOBOX_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
 
-    static final String STYLE_SHEET = DARK_STYLE_SHEET;
+    static final String STYLE_SHEET = LIGHT_STYLE_SHEET;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
