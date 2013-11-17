@@ -305,22 +305,21 @@
  *                                                                             *
  ******************************************************************************/
 
-/*.tooltip {
+.tooltip {
     -fx-background-color: white;
     -fx-background-insets: 0;
     -fx-background-radius: 0 0 0 0;
-    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em;  4 8 4 8 
-    -fx-effect: dropshadow( one-pass-box , #808080 , 5, 0.0 , 0 , 0 );
-    -fx-font-family: "Segoe UI Semilight", "Segoe UI Light", "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-text-fill: #949494;
-}
 
-.page-corner {
-    -fx-padding: 4.5 4.5 4.5 4.5;
-    -fx-background-color: transparent;
-    -fx-shape: null;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em;  /*4 8 4 8 */
+
+    -fx-font-family: "Segoe UI Semilight", "Segoe UI Light", "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-text-fill: rgba(0, 0, 0, 0.6);
+
+    -fx-border-color: #808080;
+    -fx-border-width: 2px;
+
     -fx-effect: null;
-}*/
+}
 
 /*******************************************************************************
  *                                                                             *

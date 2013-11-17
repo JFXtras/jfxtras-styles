@@ -46,7 +46,7 @@ public class Main extends Application {
     static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
     static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
 
-    static final String RESOURCE = COMBOBOX_RESOURCE;
+    static final String RESOURCE = TOOLTIP_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
@@ -62,7 +62,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        ScenicView.show(scene);
+//        ScenicView.show(scene);
     }
 
 
