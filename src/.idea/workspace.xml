@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml" afterPath="$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml" afterPath="$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,11 +14,11 @@
     <file path="/Controller.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381051202" ignored="false" />
     <file path="/sample.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381080865" ignored="false" />
     <file path="/fragment.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613810734" ignored="false" />
-    <file path="/JMetro ComboBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288192753" ignored="false" />
+    <file path="/JMetro ComboBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385313665381" ignored="false" />
     <file path="/JMetro CheckBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288260919" ignored="false" />
-    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384021588973" ignored="false" />
-    <file path="/JMetroLightTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384714687409" ignored="false" />
-    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384713586493" ignored="false" />
+    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384980602384" ignored="false" />
+    <file path="/JMetroLightTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385312271150" ignored="false" />
+    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385307656111" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ExtendedLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179351867" ignored="false" />
     <file path="/ExtendedLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383180389953" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/SelectableLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383606981045" ignored="false" />
@@ -59,7 +60,7 @@
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Utils/RibbonSituationPicker.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383183524660" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Cases/VariableSituationComponent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383184087254" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/RibbonSituationPicker.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383184149483" ignored="false" />
-    <file path="/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630711551" ignored="false" />
+    <file path="/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384723574990" ignored="false" />
     <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/modena/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/LineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261322745" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/lineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383609519035" ignored="false" />
@@ -146,7 +147,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -183,6 +183,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -192,19 +193,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="179" selection-start="2480" selection-end="2480" vertical-scroll-proportion="0.43589744">
+            <state line="50" column="28" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetro ComboBox.fxml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JMetro ComboBox.fxml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="151" selection-start="449" selection-end="472" vertical-scroll-proportion="0.0">
+            <state line="23" column="34" selection-start="913" selection-end="913" vertical-scroll-proportion="0.089192025">
               <folding />
             </state>
           </provider>
@@ -213,7 +214,7 @@
       <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="352" selection-end="362" vertical-scroll-proportion="0.0">
+            <state line="445" column="0" selection-start="12290" selection-end="12657" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -222,7 +223,7 @@
       <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="306" column="0" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.0">
+            <state line="568" column="0" selection-start="16044" selection-end="16044" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -254,10 +255,11 @@
         <option value="$PROJECT_DIR$/jmetro/JMetroDarkTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/Main.java" />
-        <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
-        <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/Main.java" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml" />
       </list>
     </option>
   </component>
@@ -296,7 +298,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,6 +332,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -527,8 +529,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6774828" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32251722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6794494" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32055065" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -661,27 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="0" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="151" selection-start="449" selection-end="472" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="352" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="94" selection-start="572" selection-end="572" vertical-scroll-proportion="0.20923077">
@@ -691,7 +672,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="179" selection-start="2480" selection-end="2480" vertical-scroll-proportion="0.43589744">
+        <state line="50" column="28" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="445" column="0" selection-start="12290" selection-end="12657" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="568" column="0" selection-start="16044" selection-end="16044" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="34" selection-start="913" selection-end="913" vertical-scroll-proportion="0.089192025">
           <folding />
         </state>
       </provider>

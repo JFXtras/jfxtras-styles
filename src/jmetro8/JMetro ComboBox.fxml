@@ -21,7 +21,7 @@
         <Font name="Segoe UI" size="12.0" fx:id="x1" />
       </font>
     </Label>
-    <Label font="$x1" layoutX="274.0" layoutY="165.0" styleClass="item-title" text="disabled">
+    <Label font="$x1" layoutX="260.0" layoutY="165.0" styleClass="item-title" text="disabled">
       <textFill>
         <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
       </textFill>
@@ -47,7 +47,7 @@
         </FXCollections>
       </items>
     </ComboBox>
-    <ComboBox disable="true" layoutX="274.0" layoutY="188.0">
+    <ComboBox disable="true" layoutX="260.0" layoutY="188.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="1" />
