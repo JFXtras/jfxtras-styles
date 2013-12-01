@@ -32,7 +32,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.controlsfx.control.Rating;
 import org.scenicview.ScenicView;
 
 public class Main extends Application {
@@ -45,8 +47,9 @@ public class Main extends Application {
     static final String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
     static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
     static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
+    static final String RATING_RESOURCE = "JMetro Rating.fxml";
 
-    static final String RESOURCE = TOOLTIP_RESOURCE;
+    static final String RESOURCE = RATING_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
@@ -57,12 +60,20 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
-        root.getStylesheets().add(getClass().getResource(STYLE_SHEET).toExternalForm());
+//        root.getStylesheets().add(getClass().getResource(STYLE_SHEET).toExternalForm());
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
 
 //        ScenicView.show(scene);
+
+//        AnchorPane root2 = new AnchorPane();
+//        Rating rating = new Rating();
+//        root2.getChildren().add(rating);
+//        Scene scene2 = new Scene(root2);
+//        primaryStage.setScene(scene2);
+//        primaryStage.show();
+
     }
 
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import org.controlsfx.control.Rating?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="500" styleClass="background" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Rating">
+      <font>
+        <Font name="Segoe UI" size="30.0" />
+      </font>
+    </Label>
+    <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="normal" textFill="WHITE">
+      <font>
+        <Font name="Segoe UI" size="12.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="274.0" layoutY="165.0" styleClass="item-title" text="disabled">
+      <textFill>
+        <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
+      </textFill>
+    </Label>
+    <Rating layoutX="43.0" layoutY="187.0">
+    </Rating>
+    <Rating disable="true" layoutX="274.0" layoutY="188.0">
+    </Rating>
+  </children>
+</AnchorPane>

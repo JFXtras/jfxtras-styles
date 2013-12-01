@@ -1,137 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml" afterPath="$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384632418105" ignored="false" />
-    <file path="/Controller.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381051202" ignored="false" />
-    <file path="/sample.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381080865" ignored="false" />
-    <file path="/fragment.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613810734" ignored="false" />
-    <file path="/JMetro ComboBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288192753" ignored="false" />
-    <file path="/JMetro CheckBox.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1382288260919" ignored="false" />
-    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384021588973" ignored="false" />
-    <file path="/JMetroLightTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384714687409" ignored="false" />
-    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384713586493" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ExtendedLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179351867" ignored="false" />
-    <file path="/ExtendedLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383180389953" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/SelectableLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383606981045" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383597310093" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ISelectableLineChartListener.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179713078" ignored="false" />
-    <file path="/ISelectableLineChartListener.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179713078" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ModellusLegendItem.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179727480" ignored="false" />
-    <file path="/ModellusLegendItem.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179681407" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ModellusLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383179665540" ignored="false" />
-    <file path="/SelectableLineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383606979966" ignored="false" />
-    <file path="/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613059201" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/ChartInternalFrame.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181156061" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/SeriesRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383180877437" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181024046" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/HorizontalAxisBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/ModeBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/ChartRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/OptionsBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Chart/VerticalAxisBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383599416360" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618203354" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/SeriesRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383612942933" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Vector/VectorPropertiesTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181268176" ignored="false" />
-    <file path="/AppearanceBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618202151" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/AnimationComponentSituationPickerWrapper.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181521719" ignored="false" />
-    <file path="/AnimationComponentSituationPickerWrapper.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181522029" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Text/TextValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264882659" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Image/ImageValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264794320" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Variable/VariableIndicatorValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264767446" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Vector/VectorValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261056517" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/RibbonSituationPicker.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383181524391" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Variable/VariableValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264806596" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Analog/AnalogValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264787744" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/LevelIndicator/LevelValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264781326" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Particle/ParticleValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613656207" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Origin/OriginValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264816578" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/GeometricObject/GeometricObjectValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264754237" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Pencil/PencilValuesBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264736937" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Utils/UI/RibbonSituationPicker.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383183457930" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Utils/RibbonSituationPicker.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383183524660" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Cases/VariableSituationComponent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383184087254" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/RibbonSituationPicker.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383184149483" ignored="false" />
-    <file path="/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630711551" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/modena/modena.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/LineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383261322745" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/lineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383609519035" ignored="false" />
-    <file path="/lineChartTask.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383262651035" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/titles.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264702450" ignored="false" />
-    <file path="/titles.properties" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383264702450" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modelllus.ModellusFrame/src/ModellusFrame.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383263644093" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/ModellusMainPanel.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383263641726" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/LineChartInternalFrame.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383610600770" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Control/Particle/ParticleContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383519545917" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/SeriesContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613992341" ignored="false" />
-    <file path="/SeriesContextualTaskGroup.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613991424" ignored="false" />
-    <file path="/a.dummy" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383524319089" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/XYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383619000758" ignored="false" />
-    <file path="/SeriesRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383612942234" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/java/modena/SamplePage.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/graphics/src/main/java/javafx/scene/Node.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/swing/src/main/java/javafx/embed/swing/JFXPanel.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/java/modena/Modena.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/resources/modena/simple-window.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/caspian/caspian.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630842021" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/apps/experiments/Modena/src/main/java/modena/SimpleWindowPage.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383598681964" ignored="false" />
-    <file path="/XYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618993763" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/Controller/LineChartController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613065905" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/Controller/LineChartSeriesController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617902519" ignored="false" />
-    <file path="/LineChartSeriesController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617898046" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationPanel.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383606439429" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Utils/UI/Ribbon/ExtendedRibbonTask.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383607093335" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/DeleteBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613112356" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/RibbonTask/Series/ViewBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613030201" ignored="false" />
-    <file path="/DeleteBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613046119" ignored="false" />
-    <file path="/ViewBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613002921" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/ImageComponent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Particle/CustomAnimationViewFactory.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Selection/RotatingAxesSelection.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Animator/RibbonTask/BackgroundBand.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/Particle/CustomImageViewFactory.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Selection/UniformResizeSelection.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Utils/SwingUtils.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617970831" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationComponent/AnimationComponent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/AnimationPropertyPainter.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/GridPersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/AnimatorPersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/ParticlePersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613815316" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Selection/ResizeSelection.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.Animator/src/Modellus/WinUI/Animator/Persister/BackgroundPersister.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383613817887" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI.FXChart/src/Modellus/WinUI/FXChart/IXYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618165407" ignored="false" />
-    <file path="/IXYChartSeries.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618164981" ignored="false" />
-    <file path="/SwingUtils.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383617968531" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../Modellus/Modellus X dev/Modellus.WinUI/Utils/ModellusColorPallete.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618702605" ignored="false" />
-    <file path="/ModellusColorPallete.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383618610057" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/chart/XYChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630842022" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/com/sun/javafx/charts/Legend.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630842022" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/chart/BarChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630842022" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/chart/LineChart.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/TextField.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/PopupControl.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/Tooltip.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/Cell.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/TreeTableView.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/build.gradle" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/TableView.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/ListView.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/TextArea.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/base/src/main/java/javafx/collections/transformation/SortedList.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/graphics/src/main/java/javafx/scene/Parent.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/com/sun/javafx/scene/control/skin/ComboBoxListViewSkin.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/Control.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/Accordion.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/modules/controls/src/main/java/javafx/scene/control/TreeView.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="$PROJECT_DIR$/../../../OpenJFX/rt/settings.gradle" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384630924263" ignored="false" />
-    <file path="/JMetro Tooltip.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384715895730" ignored="false" />
+    <file path="/Dummy.txt" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385918380228" ignored="false" />
+    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385781005500" ignored="false" />
+    <file path="/JMetro Rating.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385780073563" ignored="false" />
+    <file path="/JMetroLightTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385780035645" ignored="false" />
+    <file path="/JMetroDarkTheme.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1385781044487" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,10 +69,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="179" selection-start="2480" selection-end="2480" vertical-scroll-proportion="0.43589744">
+            <state line="49" column="84" selection-start="2620" selection-end="2620" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rating.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.016/org/controlsfx/control/rating.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="242" selection-end="335" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JMetro Rating.fxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/JMetro Rating.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="25" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,16 +99,16 @@
       <file leaf-file-name="JMetro ComboBox.fxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="151" selection-start="449" selection-end="472" vertical-scroll-proportion="0.0">
+            <state line="20" column="28" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="352" selection-end="362" vertical-scroll-proportion="0.0">
+            <state line="576" column="4" selection-start="16612" selection-end="16621" vertical-scroll-proportion="0.13821138">
               <folding />
             </state>
           </provider>
@@ -222,7 +117,7 @@
       <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="306" column="0" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.0">
+            <state line="605" column="45" selection-start="17436" selection-end="17436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -254,9 +149,11 @@
         <option value="$PROJECT_DIR$/jmetro/JMetroDarkTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro/Main.java" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetro Rating.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
-        <option value="$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/Main.java" />
       </list>
     </option>
@@ -265,8 +162,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1176" />
+    <option name="width" value="1552" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -297,6 +194,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,16 +229,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -350,10 +247,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pedro_000\Documents\GitHub\jfxtras-styles\src\jmetro8" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -368,6 +271,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -396,19 +312,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -501,18 +404,22 @@
       <created>1359379246138</created>
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1385082827045" duration="604000" />
+      <workItem from="1385168296032" duration="1439000" />
+      <workItem from="1385174352220" duration="1936000" />
+      <workItem from="1385215875869" duration="2752000" />
+      <workItem from="1385238648686" duration="2716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
+    <option name="totallyTimeSpent" value="10749000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="0" />
+    <frame x="-8" y="-8" width="1552" height="938" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -522,22 +429,31 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293124" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6774828" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32251722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20268457" sideWeight="0.68251926" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3174807" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -604,11 +520,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="73" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0" />
@@ -627,11 +538,6 @@
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroDarkTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="164" column="35" selection-start="4213" selection-end="4213" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../jfxtras-labs/src/main/java/jfxtras/labs/animation/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="28" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.01711984" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml">
@@ -661,27 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="306" column="0" selection-start="7986" selection-end="7986" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="151" selection-start="449" selection-end="472" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="352" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro Tooltip.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="94" selection-start="572" selection-end="572" vertical-scroll-proportion="0.20923077">
@@ -689,9 +574,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="605" column="45" selection-start="17436" selection-end="17436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="179" selection-start="2480" selection-end="2480" vertical-scroll-proportion="0.43589744">
+        <state line="49" column="84" selection-start="2620" selection-end="2620" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.016/org/controlsfx/control/rating.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="242" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro Rating.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="25" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="576" column="4" selection-start="16612" selection-end="16621" vertical-scroll-proportion="0.13821138">
           <folding />
         </state>
       </provider>
@@ -738,7 +658,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8x64</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

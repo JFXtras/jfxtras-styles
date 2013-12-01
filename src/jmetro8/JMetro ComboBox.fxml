@@ -47,7 +47,7 @@
         </FXCollections>
       </items>
     </ComboBox>
-    <ComboBox disable="true" layoutX="274.0" layoutY="188.0">
+    <ComboBox disable="false" layoutX="274.0" layoutY="188.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="1" />
