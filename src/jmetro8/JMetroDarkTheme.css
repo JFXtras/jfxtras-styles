@@ -566,6 +566,8 @@
 
 .combo-box-popup  > .list-view > .virtual-flow  > .scroll-bar > .thumb{
     -fx-background-color: #cdcdcd;
+}
+
 .combo-box-popup > .list-view .list-cell:filled:selected{
     -fx-background-color: #55c4fe;  /* TODO: this probably is the "accent" color" */
 }
@@ -616,16 +618,22 @@
 .combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button:pressed {
     -fx-background-color: #606060;
 }
+
+.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button > .decrement-arrow,
+.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button > .increment-arrow{
+    -fx-background-color: transparent, #606060;
+}
+
+.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button:pressed > .decrement-arrow,
+.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button:pressed > .increment-arrow {
+    -fx-background-color: transparent, white;
+}
 /*******************************************************************************
  *                                                                             *
  * Rating (ControlsFX)                                                         *
  *                                                                             *
  ******************************************************************************/
 
-.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button > .decrement-arrow,
-.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button > .increment-arrow{
-    -fx-background-color: transparent, #606060;
-}
 .rating > .container > .button {
     -fx-background-color: #6d6d6d;
     -fx-border-color: transparent;
@@ -634,52 +642,29 @@
     -fx-padding: 16 16;
     -fx-background-repeat: no-repeat;
 }
+
 .rating > .container > .button.strong {
     -fx-background-color: #00828b;
     -fx-border-color: transparent;
     -fx-background-image: null;
 
-.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button:pressed > .decrement-arrow,
-.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button:pressed > .increment-arrow {
-    -fx-background-color: transparent, white;
-}
+
 }
 .rating > .container:hover > .button.strong {
     -fx-background-color: #42d2da;
 }
 
-/*.combo-box-popup > .list-view .list-cell:hover{*/
-/*-fx-background-color: #dedede;*/
-/*-fx-text-fill: #1d1d1d;*/
-/*}*/
 .rating > .container > .button:hover {
     -fx-effect: null;
 }
 
-/*.combo-box-popup > .list-view .list-cell:filled:selected{*/
-/*-fx-background-color: #55c4fe;*/
-/*}*/
 .rating > .container:pressed > .button.strong {
     -fx-background-color: #52eeff;
 }
 
-/*.combo-box-popup > .list-view .list-cell:filled:selected:hover {*/
-/*-fx-background-color: #6dcdff;*/
-/*}*/
 .rating > .container > .button:pressed {
     -fx-background-color: #52eeff;
 }
-
-/*.combo-box-popup > .list-view .list-cell:filled:pressed, .combo-box-popup .list-view .list-cell:filled:selected:pressed{*/
-/*-fx-background-color: #d3d3d3;*/
-/*-fx-text-fill: #1d1d1d;*/
-/*}*/
-
-
-/*.combo-box-popup .list-view {*/
-    /*-fx-background-color: #4a4a4a, -fx-control-inner-background;*/
-/*}*/
-
 
 .rating:disabled{
     -fx-opacity: .8;

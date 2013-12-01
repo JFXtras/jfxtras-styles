@@ -567,12 +567,6 @@
  * Rating (ControlsFX)                                                         *
  *                                                                             *
  ******************************************************************************/
-/*.combo-box-popup > .list-view .list-cell:filled:pressed, .combo-box-popup .list-view .list-cell:filled:selected:pressed{*/
-/*-fx-background-color: #d3d3d3;*/
-/*-fx-text-fill: #1d1d1d;*/
-/*}*/
-
-
 
 .rating > .container > .button {
     -fx-background-color: #bababa;
