@@ -491,9 +491,9 @@
     -fx-font-size: 11pt;
 }
 
-.combo-box-base > .list-cell {
-    -fx-text-fill: rgba(0, 0, 0, 0.67);
-}
+/*.combo-box-base > .list-cell {*/
+    /*-fx-text-fill: rgba(0, 0, 0, 0.67);*/
+/*}*/
 
 .combo-box-base:hover {
     -fx-background-color: transparent, #909090, transparent, white;
@@ -530,8 +530,8 @@
 
 /* ARROW */
 .combo-box-base > .arrow-button > .arrow {
-    -fx-padding: 0.291666375em 0.374999625em 0.291666375em 0.374999625em; /* 3.5 4.5 3.5 4.5 */
-    -fx-shape: "M281.5,479l-4.5-5v-2l4.5,5l4.5-5v2L281.5,479z";
+    -fx-padding: 0.236110875em 0.333333em 0.236110875em 0.333333em; /* (2/3 * 4.25) 4 (2/3 * 4.25) 4 */
+    -fx-shape: "M-78,640l-6-5.5v-3l6,5l0,0l6-5v3L-78,640L-78,640z";
     -fx-background-insets: 0 0 0 0, 0;
     -fx-background-color: black;
 }
@@ -556,13 +556,10 @@
     -fx-background-color: #55c4fe;  /* TODO: this probably is the "active" color" */
 }
 
+
+
 /*.combo-box-popup > .list-view .list-cell:filled:selected:hover {*/
 /*-fx-background-color: #6dcdff;*/
-/*}*/
-
-/*.combo-box-popup > .list-view .list-cell:filled:pressed, .combo-box-popup .list-view .list-cell:filled:selected:pressed{*/
-/*-fx-background-color: #d3d3d3;*/
-/*-fx-text-fill: #1d1d1d;*/
 /*}*/
 
 /*******************************************************************************
@@ -570,6 +567,12 @@
  * Rating (ControlsFX)                                                         *
  *                                                                             *
  ******************************************************************************/
+/*.combo-box-popup > .list-view .list-cell:filled:pressed, .combo-box-popup .list-view .list-cell:filled:selected:pressed{*/
+/*-fx-background-color: #d3d3d3;*/
+/*-fx-text-fill: #1d1d1d;*/
+/*}*/
+
+
 
 .rating > .container > .button {
     -fx-background-color: #bababa;

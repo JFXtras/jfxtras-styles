@@ -60,7 +60,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
-//        root.getStylesheets().add(getClass().getResource(STYLE_SHEET).toExternalForm());
+        root.getStylesheets().add(getClass().getResource(STYLE_SHEET).toExternalForm());
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
