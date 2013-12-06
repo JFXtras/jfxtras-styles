@@ -48,8 +48,9 @@ public class Main extends Application {
     static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
     static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
     static final String RATING_RESOURCE = "JMetro Rating.fxml";
+    static final String TEXTBOX_RESOURCE = "JMetro TextBox.fxml";
 
-    static final String RESOURCE = COMBOBOX_RESOURCE;
+    static final String RESOURCE = TEXTBOX_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
