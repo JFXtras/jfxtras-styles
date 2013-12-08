@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="New: Text Box metro style - light and dark theme">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmetro8/ErasableTextField.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmetro8/JMetro TextBox.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmetro8/ToggleSwitch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmetro8/ToggleSwitchBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java" />
-      <change type="DELETED" beforePath="C:\Users\pedro_000\Documents\GitHub\jfxtras-styles\src\jmetro8\JMetro Toggle_Switch.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java" afterPath="$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -76,10 +68,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="54" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.2579365" vertical-offset="230" max-vertical-offset="986">
+            <state line="64" column="38" selection-start="3250" selection-end="3250" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
@@ -88,10 +80,8 @@
       <file leaf-file-name="ErasableTextField.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/ErasableTextField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="11" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,25 +107,17 @@
       <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="697" column="24" selection-start="20531" selection-end="20531" vertical-scroll-proportion="0.45194274" vertical-offset="11628" max-vertical-offset="12682">
+            <state line="697" column="24" selection-start="20531" selection-end="20531" vertical-scroll-proportion="0.0" vertical-offset="11628" max-vertical-offset="12682">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErasableTextFieldSkin.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ErasableTextFieldSkin.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="50" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2244">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1415#1583#0" expanded="true" />
-                <element signature="e#1572#1573#0" expanded="true" />
-                <element signature="e#1631#1966#0" expanded="true" />
-                <element signature="e#1955#1956#0" expanded="true" />
-                <element signature="e#2017#2406#0" expanded="true" />
-                <element signature="e#2395#2396#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,7 +125,7 @@
       <file leaf-file-name="ToggleButtonSkin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/ToggleButtonSkin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="11" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+            <state line="33" column="11" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -181,11 +163,11 @@
         <option value="$PROJECT_DIR$/jmetro8/ToggleSwitch.java" />
         <option value="$PROJECT_DIR$/jmetro8/ToggleSwitchBase.java" />
         <option value="$PROJECT_DIR$/jmetro8/ErasableTextField.java" />
-        <option value="$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro TextBox.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/Main.java" />
+        <option value="$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java" />
       </list>
     </option>
   </component>
@@ -224,7 +206,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -259,6 +240,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -450,7 +432,9 @@
       <workItem from="1385174352220" duration="1936000" />
       <workItem from="1385215875869" duration="2752000" />
       <workItem from="1385238648686" duration="2716000" />
-      <workItem from="1386187030704" duration="34362000" />
+      <workItem from="1386187030704" duration="34719000" />
+      <workItem from="1386522840788" duration="914000" />
+      <workItem from="1386545234114" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/JFXtras/jfxtras-styles&#10;&#10;Conflicts:&#10;&#9;src/.idea/workspace.xml&#10;&#9;src/jmetro8/JMetro ComboBox.fxml&#10;&#9;src/jmetro8/JMetroDarkTheme.css&#10;&#9;src/jmetro8/JMetroLightTheme.css&#10;&#9;src/jmetro8/Main.java&#10;">
       <created>1385929446991</created>
@@ -460,7 +444,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45111000" />
+    <option name="totallyTimeSpent" value="46450000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -484,35 +468,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="938" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39897698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2021419" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32480818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2021419" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32435897" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -633,47 +617,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="697" column="24" selection-start="20531" selection-end="20531" vertical-scroll-proportion="0.45194274" vertical-offset="11628" max-vertical-offset="12682">
+        <state line="697" column="24" selection-start="20531" selection-end="20531" vertical-scroll-proportion="0.0" vertical-offset="11628" max-vertical-offset="12682">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/CheckBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="24" selection-start="8240" selection-end="8240" vertical-scroll-proportion="0.0" vertical-offset="3345" max-vertical-offset="4148">
-          <folding />
-        </state>
+        <state line="240" column="24" selection-start="8240" selection-end="8240" vertical-scroll-proportion="0.0" vertical-offset="3345" max-vertical-offset="4148" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/beans/property/StringProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
-          <folding />
-        </state>
+        <state line="24" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/text/Text.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="2381" selection-end="2381" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="30974">
-          <folding />
-        </state>
+        <state line="99" column="0" selection-start="2381" selection-end="2381" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="30974" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/LabeledText.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="30" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="4386">
-          <folding>
-            <element signature="e#0#9962#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2449#2450#0" expanded="false" />
-            <element signature="e#2482#2483#0" expanded="false" />
-            <element signature="e#4068#4087#0" expanded="false" />
-            <element signature="e#5054#5081#0" expanded="false" />
-            <element signature="e#6047#6068#0" expanded="false" />
-            <element signature="e#6996#7016#0" expanded="false" />
-            <element signature="e#7641#7678#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="81" column="30" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="4386" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java">
@@ -685,12 +651,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/ButtonBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="45" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="2754">
-          <folding>
-            <element signature="e#0#6764#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="48" column="45" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="2754" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/ToggleButtonSkin.java">
@@ -702,64 +663,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="11" selection-start="0" selection-end="4266" vertical-scroll-proportion="0.0" vertical-offset="1271" max-vertical-offset="2108">
-          <folding />
-        </state>
+        <state line="92" column="11" selection-start="0" selection-end="4266" vertical-scroll-proportion="0.0" vertical-offset="1271" max-vertical-offset="2108" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/beans/DefaultProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="18" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
+        <state line="44" column="18" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/text/TextAlignment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="12" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding>
-            <element signature="e#0#772#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="31" column="12" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/OverrunStyle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
-          <folding>
-            <element signature="e#0#2286#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="32" column="12" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/geometry/Orientation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="12" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding>
-            <element signature="e#0#478#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="31" column="12" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/ContentDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="850">
-          <folding />
-        </state>
+        <state line="38" column="7" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="850" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/Labeled.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="609" column="65" selection-start="22549" selection-end="22549" vertical-scroll-proportion="-10.8" vertical-offset="8587" max-vertical-offset="16388">
-          <folding />
-        </state>
+        <state line="609" column="65" selection-start="22549" selection-end="22549" vertical-scroll-proportion="-10.8" vertical-offset="8587" max-vertical-offset="16388" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="19" selection-start="2898" selection-end="2898" vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="11305">
-          <folding />
-        </state>
+        <state line="75" column="19" selection-start="2898" selection-end="2898" vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="11305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro Rating.fxml">
@@ -771,164 +710,57 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/LabeledSkinBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="613" column="19" selection-start="24441" selection-end="24441" vertical-scroll-proportion="0.0" vertical-offset="9316" max-vertical-offset="19074">
-          <folding />
-        </state>
+        <state line="613" column="19" selection-start="24441" selection-end="24441" vertical-scroll-proportion="0.0" vertical-offset="9316" max-vertical-offset="19074" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/BehaviorSkinBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="95" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2924">
-          <folding>
-            <element signature="e#0#7991#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#3185#3862#0" expanded="false" />
-            <element signature="e#3855#3856#0" expanded="false" />
-            <element signature="e#5772#5773#0" expanded="false" />
-            <element signature="e#5803#5804#0" expanded="false" />
-            <element signature="e#7458#7661#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="42" column="95" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2924" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/ComboBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="406" column="25" selection-start="17814" selection-end="17814" vertical-scroll-proportion="0.0" vertical-offset="6035" max-vertical-offset="8908">
-          <folding />
-        </state>
+        <state line="406" column="25" selection-start="17814" selection-end="17814" vertical-scroll-proportion="0.0" vertical-offset="6035" max-vertical-offset="8908" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/ToggleButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="4" selection-start="8315" selection-end="8413" vertical-scroll-proportion="0.0" vertical-offset="3242" max-vertical-offset="3995">
-          <folding />
-        </state>
+        <state line="235" column="4" selection-start="8315" selection-end="8413" vertical-scroll-proportion="0.0" vertical-offset="3242" max-vertical-offset="3995" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/ComboBoxMode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="4" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="527">
-          <folding />
-        </state>
+        <state line="45" column="4" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="527" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/CheckBoxSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
-          <folding>
-            <element signature="e#0#3565#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="48" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/layout/Region.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1359" column="26" selection-start="61723" selection-end="61723" vertical-scroll-proportion="0.33238232" vertical-offset="21204" max-vertical-offset="50796">
-          <folding>
-            <element signature="e#0#147521#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#13931#14093#0" expanded="false" />
-            <element signature="e#14082#14083#0" expanded="false" />
-            <element signature="e#20305#20964#0" expanded="false" />
-            <element signature="e#20957#20958#0" expanded="false" />
-            <element signature="e#22668#22669#0" expanded="false" />
-            <element signature="e#22691#22692#0" expanded="false" />
-            <element signature="e#23631#23632#0" expanded="false" />
-            <element signature="e#23711#23712#0" expanded="false" />
-            <element signature="e#25322#25323#0" expanded="false" />
-            <element signature="e#25380#25381#0" expanded="false" />
-            <element signature="e#26773#26774#0" expanded="false" />
-            <element signature="e#26834#26835#0" expanded="false" />
-            <element signature="e#29594#29595#0" expanded="false" />
-            <element signature="e#29651#29652#0" expanded="false" />
-            <element signature="e#33544#33545#0" expanded="false" />
-            <element signature="e#33624#33625#0" expanded="false" />
-            <element signature="e#45343#45344#0" expanded="false" />
-            <element signature="e#45358#45359#0" expanded="false" />
-            <element signature="e#45452#45453#0" expanded="false" />
-            <element signature="e#45494#45495#0" expanded="false" />
-            <element signature="e#55743#55744#0" expanded="false" />
-            <element signature="e#55799#55800#0" expanded="false" />
-            <element signature="e#57871#57872#0" expanded="false" />
-            <element signature="e#57949#57950#0" expanded="false" />
-            <element signature="e#59158#59159#0" expanded="false" />
-            <element signature="e#59239#59240#0" expanded="false" />
-            <element signature="e#60350#60351#0" expanded="false" />
-            <element signature="e#60428#60429#0" expanded="false" />
-            <element signature="e#137485#137500#0" expanded="false" />
-            <element signature="e#138028#138043#0" expanded="false" />
-            <element signature="e#138694#138713#0" expanded="false" />
-            <element signature="e#139303#139318#0" expanded="false" />
-            <element signature="e#139937#139951#0" expanded="false" />
-            <element signature="e#140525#140541#0" expanded="false" />
-            <element signature="e#141081#141097#0" expanded="false" />
-            <element signature="e#141640#141656#0" expanded="false" />
-            <element signature="e#142196#142212#0" expanded="false" />
-            <element signature="e#142777#142792#0" expanded="false" />
-            <element signature="e#143349#143364#0" expanded="false" />
-            <element signature="e#143924#143939#0" expanded="false" />
-            <element signature="e#144494#144509#0" expanded="false" />
-            <element signature="e#145061#145076#0" expanded="false" />
-            <element signature="e#145631#145646#0" expanded="false" />
-            <element signature="e#146304#146341#0" expanded="false" />
-            <element signature="e#147261#147262#0" expanded="false" />
-            <element signature="e#147314#147315#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="1359" column="26" selection-start="61723" selection-end="61723" vertical-scroll-proportion="0.33238232" vertical-offset="21204" max-vertical-offset="50796" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/ComboBoxBaseSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="23" selection-start="990" selection-end="990" vertical-scroll-proportion="-7.84" vertical-offset="42" max-vertical-offset="3349">
-          <folding />
-        </state>
+        <state line="47" column="23" selection-start="990" selection-end="990" vertical-scroll-proportion="-7.84" vertical-offset="42" max-vertical-offset="3349" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/ComboBoxListViewSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="54" selection-start="1390" selection-end="1390" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="10642">
-          <folding />
-        </state>
+        <state line="56" column="54" selection-start="1390" selection-end="1390" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="10642" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/ComboBoxPopupControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="54" selection-start="6056" selection-end="6057" vertical-scroll-proportion="0.6298984" vertical-offset="1827" max-vertical-offset="2516">
-          <folding>
-            <element signature="e#0#6366#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#3553#3700#0" expanded="false" />
-            <element signature="e#3689#3690#0" expanded="false" />
-            <element signature="e#3759#4192#0" expanded="false" />
-            <element signature="e#4181#4182#0" expanded="false" />
-            <element signature="e#4281#4431#0" expanded="false" />
-            <element signature="e#4420#4421#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="176" column="54" selection-start="6056" selection-end="6057" vertical-scroll-proportion="0.6298984" vertical-offset="1827" max-vertical-offset="2516" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/SkinBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="19" selection-start="5306" selection-end="5306" vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="12325">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="50" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2244">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1415#1583#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1631#1966#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#2017#2406#0" expanded="true" />
-            <element signature="e#2395#2396#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="162" column="19" selection-start="5306" selection-end="5306" vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="12325" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
@@ -938,27 +770,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/ErasableTextField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/TextInputControlSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="54" selection-start="2931" selection-end="2931" vertical-scroll-proportion="0.2579365" vertical-offset="230" max-vertical-offset="986">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12308" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro TextBox.fxml">
@@ -970,14 +784,31 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/com/sun/javafx/scene/control/skin/TextFieldSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="16" selection-start="2002" selection-end="2006" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="12648">
-          <folding />
-        </state>
+        <state line="72" column="16" selection-start="2002" selection-end="2006" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="12648" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/javafx-src.zip!/javafx/scene/control/TextField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4896">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4896" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="38" selection-start="3250" selection-end="3250" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/ErasableTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/ErasableTextFieldSkin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>

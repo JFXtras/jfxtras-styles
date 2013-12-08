@@ -64,57 +64,12 @@ public class ErasableTextFieldSkin extends TextFieldSkin{
                 clearGraphic.setVisible(textField.isFocused() && !textField.getText().isEmpty());
             }
         });
-
-        // Layout
-//        getSkinnable().widthProperty().addListener(observable -> {
-//            double size = loupe.getMaxWidth() < 0 ? 20.8 : loupe.getWidth();
-//            loupe.setTranslateX(-getSkinnable().getWidth() * 0.5 + size * 0.7);
-//            crossButton.setTranslateX(getSkinnable().getWidth() * 0.5 - size * 0.7);
-//        });
-//        getSkinnable().heightProperty().addListener(observable -> {
-//            crossButton.setMaxSize(getSkinnable().getHeight() * 0.8,
-//                    getSkinnable().getHeight() * 0.8);
-//            loupe.setMaxSize(getSkinnable().getHeight() * 0.8,
-//                    getSkinnable().getHeight() * 0.8);
-//        });
-//        getSkinnable().sceneProperty().addListener(observable -> {
-//            loupe.setTranslateX(-getSkinnable().getWidth() * 0.5 + crossButton.getWidth() * 0.7);
-//            crossButton.setTranslateX(getSkinnable().getWidth() * 0.5 - loupe.getWidth() * 0.7);
-//        });
-//        getSkinnable().widthProperty().addListener(observable -> {
-//            double clearButtonWidth = clearButton.getWidth();
-//            clearButton.setLayoutX(textField.getWidth() * 0.5 - clearButtonWidth * 0.7);
-//        });
-//        getSkinnable().sceneProperty().addListener(observable -> {
-//            clearButton.setLayoutX(textField.getWidth() * 0.5 - clearButton.getWidth() * 0.7);
-//        });
-//        getSkinnable().heightProperty().addListener(observable -> {
-//            clearButton.setMaxSize(getSkinnable().getHeight() * 0.8,
-//                    getSkinnable().getHeight() * 0.8);
-//        });
     }
 
     @Override
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
 
-//        final double arrowWidth = snapSize(arrow.prefWidth(-1));
-//        final double arrowButtonWidth = (isButton()) ? 0 :
-//                arrowButton.snappedLeftInset() + arrowWidth +
-//                        arrowButton.snappedRightInset();
-//
-//        if (displayNode != null) {
-//            displayNode.resizeRelocate(x, y, w - arrowButtonWidth, h);
-//        }
-//
-//        if (isButton()) return;
-//
-//        arrowButton.resize(arrowButtonWidth, h);
-//        positionInArea(arrowButton,
-//                (x+w) - arrowButtonWidth, y,
-//                arrowButtonWidth, h, 0, HPos.CENTER, VPos.CENTER);
-
-        // TODO: layout clear button
         final double clearGraphicWidth = snapSize(clearGraphic.prefWidth(-1));
         final double clearButtonWidth = clearButton.snappedLeftInset() + clearGraphicWidth + clearButton.snappedRightInset();
 
