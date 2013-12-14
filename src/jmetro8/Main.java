@@ -26,7 +26,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package jfxtras.styles.jmetro;
+package jfxtras.styles.jmetro8;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -66,7 +66,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-//        ScenicView.show(scene);
+        ScenicView.show(scene);
 
 //        AnchorPane root2 = new AnchorPane();
 //        Rating rating = new Rating();

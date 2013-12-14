@@ -9,7 +9,6 @@
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet JMetroLightTheme.css?>
 
-<?import jfxtras.styles.jmetro.ErasableTextField?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500" styleClass="background" xmlns:fx="http://javafx.com/fxml">
     <children>
         <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Text box">
@@ -32,11 +31,11 @@
                 <Font name="Segoe UI" size="12.0" fx:id="x1" />
             </font>
         </Label>
-        <ErasableTextField layoutX="43.0" layoutY="187.0">
-        </ErasableTextField>
-        <ErasableTextField disable="true" layoutX="274.0" layoutY="188.0" text="sample text">
-        </ErasableTextField>
-        <ErasableTextField layoutX="43.0" layoutY="250.0" promptText="sample prompt text">
-        </ErasableTextField>
+        <TextField layoutX="43.0" layoutY="187.0">
+        </TextField>
+        <TextField disable="true" layoutX="274.0" layoutY="188.0" text="sample text">
+        </TextField>
+        <TextField layoutX="43.0" layoutY="250.0" promptText="sample prompt text">
+        </TextField>
     </children>
 </AnchorPane>
