@@ -49,13 +49,14 @@ public class Main extends Application {
     static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
     static final String RATING_RESOURCE = "JMetro Rating.fxml";
     static final String TEXTBOX_RESOURCE = "JMetro TextBox.fxml";
+    static final String PASSWORDBOX_RESOURCE = "JMetro PasswordBox.fxml";
 
-    static final String RESOURCE = TEXTBOX_RESOURCE;
+    static final String RESOURCE = PASSWORDBOX_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
 
-    static final String STYLE_SHEET = LIGHT_STYLE_SHEET;
+    static final String STYLE_SHEET = DARK_STYLE_SHEET;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -66,7 +67,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        ScenicView.show(scene);
+//        ScenicView.show(scene);
 
 //        AnchorPane root2 = new AnchorPane();
 //        Rating rating = new Rating();
