@@ -15,9 +15,6 @@ import javafx.scene.layout.StackPane;
  * Created by pedro_000 on 12/5/13.
  */
 public class MetroTextFieldSkin extends TextFieldWithButtonSkin{
-    private StackPane rightButton;
-    private Region rightButtonGraphic;
-
     public MetroTextFieldSkin(TextField textField) {
         super(textField);
     }

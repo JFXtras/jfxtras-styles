@@ -327,7 +327,6 @@
     -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
     -fx-padding: 0.5em 0em 0.5em 0em; /* 6 0 6 0 */
     
-    /* TODO: the border color below is not being respected - it appears as gray instead of black*/
     -fx-border-color: #212121;
     -fx-border-style: solid;
 }
@@ -348,7 +347,6 @@
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
 }
-
 
 .menu-item:focused {
      -fx-background: -fx-accent;
