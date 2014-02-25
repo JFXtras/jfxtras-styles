@@ -139,6 +139,8 @@
     -fx-text-fill: white;
 }
 
+
+/* unselected */
 .check-box > .box {
     -fx-background-color: #d1d1d1;
     -fx-background-insets: 0;
@@ -157,6 +159,13 @@
     -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z"
 }
 
+.check-box:hover > .box {
+    -fx-border-color: #e1e1e1;
+    -fx-background-color: #e1e1e1;
+}
+
+/* focused */
+
 .check-box:focused > .box{
     -fx-background-color: #d1d1d1;
     -fx-background-insets: 0;
@@ -167,17 +176,22 @@
     -fx-border-insets: -3, 0;
 }
 
+.check-box:focused:hover > .box{
+    -fx-border-color: white, #e1e1e1;
+    -fx-background-color: #e1e1e1;
+}
+
 .check-box:pressed > .box{
     -fx-border-color: white, white;
 
 }
 
 .check-box:selected > .box > .mark {
-    -fx-background-color: black !important;
+    -fx-background-color: black;
 }
 
 .check-box:indeterminate > .box > .mark {
-   -fx-background-color: black !important;
+   -fx-background-color: black;
    -fx-background-insets: 2.8;
    -fx-padding:7px;
    -fx-shape: null;
@@ -196,7 +210,7 @@
 
 .check-box:disabled:selected > .box > .mark
 {
-    -fx-background-color: #4c4c4c !important;
+    -fx-background-color: #4c4c4c;
     -fx-opacity: 0.5;
 }
 
@@ -241,7 +255,7 @@
 }
 
 .radio-button:selected > .radio > .dot {
-   -fx-background-color: #212121 !important; /* TODO: There is css code in Modena that is using important so have to do this so far - come back when it gets changed in Modena */
+   -fx-background-color: #212121;
 }
 
 .radio-button:disabled
@@ -257,7 +271,7 @@
 
 .radio-button:disabled:selected > .radio > .dot
 {
-    -fx-background-color: #484848 !important; /* TODO: There is css code in Modena that is using important so have to do this so far - come back when it gets changed in Modena */
+    -fx-background-color: #484848;
 }
 
 
