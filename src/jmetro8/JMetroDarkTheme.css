@@ -553,7 +553,7 @@
 /* LIST */
 .combo-box-popup > .list-view {
     -fx-effect: null;
-    -fx-border-color: #5c5c5c;
+    /*-fx-border-color: #5c5c5c;*/
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
@@ -766,3 +766,22 @@
     -fx-scale-shape: false;
     -fx-background-color: black;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * ProgressBar                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+.progress-bar > .bar {
+    -fx-background-color: #008287;
+    -fx-background-radius: 0;
+    -fx-background-insets: 1;
+
+}
+
+.progress-bar > .track {
+    -fx-background-color: #6c6c6c;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
