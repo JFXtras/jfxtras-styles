@@ -27,3 +27,5 @@ scenicView.properties
 # Intellij IDE output dir
 src/out/
 >>>>>>> refs/heads/jmetro
+
+src/.idea/workspace.xml
