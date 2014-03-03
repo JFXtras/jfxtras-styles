@@ -431,22 +431,6 @@
     -fx-background-color: #1e1e1e;
 }
 
-.scroll-bar:horizontal > .increment-button > .increment-arrow {
-    -fx-shape: "M7.626,12.876L4.251,8.751H7.14L11,12.876L7.14,17H4.251L7.626,12.876z";
-}
-
-.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
-    -fx-shape: "M11,17H8.111l-3.86-4.124l3.86-4.125H11l-3.375,4.125L11,17z";
-}
-
-.scroll-bar:vertical > .increment-button > .increment-arrow {
-    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
-}
-
-.scroll-bar:vertical > .decrement-button > .decrement-arrow {
-    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
-}
-
 .scroll-bar:vertical > .increment-button > .increment-arrow,
 .scroll-bar:vertical > .decrement-button > .decrement-arrow {
     -fx-background-insets: 1 0 -1 0, 0;
@@ -473,6 +457,23 @@
 
 .scroll-bar:disabled {
     -fx-opacity: 0.4;
+}
+
+/* ARROW SHAPES */
+.scroll-bar:horizontal > .increment-button > .increment-arrow {
+    -fx-shape: "M7.626,12.876L4.251,8.751H7.14L11,12.876L7.14,17H4.251L7.626,12.876z";
+}
+
+.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
+    -fx-shape: "M11,17H8.111l-3.86-4.124l3.86-4.125H11l-3.375,4.125L11,17z";
+}
+
+.scroll-bar:vertical > .increment-button > .increment-arrow {
+    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+}
+
+.scroll-bar:vertical > .decrement-button > .decrement-arrow {
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
 }
 
 /*******************************************************************************
@@ -513,10 +514,9 @@
 
 .combo-box-base:focused {
     -fx-background-color: transparent, white, transparent, #d2d2d2;
-    -fx-background-radius: 0, 0, 0, 0;
-    -fx-padding: 0em 0.166667em 0em 0.166667em; /* 0 2px 0 2px*/
-
     -fx-background-insets: -1.4, 0, 1, 2;
+
+    -fx-background-radius: 0, 0, 0, 0;
 }
 
 .combo-box-base:focused:hover {

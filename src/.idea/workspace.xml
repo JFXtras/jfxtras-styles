@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="New: Text Box metro style - light and dark theme">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jmetro8/JMetro ProgressBar.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -73,16 +71,16 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="55" selection-start="3085" selection-end="3085" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1200">
+            <state line="59" column="54" selection-start="3081" selection-end="3081" vertical-scroll-proportion="0.0" vertical-offset="1180" max-vertical-offset="1840">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="708" column="29" selection-start="20147" selection-end="20147" vertical-scroll-proportion="0.0" vertical-offset="13760" max-vertical-offset="15700">
+            <state line="374" column="0" selection-start="9390" selection-end="9390" vertical-scroll-proportion="0.02042901" vertical-offset="7460" max-vertical-offset="15340">
               <folding />
             </state>
           </provider>
@@ -91,16 +89,16 @@
       <file leaf-file-name="JMetroDarkTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="777" column="4" selection-start="22801" selection-end="22826" vertical-scroll-proportion="0.0" vertical-offset="14953" max-vertical-offset="15860">
+            <state line="479" column="0" selection-start="12539" selection-end="12539" vertical-scroll-proportion="-36.56" vertical-offset="8666" max-vertical-offset="15340">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetro ProgressBar.fxml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="JMetro ProgressBar.fxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ProgressBar.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="622" selection-end="622" vertical-scroll-proportion="0.27227724" vertical-offset="0" max-vertical-offset="808">
+            <state line="11" column="0" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="340">
               <folding />
             </state>
           </provider>
@@ -145,10 +143,10 @@
         <option value="$PROJECT_DIR$/jmetro8/MetroPasswordFieldSkin.java" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro PasswordBox.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/MetroTextFieldSkin.java" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetro ProgressBar.fxml" />
+        <option value="$PROJECT_DIR$/jmetro8/Main.java" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
-        <option value="$PROJECT_DIR$/jmetro8/Main.java" />
-        <option value="$PROJECT_DIR$/jmetro8/JMetro ProgressBar.fxml" />
       </list>
     </option>
   </component>
@@ -271,19 +269,6 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -310,6 +295,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -433,7 +431,8 @@
       <workItem from="1393285916808" duration="21000" />
       <workItem from="1393285998426" duration="649000" />
       <workItem from="1393346809522" duration="4559000" />
-      <workItem from="1393720522925" duration="3892000" />
+      <workItem from="1393720522925" duration="6809000" />
+      <workItem from="1393880211304" duration="1144000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/JFXtras/jfxtras-styles&#10;&#10;Conflicts:&#10;&#9;src/.idea/workspace.xml&#10;&#9;src/jmetro8/JMetro ComboBox.fxml&#10;&#9;src/jmetro8/JMetroDarkTheme.css&#10;&#9;src/jmetro8/JMetroLightTheme.css&#10;&#9;src/jmetro8/Main.java&#10;">
       <created>1385929446991</created>
@@ -443,7 +442,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110770000" />
+    <option name="totallyTimeSpent" value="114831000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -467,7 +466,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280943" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -482,20 +481,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20181043" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16960785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16960785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -548,9 +547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/MetroTextFieldSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="1" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="580" max-vertical-offset="700">
-          <folding />
-        </state>
+        <state line="29" column="1" selection-start="777" selection-end="777" vertical-scroll-proportion="0.0" vertical-offset="580" max-vertical-offset="700" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
@@ -569,16 +566,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100">
-          <folding />
-        </state>
+        <state line="75" column="0" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2100" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/MetroPasswordFieldSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="24" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1020">
-          <folding />
-        </state>
+        <state line="28" column="24" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="1020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro CheckBox.fxml">
@@ -618,16 +611,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2100">
-          <folding />
-        </state>
+        <state line="75" column="0" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="2100" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/MetroPasswordFieldSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="24" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000">
-          <folding />
-        </state>
+        <state line="28" column="24" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1000" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro CheckBox.fxml">
@@ -667,9 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="3312" selection-end="3312" vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="2100">
-          <folding />
-        </state>
+        <state line="89" column="0" selection-start="3312" selection-end="3312" vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="2100" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
@@ -702,9 +689,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="3312" selection-end="3312" vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="2100">
-          <folding />
-        </state>
+        <state line="89" column="0" selection-start="3312" selection-end="3312" vertical-scroll-proportion="0.0" vertical-offset="1780" max-vertical-offset="2100" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetro ComboBox.fxml">
@@ -768,9 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/MetroTextFieldSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-          <folding />
-        </state>
+        <state line="17" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro CheckBox.fxml">
@@ -789,16 +772,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/MetroPasswordFieldSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="47" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.63325185" vertical-offset="182" max-vertical-offset="1000">
-          <folding />
-        </state>
+        <state line="36" column="47" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.63325185" vertical-offset="182" max-vertical-offset="1000" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.4816626" vertical-offset="586" max-vertical-offset="1580">
-          <folding />
-        </state>
+        <state line="75" column="0" selection-start="2762" selection-end="2762" vertical-scroll-proportion="0.4816626" vertical-offset="586" max-vertical-offset="1580" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro RadioButton.fxml">
@@ -829,20 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="777" column="4" selection-start="22801" selection-end="22826" vertical-scroll-proportion="0.0" vertical-offset="14953" max-vertical-offset="15860">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="708" column="29" selection-start="20147" selection-end="20147" vertical-scroll-proportion="0.0" vertical-offset="13760" max-vertical-offset="15700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ScrollPane.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="979">
@@ -850,16 +815,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ProgressBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="55" selection-start="3085" selection-end="3085" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1200">
+        <state line="11" column="0" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ProgressBar.fxml">
+    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="622" selection-end="622" vertical-scroll-proportion="0.27227724" vertical-offset="0" max-vertical-offset="808">
+        <state line="59" column="54" selection-start="3081" selection-end="3081" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="479" column="0" selection-start="12539" selection-end="12539" vertical-scroll-proportion="-36.56" vertical-offset="8666" max-vertical-offset="15340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="374" column="0" selection-start="9390" selection-end="9390" vertical-scroll-proportion="0.02042901" vertical-offset="7460" max-vertical-offset="15340">
           <folding />
         </state>
       </provider>
