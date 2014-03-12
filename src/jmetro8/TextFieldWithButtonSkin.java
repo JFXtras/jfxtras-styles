@@ -61,8 +61,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
         textField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                rightButton.setVisible(!textField.getText().isEmpty());
-                rightButtonGraphic.setVisible(!textField.getText().isEmpty());
+                textChanged(textField);
             }
         });
         textField.focusedProperty().addListener(new ChangeListener<Boolean>() {
@@ -72,6 +71,30 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
                 rightButtonGraphic.setVisible(textField.isFocused() && !textField.getText().isEmpty());
             }
         });
+    }
+
+    private void textChanged(TextField textField) {
+        
+        rightButton.setVisible(!textField.getText().isEmpty());
+        rightButtonGraphic.setVisible(!textField.getText().isEmpty());
+    }
+
+    protected void textChanged()
+    {
+        if (textField.getText() == null || textField.getText().isEmpty())
+            return;
+
+        rightButton.setVisible(true);
+        rightButtonGraphic.setVisible(true);
+    }
+
+    protected void focusChanged()
+    {
+        if (textField.getText() == null || textField.getText().isEmpty())
+            return;
+
+        rightButton.setVisible(textField.isFocused());
+        rightButtonGraphic.setVisible(textField.isFocused());
     }
 
     @Override
