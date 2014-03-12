@@ -19,8 +19,12 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
     private StackPane rightButton;
     private Region rightButtonGraphic;
 
+    protected TextField textField;
+
     public TextFieldWithButtonSkin(TextField textField) {
         super(textField);
+
+        this.textField = textField;
 
         rightButton = new StackPane();
         rightButton.getStyleClass().setAll("right-button");
@@ -61,22 +65,15 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
         textField.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                textChanged(textField);
+                textChanged();
             }
         });
         textField.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                rightButton.setVisible(textField.isFocused() && !textField.getText().isEmpty());
-                rightButtonGraphic.setVisible(textField.isFocused() && !textField.getText().isEmpty());
+                focusChanged();
             }
         });
-    }
-
-    private void textChanged(TextField textField) {
-        
-        rightButton.setVisible(!textField.getText().isEmpty());
-        rightButtonGraphic.setVisible(!textField.getText().isEmpty());
     }
 
     protected void textChanged()

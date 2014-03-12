@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="New: Text Box metro style - light and dark theme">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java" afterPath="$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -100,7 +97,7 @@
       <file leaf-file-name="TextFieldWithButtonSkin.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="3" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.47686118" vertical-offset="526" max-vertical-offset="2040">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
               <folding />
             </state>
           </provider>
@@ -465,7 +462,7 @@
       <workItem from="1393880211304" duration="2820000" />
       <workItem from="1394031931401" duration="2037000" />
       <workItem from="1394230760924" duration="612000" />
-      <workItem from="1394633442063" duration="190000" />
+      <workItem from="1394633442063" duration="1055000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/JFXtras/jfxtras-styles&#10;&#10;Conflicts:&#10;&#9;src/.idea/workspace.xml&#10;&#9;src/jmetro8/JMetro ComboBox.fxml&#10;&#9;src/jmetro8/JMetroDarkTheme.css&#10;&#9;src/jmetro8/JMetroLightTheme.css&#10;&#9;src/jmetro8/Main.java&#10;">
       <created>1385929446991</created>
@@ -475,7 +472,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119346000" />
+    <option name="totallyTimeSpent" value="120211000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -498,7 +495,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1176" extended-state="0" />
+    <frame x="-8" y="-8" width="1932" height="1176" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -877,7 +874,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/TextFieldWithButtonSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="3" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.47686118" vertical-offset="526" max-vertical-offset="2040">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
           <folding />
         </state>
       </provider>
