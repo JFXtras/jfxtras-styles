@@ -51,8 +51,9 @@ public class Main extends Application {
     static final String TEXTBOX_RESOURCE = "JMetro TextBox.fxml";
     static final String PASSWORDBOX_RESOURCE = "JMetro PasswordBox.fxml";
     static final String PROGRESSBAR_RESOURCE = "JMetro ProgressBar.fxml";
+    static final String SLIDER_RESOURCE = "JMetro Slider.fxml";
 
-    static final String RESOURCE = COMBOBOX_RESOURCE;
+    static final String RESOURCE = SLIDER_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";

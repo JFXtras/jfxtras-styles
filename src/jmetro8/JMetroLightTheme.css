@@ -11,17 +11,15 @@
 }
 
 .header{
-    -fx-font-size: 42pt;
-    -fx-font-family: "Segoe UI Light";
+    -fx-font-size: 3.5em;
+    -fx-font-family: "Segoe UI Semilight";
     -fx-text-fill: black;
 }
 
 .item-title{
-    -fx-font-size: 11pt;
-    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 1em;
+    -fx-font-family: "Segoe UI";
     -fx-text-fill: black;
-    -fx-opacity: 0.6;
-     
 }
 
 /*******************************************************************************
@@ -696,6 +694,47 @@
     -fx-background-radius: 0;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * Slider                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.slider {
+    -fx-skin: "jfxtras.styles.jmetro8.FilledSliderSkin";
+}
+
+.slider .thumb {
+    -fx-background-color: black;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0em;
+    -fx-padding: 0.333333em; /* 4 */
+
+    -fx-effect: null;
+}
+.slider:focused .thumb {
+    -fx-background-radius: 0em;
+}
+
+.slider .track {
+    -fx-background-color: #c6c6c6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+}
+
+.slider .fill {
+    -fx-background-color: #00828b;
+    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+}
+
+.slider .fill:hover {
+    -fx-background-color: #219297;
+}
+
+.slider .fill:pressed {
+    -fx-background-color: #25bbc4;
+}
 
 /*******************************************************************************
  *                                                                             *

@@ -11,28 +11,20 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="410.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
   <children>
-    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Check Box">
-      <font>
-        <Font name="Segoe UI" size="30.0" />
-      </font>
-    </Label>
-    <Label layoutX="248.0" layoutY="132.0" styleClass="item-title" text="Checked" textFill="WHITE">
-      <font>
-        <Font name="Segoe UI" size="12.0" fx:id="x1" />
-      </font>
-    </Label>
-    <Label font="$x1" layoutX="40.0" layoutY="361.0" styleClass="item-title" text="Undeterminate">
+    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Check Box" />
+    <Label layoutX="248.0" layoutY="132.0" styleClass="item-title" text="Checked" textFill="WHITE" />
+    <Label layoutX="40.0" layoutY="361.0" styleClass="item-title" text="Undeterminate">
       <textFill>
         <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
       </textFill>
     </Label>
-    <Label font="$x1" layoutX="40.0" layoutY="245.0" styleClass="item-title" text="Disabled unchecked" textFill="$x2" />
-    <Label font="$x1" layoutX="248.0" layoutY="245.0" styleClass="item-title" text="Disabled checked" textFill="$x2" />
+    <Label layoutX="40.0" layoutY="245.0" styleClass="item-title" text="Disabled unchecked" textFill="$x2" />
+    <Label layoutX="248.0" layoutY="245.0" styleClass="item-title" text="Disabled checked" textFill="$x2" />
     <CheckBox disable="true" layoutX="40.0" layoutY="277.0" mnemonicParsing="false" text="CheckBox" />
     <CheckBox layoutX="248.0" layoutY="160.0" mnemonicParsing="false" selected="true" text="CheckBox" />
     <CheckBox indeterminate="true" layoutX="40.0" layoutY="390.0" mnemonicParsing="false" text="CheckBox" />
     <CheckBox disable="true" layoutX="248.0" layoutY="276.0" mnemonicParsing="false" selected="true" text="CheckBox" />
     <CheckBox layoutX="40.0" layoutY="160.0" mnemonicParsing="false" text="CheckBox" />
-    <Label font="$x1" layoutX="40.0" layoutY="132.0" styleClass="item-title" text="Unchecked" textFill="WHITE" />
+    <Label layoutX="40.0" layoutY="132.0" styleClass="item-title" text="Unchecked" textFill="WHITE" />
   </children>
 </AnchorPane>
