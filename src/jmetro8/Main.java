@@ -28,6 +28,7 @@
 
 package jfxtras.styles.jmetro8;
 
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -52,8 +53,9 @@ public class Main extends Application {
     static final String PASSWORDBOX_RESOURCE = "JMetro PasswordBox.fxml";
     static final String PROGRESSBAR_RESOURCE = "JMetro ProgressBar.fxml";
     static final String SLIDER_RESOURCE = "JMetro Slider.fxml";
+    static final String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
 
-    static final String RESOURCE = SLIDER_RESOURCE;
+    static final String RESOURCE = TOGGLE_SWITCH_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
@@ -72,8 +74,8 @@ public class Main extends Application {
 //        ScenicView.show(scene);
 
 //        AnchorPane root2 = new AnchorPane();
-//        Rating rating = new Rating();
-//        root2.getChildren().add(rating);
+//        Rating rating = new Rw
+// dd(rating);
 //        Scene scene2 = new Scene(root2);
 //        primaryStage.setScene(scene2);
 //        primaryStage.show();

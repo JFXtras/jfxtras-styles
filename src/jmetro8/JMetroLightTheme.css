@@ -738,6 +738,47 @@
 
 /*******************************************************************************
  *                                                                             *
+ * ToggleSwitch                                                                *
+ *                                                                             *
+ ******************************************************************************/
+.toggle-switch .label {
+    -fx-text-fill: black;
+    -fx-font-size: 1em;
+}
+
+.toggle-switch .thumb {
+    -fx-background-color: black;
+    -fx-padding: 0.583333em 0.333333em 0.583333em 0.333333em;  /* 7 4 7 4*/
+}
+
+.toggle-switch:selected .thumb-area{
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-color: #a6a6a6, white, #219297; /* The last one is the accent color */
+}
+
+.toggle-switch .thumb-area{
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-color: #a6a6a6, white, #a6a6a6;
+}
+
+.toggle-switch:selected:pressed .thumb-area{
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-color: #a6a6a6, white, #25bbc4; /* The last one is the accent color */
+}
+
+.toggle-switch .thumb-area
+{
+    -fx-padding: 0.583333em 1.333333em 0.583333em 1.333333em; /* 7 16 7 16 */
+
+}
+
+.toggle-switch:disabled
+{
+    -fx-opacity: 0.4;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * ListSpinner (Jfxtras)                                                       *
  *                                                                             *
  ******************************************************************************/
