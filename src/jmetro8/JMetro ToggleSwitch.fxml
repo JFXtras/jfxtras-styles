@@ -16,6 +16,6 @@
         <ToggleSwitch disable="true" layoutX="271.0" layoutY="168.0"  turnOffText="Off" turnOnText="On"/>
 
         <Label layoutX="70.0" layoutY="227.0" styleClass="item-title" text="Normal selected" />
-        <ToggleSwitch layoutX="70.0" layoutY="246.0" selected="true" turnOffText="Off" turnOnText="On"/>
+        <ToggleSwitch layoutX="70.0" layoutY="250.0" selected="true" turnOffText="Off" turnOnText="On"/>
     </children>
 </AnchorPane>

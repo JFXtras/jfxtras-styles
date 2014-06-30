@@ -71,7 +71,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-//        ScenicView.show(scene);
+        ScenicView.show(scene);
 
 //        AnchorPane root2 = new AnchorPane();
 //        Rating rating = new Rw

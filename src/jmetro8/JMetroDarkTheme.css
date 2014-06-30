@@ -806,8 +806,8 @@
  * ToggleSwitch                                                                *
  *                                                                             *
  ******************************************************************************/
-.toggle-switch .label {
-    -fx-text-fill: white;
+.toggle-switch .text{
+    -fx-fill: white;
     -fx-font-size: 1em;
 }
 

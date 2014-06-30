@@ -741,9 +741,10 @@
  * ToggleSwitch                                                                *
  *                                                                             *
  ******************************************************************************/
-.toggle-switch .label {
-    -fx-text-fill: black;
+.toggle-switch .text {
+    -fx-fill: black;
     -fx-font-size: 1em;
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI";
 }
 
 .toggle-switch .thumb {

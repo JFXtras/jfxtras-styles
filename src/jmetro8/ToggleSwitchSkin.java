@@ -1,6 +1,10 @@
 package jfxtras.styles.jmetro8;
 
 import com.sun.javafx.scene.control.skin.*;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.animation.TranslateTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
@@ -9,6 +13,7 @@ import javafx.scene.control.SkinBase;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
+import javafx.util.Duration;
 
 /**
  * Created by pedro_000 on 12/4/13.
@@ -18,7 +23,6 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>{
     StackPane thumbArea;
     LabeledText label;
     StackPane labelContainer;
-
 
     /**
      * Constructor for all SkinBase instances.
@@ -41,25 +45,30 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>{
         thumb.getStyleClass().setAll("thumb");
         thumbArea.getStyleClass().setAll("thumb-area");
 
-        thumbArea.setOnMouseReleased(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                mousePressedOnToggleSwitch(control);
-            }
-        });
-        control.selectedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                updateLabel(control);
-            }
+        thumbArea.setOnMouseReleased(event -> mousePressedOnToggleSwitch(control));
+        thumb.setOnMouseReleased(event -> mousePressedOnToggleSwitch(control));
+        control.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue.booleanValue() != oldValue.booleanValue())
+                selectedStateChanged();
         });
     }
 
-    private void mousePressedOnToggleSwitch(ToggleSwitch toggleSwitch) {
+    private void selectedStateChanged() {
+        TranslateTransition transition = new TranslateTransition(Duration.millis(100), thumb);
+        double thumbAreaWidth = snapSize(thumbArea.prefWidth(-1));
+        double thumbWidth = snapSize(thumb.prefWidth(-1));
 
+        if (!getSkinnable().isSelected())
+            transition.setByX(-(thumbAreaWidth - thumbWidth));
+        else {
+            transition.setByX(thumbAreaWidth - thumbWidth);
+        }
+        transition.setCycleCount(1);
+        transition.play();
+    }
+
+    private void mousePressedOnToggleSwitch(ToggleSwitch toggleSwitch) {
         toggleSwitch.setSelected(!toggleSwitch.isSelected());
-        toggleSwitch.requestLayout();
-        // TODO: instead of requesting a relayout, animate the thumb transition
     }
 
     private void updateLabel(ToggleSwitch skinnable) {
@@ -110,7 +119,7 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>{
         final String labelText = label.getText();
         final double textHeight = Utils.computeTextHeight(font, labelText, 0, label.getLineSpacing(), label.getBoundsType());
 
-        return topInset + Math.max(minThumbAreaHeight(), textHeight) + bottomInset;
+        return topInset + Math.max(thumb.prefHeight(-1), textHeight) + bottomInset;
     }
 
     @Override protected double computePrefWidth(double height, double topInset, double rightInset, double bottomInset, double leftInset) {
@@ -127,11 +136,6 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>{
         final String labelText = label.getText();
         final double textHeight = Utils.computeTextHeight(font, labelText, 0, label.getLineSpacing(), label.getBoundsType());
 
-        return topInset + Math.max(minThumbAreaHeight(), textHeight) + bottomInset;
-    }
-
-    private double minThumbAreaHeight()
-    {
-        return thumb.prefHeight(-1);
+        return topInset + Math.max(thumb.prefHeight(-1), textHeight) + bottomInset;
     }
 }
