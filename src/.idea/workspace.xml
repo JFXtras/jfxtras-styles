@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="New: Text Box metro style - light and dark theme">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml" afterPath="$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" afterPath="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/Main.java" afterPath="$PROJECT_DIR$/jmetro8/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java" afterPath="$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -120,21 +116,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="JMetroLightTheme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20429009" vertical-offset="14720" max-vertical-offset="16940">
-              <caret line="746" column="42" selection-start-line="746" selection-start-column="42" selection-end-line="746" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="14720" max-vertical-offset="16940">
+              <caret line="743" column="22" selection-start-line="743" selection-start-column="22" selection-end-line="743" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1220">
-              <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.5794392" vertical-offset="228" max-vertical-offset="1220">
+              <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -196,9 +192,9 @@
         <option value="$PROJECT_DIR$/jmetro8/Utils.java" />
         <option value="$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
-        <option value="$PROJECT_DIR$/jmetro8/Main.java" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
+        <option value="$PROJECT_DIR$/jmetro8/Main.java" />
       </list>
     </option>
   </component>
@@ -487,7 +483,7 @@
       <workItem from="1404049883611" duration="2374000" />
       <workItem from="1404053758963" duration="2520000" />
       <workItem from="1404057997640" duration="11067000" />
-      <workItem from="1404146984516" duration="4345000" />
+      <workItem from="1404146984516" duration="6118000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/JFXtras/jfxtras-styles&#10;&#10;Conflicts:&#10;&#9;src/.idea/workspace.xml&#10;&#9;src/jmetro8/JMetro ComboBox.fxml&#10;&#9;src/jmetro8/JMetroDarkTheme.css&#10;&#9;src/jmetro8/JMetroLightTheme.css&#10;&#9;src/jmetro8/Main.java&#10;">
       <created>1385929446991</created>
@@ -497,7 +493,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183769000" />
+    <option name="totallyTimeSpent" value="185542000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -541,7 +537,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2028754" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3438114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3438114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -974,22 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2680">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1220">
-          <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
@@ -1008,8 +988,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20429009" vertical-offset="14720" max-vertical-offset="16940">
-          <caret line="746" column="42" selection-start-line="746" selection-start-column="42" selection-end-line="746" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="14720" max-vertical-offset="16940">
+          <caret line="743" column="22" selection-start-line="743" selection-start-column="22" selection-end-line="743" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2680">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5794392" vertical-offset="228" max-vertical-offset="1220">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
           <folding />
         </state>
       </provider>
