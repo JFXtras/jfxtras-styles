@@ -39,7 +39,6 @@ public class ToggleSwitch extends Labeled {
 
     private void initialize() {
         getStyleClass().setAll(DEFAULT_STYLE_CLASS);
-//        setAlignment(Pos.CENTER_LEFT);
     }
 
     /***************************************************************************
@@ -147,20 +146,4 @@ public class ToggleSwitch extends Labeled {
     private static final PseudoClass PSEUDO_CLASS_SELECTED =
             PseudoClass.getPseudoClass("selected");
 
-
-//    /***************************************************************************
-//     *                                                                         *
-//     * Accessibility handling                                                  *
-//     *                                                                         *
-//     **************************************************************************/
-//
-//    /** @treatAsPrivate */
-//    @Override public Object accGetAttribute(Attribute attribute, Object... parameters) {
-//        switch (attribute) {
-//            case ROLE: return Role.CHECKBOX;
-//            case SELECTED: return isSelected();
-//            case INDETERMINATE: return isIndeterminate();
-//            default: return super.accGetAttribute(attribute, parameters);
-//        }
-//    }
 }
