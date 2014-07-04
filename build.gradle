@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group = "jfxtras.jfxtras-styles"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://dl.bintray.com/scenic-view/scenic-view"
+    }
+}
+
+dependencies {
+    compile "org.controlsfx:controlsfx:8.0.6"
+    compile "org.scenic-view:scenic-view:8.0.0-dp4"
+}
