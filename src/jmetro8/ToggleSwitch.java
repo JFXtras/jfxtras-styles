@@ -3,7 +3,6 @@ package jfxtras.styles.jmetro8;
 import javafx.beans.property.*;
 import javafx.css.PseudoClass;
 import javafx.event.ActionEvent;
-import javafx.scene.accessibility.Attribute;
 import javafx.scene.control.Control;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.Skin;
@@ -65,7 +64,7 @@ public class ToggleSwitch extends Labeled {
                 @Override protected void invalidated() {
                     final Boolean v = get();
                     pseudoClassStateChanged(PSEUDO_CLASS_SELECTED, v);
-                    accSendNotification(Attribute.SELECTED);
+//                    accSendNotification(Attribute.SELECTED);
                 }
 
                 @Override

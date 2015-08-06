@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="600" styleClass="background" xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Date Picker">
+        </Label>
+        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="normal" textFill="WHITE">
+        </Label>
+        <Label layoutX="300" layoutY="165.0" styleClass="item-title" text="disabled">
+
+        </Label>
+        <DatePicker layoutX="43.0" layoutY="187.0">
+
+        </DatePicker>
+        <DatePicker disable="true" layoutX="300.0" layoutY="188.0">
+
+        </DatePicker>
+    </children>
+</AnchorPane>

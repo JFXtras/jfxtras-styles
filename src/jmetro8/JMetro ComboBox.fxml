@@ -12,19 +12,10 @@
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="373.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
   <children>
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Combo Box">
-      <font>
-        <Font name="Segoe UI" size="30.0" />
-      </font>
     </Label>
     <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="normal" textFill="WHITE">
-      <font>
-        <Font name="Segoe UI" size="12.0" fx:id="x1" />
-      </font>
     </Label>
-    <Label font="$x1" layoutX="260.0" layoutY="165.0" styleClass="item-title" text="disabled">
-      <textFill>
-        <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
-      </textFill>
+    <Label layoutX="260.0" layoutY="165.0" styleClass="item-title" text="disabled">
     </Label>
     <ComboBox layoutX="43.0" layoutY="187.0">
       <items>

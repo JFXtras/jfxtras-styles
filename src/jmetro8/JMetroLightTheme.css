@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : JMetroLightTheme
     Created on : Oct 16, 2012, 6:28:59 PM
     Author     : Pedro Duque Vieira
@@ -37,7 +37,7 @@
     -fx-background-radius: 0;
 
     -fx-background-color: #cccccc;
-  
+
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
     -fx-text-fill: black;
@@ -152,7 +152,7 @@
 
 .check-box > .box > .mark {
     -fx-background-insets: 0;
-    
+
     -fx-padding:7px;
     -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z"
 }
@@ -231,11 +231,11 @@
    -fx-background-color: transparent;
    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
    -fx-background-insets: 0;
-   
+
    -fx-border-radius: 1.0em;
    -fx-border-color: #bababa;
    -fx-border-width: 2px;
-    
+
    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
 }
 
@@ -270,14 +270,14 @@
    -fx-background-color: transparent;
    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
    -fx-background-insets: 0;
-   
+
    -fx-border-style: solid, segments(1, 2);
    -fx-border-radius: 1.0em, 0;
    -fx-border-color: #bababa, black;
    -fx-border-insets: 0px, -2px;
    -fx-border-width: 2px, 1px;
-    
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
+
+   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
 }
 
 .radio-button:focused:hover > .radio
@@ -335,7 +335,7 @@
     -fx-background-insets: 0, 1, 2;
     -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
     -fx-padding: 0.5em 0em 0.5em 0em; /* 6 0 6 0 */
-    
+
     -fx-border-color: #212121;
     -fx-border-style: solid;
 }
@@ -408,7 +408,7 @@
     -fx-background-color: #f0f0f0;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    
+
     -fx-padding: 0.25em; /* 3 */
 }
 
@@ -784,7 +784,7 @@
  *                                                                             *
  ******************************************************************************/
 
-.ListSpinner { 
+.ListSpinner {
     -fx-skin: "jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
     -fx-background-color: #f0f0f0;
     -fx-background-insets: 0 0 0 0;
@@ -797,38 +797,105 @@
     -fx-color: #f0f0f0;
 }
 
-.ListSpinner:focused { 
+.ListSpinner:focused {
     -fx-color: -fx-focused-base;
     -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
     -fx-background-insets: -1.4, 0, 1, 2;
-    -fx-background-radius: 6.4, 5, 4, 3;	
+    -fx-background-radius: 6.4, 5, 4, 3;
 }
 
-.ListSpinner .valuePane { 
+.ListSpinner .valuePane {
     -fx-padding: 0.0em 0.2em 0.0em 0.2em;
 }
 
-.ListSpinner .left-arrow { 
+.ListSpinner .left-arrow {
     -fx-shape: "M4,-4 L0,0 L4,4 Z";
     -fx-scale-shape: false;
 }
-.ListSpinner .right-arrow { 
+.ListSpinner .right-arrow {
     -fx-shape: "M0,-4 L4,0 L0,4 Z";
     -fx-scale-shape: false;
 }
-.ListSpinner .down-arrow { 
+.ListSpinner .down-arrow {
     -fx-shape: "M-4,-2 L0,2 L4,-2 Z";
     -fx-scale-shape: false;
 }
-.ListSpinner .up-arrow { 
+.ListSpinner .up-arrow {
     -fx-shape: "M4,2 L-4,2 L0,-2 Z";
     -fx-scale-shape: false;
 }
 .ListSpinner .idle {
     -fx-background-color: -fx-mark-color;
 }
-.ListSpinner .clicked { 
+.ListSpinner .clicked {
     -fx-background-color: -fx-focus-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Spinner                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.spinner {
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.spinner > .text-field{
+    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+}
+
+.spinner > .text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button  {
+    -fx-background-color: #f0f0f0;
+    /*Change the two 0's here to -1 to get rid of the horizontal line */
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.spinner .increment-arrow-button .increment-arrow, .spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: -fx-mark-color;
+}
+
+
+.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover {
+    -fx-background-color: #dadada;
+}
+
+.spinner .increment-arrow-button:pressed, .spinner .decrement-arrow-button:pressed {
+    -fx-background-color: #606060;
+}
+
+.spinner.split-arrows-horizontal .increment-arrow-button:pressed .increment-arrow, .spinner.split-arrows-horizontal .decrement-arrow-button:pressed .decrement-arrow{
+    -fx-background-color: white;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * DatePicker                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color: -fx-mark-color;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup {
+    -fx-background-color: white, white;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
 }
 
 
