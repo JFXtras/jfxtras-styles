@@ -57,12 +57,12 @@ public class Main extends Application {
     static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
     static final String SPINNER_RESOURCE = "JMetro Spinner.fxml";
 
-    static final String RESOURCE = SPINNER_RESOURCE;
+    static final String RESOURCE = DATE_PICKER_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
 
-    static final String STYLE_SHEET = LIGHT_STYLE_SHEET;
+    static final String STYLE_SHEET = DARK_STYLE_SHEET;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

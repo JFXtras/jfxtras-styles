@@ -1,4 +1,4 @@
-/* 
+/*
     Document   : JMetroDarkTheme
     Created on : Oct 23, 2012, 7:12:32 PM
     Author     : Pedro Duque Vieira
@@ -21,7 +21,7 @@
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
     -fx-opacity: 0.6;
-}     
+}
 
 /*******************************************************************************
  *                                                                             *
@@ -30,7 +30,7 @@
  ******************************************************************************/
 
 .button {
-    -fx-padding: 5 22 5 22;   
+    -fx-padding: 5 22 5 22;
 
     -fx-border-color: #e2e2e2;
     -fx-border-width: 2;
@@ -38,7 +38,7 @@
     -fx-background-radius: 0;
 
     -fx-background-color: #1d1d1d;
-  
+
      -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
     -fx-text-fill: #d8d8d8;
@@ -87,14 +87,14 @@
  ******************************************************************************/
 
 .toggle-button {
-    -fx-padding: 5 22 5 22;   
+    -fx-padding: 5 22 5 22;
     -fx-border-color: #e2e2e2;
     -fx-border-width: 2;
 
     -fx-background-radius: 0;
 
     -fx-background-color: #1d1d1d;
-  
+
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
     -fx-text-fill: #d8d8d8;
@@ -122,7 +122,7 @@
 .toggle-button:selected:hover {
     -fx-background-color: #eee;
     -fx-text-fill: #1d1d1d;
-    
+
     -fx-border-color: #eee;
 }
 .toggle-button:disabled {
@@ -154,7 +154,7 @@
 .check-box > .box > .mark {
     -fx-background-color: transparent;
     -fx-background-insets: 0;
-    
+
     -fx-padding:7px;
     -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z"
 }
@@ -235,10 +235,10 @@
    -fx-background-color: #cfcfcf;
    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
    -fx-background-insets: 0;
-   
+
    -fx-border-radius: 1.0em;
    -fx-border-color: #cfcfcf;
-    
+
    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
 }
 
@@ -280,14 +280,14 @@
    -fx-background-color: #cfcfcf;
    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
    -fx-background-insets: 0;
-   
+
    -fx-border-style: solid, segments(1, 2);
    -fx-border-radius: 1.0em, 0;
    -fx-border-color: #cfcfcf, white;
    -fx-border-insets: 0px, -2px;
    -fx-border-width: 1px, 1px;
-    
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
+
+   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
 }
 
 .radio-button:focused:hover > .radio
@@ -417,7 +417,7 @@
     -fx-background-color: #4a4a4a;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    
+
     -fx-padding: 0.25em; /* 3 */
 }
 
@@ -509,7 +509,7 @@
 
 .combo-box-base:hover {
     -fx-background-color: transparent, white, transparent, #d2d2d2;
-    
+
 }
 
 .combo-box-base:focused {
@@ -896,6 +896,157 @@
  *                                                                             *
  ******************************************************************************/
 
-.date-picker > .arrow-button > .arrow {
+.date-picker {
+    -fx-background-color: #d2d2d2;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
 
+}
+
+.date-picker:hover {
+    -fx-background-color: #e2e2e2;
+}
+
+.date-picker:focused , .date-picker:focused:hover {
+    -fx-background-color: white;
+}
+
+.date-picker > .arrow-button > .arrow {
+    -fx-shape: "M0,0v9h9V0H0z M2,8H1V7h1V8z M2,6H1V5h1V6z M2,4H1V3h1V4z M4,8H3V7h1V8z M4,6H3V5h1V6z M4,4H3V3h1V4z M6,8H5V7h1V8z M6,6H5 V5h1V6z M6,4H5V3h1V4z M8,8H7V7h1V8z M8,6H7V5h1V6z M8,4H7V3h1V4z";
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.416667em 0.416667em 0.333333em 0.333333em; /* 5 5 4 4 */
+    -fx-scale-shape: true;
+}
+
+.date-picker .text-field{
+    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+}
+
+.date-picker .text-field{
+    -fx-background-radius: 0;
+
+    -fx-background-color: #d2d2d2;
+    -fx-background-insets: 0;
+}
+
+.date-picker:hover .text-field {
+    -fx-background-color: #e2e2e2;
+}
+
+.date-picker:focused .text-field {
+    -fx-background-color: white;
+}
+
+.date-picker > .arrow-button
+{
+    -fx-background-color: #d2d2d2;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.date-picker:hover > .arrow-button {
+    -fx-background-color: #e2e2e2;
+}
+
+.date-picker:focused > .arrow-button{
+    -fx-background-color: white;
+}
+
+.date-picker > .arrow-button:hover {
+    -fx-background-color: #d9d9d9;
+    -fx-background-insets: 3;
+    -fx-background-radius: 0;
+}
+
+.date-picker > .arrow-button:pressed {
+    -fx-background-color: black;
+    -fx-background-insets: 3;
+    -fx-background-radius: 0;
+}
+
+.date-picker > .arrow-button:pressed > .arrow {
+    -fx-background-color: white;
+}
+
+.date-picker-popup {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-padding: 0.25em 0.583333em 0.25em 0.583333em; /* 3 7 3 7 */
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow {
+    -fx-background-color: #b3b3b3;
+    -fx-background-insets: 0;
+    -fx-effect: null;
+}
+
+.date-picker-popup > * > .spinner > .button:hover > .left-arrow,
+.date-picker-popup > * > .spinner > .button:hover > .right-arrow {
+    -fx-background-color: white;
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > * > .spinner .label {
+    -fx-text-fill: #b3b3b3;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: #4a4a4a;
+    -fx-padding: 0;
+}
+
+.date-picker-popup > * > .day-name-cell,
+.date-picker-popup > * > .week-number-cell {
+    -fx-font-size: 0.75em;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup > * > .day-cell {
+
+    -fx-border-color: #4a4a4a;
+    -fx-background: #4a4a4a;
+    -fx-background-color: #4a4a4a;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: #999999, #4a4a4a;
+    -fx-background-insets: 0, 3;
+}
+
+.date-picker-popup > * > .day-cell.selected {
+    -fx-background-color: #999999, #4a4a4a;
+    -fx-background-insets: 0, 3;
+}
+
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-background-color: #4a4a4a;
+    /*-fx-text-fill: #999999;*/
+    -fx-opacity: 0.3;
+}
+
+.date-picker-popup > * > .today {
+    -fx-background-color: #0078d7;
+    -fx-background-insets: 0;
 }

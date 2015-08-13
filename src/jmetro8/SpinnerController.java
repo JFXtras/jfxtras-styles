@@ -19,8 +19,8 @@ public class SpinnerController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        spinner.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
-        disabledSpinner.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
+//        spinner.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
+//        disabledSpinner.getStyleClass().add(Spinner.STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL);
 
         spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 10));
     }
