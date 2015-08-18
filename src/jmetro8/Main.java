@@ -56,8 +56,9 @@ public class Main extends Application {
     static final String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
     static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
     static final String SPINNER_RESOURCE = "JMetro Spinner.fxml";
+    static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
 
-    static final String RESOURCE = DATE_PICKER_RESOURCE;
+    static final String RESOURCE = CHOICE_BOX_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
