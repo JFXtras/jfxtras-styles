@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-stylesheet JMetroLightTheme.css?>
+<?scenebuilder-stylesheet JMetroDarkTheme.css?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="293.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ListView layoutX="44.0" layoutY="135.0" prefHeight="250.0" prefWidth="200.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Eat + drink" />
+                  <String fx:value="See + do" />
+                  <String fx:value="Shop" />
+                  <String fx:value="Hotels" />
+                  <String fx:value="Banks" />
+              </FXCollections>
+          </items>
+        </ListView>
+        <Label layoutX="27.0" layoutY="28.0" styleClass="header" text="List Box" />
+    </children>
+</AnchorPane>

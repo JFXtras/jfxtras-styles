@@ -145,4 +145,9 @@ public class ToggleSwitch extends Labeled {
     private static final PseudoClass PSEUDO_CLASS_SELECTED =
             PseudoClass.getPseudoClass("selected");
 
+    @Override
+    public String getUserAgentStylesheet() {
+        return getClass().getResource("modena.css").toExternalForm();
+    }
+
 }

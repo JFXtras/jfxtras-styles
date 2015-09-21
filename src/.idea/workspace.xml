@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="15" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="15" />
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,7 +79,30 @@
         <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modena.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/modena.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JMetro ToggleSwitch.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,47 +111,74 @@
       <file leaf-file-name="modena.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../modena.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.076923">
-              <caret line="546" column="36" selection-start-line="546" selection-start-column="36" selection-end-line="546" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
+      <file leaf-file-name="ToggleSwitch.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78938055">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1222#1223#0" expanded="true" />
+                <element signature="e#1281#1282#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetro ComboBox.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
+      <file leaf-file-name="ToggleSwitchSkin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JMetro ListBox.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ListBox.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6296296">
-              <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JMetro ChoiceBox.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ChoiceBox.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5555556">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#4148#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#4116#4117#0" expanded="false" />
+                <element signature="e#4144#4145#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,6 +189,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -158,14 +209,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/jmetro8/ToggleSwitch.java" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro Spinner.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/SpinnerController.java" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro DatePicker.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/JMetro ChoiceBox.fxml" />
-        <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetro ListView.fxml" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetro ListBox.fxml" />
         <option value="$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css" />
+        <option value="$PROJECT_DIR$/jmetro8/JMetroLightTheme.css" />
+        <option value="$PROJECT_DIR$/jmetro8/ios.css" />
+        <option value="$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java" />
+        <option value="$PROJECT_DIR$/jmetro8/modena.css" />
+        <option value="$PROJECT_DIR$/jmetro8/ToggleSwitch.java" />
         <option value="$PROJECT_DIR$/jmetro8/Main.java" />
       </list>
     </option>
@@ -212,8 +268,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -249,6 +303,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,7 +316,7 @@
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../controlsfx/controlsfx" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -274,6 +330,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -545,7 +602,12 @@
       <workItem from="1439302129273" duration="7014000" />
       <workItem from="1439480476691" duration="2391000" />
       <workItem from="1439822712334" duration="61000" />
-      <workItem from="1439908211990" duration="6067000" />
+      <workItem from="1439908211990" duration="6676000" />
+      <workItem from="1439997254557" duration="17889000" />
+      <workItem from="1440355907983" duration="83000" />
+      <workItem from="1440460831457" duration="21192000" />
+      <workItem from="1441069702781" duration="2030000" />
+      <workItem from="1441147981200" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/JFXtras/jfxtras-styles&#10;&#10;Conflicts:&#10;&#9;src/.idea/workspace.xml&#10;&#9;src/jmetro8/JMetro ComboBox.fxml&#10;&#9;src/jmetro8/JMetroDarkTheme.css&#10;&#9;src/jmetro8/JMetroLightTheme.css&#10;&#9;src/jmetro8/Main.java&#10;">
       <created>1385929446991</created>
@@ -557,7 +619,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263089000" />
+    <option name="totallyTimeSpent" value="305580000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -581,37 +643,37 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286445" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34333333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20234291" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20234291" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3978389" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39777777" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280943" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32777777" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34333333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907662" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
@@ -641,7 +703,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34333333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20234291" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20234291" sideWeight="0.6705128" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -681,18 +743,6 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java</url>
-          <line>81</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java</url>
-          <line>70</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="10" />
     </breakpoint-manager>
@@ -703,49 +753,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java">
+    <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="843" column="0" selection-start-line="843" selection-start-column="0" selection-end-line="843" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="772" column="0" selection-start-line="772" selection-start-column="0" selection-end-line="772" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro CheckBox.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding />
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#4148#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4116#4117#0" expanded="false" />
+            <element signature="e#4144#4145#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -754,7 +771,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#4148#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4116#4117#0" expanded="false" />
+            <element signature="e#4144#4145#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,7 +794,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -821,7 +843,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#4148#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4116#4117#0" expanded="false" />
+            <element signature="e#4144#4145#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,13 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ScrollPane.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -927,24 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetro CheckBox.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -974,25 +974,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmetro/JMetroLightTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,26 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="302" column="33" selection-start-line="302" selection-start-column="33" selection-end-line="302" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26971#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2181#2191#0" expanded="false" />
-            <element signature="e#2253#2263#0" expanded="false" />
-            <element signature="e#2320#2330#0" expanded="false" />
-            <element signature="e#3207#3208#0" expanded="false" />
-            <element signature="e#3275#3276#0" expanded="false" />
-            <element signature="e#5408#5409#0" expanded="false" />
-            <element signature="e#5497#5498#0" expanded="false" />
-            <element signature="e#8688#8699#0" expanded="false" />
-            <element signature="e#8789#8790#0" expanded="false" />
-            <element signature="e#8830#8831#0" expanded="false" />
-            <element signature="e#22573#22574#0" expanded="false" />
-            <element signature="e#22631#22632#0" expanded="false" />
-            <element signature="e#25970#25971#0" expanded="false" />
-            <element signature="e#26034#26035#0" expanded="false" />
-            <element signature="e#26330#26331#0" expanded="false" />
-            <element signature="e#26379#26380#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,14 +1059,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_51/javafx-src.zip!/javafx/scene/control/RadioMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6296296">
-          <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="234" column="55" selection-start-line="234" selection-start-column="55" selection-end-line="234" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -1110,24 +1071,52 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5555556">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state vertical-scroll-proportion="-2.5185184">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../modena.css">
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ScrollPane.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.076923">
-          <caret line="546" column="36" selection-start-line="546" selection-start-column="36" selection-end-line="546" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.5371747">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ComboBox.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7777777">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro TextBox.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ListBox.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -1135,17 +1124,86 @@
     <entry file="file://$PROJECT_DIR$/jmetro8/JMetroDarkTheme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="15" />
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../modena.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="12" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetro ToggleSwitch.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/JMetroLightTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmetro8/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78938055">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#4148#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4116#4117#0" expanded="false" />
+            <element signature="e#4144#4145#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/modena.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitchSkin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmetro8/ToggleSwitch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#1222#1223#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
           </folding>
         </state>
       </provider>

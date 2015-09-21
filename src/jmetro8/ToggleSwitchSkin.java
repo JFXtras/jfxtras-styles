@@ -97,11 +97,11 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>{
         if (!toggleSwitch.isSelected())
         {
             thumb.setLayoutX(thumbArea.getLayoutX());
-            thumb.setLayoutY(thumbAreaY);
+            thumb.setLayoutY(thumbAreaY + (thumbAreaHeight - thumbHeight) / 2);
         } else
         {
             thumb.setLayoutX(thumbArea.getLayoutX() + thumbAreaWidth - thumbWidth);
-            thumb.setLayoutY(thumbAreaY);
+            thumb.setLayoutY(thumbAreaY + (thumbAreaHeight - thumbHeight) / 2);
         }
     }
 

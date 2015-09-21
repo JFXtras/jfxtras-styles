@@ -33,9 +33,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.controlsfx.control.Rating;
 import org.scenicview.ScenicView;
 
 public class Main extends Application {
@@ -57,19 +55,20 @@ public class Main extends Application {
     static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
     static final String SPINNER_RESOURCE = "JMetro Spinner.fxml";
     static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
+    static final String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
 
-    static final String RESOURCE = CHOICE_BOX_RESOURCE;
+    static final String RESOURCE = TOGGLE_SWITCH_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
 
-    static final String STYLE_SHEET = DARK_STYLE_SHEET;
+    static final String STYLE_SHEET = LIGHT_STYLE_SHEET;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
-        root.getStylesheets().add(getClass().getResource(STYLE_SHEET).toExternalForm());
+//        root.getStylesheets().add(getClass().getResource("modena.css").toExternalForm());
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

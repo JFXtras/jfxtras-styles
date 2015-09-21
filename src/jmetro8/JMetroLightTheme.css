@@ -976,6 +976,7 @@
 .date-picker-popup > * > .day-name-cell,
 .date-picker-popup > * > .week-number-cell {
     -fx-font-size: 0.75em;
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 /*******************************************************************************
@@ -1008,12 +1009,49 @@
     -fx-opacity: .4;
 }
 
+.radio-menu-item:checked > .left-container > .radio {
+    -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z";
+    -fx-padding:7px;
+    -fx-scale-shape: true;
+}
 
-/*.choice-box > .label,*/
-/*.menu-button > .label,*/
-/*.color-picker > .label {*/
-    /*-fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /!* 4 8 4 8 *!/*/
-    /*-fx-text-fill: -fx-text-base-color;*/
-/*}*/
+/*******************************************************************************
+ *                                                                             *
+ * List Box                                                                    *
+ *                                                                             *
+ ******************************************************************************/
 
+.list-view {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 1;
+}
+
+.list-view:focused {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-padding: 1em 2em 1em 2em;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background-color: white;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:focused {
+    -fx-background-color: #d3d3d3;
+}
+
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background-color: white;
+}
+
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused {
+    -fx-background-color: -fx-background;
+    -fx-background-insets: 0;
+}
 
