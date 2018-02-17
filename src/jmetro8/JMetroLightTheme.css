@@ -989,6 +989,7 @@
     -fx-background-color: transparent, #bababa, transparent, white;
     -fx-background-radius: 0, 0, 0, 0;
     -fx-padding: 0em 0.166667em 0em 0.166667em; /* 0 2px 0 2px*/
+    -fx-background-insets: -1.4, 0, 1, 2;
 
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 1.333333em; /* 16 */
@@ -996,9 +997,6 @@
 
 .choice-box:focused {
     -fx-background-color: transparent, #5c5c5c, transparent, white;
-    -fx-background-insets: -1.4, 0, 1, 2;
-
-    -fx-background-radius: 0, 0, 0, 0;
 }
 
 .choice-box:focused:hover {
