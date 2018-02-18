@@ -1,5 +1,5 @@
+*.log
 *.class
-
 
 # Package Files #
 *.jar
@@ -16,9 +16,13 @@
 # Scenic view auxiliary file
 scenicView.properties
 
+# IDE files
+
+
 # Intellij IDEA output dir
 src/out/
-
+src/.idea
+*.iml
 
 =======
 # Scenic View auxiliary file
