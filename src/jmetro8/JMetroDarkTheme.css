@@ -1106,7 +1106,10 @@
 .list-view {
     -fx-background-color: #1d1d1d;
     -fx-background-insets: 0;
-    -fx-padding: 1;
+    -fx-padding: 0;
+
+    -fx-border-color: white;
+    -fx-border-width: 2px;
 }
 
 .list-view:focused {

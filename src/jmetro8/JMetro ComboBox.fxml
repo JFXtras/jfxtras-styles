@@ -13,9 +13,9 @@
   <children>
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Combo Box">
     </Label>
-    <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="normal" textFill="WHITE">
+    <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" textFill="WHITE">
     </Label>
-    <Label layoutX="260.0" layoutY="165.0" styleClass="item-title" text="disabled">
+    <Label layoutX="220.0" layoutY="165.0" styleClass="item-title" text="Disabled">
     </Label>
     <ComboBox layoutX="43.0" layoutY="187.0">
       <items>
@@ -31,14 +31,10 @@
           <String fx:value="9" />
           <String fx:value="10" />
           <String fx:value="11" />
-          <String fx:value="12" />
-          <String fx:value="13" />
-          <String fx:value="14" />
-          <String fx:value="15" />
         </FXCollections>
       </items>
     </ComboBox>
-    <ComboBox disable="true" layoutX="260.0" layoutY="188.0">
+    <ComboBox disable="true" layoutX="220.0" layoutY="188.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="1" />

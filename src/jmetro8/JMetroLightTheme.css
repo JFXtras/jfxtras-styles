@@ -1022,7 +1022,10 @@
 .list-view {
     -fx-background-color: white;
     -fx-background-insets: 0;
-    -fx-padding: 1;
+    -fx-padding: 0;
+
+    -fx-border-color: #a4a4a4;
+    -fx-border-width: 2px;
 }
 
 .list-view:focused {
