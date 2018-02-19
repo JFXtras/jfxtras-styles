@@ -57,7 +57,7 @@ public class Main extends Application {
     static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
 
-    static final String RESOURCE = TOGGLE_SWITCH_RESOURCE;
+    static final String RESOURCE = LIST_BOX_RESOURCE;
 
     static final String LIGHT_STYLE_SHEET = "JMetroLightTheme.css";
     static final String DARK_STYLE_SHEET = "JMetroDarkTheme.css";
@@ -68,20 +68,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
-//        root.getStylesheets().add(getClass().getResource("modena.css").toExternalForm());
+        root.getStylesheets().add(getClass().getResource(STYLE_SHEET).toExternalForm());
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
 
 //        ScenicView.show(scene);
-
-//        AnchorPane root2 = new AnchorPane();
-//        Rating rating = new Rw
-// dd(rating);
-//        Scene scene2 = new Scene(root2);
-//        primaryStage.setScene(scene2);
-//        primaryStage.show();
-
     }
 
 

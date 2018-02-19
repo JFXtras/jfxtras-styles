@@ -11,31 +11,31 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500" styleClass="background" xmlns:fx="http://javafx.com/fxml">
     <children>
-        <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Text box">
+        <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Text Box">
             <font>
                 <Font name="Segoe UI" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="normal" textFill="WHITE">
+        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" textFill="WHITE">
             <font>
                 <Font name="Segoe UI" size="12.0" fx:id="x1" />
             </font>
         </Label>
-        <Label font="$x1" layoutX="274.0" layoutY="165.0" styleClass="item-title, disabled" text="disabled">
+        <Label font="$x1" layoutX="274.0" layoutY="165.0" styleClass="item-title, disabled" text="Disabled">
             <textFill>
                 <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
             </textFill>
         </Label>
-        <Label layoutX="43.0" layoutY="228.0" styleClass="item-title" text="rest state" textFill="WHITE">
+        <Label layoutX="43.0" layoutY="228.0" styleClass="item-title" text="Rest State" textFill="WHITE">
             <font>
                 <Font name="Segoe UI" size="12.0" fx:id="x1" />
             </font>
         </Label>
         <TextField layoutX="43.0" layoutY="187.0">
         </TextField>
-        <TextField disable="true" layoutX="274.0" layoutY="188.0" text="sample text">
+        <TextField disable="true" layoutX="274.0" layoutY="188.0" text="Sample text">
         </TextField>
-        <TextField layoutX="43.0" layoutY="250.0" promptText="sample prompt text">
+        <TextField layoutX="43.0" layoutY="250.0" promptText="Sample prompt text">
         </TextField>
     </children>
 </AnchorPane>
