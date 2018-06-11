@@ -12,24 +12,17 @@
 # windows thumbnail files
 *.db
 
-<<<<<<< HEAD
 # Scenic view auxiliary file
 scenicView.properties
 
-# IDE files
-
-
-# Intellij IDEA output dir
-src/out/
-src/.idea
+# Intellij IDEA  files
+.idea/
 *.iml
+out/
 
 =======
 # Scenic View auxiliary file
 scenicView.properties
 
-# Intellij IDE output dir
-src/out/
->>>>>>> refs/heads/jmetro
-
-src/.idea/workspace.xml
+# libraries jars (e.g. ScenicView)
+lib/
