@@ -20,6 +20,9 @@ scenicView.properties
 *.iml
 out/
 
+# output dir
+build/
+
 =======
 # Scenic View auxiliary file
 scenicView.properties
