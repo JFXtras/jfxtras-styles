@@ -6,7 +6,6 @@ plugins {
 
 sourceCompatibility = '1.8'
 
-group = 'org.jfxtras'
 version = '3.0.0'
 def versionDescription = 'JMetro'
 
