@@ -64,7 +64,7 @@ public class ControlsSample extends Application {
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
 
-        new JMetro(STYLE).applyTheme(root);
+        new JMetro(JMetro.Style.LIGHT).applyTheme(root);
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

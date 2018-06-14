@@ -1,5 +1,80 @@
-apply plugin: 'java-library'
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+    id "java-library"
+    id "maven-publish"
+}
 
 sourceCompatibility = '1.8'
+
+group = 'org.jfxtras'
+version = '3.0.0'
+def versionDescription = 'JMetro'
+
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+jar {
+    manifest {
+        attributes( 'Implementation-Title': project.name,
+                'Implementation-Version': project.version)
+    }
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+javadoc {
+    options.addStringOption('javafx', '-quiet')
+}
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allJava
+    classifier "sources"
+}
+
+artifacts {
+    archives sourceJar
+    archives javadocJar
+}
+
+/* Publishing */
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    pkg {
+        repo = 'maven'
+        name = project.name
+        //userOrg = 'dukke'
+        licenses = ['BSD New']
+        vcsUrl = 'https://github.com/JFXtras/jfxtras-styles.git'
+        publications = ['mavenJava']
+        websiteUrl = 'https://www.pixelduke.com/jmetro'
+        issueTrackerUrl = 'https://github.com/JFXtras/jfxtras-styles/issues'
+        publicDownloadNumbers = true
+        version {
+            name = project.version
+            desc = versionDescription // Version description
+            vcsTag = project.version
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourceJar {
+                classifier "sources"
+            }
+            artifact javadocJar {
+                classifier "javadoc"
+            }
+        }
+    }
+}
+
+
 
 
