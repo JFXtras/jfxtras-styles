@@ -1,5 +1,5 @@
 plugins {
-    id "com.jfrog.bintray" version "1.7.3"
+    id "com.jfrog.bintray" version "1.8.3"
     id "java-library"
     id "maven-publish"
 }
@@ -56,6 +56,41 @@ bintray {
             name = project.version
             desc = versionDescription // Version description
             vcsTag = project.version
+            mavenCentralSync {
+                sync = true
+                user = System.getenv('MAVEN_USERNAME')
+                password = System.getenv('MAVEN_PASSWORD')
+            }
+        }
+    }
+}
+
+def pomConfig = {
+    packaging 'jar'
+    name project.name
+    url 'https://www.pixelduke.com/jmetro'
+    inceptionYear '2012'
+    licenses {
+        license([:]) {
+            name 'BSD New'
+            url 'https://opensource.org/licenses/BSD-3-Clause'
+            distribution 'repo'
+        }
+    }
+    scm {
+        url 'https://github.com/JFXtras/jfxtras-styles.git'
+    }
+    developers {
+        [
+            dukke: 'Pedro Duke Vieira',
+        ].each { devId, devName ->
+            developer {
+                id devId
+                name devName
+                roles {
+                    role 'Developer'
+                }
+            }
         }
     }
 }
@@ -69,6 +104,11 @@ publishing {
             }
             artifact javadocJar {
                 classifier "javadoc"
+            }
+
+            pom.withXml {
+                asNode().children().last() + pomConfig
+                asNode().appendNode('description', "A theme / look and feel for JavaFX inspired in Microsoft's Metro")
             }
         }
     }
