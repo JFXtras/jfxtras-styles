@@ -20,8 +20,11 @@ scenicView.properties
 *.iml
 out/
 
-# output dir
+# Gradle
+.gradle/
+.nb-gradle/
 build/
+
 
 =======
 # Scenic View auxiliary file
