@@ -55,7 +55,7 @@ public class ControlsSample extends Application {
     static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
 
-    static final String RESOURCE = PASSWORDBOX_RESOURCE;
+    static final String RESOURCE = TOGGLE_SWITCH_RESOURCE;
 
     static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
@@ -64,7 +64,7 @@ public class ControlsSample extends Application {
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
 
-        new JMetro(JMetro.Style.LIGHT).applyTheme(root);
+        new JMetro(STYLE).applyTheme(root);
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

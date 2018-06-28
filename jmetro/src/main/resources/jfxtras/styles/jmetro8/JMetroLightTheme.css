@@ -769,6 +769,11 @@
 .toggle-switch .thumb {
     -fx-background-color: black;
     -fx-padding: 0.583333em 0.333333em 0.583333em 0.333333em;  /* 7 4 7 4*/
+    -fx-background-radius: 0;
+}
+
+.toggle-switch .thumb-area{
+    -fx-background-radius: 0;
 }
 
 .toggle-switch:selected .thumb-area{
