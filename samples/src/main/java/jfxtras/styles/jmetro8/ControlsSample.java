@@ -29,10 +29,18 @@ package jfxtras.styles.jmetro8;
 
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.stage.Stage;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class ControlsSample extends Application {
     static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
@@ -55,7 +63,7 @@ public class ControlsSample extends Application {
     static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
 
-    static final String RESOURCE = TOGGLE_SWITCH_RESOURCE;
+    static final String RESOURCE = SPINNER_RESOURCE;
 
     static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
@@ -77,4 +85,5 @@ public class ControlsSample extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 }

@@ -31,4 +31,4 @@ build/
 scenicView.properties
 
 # libraries jars (e.g. ScenicView)
-lib/
+samples/lib/

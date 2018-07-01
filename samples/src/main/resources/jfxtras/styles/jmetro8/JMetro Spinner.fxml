@@ -36,7 +36,7 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="jfxtras.styles.jmetro8.SpinnerController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="jfxtras.styles.jmetro8.controlssample.SpinnerController">
     <children>
         <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Spinner">
         </Label>

@@ -1181,3 +1181,129 @@
     -fx-text-fill: white;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * Table View                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.table-view{
+    /* This is a var */
+    TABLE_VIEW_BORDER_COLOR: #292929;
+    LIGHT_ACCENT_COLOR: #d5e1f2;
+    ACCENT_COLOR: #1550bd;
+
+    -fx-cell-focus-inner-border: LIGHT_ACCENT_COLOR; /* focused */
+
+    -fx-background-color: transparent, -fx-control-inner-background;
+
+    -fx-padding: 0;
+}
+
+/****** Column Header ******/
+
+.table-view .column-header-background {
+    -fx-background-color: #111;
+}
+
+.table-view .column-header, .table-view .filler{
+    /* borders around table header */
+    -fx-background-color: #111;
+    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent;
+}
+
+.table-view .filler {
+    -fx-background-color: TABLE_VIEW_BORDER_COLOR, white;
+    -fx-background-insets: 0 0 0 0, 1 0 1 0;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent;
+}
+
+.table-view .filler {
+    -fx-border-color: transparent transparent transparent transparent;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI SemiBold";
+    -fx-font-size: 1.166667em;  /* 14 */
+    -fx-alignment: center-left;
+
+    -fx-padding: 0.666666em 2em 0.666666em 2em;
+}
+
+.table-view .column-header:hover{
+    -fx-background-color: LIGHT_ACCENT_COLOR;
+}
+
+.table-view .column-header:hover .label{
+    -fx-text-fill: #111;
+}
+
+.table-view .column-header.table-column-selected {
+    -fx-background: #111;
+    -fx-border-color: #034f95 #034f95 transparent #034f95;
+    -fx-border-width: 2px;
+}
+
+/****** Table View "body"  ******/
+
+.table-row-cell {
+    -fx-background-color: #111;
+    -fx-background-insets: 0;
+}
+
+.table-cell {
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.166667em;  /* 14 */
+    -fx-alignment: center-left;
+    -fx-padding: 0.833333em 2em 0.5em 2em;
+}
+
+.table-cell:last-visible {
+    -fx-border-color: transparent transparent transparent transparent;
+}
+
+.table-cell:filled:hover {
+    -fx-background-color: LIGHT_ACCENT_COLOR;
+}
+
+.table-cell .text {
+    -fx-fill: white;
+}
+
+.table-cell:hover .text {
+    -fx-fill: #111;
+}
+
+/* Selected cell */
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
+    -fx-background: ACCENT_COLOR;
+    -fx-border-color: #034f95;
+}
+
+.table-view .table-cell:selected > .text {
+    -fx-fill: white;
+}
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
+    -fx-background-color: LIGHT_ACCENT_COLOR;
+}
+
+.table-view .table-cell:selected:hover > .text {
+    -fx-fill: #454545;
+}
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{
+    -fx-background: white;
+    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent, transparent #034f95 transparent #034f95;
+    -fx-border-width: 1px 2px 1px 2px, 1px 2px 1px 2px;
+}
+
+/* - focused */
+.table-view .table-cell:focused {
+    -fx-background-color: -fx-background, LIGHT_ACCENT_COLOR, -fx-background;
+}
+
