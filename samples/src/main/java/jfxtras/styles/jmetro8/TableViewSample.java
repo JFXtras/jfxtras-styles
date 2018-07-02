@@ -12,14 +12,19 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 //import org.scenicview.ScenicView;
 
 public class TableViewSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
+    private static final JMetro.Style STYLE = JMetro.Style.DARK;
 
     private TableView<Person> table = new TableView<Person>();
     private final ObservableList<Person> data =
@@ -37,7 +42,8 @@ public class TableViewSample extends Application {
 
     @Override
     public void start(Stage stage) {
-        Scene scene = new Scene(new Group());
+        VBox vbox = new VBox();
+        Scene scene = new Scene(vbox);
         stage.setTitle("Table View Sample");
         stage.setWidth(650);
         stage.setHeight(600);
@@ -61,23 +67,28 @@ public class TableViewSample extends Application {
                 new PropertyValueFactory<Person, String>("lastName"));
 
         TableColumn emailCol = new TableColumn("Email");
-        emailCol.setMinWidth(300);
+        emailCol.setMinWidth(250);
         emailCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("email"));
 
         table.setItems(data);
         table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
 
-
-
-        final VBox vbox = new VBox();
         vbox.setSpacing(40);
-        vbox.setPadding(new Insets(10, 0, 0, 10));
+        vbox.setPadding(new Insets(10, 10, 0, 10));
         vbox.getChildren().addAll(label, table);
 
-        ((Group) scene.getRoot()).getChildren().addAll(vbox);
 
-        table.setStyle("-fx-border-color: #E5E5E5; -fx-border-width: 1px; -fx-border-style: solid;");
+        if (STYLE.equals(STYLE.LIGHT)) {
+            vbox.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
+            table.setStyle("-fx-border-color: #E5E5E5; -fx-border-width: 1px; -fx-border-style: solid;");
+            label.setStyle("-fx-text-fill: #111;");
+        }
+        else if (STYLE.equals(STYLE.DARK)){
+            vbox.setBackground(new Background(new BackgroundFill(Paint.valueOf("#111"), CornerRadii.EMPTY, Insets.EMPTY)));
+            table.setStyle("-fx-border-color: #1D1D1D; -fx-border-width: 1px; -fx-border-style: solid;");
+            label.setStyle("-fx-text-fill: white;");
+        }
 
         new JMetro(STYLE).applyTheme(scene);
 

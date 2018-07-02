@@ -1094,7 +1094,7 @@
 
     -fx-cell-focus-inner-border: LIGHT_ACCENT_COLOR; /* focused */
 
-    -fx-background-color: transparent, -fx-control-inner-background;
+    -fx-background-color: transparent, transparent;
 
     -fx-padding: 0;
 }
@@ -1112,7 +1112,7 @@
 }
 
 .table-view .filler {
-    -fx-background-color: TABLE_VIEW_BORDER_COLOR, white;
+    -fx-background-color: transparent, white;
     -fx-background-insets: 0 0 0 0, 1 0 1 0;
 }
 
@@ -1121,7 +1121,7 @@
 }
 
 .table-view .filler {
-    -fx-border-color: transparent transparent transparent transparent;
+    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent;
 }
 
 .table-view .column-header .label{
@@ -1166,25 +1166,29 @@
     -fx-background-color: LIGHT_ACCENT_COLOR;
 }
 
-.table-cell .text {
-    -fx-fill: #454545;
+/* Selected cell */
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
+    -fx-fill: #111;
 }
 
-/* Selected cell */
+/* - when focused and selected */
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
     -fx-background: ACCENT_COLOR;
     -fx-border-color: #034f95;
 }
 
-.table-view .table-cell:selected > .text {
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
     -fx-fill: white;
 }
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
-    -fx-background-color: LIGHT_ACCENT_COLOR;
+
+/* When hover */
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:hover .text,
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:hover:selected .text{
+    -fx-fill: #111;
 }
 
-.table-view .table-cell:selected:hover > .text {
-    -fx-fill: #454545;
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
+    -fx-background-color: LIGHT_ACCENT_COLOR;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{
