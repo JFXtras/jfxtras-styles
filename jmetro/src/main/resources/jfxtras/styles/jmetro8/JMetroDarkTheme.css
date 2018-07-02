@@ -1309,3 +1309,9 @@
     -fx-fill: #111;
 }
 
+/* Header Sort Arrows */
+.table-view /*> column-header-background > nested-column-header >*/ .arrow {
+    -fx-padding: 0.5em 0.3125em 0.5em 0.3125em; /* 3 3.75 3 3.75 */
+    -fx-shape: "M26.488,211.891h17.656V53H81L35.316,0L-13,53h39.488V211.891z";
+
+}
