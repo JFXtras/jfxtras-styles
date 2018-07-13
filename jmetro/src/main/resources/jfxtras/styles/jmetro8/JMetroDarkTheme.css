@@ -1315,3 +1315,77 @@
     -fx-shape: "M26.488,211.891h17.656V53H81L35.316,0L-13,53h39.488V211.891z";
 
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * TreeView                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-view {
+    HOVER_COLOR: #333;
+    PRESSED_COLOR: derive(HOVER_COLOR, 15%);
+    ACCENT_COLOR: #1550bd;
+
+    -fx-background-color: #111;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.tree-view .tree-cell {
+    -fx-font-size: 1.166667em; /* 14 */
+    -fx-padding: 1em;
+    -fx-background-color: #111;
+    -fx-text-fill: white;
+}
+
+/********** Label **********/
+.tree-view .tree-cell .label{
+    -fx-font-family: "Segoe UI";
+
+    -fx-padding: 0 3px 0 0;
+}
+
+/* Hover */
+.tree-view .tree-cell:filled:hover {
+    -fx-background-color: HOVER_COLOR;
+}
+
+/* Selected */
+.tree-view .tree-cell:filled:selected {
+    -fx-background-color: ACCENT_COLOR;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Selected hover */
+.tree-view .tree-cell:filled:selected:hover, .tree-view .tree-cell:selected:hover {
+    -fx-background-color: derive(ACCENT_COLOR, -30%);
+    -fx-text-fill: white;
+}
+
+.tree-view .tree-cell:selected:hover > .tree-disclosure-node > .arrow {
+    -fx-background-color: white;
+}
+
+
+/* Pressed */
+.tree-view .tree-cell:filled:pressed, .tree-view .tree-cell:filled:selected:pressed, .tree-view .tree-cell:selected:pressed, .tree-view .tree-cell:pressed{
+    -fx-background-color: PRESSED_COLOR;
+}
+
+/*********** Expand/Collapse icon **********/
+.tree-cell > .tree-disclosure-node {
+    -fx-padding: 0.333333em 1em 0.333333em 1em;
+}
+
+.tree-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: white;
+    -fx-padding: 0.416667em 0.333333em 0.416667em 0.333333em;
+    -fx-shape: "M8.06,20.938L7,20l8-8L7,4l1.06-0.938L16.917,12L8.06,20.938z";
+}
+
+.tree-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-scale-y: -1;
+    -fx-rotate: 90;
+}
+
