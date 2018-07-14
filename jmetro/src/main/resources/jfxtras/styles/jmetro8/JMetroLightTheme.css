@@ -377,8 +377,8 @@
 .menu-item .label {
     -fx-padding: 0em 1.333332em 0em 0em;
     -fx-text-fill: #212121;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.166667em; /* 14 */
 }
 
 .menu-item:focused {

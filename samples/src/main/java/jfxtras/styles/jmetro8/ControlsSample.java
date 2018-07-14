@@ -65,7 +65,7 @@ public class ControlsSample extends Application {
 
     static final String RESOURCE = CONTEXT_MENU_RESOURCE;
 
-    static final JMetro.Style STYLE = JMetro.Style.LIGHT;
+    static final JMetro.Style STYLE = JMetro.Style.DARK;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
