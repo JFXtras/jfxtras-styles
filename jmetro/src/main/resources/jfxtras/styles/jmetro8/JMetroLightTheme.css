@@ -350,23 +350,28 @@
  ******************************************************************************/
 
 .context-menu {
-    -fx-background-color: white;
+    -fx-background-color: #f2f2f2;
     -fx-background-insets: 0, 1, 2;
     -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
     -fx-padding: 0.5em 0em 0.5em 0em; /* 6 0 6 0 */
 
-    -fx-border-color: #212121;
+    -fx-border-color: #cccccc;
     -fx-border-style: solid;
 }
 
 .context-menu .separator {
-    -fx-padding: 0.58333275em 1.333332em 0.58333275em 1.333332em;  /*7 16 7 16 */
+    -fx-padding: 0.58333275em 1em 0.58333275em 1em;  /*7 12 7 12 */
 }
 
-/* TODO: try to scope the menu-item style to the contextmenu */
+.context-menu .separator:horizontal .line {
+    -fx-border-color: #919191 transparent transparent transparent;
+    -fx-border-insets: 0;
+}
+
+
 .menu-item {
     -fx-background-color: transparent;
-    -fx-padding: 0.666666em 1.333332em 0.666666em 1.333332em;   /*8 16 8 16 */
+    -fx-padding: 0.666666em 1em 0.666666em 1em;   /*8 12 8 12 */
 }
 
 .menu-item .label {

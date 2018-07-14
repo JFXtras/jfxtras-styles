@@ -63,7 +63,7 @@ public class ControlsSample extends Application {
     static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
 
-    static final String RESOURCE = SPINNER_RESOURCE;
+    static final String RESOURCE = CONTEXT_MENU_RESOURCE;
 
     static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
