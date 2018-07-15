@@ -4,11 +4,12 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class TabPaneSample extends Application {
 
-
+    private static final JMetro.Style STYLE = JMetro.Style.DARK;
 
     public static void main(String[] args) {
         launch(args);
@@ -43,13 +44,20 @@ public class TabPaneSample extends Application {
 
         tabPane.getTabs().addAll(fileTab, homeTab, insertTab, tableTab, optionsTab);
 
-        Scene scene = new Scene(tabPane, 500, 400);
+        BorderPane root = new BorderPane(tabPane);
+
+        if (STYLE.equals(JMetro.Style.DARK)) {
+            root.setStyle("-fx-background-color: #e2e2e2;");
+        } else {
+            root.setStyle("-fx-background-color: white;");
+        }
+
+        Scene scene = new Scene(root, 500, 200);
+
+        new JMetro(STYLE).applyTheme(scene);
 
 
-        new JMetro(JMetro.Style.DARK).applyTheme(scene);
-
-
-        stage.setTitle("TabePane Sample");
+        stage.setTitle("TabPane Sample");
         stage.setScene(scene);
         stage.show();
     }
