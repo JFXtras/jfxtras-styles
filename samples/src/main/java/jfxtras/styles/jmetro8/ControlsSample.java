@@ -29,43 +29,35 @@ package jfxtras.styles.jmetro8;
 
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import javafx.stage.Stage;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 public class ControlsSample extends Application {
-    static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
-    static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
-    static final String PUSH_BUTTON_RESOURCE = "JMetro PushButton.fxml";
-    static final String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
-    static final String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
-    static final String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
-    static final String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
-    static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
-    static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
-    static final String RATING_RESOURCE = "JMetro Rating.fxml";
-    static final String TEXTBOX_RESOURCE = "JMetro TextBox.fxml";
-    static final String PASSWORDBOX_RESOURCE = "JMetro PasswordBox.fxml";
-    static final String PROGRESSBAR_RESOURCE = "JMetro ProgressBar.fxml";
-    static final String SLIDER_RESOURCE = "JMetro Slider.fxml";
-    static final String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
-    static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
-    static final String SPINNER_RESOURCE = "JMetro Spinner.fxml";
-    static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
-    static final String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
+    static final private String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
+    static final private String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
+    static final private String PUSH_BUTTON_RESOURCE = "JMetro PushButton.fxml";
+    static final private String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
+    static final private String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
+    static final private String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
+    static final private String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
+    static final private String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
+    static final private String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
+    static final private String RATING_RESOURCE = "JMetro Rating.fxml";
+    static final private String TEXTBOX_RESOURCE = "JMetro TextBox.fxml";
+    static final private String PASSWORDBOX_RESOURCE = "JMetro PasswordBox.fxml";
+    static final private String PROGRESSBAR_RESOURCE = "JMetro ProgressBar.fxml";
+    static final private String SLIDER_RESOURCE = "JMetro Slider.fxml";
+    static final private String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
+    static final private String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
+    static final private String SPINNER_RESOURCE = "JMetro Spinner.fxml";
+    static final private String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
+    static final private String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
 
-    static final String RESOURCE = CONTEXT_MENU_RESOURCE;
+    static final private String RESOURCE = RADIO_BUTTON_RESOURCE;
 
-    static final JMetro.Style STYLE = JMetro.Style.DARK;
+    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

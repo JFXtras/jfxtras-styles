@@ -77,6 +77,7 @@
 {
     -fx-border-color: white, white;
     -fx-border-width: 1, 2;
+    /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
     -fx-border-radius: 0, 0;
     -fx-border-insets: 1 1 1 1, 0;
@@ -123,6 +124,7 @@
     -fx-border-color: white, white;
 
     -fx-border-width: 1, 1;
+    /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
     -fx-border-radius: 0, 0;
     -fx-border-insets: 1 1 1 1, 0;
@@ -191,6 +193,7 @@
     -fx-background-radius: 0;
     -fx-border-color: white, #d1d1d1;
     -fx-border-width: 1, 2;
+    /*noinspection CssInvalidFunction*/
     -fx-border-style: segments(1, 2), solid;
     -fx-border-insets: -3, 0;
 }
@@ -247,90 +250,100 @@
  ******************************************************************************/
 
 .radio-button {
+    ACCENT_COLOR: #2796c4;
+
     -fx-text-fill: white;
 }
 
 .radio-button > .radio  {
-   -fx-background-color: #cfcfcf;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-background-insets: 0;
+    -fx-background-color: #111;
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-background-insets: 0;
 
-   -fx-border-radius: 1.0em;
-   -fx-border-color: #cfcfcf;
+    /* Two borders exist because of the focus ring, if they didn't the size of the control would change on focus
+       - The first one is the border of the control
+       - The second one is the border of the focus ring
+       */
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 1.0em, 0;
+    -fx-border-color: #cccccc, transparent;
+    -fx-border-insets: 0px, -2px;
+    -fx-border-width: 2px, 1px;
 
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
-}
-
-.radio-button:hover > .radio {
-    -fx-background-color: #e0e0e0;
-    -fx-border-color: #e0e0e0;
+    -fx-padding: 3px; /* 4 -- padding from outside edge to the inner black dot */
 }
 
 .radio-button > .radio > .dot {
-   -fx-background-color: transparent;
-   -fx-background-insets: 0;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-padding: 6px; /* 3 -- radius of the inner black dot when selected */
+    -fx-background-color: #111;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-padding: 5px; /* 3 -- radius of the inner black dot when selected */
+}
+
+/* hover */
+.radio-button:hover > .radio {
+    -fx-background-color: #111;
+    -fx-border-color: white, transparent;
+}
+
+.radio-button:selected:hover > .radio > .dot {
+    -fx-background-color: white;
+}
+
+/* selected */
+.radio-button:selected > .radio {
+    -fx-border-color: ACCENT_COLOR, transparent;
 }
 
 .radio-button:selected > .radio > .dot {
-   -fx-background-color: #212121;
+   -fx-background-color: #cccccc;
 }
 
-.radio-button:disabled
-{
-    -fx-opacity: 0.5;
-}
-
-.radio-button:disabled > .radio
-{
-    -fx-background-color: #e6e6e6;
-    -fx-border-color: #d9d9d9;
-}
-
-.radio-button:disabled:selected > .radio > .dot
-{
-    -fx-background-color: #484848;
-}
-
-
-.radio-button:focused > .radio
-{
-   -fx-background-color: #cfcfcf;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-background-insets: 0;
-
-   -fx-border-style: solid, segments(1, 2);
-   -fx-border-radius: 1.0em, 0;
-   -fx-border-color: #cfcfcf, white;
-   -fx-border-insets: 0px, -2px;
-   -fx-border-width: 1px, 1px;
-
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
-}
-
-.radio-button:focused:hover > .radio
-{
-    -fx-border-color: #e0e0e0, #e0e0e0;
-    -fx-background-color: #e0e0e0;
-}
-
-.radio-button:focused:pressed > .radio
-{
-    -fx-border-color: white, white;
-    -fx-background-color: white;
-}
-
+/* pressed */
 .radio-button:pressed > .radio
 {
-    -fx-background-color: white;
-    -fx-border-color: white;
+    -fx-background-color: #111;
+    -fx-border-color: #999999, transparent;
 }
 
 .radio-button:pressed:selected > .radio > .dot
 {
-    -fx-background-color: black;
+    -fx-background-color: #999999;
 }
+
+/* focused */
+.radio-button:focused > .radio
+{
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 1.0em, 0;
+    -fx-border-color: #cccccc, white;
+    -fx-border-insets: 0px, -2px;
+    -fx-border-width: 2px, 1px;
+}
+
+.radio-button:focused:hover > .radio
+{
+    -fx-border-color: white, #e0e0e0;
+}
+
+.radio-button:focused:pressed > .radio, .radio-button:focused:selected:pressed > .radio
+{
+    -fx-border-color: #999999, white;
+    -fx-background-color: #111;
+}
+
+.radio-button:focused:selected > .radio {
+    -fx-border-color: ACCENT_COLOR, white;
+}
+
+/* disabled */
+.radio-button:disabled
+{
+    -fx-opacity: 0.4;
+}
+
 
 /*******************************************************************************
  *                                                                             *
