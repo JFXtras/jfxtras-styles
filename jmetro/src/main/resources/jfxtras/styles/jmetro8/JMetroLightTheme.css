@@ -227,7 +227,7 @@
     /*-fx-background-insets: 3px;*/
 }
 
-/* indeterminate - pressed */
+/* -- indeterminate - pressed */
 .check-box:indeterminate:pressed > .box > .mark {
     -fx-background-color: #666666;
 }
