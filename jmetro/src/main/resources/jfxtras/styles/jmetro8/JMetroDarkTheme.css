@@ -344,6 +344,11 @@
     -fx-opacity: 0.4;
 }
 
+.radio-button:disabled > .radio
+{
+    -fx-border-color: #cccccc, transparent;
+}
+
 
 /*******************************************************************************
  *                                                                             *
