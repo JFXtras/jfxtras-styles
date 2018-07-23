@@ -1414,3 +1414,89 @@
     -fx-border-color: transparent, transparent;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * Menus and MenuBar                                                           *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-bar {
+    -fx-background-color: white;
+    -fx-background-insets: 0 0 0 0;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.166667em; /* 14 */
+}
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: #dadada;
+}
+
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing  > .label {
+    -fx-text-fill: #393939;
+}
+
+/********************************* Menu Item ***********************************/
+
+.menu-item {
+    -fx-text-fill: #393939;
+}
+
+.menu-item > .graphic-container {
+    -fx-padding: 0em 0.75em 0em 0em;
+}
+
+.context-menu .separator:horizontal .line {
+    -fx-border-color: #c3c3c3 transparent transparent transparent;
+    -fx-border-insets: 0;
+}
+
+.radio-menu-item:checked > .left-container > .radio {
+    -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
+
+    -fx-padding: 5px 7px 5px 7px;
+    -fx-scale-shape: true;
+}
+
+.check-menu-item:checked > .left-container > .check {
+    -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
+
+    -fx-padding: 5px 7px 5px 7px;
+    -fx-scale-shape: true;
+}
+
+.check-menu-item:checked > .left-container {
+    -fx-padding: 0em 1em 0em 0.5em;
+}
+
+.radio-menu-item:checked > .left-container {
+    -fx-padding: 0em 1em 0em 0.5em;
+}
+
+.menu > .right-container > .arrow {
+    -fx-padding: 0.458em 0.333333em 0.458em 0.333333em; /* 4.5 2 4.5 2 */
+    -fx-shape: "M8.06,20.938L7,20l8-8L7,4l1.06-0.938L16.917,12L8.06,20.938z";
+    -fx-scale-shape: true;
+}
+
+.radio-menu-item:checked > .left-container > .radio, .check-menu-item:checked > .left-container > .check, .menu > .right-container > .arrow {
+    -fx-background-color: #0a0a0a;
+}
+
+    /* hover */
+.menu-item:hover {
+    -fx-background-color: #dadada;
+}
+
+/* pressed */
+.menu-item:pressed {
+    -fx-background-color: #c2c2c2;
+}
+
+.menu-item:pressed .label {
+    -fx-text-fill: #393939;
+}
+
+
