@@ -1168,42 +1168,43 @@
 
 /*******************************************************************************
  *                                                                             *
- * ChoiceBox                                                                   *
+ * Choice Box                                                                  *
  *                                                                             *
  ******************************************************************************/
 
 .choice-box  {
-    -fx-background-color: transparent, transparent, transparent, #d2d2d2;
+    -fx-background-color: transparent, #333333, transparent, #333333;
     -fx-background-radius: 0, 0, 0, 0;
     -fx-background-insets: -1.4, 0, 1, 2;
+
     -fx-padding: 0em 0.166667em 0em 0.166667em; /* 0 2px 0 2px*/
 
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 1.333333em; /* 16 */
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.166667em; /* 14 */
+}
+
+.choice-box > .label {
+    -fx-text-fill: white;
+}
+
+.choice-box > .open-button > .arrow {
+    -fx-background-color: #858585;
 }
 
 .choice-box:hover {
-    -fx-background-color: transparent, white, transparent, #d2d2d2;
-
+    -fx-background-color: transparent, #858585, transparent, #333333;
 }
 
 .choice-box:focused {
-    -fx-background-color: transparent, white, transparent, #d2d2d2;
+    -fx-background-color: transparent, #858585, transparent, #333333;
 }
 
 .choice-box:focused:hover {
-    -fx-background-color: transparent, white, transparent, #d2d2d2;
+    -fx-background-color: transparent, #858585, transparent, #333333;
 }
-
 
 .choice-box:disabled {
     -fx-opacity: .4;
-}
-
-.radio-menu-item:checked > .left-container > .radio {
-    -fx-shape: "M9.005,17.766l13.759,14.739h1.716L49.02,0l10.298,8.488L25.997,50.453h-3.629L0,26.897L9.005,17.766z";
-    -fx-padding:7px;
-    -fx-scale-shape: true;
 }
 
 /*******************************************************************************
