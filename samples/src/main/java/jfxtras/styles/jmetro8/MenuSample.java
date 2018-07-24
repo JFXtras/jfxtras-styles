@@ -13,13 +13,14 @@ import javafx.scene.effect.SepiaTone;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.input.*;
 
 public class MenuSample extends Application {
 
-    final private Entry[] effects = new Entry[] {
+    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+
+    private final Entry[] effects = new Entry[] {
             new SimpleEntry<>("Sepia Tone", new SepiaTone()),
             new SimpleEntry<>("Glow", new Glow()),
             new SimpleEntry<>("Shadow", new DropShadow())
@@ -33,7 +34,6 @@ public class MenuSample extends Application {
     public void start(Stage stage) {
         stage.setTitle("Menu Sample");
         Scene scene = new Scene(new VBox(), 400, 350);
-        scene.setFill(Color.OLDLACE);
 
         MenuBar menuBar = new MenuBar();
 
@@ -82,10 +82,16 @@ public class MenuSample extends Application {
         menuBar.getMenus().addAll(menuFile, menuEdit, menuView);
 
 
+        if (STYLE.equals(JMetro.Style.LIGHT)) {
+            scene.getRoot().setStyle("-fx-background-color: #F9F9F9;");
+        } else {
+            scene.getRoot().setStyle("-fx-background-color: #333333;");
+        }
+
         ((VBox) scene.getRoot()).getChildren().addAll(menuBar);
 
 
-        new JMetro(JMetro.Style.LIGHT).applyTheme(scene);
+        new JMetro(STYLE).applyTheme(scene);
 //        ScenicView.show(scene);
 
 
