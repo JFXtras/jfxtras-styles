@@ -1385,6 +1385,11 @@
     -fx-font-family: "Segoe UI";
     -fx-font-size: 1.166667em; /* 14 */
 }
+
+.menu-bar > .container > .menu-button {
+    -fx-padding: 0.5em 0.666667em 0.5em 0.666667em; /* 6 8 6 8 */
+}
+
 .menu-bar > .container > .menu-button:hover,
 .menu-bar > .container > .menu-button:focused,
 .menu-bar > .container > .menu-button:showing {
