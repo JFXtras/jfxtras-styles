@@ -22,5 +22,5 @@ might not be approved because for instance might be outside the intended scope o
 
 ### Feedback request
 Please send pictures of your application that is using JMetro, this is very important for us
-to know how users are effectively using it and make adjustments accordingly and only if you
+to know how users are effectively using it and make adjustments accordingly, to make JMetro better. And only if you
 allow it, to showcase example uses.
