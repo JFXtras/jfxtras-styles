@@ -488,7 +488,7 @@
 
 /*******************************************************************************
  *                                                                             *
- * Scroll Bar                                                                  *
+ * Scroll Bar and Scroll Pane                                                  *
  *                                                                             *
  ******************************************************************************/
 .scroll-bar {
@@ -606,20 +606,20 @@
     -fx-background-color: ARROW_PRESSED;
 }
 
-/*******************************************************************************
- *                                                                             *
- * Scroll Pane                                                                 *
- *                                                                             *
- ******************************************************************************/
+
+/***************************** Scroll Pane ************************************/
+.scroll-pane {
+    BACKGROUND: #29292a;
+}
 
 .scroll-pane {
     -fx-background-color: transparent,transparent;
 }
 
 .scroll-pane .corner {
-    -fx-background-color: #4a4a4a;
+    -fx-background-color: BACKGROUND;
     -fx-background-radius: 0 0 0 0;
-    -fx-background-insets: 1 0 0 1; /* have the square on the corner be centered */
+    -fx-background-insets: 0 0 0 0;
 }
 
 /*******************************************************************************
