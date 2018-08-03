@@ -55,16 +55,19 @@ public class ControlsSample extends Application {
     static final private String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final private String LIST_BOX_RESOURCE = "JMetro ListBox.fxml";
 
-    static final private String RESOURCE = COMBOBOX_RESOURCE;
+    static final private String RESOURCE = SCROLL_BAR_RESOURCE;
 
     static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+//        System.setProperty("prism.lcdtext", "false");
+
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
 
         new JMetro(STYLE).applyTheme(root);
+
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

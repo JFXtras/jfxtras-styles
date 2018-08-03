@@ -428,47 +428,66 @@
  *                                                                             *
  ******************************************************************************/
 
+.scroll-bar {
+    THUMB: #c2c7ca;
+    THUMB_HOVER: #838689;
+    THUMB_PRESSED: #585a5c;
+
+    TRACK: #e9e9e9;
+
+    INC_DEC_BUTTON: #e8e6e3;
+    INC_DEC_BUTTON_HOVER: #c6cacf;
+    INC_DEC_BUTTON_PRESSED: #585a5c;
+
+    ARROW: #5a5a59;
+    ARROW_PRESSED: #dbdbdb;
+}
+
 .scroll-bar > .thumb{
-    -fx-background-color: #cdcdcd;
+    -fx-background-color: THUMB;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
 .scroll-bar > .thumb:hover {
-    -fx-background-color: #dadada;
+    -fx-background-color: THUMB_HOVER;
 }
 
 .scroll-bar > .thumb:pressed {
-    -fx-background-color: #606060;
+    -fx-background-color: THUMB_PRESSED;
 }
 
 .scroll-bar > .track {
-    -fx-background-color: #f0f0f0;
+    -fx-background-color: TRACK;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 .scroll-bar > .track-background {
-    -fx-background-color: #f0f0f0;
     -fx-background-insets: 0;
 }
 
 .scroll-bar > .increment-button,
 .scroll-bar > .decrement-button {
-    -fx-background-color: #f0f0f0;
+    -fx-background-color: INC_DEC_BUTTON;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 
-    -fx-padding: 0.25em; /* 3 */
+    -fx-padding: 0.5em 0.25em 0.5em 0.25em; /* 6 3 6 3*/
+}
+
+.scroll-bar:horizontal > .increment-button,
+.scroll-bar:horizontal > .decrement-button {
+    -fx-padding: 0.25em 0.5em 0.25em 0.5em ; /* 3 6 3 6*/
 }
 
 .scroll-bar > .increment-button:hover,
 .scroll-bar > .decrement-button:hover  {
-    -fx-background-color: #dadada;
+    -fx-background-color: INC_DEC_BUTTON_HOVER;
 }
 
 .scroll-bar > .increment-button:pressed,
 .scroll-bar > .decrement-button:pressed {
-    -fx-background-color: #606060;
+    -fx-background-color: INC_DEC_BUTTON_PRESSED;
 }
 
 .scroll-bar > .decrement-button > .decrement-arrow,
@@ -484,36 +503,45 @@
     -fx-effect: null;
 }
 
-.scroll-bar:vertical > .increment-button > .increment-arrow,
-.scroll-bar:vertical > .decrement-button > .decrement-arrow {
-    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
-}
-
-.scroll-bar:horizontal > .increment-button > .increment-arrow,
-.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
-    -fx-padding: 0.5em 0.333333em 0.0em 0.0em; /* 6 4 0 0 */
-}
-
 .scroll-bar:disabled {
     -fx-opacity: 0.4;
 }
 
 /* ARROW SHAPES */
-.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
-    -fx-shape: "M11,17H8.111l-3.86-4.124l3.86-4.125H11l-3.375,4.125L11,17z";
-}
-
 .scroll-bar:horizontal > .increment-button > .increment-arrow {
-    -fx-shape: "M7.626,12.876L4.251,8.751H7.14L11,12.876L7.14,17H4.251L7.626,12.876z";
+    -fx-shape: "M14.4,18.611l3.633-3.637L14.4,11.338l0.352-0.352l3.992,3.988 l-3.992,3.988L14.4,18.611z";
 }
 
-.scroll-bar:vertical > .decrement-button > .decrement-arrow {
-    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
+    -fx-shape: "M18.393,18.963L14.4,14.975l3.992-3.988l0.352,0.352l-3.633,3.637 l3.633,3.637L18.393,18.963z";
 }
 
 .scroll-bar:vertical > .increment-button > .increment-arrow {
-    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+    -fx-shape: "M20.561,13.154l-3.988,3.992l-3.988-3.992l0.352-0.352 l3.637,3.633l3.637-3.633L20.561,13.154z";
 }
+
+.scroll-bar:vertical > .decrement-button > .decrement-arrow {
+    -fx-shape: "M20.209,17.146l-3.637-3.633l-3.637,3.633l-0.352-0.352 l3.988-3.992l3.988,3.992L20.209,17.146z";
+}
+
+.scroll-bar:vertical > .increment-button > .increment-arrow,
+.scroll-bar:vertical > .decrement-button > .decrement-arrow {
+    -fx-padding: 2.5px 4px 2.5px 4px;
+}
+
+.scroll-bar:horizontal > .increment-button > .increment-arrow,
+.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
+    -fx-padding: 4px 2.5px 4px 2.5px;
+}
+
+.scroll-bar > .increment-button > .increment-arrow, .scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: ARROW;
+}
+
+.scroll-bar > .increment-button:pressed > .increment-arrow, .scroll-bar > .decrement-button:pressed > .decrement-arrow {
+    -fx-background-color: ARROW_PRESSED;
+}
+
 
 /*******************************************************************************
  *                                                                             *
