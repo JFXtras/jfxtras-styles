@@ -440,7 +440,7 @@
     INC_DEC_BUTTON_PRESSED: #585a5c;
 
     ARROW: #5a5a59;
-    ARROW_PRESSED: #dbdbdb;
+    ARROW_PRESSED: white;
 }
 
 .scroll-bar > .thumb{

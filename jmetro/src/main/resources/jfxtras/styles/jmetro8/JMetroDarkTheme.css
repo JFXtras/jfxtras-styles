@@ -500,10 +500,10 @@
 
     INC_DEC_BUTTON: #2a2d30;
     INC_DEC_BUTTON_HOVER: #3c4145;
-    INC_DEC_BUTTON_PRESSED: #a9abad;
+    INC_DEC_BUTTON_PRESSED: #a8abac;
 
     ARROW: white;
-    ARROW_PRESSED: #464647;
+    ARROW_PRESSED: #111;
 }
 
 .scroll-bar > .thumb{
