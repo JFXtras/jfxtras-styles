@@ -572,11 +572,14 @@
      BORDER_COLOR: #999999;
      BORDER_COLOR_HOVER: #666666;
      BORDER_COLOR_FOCUSED: #5c5c5c;
+     BORDER_COLOR_PRESSED: BORDER_COLOR;
+
+     BACKGROUND_PRESSED: #cccccc;
 
      LIST_CELL_BACKGROUND: #f2f2f2;
      LIST_CELL_HOVER_BACKGROUND: #e0e0e0;
 
-    LIST_CELL_BORDER: #cccccc;
+     LIST_CELL_BORDER: #cccccc;
 
      ACCENT_COLOR: #a6d8ff;
  }
@@ -603,6 +606,10 @@
 
 .combo-box-base:focused:hover {
     -fx-background-color: transparent, #909090, transparent, white;
+}
+
+.combo-box-base:pressed, .combo-box-base:focused:pressed {
+    -fx-background-color: transparent, BORDER_COLOR_PRESSED, transparent, BACKGROUND_PRESSED;
 }
 
 .combo-box-base:disabled {

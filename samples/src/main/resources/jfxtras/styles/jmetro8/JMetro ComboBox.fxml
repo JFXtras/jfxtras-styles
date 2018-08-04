@@ -77,7 +77,7 @@
         <String fx:value="Segoe UI" />
       </value>
     </ComboBox>
-    <ComboBox disable="true" layoutX="270.0" layoutY="188.0">
+    <ComboBox disable="true" layoutX="270.0" layoutY="187.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Times New Roman" />
