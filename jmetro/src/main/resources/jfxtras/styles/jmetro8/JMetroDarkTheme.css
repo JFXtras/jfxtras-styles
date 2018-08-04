@@ -529,6 +529,7 @@
     -fx-background-insets: 0;
 }
 
+/* Buttons */
 .scroll-bar > .increment-button,
 .scroll-bar > .decrement-button {
     -fx-background-color: INC_DEC_BUTTON;
@@ -560,12 +561,7 @@
     -fx-effect: null;
 }
 
-.scroll-bar > .increment-button:pressed > .increment-arrow,
-.scroll-bar > .decrement-button:pressed > .decrement-arrow {
-    -fx-background-color: transparent, white;
-    -fx-effect: null;
-}
-
+/* Disabled */
 .scroll-bar:disabled {
     -fx-opacity: 0.4;
 }
@@ -588,6 +584,12 @@
     -fx-shape: "M20.209,17.146l-3.637-3.633l-3.637,3.633l-0.352-0.352 l3.988-3.992l3.988,3.992L20.209,17.146z";
 }
 
+.scroll-bar > .increment-button:pressed > .increment-arrow,
+.scroll-bar > .decrement-button:pressed > .decrement-arrow {
+    -fx-background-color: transparent, white;
+    -fx-effect: null;
+}
+
 .scroll-bar:vertical > .increment-button > .increment-arrow,
 .scroll-bar:vertical > .decrement-button > .decrement-arrow {
     -fx-padding: 2.5px 4px 2.5px 4px;
@@ -596,6 +598,7 @@
 .scroll-bar:horizontal > .increment-button > .increment-arrow,
 .scroll-bar:horizontal > .decrement-button > .decrement-arrow {
     -fx-padding: 4px 2.5px 4px 2.5px;
+    -fx-translate-y: -1; /* HACK:  Somehow the arrow is not centered so we add this to center it */
 }
 
 .scroll-bar > .increment-button > .increment-arrow, .scroll-bar > .decrement-button > .decrement-arrow {
