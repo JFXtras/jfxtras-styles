@@ -13,7 +13,7 @@ The project sources have changed place.
 - Code samples, that show how to work with a theme and how controls look with that theme are under "samples" ("samples" directory)   
 
 ## JMetro
-Documentation on JMetro can be found in this link: [http://www.pixelduke.com/jmetro](http://www.pixelduke.com/jmetro)  
+Documentation on JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
 
 ### Pull Requests (PR)
 We welcome contributions via PR.  
