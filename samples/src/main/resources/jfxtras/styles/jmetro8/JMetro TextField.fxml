@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet JMetroLightTheme.css?>
-<?scenebuilder-stylesheet JMetroDarkTheme.css?>
 
 <!--
   ~ Copyright (c) 2011-2018 JFXtras
@@ -36,22 +33,31 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="373.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
-  <children>
-    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Push Button">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500" styleClass="background" xmlns:fx="http://javafx.com/fxml">
+    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Text Field">
+        <font>
+            <Font name="Segoe UI" size="30.0" />
+        </font>
     </Label>
-    <Button layoutX="43.0" layoutY="154.0" mnemonicParsing="false" text="Button" />
-    <Button defaultButton="true" layoutX="230.0" layoutY="154.0" mnemonicParsing="false" styleClass="default" text="Button" />
-    <Button disable="true" layoutX="43.0" layoutY="245.0" mnemonicParsing="false" text="Button" />
-    <Button defaultButton="true" disable="true" layoutX="230.0" layoutY="245.0" mnemonicParsing="false" styleClass="null" text="Button" />
-    <Label layoutX="43.0" layoutY="132.0" styleClass="item-title" text="Normal" textFill="WHITE">
+    <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI" size="12.0" fx:id="x1" />
+        </font>
     </Label>
-    <Label layoutX="230.0" layoutY="132.0" styleClass="item-title" text="Default">
-      <textFill>
-        <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
-      </textFill>
+    <Label font="$x1" layoutX="274.0" layoutY="165.0" styleClass="item-title, disabled" text="Disabled">
+        <textFill>
+            <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
+        </textFill>
     </Label>
-    <Label layoutX="43.0" layoutY="223.0" styleClass="item-title" text="Normal disabled" textFill="$x2" />
-    <Label layoutX="230.0" layoutY="223.0" styleClass="item-title" text="Default disabled" textFill="$x2" />
-  </children>
+    <Label layoutX="43.0" layoutY="228.0" styleClass="item-title" text="Rest State" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI" size="12.0" fx:id="x1" />
+        </font>
+    </Label>
+    <TextField layoutX="43.0" layoutY="187.0">
+    </TextField>
+    <TextField disable="true" layoutX="274.0" layoutY="188.0" text="Sample text">
+    </TextField>
+    <TextField layoutX="43.0" layoutY="250.0" promptText="Sample prompt text">
+    </TextField>
 </AnchorPane>
