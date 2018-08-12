@@ -967,42 +967,115 @@
  * Toggle Switch (ControlsFX)                                                  *
  *                                                                             *
  ******************************************************************************/
-.toggle-switch .text{
+.toggle-switch {
+    -fx-skin: "impl.jfxtras.styles.jmetro8.MetroToggleSwitchSkin";
+}
+
+.toggle-switch {
+    ACCENT_COLOR: #0078d7;
+
+    /* Unselected */
+    UNSELECTED: #111;
+    UNSELECTED_BORDER: #cccccc;
+    THUMB_UNSELECTED: #cccccc;
+    /* --    hover */
+    UNSELECTED_HOVER: #111;
+    UNSELECTED_BORDER_HOVER: white;
+    THUMB_UNSELECTED_HOVER: white;
+
+    /* Selected */
+    SELECTED: ACCENT_COLOR;
+    SELECTED_BORDER: ACCENT_COLOR;
+    THUMB_SELECTED: white;
+    /* --    hover */
+    SELECTED_HOVER: derive(ACCENT_COLOR, -20%);
+
+    /* Pressed */
+    PRESSED: #999999;
+    PRESSED_BORDER: PRESSED;
+    THUMB_PRESSED: white;
+
+
+    -thumb-move-animation-time: 100;
+    -toggle-display: left;
+}
+
+.toggle-switch .text {
     -fx-fill: white;
     -fx-font-size: 1em;
+    -fx-font-family: "Segoe UI";
 }
 
 .toggle-switch .thumb {
-    -fx-background-color: white;
-    -fx-padding: 0.583333em 0.333333em 0.583333em 0.333333em;  /* 7 4 7 4*/
-    -fx-background-radius: 0;
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-padding: 5px;
 }
 
 .toggle-switch .thumb-area{
-    -fx-background-radius: 0;
+    -fx-background-radius: 10px;
+
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+
+    -fx-pref-width: 44px;
+    -fx-pref-height: 20px;
+    -fx-padding: 5px 5px 5px 5px;
 }
 
+/* unselected */
+.toggle-switch .thumb-area{
+    -fx-background-insets: 0;
+    -fx-background-color: UNSELECTED;
+
+    -fx-border-color: UNSELECTED_BORDER;
+}
+
+.toggle-switch .thumb {
+    -fx-background-color: THUMB_UNSELECTED;
+}
+
+/* unselected - hover */
+.toggle-switch:hover .thumb-area {
+    -fx-background-color: UNSELECTED_HOVER;
+
+    -fx-border-color: UNSELECTED_BORDER_HOVER;
+}
+
+.toggle-switch:hover .thumb {
+    -fx-background-color: THUMB_UNSELECTED_HOVER;
+}
+
+/* selected */
 .toggle-switch:selected .thumb-area{
-    -fx-background-insets: 0, 1, 2;
-    -fx-background-color: #777777, black, #219297;  /* The last one is the accent color */
+    -fx-background-insets: 0;
+    -fx-background-color: SELECTED;
+
+    -fx-border-color: SELECTED_BORDER;
 }
 
-.toggle-switch .thumb-area{
-    -fx-background-insets: 0, 1, 2;
-    -fx-background-color: #777777, black, #777777;
+.toggle-switch:selected .thumb{
+    -fx-background-color: THUMB_SELECTED;
 }
 
-.toggle-switch:selected:pressed .thumb-area{
-    -fx-background-insets: 0, 1, 2;
-    -fx-background-color: #777777, black, #25bbc4; /* The last one is the accent color */
+/* selected - hover */
+.toggle-switch:selected:hover .thumb-area {
+    -fx-background-color: SELECTED_HOVER;
+    -fx-border-color: SELECTED_HOVER;
 }
 
-.toggle-switch .thumb-area
-{
-    -fx-padding: 0.583333em 1.333333em 0.583333em 1.333333em; /* 7 16 7 16 */
+/* pressed */
+.toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area{
+    -fx-background-insets: 0;
 
+    -fx-background-color: PRESSED;
+    -fx-border-color: PRESSED_BORDER;
 }
 
+.toggle-switch:pressed .thumb {
+    -fx-background-color: THUMB_PRESSED;
+}
+
+/* disabled */
 .toggle-switch:disabled
 {
     -fx-opacity: 0.4;
