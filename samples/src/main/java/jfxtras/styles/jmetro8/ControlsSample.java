@@ -57,11 +57,11 @@ public class ControlsSample extends Application {
 
     static final private String RESOURCE = TOGGLE_SWITCH_RESOURCE;
 
-    static final private JMetro.Style STYLE = JMetro.Style.DARK;
+    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        System.setProperty("prism.lcdtext", "false");
+        System.setProperty("prism.lcdtext", "false");
 
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
