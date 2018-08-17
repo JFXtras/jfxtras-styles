@@ -926,40 +926,64 @@
  *                                                                             *
  ******************************************************************************/
 
+
 .slider {
     -fx-skin: "impl.jfxtras.styles.jmetro8.FilledSliderSkin";
 }
 
+.slider {
+    ACCENT_COLOR: #0078d7;
+
+    TRACK_HOVER: #999999;
+    THUMB_HOVER: #f2f2f2;
+
+    THUMB_PRESSED: #767676;
+}
+
 .slider .thumb {
-    -fx-background-color: white;
+    -fx-background-color: ACCENT_COLOR;
     -fx-background-insets: 0;
-    -fx-background-radius: 0em;
-    -fx-padding: 0.333333em; /* 4 */
+    -fx-background-radius: 6px;
+
+    -fx-padding: 12px 4px 12px 4px;
 
     -fx-effect: null;
 }
-.slider:focused .thumb {
-    -fx-background-radius: 0em;
+
+.slider:vertical .thumb {
+    -fx-padding: 4px 12px  4px 12px;
 }
 
 .slider .track {
-    -fx-background-color: #6c6c6c;
+    -fx-background-color: #c6c6c6;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+    -fx-padding: 0.083333em; /* 1 */
+
 }
 
 .slider .fill {
-    -fx-background-color: #008287;
-    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+    -fx-background-color: ACCENT_COLOR;
+    -fx-padding: 0.083333em; /* 1 */
 }
 
-.slider .fill:hover {
-    -fx-background-color: #219297;
+/* hover */
+.slider:hover .track{
+    -fx-background-color: TRACK_HOVER;
 }
 
-.slider .fill:pressed {
-    -fx-background-color: #25bbc4;
+.slider:hover .thumb{
+    -fx-background-color: THUMB_HOVER;
+}
+
+/* pressed */
+.slider .thumb:pressed {
+    -fx-background-color: THUMB_PRESSED;
+}
+
+/* disabled */
+.slider:disabled {
+    -fx-opacity: 0.2;
 }
 
 /*******************************************************************************

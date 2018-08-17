@@ -55,7 +55,7 @@ public class ControlsSample extends Application {
     static final private String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final private String LIST_BOX_RESOURCE = "JMetro ListView.fxml";
 
-    static final private String RESOURCE = TOGGLE_SWITCH_RESOURCE;
+    static final private String RESOURCE = SLIDER_RESOURCE;
 
     static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
