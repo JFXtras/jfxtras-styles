@@ -29,8 +29,8 @@ package impl.jfxtras.styles.jmetro8;
 
 import javafx.scene.control.TextField;
 
-public class MetroTextFieldSkin extends TextFieldWithButtonSkin{
-    public MetroTextFieldSkin(TextField textField) {
+public class TextFieldSkin extends TextFieldWithButtonSkin{
+    public TextFieldSkin(TextField textField) {
         super(textField);
     }
 

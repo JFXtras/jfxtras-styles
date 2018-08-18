@@ -42,7 +42,7 @@ import javafx.util.Duration;
 import javafx.util.StringConverter;
 
 
-public class FilledSliderSkin extends BehaviorSkinBase<Slider, SliderBehavior> {
+public class SliderSkin extends BehaviorSkinBase<Slider, SliderBehavior> {
 
     /** Track if slider is vertical/horizontal and cause re layout */
 //    private boolean horizontal;
@@ -65,7 +65,7 @@ public class FilledSliderSkin extends BehaviorSkinBase<Slider, SliderBehavior> {
     private StackPane fill;
     private boolean trackClicked = false;//    private double visibleAmount = 16;
 
-    public FilledSliderSkin(Slider slider) {
+    public SliderSkin(Slider slider) {
         super(slider, new SliderBehavior(slider));
 
         initialize();

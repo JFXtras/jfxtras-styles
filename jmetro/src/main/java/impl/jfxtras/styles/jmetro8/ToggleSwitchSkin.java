@@ -5,7 +5,6 @@ import com.sun.javafx.css.converters.SizeConverter;
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.DoubleProperty;
-import javafx.beans.value.WritableValue;
 import javafx.css.CssMetaData;
 import javafx.css.SimpleStyleableObjectProperty;
 import javafx.css.Styleable;
@@ -24,7 +23,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MetroToggleSwitchSkin extends SkinBase<ToggleSwitch>
+public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
 {
     private final StackPane thumb;
     private final StackPane thumbArea;
@@ -33,11 +32,11 @@ public class MetroToggleSwitchSkin extends SkinBase<ToggleSwitch>
     private final TranslateTransition transition;
 
     /**
-     * Constructor for all MetroToggleSwitchSkin instances.
+     * Constructor for all ToggleSwitchSkin instances.
      *
      * @param control The ToggleSwitch for which this Skin should attach to.
      */
-    public MetroToggleSwitchSkin(ToggleSwitch control) {
+    public ToggleSwitchSkin(ToggleSwitch control) {
         super(control);
 
         thumb = new StackPane();
@@ -107,7 +106,7 @@ public class MetroToggleSwitchSkin extends SkinBase<ToggleSwitch>
 
                 @Override
                 public Object getBean() {
-                    return MetroToggleSwitchSkin.this;
+                    return ToggleSwitchSkin.this;
                 }
 
                 @Override
@@ -131,7 +130,7 @@ public class MetroToggleSwitchSkin extends SkinBase<ToggleSwitch>
     private StyleableObjectProperty<ThumbDisplay> thumbDisplay = new SimpleStyleableObjectProperty<ThumbDisplay>(THUMB_DISPLAY_META_DATA, ThumbDisplay.RIGHT) {
         @Override
         protected void invalidated() {
-            MetroToggleSwitchSkin.this.getSkinnable().requestLayout();
+            ToggleSwitchSkin.this.getSkinnable().requestLayout();
         }
     };
 
@@ -207,14 +206,14 @@ public class MetroToggleSwitchSkin extends SkinBase<ToggleSwitch>
 
                 @Override
                 public boolean isSettable(ToggleSwitch toggleSwitch) {
-                    final MetroToggleSwitchSkin skin = (MetroToggleSwitchSkin) toggleSwitch.getSkin();
+                    final ToggleSwitchSkin skin = (ToggleSwitchSkin) toggleSwitch.getSkin();
                     return skin.thumbMoveAnimationTime == null ||
                             !skin.thumbMoveAnimationTime.isBound();
                 }
 
                 @Override
                 public StyleableProperty<Number> getStyleableProperty(ToggleSwitch toggleSwitch) {
-                    final MetroToggleSwitchSkin skin = (MetroToggleSwitchSkin) toggleSwitch.getSkin();
+                    final ToggleSwitchSkin skin = (ToggleSwitchSkin) toggleSwitch.getSkin();
                     return (StyleableProperty<Number>) skin.thumbMoveAnimationTimeProperty();
                 }
             };
@@ -224,13 +223,13 @@ public class MetroToggleSwitchSkin extends SkinBase<ToggleSwitch>
 
                 @Override
                 public boolean isSettable(ToggleSwitch toggleSwitch) {
-                    final MetroToggleSwitchSkin skin = (MetroToggleSwitchSkin) toggleSwitch.getSkin();
+                    final ToggleSwitchSkin skin = (ToggleSwitchSkin) toggleSwitch.getSkin();
                     return !skin.thumbDisplay.isBound();
                 }
 
                 @Override
                 public StyleableProperty<ThumbDisplay> getStyleableProperty(ToggleSwitch toggleSwitch) {
-                    final MetroToggleSwitchSkin skin = (MetroToggleSwitchSkin) toggleSwitch.getSkin();
+                    final ToggleSwitchSkin skin = (ToggleSwitchSkin) toggleSwitch.getSkin();
                     return skin.thumbDisplayProperty();
                 }
             };
