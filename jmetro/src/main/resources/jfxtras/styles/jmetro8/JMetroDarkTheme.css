@@ -938,6 +938,8 @@
     THUMB_HOVER: #f2f2f2;
 
     THUMB_PRESSED: #767676;
+
+    -show-value-on-interaction: true;
 }
 
 .slider .thumb {
@@ -984,6 +986,16 @@
 /* disabled */
 .slider:disabled {
     -fx-opacity: 0.2;
+}
+
+/* Slider popup showing its value */
+.slider-popup .label {
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #cccccc;
+
+    -fx-text-fill: #111;
+
+    -fx-padding: 0.5em 0.75em 0.5em 0.75em;
 }
 
 /*******************************************************************************
