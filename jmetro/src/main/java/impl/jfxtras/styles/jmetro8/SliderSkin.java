@@ -79,6 +79,7 @@ public class SliderSkin extends BehaviorSkinBase<Slider, SliderBehavior> {
 
     private SliderPopup popup = new SliderPopup();
     private static final int POPUP_DISTANCE_FROM_THUMB = 50;
+    private static final Duration POPUP_FADE_DURATION = Duration.millis(200);
 
     public SliderSkin(Slider slider) {
         super(slider, new SliderBehavior(slider));
@@ -159,7 +160,7 @@ public class SliderSkin extends BehaviorSkinBase<Slider, SliderBehavior> {
             popup.setY(popup.getY() - popup.getHeight() / 2); /* We only know the Popup's bounds after we show it */
         }
 
-        FadeTransition fadeInTransition = new FadeTransition(Duration.millis(200), popup.getScene().getRoot());
+        FadeTransition fadeInTransition = new FadeTransition(POPUP_FADE_DURATION, popup.getScene().getRoot());
         fadeInTransition.setFromValue(0);
         fadeInTransition.setToValue(1);
         fadeInTransition.play();
@@ -189,7 +190,7 @@ public class SliderSkin extends BehaviorSkinBase<Slider, SliderBehavior> {
             return;
         }
 
-        FadeTransition fadeOutTransition = new FadeTransition(Duration.millis(200), popup.getScene().getRoot());
+        FadeTransition fadeOutTransition = new FadeTransition(POPUP_FADE_DURATION, popup.getScene().getRoot());
         fadeOutTransition.setFromValue(1);
         fadeOutTransition.setToValue(0);
         fadeOutTransition.setOnFinished(actionEvent -> popup.hide());
