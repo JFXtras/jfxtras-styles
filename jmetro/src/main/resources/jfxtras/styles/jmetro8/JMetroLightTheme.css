@@ -48,33 +48,53 @@
  ******************************************************************************/
 
 .button {
-    -fx-padding: 5 22 5 22;
+    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentButtonSkin";
+}
+
+.button {
+    ACCENT_COLOR: #2796c4;
+
+    BACKGROUND: #cccccc;
+    BACKGROUND_PRESSED: #999999;
+
+    BORDER_HOVER: #7a7a7a;
+
+    TEXT: #111;
+    DEFAULT_BUTTON_TEXT: white;
+
+    FOCUS_RING_BORDER: #111;
+
+    -shrink-animate-on-press: true;
+}
+
+.button {
+    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /*3 20 3 20*/
 
     -fx-border-color: transparent;
     -fx-border-width: 2;
 
     -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: BACKGROUND;
 
-    -fx-background-color: #cccccc;
-
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: black;
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 1.333333em; /* 16 */
+    -fx-text-fill: TEXT;
 }
 
 .button:hover{
-    -fx-background-color: #d8d8d8;
+    -fx-border-color: BORDER_HOVER;
 }
 
-.button:pressed, .button:default:hover:pressed
+.button:pressed
 {
-  -fx-background-color: black;
-  -fx-text-fill: white;
+    -fx-border-color: BACKGROUND_PRESSED;
+    -fx-background-color: BACKGROUND_PRESSED;
 }
 
 .button:focused
 {
-    -fx-border-color: transparent, black;
+    -fx-border-color: transparent, FOCUS_RING_BORDER;
     -fx-border-width: 1, 1;
     /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
@@ -85,18 +105,22 @@
 .button:disabled, .button:default:disabled
 {
     -fx-opacity: 0.4;
-    -fx-background-color: #cccccc;
-    -fx-text-fill: #212121;
+    -fx-background-color: BACKGROUND;
+    -fx-text-fill: TEXT;
 }
 
 .button:default
 {
-    -fx-background-color: #008287;
-    -fx-text-fill: #ffffff;
+    -fx-background-color: ACCENT_COLOR;
+    -fx-text-fill: DEFAULT_BUTTON_TEXT;
 }
 
 .button:default:hover{
-    -fx-background-color: #219297;
+    -fx-border-color: derive(ACCENT_COLOR, -40%);
+}
+
+.button:default:pressed {
+    -fx-background-color: derive(ACCENT_COLOR, -40%);
 }
 
 
