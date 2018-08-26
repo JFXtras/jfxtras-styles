@@ -58,6 +58,7 @@
     BACKGROUND_PRESSED: #666666;
 
     BORDER_HOVER: #858585;
+    BORDER_HOVER_DEFAULT: derive(ACCENT_COLOR, 70%);
 
     TEXT: white;
     DEFAULT_BUTTON_TEXT: white;
@@ -116,7 +117,7 @@
 }
 
 .button:default:hover{
-    -fx-border-color: derive(ACCENT_COLOR, 60%);
+    -fx-border-color: BORDER_HOVER_DEFAULT;
 }
 
 .button:default:pressed {
@@ -131,22 +132,54 @@
  ******************************************************************************/
 
 .toggle-button {
-    -fx-padding: 5 22 5 22;
-    -fx-border-color: #e2e2e2;
+    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentToggleButtonSkin";
+}
+
+.toggle-button {
+    ACCENT_COLOR: #2796c4;
+
+    BACKGROUND: #333333;
+    BACKGROUND_PRESSED: #666666;
+
+    BORDER_HOVER: #858585;
+    BORDER_HOVER_SELECTED: derive(ACCENT_COLOR, 70%);
+
+    TEXT: white;
+    DEFAULT_BUTTON_TEXT: white;
+
+    FOCUS_RING_BORDER: white;
+
+    -shrink-animate-on-press: true;
+}
+
+.toggle-button {
+    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /*3 20 3 20*/
+
+    -fx-border-color: transparent;
     -fx-border-width: 2;
 
     -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: BACKGROUND;
 
-    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 1.333333em; /* 16 */
+    -fx-text-fill: TEXT;
 
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: #d8d8d8;
+}
+
+.toggle-button:hover {
+    -fx-border-color: BORDER_HOVER;
+}
+
+.toggle-button:pressed
+{
+    -fx-border-color: BACKGROUND_PRESSED;
+    -fx-background-color: BACKGROUND_PRESSED;
 }
 
 .toggle-button:focused {
-    -fx-border-color: white, white;
-
+    -fx-border-color: transparent, FOCUS_RING_BORDER;
     -fx-border-width: 1, 1;
     /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
@@ -154,26 +187,25 @@
     -fx-border-insets: 1 1 1 1, 0;
 }
 
-.toggle-button:hover {
-    -fx-text-fill: #d8d8d8;
-    -fx-background-color: #3a3a3a;
+.toggle-button:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: BACKGROUND;
+    -fx-text-fill: TEXT;
 }
 
 .toggle-button:selected {
-    -fx-background-color: white;
-    -fx-text-fill: #1d1d1d;
+    -fx-background-color: ACCENT_COLOR;
+    -fx-text-fill: white;
 }
 
 .toggle-button:selected:hover {
-    -fx-background-color: #eee;
-    -fx-text-fill: #1d1d1d;
-
-    -fx-border-color: #eee;
-}
-.toggle-button:disabled {
-    -fx-opacity: 0.4;
+    -fx-border-color: BORDER_HOVER_SELECTED;
 }
 
+.toggle-button:selected:pressed {
+    -fx-background-color: derive(ACCENT_COLOR, -40%);
+    -fx-border-color: derive(ACCENT_COLOR, -40%);
+}
 /*******************************************************************************
  *                                                                             *
  * Check Box                                                                   *

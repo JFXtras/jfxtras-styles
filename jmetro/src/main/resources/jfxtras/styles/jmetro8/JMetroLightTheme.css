@@ -58,6 +58,7 @@
     BACKGROUND_PRESSED: #999999;
 
     BORDER_HOVER: #7a7a7a;
+    BORDER_HOVER_DEFAULT: derive(ACCENT_COLOR, -40%);
 
     TEXT: #111;
     DEFAULT_BUTTON_TEXT: white;
@@ -116,7 +117,7 @@
 }
 
 .button:default:hover{
-    -fx-border-color: derive(ACCENT_COLOR, -40%);
+    -fx-border-color: BORDER_HOVER_DEFAULT;
 }
 
 .button:default:pressed {
@@ -131,22 +132,54 @@
  ******************************************************************************/
 
 .toggle-button {
-    -fx-padding: 5 22 5 22;
-    -fx-border-style: null;
-    -fx-background-radius: 0;
+    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentToggleButtonSkin";
+}
 
-    -fx-background-color: #cccccc;
+.toggle-button {
+    ACCENT_COLOR: #2796c4;
 
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: black;
+    BACKGROUND: #cccccc;
+    BACKGROUND_PRESSED: #999999;
+
+    BORDER_HOVER: #7a7a7a;
+    BORDER_HOVER_SELECTED: derive(ACCENT_COLOR, -40%);
+
+    TEXT: #111;
+    DEFAULT_BUTTON_TEXT: white;
+
+    FOCUS_RING_BORDER: #111;
+
+    -shrink-animate-on-press: true;
+}
+
+.toggle-button {
+    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /*3 20 3 20*/
 
     -fx-border-color: transparent;
     -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: BACKGROUND;
+
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 1.333333em; /* 16 */
+    -fx-text-fill: TEXT;
+
+}
+
+.toggle-button:hover {
+    -fx-border-color: BORDER_HOVER;
+}
+
+.toggle-button:pressed
+{
+    -fx-border-color: BACKGROUND_PRESSED;
+    -fx-background-color: BACKGROUND_PRESSED;
 }
 
 .toggle-button:focused {
-    -fx-border-color: transparent, black;
+    -fx-border-color: transparent, FOCUS_RING_BORDER;
     -fx-border-width: 1, 1;
     /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
@@ -154,23 +187,23 @@
     -fx-border-insets: 1 1 1 1, 0;
 }
 
-.toggle-button:hover {
-    -fx-background-color: #d8d8d8;
-    -fx-text-fill: black;
+.toggle-button:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: BACKGROUND;
+    -fx-text-fill: TEXT;
 }
 
 .toggle-button:selected {
-    -fx-background-color: black;
+    -fx-background-color: ACCENT_COLOR;
     -fx-text-fill: white;
 }
 
 .toggle-button:selected:hover {
-    -fx-background-color: #666;
-    -fx-text-fill: white;
+    -fx-border-color: BORDER_HOVER_SELECTED;
 }
 
-.toggle-button:disabled {
-    -fx-opacity: 0.4;
+.toggle-button:selected:pressed {
+    -fx-background-color: derive(ACCENT_COLOR, -40%);
 }
 
 /*******************************************************************************
