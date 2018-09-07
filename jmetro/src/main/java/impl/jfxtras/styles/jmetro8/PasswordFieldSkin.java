@@ -31,6 +31,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class PasswordFieldSkin extends TextFieldWithButtonSkin{
+	private final String BULLET = "•";
+	
     private boolean shouldMaskText = true;
 
     public PasswordFieldSkin(TextField textField) {

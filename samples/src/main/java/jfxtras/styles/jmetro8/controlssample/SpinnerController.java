@@ -1,24 +1,24 @@
 package jfxtras.styles.jmetro8.controlssample;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 public class SpinnerController implements Initializable
 {
     @FXML
-    private Spinner spinner1;
-    @FXML private Spinner spinner2;
-    @FXML private Spinner spinner3;
-    @FXML private Spinner spinner4;
-    @FXML private Spinner spinner5;
-    @FXML private Spinner spinner6;
-    @FXML private Spinner disabledSpinner;
+    private Spinner<Integer> spinner1;
+    @FXML private Spinner<Integer> spinner2;
+    @FXML private Spinner<Integer> spinner3;
+    @FXML private Spinner<Integer> spinner4;
+    @FXML private Spinner<Integer> spinner5;
+    @FXML private Spinner<Integer> spinner6;
+    @FXML private Spinner<Integer> disabledSpinner;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)

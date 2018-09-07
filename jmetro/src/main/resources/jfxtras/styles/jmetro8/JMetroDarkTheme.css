@@ -824,7 +824,7 @@
  ******************************************************************************/
 
 .text-field{
-    -fx-skin: "impl.jfxtras.styles.jmetro8.TextFieldSkin";
+    -fx-skin: "javafx.scene.control.skin.TextFieldSkin";
 }
 
 .text-input{
@@ -932,7 +932,7 @@
 
 
 .slider {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.SliderSkin";
+    -fx-skin: "javafx.scene.control.skin.SliderSkin";
 }
 
 .slider {
@@ -1128,7 +1128,7 @@
  ******************************************************************************/
 
 .spinner > .text-field{
-    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+    -fx-skin: "javafx.scene.control.skin.TextFieldSkin";
 }
 
 .spinner {
@@ -1205,7 +1205,7 @@
 }
 
 .date-picker .text-field{
-    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+    -fx-skin: "javafx.scene.control.skin.TextFieldSkin";
 }
 
 .date-picker .text-field{

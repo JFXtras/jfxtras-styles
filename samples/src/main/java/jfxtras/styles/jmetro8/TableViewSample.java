@@ -1,11 +1,12 @@
 package jfxtras.styles.jmetro8;
 
+import java.util.List;
+
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.SelectionMode;
@@ -56,35 +57,35 @@ public class TableViewSample extends Application {
         table.getSelectionModel().setCellSelectionEnabled(true);
         table.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        TableColumn firstNameCol = new TableColumn("First Name");
+        TableColumn<Person, String> firstNameCol = new TableColumn<>("First Name");
         firstNameCol.setMinWidth(150);
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("firstName"));
 
-        TableColumn lastNameCol = new TableColumn("Last Name");
+        TableColumn<Person, String> lastNameCol = new TableColumn<>("Last Name");
         lastNameCol.setMinWidth(150);
         lastNameCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("lastName"));
 
-        TableColumn emailCol = new TableColumn("Email");
+        TableColumn<Person, String> emailCol = new TableColumn<>("Email");
         emailCol.setMinWidth(250);
         emailCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("email"));
 
         table.setItems(data);
-        table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
+        table.getColumns().addAll(List.of(firstNameCol, lastNameCol, emailCol));
 
         vbox.setSpacing(40);
         vbox.setPadding(new Insets(10, 10, 0, 10));
         vbox.getChildren().addAll(label, table);
 
 
-        if (STYLE.equals(STYLE.LIGHT)) {
+        if (STYLE.equals(JMetro.Style.LIGHT)) {
             vbox.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
             table.setStyle("-fx-border-color: #E5E5E5; -fx-border-width: 1px; -fx-border-style: solid;");
             label.setStyle("-fx-text-fill: #111;");
         }
-        else if (STYLE.equals(STYLE.DARK)){
+        else if (STYLE.equals(JMetro.Style.DARK)){
             vbox.setBackground(new Background(new BackgroundFill(Paint.valueOf("#111"), CornerRadii.EMPTY, Insets.EMPTY)));
             table.setStyle("-fx-border-color: #1D1D1D; -fx-border-width: 1px; -fx-border-style: solid;");
             label.setStyle("-fx-text-fill: white;");
