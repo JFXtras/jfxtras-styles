@@ -73,31 +73,11 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
     private void setupListeners() {
 
         final TextField textField = getSkinnable();
-        rightButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                rightButtonPressed();
-            }
-        });
-        rightButton.setOnMouseReleased(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                rightButtonReleased();
-            }
-        });
+        rightButton.setOnMousePressed(event -> rightButtonPressed());
+        rightButton.setOnMouseReleased(event -> rightButtonReleased());
 
-        textField.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                textChanged();
-            }
-        });
-        textField.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                focusChanged();
-            }
-        });
+        textField.textProperty().addListener((observable, oldValue, newValue) -> textChanged());
+        textField.focusedProperty().addListener((observable, oldValue, newValue) -> focusChanged());
     }
 
     protected void textChanged()
