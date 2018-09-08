@@ -53,8 +53,6 @@
  ******************************************************************************/
 
 .button, .toggle-button {
-    ACCENT_COLOR: #2796c4;
-
     BACKGROUND: #cccccc;
     BACKGROUND_PRESSED: #999999;
 
@@ -164,8 +162,6 @@
  ******************************************************************************/
 
 .check-box {
-    ACCENT_COLOR: #2796c4;
-
     -fx-text-fill: black;
 }
 
@@ -308,8 +304,6 @@
  ******************************************************************************/
 
 .radio-button {
-    ACCENT_COLOR: #2796c4;
-
     -fx-text-fill: #212121;
 }
 
@@ -589,9 +583,7 @@
      LIST_CELL_HOVER_BACKGROUND: #e0e0e0;
 
      LIST_CELL_BORDER: #cccccc;
-
-     ACCENT_COLOR: #a6d8ff;
- }
+}
 
 .combo-box-base  {
     -fx-background-color: transparent, BORDER_COLOR, transparent, white;
@@ -826,8 +818,6 @@
 }
 
 .slider {
-    ACCENT_COLOR: #0078d7;
-
     TRACK_HOVER: #666666;
     THUMB_HOVER: #171717;
 
@@ -902,8 +892,6 @@
 }
 
 .toggle-switch {
-    ACCENT_COLOR: #0078d7;
-
     /* Unselected */
     UNSELECTED: white;
     UNSELECTED_BORDER: #111;
@@ -1298,7 +1286,6 @@
     /* This is a var */
     TABLE_VIEW_BORDER_COLOR: #f4f4f4;
     LIGHT_ACCENT_COLOR: #d5e1f2;
-    ACCENT_COLOR: #1550bd;
 
     -fx-cell-focus-inner-border: LIGHT_ACCENT_COLOR; /* focused */
 
@@ -1381,7 +1368,6 @@
 
 /* - when focused and selected */
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
-    -fx-background: ACCENT_COLOR;
     -fx-border-color: #034f95;
 }
 
@@ -1426,7 +1412,6 @@
 .tree-view {
     HOVER_COLOR: #ccc;
     PRESSED_COLOR: derive(HOVER_COLOR, -30%);
-    ACCENT_COLOR: #1550bd;
 
     -fx-background-color: white;
     -fx-padding: 0;
@@ -1489,8 +1474,6 @@
  ******************************************************************************/
 
 .tab-pane {
-    ACCENT_COLOR: #1550bd;
-
     -fx-tab-min-height: 2.91666375em; /* 34 */
     -fx-tab-max-height: 2.91666375em; /* 34 */
 }

@@ -55,8 +55,6 @@
  ******************************************************************************/
 
 .button, .toggle-button {
-    ACCENT_COLOR: #2796c4;
-
     BACKGROUND: #333333;
     BACKGROUND_PRESSED: #666666;
 
@@ -166,8 +164,6 @@
  ******************************************************************************/
 
 .check-box {
-    ACCENT_COLOR: #2796c4;
-
     -fx-text-fill: white;
 }
 
@@ -319,8 +315,6 @@
  ******************************************************************************/
 
 .radio-button {
-    ACCENT_COLOR: #2796c4;
-
     -fx-text-fill: white;
 }
 
@@ -653,8 +647,6 @@
     LIST_CELL_HOVER_BACKGROUND: #545454;
 
     LIST_CELL_BORDER: #767676;
-
-    ACCENT_COLOR: #a6d8ff;
 }
 
 .combo-box-base  {
@@ -949,8 +941,6 @@
 }
 
 .slider {
-    ACCENT_COLOR: #0078d7;
-
     TRACK_HOVER: #999999;
     THUMB_HOVER: #f2f2f2;
 
@@ -1025,8 +1015,6 @@
 }
 
 .toggle-switch {
-    ACCENT_COLOR: #0078d7;
-
     /* Unselected */
     UNSELECTED: #111;
     UNSELECTED_BORDER: #cccccc;
@@ -1460,7 +1448,6 @@
     /* This is a var */
     TABLE_VIEW_BORDER_COLOR: #171717;
     LIGHT_ACCENT_COLOR: #d5e1f2;
-    ACCENT_COLOR: #1550bd;
 
     -fx-cell-focus-inner-border: LIGHT_ACCENT_COLOR; /* focused */
 
@@ -1594,7 +1581,6 @@
 .tree-view {
     HOVER_COLOR: #333;
     PRESSED_COLOR: derive(HOVER_COLOR, 15%);
-    ACCENT_COLOR: #1550bd;
 
     -fx-background-color: #111;
     -fx-padding: 0;
@@ -1665,8 +1651,6 @@
  ******************************************************************************/
 
 .tab-pane {
-    ACCENT_COLOR: #1550bd;
-
     -fx-tab-min-height: 2.91666375em; /* 34 */
     -fx-tab-max-height: 2.91666375em; /* 34 */
 }
