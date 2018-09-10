@@ -1,4 +1,4 @@
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,33 +10,35 @@ import javafx.css.SimpleStyleableBooleanProperty;
 import javafx.css.Styleable;
 import javafx.css.StyleableProperty;
 import javafx.css.converter.BooleanConverter;
+import javafx.scene.control.Button;
 import javafx.scene.control.SkinBase;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.skin.ToggleButtonSkin;
+import javafx.scene.control.skin.ButtonSkin;
 
-public class FluentToggleButtonSkin extends ToggleButtonSkin {
+public class FluentButtonSkin extends ButtonSkin {
 
-    public FluentToggleButtonSkin(ToggleButton button) {
+    public FluentButtonSkin(Button button) {
         super(button);
 
         ButtonAnimationHelper.setupButton(button, shrinkAnimateOnPressProperty());
     }
 
+
     /********** CSS Properties ****************/
 
-    private static final CssMetaData<ToggleButton, Boolean> SHRINK_ANIMATE_ON_PRESS_META_DATA =
-            new CssMetaData<ToggleButton, Boolean>(ButtonAnimationHelper.SHRINK_ANIMATE_ON_PRESS_PROPERTY_NAME,
+    private static final CssMetaData<Button, Boolean> SHRINK_ANIMATE_ON_PRESS_META_DATA =
+            new CssMetaData<Button, Boolean>(ButtonAnimationHelper.SHRINK_ANIMATE_ON_PRESS_PROPERTY_NAME,
                     BooleanConverter.getInstance(), true) {
 
                 @Override
-                public boolean isSettable(ToggleButton button) {
-                    final FluentToggleButtonSkin skin = (FluentToggleButtonSkin) button.getSkin();
+                public boolean isSettable(Button button) {
+                    final FluentButtonSkin skin = (FluentButtonSkin) button.getSkin();
                     return !skin.shrinkAnimateOnPress.isBound();
                 }
 
                 @Override
-                public StyleableProperty<Boolean> getStyleableProperty(ToggleButton button) {
-                    final FluentToggleButtonSkin skin = (FluentToggleButtonSkin) button.getSkin();
+                // To-do: Exception: java.lang.ClassCastException: javafx.controls/javafx.scene.control.skin.ButtonSkin cannot be cast to org.jfxtras.jmetro/org.jfxtras.styles.jmetro8.impl.FluentButtonSkin
+                public StyleableProperty<Boolean> getStyleableProperty(Button button) {
+                    final FluentButtonSkin skin = (FluentButtonSkin) button.getSkin();
                     return (StyleableProperty<Boolean>) skin.shrinkAnimateOnPressProperty();
                 }
             };
@@ -45,7 +47,7 @@ public class FluentToggleButtonSkin extends ToggleButtonSkin {
 
     private BooleanProperty shrinkAnimateOnPressProperty() { return shrinkAnimateOnPress; }
 
-    private boolean isShrinkAnimateOnPress() { return shrinkAnimateOnPress.get(); }
+	private boolean isShrinkAnimateOnPress() { return shrinkAnimateOnPress.get(); }
 
 
     /* Setup styleables for this Skin */

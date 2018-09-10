@@ -2,16 +2,18 @@ package jfxtras.styles.jmetro8;
 
 import java.util.Arrays;
 import java.util.List;
+
+import org.jfxtras.styles.jmetro8.JMetro;
+
 import javafx.application.Application;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.Scene;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-
-import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.layout.VBox;
 //import org.scenicview.ScenicView;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 public class TreeViewSample extends Application {
 
@@ -68,7 +70,7 @@ public class TreeViewSample extends Application {
 
 
 //        ScenicView.show(scene);
-        new JMetro(JMetro.Style.DARK).applyTheme(scene);
+        new JMetro(JMetro.Style.LIGHT).applyTheme(scene);
 
         box.getChildren().add(treeView);
         stage.setScene(scene);

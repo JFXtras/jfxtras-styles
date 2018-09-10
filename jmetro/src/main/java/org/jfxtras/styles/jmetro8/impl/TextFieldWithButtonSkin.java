@@ -25,7 +25,7 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -38,7 +38,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
-public abstract class TextFieldWithButtonSkin extends TextFieldSkin {
+public class TextFieldWithButtonSkin extends TextFieldSkin {
     private StackPane rightButton;
     private Region rightButtonGraphic;
 
@@ -130,8 +130,10 @@ public abstract class TextFieldWithButtonSkin extends TextFieldSkin {
                 clearButtonWidth, h, 0, HPos.CENTER, VPos.CENTER);
     }
 
-	abstract void rightButtonPressed();
+	protected void rightButtonPressed() {
+	}
 
-    abstract protected void rightButtonReleased();
-
+    protected void rightButtonReleased() {
+    	textField.setText("");
+    }
 }

@@ -25,47 +25,44 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8;
 
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
-public class PasswordFieldSkin extends TextFieldWithButtonSkin{
-	private final String BULLET = "•";
-	
-    private boolean shouldMaskText = true;
+public class JMetro {
+    public enum Style {
+        LIGHT,
+        DARK;
 
-    public PasswordFieldSkin(TextField textField) {
-        super(textField);
-    }
-
-    @Override
-    protected void rightButtonPressed() {
-        TextField textField = getSkinnable();
-        shouldMaskText = false;
-        textField.setText(textField.getText());
-        shouldMaskText = true;
-    }
-
-    @Override
-    protected  void rightButtonReleased()
-    {
-        TextField textField = getSkinnable();
-        textField.setText(textField.getText());
-        textField.end();
-    }
-
-    @Override protected String maskText(String txt) {
-        if (getSkinnable() instanceof PasswordField && shouldMaskText) {
-            int n = txt.length();
-            StringBuilder passwordBuilder = new StringBuilder(n);
-            for (int i = 0; i < n; i++) {
-                passwordBuilder.append(BULLET);
+        private String getStyleSheetFileName() {
+            String stylesheet = null;
+            switch (this) {
+                case LIGHT:
+                    stylesheet = "JMetroLightTheme.css";
+                    break;
+                case DARK:
+                    stylesheet = "JMetroDarkTheme.css";
+                    break;
             }
-
-            return passwordBuilder.toString();
-        } else {
-            return txt;
+            return stylesheet;
         }
     }
+
+    private Style style;
+
+    public JMetro(Style style) {
+        this.style = style;
+    }
+
+    public void applyTheme(Scene scene){
+        scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
+    }
+
+    public void applyTheme(Parent parent){
+        parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
+    }
+
+
 }
+

@@ -41,7 +41,7 @@
         <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Spinner">
         </Label>
 
-        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="SPLIT_ARROWS_HORIZONTAL" textFill="WHITE">
+        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="SPLIT_ARROWS_HORIZONTAL">
         </Label>
         <Spinner layoutX="43.0" layoutY="187.0" fx:id="spinner1">
             <styleClass>
@@ -57,7 +57,7 @@
             </styleClass>
         </Spinner>
 
-        <Label layoutX="43.0" layoutY="265.0" styleClass="item-title" text="No Styleclass" textFill="WHITE">
+        <Label layoutX="43.0" layoutY="265.0" styleClass="item-title" text="No Styleclass">
         </Label>
         <Spinner layoutX="43.0" layoutY="287.0"  fx:id="spinner3">
         </Spinner>

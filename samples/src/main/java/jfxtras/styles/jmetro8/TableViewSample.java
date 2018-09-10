@@ -2,6 +2,8 @@ package jfxtras.styles.jmetro8;
 
 import java.util.List;
 
+import org.jfxtras.styles.jmetro8.JMetro;
+
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -21,7 +23,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-//import org.scenicview.ScenicView;
 
 public class TableViewSample extends Application {
 

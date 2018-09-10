@@ -13,12 +13,18 @@ public class SpinnerController implements Initializable
 {
     @FXML
     private Spinner<Integer> spinner1;
-    @FXML private Spinner<Integer> spinner2;
-    @FXML private Spinner<Integer> spinner3;
-    @FXML private Spinner<Integer> spinner4;
-    @FXML private Spinner<Integer> spinner5;
-    @FXML private Spinner<Integer> spinner6;
-    @FXML private Spinner<Integer> disabledSpinner;
+    @FXML 
+    private Spinner<Integer> spinner2;
+    @FXML 
+    private Spinner<Integer> spinner3;
+    @FXML 
+    private Spinner<Integer> spinner4;
+    @FXML 
+    private Spinner<Integer> spinner5;
+    @FXML 
+    private Spinner<Integer> spinner6;
+    @FXML 
+    private Spinner<Integer> disabledSpinner;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)

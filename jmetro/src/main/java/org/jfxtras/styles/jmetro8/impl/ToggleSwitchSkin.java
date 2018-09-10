@@ -1,4 +1,4 @@
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -212,8 +212,9 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
                             !skin.thumbMoveAnimationTime.isBound();
                 }
 
-                @Override
-                public StyleableProperty<Number> getStyleableProperty(ToggleSwitch toggleSwitch) {
+				@Override
+				@SuppressWarnings("unchecked")
+				public StyleableProperty<Number> getStyleableProperty(ToggleSwitch toggleSwitch) {
                     final ToggleSwitchSkin skin = (ToggleSwitchSkin) toggleSwitch.getSkin();
                     return (StyleableProperty<Number>) skin.thumbMoveAnimationTimeProperty();
                 }
