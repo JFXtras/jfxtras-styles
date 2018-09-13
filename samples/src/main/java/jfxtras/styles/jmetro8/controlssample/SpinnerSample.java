@@ -20,6 +20,8 @@ public class SpinnerSample extends Application {
 		
 		Scene scene = new Scene(root);
 		new JMetro(STYLE).applyTheme(scene);
+		scene.getStylesheets().add(
+				getClass().getResource("/jfxtras/styles/jmetro8/spinner.css").toExternalForm());
 		
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Spinner Sample");

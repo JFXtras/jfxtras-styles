@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class DatePickerSample extends Application {
 
-	private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
+	private static final JMetro.Style STYLE = JMetro.Style.DARK;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {

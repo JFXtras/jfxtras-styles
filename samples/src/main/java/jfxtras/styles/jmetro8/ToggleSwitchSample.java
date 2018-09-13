@@ -22,7 +22,7 @@ public class ToggleSwitchSample extends Application {
 		new JMetro(STYLE).applyTheme(scene);
 		
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("Spinner Sample");
+		primaryStage.setTitle("Toggle Switch Sample");
 		primaryStage.show();
 	}
 	

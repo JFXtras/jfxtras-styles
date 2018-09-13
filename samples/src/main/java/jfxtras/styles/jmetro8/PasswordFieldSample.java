@@ -22,7 +22,7 @@ public class PasswordFieldSample extends Application {
 		new JMetro(STYLE).applyTheme(scene);
 		
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("PasswordField Sample");
+		primaryStage.setTitle("Password Field Sample");
 		primaryStage.show();
 	}
 	

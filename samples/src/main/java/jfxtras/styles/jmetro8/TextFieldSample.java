@@ -22,7 +22,7 @@ public class TextFieldSample extends Application {
 		new JMetro(STYLE).applyTheme(scene);
 		
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("TextField Sample");
+		primaryStage.setTitle("Text Field Sample");
 		primaryStage.show();
 	}
 	
