@@ -1,4 +1,4 @@
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
 import javafx.animation.Interpolator;
 import javafx.animation.ScaleTransition;

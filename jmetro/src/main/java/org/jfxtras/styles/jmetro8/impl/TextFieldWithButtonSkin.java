@@ -25,21 +25,16 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
-import com.sun.javafx.scene.control.behavior.TextFieldBehavior;
-import com.sun.javafx.scene.control.skin.TextFieldSkin;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.skin.TextFieldSkin;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
-public class TextFieldWithButtonSkin extends TextFieldSkin{
+public abstract class TextFieldWithButtonSkin extends TextFieldSkin {
     private StackPane rightButton;
     private Region rightButtonGraphic;
 
@@ -102,7 +97,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
     protected void layoutChildren(double x, double y, double w, double h) {
         super.layoutChildren(x, y, w, h);
 
-        final double clearGraphicWidth = snapSize(rightButtonGraphic.prefWidth(-1));
+        final double clearGraphicWidth = snapSizeX(rightButtonGraphic.prefWidth(-1));
         final double clearButtonWidth = rightButton.snappedLeftInset() + clearGraphicWidth + rightButton.snappedRightInset();
 
         rightButton.resize(clearButtonWidth, h);
@@ -111,13 +106,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
                 clearButtonWidth, h, 0, HPos.CENTER, VPos.CENTER);
     }
 
-    protected void rightButtonPressed()
-    {
-    }
+	abstract protected void rightButtonPressed();
 
-    protected void rightButtonReleased()
-    {
-
-    }
-
+	abstract protected void rightButtonReleased();
 }

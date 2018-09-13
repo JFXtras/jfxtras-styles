@@ -1,17 +1,18 @@
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
-import com.sun.javafx.css.converters.BooleanConverter;
-import com.sun.javafx.scene.control.skin.ButtonSkin;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import javafx.beans.property.BooleanProperty;
 import javafx.css.CssMetaData;
 import javafx.css.SimpleStyleableBooleanProperty;
 import javafx.css.Styleable;
 import javafx.css.StyleableProperty;
+import javafx.css.converter.BooleanConverter;
 import javafx.scene.control.Button;
 import javafx.scene.control.SkinBase;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import javafx.scene.control.skin.ButtonSkin;
 
 public class FluentButtonSkin extends ButtonSkin {
 
@@ -30,13 +31,14 @@ public class FluentButtonSkin extends ButtonSkin {
 
                 @Override
                 public boolean isSettable(Button button) {
-                    final FluentButtonSkin skin = (FluentButtonSkin) button.getSkin();
+                    final FluentButtonSkin skin = new FluentButtonSkin(button);
                     return !skin.shrinkAnimateOnPress.isBound();
                 }
 
-                @Override
+				@Override
+				@SuppressWarnings("unchecked")
                 public StyleableProperty<Boolean> getStyleableProperty(Button button) {
-                    final FluentButtonSkin skin = (FluentButtonSkin) button.getSkin();
+                    final FluentButtonSkin skin = new FluentButtonSkin(button);
                     return (StyleableProperty<Boolean>) skin.shrinkAnimateOnPressProperty();
                 }
             };
@@ -45,7 +47,7 @@ public class FluentButtonSkin extends ButtonSkin {
 
     private BooleanProperty shrinkAnimateOnPressProperty() { return shrinkAnimateOnPress; }
 
-    private boolean isShrinkAnimateOnPress() { return shrinkAnimateOnPress.get(); }
+	private boolean isShrinkAnimateOnPress() { return shrinkAnimateOnPress.get(); }
 
 
     /* Setup styleables for this Skin */

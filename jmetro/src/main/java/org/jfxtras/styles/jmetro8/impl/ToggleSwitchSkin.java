@@ -1,7 +1,11 @@
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
-import com.sun.javafx.css.converters.EnumConverter;
-import com.sun.javafx.css.converters.SizeConverter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.controlsfx.control.ToggleSwitch;
+
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.DoubleProperty;
@@ -11,17 +15,14 @@ import javafx.css.Styleable;
 import javafx.css.StyleableDoubleProperty;
 import javafx.css.StyleableObjectProperty;
 import javafx.css.StyleableProperty;
+import javafx.css.converter.EnumConverter;
+import javafx.css.converter.SizeConverter;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.SkinBase;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
-import org.controlsfx.control.ToggleSwitch;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
 {
@@ -68,9 +69,9 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
             transition.setDuration(Duration.millis(getThumbMoveAnimationTime()));
         }
 
-        double thumbAreaWidth = snapSize(thumbArea.prefWidth(-1));
+        double thumbAreaWidth = snapSizeX(thumbArea.prefWidth(-1));
         Insets thumbAreaPadding = thumbArea.getPadding();
-        double thumbWidth = snapSize(thumb.prefWidth(-1));
+        double thumbWidth = snapSizeX(thumb.prefWidth(-1));
         double distance = thumbAreaWidth - thumbWidth - thumbAreaPadding.getRight() - thumbAreaPadding.getLeft();
 
         /*
@@ -146,7 +147,7 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
 
         double thumbWidth = thumb.prefWidth(-1);
         double thumbHeight = thumb.prefHeight(-1);
-        thumb.resize(snapSize(thumbWidth), snapSize(thumbHeight));
+        thumb.resize(snapSizeX(thumbWidth), snapSizeY(thumbHeight));
 
         double labelWidth = labelContainer.prefWidth(-1);
 
@@ -165,22 +166,22 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
         }
         double thumbAreaY = contentY;
 
-        thumbArea.resize(snapSize(thumbAreaWidth), snapSize(thumbAreaHeight));
+        thumbArea.resize(snapSizeX(thumbAreaWidth), snapSizeY(thumbAreaHeight));
 
-        thumbArea.setLayoutX(snapPosition(thumbAreaX));
-        thumbArea.setLayoutY(snapPosition(thumbAreaY));
+        thumbArea.setLayoutX(snapPositionX(thumbAreaX));
+        thumbArea.setLayoutY(snapPositionY(thumbAreaY));
 
         if (!getThumbDisplay().equals(ThumbDisplay.THUMB_ONLY)) {
-            labelContainer.resize(snapSize(contentWidth - thumbAreaWidth), snapSize(thumbAreaHeight));
-            labelContainer.setLayoutY(snapPosition(thumbAreaY));
-            labelContainer.setLayoutX(snapPosition(labelX));
+            labelContainer.resize(snapSizeX(contentWidth - thumbAreaWidth), snapSizeY(thumbAreaHeight));
+            labelContainer.setLayoutY(snapPositionY(thumbAreaY));
+            labelContainer.setLayoutX(snapPositionX(labelX));
         }
 
         if (!toggleSwitch.isSelected())
-            thumb.setLayoutX(snapPosition(thumbAreaX + thumbAreaPadding.getLeft()));
+            thumb.setLayoutX(snapPositionX(thumbAreaX + thumbAreaPadding.getLeft()));
         else
-            thumb.setLayoutX(snapPosition(thumbAreaX + thumbAreaWidth - thumbAreaPadding.getRight() - thumbWidth));
-        thumb.setLayoutY(snapPosition(thumbAreaY + thumbAreaPadding.getBottom()));
+            thumb.setLayoutX(snapPositionX(thumbAreaX + thumbAreaWidth - thumbAreaPadding.getRight() - thumbWidth));
+        thumb.setLayoutY(snapPositionY(thumbAreaY + thumbAreaPadding.getBottom()));
     }
 
 
@@ -211,8 +212,9 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
                             !skin.thumbMoveAnimationTime.isBound();
                 }
 
-                @Override
-                public StyleableProperty<Number> getStyleableProperty(ToggleSwitch toggleSwitch) {
+				@Override
+				@SuppressWarnings("unchecked")
+				public StyleableProperty<Number> getStyleableProperty(ToggleSwitch toggleSwitch) {
                     final ToggleSwitchSkin skin = (ToggleSwitchSkin) toggleSwitch.getSkin();
                     return (StyleableProperty<Number>) skin.thumbMoveAnimationTimeProperty();
                 }

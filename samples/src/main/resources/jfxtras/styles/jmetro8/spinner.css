@@ -1,0 +1,8 @@
+#spinner4 .text-field .right-button,
+#spinner4:pressed .text-field .right-button,
+#spinner5 .text-field .right-button,
+#spinner5.spinner:pressed .text-field .right-button,
+#spinner6 .text-field .right-button,
+#spinner6:pressed .text-field .right-button {
+  visibility: collapse;
+}

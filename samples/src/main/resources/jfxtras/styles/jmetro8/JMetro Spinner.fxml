@@ -41,7 +41,7 @@
         <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Spinner">
         </Label>
 
-        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="SPLIT_ARROWS_HORIZONTAL" textFill="WHITE">
+        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="SPLIT_ARROWS_HORIZONTAL">
         </Label>
         <Spinner layoutX="43.0" layoutY="187.0" fx:id="spinner1">
             <styleClass>
@@ -57,14 +57,14 @@
             </styleClass>
         </Spinner>
 
-        <Label layoutX="43.0" layoutY="265.0" styleClass="item-title" text="No Styleclass" textFill="WHITE">
+        <Label layoutX="43.0" layoutY="265.0" styleClass="item-title" text="No Styleclass">
         </Label>
         <Spinner layoutX="43.0" layoutY="287.0"  fx:id="spinner3">
         </Spinner>
 
         <Label layoutX="260.0" layoutY="265.0" styleClass="item-title" text="ARROWS_ON_LEFT_HORIZONTAL">
         </Label>
-        <Spinner layoutX="260.0" layoutY="287.0" prefWidth="70" fx:id="spinner4">
+        <Spinner layoutX="260.0" layoutY="287.0" prefWidth="74" fx:id="spinner4">
             <styleClass>
                 <String fx:value="arrows-on-left-horizontal" />
             </styleClass>
@@ -72,7 +72,7 @@
 
         <Label layoutX="43.0" layoutY="365.0" styleClass="item-title" text="ARROWS_ON_LEFT_VERTICAL">
         </Label>
-        <Spinner layoutX="43.0" layoutY="387.0"  prefWidth="50" fx:id="spinner5">
+        <Spinner layoutX="43.0" layoutY="387.0"  prefWidth="54" fx:id="spinner5">
             <styleClass>
                 <String fx:value="arrows-on-left-vertical" />
             </styleClass>

@@ -1,30 +1,40 @@
 package jfxtras.styles.jmetro8;
 
 import java.util.AbstractMap.SimpleEntry;
+import java.util.List;
 import java.util.Map.Entry;
+
+import org.jfxtras.styles.jmetro8.JMetro;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.CheckMenuItem;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.SeparatorMenuItem;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Effect;
 import javafx.scene.effect.Glow;
 import javafx.scene.effect.SepiaTone;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.input.*;
 
 public class MenuSample extends Application {
 
     private static final JMetro.Style STYLE = JMetro.Style.DARK;
 
-    private final Entry[] effects = new Entry[] {
+    private final List<Entry<String, Effect>> effects = List.of(
             new SimpleEntry<>("Sepia Tone", new SepiaTone()),
             new SimpleEntry<>("Glow", new Glow()),
             new SimpleEntry<>("Shadow", new DropShadow())
-    };
+    );
 
     public static void main(String[] args) {
         launch(args);

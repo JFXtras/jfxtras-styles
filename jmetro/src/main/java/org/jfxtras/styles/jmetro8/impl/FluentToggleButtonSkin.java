@@ -1,17 +1,18 @@
-package impl.jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
-import com.sun.javafx.css.converters.BooleanConverter;
-import com.sun.javafx.scene.control.skin.ToggleButtonSkin;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import javafx.beans.property.BooleanProperty;
 import javafx.css.CssMetaData;
 import javafx.css.SimpleStyleableBooleanProperty;
 import javafx.css.Styleable;
 import javafx.css.StyleableProperty;
+import javafx.css.converter.BooleanConverter;
 import javafx.scene.control.SkinBase;
 import javafx.scene.control.ToggleButton;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import javafx.scene.control.skin.ToggleButtonSkin;
 
 public class FluentToggleButtonSkin extends ToggleButtonSkin {
 
@@ -29,13 +30,14 @@ public class FluentToggleButtonSkin extends ToggleButtonSkin {
 
                 @Override
                 public boolean isSettable(ToggleButton button) {
-                    final FluentToggleButtonSkin skin = (FluentToggleButtonSkin) button.getSkin();
+                    final FluentToggleButtonSkin skin = new FluentToggleButtonSkin(button);
                     return !skin.shrinkAnimateOnPress.isBound();
                 }
 
                 @Override
+                @SuppressWarnings("unchecked")
                 public StyleableProperty<Boolean> getStyleableProperty(ToggleButton button) {
-                    final FluentToggleButtonSkin skin = (FluentToggleButtonSkin) button.getSkin();
+                    final FluentToggleButtonSkin skin = new FluentToggleButtonSkin(button);
                     return (StyleableProperty<Boolean>) skin.shrinkAnimateOnPressProperty();
                 }
             };
@@ -44,7 +46,8 @@ public class FluentToggleButtonSkin extends ToggleButtonSkin {
 
     private BooleanProperty shrinkAnimateOnPressProperty() { return shrinkAnimateOnPress; }
 
-    private boolean isShrinkAnimateOnPress() { return shrinkAnimateOnPress.get(); }
+    @SuppressWarnings("unused")
+	private boolean isShrinkAnimateOnPress() { return shrinkAnimateOnPress.get(); }
 
 
     /* Setup styleables for this Skin */

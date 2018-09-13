@@ -25,44 +25,22 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package jfxtras.styles.jmetro8;
+package org.jfxtras.styles.jmetro8.impl;
 
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 
-public class JMetro {
-    public enum Style {
-        LIGHT,
-        DARK;
+public class TextFieldSkin extends TextFieldWithButtonSkin {
+	public TextFieldSkin(TextField textField) {
+		super(textField);
+	}
+	
+	@Override
+	protected void rightButtonReleased() {
+	}
 
-        private String getStyleSheetFileName() {
-            String stylesheet = null;
-            switch (this) {
-                case LIGHT:
-                    stylesheet = "JMetroLightTheme.css";
-                    break;
-                case DARK:
-                    stylesheet = "JMetroDarkTheme.css";
-                    break;
-            }
-            return stylesheet;
-        }
-    }
-
-    private Style style;
-
-    public JMetro(Style style) {
-        this.style = style;
-    }
-
-    public void applyTheme(Scene scene){
-        scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-    }
-
-    public void applyTheme(Parent parent){
-        parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-    }
-
+	@Override
+	protected void rightButtonPressed() {
+		getSkinnable().setText("");
+	}
 
 }
-

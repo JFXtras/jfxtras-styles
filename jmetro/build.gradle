@@ -4,7 +4,7 @@ plugins {
     id "maven-publish"
 }
 
-sourceCompatibility = '1.8'
+sourceCompatibility = '9'
 
 version = '4.5'
 def versionDescription = 'JMetro'
@@ -13,7 +13,8 @@ def versionDescription = 'JMetro'
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 dependencies {
-    implementation 'org.controlsfx:controlsfx:8.40.14'
+    implementation 'org.controlsfx:controlsfx:9.0.0' // jfxtras.styles.jmetro8
+    implementation 'org.jfxtras:jfxtras-labs:2.2-r5' // jfxtras.styles.jmetro
 }
 
 // In this section you declare where to find the dependencies of your project

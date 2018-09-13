@@ -111,7 +111,7 @@
 /****************************** Button ****************************************/
 
 .button {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentButtonSkin";
+/*     -fx-skin: "org.jfxtras.styles.jmetro8.impl.FluentButtonSkin"; */
 }
 
 .button {
@@ -135,7 +135,7 @@
 /**************************** Toggle Button ***********************************/
 
 .toggle-button {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentToggleButtonSkin";
+/*     -fx-skin: "org.jfxtras.styles.jmetro8.impl.FluentToggleButtonSkin"; */
 }
 
 .toggle-button {
@@ -701,10 +701,8 @@
  *                                                                             *
  ******************************************************************************/
 .text-field {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.TextFieldSkin";
-}
-
-.text-field {
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldSkin";
+  
     BORDER: #999999;
     BORDER_HOVER: #666666;
 
@@ -748,7 +746,7 @@
 .text-input > .right-button{
     -fx-cursor: default;
 
-    -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
+    -fx-background-insets: -0.205em -0.45em -0.205em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
     -fx-background-color: BACKGROUND_FOCUSED;  /* We must give it a color so that it reacts to the mouse */
 }
 
@@ -777,7 +775,7 @@
  ******************************************************************************/
 
 .password-field {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.PasswordFieldSkin";
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.PasswordFieldSkin";
 }
 
 .password-field > .right-button {
@@ -822,7 +820,7 @@
  ******************************************************************************/
 
 .slider {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.SliderSkin";
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.SliderSkin";
 }
 
 .slider {
@@ -852,12 +850,6 @@
     -fx-background-color: #c6c6c6;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    -fx-padding: 0.083333em; /* 1 */
-
-}
-
-.slider .fill {
-    -fx-background-color: ACCENT_COLOR;
     -fx-padding: 0.083333em; /* 1 */
 }
 
@@ -896,7 +888,7 @@
  *                                                                             *
  ******************************************************************************/
 .toggle-switch {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.ToggleSwitchSkin";
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.ToggleSwitchSkin";
 }
 
 .toggle-switch {
@@ -1073,7 +1065,7 @@
 }
 
 .spinner > .text-field{
-    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldSkin";
 }
 
 .spinner > .text-field {
@@ -1121,7 +1113,7 @@
 }
 
 .date-picker .text-field{
-    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldSkin";
 }
 
 .date-picker .text-input{
@@ -1474,6 +1466,18 @@
     -fx-scale-y: -1;
     -fx-rotate: 90;
 }
+
+/* -- Bug fix: https://stackoverflow.com/questions/50011276/javafx-treeview-expand-collapse-disclosure-arrow-bug */
+.tree-cell > .tree-disclosure-node > .arrow,
+.tree-table-row-cell > .tree-disclosure-node > .arrow {
+    -fx-rotate: 0;
+}
+
+.tree-cell:expanded > .tree-disclosure-node > .arrow,
+.tree-table-row-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-rotate: 90;
+}
+/* -- Bug fix */
 
 /*******************************************************************************
  *                                                                             *
