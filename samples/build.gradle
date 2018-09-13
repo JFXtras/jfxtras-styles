@@ -8,6 +8,32 @@ dependencies {
 //    compile name: 'ScenicView'
 }
 
+ext.moduleName = 'org.jfxtras.jmetro'
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath
+        ]
+        classpath = files()
+    }
+}
+
+jar {
+    inputs.property("moduleName", moduleName)
+    manifest {
+        attributes(
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version,
+                'Main-Class': mainClassName)
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it)}
+    }
+}
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     mavenCentral()

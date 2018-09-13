@@ -1,20 +1,9 @@
 package org.jfxtras.styles.jmetro8.impl;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import org.controlsfx.control.ToggleSwitch;
-
 import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.DoubleProperty;
-import javafx.css.CssMetaData;
-import javafx.css.SimpleStyleableObjectProperty;
-import javafx.css.Styleable;
-import javafx.css.StyleableDoubleProperty;
-import javafx.css.StyleableObjectProperty;
-import javafx.css.StyleableProperty;
+import javafx.css.*;
 import javafx.css.converter.EnumConverter;
 import javafx.css.converter.SizeConverter;
 import javafx.geometry.Insets;
@@ -23,6 +12,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.SkinBase;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
+import org.controlsfx.control.ToggleSwitch;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class ToggleSwitchSkin extends SkinBase<ToggleSwitch>
 {

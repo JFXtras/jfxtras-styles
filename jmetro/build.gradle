@@ -4,28 +4,41 @@ plugins {
     id "maven-publish"
 }
 
-sourceCompatibility = '9'
+sourceCompatibility = '1.9'
 
 version = '4.5'
 def versionDescription = 'JMetro'
 
+dependencies {
+    implementation 'org.controlsfx:controlsfx:9.0.0' // jfxtras.styles.jmetro8
+    // implementation 'org.jfxtras:jfxtras-labs:2.2-r5' // jfxtras.styles.jmetro
+}
+
+ext.moduleName = 'org.jfxtras.jmetro'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-dependencies {
-    implementation 'org.controlsfx:controlsfx:9.0.0' // jfxtras.styles.jmetro8
-    implementation 'org.jfxtras:jfxtras-labs:2.2-r5' // jfxtras.styles.jmetro
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+            '--module-path', classpath.asPath
+        ]
+        classpath = files()
+    }
 }
-
 // In this section you declare where to find the dependencies of your project
 repositories {
     mavenCentral()
 }
 
 jar {
+    inputs.property("moduleName", moduleName)
     manifest {
-        attributes( 'Implementation-Title': project.name,
-                'Implementation-Version': project.version)
+        attributes(
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version
+        )
     }
 }
 
@@ -35,7 +48,12 @@ task javadocJar(type: Jar) {
 }
 
 javadoc {
-    options.addStringOption('javafx', '-quiet')
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.addStringOption('javafx', '-quiet')
+        options.addStringOption('-module-path', classpath.asPath)
+        options.addBooleanOption('html5', true)
+    }
 }
 
 task sourceJar(type: Jar) {

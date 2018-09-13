@@ -27,13 +27,6 @@
 
 package org.jfxtras.styles.jmetro8.impl;
 
-import static javafx.geometry.Orientation.HORIZONTAL;
-
-import java.text.MessageFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import javafx.animation.FadeTransition;
 import javafx.beans.Observable;
 import javafx.beans.property.BooleanProperty;
@@ -48,6 +41,13 @@ import javafx.scene.control.SkinBase;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.Region;
 import javafx.util.Duration;
+
+import java.text.MessageFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import static javafx.geometry.Orientation.HORIZONTAL;
 
 public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
 	
