@@ -2,6 +2,7 @@ plugins {
     id "com.jfrog.bintray" version "1.7.3"
     id "java-library"
     id "maven-publish"
+    id "eclipse"
 }
 
 sourceCompatibility = '1.9'
@@ -102,6 +103,11 @@ publishing {
     }
 }
 
-
-
+eclipse.classpath.file {
+    whenMerged {
+        entries.findAll { 
+                it.kind == 'src' || it.kind == 'lib' 
+        }.each { it.entryAttributes['module'] = 'true' }
+    }
+}
 

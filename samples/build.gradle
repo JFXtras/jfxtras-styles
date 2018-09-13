@@ -1,4 +1,5 @@
 apply plugin: 'application'
+apply plugin: 'eclipse'
 
 mainClassName = 'jfxtras.styles.jmetro8.TableViewSample'
 
@@ -40,4 +41,12 @@ repositories {
 //    flatDir {
 //        dirs 'lib'
 //    }
+}
+
+eclipse.classpath.file {
+    whenMerged {
+        entries.findAll { 
+                it.kind == 'src' || it.kind == 'lib' 
+        }.each { it.entryAttributes['module'] = 'true' }
+    }
 }
