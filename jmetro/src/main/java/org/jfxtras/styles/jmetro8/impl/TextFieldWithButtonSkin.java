@@ -27,18 +27,14 @@
 
 package org.jfxtras.styles.jmetro8.impl;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.control.TextField;
 import javafx.scene.control.skin.TextFieldSkin;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
-public class TextFieldWithButtonSkin extends TextFieldSkin {
+public abstract class TextFieldWithButtonSkin extends TextFieldSkin {
     private StackPane rightButton;
     private Region rightButtonGraphic;
 
@@ -72,31 +68,11 @@ public class TextFieldWithButtonSkin extends TextFieldSkin {
     private void setupListeners() {
 
         final TextField textField = getSkinnable();
-        rightButton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                rightButtonPressed();
-            }
-        });
-        rightButton.setOnMouseReleased(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                rightButtonReleased();
-            }
-        });
+        rightButton.setOnMousePressed(event -> rightButtonPressed());
+        rightButton.setOnMouseReleased(event -> rightButtonReleased());
 
-        textField.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                textChanged();
-            }
-        });
-        textField.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                focusChanged();
-            }
-        });
+        textField.textProperty().addListener((observable, oldValue, newValue) -> textChanged());
+        textField.focusedProperty().addListener((observable, oldValue, newValue) -> focusChanged());
     }
 
     protected void textChanged()
@@ -130,10 +106,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin {
                 clearButtonWidth, h, 0, HPos.CENTER, VPos.CENTER);
     }
 
-	protected void rightButtonPressed() {
-	}
+	abstract protected void rightButtonPressed();
 
-    protected void rightButtonReleased() {
-    	textField.setText("");
-    }
+	abstract protected void rightButtonReleased();
 }

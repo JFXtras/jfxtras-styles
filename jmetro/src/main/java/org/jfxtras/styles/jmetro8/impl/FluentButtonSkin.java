@@ -31,14 +31,14 @@ public class FluentButtonSkin extends ButtonSkin {
 
                 @Override
                 public boolean isSettable(Button button) {
-                    final FluentButtonSkin skin = (FluentButtonSkin) button.getSkin();
+                    final FluentButtonSkin skin = new FluentButtonSkin(button);
                     return !skin.shrinkAnimateOnPress.isBound();
                 }
 
-                @Override
-                // To-do: Exception: java.lang.ClassCastException: javafx.controls/javafx.scene.control.skin.ButtonSkin cannot be cast to org.jfxtras.jmetro/org.jfxtras.styles.jmetro8.impl.FluentButtonSkin
+				@Override
+				@SuppressWarnings("unchecked")
                 public StyleableProperty<Boolean> getStyleableProperty(Button button) {
-                    final FluentButtonSkin skin = (FluentButtonSkin) button.getSkin();
+                    final FluentButtonSkin skin = new FluentButtonSkin(button);
                     return (StyleableProperty<Boolean>) skin.shrinkAnimateOnPressProperty();
                 }
             };

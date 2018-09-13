@@ -41,6 +41,11 @@
     -fx-text-fill: black;
 }
 
+.root {
+    /* Root variables */
+    ACCENT_COLOR: #2796c4;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Button and ToggleButton                                                     *
@@ -48,8 +53,6 @@
  ******************************************************************************/
 
 .button, .toggle-button {
-    ACCENT_COLOR: #2796c4;
-
     BACKGROUND: #cccccc;
     BACKGROUND_PRESSED: #999999;
 
@@ -108,7 +111,7 @@
 /****************************** Button ****************************************/
 
 .button {
-    -fx-skin: "org.jfxtras.styles.jmetro8.impl.FluentButtonSkin";
+/*     -fx-skin: "org.jfxtras.styles.jmetro8.impl.FluentButtonSkin"; */
 }
 
 .button {
@@ -132,7 +135,7 @@
 /**************************** Toggle Button ***********************************/
 
 .toggle-button {
-    -fx-skin: "org.jfxtras.styles.jmetro8.impl.FluentToggleButtonSkin";
+/*     -fx-skin: "org.jfxtras.styles.jmetro8.impl.FluentToggleButtonSkin"; */
 }
 
 .toggle-button {
@@ -159,8 +162,6 @@
  ******************************************************************************/
 
 .check-box {
-    ACCENT_COLOR: #2796c4;
-
     -fx-text-fill: black;
 }
 
@@ -303,8 +304,6 @@
  ******************************************************************************/
 
 .radio-button {
-    ACCENT_COLOR: #2796c4;
-
     -fx-text-fill: #212121;
 }
 
@@ -584,9 +583,7 @@
      LIST_CELL_HOVER_BACKGROUND: #e0e0e0;
 
      LIST_CELL_BORDER: #cccccc;
-
-     ACCENT_COLOR: #a6d8ff;
- }
+}
 
 .combo-box-base  {
     -fx-background-color: transparent, BORDER_COLOR, transparent, white;
@@ -703,69 +700,71 @@
  * Text Field (and Password Field)                                             *
  *                                                                             *
  ******************************************************************************/
-.text-field{
-    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldWithButtonSkin";
+.text-field {
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldSkin";
+  
+    BORDER: #999999;
+    BORDER_HOVER: #666666;
+
+    BACKGROUND: white;
+    BACKGROUND_FOCUSED: white;
+    BACKGROUND_HOVER: white;
+
+    TEXT_COLOR: #111;
+    PROMPT_TEXT: #666666;
+
+    HIGHLIGHT: ACCENT_COLOR;
+    HIGHLIGHT_TEXT: white;
+
+    GRAPHIC: #747474;
 }
 
 .text-input{
     -fx-background-radius: 0, 0;
 
-    -fx-background-color: #bababa, white;
+    -fx-background-color: BORDER, BACKGROUND;
     -fx-background-insets: 0, 2;
 
-    -fx-prompt-text-fill: #9f9f9f;
+    -fx-prompt-text-fill: PROMPT_TEXT;
 
-    -fx-highlight-fill: #008287; /* TODO: this probably is the "active" color" */
-    -fx-highlight-text-fill: white;
+    -fx-highlight-fill: HIGHLIGHT;
+    -fx-highlight-text-fill: HIGHLIGHT_TEXT;
+
+    -fx-font-size: 1.166667em; /* 14 */
 }
 
 .text-input:hover{
-    -fx-background-color: #8f8f8f, white;
+    -fx-background-color: BORDER_HOVER, BACKGROUND_HOVER;
 }
 
 .text-input:focused{
-    -fx-background-color: #5c5c5c, white;
+    -fx-background-color: ACCENT_COLOR, BACKGROUND_FOCUSED;
 
-    -fx-text-fill: black;
+    -fx-text-fill: TEXT_COLOR;
 }
-
-/*.text-input > Pane{*/
-    /*-fx-padding: 0.333333em 0.583em 0.333333em 0em; *//* 4 7 4 0 */
-/*}*/
 
 .text-input > .right-button{
     -fx-cursor: default;
 
-    -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
+    -fx-background-insets: -0.205em -0.45em -0.205em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
+    -fx-background-color: BACKGROUND_FOCUSED;  /* We must give it a color so that it reacts to the mouse */
 }
 
 .text-field > .right-button > .right-button-graphic {
-    -fx-shape            : "M221.738,305.873l6.135,6.16l-2.875,2.863l-6.135-6.159l-6.263,6.237l-2.864-2.875l6.263-6.238l-6.177-6.202l2.875-2.863l6.177,6.201l6.244-6.22l2.864,2.876L221.738,305.873z";
+    -fx-shape: "M221.738,305.873l6.135,6.16l-2.875,2.863l-6.135-6.159l-6.263,6.237l-2.864-2.875l6.263-6.238l-6.177-6.202l2.875-2.863l6.177,6.201l6.244-6.22l2.864,2.876L221.738,305.873z";
 
-    -fx-padding: 0.5em 0.5em; /* TODO: put the real number here 18 18 */
-    -fx-background-color: black;
+    -fx-padding: 0.416667em;
+    -fx-background-color: GRAPHIC;
 }
 
-.text-input > .right-button:hover {
-    -fx-background-color: #d9d9d9;
-}
-
-.text-input > .right-button:pressed {
-    -fx-background-color: black;
-}
-
-.text-input > .right-button:pressed > .right-button-graphic {
-    -fx-background-color: white;
+.text-input > .right-button:hover > .right-button-graphic {
+    -fx-background-color: ACCENT_COLOR;
 }
 
 .text-input:disabled
 {
     -fx-opacity: 1;
     -fx-background-color: #d9d9d9, #eaeaea;
-    -fx-text-fill: #adadad;
-}
-
-.item-title.disabled{
     -fx-text-fill: #adadad;
 }
 
@@ -779,10 +778,22 @@
     -fx-skin: "org.jfxtras.styles.jmetro8.impl.PasswordFieldSkin";
 }
 
+.password-field > .right-button {
+    -fx-padding: 0 2px 0 2px;
+}
+
 .password-field > .right-button > .right-button-graphic {
     -fx-shape            : "M307.688,399.564c0,1.484-1.203,2.688-2.688,2.688c-1.484,0-2.688-1.203-2.688-2.688s1.203-2.688,2.688-2.688C306.484,396.876,307.688,398.08,307.688,399.564z M297.5,399h2.5c0,0,1.063-4,5-4c3.688,0,5,4,5,4h2.5c0,0-2.063-6.5-7.5-6.5C299,392.5,297.5,399,297.5,399z";
     -fx-scale-shape: false;
-    -fx-background-color: black;
+    -fx-background-color: #111;
+}
+
+.password-field > .right-button:pressed {
+    -fx-background-color: ACCENT_COLOR;
+}
+
+.password-field > .right-button:pressed > .right-button-graphic {
+    -fx-background-color: white;
 }
 
 /*******************************************************************************
@@ -813,8 +824,6 @@
 }
 
 .slider {
-    ACCENT_COLOR: #0078d7;
-
     TRACK_HOVER: #666666;
     THUMB_HOVER: #171717;
 
@@ -883,8 +892,6 @@
 }
 
 .toggle-switch {
-    ACCENT_COLOR: #0078d7;
-
     /* Unselected */
     UNSELECTED: white;
     UNSELECTED_BORDER: #111;
@@ -1058,7 +1065,7 @@
 }
 
 .spinner > .text-field{
-    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldWithButtonSkin";
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldSkin";
 }
 
 .spinner > .text-field {
@@ -1106,7 +1113,7 @@
 }
 
 .date-picker .text-field{
-    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldWithButtonSkin";
+    -fx-skin: "org.jfxtras.styles.jmetro8.impl.TextFieldSkin";
 }
 
 .date-picker .text-input{
@@ -1279,7 +1286,6 @@
     /* This is a var */
     TABLE_VIEW_BORDER_COLOR: #f4f4f4;
     LIGHT_ACCENT_COLOR: #d5e1f2;
-    ACCENT_COLOR: #1550bd;
 
     -fx-cell-focus-inner-border: LIGHT_ACCENT_COLOR; /* focused */
 
@@ -1362,7 +1368,6 @@
 
 /* - when focused and selected */
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
-    -fx-background: ACCENT_COLOR;
     -fx-border-color: #034f95;
 }
 
@@ -1407,7 +1412,6 @@
 .tree-view {
     HOVER_COLOR: #ccc;
     PRESSED_COLOR: derive(HOVER_COLOR, -30%);
-    ACCENT_COLOR: #1550bd;
 
     -fx-background-color: white;
     -fx-padding: 0;
@@ -1463,6 +1467,18 @@
     -fx-rotate: 90;
 }
 
+/* -- Bug fix: https://stackoverflow.com/questions/50011276/javafx-treeview-expand-collapse-disclosure-arrow-bug */
+.tree-cell > .tree-disclosure-node > .arrow,
+.tree-table-row-cell > .tree-disclosure-node > .arrow {
+    -fx-rotate: 0;
+}
+
+.tree-cell:expanded > .tree-disclosure-node > .arrow,
+.tree-table-row-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-rotate: 90;
+}
+/* -- Bug fix */
+
 /*******************************************************************************
  *                                                                             *
  * Tab Pane and Tabs                                                           *
@@ -1470,8 +1486,6 @@
  ******************************************************************************/
 
 .tab-pane {
-    ACCENT_COLOR: #1550bd;
-
     -fx-tab-min-height: 2.91666375em; /* 34 */
     -fx-tab-max-height: 2.91666375em; /* 34 */
 }

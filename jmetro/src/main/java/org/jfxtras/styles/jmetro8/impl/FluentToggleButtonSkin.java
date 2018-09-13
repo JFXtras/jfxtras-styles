@@ -30,14 +30,14 @@ public class FluentToggleButtonSkin extends ToggleButtonSkin {
 
                 @Override
                 public boolean isSettable(ToggleButton button) {
-                    final FluentToggleButtonSkin skin = (FluentToggleButtonSkin) button.getSkin();
+                    final FluentToggleButtonSkin skin = new FluentToggleButtonSkin(button);
                     return !skin.shrinkAnimateOnPress.isBound();
                 }
 
                 @Override
                 @SuppressWarnings("unchecked")
                 public StyleableProperty<Boolean> getStyleableProperty(ToggleButton button) {
-                    final FluentToggleButtonSkin skin = (FluentToggleButtonSkin) button.getSkin();
+                    final FluentToggleButtonSkin skin = new FluentToggleButtonSkin(button);
                     return (StyleableProperty<Boolean>) skin.shrinkAnimateOnPressProperty();
                 }
             };
