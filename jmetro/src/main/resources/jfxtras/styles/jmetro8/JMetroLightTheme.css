@@ -803,17 +803,28 @@
  * Progress Bar                                                                *
  *                                                                             *
  ******************************************************************************/
-.progress-bar > .bar {
-    -fx-background-color: #008287;
-    -fx-background-radius: 0;
-    -fx-background-insets: 1;
+.progress-bar {
+    -fx-skin: "impl.jfxtras.styles.jmetro8.ProgressBarSkin";
 }
 
-.progress-bar > .track {
-    -fx-background-color: white;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
+.progress-bar .dot {
+    -fx-background-radius: 1em;
+    -fx-padding: 4px;
+
+    -fx-background-color: ACCENT_COLOR;
 }
+
+/*.progress-bar > .bar {*/
+    /*-fx-background-color: #008287;*/
+    /*-fx-background-radius: 0;*/
+    /*-fx-background-insets: 1;*/
+/*}*/
+
+/*.progress-bar > .track {*/
+    /*-fx-background-color: blue;*/
+    /*-fx-background-insets: 0;*/
+    /*-fx-background-radius: 0;*/
+/*}*/
 
 /*******************************************************************************
  *                                                                             *
