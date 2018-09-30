@@ -23,6 +23,10 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
     private static final String DOT_STYLE_CLASS = "dot";
     private static final String SINGLE_DOT_STYLE_CLASS_PREFIX = "dot_";
 
+    // When translating, we translate the dot off the screen by this amount. This is so we see the dot actually leaving offscreen.
+    private static final int SCREEN_OFFSET = 50;
+    private static final int MS_BETWEEN_DOTS = 200;
+
     private double barWidth;
 
     private StackPane bar;
@@ -81,6 +85,7 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
         for (int i = 0; i < NUMBER_DOTS; ++i) {
             Region dot = new Region();
             dot.getStyleClass().setAll(DOT_STYLE_CLASS, SINGLE_DOT_STYLE_CLASS_PREFIX + (i + 1));
+            dot.setLayoutX(-SCREEN_OFFSET); // At first make it appear off screen so that we don't see all dots initially starting at 0 when the animation starts
             dots.add(dot);
         }
     }
@@ -90,8 +95,8 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
 
         for (int i = 0; i < NUMBER_DOTS; ++i) {
             Region dot = dots.get(i);
-            Transition transition = createAnimationForDot(dot);
-            transition.setDelay(Duration.millis(i * 400));
+            Transition transition = createAnimationForDot(dot, i);
+            transition.setDelay(Duration.millis(i * MS_BETWEEN_DOTS));
             parallelTransition.getChildren().add(transition);
         }
 
@@ -100,27 +105,22 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
         return parallelTransition;
     }
 
-    private Transition createAnimationForDot(Region dot) {
+    private Transition createAnimationForDot(Region dot, int dotNumber) {
         double controlWidth = getSkinnable().getBoundsInLocal().getWidth();
-        double firstStop = 0.4 * controlWidth;
-        double secondStop = 0.6 * controlWidth;
+        double firstStop = 0.6 * controlWidth;
 
         SequentialTransition sequentialTransition = new SequentialTransition();
 
-        TranslateTransition firstTranslation = new TranslateTransition(Duration.millis(800), dot);
+        TranslateTransition firstTranslation = new TranslateTransition(Duration.millis(1800), dot);
         firstTranslation.setFromX(0);
-        firstTranslation.setToX(firstStop);
-        firstTranslation.setInterpolator(Interpolator.SPLINE(0.4384, 0.4901, 0.2000, 0.8000));
+        firstTranslation.setToX(firstStop - dotNumber * 8);
+        firstTranslation.setInterpolator(Interpolator.SPLINE(0.2135, 0.9351, 0.7851, 0.9640));
 
-        TranslateTransition secondTranslation = new TranslateTransition(Duration.millis(1200), dot);
-        secondTranslation.setToX(secondStop);
-        secondTranslation.setInterpolator(Interpolator.LINEAR);
+        TranslateTransition secondTranslation = new TranslateTransition(Duration.millis(600), dot);
+        secondTranslation.setToX(controlWidth + 50);
+        secondTranslation.setInterpolator(Interpolator.SPLINE(0.9351, 0.2135, 0.9640, 0.7851));
 
-        TranslateTransition thirdTranslation = new TranslateTransition(Duration.millis(800), dot);
-        thirdTranslation.setToX(controlWidth + 50);
-        thirdTranslation.setInterpolator(Interpolator.SPLINE(0.25, 0.1, 0.25, 1));
-
-        sequentialTransition.getChildren().addAll(firstTranslation, secondTranslation, thirdTranslation);
+        sequentialTransition.getChildren().addAll(firstTranslation, secondTranslation);
 
         return sequentialTransition;
      }
