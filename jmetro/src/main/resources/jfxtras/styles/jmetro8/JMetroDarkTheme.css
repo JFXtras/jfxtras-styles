@@ -720,59 +720,14 @@
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected{
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: derive(ACCENT_COLOR, 90%);
     -fx-text-fill: #111;
 }
 
-/* - ScrollBar */
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover{
+    -fx-background-color: derive(ACCENT_COLOR, 70%);
+}
 
-/*.combo-box-popup  > .list-view > .virtual-flow  > .scroll-bar > .thumb{*/
-    /*-fx-background-color: #cdcdcd;*/
-/*}*/
-
-/*.combo-box-popup > .list-view .list-cell:filled:selected{*/
-    /*-fx-background-color: ACCENT_COLOR;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .thumb:hover {*/
-    /*-fx-background-color: #dadada;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .thumb:pressed {*/
-    /*-fx-background-color: #606060;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .track {*/
-    /*-fx-background-color: #f0f0f0;*/
-/*}*/
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .track-background {*/
-    /*-fx-background-color: #f0f0f0;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button,*/
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button {*/
-    /*-fx-background-color: #f0f0f0;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button:hover,*/
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button:hover  {*/
-    /*-fx-background-color: #dadada;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button:pressed,*/
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button:pressed {*/
-    /*-fx-background-color: #606060;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button > .decrement-arrow,*/
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button > .increment-arrow{*/
-    /*-fx-background-color: transparent, #606060;*/
-/*}*/
-
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .decrement-button:pressed > .decrement-arrow,*/
-/*.combo-box-popup  > .list-view > .virtual-flow > .scroll-bar > .increment-button:pressed > .increment-arrow {*/
-    /*-fx-background-color: transparent, white;*/
-/*}*/
 /*******************************************************************************
  *                                                                             *
  * Rating (ControlsFX)                                                         *

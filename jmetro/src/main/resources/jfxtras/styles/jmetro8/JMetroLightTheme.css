@@ -651,8 +651,12 @@
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected{
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: derive(ACCENT_COLOR, 90%);
     -fx-text-fill: #111;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover{
+    -fx-background-color: derive(ACCENT_COLOR, 70%);
 }
 
 /*******************************************************************************
