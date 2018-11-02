@@ -789,14 +789,14 @@
 }
 
 .rating > .container > .button.strong {
-    -fx-background-color: #00828b;
+    -fx-background-color: ACCENT_COLOR;
     -fx-border-color: transparent;
     -fx-background-image: null;
 
 
 }
 .rating > .container:hover > .button.strong {
-    -fx-background-color: #42d2da;
+    -fx-background-color: derive(ACCENT_COLOR, 30%);
 }
 
 .rating > .container > .button:hover {
@@ -804,11 +804,11 @@
 }
 
 .rating > .container:pressed > .button.strong {
-    -fx-background-color: #52eeff;
+    -fx-background-color: derive(ACCENT_COLOR, 40%);
 }
 
 .rating > .container > .button:pressed {
-    -fx-background-color: #52eeff;
+    -fx-background-color: derive(ACCENT_COLOR, 40%);
 }
 
 .rating:disabled{
