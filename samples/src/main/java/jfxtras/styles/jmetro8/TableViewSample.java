@@ -24,9 +24,9 @@ import javafx.stage.Stage;
 
 public class TableViewSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
-    private TableView<Person> table = new TableView<Person>();
+    private TableView<Person> table = new TableView<>();
     private final ObservableList<Person> data =
             FXCollections.observableArrayList(
                     new Person("Jacob", "Smith", "jacob.smith@example.com"),
@@ -79,12 +79,12 @@ public class TableViewSample extends Application {
         vbox.getChildren().addAll(label, table);
 
 
-        if (STYLE.equals(STYLE.LIGHT)) {
+        if (STYLE.equals(JMetro.Style.LIGHT)) {
             vbox.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
             table.setStyle("-fx-border-color: #E5E5E5; -fx-border-width: 1px; -fx-border-style: solid;");
             label.setStyle("-fx-text-fill: #111;");
         }
-        else if (STYLE.equals(STYLE.DARK)){
+        else if (STYLE.equals(JMetro.Style.DARK)){
             vbox.setBackground(new Background(new BackgroundFill(Paint.valueOf("#111"), CornerRadii.EMPTY, Insets.EMPTY)));
             table.setStyle("-fx-border-color: #1D1D1D; -fx-border-width: 1px; -fx-border-style: solid;");
             label.setStyle("-fx-text-fill: white;");

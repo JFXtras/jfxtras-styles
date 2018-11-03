@@ -1336,11 +1336,17 @@
  *                                                                             *
  ******************************************************************************/
 
-.table-view{
+.table-view {
     /* This is a var */
     TABLE_VIEW_BORDER_COLOR: #f4f4f4;
-    LIGHT_ACCENT_COLOR: #d5e1f2;
+    LIGHT_ACCENT_COLOR: derive(ACCENT_COLOR, 95%);
 
+    TEXT_COLOR: #111;
+    HOVER_TEXT_COLOR: #111;
+    SELECTED_TEXT_COLOR: white;
+}
+
+.table-view{
     -fx-cell-focus-inner-border: LIGHT_ACCENT_COLOR; /* focused */
 
     -fx-background-color: transparent, transparent;
@@ -1374,7 +1380,7 @@
 }
 
 .table-view .column-header .label{
-    -fx-text-fill: #111;
+    -fx-text-fill: TEXT_COLOR;
     -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 1.166667em;  /* 14 */
     -fx-alignment: center-left;
@@ -1384,6 +1390,10 @@
 
 .table-view .column-header:hover{
     -fx-background-color: LIGHT_ACCENT_COLOR;
+}
+
+.table-view .column-header:hover .label{
+    -fx-text-fill: HOVER_TEXT_COLOR;
 }
 
 .table-view .column-header.table-column-selected {
@@ -1415,9 +1425,33 @@
     -fx-background-color: LIGHT_ACCENT_COLOR;
 }
 
+.table-cell .text {
+    -fx-fill: TEXT_COLOR;
+}
+
+.table-cell:hover .text {
+    -fx-fill: HOVER_TEXT_COLOR;
+}
+
 /* Selected cell */
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
-    -fx-fill: #111;
+    -fx-fill: SELECTED_TEXT_COLOR;
+}
+
+/* - when focused */
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
+    -fx-background: ACCENT_COLOR;
+    -fx-border-color: #034f95;
+}
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
+    -fx-background-color: LIGHT_ACCENT_COLOR;
+}
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{
+    -fx-background: white;
+    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent, transparent #034f95 transparent #034f95;
+    -fx-border-width: 1px 2px 1px 2px, 1px 2px 1px 2px;
 }
 
 /* - when focused and selected */
@@ -1426,13 +1460,13 @@
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
-    -fx-fill: white;
+    -fx-fill: SELECTED_TEXT_COLOR;
 }
 
 /* When hover */
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:hover .text,
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:hover:selected .text{
-    -fx-fill: #111;
+    -fx-fill: HOVER_TEXT_COLOR;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
