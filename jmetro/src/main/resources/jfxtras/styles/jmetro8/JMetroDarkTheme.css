@@ -1367,57 +1367,61 @@
  ******************************************************************************/
 
 .list-view {
-    -fx-background-color: #1d1d1d;
+    TEXT_COLOR: white;
+    BORDER_COLOR: #666;
+}
+
+.list-view {
+    -fx-background-color: #111;
     -fx-background-insets: 0;
     -fx-padding: 0;
 
-    -fx-border-color: white;
-    -fx-border-width: 2px;
+    -fx-border-color: BORDER_COLOR;
+    -fx-border-width: 1px;
+
+    -fx-font-size: 1.166667em; /* 14 */
 }
 
 .list-view:focused {
-    -fx-background-color: #1d1d1d;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-padding: 1em 2em 1em 2em;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-padding: 1.25em 1em 1.25em 1em;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: TEXT_COLOR;
 }
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: #1d1d1d;
-}
-
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:focused {
-    -fx-background-color: #d3d3d3;
+    -fx-background-color: transparent;
 }
 
 .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: #1d1d1d;
+    -fx-background-color: transparent;
 }
 
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused {
-    -fx-background-color: #1d1d1d;
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:hover {
+    -fx-background-color: #515151;
+}
+
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed {
+    -fx-background-color: #3e3e3e;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
+    -fx-background-color: derive(ACCENT_COLOR, 20%);
     -fx-background-insets: 0;
+
+    -fx-text-fill: TEXT_COLOR;
 }
 
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused:selected {
-    -fx-background-color: -fx-background;
-    -fx-background-insets: 0;
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover {
+    -fx-background-color: derive(ACCENT_COLOR, 40%);
 }
 
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell{
-    -fx-text-fill: white;
-}
-
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:focused{
-    -fx-text-fill: #1d1d1d;
-}
-
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:focused{
-    -fx-text-fill: white;
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover:pressed {
+    -fx-background-color: derive(ACCENT_COLOR, 50%);
 }
 
 /*******************************************************************************

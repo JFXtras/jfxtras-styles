@@ -29,9 +29,11 @@ package jfxtras.styles.jmetro8;
 
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 public class ControlsSample extends Application {
@@ -55,7 +57,7 @@ public class ControlsSample extends Application {
     static final private String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final private String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
 
-    static final private String RESOURCE = COMBOBOX_RESOURCE;
+    static final private String RESOURCE = LIST_VIEW_RESOURCE;
     static final private JMetro.Style STYLE = JMetro.Style.DARK;
 
     @Override
@@ -72,6 +74,16 @@ public class ControlsSample extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        Platform.runLater(new Runnable() {
+
+            @Override
+            public void run() {
+                if (RESOURCE.equals(LIST_VIEW_RESOURCE)) {
+                    ListView listView = (ListView) scene.lookup(".list-view");
+                    listView.getSelectionModel().select(2);
+                }
+            }
+        });
 //        ScenicView.show(scene);
     }
 
