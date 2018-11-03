@@ -1574,6 +1574,14 @@
     HOVER_COLOR: #333;
     PRESSED_COLOR: derive(HOVER_COLOR, 15%);
 
+    CELL_COLOR_SELECTED_HOVER: derive(ACCENT_COLOR, 20%);
+
+    TEXT_COLOR: white;
+    TEXT_COLOR_SELECTED: white;
+    TEXT_COLOR_HOVER: TEXT_COLOR_SELECTED;
+}
+
+.tree-view {
     -fx-background-color: #111;
     -fx-padding: 0;
     -fx-background-insets: 0;
@@ -1593,20 +1601,28 @@
     -fx-padding: 0 3px 0 0;
 }
 
+.tree-view .tree-cell {
+    -fx-text-fill: TEXT_COLOR;
+}
+
 /* Hover */
 .tree-view .tree-cell:filled:hover {
     -fx-background-color: HOVER_COLOR;
+
+    -fx-text-fill: TEXT_COLOR_HOVER;
 }
 
 /* Selected */
 .tree-view .tree-cell:filled:selected {
     -fx-background-color: ACCENT_COLOR;
     -fx-table-cell-border-color: transparent;
+
+    -fx-text-fill: TEXT_COLOR_SELECTED;
 }
 
 /* Selected hover */
 .tree-view .tree-cell:filled:selected:hover, .tree-view .tree-cell:selected:hover {
-    -fx-background-color: derive(ACCENT_COLOR, -30%);
+    -fx-background-color: CELL_COLOR_SELECTED_HOVER;
     -fx-text-fill: white;
 }
 
@@ -1631,9 +1647,25 @@
     -fx-shape: "M8.06,20.938L7,20l8-8L7,4l1.06-0.938L16.917,12L8.06,20.938z";
 }
 
+.tree-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: TEXT_COLOR;
+}
+
+.tree-cell:hover > .tree-disclosure-node > .arrow {
+    -fx-background-color: TEXT_COLOR_HOVER;
+}
+
+.tree-cell:selected > .tree-disclosure-node > .arrow {
+    -fx-background-color: TEXT_COLOR_SELECTED;
+}
+
 .tree-cell:expanded > .tree-disclosure-node > .arrow {
     -fx-scale-y: -1;
     -fx-rotate: 90;
+}
+
+.tree-cell {
+    -fx-background-color: transparent;
 }
 
 /*******************************************************************************

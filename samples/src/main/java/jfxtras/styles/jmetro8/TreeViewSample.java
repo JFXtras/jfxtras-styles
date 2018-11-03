@@ -14,8 +14,9 @@ import javafx.scene.layout.VBox;
 //import org.scenicview.ScenicView;
 
 public class TreeViewSample extends Application {
+    private static final JMetro.Style STYLE = JMetro.Style.DARK;
 
-    List<Employee> employees = Arrays.<Employee>asList(
+    private List<Employee> employees = Arrays.asList(
             new Employee("Jacob Smith", "Accounts Department"),
             new Employee("Isabella Johnson", "Accounts Department"),
             new Employee("Ethan Williams", "Sales Department"),
@@ -27,7 +28,7 @@ public class TreeViewSample extends Application {
             new Employee("Mike Graham", "IT Support"),
             new Employee("Judy Mayer", "IT Support"),
             new Employee("Gregory Smith", "IT Support"));
-    TreeItem<String> rootNode;
+    private TreeItem<String> rootNode;
 
     public static void main(String[] args) {
         launch(args);
@@ -68,7 +69,7 @@ public class TreeViewSample extends Application {
 
 
 //        ScenicView.show(scene);
-        new JMetro(JMetro.Style.DARK).applyTheme(scene);
+        new JMetro(STYLE).applyTheme(scene);
 
         box.getChildren().add(treeView);
         stage.setScene(scene);
@@ -93,7 +94,7 @@ public class TreeViewSample extends Application {
             name.set(fName);
         }
 
-        public String getDepartment() {
+        String getDepartment() {
             return department.get();
         }
 
