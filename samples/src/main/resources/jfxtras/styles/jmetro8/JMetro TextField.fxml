@@ -44,7 +44,7 @@
             <Font name="Segoe UI" size="12.0" fx:id="x1" />
         </font>
     </Label>
-    <Label font="$x1" layoutX="274.0" layoutY="165.0" styleClass="item-title, disabled" text="Disabled">
+    <Label font="$x1" layoutX="274.0" layoutY="165.0" styleClass="item-title" text="Disabled">
         <textFill>
             <Color blue="0.647" green="0.647" red="0.647" fx:id="x2" />
         </textFill>
@@ -54,10 +54,7 @@
             <Font name="Segoe UI" size="12.0" fx:id="x1" />
         </font>
     </Label>
-    <TextField layoutX="43.0" layoutY="187.0">
-    </TextField>
-    <TextField disable="true" layoutX="274.0" layoutY="188.0" text="Sample text">
-    </TextField>
-    <TextField layoutX="43.0" layoutY="250.0" promptText="Sample prompt text">
-    </TextField>
+    <TextField layoutX="43.0" layoutY="187.0" />
+    <TextField disable="true" layoutX="274.0" layoutY="188.0" text="Sample text" />
+    <TextField layoutX="43.0" layoutY="250.0" promptText="Sample prompt text" />
 </AnchorPane>

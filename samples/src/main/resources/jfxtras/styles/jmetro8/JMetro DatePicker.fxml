@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet JMetroLightTheme.css?>
 
 <!--
@@ -36,20 +31,19 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="600" styleClass="background" xmlns:fx="http://javafx.com/fxml">
-    <children>
-        <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Date Picker">
-        </Label>
-        <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="normal" textFill="WHITE">
-        </Label>
-        <Label layoutX="300" layoutY="165.0" styleClass="item-title" text="disabled">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="480" styleClass="background">
+    <Label layoutX="45.0" layoutY="37.0" styleClass="header" text="Date Picker">
+    </Label>
 
-        </Label>
-        <DatePicker layoutX="43.0" layoutY="187.0">
 
-        </DatePicker>
-        <DatePicker disable="true" layoutX="300.0" layoutY="188.0">
+    <Label layoutX="45.0" layoutY="165.0" styleClass="item-title" text="Focused"/>
+    <DatePicker layoutX="45.0" layoutY="187.0" prefWidth="150" promptText="Enter date">
 
-        </DatePicker>
-    </children>
+    </DatePicker>
+
+    <Label layoutX="45.0" layoutY="235.0" styleClass="item-title" text="Rest"/>
+    <DatePicker layoutX="45.0" layoutY="257.0" prefWidth="150" promptText="Enter date" />
+
+    <Label layoutX="285" layoutY="165.0" styleClass="item-title" text="Disabled" />
+    <DatePicker disable="true" layoutX="285.0" layoutY="188.0" prefWidth="150" promptText="Enter date" />
 </AnchorPane>
