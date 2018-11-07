@@ -43,7 +43,7 @@
 
 .root {
     /* Root variables */
-    ACCENT_COLOR: #2796c4;
+    ACCENT_COLOR: #0078d7;
 }
 
 /*******************************************************************************
@@ -1140,21 +1140,50 @@
 
 .date-picker {
     GRAPHIC: #111;
-    HOVER_COLOR: #dedede;
+
     TEXT_COLOR: #111;
 
-    TEXT_INPUT_BACKGROUND: white;
+    TEXT_COLOR_SELECTED: white;
+    TEXT_COLOR_HOVER: TEXT_COLOR;
+
+    TEXT_COLOR_DAYS_FROM_OTHER_MONTHS: derive(TEXT_COLOR, 60%);
+
+    BORDER: #999999;
+    BORDER_HOVER: #666666;
+
+    BACKGROUND: white;
+    BACKGROUND_HOVER: white;
+
+    SPINNER_BUTTON_HOVER: #dadada;
 
     CELL_BACKGROUND: white;
+
+    DAY_CELL_BACKGROUND: #e6e6e6;
+    DAY_CELL_BORDER_HOVER: #666;
+
+    DAY_CELL_BACKGROUND_DAYS_FROM_OTHER_MONTHS: #f2f2f2;
+
+    TODAY_BORDER_COLOR: derive(ACCENT_COLOR, 90%);
 }
 
-.date-picker:pressed {
-    -fx-background-color: #666666, TEXT_INPUT_BACKGROUND;
+.date-picker.combo-box-base {
+    -fx-background-color: BORDER, BACKGROUND;
     -fx-background-insets: 0, 2;
 }
 
-.date-picker:focused, .date-picker:focused:hover {
-    -fx-background-color: ACCENT_COLOR, TEXT_INPUT_BACKGROUND;
+.date-picker.combo-box-base:hover {
+    -fx-background-color: BORDER_HOVER, BACKGROUND_HOVER;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 0;
+}
+
+.date-picker.combo-box-base:pressed {
+    -fx-background-color: #666666, BACKGROUND;
+    -fx-background-insets: 0, 2;
+}
+
+.date-picker.combo-box-base:focused, .date-picker.combo-box-base:focused:hover {
+    -fx-background-color: ACCENT_COLOR, BACKGROUND_HOVER;
     -fx-background-insets: 0, 2;
 }
 
@@ -1165,10 +1194,10 @@
 }
 
 .date-picker > .text-input{
-    -fx-background-radius: 0, 0;
+    -fx-background-radius: 0;
 
-    -fx-background-color: transparent, TEXT_INPUT_BACKGROUND;
-    -fx-background-insets: 2, 2;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
 }
 
 /* Icon */
@@ -1194,6 +1223,12 @@
 }
 
 /* Date Picker popup */
+.date-picker-popup {
+    -fx-border-color: #e6e6e6;
+    -fx-border-width: 2px;
+
+    -fx-effect: null;
+}
 
 .date-picker-popup {
     -fx-background-color: CELL_BACKGROUND;
@@ -1203,7 +1238,8 @@
 .date-picker-popup > .month-year-pane {
     -fx-background-color: CELL_BACKGROUND;
     -fx-background-insets: 0;
-    -fx-font-family: "Segoe UI"
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 1.083333em;
 }
 
 .date-picker-popup > * > .spinner > .button {
@@ -1220,8 +1256,12 @@
     -fx-background-insets: 0;
 }
 
+.date-picker-popup > * > .spinner > .spinner-label {
+    -fx-text-fill: TEXT_COLOR;
+}
+
 .date-picker-popup > * > .spinner > .button:hover {
-    -fx-background-color: #dadada;
+    -fx-background-color: SPINNER_BUTTON_HOVER;
 }
 
 .date-picker-popup > * > .spinner > .button:armed {
@@ -1230,7 +1270,7 @@
 
 .date-picker-popup > * > .spinner > .button > .left-arrow,
 .date-picker-popup > * > .spinner > .button > .right-arrow {
-    -fx-background-color: #606060;
+    -fx-background-color: TEXT_COLOR;
     -fx-background-insets: 0;
     -fx-effect: null;
 }
@@ -1246,27 +1286,48 @@
     -fx-padding: 0;
 }
 
-.date-picker-popup > * > .previous-month,
-.date-picker-popup > * > .next-month {
-    -fx-background-color: CELL_BACKGROUND;
-    -fx-opacity: 0.3;
+.date-picker-popup > * > .day-cell.previous-month,
+.date-picker-popup > * > .day-cell.next-month {
+    -fx-background-color: DAY_CELL_BACKGROUND_DAYS_FROM_OTHER_MONTHS;
+    -fx-border-color: DAY_CELL_BACKGROUND;
+    -fx-text-fill: TEXT_COLOR_DAYS_FROM_OTHER_MONTHS;
+}
+
+.date-picker-popup > * > .day-cell.previous-month:hover,
+.date-picker-popup > * > .day-cell.next-month:hover {
+    -fx-background-color: DAY_CELL_BORDER_HOVER, DAY_CELL_BORDER_HOVER, DAY_CELL_BACKGROUND_DAYS_FROM_OTHER_MONTHS;
 }
 
 .date-picker-popup > * > .day-name-cell,
 .date-picker-popup > * > .week-number-cell {
     -fx-font-size: 0.75em;
     -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: TEXT_COLOR;
+}
+
+.date-picker-popup > * > .day-name-cell {
+    -fx-font-size: 0.833333em; /* 10 */
+    -fx-padding: 0 0 0.75em 0;
 }
 
 /* Day Cells */
-.date-picker-popup > * > .day-cell:hover {
-    -fx-background-color: HOVER_COLOR;
+.date-picker-popup > * > .day-cell {
+    -fx-background-color: DAY_CELL_BACKGROUND;
+    -fx-border-color: DAY_CELL_BACKGROUND;
+
     -fx-text-fill: TEXT_COLOR;
+
+    -fx-padding: 0.5em 0.5em 0.5em 0.5em; /* 6 6 6 6 */
+}
+
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: DAY_CELL_BORDER_HOVER, DAY_CELL_BORDER_HOVER, DAY_CELL_BACKGROUND;
+    -fx-text-fill: TEXT_COLOR_HOVER;
 }
 
 .date-picker-popup > * > .day-cell.selected {
-    -fx-background-color: derive(ACCENT_COLOR, 90%);
-    -fx-text-fill: TEXT_COLOR;
+    -fx-background-color: ACCENT_COLOR;
+    -fx-text-fill: TEXT_COLOR_SELECTED;
 }
 
 .date-picker-popup > * > .day-cell.selected:hover {
@@ -1274,7 +1335,7 @@
 }
 
 .date-picker-popup > * > .today {
-    -fx-background-color: transparent, derive(ACCENT_COLOR, 90%), CELL_BACKGROUND;
+    -fx-background-color: TODAY_BORDER_COLOR, TODAY_BORDER_COLOR, DAY_CELL_BACKGROUND;
 }
 
 

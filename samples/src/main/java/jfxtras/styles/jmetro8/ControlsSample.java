@@ -58,7 +58,7 @@ public class ControlsSample extends Application {
     static final private String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
 
     static final private String RESOURCE = DATE_PICKER_RESOURCE;
-    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
+    static final private JMetro.Style STYLE = JMetro.Style.DARK;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
