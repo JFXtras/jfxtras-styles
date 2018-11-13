@@ -48,6 +48,7 @@ public class ControlsSample extends Application {
     static final private String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
     static final private String RATING_RESOURCE = "JMetro Rating.fxml";
     static final private String TEXT_FIELD_RESOURCE = "JMetro TextField.fxml";
+    static final private String TEXT_AREA_RESOURCE = "JMetro TextArea.fxml";
     static final private String PASSWORD_FIELD_RESOURCE = "JMetro PasswordField.fxml";
     static final private String PROGRESS_BAR_RESOURCE = "JMetro ProgressBar.fxml";
     static final private String SLIDER_RESOURCE = "JMetro Slider.fxml";
@@ -57,7 +58,7 @@ public class ControlsSample extends Application {
     static final private String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final private String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
 
-    static final private String RESOURCE = DATE_PICKER_RESOURCE;
+    static final private String RESOURCE = TEXT_AREA_RESOURCE;
     static final private JMetro.Style STYLE = JMetro.Style.DARK;
 
     @Override

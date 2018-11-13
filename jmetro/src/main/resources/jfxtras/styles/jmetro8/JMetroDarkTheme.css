@@ -616,7 +616,7 @@
 
 /***************************** Scroll Pane ************************************/
 .scroll-pane {
-    BACKGROUND: #29292a;
+    BACKGROUND: #d2d2d2;
 }
 
 .scroll-pane {
@@ -772,23 +772,23 @@
 
 /*******************************************************************************
  *                                                                             *
- * Text Field (and Password Field)                                             *
+ * Text Common (TextField, PasswordField, TextArea)                            *
  *                                                                             *
  ******************************************************************************/
-.text-field{
-    -fx-skin: "impl.jfxtras.styles.jmetro8.TextFieldSkin";
-}
 
-.text-field {
+.text-input {
     BORDER: #d2d2d2;
     BORDER_HOVER: #e2e2e2;
+    BORDER_DISABLED: #777777;
 
     BACKGROUND: #d2d2d2;
     BACKGROUND_FOCUSED: white;
     BACKGROUND_HOVER: #e2e2e2;
+    BACKGROUND_DISABLED: #1d1d1d;
 
     TEXT_COLOR: #111;
     PROMPT_TEXT: #818181;
+    TEXT_DISABLED: #616161;
 
     HIGHLIGHT: ACCENT_COLOR;
     HIGHLIGHT_TEXT: white;
@@ -820,11 +820,22 @@
     -fx-text-fill: TEXT_COLOR;
 }
 
-.text-input > .right-button{
-    -fx-cursor: default;
+.text-input:disabled
+{
+    -fx-opacity: 1;
+    -fx-background-insets: 0, 2;
+    -fx-background-color: BORDER_DISABLED, BACKGROUND_DISABLED;
+    -fx-text-fill: TEXT_DISABLED;
+}
 
-    -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
-    -fx-background-color: BACKGROUND_FOCUSED;  /* We must give it a color so that it reacts to the mouse */
+/*******************************************************************************
+ *                                                                             *
+ * Text Field (and PasswordField)                                              *
+ *                                                                             *
+ ******************************************************************************/
+
+.text-field{
+    -fx-skin: "impl.jfxtras.styles.jmetro8.TextFieldSkin";
 }
 
 .text-field > .right-button > .right-button-graphic {
@@ -834,16 +845,15 @@
     -fx-background-color: GRAPHIC;
 }
 
-.text-input > .right-button:hover > .right-button-graphic {
-    -fx-background-color: ACCENT_COLOR;
+.text-input > .right-button{
+    -fx-cursor: default;
+
+    -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
+    -fx-background-color: BACKGROUND_FOCUSED;  /* We must give it a color so that it reacts to the mouse */
 }
 
-.text-input:disabled
-{
-    -fx-opacity: 1;
-    -fx-background-insets: 0, 2;
-    -fx-background-color: #777777, #1d1d1d;
-    -fx-text-fill: #616161;
+.text-input > .right-button:hover > .right-button-graphic {
+    -fx-background-color: ACCENT_COLOR;
 }
 
 /*******************************************************************************
@@ -865,6 +875,7 @@
     -fx-scale-shape: false;
     -fx-background-color: #111;
 }
+
 .password-field > .right-button:pressed {
     -fx-background-color: ACCENT_COLOR;
 }
@@ -873,12 +884,47 @@
     -fx-background-color: white;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * Text Area                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.text-area .content {
+    -fx-background-color: BORDER, BACKGROUND;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+.text-area:hover .content {
+    -fx-background-color: BORDER, BACKGROUND_HOVER;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+.text-area:focused .content {
+    -fx-background-color: ACCENT_COLOR, BACKGROUND_FOCUSED;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+.text-area:disabled .content {
+    -fx-background-color: BORDER_DISABLED, BACKGROUND_DISABLED;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+/* TODO: below not working */
+.text-area:disabled .content .text {
+    -fx-fill: TEXT_DISABLED;
+}
 
 /*******************************************************************************
  *                                                                             *
  * Progress Bar                                                                *
  *                                                                             *
  ******************************************************************************/
+
 .progress-bar {
     -fx-skin: "impl.jfxtras.styles.jmetro8.ProgressBarSkin";
 }

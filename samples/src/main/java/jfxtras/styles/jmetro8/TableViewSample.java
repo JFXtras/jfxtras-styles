@@ -24,7 +24,7 @@ import javafx.stage.Stage;
 
 public class TableViewSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
+    private static final JMetro.Style STYLE = JMetro.Style.DARK;
 
     private TableView<Person> table = new TableView<>();
     private final ObservableList<Person> data =
