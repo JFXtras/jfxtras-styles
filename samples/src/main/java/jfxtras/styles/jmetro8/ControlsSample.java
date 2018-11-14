@@ -58,8 +58,8 @@ public class ControlsSample extends Application {
     static final private String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     static final private String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
 
-    static final private String RESOURCE = TEXT_AREA_RESOURCE;
-    static final private JMetro.Style STYLE = JMetro.Style.DARK;
+    static final private String RESOURCE = CHOICE_BOX_RESOURCE;
+    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

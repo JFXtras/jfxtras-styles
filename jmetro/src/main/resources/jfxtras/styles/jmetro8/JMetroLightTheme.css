@@ -1386,19 +1386,26 @@
  *                                                                             *
  ******************************************************************************/
 
-.choice-box  {
-    -fx-background-color: transparent, #cccccc, transparent, #cccccc;
-    -fx-background-radius: 0, 0, 0, 0;
-    -fx-background-insets: -1.4, 0, 1, 2;
+.choice-box {
+    BORDER_COLOR: #999999;
+    BORDER_COLOR_HOVER: #666666;
+    BORDER_COLOR_FOCUSED: #5c5c5c;
+    BORDER_COLOR_PRESSED: BORDER_COLOR;
 
-    -fx-padding: 0em 0.166667em 0em 0.166667em; /* 0 2px 0 2px*/
+    BACKGROUND_PRESSED: #cccccc;
+}
+
+.choice-box  {
+    -fx-background-color: transparent, BORDER_COLOR, transparent, white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
 
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.166667em; /* 14 */
+    -fx-font-size: 1.333333em; /* 16 */
 }
 
 .choice-box:hover {
-    -fx-background-color: transparent, #7a7a7a, transparent, #cccccc;
+    -fx-background-color: transparent, BORDER_COLOR_HOVER, transparent, white;
 }
 
 .choice-box:focused {
@@ -1406,11 +1413,19 @@
 }
 
 .choice-box:focused:hover {
-    -fx-background-color: transparent, #7a7a7a, transparent, #cccccc;
+    -fx-background-color: transparent, #909090, transparent, white;
 }
 
 .choice-box:disabled {
     -fx-opacity: .4;
+}
+
+/* ARROW */
+.choice-box > .open-button > .arrow {
+    -fx-padding: 3.5px 6px 3.5px 6px;
+    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
+    -fx-background-insets: 0 0 0 0, 0;
+    -fx-background-color: black;
 }
 
 /*******************************************************************************

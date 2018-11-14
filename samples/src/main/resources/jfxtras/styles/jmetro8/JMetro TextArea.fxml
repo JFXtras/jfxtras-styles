@@ -32,7 +32,7 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="500" styleClass="background">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="517" styleClass="background">
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Text Area" />
     
     <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" />
