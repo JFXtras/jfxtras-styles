@@ -1172,6 +1172,9 @@
     -fx-background-radius: 0;
 }
 
+/* TODO: Below doesn't work when spinner is in SPLIT_ARROWS_HORIZONTAL and is not focused
+   however it works if you are running with Scenic View attached. Should be a bug in JavaFX 8.
+ */
 .spinner:focused > .text-field,
 .spinner:contains-focus > .text-field,
 .spinner > .text-field {
@@ -1187,19 +1190,19 @@
 }
 
 .spinner .increment-arrow-button .increment-arrow, .spinner .decrement-arrow-button .decrement-arrow {
-    -fx-background-color: #363636;
+    -fx-background-color: #999;
 }
 
 .spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover {
-    -fx-background-color: #dadada;
+    -fx-background-color: #3c4145;
 }
 
 .spinner .increment-arrow-button:pressed, .spinner .decrement-arrow-button:pressed {
-    -fx-background-color: #1e1e1e;
+    -fx-background-color: #a8abac;
 }
 
 .spinner .increment-arrow-button:pressed .increment-arrow, .spinner .decrement-arrow-button:pressed .decrement-arrow{
-    -fx-background-color: white;
+    -fx-background-color: #5e6060;
 }
 
 /*******************************************************************************
