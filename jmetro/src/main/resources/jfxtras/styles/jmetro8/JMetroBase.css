@@ -1,0 +1,274 @@
+/*
+ * Copyright (c) 2011-2018 JFXtras
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *      * Redistributions of source code must retain the above copyright
+ *        notice, this list of conditions and the following disclaimer.
+ *      * Redistributions in binary form must reproduce the above copyright
+ *        notice, this list of conditions and the following disclaimer in the
+ *        documentation and/or other materials provided with the distribution.
+ *      * Neither the name of the organization nor the
+ *        names of its contributors may be used to endorse or promote products
+ *        derived from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ *  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+ *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.header{
+    -fx-font-size: 3.5em;
+    -fx-font-family: "Segoe UI Light";
+}
+
+.item-title{
+    -fx-font-size: 1em;
+    -fx-font-family: "Segoe UI";
+}
+
+.root {
+    /* Root variables */
+    ACCENT_COLOR: #0078d7;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Button and ToggleButton                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.button, .toggle-button {
+    -shrink-animate-on-press: true;
+}
+
+
+.button, .toggle-button {
+    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /*3 20 3 20*/
+
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: BACKGROUND;
+
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 1.333333em; /* 16 */
+    -fx-text-fill: TEXT;
+}
+
+.button:hover, .toggle-button:hover{
+    -fx-border-color: BORDER_HOVER;
+}
+
+.button:pressed, .toggle-button:pressed
+{
+    -fx-border-color: BACKGROUND_PRESSED;
+    -fx-background-color: BACKGROUND_PRESSED;
+}
+
+.button:focused, .toggle-button:focused
+{
+    -fx-border-color: transparent, FOCUS_RING_BORDER;
+    -fx-border-width: 1, 1;
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled, .toggle-button:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: BACKGROUND;
+    -fx-text-fill: TEXT;
+}
+
+/****************************** Button ****************************************/
+
+.button {
+    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentButtonSkin";
+}
+
+.button:default
+{
+    -fx-background-color: ACCENT_COLOR;
+    -fx-text-fill: DEFAULT_BUTTON_TEXT;
+}
+
+.button:default:hover{
+    -fx-border-color: BORDER_HOVER_DEFAULT;
+}
+
+.button:default:pressed {
+    -fx-background-color: derive(ACCENT_COLOR, -40%);
+}
+
+/**************************** Toggle Button ***********************************/
+
+.toggle-button {
+    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentToggleButtonSkin";
+}
+
+.toggle-button:selected {
+    -fx-background-color: ACCENT_COLOR;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected:hover {
+    -fx-border-color: BORDER_HOVER_SELECTED;
+}
+
+.toggle-button:selected:pressed {
+    -fx-background-color: derive(ACCENT_COLOR, -40%);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Check Box                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.check-box {
+    -fx-text-fill: text;
+}
+
+.check-box > .box > .mark {
+    -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
+
+    -fx-pref-width: 16px;
+    -fx-pref-height: 12px;
+
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* unselected */
+.check-box > .box {
+    -fx-background-color: box_background;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-border-color: box_border;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+
+    -fx-padding: 2px 0px 2px 0px;
+}
+
+/* hover */
+.check-box:hover > .box, .check-box:selected:hover > .box  {
+    -fx-border-color: box_border_hover;
+}
+
+/* selected */
+.check-box:selected > .box{
+    -fx-background-color: ACCENT_COLOR;
+    -fx-border-color: ACCENT_COLOR;
+}
+
+.check-box:selected > .box > .mark{
+    -fx-background-color: white;
+}
+
+/* pressed */
+.check-box:pressed > .box, .check-box:selected:pressed > .box
+{
+    -fx-background-color: #666666;
+    -fx-border-color: #666666;
+}
+
+/* indeterminate */
+.check-box:indeterminate > .box {
+    -fx-padding: 3px;
+
+    -fx-border-color: ACCENT_COLOR;
+}
+
+.check-box:indeterminate > .box > .mark {
+    -fx-shape: null;
+
+    -fx-pref-width: 10px;
+    -fx-max-width: 10px;
+    -fx-min-width: 10px;
+    -fx-pref-height: 10px;
+    -fx-max-height: 10px;
+    -fx-min-height: 10px;
+
+    -fx-background-color: indeterminate_mark;
+    /*-fx-background-insets: 3px;*/
+}
+
+/* -- indeterminate - pressed */
+.check-box:indeterminate:pressed > .box > .mark {
+    -fx-background-color: #666666;
+}
+
+.check-box:indeterminate:pressed > .box {
+    -fx-background-color: indeterminate_box_pressed;
+    -fx-border-color: #666666;
+}
+
+/* focused */
+
+.check-box:focused > .box{
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    /* - first border is focus ring
+       - second border is control border */
+    -fx-border-color: focus_ring, box_border;
+    -fx-border-width: 1, 2;
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: segments(1, 2), solid;
+    -fx-border-insets: -3, 0;
+}
+
+/* -- focused - selected */
+.check-box:focused:selected > .box{
+    -fx-border-color: focus_ring, ACCENT_COLOR;
+}
+
+/* -- focused - selected, hover */
+.check-box:focused:selected:hover > .box{
+    -fx-border-color: focus_ring, box_border_hover;
+}
+
+/* -- focused - pressed */
+.check-box:focused:pressed > .box{
+    -fx-border-color: focus_ring, #666666;
+}
+
+.check-box:focused:selected:pressed > .box{
+    -fx-border-color: focus_ring, #666666;
+}
+
+.check-box:focused:indeterminate:pressed > .box{
+    -fx-border-color: focus_ring, #666666;
+}
+
+/* -- focused - indeterminate*/
+.check-box:focused:indeterminate > .box {
+    -fx-border-color: white, ACCENT_COLOR;
+}
+
+/* disabled */
+.check-box:disabled
+{
+    -fx-opacity: 0.4;
+}
+
+.check-box:disabled > .box
+{
+    -fx-background-color: #cdcdcd;
+    -fx-border-color: #aaa;
+}
+

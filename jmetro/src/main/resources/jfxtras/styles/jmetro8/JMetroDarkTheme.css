@@ -25,26 +25,19 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+@import "JMetroBase.css";
+
 .background{
     -fx-background-color: #1d1d1d;
 }
 
 .header{
-    -fx-font-size: 3.5em;
-    -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
 }
 
 .item-title{
-    -fx-font-size: 1em;
-    -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
     -fx-opacity: 0.6;
-}
-
-.root {
-    /* Root variables */
-    ACCENT_COLOR: #0078d7;
 }
 
 
@@ -64,97 +57,14 @@
     DEFAULT_BUTTON_TEXT: white;
 
     FOCUS_RING_BORDER: white;
-
-    -shrink-animate-on-press: true;
-}
-
-.button, .toggle-button {
-    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /*3 20 3 20*/
-
-    -fx-border-color: transparent;
-    -fx-border-width: 2;
-
-    -fx-background-radius: 0;
-    -fx-background-insets: 0;
-    -fx-background-color: BACKGROUND;
-
-    -fx-font-family: "Segoe UI Semilight";
-    -fx-font-size: 1.333333em; /* 16 */
-    -fx-text-fill: TEXT;
-}
-
-.button:hover, .toggle-button:hover{
-    -fx-border-color: BORDER_HOVER;
-}
-
-.button:pressed, .toggle-button:pressed
-{
-    -fx-border-color: BACKGROUND_PRESSED;
-    -fx-background-color: BACKGROUND_PRESSED;
-}
-
-.button:focused, .toggle-button:focused
-{
-    -fx-border-color: transparent, FOCUS_RING_BORDER;
-    -fx-border-width: 1, 1;
-    /*noinspection CssInvalidFunction*/
-    -fx-border-style: solid, segments(1, 2);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
-}
-
-.button:disabled, .button:default:disabled, .toggle-button:disabled
-{
-    -fx-opacity: 0.4;
-    -fx-background-color: BACKGROUND;
-    -fx-text-fill: TEXT;
-}
-
-/****************************** Button ****************************************/
-
-.button {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentButtonSkin";
 }
 
 .button {
     BORDER_HOVER_DEFAULT: derive(ACCENT_COLOR, 70%);
 }
 
-.button:default
-{
-    -fx-background-color: ACCENT_COLOR;
-    -fx-text-fill: DEFAULT_BUTTON_TEXT;
-}
-
-.button:default:hover{
-    -fx-border-color: BORDER_HOVER_DEFAULT;
-}
-
-.button:default:pressed {
-    -fx-background-color: derive(ACCENT_COLOR, -40%);
-}
-
-/**************************** Toggle Button ***********************************/
-
-.toggle-button {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentToggleButtonSkin";
-}
-
 .toggle-button {
     BORDER_HOVER_SELECTED: derive(ACCENT_COLOR, 70%);
-}
-
-.toggle-button:selected {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-text-fill: white;
-}
-
-.toggle-button:selected:hover {
-    -fx-border-color: BORDER_HOVER_SELECTED;
-}
-
-.toggle-button:selected:pressed {
-    -fx-background-color: derive(ACCENT_COLOR, -40%);
 }
 
 /*******************************************************************************
@@ -162,75 +72,17 @@
  * Check Box                                                                   *
  *                                                                             *
  ******************************************************************************/
-
 .check-box {
-    -fx-text-fill: white;
-}
+    text: white;
 
-/* unselected */
-.check-box > .box {
-    -fx-background-color: #111;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
+    box_background: #111;
+    box_border: #cccccc;
+    box_border_hover: white;
 
-    -fx-border-color: #cccccc;
-    -fx-border-width: 2px;
-    -fx-border-style: solid;
+    indeterminate_mark: #cccccc;
+    indeterminate_box_pressed: #111;
 
-    -fx-padding: 2px 0px 2px 0px;
-}
-
-.check-box > .box > .mark {
-    -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
-
-    -fx-pref-width: 16px;
-    -fx-pref-height: 12px;
-
-    -fx-background-color: transparent;
-    -fx-background-insets: 0;
-}
-
-/* hover */
-.check-box:hover > .box, .check-box:selected:hover > .box  {
-    -fx-border-color: white;
-}
-
-/* selected */
-.check-box:selected > .box{
-    -fx-background-color: ACCENT_COLOR;
-    -fx-border-color: ACCENT_COLOR;
-}
-
-.check-box:selected > .box > .mark{
-    -fx-background-color: white;
-}
-
-/* pressed */
-.check-box:pressed > .box, .check-box:selected:pressed > .box
-{
-    -fx-background-color: #666666;
-    -fx-border-color: #666666;
-}
-
-/* indeterminate */
-.check-box:indeterminate > .box {
-    -fx-padding: 3px;
-
-    -fx-border-color: ACCENT_COLOR;
-}
-
-.check-box:indeterminate > .box > .mark {
-    -fx-shape: null;
-
-    -fx-pref-width: 10px;
-    -fx-max-width: 10px;
-    -fx-min-width: 10px;
-    -fx-pref-height: 10px;
-    -fx-max-height: 10px;
-    -fx-min-height: 10px;
-
-    -fx-background-color: #cccccc;
-    /*-fx-background-insets: 3px;*/
+    focus_ring: white;
 }
 
 /* -- indeterminate - hover */
@@ -238,75 +90,10 @@
     -fx-background-color: white;
 }
 
-/* -- indeterminate - pressed */
-.check-box:indeterminate:pressed > .box > .mark {
-    -fx-background-color: #666666;
-}
-
-.check-box:indeterminate:pressed > .box {
-    -fx-background-color: #111;
-    -fx-border-color: #666666;
-}
-
-/* focused */
-
-.check-box:focused > .box{
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-    /* - first border is focus ring
-       - second border is control border */
-    -fx-border-color: white, #cccccc;
-    -fx-border-width: 1, 2;
-    /*noinspection CssInvalidFunction*/
-    -fx-border-style: segments(1, 2), solid;
-    -fx-border-insets: -3, 0;
-}
-
 /* -- focused - hover */
 .check-box:focused:hover > .box{
-    -fx-border-color: white, white;
+    -fx-border-color: focus_ring, box_border_hover;
 }
-
-/* -- focused - selected */
-.check-box:focused:selected > .box{
-    -fx-border-color: white, ACCENT_COLOR;
-}
-
-/* -- focused - selected, hover */
-.check-box:focused:selected:hover > .box{
-    -fx-border-color: white, white;
-}
-
-/* -- focused - pressed */
-.check-box:focused:pressed > .box{
-    -fx-border-color: white, #666666;
-}
-
-.check-box:focused:selected:pressed > .box{
-    -fx-border-color: white, #666666;
-}
-
-.check-box:focused:indeterminate:pressed > .box{
-    -fx-border-color: white, #666666;
-}
-
-/* -- focused - indeterminate*/
-.check-box:focused:indeterminate > .box {
-    -fx-border-color: white, ACCENT_COLOR;
-}
-
-/* disabled */
-.check-box:disabled
-{
-    -fx-opacity: 0.4;
-}
-
-.check-box:disabled > .box
-{
-    -fx-background-color: #cdcdcd;
-    -fx-border-color: #aaa;
-}
-
 
 /*******************************************************************************
  *                                                                             *
