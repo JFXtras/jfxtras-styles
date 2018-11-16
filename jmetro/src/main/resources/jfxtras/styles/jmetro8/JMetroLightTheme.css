@@ -91,125 +91,19 @@
  ******************************************************************************/
 
 .radio-button {
-    -fx-text-fill: #212121;
-}
+    text: #111;
 
-.radio-button > .radio  {
-    -fx-background-color: white;
-    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-    -fx-background-insets: 0;
+    background: white;
+    background_pressed: white;
 
-    /* Two borders exist because of the focus ring, if they didn't the size of the control would change on focus
-       - The first one is the border of the control
-       - The second one is the border of the focus ring
-       */
-    /*noinspection CssInvalidFunction*/
-    -fx-border-style: solid, segments(1, 2);
-    -fx-border-radius: 1.0em, 0;
-    -fx-border-color: #333333, transparent;
-    -fx-border-insets: 0px, -2px;
-    -fx-border-width: 2px, 1px;
+    border: #333333;
+    border_hover: #333333;
 
-    -fx-padding: 3px; /* 4 -- padding from outside edge to the inner black dot */
-}
+    dot: white;
+    dot_selected: #333333;
+    dot_selected_hover: #111;
 
-.radio-button > .radio > .dot {
-    -fx-background-color: white;
-    -fx-background-insets: 0;
-    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-
-    -fx-padding: 5px; /* 3 -- radius of the inner black dot when selected */
-}
-
-/* hover */
-.radio-button:hover > .radio {
-    -fx-background-color: white;
-    -fx-border-color: #333333, transparent;
-}
-
-.radio-button:selected:hover > .radio > .dot {
-    -fx-background-color: #111;
-}
-
-/* selected */
-.radio-button:selected > .radio {
-    -fx-border-color: ACCENT_COLOR, transparent;
-}
-
-.radio-button:selected > .radio > .dot {
-    -fx-background-color: #333333;
-}
-
-/* pressed */
-.radio-button:pressed > .radio
-{
-    -fx-background-color: white;
-    -fx-border-color: #999999, transparent;
-}
-
-.radio-button:pressed:selected > .radio > .dot
-{
-    -fx-background-color: #999999;
-}
-
-/* focused */
-.radio-button:focused > .radio
-{
-    /*noinspection CssInvalidFunction*/
-    -fx-border-style: solid, segments(1, 2);
-    -fx-border-radius: 1.0em, 0;
-    -fx-border-color: #333333, #333333;
-    -fx-border-insets: 0px, -2px;
-    -fx-border-width: 2px, 1px;
-}
-
-.radio-button:focused:hover > .radio
-{
-    -fx-border-color: white, #e0e0e0;
-}
-
-.radio-button:focused:pressed > .radio, .radio-button:focused:selected:pressed > .radio
-{
-    -fx-border-color: #999999, #333333;
-    -fx-background-color: white;
-}
-
-.radio-button:focused:selected > .radio {
-    -fx-border-color: ACCENT_COLOR, #333333;
-}
-
-/* disabled */
-.radio-button:disabled
-{
-    -fx-opacity: 0.4;
-}
-
-.radio-button:disabled > .radio
-{
-    -fx-border-color: #333333, transparent;
-}
-
-/*******************************************************************************
- *                                                                             *
- * Tooltip                                                                     *
- *                                                                             *
- ******************************************************************************/
-
-.tooltip {
-    -fx-background-color: #f2f2f2;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0 0 0 0;
-
-    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em;  /*4 8 4 8 */
-
-    -fx-font-family: "Segoe UI Semilight";
-    -fx-text-fill: #111;
-    -fx-font-size: 1.166667em; /* 14 */
-
-    -fx-border-color: #cccccc;
-    -fx-border-width: 2px;
-
-    -fx-effect: null;
+    focus_ring: #333333;
 }
 
 /*******************************************************************************
@@ -233,124 +127,11 @@
     ARROW_PRESSED: white;
 }
 
-.scroll-bar > .thumb{
-    -fx-background-color: THUMB;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
-
-.scroll-bar > .thumb:hover {
-    -fx-background-color: THUMB_HOVER;
-}
-
-.scroll-bar > .thumb:pressed {
-    -fx-background-color: THUMB_PRESSED;
-}
-
-.scroll-bar > .track {
-    -fx-background-color: TRACK;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
-.scroll-bar > .track-background {
-    -fx-background-insets: 0;
-}
-
-/* Buttons */
-.scroll-bar > .increment-button,
-.scroll-bar > .decrement-button {
-    -fx-background-color: INC_DEC_BUTTON;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-
-    -fx-padding: 0.5em 0.25em 0.5em 0.25em; /* 6 3 6 3*/
-}
-
-.scroll-bar:horizontal > .increment-button,
-.scroll-bar:horizontal > .decrement-button {
-    -fx-padding: 0.25em 0.5em 0.25em 0.5em ; /* 3 6 3 6*/
-}
-
-.scroll-bar > .increment-button:hover,
-.scroll-bar > .decrement-button:hover  {
-    -fx-background-color: INC_DEC_BUTTON_HOVER;
-}
-
-.scroll-bar > .increment-button:pressed,
-.scroll-bar > .decrement-button:pressed {
-    -fx-background-color: INC_DEC_BUTTON_PRESSED;
-}
-
-.scroll-bar > .decrement-button > .decrement-arrow,
-.scroll-bar > .increment-button > .increment-arrow{
-    -fx-background-insets: 1 0 -1 0, 0;
-    -fx-background-color: transparent, #606060;
-    -fx-effect: null;
-}
-
-/* Disabled */
-.scroll-bar:disabled {
-    -fx-opacity: 0.4;
-}
-
-/* ARROW SHAPES */
-.scroll-bar:horizontal > .increment-button > .increment-arrow {
-    -fx-shape: "M14.4,18.611l3.633-3.637L14.4,11.338l0.352-0.352l3.992,3.988 l-3.992,3.988L14.4,18.611z";
-}
-
-.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
-    -fx-shape: "M18.393,18.963L14.4,14.975l3.992-3.988l0.352,0.352l-3.633,3.637 l3.633,3.637L18.393,18.963z";
-}
-
-.scroll-bar:vertical > .increment-button > .increment-arrow {
-    -fx-shape: "M20.561,13.154l-3.988,3.992l-3.988-3.992l0.352-0.352 l3.637,3.633l3.637-3.633L20.561,13.154z";
-}
-
-.scroll-bar:vertical > .decrement-button > .decrement-arrow {
-    -fx-shape: "M20.209,17.146l-3.637-3.633l-3.637,3.633l-0.352-0.352 l3.988-3.992l3.988,3.992L20.209,17.146z";
-}
-
-.scroll-bar > .decrement-button:pressed > .decrement-arrow,
-.scroll-bar > .increment-button:pressed > .increment-arrow {
-    -fx-background-color: transparent, white;
-    -fx-effect: null;
-}
-
-.scroll-bar:vertical > .increment-button > .increment-arrow,
-.scroll-bar:vertical > .decrement-button > .decrement-arrow {
-    -fx-padding: 2.5px 4px 2.5px 4px;
-}
-
-.scroll-bar:horizontal > .increment-button > .increment-arrow,
-.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
-    -fx-padding: 4px 2.5px 4px 2.5px;
-    -fx-translate-y: -1; /* HACK:  Somehow the arrow is not centered so we add this to center it */
-}
-
-.scroll-bar > .increment-button > .increment-arrow, .scroll-bar > .decrement-button > .decrement-arrow {
-    -fx-background-color: ARROW;
-}
-
-.scroll-bar > .increment-button:pressed > .increment-arrow, .scroll-bar > .decrement-button:pressed > .decrement-arrow {
-    -fx-background-color: ARROW_PRESSED;
-}
-
 /**************************** Scroll Pane *************************************/
 
 .scroll-pane {
-    BACKGROUND: white;
+    BACKGROUND: #e9e9e9;
 }
-
-.scroll-pane {
-    -fx-background-color: transparent, transparent;
-}
-
-.scroll-pane .corner {
-    -fx-background-radius: 0 0 0 0;
-    -fx-background-color: BACKGROUND;
-    -fx-background-insets: 0 0 0 0;
-}
-
 
 /*******************************************************************************
  *                                                                             *
@@ -460,12 +241,14 @@
     -fx-padding: 16 16;
     -fx-background-image-repeat: no-repeat;
 }
+
 .rating > .container > .button.strong {
     -fx-background-color: ACCENT_COLOR;
     -fx-border-color: transparent;
     -fx-background-image: null;
 
 }
+
 .rating > .container:hover > .button.strong {
     -fx-background-color: derive(ACCENT_COLOR, 30%);
 }
