@@ -34,14 +34,11 @@
   -->
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
-    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Combo Box">
-    </Label>
-    <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" textFill="WHITE">
-    </Label>
-    <Label layoutX="270.0" layoutY="165.0" styleClass="item-title" text="Disabled">
-    </Label>
+    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Combo Box" />
+    <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" textFill="WHITE" />
+    <Label layoutX="270.0" layoutY="165.0" styleClass="item-title" text="Disabled" />
 
-    <ComboBox layoutX="43.0" layoutY="187.0" focusTraversable="false">
+    <ComboBox layoutX="43.0" layoutY="187.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Times New Roman" />
@@ -56,7 +53,8 @@
         <String fx:value="Times New Roman" />
       </value>
     </ComboBox>
-    <ComboBox layoutX="43.0" layoutY="250.0" focusTraversable="false">
+
+    <ComboBox layoutX="43.0" layoutY="250.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Times New Roman" />
@@ -77,6 +75,7 @@
         <String fx:value="Segoe UI" />
       </value>
     </ComboBox>
+
     <ComboBox disable="true" layoutX="270.0" layoutY="187.0">
       <items>
         <FXCollections fx:factory="observableArrayList">

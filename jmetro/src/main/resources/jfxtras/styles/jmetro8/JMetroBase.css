@@ -516,3 +516,281 @@
     -fx-background-color: BACKGROUND;
     -fx-background-insets: 0 0 0 0;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Combo Box                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.combo-box-base {
+    border: #999999;
+    border_hover: #666666;
+    border_focused: #5c5c5c;
+    border_pressed: border;
+
+    background: white;
+    background_pressed: #cccccc;
+
+    arrow: #111;
+
+    text: #111;
+
+    list_cell: #f2f2f2;
+    list_cell_hover: #dedede;
+
+    list_cell_border: #cccccc;
+}
+
+.combo-box-base  {
+    -fx-background-color: transparent, border, transparent, background;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.333333em; /* 16 */
+}
+
+.combo-box-base > .list-cell {
+    -fx-text-fill: text;
+}
+
+.combo-box-base:hover {
+    -fx-background-color: transparent, border_hover, transparent, background;
+}
+
+.combo-box-base:focused {
+    -fx-background-color: transparent, border_focused, transparent, background;
+    -fx-background-insets: -1.4, 0, 1, 2;
+
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.combo-box-base:focused:hover {
+    -fx-background-color: transparent, border_hover, transparent, background;
+}
+
+.combo-box-base:pressed, .combo-box-base:focused:pressed {
+    -fx-background-color: transparent, border_pressed, transparent, background_pressed;
+}
+
+.combo-box-base:disabled {
+    -fx-opacity: .4;
+}
+
+/* ------- OPEN BUTTON ------- */
+.combo-box-base > .arrow-button {
+    -fx-background-color: transparent, transparent, transparent;
+}
+
+/* ------- ARROW ------- */
+.combo-box-base > .arrow-button > .arrow {
+    -fx-padding: 3.5px 6px 3.5px 6px;
+    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
+    -fx-background-insets: 0 0 0 0, 0;
+    -fx-background-color: arrow;
+}
+
+/* LIST (Popup)*/
+.combo-box-popup > .list-view {
+    -fx-effect: null;
+
+    -fx-border-color: list_cell_border;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 11pt;
+    -fx-padding: 4 0 4 5;
+
+    -fx-background-color: list_cell;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover{
+    -fx-background-color: list_cell_hover;
+    -fx-text-fill: text;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected{
+    -fx-background-color: derive(ACCENT_COLOR, 90%);
+    -fx-text-fill: #111;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover{
+    -fx-background-color: derive(ACCENT_COLOR, 70%);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Rating (ControlsFX)                                                         *
+ *                                                                             *
+ ******************************************************************************/
+
+.rating {
+    star: #bababa;
+}
+
+.rating > .container > .button {
+    -fx-background-color: star;
+    -fx-border-color: transparent;
+    -fx-shape: "M147.421,249.541l6.152,4.854l-2.393,7.355l6.521-4.361l6.549,4.361l-2.393-7.355l6.152-4.854h-7.738l-2.571-7.396l-2.543,7.396H147.421z";
+    -fx-background-image: null;
+    -fx-padding: 16 16;
+    -fx-background-repeat: no-repeat;
+}
+
+.rating > .container > .button.strong {
+    -fx-background-color: ACCENT_COLOR;
+    -fx-border-color: transparent;
+    -fx-background-image: null;
+
+}
+
+.rating > .container:hover > .button.strong {
+    -fx-background-color: derive(ACCENT_COLOR, 30%);
+}
+
+.rating > .container > .button:hover {
+    -fx-effect: null;
+}
+
+.rating > .container:pressed > .button.strong {
+    -fx-background-color: derive(ACCENT_COLOR, 40%);
+}
+
+.rating > .container > .button:pressed {
+    -fx-background-color: derive(ACCENT_COLOR, 40%);
+}
+
+.rating:disabled{
+    -fx-opacity: .6;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Text Common (TextField, PasswordField, TextArea)                            *
+ *                                                                             *
+ ******************************************************************************/
+
+.text-input{
+    -fx-background-radius: 0, 0;
+
+    -fx-background-color: border_color, background_color;
+    -fx-background-insets: 0, 2;
+
+    -fx-prompt-text-fill: prompt_text_color;
+
+    -fx-highlight-fill: highlight_color;
+    -fx-highlight-text-fill: highlighted_text_color;
+
+    -fx-font-size: 1.166667em; /* 14 */
+}
+
+.text-input:hover{
+    -fx-background-color: border_hover_color, background_hover_color;
+}
+
+.text-input:focused{
+    -fx-background-color: ACCENT_COLOR, background_focused_color;
+
+    -fx-text-fill: text_color;
+}
+
+.text-input:disabled
+{
+    -fx-opacity: 1;
+    -fx-background-insets: 0, 2;
+    -fx-background-color: border_disabled_color, background_disabled_color;
+    -fx-text-fill: text_disabled_color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Text Field (and PasswordField)                                              *
+ *                                                                             *
+ ******************************************************************************/
+
+.text-field{
+    -fx-skin: "impl.jfxtras.styles.jmetro8.TextFieldSkin";
+}
+
+.text-field > .right-button > .right-button-graphic {
+    -fx-shape: "M221.738,305.873l6.135,6.16l-2.875,2.863l-6.135-6.159l-6.263,6.237l-2.864-2.875l6.263-6.238l-6.177-6.202l2.875-2.863l6.177,6.201l6.244-6.22l2.864,2.876L221.738,305.873z";
+
+    -fx-padding: 0.416667em;
+    -fx-background-color: graphic_color;
+}
+
+.text-field > .right-button{
+    -fx-cursor: default;
+
+    -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
+    -fx-background-color: background_focused_color;  /* We must give it a color so that it reacts to the mouse */
+}
+
+.text-field > .right-button:hover > .right-button-graphic {
+    -fx-background-color: ACCENT_COLOR;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Password Field                                                              *
+ *                                                                             *
+ ******************************************************************************/
+
+.password-field {
+    -fx-skin: "impl.jfxtras.styles.jmetro8.PasswordFieldSkin";
+}
+
+.password-field > .right-button {
+    -fx-padding: 0 2px 0 2px;
+}
+
+.password-field > .right-button > .right-button-graphic {
+    -fx-shape            : "M307.688,399.564c0,1.484-1.203,2.688-2.688,2.688c-1.484,0-2.688-1.203-2.688-2.688s1.203-2.688,2.688-2.688C306.484,396.876,307.688,398.08,307.688,399.564z M297.5,399h2.5c0,0,1.063-4,5-4c3.688,0,5,4,5,4h2.5c0,0-2.063-6.5-7.5-6.5C299,392.5,297.5,399,297.5,399z";
+    -fx-scale-shape: false;
+    -fx-background-color: #111;
+}
+
+.password-field > .right-button:pressed {
+    -fx-background-color: ACCENT_COLOR;
+}
+
+.password-field > .right-button:pressed > .right-button-graphic {
+    -fx-background-color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Text Area                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.text-area .content {
+    -fx-background-color: border_color, background_color;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+.text-area:hover .content {
+    -fx-background-color: border_color, background_hover_color;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+.text-area:focused .content {
+    -fx-background-color: ACCENT_COLOR, background_focused_color;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+.text-area:disabled .content {
+    -fx-background-color: border_disabled_color, background_disabled_color;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+}
+
+/* TODO: below not working */
+.text-area:disabled .content .text {
+    -fx-fill: text_disabled_color;
+}
