@@ -251,74 +251,11 @@
  *                                                                             *
  ******************************************************************************/
 
-
 .slider {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.SliderSkin";
-}
+    track_hover_color: #999999;
+    thumb_hover_color: #f2f2f2;
 
-.slider {
-    TRACK_HOVER: #999999;
-    THUMB_HOVER: #f2f2f2;
-
-    THUMB_PRESSED: #767676;
-
-    -show-value-on-interaction: true;
-}
-
-.slider .thumb {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-background-insets: 0;
-    -fx-background-radius: 6px;
-
-    -fx-padding: 12px 4px 12px 4px;
-
-    -fx-effect: null;
-}
-
-.slider:vertical .thumb {
-    -fx-padding: 4px 12px  4px 12px;
-}
-
-.slider .track {
-    -fx-background-color: #c6c6c6;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-    -fx-padding: 0.083333em; /* 1 */
-
-}
-
-.slider .fill {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-padding: 0.083333em; /* 1 */
-}
-
-/* hover */
-.slider:hover .track{
-    -fx-background-color: TRACK_HOVER;
-}
-
-.slider:hover .thumb{
-    -fx-background-color: THUMB_HOVER;
-}
-
-/* pressed */
-.slider .thumb:pressed {
-    -fx-background-color: THUMB_PRESSED;
-}
-
-/* disabled */
-.slider:disabled {
-    -fx-opacity: 0.2;
-}
-
-/* Slider popup showing its value */
-.slider-popup .label {
-    -fx-background-color: #f2f2f2;
-    -fx-border-color: #cccccc;
-
-    -fx-text-fill: #111;
-
-    -fx-padding: 0.5em 0.75em 0.5em 0.75em;
+    thumb_pressed_color: #767676;
 }
 
 /*******************************************************************************
@@ -326,116 +263,30 @@
  * Toggle Switch (ControlsFX)                                                  *
  *                                                                             *
  ******************************************************************************/
-.toggle-switch {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.ToggleSwitchSkin";
-}
 
 .toggle-switch {
+    text_color: white;
+
     /* Unselected */
-    UNSELECTED: #111;
-    UNSELECTED_BORDER: #cccccc;
-    THUMB_UNSELECTED: #cccccc;
+    unselected_color: #111;
+    unselected_border_color: #cccccc;
+    thumb_unselected_color: #cccccc;
     /* --    hover */
-    UNSELECTED_HOVER: #111;
-    UNSELECTED_BORDER_HOVER: white;
-    THUMB_UNSELECTED_HOVER: white;
+    unselected_hover_color: #111;
+    unselected_border_hover_color: white;
+    thumb_unselected_hover_color: white;
 
     /* Selected */
-    SELECTED: ACCENT_COLOR;
-    SELECTED_BORDER: ACCENT_COLOR;
-    THUMB_SELECTED: white;
+    selected_color: ACCENT_COLOR;
+    selected_border_color: ACCENT_COLOR;
+    thumb_selected_color: white;
     /* --    hover */
-    SELECTED_HOVER: derive(ACCENT_COLOR, -20%);
+    selected_hover_color: derive(ACCENT_COLOR, -20%);
 
     /* Pressed */
-    PRESSED: #999999;
-    PRESSED_BORDER: PRESSED;
-    THUMB_PRESSED: white;
-
-
-    -thumb-move-animation-time: 100;
-    -toggle-display: left;
-}
-
-.toggle-switch .text {
-    -fx-fill: white;
-    -fx-font-size: 1em;
-    -fx-font-family: "Segoe UI";
-}
-
-.toggle-switch .thumb {
-    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-    -fx-padding: 5px;
-}
-
-.toggle-switch .thumb-area{
-    -fx-background-radius: 10px;
-
-    -fx-border-width: 2px;
-    -fx-border-radius: 10px;
-
-    -fx-pref-width: 44px;
-    -fx-pref-height: 20px;
-    -fx-padding: 5px 5px 5px 5px;
-}
-
-/* unselected */
-.toggle-switch .thumb-area{
-    -fx-background-insets: 0;
-    -fx-background-color: UNSELECTED;
-
-    -fx-border-color: UNSELECTED_BORDER;
-}
-
-.toggle-switch .thumb {
-    -fx-background-color: THUMB_UNSELECTED;
-}
-
-/* unselected - hover */
-.toggle-switch:hover .thumb-area {
-    -fx-background-color: UNSELECTED_HOVER;
-
-    -fx-border-color: UNSELECTED_BORDER_HOVER;
-}
-
-.toggle-switch:hover .thumb {
-    -fx-background-color: THUMB_UNSELECTED_HOVER;
-}
-
-/* selected */
-.toggle-switch:selected .thumb-area{
-    -fx-background-insets: 0;
-    -fx-background-color: SELECTED;
-
-    -fx-border-color: SELECTED_BORDER;
-}
-
-.toggle-switch:selected .thumb{
-    -fx-background-color: THUMB_SELECTED;
-}
-
-/* selected - hover */
-.toggle-switch:selected:hover .thumb-area {
-    -fx-background-color: SELECTED_HOVER;
-    -fx-border-color: SELECTED_HOVER;
-}
-
-/* pressed */
-.toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area{
-    -fx-background-insets: 0;
-
-    -fx-background-color: PRESSED;
-    -fx-border-color: PRESSED_BORDER;
-}
-
-.toggle-switch:pressed .thumb {
-    -fx-background-color: THUMB_PRESSED;
-}
-
-/* disabled */
-.toggle-switch:disabled
-{
-    -fx-opacity: 0.4;
+    pressed_color: #999999;
+    pressed_border_color: pressed_color;
+    thumb_pressed_color: white;
 }
 
 /*******************************************************************************
@@ -1239,4 +1090,3 @@
     -fx-border-color: #555555 transparent transparent transparent;
     -fx-border-insets: 0;
 }
-
