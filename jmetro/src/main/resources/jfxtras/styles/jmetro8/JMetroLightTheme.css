@@ -239,72 +239,10 @@
  ******************************************************************************/
 
 .slider {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.SliderSkin";
-}
+    track_hover_color: #666666;
+    thumb_hover_color: #171717;
 
-.slider {
-    TRACK_HOVER: #666666;
-    THUMB_HOVER: #171717;
-
-    THUMB_PRESSED: #cccccc;
-
-    -show-value-on-interaction: true;
-}
-
-.slider .thumb {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-background-insets: 0;
-    -fx-background-radius: 6px;
-
-    -fx-padding: 12px 4px 12px 4px;
-
-    -fx-effect: null;
-}
-
-.slider:vertical .thumb {
-    -fx-padding: 4px 12px  4px 12px;
-}
-
-.slider .track {
-    -fx-background-color: #c6c6c6;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-    -fx-padding: 0.083333em; /* 1 */
-
-}
-
-.slider .fill {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-padding: 0.083333em; /* 1 */
-}
-
-/* hover */
-.slider:hover .track{
-    -fx-background-color: TRACK_HOVER;
-}
-
-.slider:hover .thumb{
-    -fx-background-color: THUMB_HOVER;
-}
-
-/* pressed */
-.slider .thumb:pressed {
-    -fx-background-color: THUMB_PRESSED;
-}
-
-/* disabled */
-.slider:disabled {
-    -fx-opacity: 0.2;
-}
-
-/* Slider popup showing its value */
-.slider-popup .label {
-    -fx-background-color: #f2f2f2;
-    -fx-border-color: #cccccc;
-
-    -fx-text-fill: #111;
-
-    -fx-padding: 0.5em 0.75em 0.5em 0.75em;
+    thumb_pressed_color: #cccccc;
 }
 
 /*******************************************************************************
@@ -312,169 +250,30 @@
  * Toggle Switch (ControlsFX)                                                  *
  *                                                                             *
  ******************************************************************************/
-.toggle-switch {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.ToggleSwitchSkin";
-}
 
 .toggle-switch {
+    text_color: #111;
+
     /* Unselected */
-    UNSELECTED: white;
-    UNSELECTED_BORDER: #111;
-    THUMB_UNSELECTED: #111;
+    unselected_color: white;
+    unselected_border_color: #111;
+    thumb_unselected_color: #111;
     /* --    hover */
-    UNSELECTED_HOVER: UNSELECTED;
-    UNSELECTED_BORDER_HOVER: #111;
-    THUMB_UNSELECTED_HOVER: THUMB_UNSELECTED;
+    unselected_hover_color: unselected_color;
+    unselected_border_hover_color: #111;
+    thumb_unselected_hover_color: thumb_unselected_color;
 
     /* Selected */
-    SELECTED: ACCENT_COLOR;
-    SELECTED_BORDER: ACCENT_COLOR;
-    THUMB_SELECTED: white;
+    selected_color: ACCENT_COLOR;
+    selected_border_color: ACCENT_COLOR;
+    thumb_selected_color: white;
     /* --    hover */
-    SELECTED_HOVER: derive(ACCENT_COLOR, 40%);
+    selected_hover_color: derive(ACCENT_COLOR, 40%);
 
     /* Pressed */
-    PRESSED: #666666;
-    PRESSED_BORDER: PRESSED;
-    THUMB_PRESSED: white;
-
-
-    -thumb-move-animation-time: 100;
-    -toggle-display: left;
-}
-
-.toggle-switch .text {
-    -fx-fill: #111;
-    -fx-font-size: 1em;
-    -fx-font-family: "Segoe UI";
-}
-
-.toggle-switch .thumb {
-    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-    -fx-padding: 5px;
-}
-
-.toggle-switch .thumb-area{
-    -fx-background-radius: 10px;
-
-    -fx-border-width: 2px;
-    -fx-border-radius: 10px;
-
-    -fx-pref-width: 44px;
-    -fx-pref-height: 20px;
-    -fx-padding: 5px 5px 5px 5px;
-}
-
-/* unselected */
-.toggle-switch .thumb-area{
-    -fx-background-insets: 0;
-    -fx-background-color: UNSELECTED;
-
-    -fx-border-color: UNSELECTED_BORDER;
-}
-
-.toggle-switch .thumb {
-    -fx-background-color: THUMB_UNSELECTED;
-}
-
-/* unselected - hover */
-.toggle-switch:hover .thumb-area {
-    -fx-background-color: UNSELECTED_HOVER;
-
-    -fx-border-color: UNSELECTED_BORDER_HOVER;
-}
-
-.toggle-switch:hover .thumb {
-    -fx-background-color: THUMB_UNSELECTED_HOVER;
-}
-
-/* selected */
-.toggle-switch:selected .thumb-area{
-    -fx-background-insets: 0;
-    -fx-background-color: SELECTED;
-
-    -fx-border-color: SELECTED_BORDER;
-}
-
-.toggle-switch:selected .thumb{
-    -fx-background-color: THUMB_SELECTED;
-}
-
-/* selected - hover */
-.toggle-switch:selected:hover .thumb-area {
-    -fx-background-color: SELECTED_HOVER;
-    -fx-border-color: SELECTED_HOVER;
-}
-
-/* pressed */
-.toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area{
-    -fx-background-insets: 0;
-
-    -fx-background-color: PRESSED;
-    -fx-border-color: PRESSED_BORDER;
-}
-
-.toggle-switch:pressed .thumb {
-    -fx-background-color: THUMB_PRESSED;
-}
-
-/* disabled */
-.toggle-switch:disabled
-{
-    -fx-opacity: 0.4;
-}
-
-/*******************************************************************************
- *                                                                             *
- * List Spinner (Jfxtras)                                                      *
- *                                                                             *
- ******************************************************************************/
-
-.ListSpinner {
-    -fx-skin: "impl.jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
-    -fx-background-color: #f0f0f0;
-    -fx-background-insets: 0 0 0 0;
-    -fx-background-radius: 0;
-    -fx-padding: 0.266667em 0.233333em 0.25em 0.233333em;
-    -fx-text-fill: #212121;
-}
-
-.ListSpinner:hover {
-    -fx-color: #f0f0f0;
-}
-
-.ListSpinner:focused {
-    -fx-color: -fx-focused-base;
-    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
-    -fx-background-insets: -1.4, 0, 1, 2;
-    -fx-background-radius: 6.4, 5, 4, 3;
-}
-
-.ListSpinner .valuePane {
-    -fx-padding: 0.0em 0.2em 0.0em 0.2em;
-}
-
-.ListSpinner .left-arrow {
-    -fx-shape: "M4,-4 L0,0 L4,4 Z";
-    -fx-scale-shape: false;
-}
-.ListSpinner .right-arrow {
-    -fx-shape: "M0,-4 L4,0 L0,4 Z";
-    -fx-scale-shape: false;
-}
-.ListSpinner .down-arrow {
-    -fx-shape: "M-4,-2 L0,2 L4,-2 Z";
-    -fx-scale-shape: false;
-}
-.ListSpinner .up-arrow {
-    -fx-shape: "M4,2 L-4,2 L0,-2 Z";
-    -fx-scale-shape: false;
-}
-.ListSpinner .idle {
-    -fx-background-color: -fx-mark-color;
-}
-.ListSpinner .clicked {
-    -fx-background-color: -fx-focus-color;
+    pressed_color: #666666;
+    pressed_border_color: pressed_color;
+    thumb_pressed_color: white;
 }
 
 /*******************************************************************************
@@ -484,45 +283,69 @@
  ******************************************************************************/
 
 .spinner {
-    -fx-background-color: #f0f0f0;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
+    text_color: #111;
+
+    spinner_background_color: #f0f0f0;
+
+    arrow_button_hover_color: #dadada;
+    arrow_button_pressed_color: #606060;
+
+    arrow_color: -fx-mark-color;
 }
 
 .spinner > .text-field{
     -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
 }
 
-.spinner > .text-field {
-    -fx-background-color: #f0f0f0;
+.spinner {
+    -fx-background-color: spinner_background_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
-.spinner .increment-arrow-button, .spinner .decrement-arrow-button  {
-    -fx-background-color: #f0f0f0;
+.spinner > .text-field {
+    -fx-background-color: spinner_background_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/* TODO: Below doesn't work when spinner is in SPLIT_ARROWS_HORIZONTAL and is not focused
+   however it works if you are running with Scenic View attached. Should be a bug in JavaFX 8.
+ */
+.spinner:focused > .text-field,
+.spinner:contains-focus > .text-field,
+.spinner > .text-field {
+    -fx-text-fill: text_color;
+    -fx-prompt-text-fill: text_color;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button  {
+    -fx-background-color: spinner_background_color;
     /*Change the two 0's here to -1 to get rid of the horizontal line */
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
-.spinner .increment-arrow-button .increment-arrow, .spinner .decrement-arrow-button .decrement-arrow {
-    -fx-background-color: -fx-mark-color;
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: arrow_color;
 }
 
-
-.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover {
-    -fx-background-color: #dadada;
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: arrow_button_hover_color;
 }
 
-.spinner .increment-arrow-button:pressed, .spinner .decrement-arrow-button:pressed {
-    -fx-background-color: #606060;
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    -fx-background-color: arrow_button_pressed_color;
 }
 
-.spinner.split-arrows-horizontal .increment-arrow-button:pressed .increment-arrow, .spinner.split-arrows-horizontal .decrement-arrow-button:pressed .decrement-arrow{
+.spinner .increment-arrow-button:pressed .increment-arrow,
+.spinner .decrement-arrow-button:pressed .decrement-arrow{
     -fx-background-color: white;
 }
-
 
 /*******************************************************************************
  *                                                                             *
@@ -1266,6 +1089,3 @@
     -fx-border-color: #c3c3c3 transparent transparent transparent;
     -fx-border-insets: 0;
 }
-
-
-
