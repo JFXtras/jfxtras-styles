@@ -316,204 +316,33 @@
  ******************************************************************************/
 
 .date-picker {
-    GRAPHIC: #111;
+    graphic_color: #111;
 
-    TEXT_COLOR: white;
+    text_color: white;
 
-    TEXT_COLOR_SELECTED: white;
-    TEXT_COLOR_HOVER: white;
+    text_selected_color: white;
+    text_hover_color: white;
 
-    TEXT_COLOR_DAYS_FROM_OTHER_MONTHS: #7c7c7c;
+    text_days_from_other_months_color: #7c7c7c;
 
-    BACKGROUND: white;
-    BACKGROUND_HOVER: white;
+    background_color: white;
+    background_hover_color: white;
 
-    BORDER: #d2d2d2;
-    BORDER_HOVER: white;
+    border_color: #d2d2d2;
+    border_hover_color: white;
 
-    SPINNER_BUTTON_HOVER: #999;
+    popup_border_color: #111;
 
-    CELL_BACKGROUND: #111;
+    spinner_button_hover_color: #999;
 
-    DAY_CELL_BACKGROUND: #1f1f1f;
-    DAY_CELL_BORDER_HOVER: #999;
+    cell_background_color: #111;
 
-    DAY_CELL_BACKGROUND_DAYS_FROM_OTHER_MONTHS: #2b2b2b;
+    day_cell_background_color: #1f1f1f;
+    day_cell_border_hover_color: #999;
 
-    TODAY_BORDER_COLOR: derive(ACCENT_COLOR, -60%);
-}
+    day_cell_background_days_from_other_months_color: #2b2b2b;
 
-.date-picker.combo-box-base {
-    -fx-background-color: BORDER, BACKGROUND;
-    -fx-background-insets: 0, 2;
-}
-
-.date-picker.combo-box-base:hover {
-    -fx-background-color: BORDER_HOVER, BACKGROUND_HOVER;
-    -fx-background-insets: 0, 2;
-    -fx-background-radius: 0;
-}
-
-.date-picker.combo-box-base:pressed {
-    -fx-background-color: #666666, BACKGROUND;
-    -fx-background-insets: 0, 2;
-}
-
-.date-picker.combo-box-base:focused, .date-picker.combo-box-base:focused:hover {
-    -fx-background-color: ACCENT_COLOR, BACKGROUND_HOVER;
-    -fx-background-insets: 0, 2;
-}
-
-/* "Textfield"  - most properties will be inherited by what was defined for the textfield */
-
-.date-picker > .text-field{
-    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
-}
-
-.date-picker > .text-input{
-    -fx-background-radius: 0;
-
-    -fx-background-color: transparent;
-    -fx-background-insets: 0;
-}
-
-/* Icon */
-
-.date-picker > .arrow-button > .arrow {
-    -fx-shape: "M24,8.136v14H8v-14h3v-1h1v1h8v-1h1v1H24z M9,9.136v2h14v-2h-2v1h-1v-1h-8v1h-1v-1H9z M23,21.137v-9H9v9H23zM11,15.136h1v1h-1V15.136z M11,17.137h1v1h-1V17.137z M11,19.137h1v1h-1V19.137z M14,13.136h1v1h-1V13.136z M14,15.136h1v1h-1V15.136z M14,17.137h1v1h-1V17.137z M14,19.137h1v1h-1V19.137z M17,13.136h1v1h-1V13.136z M17,15.136h1v1h-1V15.136z M17,17.137h1v1h-1V17.137z M17,19.137h1v1h-1V19.137z M20,13.136h1v1h-1V13.136z M20,15.136h1v1h-1V15.136z M20,17.137h1v1h-1V17.137z";
-    -fx-background-color: GRAPHIC;
-    -fx-background-insets: 0;
-    -fx-padding: 0.833334em 0.833334em 0.666666em 0.666666em; /* 10 10 8 8 */
-    -fx-scale-shape: true;
-}
-
-.date-picker > .arrow-button:hover > .arrow {
-    -fx-background-color: ACCENT_COLOR;
-}
-
-.date-picker > .arrow-button:pressed {
-    -fx-background-color: ACCENT_COLOR;
-}
-
-.date-picker > .arrow-button:pressed > .arrow {
-    -fx-background-color: white;
-}
-
-/* Date Picker popup */
-.date-picker-popup {
-    /*-fx-border-color: #e6e6e6;*/
-    /*-fx-border-width: 2px;*/
-
-    -fx-effect: null;
-}
-
-.date-picker-popup {
-    -fx-background-color: CELL_BACKGROUND;
-    -fx-background-insets: 0;
-}
-
-.date-picker-popup > .month-year-pane {
-    -fx-background-color: CELL_BACKGROUND;
-    -fx-background-insets: 0;
-
-    -fx-font-family: "Segoe UI Semilight";
-    -fx-font-size: 1.083333em;
-}
-
-.date-picker-popup > * > .spinner > .button {
-    -fx-padding: 0.25em 0.583333em 0.25em 0.583333em; /* 3 7 3 7 */
-}
-
-.date-picker-popup > * > .spinner > .button {
-    -fx-background-color: CELL_BACKGROUND;
-    -fx-background-insets: 0;
-}
-
-.date-picker-popup > * > .spinner {
-    -fx-background-color: CELL_BACKGROUND;
-    -fx-background-insets: 0;
-}
-
-.date-picker-popup > * > .spinner > .spinner-label {
-    -fx-text-fill: TEXT_COLOR;
-}
-
-.date-picker-popup > * > .spinner > .button:hover {
-    -fx-background-color: SPINNER_BUTTON_HOVER;
-}
-
-.date-picker-popup > * > .spinner > .button:armed {
-    -fx-background-color: #606060;
-}
-
-.date-picker-popup > * > .spinner > .button > .left-arrow,
-.date-picker-popup > * > .spinner > .button > .right-arrow {
-    -fx-background-color: TEXT_COLOR;
-    -fx-background-insets: 0;
-    -fx-effect: null;
-}
-
-.date-picker-popup > * > .spinner > .button:pressed > .left-arrow,
-.date-picker-popup > * > .spinner > .button:pressed > .right-arrow {
-    -fx-background-color: CELL_BACKGROUND;
-    -fx-background-insets: 0;
-}
-
-.date-picker-popup > .calendar-grid {
-    -fx-background-color: CELL_BACKGROUND;
-    -fx-padding: 0;
-}
-
-.date-picker-popup > * > .day-cell.previous-month,
-.date-picker-popup > * > .day-cell.next-month {
-    -fx-background-color: DAY_CELL_BACKGROUND_DAYS_FROM_OTHER_MONTHS;
-    -fx-border-color: DAY_CELL_BACKGROUND;
-    -fx-text-fill: TEXT_COLOR_DAYS_FROM_OTHER_MONTHS;
-}
-
-.date-picker-popup > * > .day-cell.previous-month:hover,
-.date-picker-popup > * > .day-cell.next-month:hover {
-    -fx-background-color: DAY_CELL_BORDER_HOVER, DAY_CELL_BORDER_HOVER, DAY_CELL_BACKGROUND_DAYS_FROM_OTHER_MONTHS;
-}
-
-.date-picker-popup > * > .day-name-cell,
-.date-picker-popup > * > .week-number-cell {
-    -fx-font-size: 0.75em;
-    -fx-font-family: "Segoe UI Light";
-    -fx-text-fill: TEXT_COLOR;
-}
-
-.date-picker-popup > * > .day-name-cell {
-    -fx-font-size: 0.833333em; /* 10 */
-    -fx-padding: 0 0 0.75em 0;
-}
-
-/* Day Cells */
-.date-picker-popup > * > .day-cell {
-    -fx-background-color: DAY_CELL_BACKGROUND;
-    -fx-border-color: DAY_CELL_BACKGROUND;
-
-    -fx-text-fill: TEXT_COLOR;
-
-    -fx-padding: 0.5em 0.5em 0.5em 0.5em; /* 6 6 6 6 */
-}
-
-.date-picker-popup > * > .day-cell:hover {
-    -fx-background-color: DAY_CELL_BORDER_HOVER, DAY_CELL_BORDER_HOVER, DAY_CELL_BACKGROUND;
-    -fx-text-fill: TEXT_COLOR_HOVER;
-}
-
-.date-picker-popup > * > .day-cell.selected {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-text-fill: TEXT_COLOR_SELECTED;
-}
-
-.date-picker-popup > * > .day-cell.selected:hover {
-    -fx-background-color: derive(ACCENT_COLOR, 70%);
-}
-
-.date-picker-popup > * > .today {
-    -fx-background-color: TODAY_BORDER_COLOR, TODAY_BORDER_COLOR, DAY_CELL_BACKGROUND;
+    today_border_color: derive(ACCENT_COLOR, -60%);
 }
 
 /*******************************************************************************

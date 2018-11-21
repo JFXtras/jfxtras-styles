@@ -1054,3 +1054,182 @@
 .spinner .decrement-arrow-button:pressed .decrement-arrow{
     -fx-background-color: arrow_pressed_color;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Date Picker                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.date-picker.combo-box-base {
+    -fx-background-color: border_color, background_color;
+    -fx-background-insets: 0, 2;
+}
+
+.date-picker.combo-box-base:hover {
+    -fx-background-color: border_hover_color, background_hover_color;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 0;
+}
+
+.date-picker.combo-box-base:pressed {
+    -fx-background-color: #666666, background_color;
+    -fx-background-insets: 0, 2;
+}
+
+.date-picker.combo-box-base:focused, .date-picker.combo-box-base:focused:hover {
+    -fx-background-color: ACCENT_COLOR, background_hover_color;
+    -fx-background-insets: 0, 2;
+}
+
+/* "Textfield"  - most properties will be inherited by what was defined for the textfield */
+
+.date-picker > .text-field{
+    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
+}
+
+.date-picker > .text-input{
+    -fx-background-radius: 0;
+
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* Icon */
+
+.date-picker > .arrow-button > .arrow {
+    -fx-shape: "M24,8.136v14H8v-14h3v-1h1v1h8v-1h1v1H24z M9,9.136v2h14v-2h-2v1h-1v-1h-8v1h-1v-1H9z M23,21.137v-9H9v9H23zM11,15.136h1v1h-1V15.136z M11,17.137h1v1h-1V17.137z M11,19.137h1v1h-1V19.137z M14,13.136h1v1h-1V13.136z M14,15.136h1v1h-1V15.136z M14,17.137h1v1h-1V17.137z M14,19.137h1v1h-1V19.137z M17,13.136h1v1h-1V13.136z M17,15.136h1v1h-1V15.136z M17,17.137h1v1h-1V17.137z M17,19.137h1v1h-1V19.137z M20,13.136h1v1h-1V13.136z M20,15.136h1v1h-1V15.136z M20,17.137h1v1h-1V17.137z";
+    -fx-background-color: graphic_color;
+    -fx-background-insets: 0;
+    -fx-padding: 0.833334em 0.833334em 0.666666em 0.666666em; /* 10 10 8 8 */
+    -fx-scale-shape: true;
+}
+
+.date-picker > .arrow-button:hover > .arrow {
+    -fx-background-color: ACCENT_COLOR;
+}
+
+.date-picker > .arrow-button:pressed {
+    -fx-background-color: ACCENT_COLOR;
+}
+
+.date-picker > .arrow-button:pressed > .arrow {
+    -fx-background-color: white;
+}
+
+/* Date Picker popup */
+.date-picker-popup {
+    -fx-border-color: popup_border_color;
+    -fx-border-width: 2px;
+
+    -fx-effect: null;
+}
+
+.date-picker-popup {
+    -fx-background-color: cell_background_color;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: cell_background_color;
+    -fx-background-insets: 0;
+
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 1.083333em;
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-padding: 0.25em 0.583333em 0.25em 0.583333em; /* 3 7 3 7 */
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: cell_background_color;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-background-color: cell_background_color;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > * > .spinner > .spinner-label {
+    -fx-text-fill: text_color;
+}
+
+.date-picker-popup > * > .spinner > .button:hover {
+    -fx-background-color: spinner_button_hover_color;
+}
+
+.date-picker-popup > * > .spinner > .button:armed {
+    -fx-background-color: #606060;
+}
+
+.date-picker-popup > * > .spinner > .button > .left-arrow,
+.date-picker-popup > * > .spinner > .button > .right-arrow {
+    -fx-background-color: text_color;
+    -fx-background-insets: 0;
+    -fx-effect: null;
+}
+
+.date-picker-popup > * > .spinner > .button:pressed > .left-arrow,
+.date-picker-popup > * > .spinner > .button:pressed > .right-arrow {
+    -fx-background-color: cell_background_color;
+    -fx-background-insets: 0;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-background-color: cell_background_color;
+    -fx-padding: 0;
+}
+
+.date-picker-popup > * > .day-cell.previous-month,
+.date-picker-popup > * > .day-cell.next-month {
+    -fx-background-color: day_cell_background_days_from_other_months_color;
+    -fx-border-color: day_cell_background_color;
+    -fx-text-fill: text_days_from_other_months_color;
+}
+
+.date-picker-popup > * > .day-cell.previous-month:hover,
+.date-picker-popup > * > .day-cell.next-month:hover {
+    -fx-background-color: day_cell_border_hover_color, day_cell_border_hover_color, day_cell_background_days_from_other_months_color;
+}
+
+.date-picker-popup > * > .day-name-cell,
+.date-picker-popup > * > .week-number-cell {
+    -fx-font-size: 0.75em;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: text_color;
+}
+
+.date-picker-popup > * > .day-name-cell {
+    -fx-font-size: 0.833333em; /* 10 */
+    -fx-padding: 0 0 0.75em 0;
+}
+
+/* Day Cells */
+.date-picker-popup > * > .day-cell {
+    -fx-background-color: day_cell_background_color;
+    -fx-border-color: day_cell_background_color;
+
+    -fx-text-fill: text_color;
+
+    -fx-padding: 0.5em 0.5em 0.5em 0.5em; /* 6 6 6 6 */
+}
+
+.date-picker-popup > * > .day-cell:hover {
+    -fx-background-color: day_cell_border_hover_color, day_cell_border_hover_color, day_cell_background_color;
+    -fx-text-fill: text_hover_color;
+}
+
+.date-picker-popup > * > .day-cell.selected {
+    -fx-background-color: ACCENT_COLOR;
+    -fx-text-fill: text_selected_color;
+}
+
+.date-picker-popup > * > .day-cell.selected:hover {
+    -fx-background-color: derive(ACCENT_COLOR, 70%);
+}
+
+.date-picker-popup > * > .today {
+    -fx-background-color: today_border_color, today_border_color, day_cell_background_color;
+}
