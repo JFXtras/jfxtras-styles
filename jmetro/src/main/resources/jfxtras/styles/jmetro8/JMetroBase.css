@@ -63,7 +63,7 @@
 
     -fx-font-family: "Segoe UI Semilight";
     -fx-font-size: 1.333333em; /* 16 */
-    -fx-text-fill: TEXT;
+    -fx-text-fill: text_color;
 }
 
 .button:hover, .toggle-button:hover{
@@ -90,7 +90,7 @@
 {
     -fx-opacity: 0.4;
     -fx-background-color: BACKGROUND;
-    -fx-text-fill: TEXT;
+    -fx-text-fill: text_color;
 }
 
 /****************************** Button ****************************************/
@@ -139,7 +139,7 @@
  ******************************************************************************/
 
 .check-box {
-    -fx-text-fill: text;
+    -fx-text-fill: text_color;
 }
 
 .check-box > .box > .mark {
@@ -279,7 +279,7 @@
  ******************************************************************************/
 
 .radio-button {
-    -fx-text-fill: text;
+    -fx-text-fill: text_color;
 }
 
 .radio-button > .radio  {
@@ -523,25 +523,6 @@
  *                                                                             *
  ******************************************************************************/
 
-.combo-box-base {
-    border: #999999;
-    border_hover: #666666;
-    border_focused: #5c5c5c;
-    border_pressed: border;
-
-    background: white;
-    background_pressed: #cccccc;
-
-    arrow: #111;
-
-    text: #111;
-
-    list_cell: #f2f2f2;
-    list_cell_hover: #dedede;
-
-    list_cell_border: #cccccc;
-}
-
 .combo-box-base  {
     -fx-background-color: transparent, border, transparent, background;
     -fx-background-radius: 0, 0, 0, 0;
@@ -552,7 +533,7 @@
 }
 
 .combo-box-base > .list-cell {
-    -fx-text-fill: text;
+    -fx-text-fill: text_color;
 }
 
 .combo-box-base:hover {
@@ -608,7 +589,7 @@
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover{
     -fx-background-color: list_cell_hover;
-    -fx-text-fill: text;
+    -fx-text-fill: text_color;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected{

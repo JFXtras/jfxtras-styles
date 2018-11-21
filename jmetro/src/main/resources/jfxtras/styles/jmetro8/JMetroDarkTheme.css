@@ -52,7 +52,7 @@
 
     BORDER_HOVER: #858585;
 
-    TEXT: white;
+    text_color: white;
     DEFAULT_BUTTON_TEXT: white;
 
     FOCUS_RING_BORDER: white;
@@ -72,7 +72,7 @@
  *                                                                             *
  ******************************************************************************/
 .check-box {
-    text: white;
+    text_color: white;
 
     box_background: #111;
     box_border: #cccccc;
@@ -101,7 +101,7 @@
  ******************************************************************************/
 
 .radio-button {
-    text: white;
+    text_color: white;
 
     background: #111;
     background_pressed: #111;
@@ -160,7 +160,7 @@
 
     arrow: white;
 
-    text: white;
+    text_color: white;
 
     list_cell: #2b2b2b;
     list_cell_hover: #545454;
