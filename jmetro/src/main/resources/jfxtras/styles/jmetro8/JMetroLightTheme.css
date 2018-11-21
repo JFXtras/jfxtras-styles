@@ -283,68 +283,17 @@
  ******************************************************************************/
 
 .spinner {
-    text_color: #111;
-
     spinner_background_color: #f0f0f0;
 
     arrow_button_hover_color: #dadada;
     arrow_button_pressed_color: #606060;
 
     arrow_color: -fx-mark-color;
-}
-
-.spinner > .text-field{
-    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
-}
-
-.spinner {
-    -fx-background-color: spinner_background_color;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
+    arrow_pressed_color: white;
 }
 
 .spinner > .text-field {
-    -fx-background-color: spinner_background_color;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
-
-/* TODO: Below doesn't work when spinner is in SPLIT_ARROWS_HORIZONTAL and is not focused
-   however it works if you are running with Scenic View attached. Should be a bug in JavaFX 8.
- */
-.spinner:focused > .text-field,
-.spinner:contains-focus > .text-field,
-.spinner > .text-field {
-    -fx-text-fill: text_color;
-    -fx-prompt-text-fill: text_color;
-}
-
-.spinner .increment-arrow-button,
-.spinner .decrement-arrow-button  {
-    -fx-background-color: spinner_background_color;
-    /*Change the two 0's here to -1 to get rid of the horizontal line */
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
-
-.spinner .increment-arrow-button .increment-arrow,
-.spinner .decrement-arrow-button .decrement-arrow {
-    -fx-background-color: arrow_color;
-}
-
-.spinner .increment-arrow-button:hover,
-.spinner .decrement-arrow-button:hover {
-    -fx-background-color: arrow_button_hover_color;
-}
-
-.spinner .increment-arrow-button:pressed,
-.spinner .decrement-arrow-button:pressed {
-    -fx-background-color: arrow_button_pressed_color;
-}
-
-.spinner .increment-arrow-button:pressed .increment-arrow,
-.spinner .decrement-arrow-button:pressed .decrement-arrow{
-    -fx-background-color: white;
+    text_color: #111;
 }
 
 /*******************************************************************************
