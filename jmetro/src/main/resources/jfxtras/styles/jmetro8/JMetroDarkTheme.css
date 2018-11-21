@@ -295,18 +295,29 @@
  *                                                                             *
  ******************************************************************************/
 
+.spinner {
+    text_color: white;
+
+    spinner_background_color: #4a4a4a;
+
+    arrow_button_hover_color: #3c4145;
+    arrow_button_pressed_color: #a8abac;
+
+    arrow_color: #999;
+}
+
 .spinner > .text-field{
     -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin";
 }
 
 .spinner {
-    -fx-background-color: #4a4a4a, #4a4a4a;
-    -fx-background-insets: 0, 2;
+    -fx-background-color: spinner_background_color;
+    -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
 .spinner > .text-field {
-    -fx-background-color: #4a4a4a;
+    -fx-background-color: spinner_background_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
@@ -317,30 +328,35 @@
 .spinner:focused > .text-field,
 .spinner:contains-focus > .text-field,
 .spinner > .text-field {
-    -fx-text-fill: white;
-    -fx-prompt-text-fill: white;
+    -fx-text-fill: text_color;
+    -fx-prompt-text-fill: text_color;
 }
 
-.spinner .increment-arrow-button, .spinner .decrement-arrow-button  {
-    -fx-background-color: #4a4a4a;
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button  {
+    -fx-background-color: spinner_background_color;
     /*Change the two 0's here to -1 to get rid of the horizontal line */
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
-.spinner .increment-arrow-button .increment-arrow, .spinner .decrement-arrow-button .decrement-arrow {
-    -fx-background-color: #999;
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow {
+    -fx-background-color: arrow_color;
 }
 
-.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover {
-    -fx-background-color: #3c4145;
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: arrow_button_hover_color;
 }
 
-.spinner .increment-arrow-button:pressed, .spinner .decrement-arrow-button:pressed {
-    -fx-background-color: #a8abac;
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    -fx-background-color: arrow_button_pressed_color;
 }
 
-.spinner .increment-arrow-button:pressed .increment-arrow, .spinner .decrement-arrow-button:pressed .decrement-arrow{
+.spinner .increment-arrow-button:pressed .increment-arrow,
+.spinner .decrement-arrow-button:pressed .decrement-arrow{
     -fx-background-color: #5e6060;
 }
 

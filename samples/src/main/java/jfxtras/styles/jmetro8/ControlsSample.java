@@ -60,7 +60,7 @@ public class ControlsSample extends Application {
     static final private String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
 
     static final private String RESOURCE = SPINNER_RESOURCE;
-    static final private JMetro.Style STYLE = JMetro.Style.DARK;
+    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
