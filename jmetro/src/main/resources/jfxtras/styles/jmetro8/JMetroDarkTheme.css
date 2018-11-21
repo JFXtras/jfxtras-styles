@@ -340,7 +340,7 @@
 
     DAY_CELL_BACKGROUND_DAYS_FROM_OTHER_MONTHS: #2b2b2b;
 
-    TODAY_BORDER_COLOR: derive(ACCENT_COLOR, -60%)
+    TODAY_BORDER_COLOR: derive(ACCENT_COLOR, -60%);
 }
 
 .date-picker.combo-box-base {
