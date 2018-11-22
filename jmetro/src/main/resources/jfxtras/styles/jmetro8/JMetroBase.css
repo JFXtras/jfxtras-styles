@@ -1233,3 +1233,49 @@
 .date-picker-popup > * > .today {
     -fx-background-color: today_border_color, today_border_color, day_cell_background_color;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Choice Box                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.choice-box  {
+    -fx-background-color: transparent, border_color, transparent, background_color;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1.333333em; /* 16 */
+}
+
+.choice-box > .label {
+    -fx-text-fill: text_color;
+}
+
+.choice-box:hover {
+    -fx-background-color: transparent, border_hover_color, transparent, background_color;
+}
+
+.choice-box:focused {
+    -fx-background-color: transparent, border_focused_color, transparent, background_color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.choice-box:focused:hover {
+    -fx-background-color: transparent, border_hover_color, transparent, background_color;
+}
+
+.choice-box:disabled {
+    -fx-opacity: .4;
+}
+
+/* ARROW */
+.choice-box > .open-button > .arrow {
+    -fx-padding: 3.5px 6px 3.5px 6px;
+    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
+    -fx-background-insets: 0 0 0 0, 0;
+    -fx-background-color: arrow_color;
+}

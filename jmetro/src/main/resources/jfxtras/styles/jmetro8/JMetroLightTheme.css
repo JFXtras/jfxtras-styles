@@ -334,50 +334,22 @@
 
 /*******************************************************************************
  *                                                                             *
- * Choice Box                                                                   *
+ * Choice Box                                                                  *
  *                                                                             *
  ******************************************************************************/
 
 .choice-box {
-    BORDER_COLOR: #999999;
-    BORDER_COLOR_HOVER: #666666;
-    BORDER_COLOR_FOCUSED: #5c5c5c;
-    BORDER_COLOR_PRESSED: BORDER_COLOR;
+    text_color: #111;
 
-    BACKGROUND_PRESSED: #cccccc;
-}
+    border_color: #999999;
+    border_hover_color: #666666;
+    border_focused_color: #7a7a7a;
+    border_pressed_color: border_color;
 
-.choice-box  {
-    -fx-background-color: transparent, BORDER_COLOR, transparent, white;
-    -fx-background-radius: 0, 0, 0, 0;
-    -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
+    background_color: white;
+    background_pressed_color: #cccccc;
 
-    -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.333333em; /* 16 */
-}
-
-.choice-box:hover {
-    -fx-background-color: transparent, BORDER_COLOR_HOVER, transparent, white;
-}
-
-.choice-box:focused {
-    -fx-background-color: transparent, #7a7a7a, transparent, #cccccc;
-}
-
-.choice-box:focused:hover {
-    -fx-background-color: transparent, #909090, transparent, white;
-}
-
-.choice-box:disabled {
-    -fx-opacity: .4;
-}
-
-/* ARROW */
-.choice-box > .open-button > .arrow {
-    -fx-padding: 3.5px 6px 3.5px 6px;
-    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
-    -fx-background-insets: 0 0 0 0, 0;
-    -fx-background-color: black;
+    arrow_color: #111;
 }
 
 /*******************************************************************************
