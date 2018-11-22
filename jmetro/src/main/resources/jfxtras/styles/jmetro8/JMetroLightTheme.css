@@ -359,61 +359,17 @@
  ******************************************************************************/
 
 .list-view {
-    TEXT_COLOR: #111;
-    BORDER_COLOR: #111;
-}
+    text_color: #111;
 
-.list-view {
-    -fx-background-color: white;
-    -fx-background-insets: 0;
-    -fx-padding: 0;
+    background_color: white;
+    border_color: #111;
 
-    -fx-border-color: BORDER_COLOR;
-    -fx-border-width: 1px;
+    cell_hover_color: #dadada;
+    cell_pressed_color: #c2c2c2;
 
-    -fx-font-size: 1.166667em; /* 14 */
-}
-
-.list-view:focused {
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
-
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-padding: 1.25em 1em 1.25em 1em;
-    -fx-font-family: "Segoe UI";
-    -fx-text-fill: TEXT_COLOR;
-}
-
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: transparent;
-}
-
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: transparent;
-}
-
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:hover {
-    -fx-background-color: #dadada;
-}
-
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed {
-    -fx-background-color: #c2c2c2;
-}
-
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
-    -fx-background-color: derive(ACCENT_COLOR, 90%);
-    -fx-background-insets: 0;
-
-    -fx-text-fill: TEXT_COLOR;
-}
-
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover {
-    -fx-background-color: derive(ACCENT_COLOR, 70%);
-}
-
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover:pressed {
-    -fx-background-color: derive(ACCENT_COLOR, 60%);
+    cell_selected_color: derive(ACCENT_COLOR, 90%);
+    cell_selected_hover_color: derive(ACCENT_COLOR, 70%);
+    cell_selected_pressed_color: derive(ACCENT_COLOR, 60%);
 }
 
 /*******************************************************************************

@@ -1279,3 +1279,63 @@
     -fx-background-insets: 0 0 0 0, 0;
     -fx-background-color: arrow_color;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * List View                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.list-view {
+    -fx-background-color: background_color;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+
+    -fx-border-color: border_color;
+    -fx-border-width: 1px;
+
+    -fx-font-size: 1.166667em; /* 14 */
+}
+
+.list-view:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-padding: 1.25em 1em 1.25em 1em;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: text_color;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background-color: transparent;
+}
+
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background-color: transparent;
+}
+
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:hover {
+    -fx-background-color: cell_hover_color;
+}
+
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed {
+    -fx-background-color: cell_pressed_color;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
+    -fx-background-color: cell_selected_color;
+    -fx-background-insets: 0;
+
+    -fx-text-fill: text_color;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover {
+    -fx-background-color: cell_selected_hover_color;
+}
+
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover:pressed {
+    -fx-background-color: cell_selected_pressed_color;
+}
+
