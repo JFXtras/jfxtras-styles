@@ -500,101 +500,21 @@
  ******************************************************************************/
 
 .tree-view {
-    HOVER_COLOR: #333;
-    PRESSED_COLOR: derive(HOVER_COLOR, 15%);
+    tree_view_background_color: #111;
 
-    CELL_COLOR_SELECTED_HOVER: derive(ACCENT_COLOR, 20%);
+    hover_color: #333;
+    pressed_color: derive(hover_color, 15%);
 
-    TEXT_COLOR: white;
-    TEXT_COLOR_SELECTED: white;
-    TEXT_COLOR_HOVER: TEXT_COLOR_SELECTED;
-}
+    cell_selected_color: ACCENT_COLOR;
+    cell_selected_hover_color: derive(ACCENT_COLOR, 20%);
 
-.tree-view {
-    -fx-background-color: #111;
-    -fx-padding: 0;
-    -fx-background-insets: 0;
-}
+    text_color: white;
+    text_selected_color: white;
+    text_hover_color: text_color;
 
-.tree-view .tree-cell {
-    -fx-font-size: 1.166667em; /* 14 */
-    -fx-padding: 1em;
-    -fx-background-color: #111;
-    -fx-text-fill: white;
-}
-
-/********** Label **********/
-.tree-view .tree-cell .label{
-    -fx-font-family: "Segoe UI";
-
-    -fx-padding: 0 3px 0 0;
-}
-
-.tree-view .tree-cell {
-    -fx-text-fill: TEXT_COLOR;
-}
-
-/* Hover */
-.tree-view .tree-cell:filled:hover {
-    -fx-background-color: HOVER_COLOR;
-
-    -fx-text-fill: TEXT_COLOR_HOVER;
-}
-
-/* Selected */
-.tree-view .tree-cell:filled:selected {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-table-cell-border-color: transparent;
-
-    -fx-text-fill: TEXT_COLOR_SELECTED;
-}
-
-/* Selected hover */
-.tree-view .tree-cell:filled:selected:hover, .tree-view .tree-cell:selected:hover {
-    -fx-background-color: CELL_COLOR_SELECTED_HOVER;
-    -fx-text-fill: white;
-}
-
-.tree-view .tree-cell:selected:hover > .tree-disclosure-node > .arrow {
-    -fx-background-color: white;
-}
-
-
-/* Pressed */
-.tree-view .tree-cell:filled:pressed, .tree-view .tree-cell:filled:selected:pressed, .tree-view .tree-cell:selected:pressed, .tree-view .tree-cell:pressed{
-    -fx-background-color: PRESSED_COLOR;
-}
-
-/*********** Expand/Collapse icon **********/
-.tree-cell > .tree-disclosure-node {
-    -fx-padding: 0.333333em 1em 0.333333em 1em;
-}
-
-.tree-cell > .tree-disclosure-node > .arrow {
-    -fx-background-color: white;
-    -fx-padding: 0.416667em 0.333333em 0.416667em 0.333333em;
-    -fx-shape: "M8.06,20.938L7,20l8-8L7,4l1.06-0.938L16.917,12L8.06,20.938z";
-}
-
-.tree-cell > .tree-disclosure-node > .arrow {
-    -fx-background-color: TEXT_COLOR;
-}
-
-.tree-cell:hover > .tree-disclosure-node > .arrow {
-    -fx-background-color: TEXT_COLOR_HOVER;
-}
-
-.tree-cell:selected > .tree-disclosure-node > .arrow {
-    -fx-background-color: TEXT_COLOR_SELECTED;
-}
-
-.tree-cell:expanded > .tree-disclosure-node > .arrow {
-    -fx-scale-y: -1;
-    -fx-rotate: 90;
-}
-
-.tree-cell {
-    -fx-background-color: transparent;
+    arrow_color: white;
+    arrow__hover_color: text_hover_color;
+    arrow_selected_hover_color: text_selected_color;
 }
 
 /*******************************************************************************

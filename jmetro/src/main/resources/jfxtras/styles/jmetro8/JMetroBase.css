@@ -1383,3 +1383,103 @@
     -fx-background-color: cell_selected_pressed_color;
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * Tree View                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-view {
+    -fx-background-color: tree_view_background_color;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.tree-view .tree-cell {
+    -fx-font-size: 1.166667em; /* 14 */
+    -fx-padding: 1em;
+    -fx-background-color: tree_view_background_color;
+    -fx-text-fill: text_color;
+}
+
+/********** Label **********/
+.tree-view .tree-cell .label{
+    -fx-font-family: "Segoe UI";
+
+    -fx-padding: 0 3px 0 0;
+}
+
+.tree-view .tree-cell {
+    -fx-text-fill: text_color;
+}
+
+/* Hover */
+.tree-view .tree-cell:filled:hover {
+    -fx-background-color: hover_color;
+
+    -fx-text-fill: text_hover_color;
+}
+
+.tree-view .tree-cell:hover > .tree-disclosure-node > .arrow {
+    -fx-background-color: arrow__hover_color;
+}
+
+/* Selected */
+.tree-view .tree-cell:filled:selected {
+    -fx-background-color: cell_selected_color;
+    -fx-table-cell-border-color: transparent;
+
+    -fx-text-fill: text_selected_color;
+}
+
+/* Selected hover */
+.tree-view .tree-cell:filled:selected:hover,
+.tree-view .tree-cell:selected:hover {
+    -fx-background-color: cell_selected_hover_color;
+    -fx-text-fill: text_selected_color;
+}
+
+.tree-view .tree-cell:selected:hover > .tree-disclosure-node > .arrow {
+    -fx-background-color: arrow_selected_hover_color;
+}
+
+
+/* Pressed */
+.tree-view .tree-cell:filled:pressed,
+.tree-view .tree-cell:filled:selected:pressed,
+.tree-view .tree-cell:selected:pressed,
+.tree-view .tree-cell:pressed{
+    -fx-background-color: pressed_color;
+}
+
+/*********** Expand/Collapse icon **********/
+.tree-cell > .tree-disclosure-node {
+    -fx-padding: 0.333333em 1em 0.333333em 1em;
+}
+
+.tree-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: arrow_color;
+    -fx-padding: 0.416667em 0.333333em 0.416667em 0.333333em;
+    -fx-shape: "M8.06,20.938L7,20l8-8L7,4l1.06-0.938L16.917,12L8.06,20.938z";
+}
+
+.tree-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: text_color;
+}
+
+.tree-cell:hover > .tree-disclosure-node > .arrow {
+    -fx-background-color: text_hover_color;
+}
+
+.tree-cell:selected > .tree-disclosure-node > .arrow {
+    -fx-background-color: text_selected_color;
+}
+
+.tree-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-scale-y: -1;
+    -fx-rotate: 90;
+}
+
+.tree-cell {
+    -fx-background-color: transparent;
+}
