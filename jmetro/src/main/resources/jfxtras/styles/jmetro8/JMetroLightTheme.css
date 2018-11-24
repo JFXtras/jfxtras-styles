@@ -200,38 +200,6 @@
  *                                                                             *
  ******************************************************************************/
 
-.progress-bar {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.ProgressBarSkin";
-}
-
-.progress-bar > .bar {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-background-radius: 0;
-    -fx-background-insets: 0;
-}
-
-.progress-bar > .track {
-    -fx-background-color: #cccccc;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-
-    -fx-pref-height: 4px;
-    -fx-min-height: 4px;
-    -fx-max-height: 4px;
-}
-
-/* Indeterminate */
-.progress-bar:indeterminate > .track {
-    -fx-background-color: transparent;
-}
-
-.progress-bar:indeterminate .dot {
-    -fx-background-radius: 1em;
-    -fx-padding: 2px;
-
-    -fx-background-color: ACCENT_COLOR;
-}
-
 /*******************************************************************************
  *                                                                             *
  * Slider                                                                      *

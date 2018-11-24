@@ -25,10 +25,5 @@ out/
 .nb-gradle/
 build/
 
-
-=======
-# Scenic View auxiliary file
-scenicView.properties
-
 # libraries jars (e.g. ScenicView)
 samples/lib/
