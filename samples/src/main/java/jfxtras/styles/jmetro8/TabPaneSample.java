@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class TabPaneSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     public static void main(String[] args) {
         launch(args);
@@ -47,7 +47,7 @@ public class TabPaneSample extends Application {
         BorderPane root = new BorderPane(tabPane);
 
         if (STYLE.equals(JMetro.Style.DARK)) {
-            root.setStyle("-fx-background-color: #e2e2e2;");
+            root.setStyle("-fx-background-color: #111;");
         } else {
             root.setStyle("-fx-background-color: white;");
         }
@@ -55,6 +55,8 @@ public class TabPaneSample extends Application {
         Scene scene = new Scene(root, 500, 200);
 
         new JMetro(STYLE).applyTheme(scene);
+
+//        ScenicView.show(scene);
 
 
         stage.setTitle("TabPane Sample");

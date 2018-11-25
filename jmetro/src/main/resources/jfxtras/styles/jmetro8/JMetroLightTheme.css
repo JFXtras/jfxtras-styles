@@ -532,50 +532,15 @@
  ******************************************************************************/
 
 .tab-pane {
-    -fx-tab-min-height: 2.91666375em; /* 34 */
-    -fx-tab-max-height: 2.91666375em; /* 34 */
-}
+    tab_pane_background_color: white;
+    tab_pane_bottom_border_color: #cccccc;
 
-.tab-pane > .tab-header-area {
-    -fx-padding: 0 0.166667em 0em 0.416667em; /* 0 2 5 5 */
-}
+    tab_text_color: #767676;
+    tab_text_hover_color: ACCENT_COLOR;
+    tab_text_selected_hover_color: derive(ACCENT_COLOR, 30%);
 
-.tab-pane > .tab-header-area > .headers-region > .tab {
-    -fx-background-color: transparent, transparent, white;
-    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
-    -fx-padding: 0.083333em 1.5em 0.0769em 1.5em; /* 1 18 0.99 18 */
-}
-
-.tab-pane > .tab-header-area > .headers-region > .tab:selected {
-    -fx-background-color: transparent, #cccccc, white;
-    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
-}
-
-.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
-    -fx-text-fill: #767676;
-    -fx-font-size: 1.333333em; /* 16 */
-    -fx-font-family: "Segoe UI";
-}
-
-.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
-    -fx-text-fill: ACCENT_COLOR;
-}
-
-.tab-pane > .tab-header-area > .headers-region > .tab:hover > .tab-container > .tab-label {
-    -fx-text-fill: ACCENT_COLOR;
-}
-
-.tab-pane > .tab-header-area > .tab-header-background {
-    -fx-background-color:
-            -fx-outer-border,
-            transparent,
-            white;
-    -fx-background-insets: 1 1 0 1, 0 0 1 0, 1;
-}
-
-.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
-    -fx-border-width: 0, 0;
-    -fx-border-color: transparent, transparent;
+    tab_selected_background_color: white;
+    tab_selected_border_color: tab_pane_bottom_border_color;
 }
 
 /*******************************************************************************
