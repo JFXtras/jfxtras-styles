@@ -652,7 +652,7 @@
 .text-input{
     -fx-background-radius: 0, 0;
 
-    -fx-background-color: border_color, background_color;
+    -fx-background-color: border_color, text_input_background_color;
     -fx-background-insets: 0, 2;
 
     -fx-prompt-text-fill: prompt_text_color;
@@ -744,7 +744,7 @@
  ******************************************************************************/
 
 .text-area .content {
-    -fx-background-color: border_color, background_color;
+    -fx-background-color: border_color, text_input_background_color;
     -fx-background-radius: 0;
     -fx-background-insets: 0, 1;
 }
