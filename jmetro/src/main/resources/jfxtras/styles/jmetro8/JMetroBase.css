@@ -37,7 +37,7 @@
 
 .root {
     /* Root variables */
-    ACCENT_COLOR: #0078d7;
+    accent_color: #0078d7;
 }
 
 /*******************************************************************************
@@ -59,7 +59,7 @@
 
     -fx-background-radius: 0;
     -fx-background-insets: 0;
-    -fx-background-color: BACKGROUND;
+    -fx-background-color: background_color;
 
     -fx-font-family: "Segoe UI Semilight";
     -fx-font-size: 1.333333em; /* 16 */
@@ -67,18 +67,18 @@
 }
 
 .button:hover, .toggle-button:hover{
-    -fx-border-color: BORDER_HOVER;
+    -fx-border-color: border_hover_color;
 }
 
 .button:pressed, .toggle-button:pressed
 {
-    -fx-border-color: BACKGROUND_PRESSED;
-    -fx-background-color: BACKGROUND_PRESSED;
+    -fx-border-color: background_pressed_color;
+    -fx-background-color: background_pressed_color;
 }
 
 .button:focused, .toggle-button:focused
 {
-    -fx-border-color: transparent, FOCUS_RING_BORDER;
+    -fx-border-color: transparent, focus_ring_border_color;
     -fx-border-width: 1, 1;
     /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
@@ -89,7 +89,7 @@
 .button:disabled, .button:default:disabled, .toggle-button:disabled
 {
     -fx-opacity: 0.4;
-    -fx-background-color: BACKGROUND;
+    -fx-background-color: background_color;
     -fx-text-fill: text_color;
 }
 
@@ -101,16 +101,16 @@
 
 .button:default
 {
-    -fx-background-color: ACCENT_COLOR;
-    -fx-text-fill: DEFAULT_BUTTON_TEXT;
+    -fx-background-color: accent_color;
+    -fx-text-fill: default_button_text_color;
 }
 
 .button:default:hover{
-    -fx-border-color: BORDER_HOVER_DEFAULT;
+    -fx-border-color: border_hover_default_color;
 }
 
 .button:default:pressed {
-    -fx-background-color: derive(ACCENT_COLOR, -40%);
+    -fx-background-color: derive(accent_color, -40%);
 }
 
 /**************************** Toggle Button ***********************************/
@@ -120,16 +120,16 @@
 }
 
 .toggle-button:selected {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
     -fx-text-fill: white;
 }
 
 .toggle-button:selected:hover {
-    -fx-border-color: BORDER_HOVER_SELECTED;
+    -fx-border-color: border_hover_selected_color;
 }
 
 .toggle-button:selected:pressed {
-    -fx-background-color: derive(ACCENT_COLOR, -40%);
+    -fx-background-color: derive(accent_color, -40%);
 }
 
 /*******************************************************************************
@@ -154,11 +154,11 @@
 
 /* unselected */
 .check-box > .box {
-    -fx-background-color: box_background;
+    -fx-background-color: box_background_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 
-    -fx-border-color: box_border;
+    -fx-border-color: box_border_color;
     -fx-border-width: 2px;
     -fx-border-style: solid;
 
@@ -167,13 +167,13 @@
 
 /* hover */
 .check-box:hover > .box, .check-box:selected:hover > .box  {
-    -fx-border-color: box_border_hover;
+    -fx-border-color: box_border_hover_color;
 }
 
 /* selected */
 .check-box:selected > .box{
-    -fx-background-color: ACCENT_COLOR;
-    -fx-border-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
+    -fx-border-color: accent_color;
 }
 
 .check-box:selected > .box > .mark{
@@ -191,7 +191,7 @@
 .check-box:indeterminate > .box {
     -fx-padding: 3px;
 
-    -fx-border-color: ACCENT_COLOR;
+    -fx-border-color: accent_color;
 }
 
 .check-box:indeterminate > .box > .mark {
@@ -204,7 +204,7 @@
     -fx-max-height: 10px;
     -fx-min-height: 10px;
 
-    -fx-background-color: indeterminate_mark;
+    -fx-background-color: indeterminate_mark_color;
     /*-fx-background-insets: 3px;*/
 }
 
@@ -214,7 +214,7 @@
 }
 
 .check-box:indeterminate:pressed > .box {
-    -fx-background-color: indeterminate_box_pressed;
+    -fx-background-color: indeterminate_box_pressed_color;
     -fx-border-color: #666666;
 }
 
@@ -225,7 +225,7 @@
     -fx-background-radius: 0;
     /* - first border is focus ring
        - second border is control border */
-    -fx-border-color: focus_ring, box_border;
+    -fx-border-color: focus_ring_color, box_border_color;
     -fx-border-width: 1, 2;
     /*noinspection CssInvalidFunction*/
     -fx-border-style: segments(1, 2), solid;
@@ -234,30 +234,30 @@
 
 /* -- focused - selected */
 .check-box:focused:selected > .box{
-    -fx-border-color: focus_ring, ACCENT_COLOR;
+    -fx-border-color: focus_ring_color, accent_color;
 }
 
 /* -- focused - selected, hover */
 .check-box:focused:selected:hover > .box{
-    -fx-border-color: focus_ring, box_border_hover;
+    -fx-border-color: focus_ring_color, box_border_hover_color;
 }
 
 /* -- focused - pressed */
 .check-box:focused:pressed > .box{
-    -fx-border-color: focus_ring, #666666;
+    -fx-border-color: focus_ring_color, #666666;
 }
 
 .check-box:focused:selected:pressed > .box{
-    -fx-border-color: focus_ring, #666666;
+    -fx-border-color: focus_ring_color, #666666;
 }
 
 .check-box:focused:indeterminate:pressed > .box{
-    -fx-border-color: focus_ring, #666666;
+    -fx-border-color: focus_ring_color, #666666;
 }
 
 /* -- focused - indeterminate*/
 .check-box:focused:indeterminate > .box {
-    -fx-border-color: white, ACCENT_COLOR;
+    -fx-border-color: white, accent_color;
 }
 
 /* disabled */
@@ -283,7 +283,7 @@
 }
 
 .radio-button > .radio  {
-    -fx-background-color: background;
+    -fx-background-color: background_color;
     -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
     -fx-background-insets: 0;
 
@@ -294,7 +294,7 @@
     /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
     -fx-border-radius: 1.0em, 0;
-    -fx-border-color: border, transparent;
+    -fx-border-color: border_color, transparent;
     -fx-border-insets: 0px, -2px;
     -fx-border-width: 2px, 1px;
 
@@ -302,7 +302,7 @@
 }
 
 .radio-button > .radio > .dot {
-    -fx-background-color: dot;
+    -fx-background-color: dot_color;
     -fx-background-insets: 0;
     -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
 
@@ -311,27 +311,27 @@
 
 /* hover */
 .radio-button:hover > .radio {
-    -fx-background-color: background;
-    -fx-border-color: border_hover, transparent;
+    -fx-background-color: background_color;
+    -fx-border-color: border_hover_color, transparent;
 }
 
 .radio-button:selected:hover > .radio > .dot {
-    -fx-background-color: dot_selected_hover;
+    -fx-background-color: dot_selected_hover_color;
 }
 
 /* selected */
 .radio-button:selected > .radio {
-    -fx-border-color: ACCENT_COLOR, transparent;
+    -fx-border-color: accent_color, transparent;
 }
 
 .radio-button:selected > .radio > .dot {
-    -fx-background-color: dot_selected;
+    -fx-background-color: dot_selected_color;
 }
 
 /* pressed */
 .radio-button:pressed > .radio
 {
-    -fx-background-color: background_pressed;
+    -fx-background-color: background_pressed_color;
     -fx-border-color: #999999, transparent;
 }
 
@@ -346,7 +346,7 @@
     /*noinspection CssInvalidFunction*/
     -fx-border-style: solid, segments(1, 2);
     -fx-border-radius: 1.0em, 0;
-    -fx-border-color: border, focus_ring;
+    -fx-border-color: border_color, focus_ring_color;
     -fx-border-insets: 0px, -2px;
     -fx-border-width: 2px, 1px;
 }
@@ -358,12 +358,12 @@
 
 .radio-button:focused:pressed > .radio, .radio-button:focused:selected:pressed > .radio
 {
-    -fx-border-color: #999999, focus_ring;
-    -fx-background-color: background_pressed;
+    -fx-border-color: #999999, focus_ring_color;
+    -fx-background-color: background_pressed_color;
 }
 
 .radio-button:focused:selected > .radio {
-    -fx-border-color: ACCENT_COLOR, focus_ring;
+    -fx-border-color: accent_color, focus_ring_color;
 }
 
 /* disabled */
@@ -374,7 +374,7 @@
 
 .radio-button:disabled > .radio
 {
-    -fx-border-color: border, transparent;
+    -fx-border-color: border_color, transparent;
 }
 
 /*******************************************************************************
@@ -407,21 +407,21 @@
  ******************************************************************************/
 
 .scroll-bar > .thumb{
-    -fx-background-color: THUMB;
+    -fx-background-color: thumb_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
 .scroll-bar > .thumb:hover {
-    -fx-background-color: THUMB_HOVER;
+    -fx-background-color: thumb_hover_color;
 }
 
 .scroll-bar > .thumb:pressed {
-    -fx-background-color: THUMB_PRESSED;
+    -fx-background-color: thumb_pressed_color;
 }
 
 .scroll-bar > .track {
-    -fx-background-color: TRACK;
+    -fx-background-color: track_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
@@ -432,7 +432,7 @@
 /* Buttons */
 .scroll-bar > .increment-button,
 .scroll-bar > .decrement-button {
-    -fx-background-color: INC_DEC_BUTTON;
+    -fx-background-color: inc_dec_button_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 
@@ -446,12 +446,12 @@
 
 .scroll-bar > .increment-button:hover,
 .scroll-bar > .decrement-button:hover  {
-    -fx-background-color: INC_DEC_BUTTON_HOVER;
+    -fx-background-color: inc_dec_button_hover_color;
 }
 
 .scroll-bar > .increment-button:pressed,
 .scroll-bar > .decrement-button:pressed {
-    -fx-background-color: INC_DEC_BUTTON_PRESSED;
+    -fx-background-color: inc_dec_button_pressed_color;
 }
 
 /* Disabled */
@@ -496,13 +496,13 @@
 .scroll-bar > .decrement-button > .decrement-arrow,
 .scroll-bar > .increment-button > .increment-arrow{
     -fx-background-insets: 1 0 -1 0, 0;
-    -fx-background-color: ARROW;
+    -fx-background-color: arrow_color;
     -fx-effect: null;
 }
 
 .scroll-bar > .increment-button:pressed > .increment-arrow,
 .scroll-bar > .decrement-button:pressed > .decrement-arrow {
-    -fx-background-color: ARROW_PRESSED;
+    -fx-background-color: arrow_pressed_color;
 }
 
 /**************************** Scroll Pane *************************************/
@@ -513,7 +513,7 @@
 
 .scroll-pane .corner {
     -fx-background-radius: 0 0 0 0;
-    -fx-background-color: BACKGROUND;
+    -fx-background-color: background_color;
     -fx-background-insets: 0 0 0 0;
 }
 
@@ -524,7 +524,7 @@
  ******************************************************************************/
 
 .combo-box-base  {
-    -fx-background-color: transparent, border, transparent, background;
+    -fx-background-color: transparent, border_color, transparent, background_color;
     -fx-background-radius: 0, 0, 0, 0;
     -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
 
@@ -537,22 +537,22 @@
 }
 
 .combo-box-base:hover {
-    -fx-background-color: transparent, border_hover, transparent, background;
+    -fx-background-color: transparent, border_hover_color, transparent, background_color;
 }
 
 .combo-box-base:focused {
-    -fx-background-color: transparent, border_focused, transparent, background;
+    -fx-background-color: transparent, border_focused_color, transparent, background_color;
     -fx-background-insets: -1.4, 0, 1, 2;
 
     -fx-background-radius: 0, 0, 0, 0;
 }
 
 .combo-box-base:focused:hover {
-    -fx-background-color: transparent, border_hover, transparent, background;
+    -fx-background-color: transparent, border_hover_color, transparent, background_color;
 }
 
 .combo-box-base:pressed, .combo-box-base:focused:pressed {
-    -fx-background-color: transparent, border_pressed, transparent, background_pressed;
+    -fx-background-color: transparent, border_pressed_color, transparent, background_pressed_color;
 }
 
 .combo-box-base:disabled {
@@ -569,14 +569,14 @@
     -fx-padding: 3.5px 6px 3.5px 6px;
     -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
     -fx-background-insets: 0 0 0 0, 0;
-    -fx-background-color: arrow;
+    -fx-background-color: arrow_color;
 }
 
 /* LIST (Popup)*/
 .combo-box-popup > .list-view {
     -fx-effect: null;
 
-    -fx-border-color: list_cell_border;
+    -fx-border-color: list_cell_border_color;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
@@ -584,21 +584,21 @@
     -fx-font-size: 11pt;
     -fx-padding: 4 0 4 5;
 
-    -fx-background-color: list_cell;
+    -fx-background-color: list_cell_color;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover{
-    -fx-background-color: list_cell_hover;
+    -fx-background-color: list_cell_hover_color;
     -fx-text-fill: text_color;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected{
-    -fx-background-color: derive(ACCENT_COLOR, 90%);
+    -fx-background-color: derive(accent_color, 90%);
     -fx-text-fill: #111;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover{
-    -fx-background-color: derive(ACCENT_COLOR, 70%);
+    -fx-background-color: derive(accent_color, 70%);
 }
 
 /*******************************************************************************
@@ -607,12 +607,8 @@
  *                                                                             *
  ******************************************************************************/
 
-.rating {
-    star: #bababa;
-}
-
 .rating > .container > .button {
-    -fx-background-color: star;
+    -fx-background-color: star_color;
     -fx-border-color: transparent;
     -fx-shape: "M147.421,249.541l6.152,4.854l-2.393,7.355l6.521-4.361l6.549,4.361l-2.393-7.355l6.152-4.854h-7.738l-2.571-7.396l-2.543,7.396H147.421z";
     -fx-background-image: null;
@@ -621,14 +617,14 @@
 }
 
 .rating > .container > .button.strong {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
     -fx-border-color: transparent;
     -fx-background-image: null;
 
 }
 
 .rating > .container:hover > .button.strong {
-    -fx-background-color: derive(ACCENT_COLOR, 30%);
+    -fx-background-color: derive(accent_color, 30%);
 }
 
 .rating > .container > .button:hover {
@@ -636,11 +632,11 @@
 }
 
 .rating > .container:pressed > .button.strong {
-    -fx-background-color: derive(ACCENT_COLOR, 40%);
+    -fx-background-color: derive(accent_color, 40%);
 }
 
 .rating > .container > .button:pressed {
-    -fx-background-color: derive(ACCENT_COLOR, 40%);
+    -fx-background-color: derive(accent_color, 40%);
 }
 
 .rating:disabled{
@@ -672,7 +668,7 @@
 }
 
 .text-input:focused{
-    -fx-background-color: ACCENT_COLOR, background_focused_color;
+    -fx-background-color: accent_color, background_focused_color;
 
     -fx-text-fill: text_color;
 }
@@ -710,7 +706,7 @@
 }
 
 .text-field > .right-button:hover > .right-button-graphic {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
 }
 
 /*******************************************************************************
@@ -734,7 +730,7 @@
 }
 
 .password-field > .right-button:pressed {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
 }
 
 .password-field > .right-button:pressed > .right-button-graphic {
@@ -760,7 +756,7 @@
 }
 
 .text-area:focused .content {
-    -fx-background-color: ACCENT_COLOR, background_focused_color;
+    -fx-background-color: accent_color, background_focused_color;
     -fx-background-radius: 0;
     -fx-background-insets: 0, 1;
 }
@@ -783,8 +779,8 @@
  ******************************************************************************/
 .progress-bar {
     track_background_color: #cccccc;
-    bar_color: ACCENT_COLOR;
-    dot_color: ACCENT_COLOR;
+    bar_color: accent_color;
+    dot_color: accent_color;
 }
 
 
@@ -835,7 +831,7 @@
 }
 
 .slider .thumb {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
     -fx-background-insets: 0;
     -fx-background-radius: 6px;
 
@@ -857,7 +853,7 @@
 }
 
 .slider .fill {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
     -fx-padding: 0.083333em; /* 1 */
 }
 
@@ -1122,7 +1118,7 @@
 }
 
 .date-picker.combo-box-base:focused, .date-picker.combo-box-base:focused:hover {
-    -fx-background-color: ACCENT_COLOR, background_hover_color;
+    -fx-background-color: accent_color, background_hover_color;
     -fx-background-insets: 0, 2;
 }
 
@@ -1150,11 +1146,11 @@
 }
 
 .date-picker > .arrow-button:hover > .arrow {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
 }
 
 .date-picker > .arrow-button:pressed {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
 }
 
 .date-picker > .arrow-button:pressed > .arrow {
@@ -1266,12 +1262,12 @@
 }
 
 .date-picker-popup > * > .day-cell.selected {
-    -fx-background-color: ACCENT_COLOR;
+    -fx-background-color: accent_color;
     -fx-text-fill: text_selected_color;
 }
 
 .date-picker-popup > * > .day-cell.selected:hover {
-    -fx-background-color: derive(ACCENT_COLOR, 70%);
+    -fx-background-color: derive(accent_color, 70%);
 }
 
 .date-picker-popup > * > .today {
@@ -1517,7 +1513,7 @@
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
-    -fx-text-fill: ACCENT_COLOR;
+    -fx-text-fill: accent_color;
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:hover > .tab-container > .tab-label {

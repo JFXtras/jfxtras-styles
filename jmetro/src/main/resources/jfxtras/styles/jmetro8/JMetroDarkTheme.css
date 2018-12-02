@@ -47,23 +47,23 @@
  ******************************************************************************/
 
 .button, .toggle-button {
-    BACKGROUND: #333333;
-    BACKGROUND_PRESSED: #666666;
+    background_color: #333333;
+    background_pressed_color: #666666;
 
-    BORDER_HOVER: #858585;
+    border_hover_color: #858585;
 
     text_color: white;
-    DEFAULT_BUTTON_TEXT: white;
+    default_button_text_color: white;
 
-    FOCUS_RING_BORDER: white;
+    focus_ring_border_color: white;
 }
 
 .button {
-    BORDER_HOVER_DEFAULT: derive(ACCENT_COLOR, 70%);
+    border_hover_default_color: derive(accent_color, 70%);
 }
 
 .toggle-button {
-    BORDER_HOVER_SELECTED: derive(ACCENT_COLOR, 70%);
+    border_hover_selected_color: derive(accent_color, 70%);
 }
 
 /*******************************************************************************
@@ -74,14 +74,14 @@
 .check-box {
     text_color: white;
 
-    box_background: #111;
-    box_border: #cccccc;
-    box_border_hover: white;
+    box_background_color: #111;
+    box_border_color: #cccccc;
+    box_border_hover_color: white;
 
-    indeterminate_mark: #cccccc;
-    indeterminate_box_pressed: #111;
+    indeterminate_mark_color: #cccccc;
+    indeterminate_box_pressed_color: #111;
 
-    focus_ring: white;
+    focus_ring_color: white;
 }
 
 /* -- indeterminate - hover */
@@ -91,7 +91,7 @@
 
 /* -- focused - hover */
 .check-box:focused:hover > .box{
-    -fx-border-color: focus_ring, box_border_hover;
+    -fx-border-color: focus_ring_color, box_border_hover_color;
 }
 
 /*******************************************************************************
@@ -103,17 +103,17 @@
 .radio-button {
     text_color: white;
 
-    background: #111;
-    background_pressed: #111;
+    background_color: #111;
+    background_pressed_color: #111;
 
-    border: #cccccc;
-    border_hover: white;
+    border_color: #cccccc;
+    border_hover_color: white;
 
-    dot: #111;
-    dot_selected: #cccccc;
-    dot_selected_hover: white;
+    dot_color: #111;
+    dot_selected_color: #cccccc;
+    dot_selected_hover_color: white;
 
-    focus_ring: white;
+    focus_ring_color: white;
 }
 
 /*******************************************************************************
@@ -123,24 +123,24 @@
  ******************************************************************************/
 
 .scroll-bar {
-    THUMB: #52565a;
-    THUMB_HOVER: #7d8183;
-    THUMB_PRESSED: #a9abad;
+    thumb_color: #52565a;
+    thumb_hover_color: #7d8183;
+    thumb_pressed_color: #a9abad;
 
-    TRACK: #29292a;
+    track_color: #29292a;
 
-    INC_DEC_BUTTON: #2a2d30;
-    INC_DEC_BUTTON_HOVER: #3c4145;
-    INC_DEC_BUTTON_PRESSED: #a8abac;
+    inc_dec_button_color: #2a2d30;
+    inc_dec_button_hover_color: #3c4145;
+    inc_dec_button_pressed_color: #a8abac;
 
-    ARROW: white;
-    ARROW_PRESSED: #111;
+    arrow_color: white;
+    arrow_pressed_color: #111;
 }
 
 /**************************** Scroll Pane *************************************/
 
 .scroll-pane {
-    BACKGROUND: #29292a;
+    background_color: #29292a;
 }
 
 /*******************************************************************************
@@ -150,22 +150,22 @@
  ******************************************************************************/
 
 .combo-box-base {
-    border: #666666;
-    border_hover: #999999;
-    border_focused: white;
-    border_pressed: #666666;
+    border_color: #666666;
+    border_hover_color: #999999;
+    border_focused_color: white;
+    border_pressed_color: #666666;
 
-    background: #111;
-    background_pressed: #333333;
+    background_color: #111;
+    background_pressed_color: #333333;
 
-    arrow: white;
+    arrow_color: white;
 
     text_color: white;
 
-    list_cell: #2b2b2b;
-    list_cell_hover: #545454;
+    list_cell_color: #2b2b2b;
+    list_cell_hover_color: #545454;
 
-    list_cell_border: #767676;
+    list_cell_border_color: #767676;
 }
 
 /*******************************************************************************
@@ -175,7 +175,7 @@
  ******************************************************************************/
 
 .rating {
-    star: #6d6d6d;
+    star_color: #6d6d6d;
 }
 .rating:disabled{
     -fx-opacity: .8;
@@ -201,7 +201,7 @@
     text_disabled_color: #616161;
     prompt_text_color: #818181;
 
-    highlight_color: ACCENT_COLOR;
+    highlight_color: accent_color;
     highlighted_text_color: white;
 
     graphic_color: #747474;
@@ -245,11 +245,11 @@
     thumb_unselected_hover_color: white;
 
     /* Selected */
-    selected_color: ACCENT_COLOR;
-    selected_border_color: ACCENT_COLOR;
+    selected_color: accent_color;
+    selected_border_color: accent_color;
     thumb_selected_color: white;
     /* --    hover */
-    selected_hover_color: derive(ACCENT_COLOR, -20%);
+    selected_hover_color: derive(accent_color, -20%);
 
     /* Pressed */
     pressed_color: #999999;
@@ -310,7 +310,7 @@
 
     day_cell_background_days_from_other_months_color: #2b2b2b;
 
-    today_border_color: derive(ACCENT_COLOR, -60%);
+    today_border_color: derive(accent_color, -60%);
 }
 
 /*******************************************************************************
@@ -348,9 +348,9 @@
     cell_hover_color: #515151;
     cell_pressed_color: #3e3e3e;
 
-    cell_selected_color: derive(ACCENT_COLOR, 20%);
-    cell_selected_hover_color: derive(ACCENT_COLOR, 40%);
-    cell_selected_pressed_color: derive(ACCENT_COLOR, 50%);
+    cell_selected_color: derive(accent_color, 20%);
+    cell_selected_hover_color: derive(accent_color, 40%);
+    cell_selected_pressed_color: derive(accent_color, 50%);
 }
 
 /*******************************************************************************
@@ -361,16 +361,16 @@
 
 .table-view {
     /* This is a var */
-    TABLE_VIEW_BORDER_COLOR: #171717;
-    LIGHT_ACCENT_COLOR: derive(ACCENT_COLOR, 95%);
+    table_view_border_color: #171717;
+    light_accent_color: derive(accent_color, 95%);
 
-    TEXT_COLOR: white;
-    HOVER_TEXT_COLOR: #111;
-    SELECTED_TEXT_COLOR: #111;
+    text_color: white;
+    hover_text_color: #111;
+    selected_text_color: #111;
 }
 
 .table-view{
-    -fx-cell-focus-inner-border: LIGHT_ACCENT_COLOR; /* focused */
+    -fx-cell-focus-inner-border: light_accent_color; /* focused */
 
     -fx-background-color: transparent, transparent;
 
@@ -386,7 +386,7 @@
 .table-view .column-header, .table-view .filler{
     /* borders around table header */
     -fx-background-color: #111;
-    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent;
+    -fx-border-color: transparent transparent table_view_border_color transparent;
 }
 
 .table-view .filler {
@@ -395,15 +395,15 @@
 }
 
 .table-view .column-header:last-visible {
-    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent;
+    -fx-border-color: transparent transparent table_view_border_color transparent;
 }
 
 .table-view .filler {
-    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent;
+    -fx-border-color: transparent transparent table_view_border_color transparent;
 }
 
 .table-view .column-header .label{
-    -fx-text-fill: TEXT_COLOR;
+    -fx-text-fill: text_color;
     -fx-font-family: "Segoe UI SemiBold";
     -fx-font-size: 1.166667em;  /* 14 */
     -fx-alignment: center-left;
@@ -412,11 +412,11 @@
 }
 
 .table-view .column-header:hover{
-    -fx-background-color: LIGHT_ACCENT_COLOR;
+    -fx-background-color: light_accent_color;
 }
 
 .table-view .column-header:hover .label{
-    -fx-text-fill: HOVER_TEXT_COLOR;
+    -fx-text-fill: hover_text_color;
 }
 
 .table-view .column-header.table-column-selected {
@@ -445,45 +445,45 @@
 }
 
 .table-cell:filled:hover {
-    -fx-background-color: LIGHT_ACCENT_COLOR;
+    -fx-background-color: light_accent_color;
 }
 
 .table-cell .text {
-    -fx-fill: TEXT_COLOR;
+    -fx-fill: text_color;
 }
 
 .table-cell:hover .text {
-    -fx-fill: HOVER_TEXT_COLOR;
+    -fx-fill: hover_text_color;
 }
 
 /* Selected cell */
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
-    -fx-fill: SELECTED_TEXT_COLOR;
+    -fx-fill: selected_text_color;
 }
 
 /* - when focused */
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
-    -fx-background: ACCENT_COLOR;
+    -fx-background: accent_color;
     -fx-border-color: #034f95;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
-    -fx-background-color: LIGHT_ACCENT_COLOR;
+    -fx-background-color: light_accent_color;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{
     -fx-background: white;
-    -fx-border-color: transparent transparent TABLE_VIEW_BORDER_COLOR transparent, transparent #034f95 transparent #034f95;
+    -fx-border-color: transparent transparent table_view_border_color transparent, transparent #034f95 transparent #034f95;
     -fx-border-width: 1px 2px 1px 2px, 1px 2px 1px 2px;
 }
 
 /* - focused */
 .table-view .table-cell:focused {
-    -fx-background-color: -fx-background, LIGHT_ACCENT_COLOR, -fx-background;
+    -fx-background-color: -fx-background, light_accent_color, -fx-background;
 }
 
 .table-view .table-cell:focused .text{
-    -fx-fill: SELECTED_TEXT_COLOR;
+    -fx-fill: selected_text_color;
 }
 
 /* Header Sort Arrows */
@@ -505,8 +505,8 @@
     hover_color: #333;
     pressed_color: derive(hover_color, 15%);
 
-    cell_selected_color: ACCENT_COLOR;
-    cell_selected_hover_color: derive(ACCENT_COLOR, 20%);
+    cell_selected_color: accent_color;
+    cell_selected_hover_color: derive(accent_color, 20%);
 
     text_color: white;
     text_selected_color: white;
@@ -528,8 +528,8 @@
     tab_pane_bottom_border_color: tab_pane_background_color;
 
     tab_text_color: white;
-    tab_text_hover_color: derive(ACCENT_COLOR, 50%);
-    tab_text_selected_hover_color: derive(ACCENT_COLOR, 30%);
+    tab_text_hover_color: derive(accent_color, 50%);
+    tab_text_selected_hover_color: derive(accent_color, 30%);
 
     tab_selected_background_color: #1e1e1e;
     tab_selected_border_color: #1e1e1e;
