@@ -21,6 +21,7 @@ scenicView.properties
 out/
 
 # Gradle
+!gradle-wrapper.jar
 .gradle/
 .nb-gradle/
 build/
