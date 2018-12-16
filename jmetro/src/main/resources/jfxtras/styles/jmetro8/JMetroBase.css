@@ -353,7 +353,7 @@
 
 .radio-button:focused:hover > .radio
 {
-    -fx-border-color: white, #e0e0e0;
+    -fx-border-color: border_color, focus_ring_color;
 }
 
 .radio-button:focused:pressed > .radio, .radio-button:focused:selected:pressed > .radio
