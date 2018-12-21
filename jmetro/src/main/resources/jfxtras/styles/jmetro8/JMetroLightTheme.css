@@ -185,6 +185,7 @@
     background_disabled_color: #eaeaea;
 
     text_color: #111;
+    text_focused_color: #111;
     text_disabled_color: #adadad;
     prompt_text_color: #666666;
 
