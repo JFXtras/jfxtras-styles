@@ -35,7 +35,7 @@
 
     <Label layoutX="147.5" layoutY="171.5" styleClass="item-title" text="This has a tooltip">
         <tooltip>
-            <Tooltip text="This is a tooltip" />
+            <Tooltip text="Simple ToolTip" />
         </tooltip>
     </Label>
 </AnchorPane>
