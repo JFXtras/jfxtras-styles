@@ -1657,3 +1657,9 @@
     -fx-background-color: pressed_color;
 }
 
+/* disabled */
+.menu-item:disabled:hover,
+.menu-item:disabled:focused,
+.menu-item:disabled:pressed {
+    -fx-background-color: transparent;
+}

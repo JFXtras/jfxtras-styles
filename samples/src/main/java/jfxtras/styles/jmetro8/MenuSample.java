@@ -18,7 +18,7 @@ import javafx.scene.input.*;
 
 public class MenuSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
+    private static final JMetro.Style STYLE = JMetro.Style.DARK;
 
     private final Entry[] effects = new Entry[] {
             new SimpleEntry<>("Sepia Tone", new SepiaTone()),
