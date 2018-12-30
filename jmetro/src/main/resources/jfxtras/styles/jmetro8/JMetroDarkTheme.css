@@ -581,3 +581,22 @@
     hover_color: #404040;
     pressed_color: #555555;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * TitledPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.titled-pane {
+    text_color: white;
+
+    title_background_color: #1f1f1f;
+    title_background_hover_color: #4a4a4a;
+
+    border_color: #494949;
+
+    arrow_color: white;
+
+    content_background_color: #111;
+}

@@ -589,3 +589,24 @@
     hover_color: #dadada;
     pressed_color: #c2c2c2;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * TitledPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.titled-pane {
+    text_color: #111;
+
+    title_background_color: #e6e6e6;
+    title_background_hover_color: #d6d6d6;
+
+    border_color: #7a7a7a;
+
+    arrow_color: #111;
+
+    content_background_color: #fff;
+}
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="592.0" styleClass="background" xmlns="http://javafx.com/javafx/10.0.1">
+      <TitledPane animated="false" layoutX="51.0" layoutY="171.0" text="A Simple Title">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </TitledPane>
+      <TitledPane animated="false" disable="true" layoutX="334.0" layoutY="171.0" text="A Simple Title">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </TitledPane>
+      <TitledPane collapsible="false" layoutX="52.0" layoutY="458.0" prefHeight="200.0" prefWidth="200.0" text="A Simple Title" />
+      <TitledPane collapsible="false" disable="true" layoutX="335.0" layoutY="458.0" prefHeight="200.0" prefWidth="200.0" text="A Simple Title" />
+      <Label layoutX="51.0" layoutY="30.0" styleClass="header" text="Titled Pane" />
+      <Label layoutX="51.0" layoutY="142.0" styleClass="item-title" text="Normal" />
+      <Label layoutX="51.0" layoutY="432.0" styleClass="item-title" text="Uncollapsible" />
+      <Label layoutX="335.0" layoutY="142.0" styleClass="item-title" text="Disabled" />
+      <Label layoutX="334.0" layoutY="432.0" styleClass="item-title" text="Disabled Uncollapsible" />
+</AnchorPane>
