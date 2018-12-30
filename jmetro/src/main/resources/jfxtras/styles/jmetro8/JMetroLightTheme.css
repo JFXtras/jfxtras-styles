@@ -58,11 +58,11 @@
 }
 
 .button {
-    border_hover_default_color: derive(accent_color, 70%);
+    border_hover_default_color: derive(ACCENT_COLOR, -40%);
 }
 
 .toggle-button {
-    border_hover_selected_color: derive(accent_color, 70%);
+    border_hover_selected_color: derive(ACCENT_COLOR, -40%);
 }
 
 /*******************************************************************************
