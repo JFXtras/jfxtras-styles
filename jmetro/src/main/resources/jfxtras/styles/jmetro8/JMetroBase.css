@@ -681,6 +681,7 @@
     -fx-background-insets: 0, 2;
     -fx-background-color: border_disabled_color, background_disabled_color;
     -fx-text-fill: text_disabled_color;
+    -fx-prompt-text-fill: text_disabled_color;
 }
 
 /*******************************************************************************

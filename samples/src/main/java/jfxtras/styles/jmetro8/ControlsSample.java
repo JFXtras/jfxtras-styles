@@ -61,8 +61,8 @@ public class ControlsSample extends Application {
     static final private String TITLED_PANE_RESOURCE = "JMetro TitledPane.fxml";
     static final private String ACCORDION_RESOURCE = "JMetro Accordion.fxml";
 
-    static final private String RESOURCE = ACCORDION_RESOURCE;
-    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
+    static final private String RESOURCE = TEXT_FIELD_RESOURCE;
+    static final private JMetro.Style STYLE = JMetro.Style.DARK;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
