@@ -1671,34 +1671,23 @@
  *                                                                             *
  ******************************************************************************/
 
-.titled-pane {
-    -fx-border-width: 1;
-    -fx-border-color: border_color;
-}
-
-/* Title header area */
-.titled-pane > .title {
-    -fx-background-color: title_background_color;
-    -fx-background-radius: 0;
-    -fx-border-width: 0;
-}
-
-.titled-pane:expanded > .title {
-    -fx-border-color: border_color;
-
-    -fx-border-width: 0 0 1 0;
-}
-
-.titled-pane > .title:hover {
-    -fx-background-color: title_background_hover_color;
-}
-
-/* - text inside header area */
+/* Text inside header area */
 .titled-pane > .title > .text {
     -fx-fill: text_color;
 
     -fx-font-family: "Segoe UI";
     -fx-font-size: 1.166667em; /* 14 */
+}
+
+/* Title header area */
+.titled-pane > .title {
+    -fx-background-color: border_color, title_background_color;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0;
+}
+
+.titled-pane > .title:hover {
+    -fx-background-color: border_color, title_background_hover_color;
 }
 
 /* Arrow (for collapsing/expanding) */
@@ -1717,11 +1706,29 @@
 
 /* Content */
 .titled-pane > .content {
-    -fx-background-color: content_background_color;
-    -fx-border-color: content_background_color;
+    -fx-border-width: 0;
+
+    -fx-background-color: border_color, content_background_color;
+    -fx-background-insets: -1 0 0 0, 0 1 1 1;
 }
 
 /* Disabled */
-.titled-pane:disabled {
-    -fx-opacity: 0.7;
+.titled-pane:disabled,
+.titled-pane:disabled > .title,
+.titled-pane:disabled > .content {
+    -fx-opacity: 0.5;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Accordion                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.accordion > .titled-pane > .title {
+    -fx-background-insets: -1 0 0 0, 0 1 1 1, 1 2 2 2;
+}
+
+.accordion > .first-titled-pane > .title {
+    -fx-background-insets: 0, 1;
 }

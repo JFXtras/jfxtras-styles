@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="592.0" styleClass="background" xmlns="http://javafx.com/javafx/10.0.1">
+      <Label layoutX="51.0" layoutY="30.0" styleClass="header" text="Accordion" />
+      <Label layoutX="51.0" layoutY="142.0" styleClass="item-title" text="Normal" />
+      <Label layoutX="335.0" layoutY="142.0" styleClass="item-title" text="Disabled" />
+   <Accordion layoutX="51.0" layoutY="171.0">
+     <panes>
+       <TitledPane animated="false" text="untitled 1">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+       </TitledPane>
+       <TitledPane animated="false" text="untitled 2">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+       </TitledPane>
+       <TitledPane animated="false" text="untitled 3">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+       </TitledPane>
+     </panes>
+   </Accordion>
+   <Accordion disable="true" layoutX="335.0" layoutY="171.0">
+     <panes>
+       <TitledPane animated="false" text="untitled 1">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+       </TitledPane>
+       <TitledPane animated="false" text="untitled 2">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+       </TitledPane>
+       <TitledPane animated="false" text="untitled 3">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+       </TitledPane>
+     </panes>
+   </Accordion>
+</AnchorPane>
