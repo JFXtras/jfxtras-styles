@@ -47,6 +47,7 @@ artifacts {
 }
 
 /* Publishing */
+/* - for publishing to maven central need to define MAVEN_USERNAME and MAVEN_PASSWORD as environment variables */
 bintray {
     user = System.getenv('BINTRAY_USER')
     key = System.getenv('BINTRAY_KEY')
@@ -64,6 +65,41 @@ bintray {
             name = project.version
             desc = versionDescription // Version description
             vcsTag = project.version
+            mavenCentralSync {
+                sync = true
+                user = System.getenv('MAVEN_USERNAME')
+                password = System.getenv('MAVEN_PASSWORD')
+            }
+        }
+    }
+}
+
+def pomConfig = {
+    packaging 'jar'
+    name project.name
+    url 'https://www.pixelduke.com/jmetro'
+    inceptionYear '2012'
+    licenses {
+        license([:]) {
+            name 'BSD New'
+            url 'https://opensource.org/licenses/BSD-3-Clause'
+            distribution 'repo'
+        }
+    }
+    scm {
+        url 'https://github.com/JFXtras/jfxtras-styles.git'
+    }
+    developers {
+        [
+                dukke: 'Pedro Duque Vieira',
+        ].each { devId, devName ->
+            developer {
+                id devId
+                name devName
+                roles {
+                    role 'Developer'
+                }
+            }
         }
     }
 }
@@ -77,6 +113,11 @@ publishing {
             }
             artifact javadocJar {
                 classifier "javadoc"
+            }
+
+            pom.withXml {
+                asNode().children().last() + pomConfig
+                asNode().appendNode('description', "A theme / look and feel for JavaFX inspired by Microsoft's Fluent Design (previously named Metro)")
             }
         }
     }
