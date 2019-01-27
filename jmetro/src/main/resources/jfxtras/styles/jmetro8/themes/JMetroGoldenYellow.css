@@ -1,0 +1,43 @@
+@import "../JMetroBase.css";
+
+.root {
+    accent_color: #FFB900;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Button and ToggleButton                                                     *
+ *                                                                             *
+ ******************************************************************************/
+.button:default, .toggle-button:default {
+    default_button_text_color: black;
+}
+
+.button:default:pressed, .toggle-button:default:pressed {
+    default_button_text_color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Check Box                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+.check-box:selected > .box > .mark {
+    -fx-background-color: black;
+}
+
+.check-box:selected:pressed > .box > .mark {
+    -fx-background-color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * List View                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+.list-view {
+    cell_pressed_text_color: black;
+    cell_selected_text_color: black;
+    cell_selected_hover_text_color: black;
+    cell_selected_pressed_text_color: black;
+}
