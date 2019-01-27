@@ -1365,21 +1365,25 @@
 
 .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed {
     -fx-background-color: cell_pressed_color;
+    -fx-text-fill: cell_pressed_text_color;
 }
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
     -fx-background-color: cell_selected_color;
     -fx-background-insets: 0;
 
-    -fx-text-fill: text_color;
+    -fx-text-fill: cell_selected_text_color;
+    /* -fx-text-fill: text_color; */
 }
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover {
     -fx-background-color: cell_selected_hover_color;
+    -fx-text-fill: cell_selected_hover_text_color;
 }
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover:pressed {
     -fx-background-color: cell_selected_pressed_color;
+    -fx-text-fill: cell_selected_pressed_text_color;
 }
 
 /*******************************************************************************
