@@ -52,6 +52,7 @@ public class JMetro {
     }
 
     private Style style;
+    private Boolean isDark = false;
 
     /**
      * Base JMetro constructor. With default accent color argument.
@@ -69,6 +70,7 @@ public class JMetro {
      */
     public void applyTheme(Scene scene) {
         scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
+        this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
     }
 
     /**
@@ -78,6 +80,17 @@ public class JMetro {
      */
     public void applyTheme(Parent parent) {
         parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
+        this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+    }
+
+    /**
+     * It method just get isDark base theme value.
+     * If your theme dark - return true, else return false.
+     *
+     * @return isDark theme value, boolean type.
+     */
+    public boolean isDark() {
+        return this.isDark;
     }
 }
 
