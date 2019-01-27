@@ -295,6 +295,7 @@ public class JMetro {
         scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
         scene.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
         this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+        this.scene = scene;
     }
 
     /**
@@ -306,6 +307,7 @@ public class JMetro {
         parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
         parent.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
         this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+        this.parent = parent;
     }
 
     /**
