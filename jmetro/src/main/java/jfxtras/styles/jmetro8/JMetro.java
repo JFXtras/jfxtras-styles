@@ -271,6 +271,18 @@ public class JMetro {
     }
 
     /**
+     * Base JMetro constructor.
+     *
+     * @param style  base style.
+     * @param accent base accent color.
+     */
+    public JMetro(Style style, Accent accent) {
+        this.style = style;
+        this.accent = accent;
+        validateJavaVersion();
+    }
+
+    /**
      * It method apply theme and accent colors on your scene.
      *
      * @param scene your reference on window scene.
