@@ -37,6 +37,7 @@ public class JMetro {
 
         private String getStyleSheetFileName() {
             String stylesheet = null;
+
             switch (this) {
                 case LIGHT:
                     stylesheet = "JMetroLightTheme.css";
@@ -45,24 +46,38 @@ public class JMetro {
                     stylesheet = "JMetroDarkTheme.css";
                     break;
             }
+
             return stylesheet;
         }
     }
 
     private Style style;
 
+    /**
+     * Base JMetro constructor. With default accent color argument.
+     *
+     * @param style base style.
+     */
     public JMetro(Style style) {
         this.style = style;
     }
 
-    public void applyTheme(Scene scene){
+    /**
+     * It method apply theme and accent colors on your scene.
+     *
+     * @param scene your reference on window scene.
+     */
+    public void applyTheme(Scene scene) {
         scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
     }
 
-    public void applyTheme(Parent parent){
+    /**
+     * It method apply theme and accent colors on your parent.
+     *
+     * @param parent your reference on window parent.
+     */
+    public void applyTheme(Parent parent) {
         parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
     }
-
-
 }
 
