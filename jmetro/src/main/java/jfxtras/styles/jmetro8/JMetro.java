@@ -29,6 +29,7 @@ package jfxtras.styles.jmetro8;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import java.util.Random;
 
 public class JMetro {
     public enum Style {
@@ -260,6 +261,7 @@ public class JMetro {
     private Scene scene;
     private Parent parent;
     private Boolean isDark = false;
+    private Random random = new Random();
 
     /**
      * Base JMetro constructor. With default accent color argument.
@@ -327,6 +329,16 @@ public class JMetro {
         } else {
             throw new Exception("Initial reference to scene and parent apparently have null reference.");
         }
+    }
+
+    /**
+     * It method change theme and accent colors randomly.
+     */
+    public void changeRandomTheme() throws Exception {
+        int indexStyle = random.nextInt(Style.values().length);
+        int indexAccent = random.nextInt(Accent.values().length);
+
+        changeTheme(Style.values()[indexStyle], Accent.values()[indexAccent]);
     }
 
     /**
