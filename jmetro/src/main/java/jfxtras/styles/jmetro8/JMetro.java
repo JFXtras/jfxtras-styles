@@ -257,6 +257,8 @@ public class JMetro {
 
     private Style style;
     private Accent accent;
+    private Scene scene;
+    private Parent parent;
     private Boolean isDark = false;
 
     /**
@@ -302,6 +304,29 @@ public class JMetro {
         parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
         parent.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
         this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+    }
+
+    /**
+     * It method change theme and accent colors on scene or parent what initialized in applyTheme method.
+     *
+     * @param style  base style.
+     * @param accent base accent color.
+     * @throws Exception Initial reference to scene and parent apparently have null reference.
+     */
+    public void changeTheme(Style style, Accent accent) throws Exception {
+        if (this.scene != null) {
+            this.scene.getStylesheets().clear();
+            this.scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
+            this.scene.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
+            this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+        } else if (this.parent != null) {
+            this.parent.getStylesheets().clear();
+            this.parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
+            this.parent.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
+            this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+        } else {
+            throw new Exception("Initial reference to scene and parent apparently have null reference.");
+        }
     }
 
     /**
