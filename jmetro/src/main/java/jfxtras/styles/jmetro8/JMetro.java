@@ -61,6 +61,7 @@ public class JMetro {
      */
     public JMetro(Style style) {
         this.style = style;
+        validateJavaVersion();
     }
 
     /**
@@ -91,6 +92,16 @@ public class JMetro {
      */
     public boolean isDark() {
         return this.isDark;
+    }
+
+    /**
+     * It method just validate java version.
+     * If java version not equals 1.8 then it method print warning in console.
+     */
+    private void validateJavaVersion() {
+        if (!System.getProperty("java.specification.version").equals("1.8")) {
+            System.out.println("WARNING! For work JMetro lib needed JRE version 1.8.X, you have " + System.getProperty("java.specification.version"));
+        }
     }
 }
 
