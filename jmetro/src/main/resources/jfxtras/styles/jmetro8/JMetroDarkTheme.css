@@ -27,17 +27,21 @@
 
 @import "JMetroBase.css";
 
-.background{
+.background {
     -fx-background-color: #1d1d1d;
 }
 
-.header{
+.header {
     -fx-text-fill: white;
 }
 
-.item-title{
+.item-title {
     -fx-text-fill: white;
     -fx-opacity: 0.6;
+}
+
+.root {
+    background_color: #1d1d1d;
 }
 
 /*******************************************************************************

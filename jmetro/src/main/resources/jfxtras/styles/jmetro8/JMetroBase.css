@@ -38,6 +38,7 @@
 .root {
     /* Root variables */
     accent_color: #0078d7;
+    -fx-background-color: background_color;
 }
 
 /*******************************************************************************
