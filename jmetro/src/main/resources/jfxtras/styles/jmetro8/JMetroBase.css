@@ -529,6 +529,10 @@
     -fx-background-insets: 0 0 0 0;
 }
 
+.scroll-pane > .viewport {
+    -fx-background-color: scroll_view_background_color;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Combo Box                                                                   *
