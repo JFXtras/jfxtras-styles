@@ -781,11 +781,10 @@
  *                                                                             *
  ******************************************************************************/
 .progress-bar {
-    track_background_color: #cccccc;
+    track_background_color: progress_background_color;
     bar_color: accent_color;
     dot_color: accent_color;
 }
-
 
 .progress-bar {
     -fx-skin: "impl.jfxtras.styles.jmetro8.ProgressBarSkin";
