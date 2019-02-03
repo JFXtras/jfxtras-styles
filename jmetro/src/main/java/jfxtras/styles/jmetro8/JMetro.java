@@ -260,8 +260,7 @@ public class JMetro {
     private Accent accent;
     private Scene scene;
     private Parent parent;
-    private Boolean isDark = false;
-    private Random random = new Random();
+    private boolean isDark = false;
 
     /**
      * Base JMetro constructor. With default accent color argument.
