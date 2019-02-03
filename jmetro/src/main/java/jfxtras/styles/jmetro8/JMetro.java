@@ -293,7 +293,7 @@ public class JMetro {
     public void applyTheme(Scene scene) {
         scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
         scene.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
-        this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+        this.isDark = this.style == Style.DARK;
         this.scene = scene;
     }
 
@@ -305,7 +305,7 @@ public class JMetro {
     public void applyTheme(Parent parent) {
         parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
         parent.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
-        this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+        this.isDark = this.style == Style.DARK;
         this.parent = parent;
     }
 
@@ -321,12 +321,12 @@ public class JMetro {
             this.scene.getStylesheets().clear();
             this.scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
             this.scene.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
-            this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+            this.isDark = style == Style.DARK;
         } else if (this.parent != null) {
             this.parent.getStylesheets().clear();
             this.parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
             this.parent.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
-            this.isDark = style.getStyleSheetFileName().equals("JMetroDarkTheme.css");
+            this.isDark = style == Style.DARK;
         } else {
             throw new Exception("Initial reference to scene and parent apparently have null reference.");
         }
