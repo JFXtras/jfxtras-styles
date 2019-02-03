@@ -284,20 +284,26 @@
  ******************************************************************************/
 
 .date-picker {
-    graphic_color: #111;
+    graphic_color: #606060;
+    graphic_hover_color: accent_color;
+    date_picker_focused_graphics_color: #111;
 
     text_color: #111;
 
     text_selected_color: white;
     text_hover_color: text_color;
 
-    text_days_from_other_months_color: derive(text_color, 60%);
+    text_days_from_other_months_color: #111;
 
     background_color: white;
     background_hover_color: white;
+    background_pressed_color: white;
+
+    day_week_background_color: white;
 
     border_color: #999999;
     border_hover_color: #666666;
+    border_pressed_color: accent_color;
 
     popup_border_color: #e6e6e6;
 
