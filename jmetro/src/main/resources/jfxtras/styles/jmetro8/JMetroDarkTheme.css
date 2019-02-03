@@ -297,7 +297,9 @@
  ******************************************************************************/
 
 .date-picker {
-    graphic_color: #111;
+    graphic_color: #606060;
+    graphic_hover_color: accent_color;
+    date_picker_focused_graphics_color: #111;
 
     text_color: white;
 
@@ -306,11 +308,15 @@
 
     text_days_from_other_months_color: #7c7c7c;
 
-    background_color: white;
-    background_hover_color: white;
+    background_color: #111;
+    background_hover_color: #111;
+    background_pressed_color: white;
 
-    border_color: #d2d2d2;
-    border_hover_color: white;
+    day_week_background_color: #111;
+
+    border_color: #606060;
+    border_hover_color: #999;
+    border_pressed_color: accent_color;
 
     popup_border_color: #111;
 
