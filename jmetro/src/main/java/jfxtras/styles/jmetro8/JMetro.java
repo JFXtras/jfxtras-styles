@@ -334,16 +334,6 @@ public class JMetro {
     }
 
     /**
-     * It method change theme and accent colors randomly.
-     */
-    public void changeRandomTheme() throws Exception {
-        int indexStyle = random.nextInt(Style.values().length);
-        int indexAccent = random.nextInt(Accent.values().length);
-
-        changeTheme(Style.values()[indexStyle], Accent.values()[indexAccent]);
-    }
-
-    /**
      * It method just get isDark base theme value.
      * If your theme dark - return true, else return false.
      *
