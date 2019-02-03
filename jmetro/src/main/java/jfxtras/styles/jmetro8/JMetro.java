@@ -29,7 +29,8 @@ package jfxtras.styles.jmetro8;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class JMetro {
     public enum Style {
