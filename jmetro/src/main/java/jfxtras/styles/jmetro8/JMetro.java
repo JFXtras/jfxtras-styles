@@ -349,7 +349,8 @@ public class JMetro {
      */
     private void validateJavaVersion() {
         if (!System.getProperty("java.specification.version").equals("1.8")) {
-            System.out.println("WARNING! For work JMetro lib needed JRE version 1.8.X, you have " + System.getProperty("java.specification.version"));
+            Logger log = Logger.getLogger(JMetro.class.getName());
+            log.log(Level.WARNING, "for now JMetro only supports Java 8 (with JavaFX 8). You are using Java " + System.getProperty("java.specification.version"));
         }
     }
 }
