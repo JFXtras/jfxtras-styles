@@ -29,6 +29,7 @@ package jfxtras.styles.jmetro8;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -54,206 +55,206 @@ public class JMetro {
     }
 
     public enum Accent {
-        BONDI_BLUE_COLOR,
-        BURNT_SIENNA_COLOR,
-        CRIMSON_COLOR,
-        CUTTY_SARK_COLOR,
-        DARK_BLUE_COLOR,
-        DARK_CYAN_COLOR,
-        DARK_GRAY_COLOR,
-        DARK_MAGENTA_COLOR,
-        DARK_MINT_COLOR,
-        DARK_ORANGE_COLOR,
-        DEEP_LILAC_COLOR,
-        FLAMINGO_COLOR,
-        FROWNING_COLOR,
-        FUCHSIA_COLOR,
-        GOLDEN_ORANGE_COLOR,
-        GOLDEN_YELLOW_COLOR,
+        BLUE_COLOR,
+        BLUE_GRAY_COLOR,
+        BRICK_RED_COLOR,
+        CAMOUFLAGE_COLOR,
+        CAMOUFLAGE_DESERT_COLOR,
+        COOL_BLUE_BRIGHT_COLOR,
+        COOL_BLUE_COLOR,
+        GOLD_COLOR,
         GRAY_BROWN_COLOR,
         GRAY_COLOR,
+        GRAY_DARK_COLOR,
         GREEN_COLOR,
-        GREEN_GRAY_COLOR,
-        GREEN_LIDDY_COLOR,
-        GREEN_SHADOW_COLOR,
-        HURRICANE_COLOR,
-        IRIS_BLUE_COLOR,
-        JADE_COLOR,
-        LIGHT_GREEN_COLOR,
-        LIGHT_MINT_COLOR,
-        LIGHT_ORANGE_COLOR,
-        LIGHT_PALE_VIOLET_COLOR,
-        LIGHT_PINK_COLOR,
-        LILAC_BUSH_COLOR,
-        MINERAL_GREEN_COLOR,
+        IRIS_PASTEL_COLOR,
+        IRIS_SPRING_COLOR,
+        LIDDY_GREEN_COLOR,
+        MEADOW_GREEN_COLOR,
+        METAL_BLUE_COLOR,
+        MINT_DARK_COLOR,
+        MINT_LIGHT_COLOR,
+        MOD_RED_COLOR,
+        MOSS_COLOR,
         NAVY_BLUE_COLOR,
-        NEVADA_COLOR,
-        PALE_VIOLET_COLOR,
-        PERSIAN_RED_COLOR,
-        PINK_COLOR,
-        PORTAGE_COLOR,
+        ORANGE_BRIGHT_COLOR,
+        ORANGE_DARK_COLOR,
+        ORCHID_COLOR,
+        ORCHID_LIGHT_COLOR,
+        OVERCAST_COLOR,
+        PALE_MOSS_COLOR,
+        PALE_RED_COLOR,
+        PALE_RUST_COLOR,
+        PLUM_COLOR,
+        PLUM_LIGHT_COLOR,
+        PURPLE_SHADOW_COLOR,
+        PURPLE_SHADOW_DARK_COLOR,
         RED_COLOR,
-        RUST_ORANGE_COLOR,
-        SALEM_COLOR,
-        SCOOTER_COLOR,
-        SEANCE_COLOR,
-        SHUTTLE_GRAY_COLOR,
-        SLATE_BLUE_COLOR,
-        SLATE_GRAY_COLOR,
-        STONEWALL_COLOR,
-        STUDIO_COLOR;
+        ROSE_BRIGHT_COLOR,
+        ROSE_COLOR,
+        RUST_COLOR,
+        SAGE_COLOR,
+        SEAFOAM_COLOR,
+        SEAFOAM_TEAL_COLOR,
+        SPORT_GREEN_COLOR,
+        STEEL_BLUE_COLOR,
+        STORM_COLOR,
+        TURF_GREEN_COLOR,
+        VIOLET_RED_COLOR,
+        VIOLET_RED_LIGHT_COLOR,
+        YELLOW_GOLD_COLOR;
 
-        private String getStyleSheetFileName() {
-            String stylesheet = null;
+        private String getColorName() {
+            String color = "JMETRO_BLUE";
 
             switch (this) {
-                case GOLDEN_YELLOW_COLOR:
-                    stylesheet = "JMetroGoldenYellow.css";
+                case YELLOW_GOLD_COLOR:
+                    color = "JMETRO_YELLOW_GOLD";
                     break;
-                case GOLDEN_ORANGE_COLOR:
-                    stylesheet = "JMetroGoldenOrange.css";
+                case GOLD_COLOR:
+                    color = "JMETRO_GOLD";
                     break;
-                case LIGHT_ORANGE_COLOR:
-                    stylesheet = "JMetroLightOrange.css";
+                case ORANGE_BRIGHT_COLOR:
+                    color = "JMETRO_ORANGE_BRIGHT";
                     break;
-                case DARK_ORANGE_COLOR:
-                    stylesheet = "JMetroDarkOrange.css";
+                case ORANGE_DARK_COLOR:
+                    color = "JMETRO_ORANGE_DARK";
                     break;
-                case RUST_ORANGE_COLOR:
-                    stylesheet = "JMetroRustOrange.css";
+                case RUST_COLOR:
+                    color = "JMETRO_RUST";
                     break;
-                case BURNT_SIENNA_COLOR:
-                    stylesheet = "JMetroBurntSienna.css";
+                case PALE_RUST_COLOR:
+                    color = "JMETRO_PALE_RUST";
                     break;
-                case PERSIAN_RED_COLOR:
-                    stylesheet = "JMetroPersianRed.css";
+                case BRICK_RED_COLOR:
+                    color = "JMETRO_BRICK_RED";
+                    break;
+                case MOD_RED_COLOR:
+                    color = "JMETRO_MOD_RED";
+                    break;
+                case PALE_RED_COLOR:
+                    color = "JMETRO_PALE_RED";
                     break;
                 case RED_COLOR:
-                    stylesheet = "JMetroRed.css";
+                    color = "JMETRO_RED";
                     break;
-                case FLAMINGO_COLOR:
-                    stylesheet = "JMetroFlamingo.css";
+                case ROSE_BRIGHT_COLOR:
+                    color = "JMETRO_ROSE_BRIGHT";
                     break;
-                case CRIMSON_COLOR:
-                    stylesheet = "JMetroCrimson.css";
+                case ROSE_COLOR:
+                    color = "JMETRO_ROSE";
                     break;
-                case LIGHT_PINK_COLOR:
-                    stylesheet = "JMetroLightPink.css";
+                case PLUM_LIGHT_COLOR:
+                    color = "JMETRO_PLUM_LIGHT";
                     break;
-                case PINK_COLOR:
-                    stylesheet = "JMetroPink.css";
+                case PLUM_COLOR:
+                    color = "JMETRO_PLUM";
                     break;
-                case LIGHT_PALE_VIOLET_COLOR:
-                    stylesheet = "JMetroLightPaleViolet.css";
+                case ORCHID_LIGHT_COLOR:
+                    color = "JMETRO_ORCHID_LIGHT";
                     break;
-                case PALE_VIOLET_COLOR:
-                    stylesheet = "JMetroPaleViolet.css";
+                case ORCHID_COLOR:
+                    color = "JMETRO_ORCHID";
                     break;
-                case FUCHSIA_COLOR:
-                    stylesheet = "JMetroFuchsia.css";
-                    break;
-                case DARK_MAGENTA_COLOR:
-                    stylesheet = "JMetroDarkMagenta.css";
+                case BLUE_COLOR:
+                    color = "JMETRO_BLUE";
                     break;
                 case NAVY_BLUE_COLOR:
-                    stylesheet = "JMetroNavyBlue.css";
+                    color = "JMETRO_NAVY_BLUE";
                     break;
-                case DARK_BLUE_COLOR:
-                    stylesheet = "JMetroDarkBlue.css";
+                case PURPLE_SHADOW_COLOR:
+                    color = "JMETRO_PURPLE_SHADOW";
                     break;
-                case PORTAGE_COLOR:
-                    stylesheet = "JMetroPortage.css";
+                case PURPLE_SHADOW_DARK_COLOR:
+                    color = "JMETRO_PURPLE_SHADOW_DARK";
                     break;
-                case SLATE_BLUE_COLOR:
-                    stylesheet = "JMetroSlateBlue.css";
+                case IRIS_PASTEL_COLOR:
+                    color = "JMETRO_IRIS_PASTEL";
                     break;
-                case LILAC_BUSH_COLOR:
-                    stylesheet = "JMetroLilacBush.css";
+                case IRIS_SPRING_COLOR:
+                    color = "JMETRO_IRIS_SPRING";
                     break;
-                case STUDIO_COLOR:
-                    stylesheet = "JMetroStudio.css";
+                case VIOLET_RED_LIGHT_COLOR:
+                    color = "JMETRO_VIOLET_RED_LIGHT";
                     break;
-                case DEEP_LILAC_COLOR:
-                    stylesheet = "JMetroDeepLilac.css";
+                case VIOLET_RED_COLOR:
+                    color = "JMETRO_VIOLET_RED";
                     break;
-                case SEANCE_COLOR:
-                    stylesheet = "JMetroSeance.css";
+                case COOL_BLUE_BRIGHT_COLOR:
+                    color = "JMETRO_COOL_BLUE_BRIGHT";
                     break;
-                case BONDI_BLUE_COLOR:
-                    stylesheet = "JMetroBondiBlue.css";
+                case COOL_BLUE_COLOR:
+                    color = "JMETRO_COOL_BLUE";
                     break;
-                case SCOOTER_COLOR:
-                    stylesheet = "JMetroScooter.css";
+                case SEAFOAM_COLOR:
+                    color = "JMETRO_SEAFOAM";
                     break;
-                case IRIS_BLUE_COLOR:
-                    stylesheet = "JMetroIrisBlue.css";
+                case SEAFOAM_TEAL_COLOR:
+                    color = "JMETRO_SEAFOAM_TEAL";
                     break;
-                case DARK_CYAN_COLOR:
-                    stylesheet = "JMetroDarkCyan.css";
+                case MINT_LIGHT_COLOR:
+                    color = "JMETRO_MINT_LIGHT";
                     break;
-                case LIGHT_MINT_COLOR:
-                    stylesheet = "JMetroLightMint.css";
+                case MINT_DARK_COLOR:
+                    color = "JMETRO_MINT_DARK";
                     break;
-                case DARK_MINT_COLOR:
-                    stylesheet = "JMetroDarkMint.css";
+                case TURF_GREEN_COLOR:
+                    color = "JMETRO_TURF_GREEN";
                     break;
-                case JADE_COLOR:
-                    stylesheet = "JMetroJade.css";
-                    break;
-                case SALEM_COLOR:
-                    stylesheet = "JMetroSalem.css";
+                case SPORT_GREEN_COLOR:
+                    color = "JMETRO_SPORT_GREEN";
                     break;
                 case GRAY_COLOR:
-                    stylesheet = "JMetroGray.css";
+                    color = "JMETRO_GRAY";
                     break;
                 case GRAY_BROWN_COLOR:
-                    stylesheet = "JMetroGrayBrown.css";
+                    color = "JMETRO_GRAY_BROWN";
                     break;
-                case SLATE_GRAY_COLOR:
-                    stylesheet = "JMetroSlateGray.css";
+                case STEEL_BLUE_COLOR:
+                    color = "JMETRO_STEEL_BLUE";
                     break;
-                case SHUTTLE_GRAY_COLOR:
-                    stylesheet = "JMetroShuttleGray.css";
+                case METAL_BLUE_COLOR:
+                    color = "JMETRO_METAL_BLUE";
                     break;
-                case CUTTY_SARK_COLOR:
-                    stylesheet = "JMetroCuttySark.css";
+                case PALE_MOSS_COLOR:
+                    color = "JMETRO_PALE_MOSS";
                     break;
-                case MINERAL_GREEN_COLOR:
-                    stylesheet = "JMetroMineralGreen.css";
+                case MOSS_COLOR:
+                    color = "JMETRO_MOSS";
                     break;
-                case LIGHT_GREEN_COLOR:
-                    stylesheet = "JMetroLightGreen.css";
+                case MEADOW_GREEN_COLOR:
+                    color = "JMETRO_MEADOW_GREEN";
                     break;
                 case GREEN_COLOR:
-                    stylesheet = "JMetroGreen.css";
+                    color = "JMETRO_GREEN";
                     break;
-                case FROWNING_COLOR:
-                    stylesheet = "JMetroFrowning.css";
+                case OVERCAST_COLOR:
+                    color = "JMETRO_OVERCAST";
                     break;
-                case HURRICANE_COLOR:
-                    stylesheet = "JMetroHurricane.css";
+                case STORM_COLOR:
+                    color = "JMETRO_STORM";
                     break;
-                case NEVADA_COLOR:
-                    stylesheet = "JMetroNevada.css";
+                case BLUE_GRAY_COLOR:
+                    color = "JMETRO_BLUE_GRAY";
                     break;
-                case DARK_GRAY_COLOR:
-                    stylesheet = "JMetroDarkGray.css";
+                case GRAY_DARK_COLOR:
+                    color = "JMETRO_GRAY_DARK";
                     break;
-                case GREEN_LIDDY_COLOR:
-                    stylesheet = "JMetroGreenLiddy.css";
+                case LIDDY_GREEN_COLOR:
+                    color = "JMETRO_LIDDY_GREEN";
                     break;
-                case GREEN_GRAY_COLOR:
-                    stylesheet = "JMetroGreenGray.css";
+                case SAGE_COLOR:
+                    color = "JMETRO_SAGE";
                     break;
-                case GREEN_SHADOW_COLOR:
-                    stylesheet = "JMetroGreenShadow.css";
+                case CAMOUFLAGE_DESERT_COLOR:
+                    color = "JMETRO_CAMOUFLAGE_DESERT";
                     break;
-                case STONEWALL_COLOR:
-                    stylesheet = "JMetroStonewall.css";
+                case CAMOUFLAGE_COLOR:
+                    color = "JMETRO_CAMOUFLAGE";
                     break;
             }
 
-            return stylesheet;
+            return color;
         }
     }
 
@@ -270,7 +271,7 @@ public class JMetro {
      */
     public JMetro(Style style) {
         this.style = style;
-        this.accent = Accent.NAVY_BLUE_COLOR;
+        this.accent = Accent.BLUE_COLOR;
         validateJavaVersion();
     }
 
@@ -292,8 +293,8 @@ public class JMetro {
      * @param scene your reference on window scene.
      */
     public void applyTheme(Scene scene) {
-        scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-        scene.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
+        scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
+        scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
         this.isDark = this.style == Style.DARK;
         this.scene = scene;
     }
@@ -304,8 +305,8 @@ public class JMetro {
      * @param parent your reference on window parent.
      */
     public void applyTheme(Parent parent) {
-        parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-        parent.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
+        parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
+        parent.setStyle(String.format("accent_color: %s", accent.getColorName()));
         this.isDark = this.style == Style.DARK;
         this.parent = parent;
     }
@@ -320,13 +321,13 @@ public class JMetro {
     public void changeTheme(Style style, Accent accent) throws Exception {
         if (this.scene != null) {
             this.scene.getStylesheets().clear();
-            this.scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-            this.scene.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
+            this.scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
+            this.scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
             this.isDark = style == Style.DARK;
         } else if (this.parent != null) {
             this.parent.getStylesheets().clear();
-            this.parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-            this.parent.getStylesheets().add(JMetro.class.getResource("themes/" + accent.getStyleSheetFileName()).toExternalForm());
+            this.parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
+            this.scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
             this.isDark = style == Style.DARK;
         } else {
             throw new Exception("Initial reference to scene and parent apparently have null reference.");
@@ -345,11 +346,11 @@ public class JMetro {
 
     /**
      * It method just validate java version.
-     * If java version not equals 1.8 then it method print warning in console.
+     * If java version not equals 1.8 then it method print warning in log.
      */
     private void validateJavaVersion() {
         if (!System.getProperty("java.specification.version").equals("1.8")) {
-            Logger log = Logger.getLogger(JMetro.class.getName());
+            Logger log = Logger.getLogger(getClass().getName());
             log.log(Level.WARNING, "for now JMetro only supports Java 8 (with JavaFX 8). You are using Java " + System.getProperty("java.specification.version"));
         }
     }
