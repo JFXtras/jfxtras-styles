@@ -270,9 +270,7 @@ public class JMetro {
      * @param style base style.
      */
     public JMetro(Style style) {
-        this.style = style;
-        this.accent = Accent.BLUE;
-        validateJavaVersion();
+        this(style, Accent.BLUE);
     }
 
     /**
