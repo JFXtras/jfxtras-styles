@@ -55,201 +55,201 @@ public class JMetro {
     }
 
     public enum Accent {
-        BLUE_COLOR,
-        BLUE_GRAY_COLOR,
-        BRICK_RED_COLOR,
-        CAMOUFLAGE_COLOR,
-        CAMOUFLAGE_DESERT_COLOR,
-        COOL_BLUE_BRIGHT_COLOR,
-        COOL_BLUE_COLOR,
-        GOLD_COLOR,
-        GRAY_BROWN_COLOR,
-        GRAY_COLOR,
-        GRAY_DARK_COLOR,
-        GREEN_COLOR,
-        IRIS_PASTEL_COLOR,
-        IRIS_SPRING_COLOR,
-        LIDDY_GREEN_COLOR,
-        MEADOW_GREEN_COLOR,
-        METAL_BLUE_COLOR,
-        MINT_DARK_COLOR,
-        MINT_LIGHT_COLOR,
-        MOD_RED_COLOR,
-        MOSS_COLOR,
-        NAVY_BLUE_COLOR,
-        ORANGE_BRIGHT_COLOR,
-        ORANGE_DARK_COLOR,
-        ORCHID_COLOR,
-        ORCHID_LIGHT_COLOR,
-        OVERCAST_COLOR,
-        PALE_MOSS_COLOR,
-        PALE_RED_COLOR,
-        PALE_RUST_COLOR,
-        PLUM_COLOR,
-        PLUM_LIGHT_COLOR,
-        PURPLE_SHADOW_COLOR,
-        PURPLE_SHADOW_DARK_COLOR,
-        RED_COLOR,
-        ROSE_BRIGHT_COLOR,
-        ROSE_COLOR,
-        RUST_COLOR,
-        SAGE_COLOR,
-        SEAFOAM_COLOR,
-        SEAFOAM_TEAL_COLOR,
-        SPORT_GREEN_COLOR,
-        STEEL_BLUE_COLOR,
-        STORM_COLOR,
-        TURF_GREEN_COLOR,
-        VIOLET_RED_COLOR,
-        VIOLET_RED_LIGHT_COLOR,
-        YELLOW_GOLD_COLOR;
+        BLUE,
+        BLUE_GRAY,
+        BRICK_RED,
+        CAMOUFLAGE,
+        CAMOUFLAGE_DESERT,
+        COOL_BLUE_BRIGHT,
+        COOL_BLUE,
+        GOLD,
+        GRAY_BROWN,
+        GRAY,
+        GRAY_DARK,
+        GREEN,
+        IRIS_PASTEL,
+        IRIS_SPRING,
+        LIDDY_GREEN,
+        MEADOW_GREEN,
+        METAL_BLUE,
+        MINT_DARK,
+        MINT_LIGHT,
+        MOD_RED,
+        MOSS,
+        NAVY_BLUE,
+        ORANGE_BRIGHT,
+        ORANGE_DARK,
+        ORCHID,
+        ORCHID_LIGHT,
+        OVERCAST,
+        PALE_MOSS,
+        PALE_RED,
+        PALE_RUST,
+        PLUM,
+        PLUM_LIGHT,
+        PURPLE_SHADOW,
+        PURPLE_SHADOW_DARK,
+        RED,
+        ROSE_BRIGHT,
+        ROSE,
+        RUST,
+        SAGE,
+        SEAFOAM,
+        SEAFOAM_TEAL,
+        SPORT_GREEN,
+        STEEL_BLUE,
+        STORM,
+        TURF_GREEN,
+        VIOLET_RED,
+        VIOLET_RED_LIGHT,
+        YELLOW_GOLD;
 
         private String getColorName() {
             String color = "JMETRO_BLUE";
 
             switch (this) {
-                case YELLOW_GOLD_COLOR:
+                case YELLOW_GOLD:
                     color = "JMETRO_YELLOW_GOLD";
                     break;
-                case GOLD_COLOR:
+                case GOLD:
                     color = "JMETRO_GOLD";
                     break;
-                case ORANGE_BRIGHT_COLOR:
+                case ORANGE_BRIGHT:
                     color = "JMETRO_ORANGE_BRIGHT";
                     break;
-                case ORANGE_DARK_COLOR:
+                case ORANGE_DARK:
                     color = "JMETRO_ORANGE_DARK";
                     break;
-                case RUST_COLOR:
+                case RUST:
                     color = "JMETRO_RUST";
                     break;
-                case PALE_RUST_COLOR:
+                case PALE_RUST:
                     color = "JMETRO_PALE_RUST";
                     break;
-                case BRICK_RED_COLOR:
+                case BRICK_RED:
                     color = "JMETRO_BRICK_RED";
                     break;
-                case MOD_RED_COLOR:
+                case MOD_RED:
                     color = "JMETRO_MOD_RED";
                     break;
-                case PALE_RED_COLOR:
+                case PALE_RED:
                     color = "JMETRO_PALE_RED";
                     break;
-                case RED_COLOR:
+                case RED:
                     color = "JMETRO_RED";
                     break;
-                case ROSE_BRIGHT_COLOR:
+                case ROSE_BRIGHT:
                     color = "JMETRO_ROSE_BRIGHT";
                     break;
-                case ROSE_COLOR:
+                case ROSE:
                     color = "JMETRO_ROSE";
                     break;
-                case PLUM_LIGHT_COLOR:
+                case PLUM_LIGHT:
                     color = "JMETRO_PLUM_LIGHT";
                     break;
-                case PLUM_COLOR:
+                case PLUM:
                     color = "JMETRO_PLUM";
                     break;
-                case ORCHID_LIGHT_COLOR:
+                case ORCHID_LIGHT:
                     color = "JMETRO_ORCHID_LIGHT";
                     break;
-                case ORCHID_COLOR:
+                case ORCHID:
                     color = "JMETRO_ORCHID";
                     break;
-                case BLUE_COLOR:
+                case BLUE:
                     color = "JMETRO_BLUE";
                     break;
-                case NAVY_BLUE_COLOR:
+                case NAVY_BLUE:
                     color = "JMETRO_NAVY_BLUE";
                     break;
-                case PURPLE_SHADOW_COLOR:
+                case PURPLE_SHADOW:
                     color = "JMETRO_PURPLE_SHADOW";
                     break;
-                case PURPLE_SHADOW_DARK_COLOR:
+                case PURPLE_SHADOW_DARK:
                     color = "JMETRO_PURPLE_SHADOW_DARK";
                     break;
-                case IRIS_PASTEL_COLOR:
+                case IRIS_PASTEL:
                     color = "JMETRO_IRIS_PASTEL";
                     break;
-                case IRIS_SPRING_COLOR:
+                case IRIS_SPRING:
                     color = "JMETRO_IRIS_SPRING";
                     break;
-                case VIOLET_RED_LIGHT_COLOR:
+                case VIOLET_RED_LIGHT:
                     color = "JMETRO_VIOLET_RED_LIGHT";
                     break;
-                case VIOLET_RED_COLOR:
+                case VIOLET_RED:
                     color = "JMETRO_VIOLET_RED";
                     break;
-                case COOL_BLUE_BRIGHT_COLOR:
+                case COOL_BLUE_BRIGHT:
                     color = "JMETRO_COOL_BLUE_BRIGHT";
                     break;
-                case COOL_BLUE_COLOR:
+                case COOL_BLUE:
                     color = "JMETRO_COOL_BLUE";
                     break;
-                case SEAFOAM_COLOR:
+                case SEAFOAM:
                     color = "JMETRO_SEAFOAM";
                     break;
-                case SEAFOAM_TEAL_COLOR:
+                case SEAFOAM_TEAL:
                     color = "JMETRO_SEAFOAM_TEAL";
                     break;
-                case MINT_LIGHT_COLOR:
+                case MINT_LIGHT:
                     color = "JMETRO_MINT_LIGHT";
                     break;
-                case MINT_DARK_COLOR:
+                case MINT_DARK:
                     color = "JMETRO_MINT_DARK";
                     break;
-                case TURF_GREEN_COLOR:
+                case TURF_GREEN:
                     color = "JMETRO_TURF_GREEN";
                     break;
-                case SPORT_GREEN_COLOR:
+                case SPORT_GREEN:
                     color = "JMETRO_SPORT_GREEN";
                     break;
-                case GRAY_COLOR:
+                case GRAY:
                     color = "JMETRO_GRAY";
                     break;
-                case GRAY_BROWN_COLOR:
+                case GRAY_BROWN:
                     color = "JMETRO_GRAY_BROWN";
                     break;
-                case STEEL_BLUE_COLOR:
+                case STEEL_BLUE:
                     color = "JMETRO_STEEL_BLUE";
                     break;
-                case METAL_BLUE_COLOR:
+                case METAL_BLUE:
                     color = "JMETRO_METAL_BLUE";
                     break;
-                case PALE_MOSS_COLOR:
+                case PALE_MOSS:
                     color = "JMETRO_PALE_MOSS";
                     break;
-                case MOSS_COLOR:
+                case MOSS:
                     color = "JMETRO_MOSS";
                     break;
-                case MEADOW_GREEN_COLOR:
+                case MEADOW_GREEN:
                     color = "JMETRO_MEADOW_GREEN";
                     break;
-                case GREEN_COLOR:
+                case GREEN:
                     color = "JMETRO_GREEN";
                     break;
-                case OVERCAST_COLOR:
+                case OVERCAST:
                     color = "JMETRO_OVERCAST";
                     break;
-                case STORM_COLOR:
+                case STORM:
                     color = "JMETRO_STORM";
                     break;
-                case BLUE_GRAY_COLOR:
+                case BLUE_GRAY:
                     color = "JMETRO_BLUE_GRAY";
                     break;
-                case GRAY_DARK_COLOR:
+                case GRAY_DARK:
                     color = "JMETRO_GRAY_DARK";
                     break;
-                case LIDDY_GREEN_COLOR:
+                case LIDDY_GREEN:
                     color = "JMETRO_LIDDY_GREEN";
                     break;
-                case SAGE_COLOR:
+                case SAGE:
                     color = "JMETRO_SAGE";
                     break;
-                case CAMOUFLAGE_DESERT_COLOR:
+                case CAMOUFLAGE_DESERT:
                     color = "JMETRO_CAMOUFLAGE_DESERT";
                     break;
-                case CAMOUFLAGE_COLOR:
+                case CAMOUFLAGE:
                     color = "JMETRO_CAMOUFLAGE";
                     break;
             }
@@ -271,7 +271,7 @@ public class JMetro {
      */
     public JMetro(Style style) {
         this.style = style;
-        this.accent = Accent.BLUE_COLOR;
+        this.accent = Accent.BLUE;
         validateJavaVersion();
     }
 
