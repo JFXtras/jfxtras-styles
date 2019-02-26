@@ -262,7 +262,6 @@ public class JMetro {
     private Accent accent;
     private Scene scene;
     private Parent parent;
-    private boolean isDark = false;
 
     /**
      * Base JMetro constructor.
@@ -294,7 +293,6 @@ public class JMetro {
     public void applyTheme(Scene scene) {
         scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
         scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
-        this.isDark = this.style == Style.DARK;
         this.scene = scene;
     }
 
@@ -306,7 +304,6 @@ public class JMetro {
     public void applyTheme(Parent parent) {
         parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
         parent.setStyle(String.format("accent_color: %s", accent.getColorName()));
-        this.isDark = this.style == Style.DARK;
         this.parent = parent;
     }
 
@@ -322,25 +319,13 @@ public class JMetro {
             this.scene.getStylesheets().clear();
             this.scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
             this.scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
-            this.isDark = style == Style.DARK;
         } else if (this.parent != null) {
             this.parent.getStylesheets().clear();
             this.parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
             this.scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
-            this.isDark = style == Style.DARK;
         } else {
             throw new Exception("Initial reference to scene and parent apparently have null reference.");
         }
-    }
-
-    /**
-     * It method just get isDark base theme value.
-     * If your theme dark - return true, else return false.
-     *
-     * @return isDark theme value, boolean type.
-     */
-    public boolean isDark() {
-        return this.isDark;
     }
 
     /**
