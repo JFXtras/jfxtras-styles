@@ -265,7 +265,8 @@ public class JMetro {
     private boolean isDark = false;
 
     /**
-     * Base JMetro constructor. With default accent color argument.
+     * Base JMetro constructor.
+     * With default accent color BLUE.
      *
      * @param style base style.
      */
