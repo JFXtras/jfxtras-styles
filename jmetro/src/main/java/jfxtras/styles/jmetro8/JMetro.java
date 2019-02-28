@@ -310,6 +310,7 @@ public class JMetro {
      * @param scene your reference on window scene.
      */
     public void applyTheme(Scene scene) {
+        scene.getStylesheets().add(getClass().getResource("JMetroBase.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
         scene.getStylesheets().add(getClass().getResource("JMetroColors.css").toExternalForm());
         scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
@@ -330,6 +331,7 @@ public class JMetro {
      * @param parent your reference on window parent.
      */
     public void applyTheme(Parent parent) {
+        parent.getStylesheets().add(getClass().getResource("JMetroBase.css").toExternalForm());
         parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
         parent.getStylesheets().add(getClass().getResource("JMetroColors.css").toExternalForm());
         parent.setStyle(String.format("accent_color: %s", accent.getColorName()));
