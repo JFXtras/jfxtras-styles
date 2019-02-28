@@ -27,10 +27,9 @@
 
 package jfxtras.styles.jmetro8;
 
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -262,28 +261,46 @@ public class JMetro {
 
     private Style style;
     private Accent accent;
+    private Color accentColor;
     private Scene scene;
     private Parent parent;
 
     /**
-     * Base JMetro constructor.
-     * With default accent color BLUE.
+     * JMetro class constructor.
+     * It constructor call JMetro constructor but with
+     * default color blue.
      *
-     * @param style base style.
+     * @param style theme style.
      */
     public JMetro(Style style) {
         this(style, Accent.BLUE);
     }
 
     /**
-     * Base JMetro constructor.
+     * JMetro class constructor.
      *
-     * @param style  base style.
-     * @param accent base accent color.
+     * @param style theme style.
+     * @param accent accent color from Accent enum.
      */
     public JMetro(Style style, Accent accent) {
         this.style = style;
         this.accent = accent;
+        validateJavaVersion();
+    }
+
+    /**
+     * JMetro class constructor.
+     * With supporting custom color.
+     * <p>
+     * Callback value blue color from accent enum.
+     *
+     * @param style theme style.
+     * @param accent custom accent color.
+     */
+    public JMetro(Style style, Color accent) {
+        this.style = style;
+        this.accent = Accent.BLUE;
+        this.accentColor = accent;
         validateJavaVersion();
     }
 
@@ -294,7 +311,16 @@ public class JMetro {
      */
     public void applyTheme(Scene scene) {
         scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("JMetroColors.css").toExternalForm());
         scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
+
+        if (accentColor != null) {
+            //String accentColorFormatted = 0xd2691eff;
+            String accentColorFormatted =
+                    accentColor.toString().split("x")[1];
+            scene.getRoot().setStyle(String.format("accent_color: %s", accentColorFormatted));
+        }
+
         this.scene = scene;
     }
 
@@ -305,50 +331,110 @@ public class JMetro {
      */
     public void applyTheme(Parent parent) {
         parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
+        parent.getStylesheets().add(getClass().getResource("JMetroColors.css").toExternalForm());
         parent.setStyle(String.format("accent_color: %s", accent.getColorName()));
+
+        if (accentColor != null) {
+            String accentColorFormatted =
+                    accentColor.toString().split("x")[1];
+            parent.setStyle(String.format("accent_color: %s", accentColorFormatted));
+        }
+
         this.parent = parent;
     }
 
-    public void setTheme(Style style) { changeTheme(style, accent); }
-
-    public Style getTheme() { return style; }
-
-    private final ObjectProperty<Style> themeObjectProperty = new SimpleObjectProperty<>(Style.LIGHT);
-
-    public ObjectProperty<Style> themeProperty() { return themeObjectProperty; }
-
-    public void setAccent(Accent accent) { changeTheme(style, accent); }
-
-    public Accent getAccent() { return accent; }
-
-    private final ObjectProperty<Accent> accentObjectProperty = new SimpleObjectProperty<>(Accent.BLUE);
-
-    public ObjectProperty<Accent> accentProperty() { return accentObjectProperty; }
-
     /**
-     * It method change theme and accent colors on scene or parent what initialized in applyTheme method.
+     * It method change theme style on scene or parent
+     * what initialized in applyTheme method.
      *
-     * @param style  base style.
-     * @param accent base accent color.
-     * @throws NullPointerException Initial reference to scene and parent apparently have null reference.
+     * @param style theme style.
+     * @throws NullPointerException Initial reference to scene
+     * and parent apparently have null reference.
      */
-    private void changeTheme(Style style, Accent accent) {
+    public void setTheme(Style style) {
+        scene.getStylesheets().removeIf(css -> {
+            String[] cssFile = css.split("/");
+            return cssFile[cssFile.length - 1].equals("JMetroLightTheme.css");
+        });
+
+        scene.getStylesheets().removeIf(css -> {
+            String[] cssFile = css.split("/");
+            return cssFile[cssFile.length - 1].equals("JMetroDarkTheme.css");
+        });
+
         if (scene != null) {
-            scene.getStylesheets().clear();
             scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
-            scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
+            this.style = style;
         } else if (parent != null) {
-            parent.getStylesheets().clear();
             parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
-            scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
+            this.style = style;
         } else {
             throw new NullPointerException("Initial reference to scene and parent apparently have null reference.");
         }
     }
 
     /**
+     * @return theme style in current class instance.
+     */
+    public Style getTheme() { return style; }
+
+    /**
+     * It method change accent color on scene or parent
+     * what initialized in applyTheme method.
+     *
+     * @param accent accent color from Accent enum.
+     * @throws NullPointerException Initial reference to scene
+     * and parent apparently have null reference.
+     */
+    public void setAccent(Accent accent) {
+        if (scene != null) {
+            scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
+            this.accent = accent;
+        } else if (parent != null) {
+            parent.setStyle(String.format("accent_color: %s", accent.getColorName()));
+            this.accent = accent;
+        } else {
+            throw new NullPointerException("Initial reference to scene and parent apparently have null reference.");
+        }
+    }
+
+    /**
+     * @return accent enum color name in current class instance.
+     */
+    public Accent getAccent() { return accent; }
+
+    /**
+     * It method change accent color on scene or parent
+     * what initialized in applyTheme method.
+     *
+     * @param accent custom accent color.
+     * @throws NullPointerException Initial reference to scene
+     * and parent apparently have null reference.
+     */
+    public void setAccent(Color accent) {
+        String accentColorFormatted =
+                accent.toString().split("x")[1];
+
+        if (scene != null) {
+            scene.getRoot().setStyle(String.format("accent_color: %s", accentColorFormatted));
+            accentColor = accent;
+        } else if (parent != null) {
+            parent.setStyle(String.format("accent_color: %s", accentColorFormatted));
+            accentColor = accent;
+        } else {
+            throw new NullPointerException("Initial reference to scene and parent apparently have null reference.");
+        }
+    }
+
+    /**
+     * @return accent color in current class instance.
+     */
+    public Color getAccentAsColor() { return accentColor; }
+
+    /**
      * It method just validate java version.
-     * If java version not equals 1.8 then it method print warning in log.
+     * If java version not equals 1.8 then it
+     * method print warning in log.
      */
     private void validateJavaVersion() {
         if (!System.getProperty("java.specification.version").equals("1.8")) {
