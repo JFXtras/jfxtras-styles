@@ -42,6 +42,54 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Font and Font types styles                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+ .header {
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-size: 46px;
+    -fx-line-spacing: 56px;
+ }
+
+ .subheader {
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-size: 34px;
+    -fx-line-spacing: 40px;
+ }
+
+ .title {
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 24px;
+    -fx-line-spacing: 28px;
+ }
+
+ .subtitle {
+    -fx-font-family: "Segoe UI Regular";
+    -fx-font-size: 20px;
+    -fx-line-spacing: 24px;
+ }
+
+ .base {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 15px;
+    -fx-line-spacing: 20px;
+ }
+
+ .body {
+    -fx-font-family: "Segoe UI Regular";
+    -fx-font-size: 15px;
+    -fx-line-spacing: 20px;
+ }
+
+ .caption {
+    -fx-font-family: "Segoe UI Regular";
+    -fx-font-size: 12px;
+    -fx-line-spacing: 14px;
+ }
+
+/*******************************************************************************
+ *                                                                             *
  * Button and ToggleButton                                                     *
  *                                                                             *
  ******************************************************************************/
