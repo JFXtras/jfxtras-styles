@@ -536,6 +536,23 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Tree TableView                                                              *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-table-view {
+    table_border_color: #171717;
+    table_background_color: #333;
+    table_text_fill_color: #fff;
+    table_text_fill_hover_color: #fff;
+    table_hover_color: #3e3e3e;
+    table_unactive_color: #444;
+    table_column_vline_color: #3e3e3e;
+    table_selected_color: derive(accent_color, -15%)
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Tab Pane and Tabs                                                           *
  *                                                                             *
  ******************************************************************************/

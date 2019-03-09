@@ -1484,6 +1484,131 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Tree TableView                                                              *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-table-view {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: table_border_color;
+    -fx-border-color: table_border_color;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 1;
+    -fx-background-insets: 0 0 0 0;
+    -fx-font-size: 1.166667em;
+}
+
+.tree-table-view .column-drag-header {
+    -fx-background: accent_color;
+    -fx-background-color: accent_color;
+    -fx-border-color: transparent;
+    -fx-opacity: 0.3;
+}
+
+.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
+.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected {
+    -fx-background-color: table_unactive_color;
+    -fx-table-cell-border-color: table_unactive_color;
+}
+
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected {
+    -fx-background-color: table_selected_color;
+    -fx-table-cell-border-color: table_selected_color;
+}
+
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected > *,
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected > * {
+    -fx-text-fill: table_text_fill_hover_color;
+}
+
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:empty:hover {
+    -fx-background-color: table_background_color;
+    -fx-table-cell-border-color: table_background_color;
+}
+
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:hover {
+    -fx-background-color: table_hover_color;
+    -fx-text-fill: table_text_fill_hover_color;
+    -fx-table-cell-border-color: table_hover_color;
+}
+
+.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell {
+    -fx-background-color: table_background_color;
+    -fx-cell-size: 40px;
+    -fx-padding: 7 0 7 0;
+}
+
+.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > * {
+    -fx-text-fill: table_text_fill_color;
+}
+
+.tree-table-cell {
+    -fx-padding: 0 0 0 8;
+}
+
+.tree-table-view .arrow {
+    -fx-background-color: table_text_fill_color;
+    -fx-padding: 6 5 6 5;
+    -fx-shape: "M 15 4 L 15 24.0625 L 8.21875 17.28125 L 6.78125 18.71875 L 15.28125 27.21875 L 16 27.90625 L 16.71875 27.21875 L 25.21875 18.71875 L 23.78125 17.28125 L 17 24.0625 L 17 4 Z ";
+}
+
+.tree-table-row-cell .arrow {
+    -fx-padding: 5 4 5 4;
+    -fx-shape: "M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z ";
+}
+
+.tree-table-view .show-hide-column-image {
+    -fx-background-color: table_text_fill_color;
+    -fx-padding: 0.25em;
+    -fx-shape: "M 15 5 L 15 15 L 5 15 L 5 17 L 15 17 L 15 27 L 17 27 L 17 17 L 27 17 L 27 15 L 17 15 L 17 5 Z ";
+}
+
+.tree-table-view .column-resize-line {
+    -fx-background-color: table_column_vline_color;
+    -fx-padding: 0.0em 0.0416667em 0.0em 0.0416667em; /* 0 0.571429 0 0.571429 */
+}
+
+.tree-table-view:row-selection > .column-header-background > * {
+    -fx-background-color: table_background_color;
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: table_border_color;
+}
+
+.tree-table-view:row-selection > *,
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > *,
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header * {
+    -fx-background-color: table_background_color;
+}
+
+.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > *:hover,
+.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > *:pressed,
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header *:hover,
+.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > .nested-column-header *:hover,
+.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > .nested-column-header *:pressed {
+    -fx-background-color: table_hover_color;
+}
+
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .table-column,
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header > .table-column,
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .table-column:last-visible,
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header > .table-column:last-visible {
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-width: 0 0 0 0;
+}
+
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .table-column > .label,
+.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header > .table-column > .label {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: table_text_fill_color;
+    -fx-padding: 8;
+    -fx-alignment: center-left;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Tab Pane and Tabs                                                           *
  *                                                                             *
  ******************************************************************************/
