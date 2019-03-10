@@ -554,11 +554,11 @@
     table_text_color: #111;
     table_text_selected_color: #111;
     table_hover_color: #e6e6e6;
-    table_unactive_color: gray;
     table_column_vline_color: #e6e6e6;
 
     table_selected_color: derive(accent_color, 60%);
     table_selected_hover_color: derive(accent_color, 60%);
+    table_selected_unfocused_color: table_selected_color;
 }
 
 /*******************************************************************************

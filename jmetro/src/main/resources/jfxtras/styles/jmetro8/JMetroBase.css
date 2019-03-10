@@ -1513,8 +1513,8 @@
 
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected {
-    -fx-background-color: table_unactive_color;
-    -fx-table-cell-border-color: table_unactive_color;
+    -fx-background-color: table_selected_unfocused_color;
+    -fx-table-cell-border-color: table_selected_unfocused_color;
 }
 
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
