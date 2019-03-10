@@ -719,7 +719,6 @@
  ******************************************************************************/
 
 .menu-button {
-    -shrink-animate-on-press: true;
     -fx-background-color: menu_button_background_color;
     -fx-background-radius: 0;
     -fx-background-insets: 0;
@@ -760,8 +759,12 @@
     -fx-text-fill: menu_button_text_field_color;
 }
 
-.menu-button > .arrow-button {
+.menu-button:openvertically > .arrow-button {
     -fx-padding: 0 12 0 0;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0 12px 0 2px;
 }
 
 .menu-button > .arrow-button > .arrow {
