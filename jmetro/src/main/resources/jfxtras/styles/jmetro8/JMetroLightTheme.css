@@ -58,11 +58,11 @@
 }
 
 .button {
-    border_hover_default_color: derive(ACCENT_COLOR, -40%);
+    border_hover_default_color: derive(accent_color, -40%);
 }
 
 .toggle-button {
-    border_hover_selected_color: derive(ACCENT_COLOR, -40%);
+    border_hover_selected_color: derive(accent_color, -40%);
 }
 
 /*******************************************************************************
@@ -86,13 +86,19 @@
 
 /*******************************************************************************
  *                                                                             *
- * Hyper Link                                                                  *
+ * Hyperlink                                                                  *
  *                                                                             *
  ******************************************************************************/
 
 .hyperlink {
-    hyperlink_hover_color: #838383;
-    hyperlink_pressed_color: #acacac;
+    hyperlink_hover_color: derive(accent_color, -25%);
+    hyperlink_pressed_color: derive(accent_color, -70%);
+
+    hyperlink_disabled_color: #999999;
+}
+
+.hyperlink:disabled {
+    -fx-opacity: 0.7;
 }
 
 /*******************************************************************************

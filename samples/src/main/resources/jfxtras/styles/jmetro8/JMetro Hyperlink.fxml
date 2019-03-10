@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import org.controlsfx.control.Rating?>
+
 <?import javafx.scene.layout.*?>
-<?scenebuilder-stylesheet JMetroLightTheme.css?>
 
 <!--
   ~ Copyright (c) 2011-2019 JFXtras
@@ -31,13 +29,16 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Hyperlink?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="280.0" prefWidth="500" styleClass="background">
+            prefHeight="280.0" prefWidth="500" styleClass="background" >
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Rating" />
 
     <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" />
-    <Rating layoutX="43.0" layoutY="187.0" />
+    <Hyperlink layoutX="43.0" layoutY="187.0" text="This is an hyperlink" focusTraversable="false" />
 
     <Label layoutX="274.0" layoutY="165.0" styleClass="item-title" text="Disabled" />
-    <Rating disable="true" layoutX="274.0" layoutY="188.0" />
+    <Hyperlink layoutX="274.0" layoutY="188.0" text="Disabled hyperlink" disable="true" />
 </AnchorPane>
+

@@ -38,32 +38,33 @@ import javafx.stage.Stage;
 //import org.scenicview.ScenicView;
 
 public class ControlsSample extends Application {
-    static final private String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
-    static final private String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
-    static final private String BUTTON_RESOURCE = "JMetro Button.fxml";
-    static final private String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
-    static final private String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
-    static final private String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
-    static final private String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
-    static final private String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
-    static final private String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
-    static final private String RATING_RESOURCE = "JMetro Rating.fxml";
-    static final private String TEXT_FIELD_RESOURCE = "JMetro TextField.fxml";
-    static final private String TEXT_AREA_RESOURCE = "JMetro TextArea.fxml";
-    static final private String PASSWORD_FIELD_RESOURCE = "JMetro PasswordField.fxml";
-    static final private String PROGRESS_BAR_RESOURCE = "JMetro ProgressBar.fxml";
-    static final private String SLIDER_RESOURCE = "JMetro Slider.fxml";
-    static final private String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
-    static final private String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
-    static final private String SPINNER_RESOURCE = "JMetro Spinner.fxml";
-    static final private String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
-    static final private String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
-    static final private String TITLED_PANE_RESOURCE = "JMetro TitledPane.fxml";
-    static final private String ACCORDION_RESOURCE = "JMetro Accordion.fxml";
-    static final private String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
+    private static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
+    private static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
+    private static final String BUTTON_RESOURCE = "JMetro Button.fxml";
+    private static final String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
+    private static final String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
+    private static final String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
+    private static final String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
+    private static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
+    private static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
+    private static final String RATING_RESOURCE = "JMetro Rating.fxml";
+    private static final String TEXT_FIELD_RESOURCE = "JMetro TextField.fxml";
+    private static final String TEXT_AREA_RESOURCE = "JMetro TextArea.fxml";
+    private static final String PASSWORD_FIELD_RESOURCE = "JMetro PasswordField.fxml";
+    private static final String PROGRESS_BAR_RESOURCE = "JMetro ProgressBar.fxml";
+    private static final String SLIDER_RESOURCE = "JMetro Slider.fxml";
+    private static final String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
+    private static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
+    private static final String SPINNER_RESOURCE = "JMetro Spinner.fxml";
+    private static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
+    private static final String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
+    private static final String TITLED_PANE_RESOURCE = "JMetro TitledPane.fxml";
+    private static final String ACCORDION_RESOURCE = "JMetro Accordion.fxml";
+    private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
+    private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
 
-    static final private String RESOURCE = MENU_BUTTON_RESOURCE;
-    static final private JMetro.Style STYLE = JMetro.Style.DARK;
+    static final private String RESOURCE = HYPERLINK_RESOURCE;
+    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -84,7 +85,6 @@ public class ControlsSample extends Application {
                 listView.getSelectionModel().select(2);
             }
         });
-//        ScenicView.show(scene);
     }
 
 

@@ -96,13 +96,19 @@
 
 /*******************************************************************************
  *                                                                             *
- * Hyper Link                                                                  *
+ * Hyperlink                                                                  *
  *                                                                             *
  ******************************************************************************/
 
 .hyperlink {
-    hyperlink_hover_color: #8d8d8d;
-    hyperlink_pressed_color: #686868;
+    hyperlink_hover_color: derive(accent_color, 25%);
+    hyperlink_pressed_color: derive(accent_color, -15%);
+
+    hyperlink_disabled_color: #999999;
+}
+
+.hyperlink:disabled {
+    -fx-opacity: 0.5;
 }
 
 /*******************************************************************************

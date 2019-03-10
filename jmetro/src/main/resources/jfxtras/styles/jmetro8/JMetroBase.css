@@ -274,20 +274,35 @@
 
 /*******************************************************************************
  *                                                                             *
- * Hyper Link                                                                  *
+ * Hyperlink                                                                  *
  *                                                                             *
  ******************************************************************************/
+.hyperlink {
+    -fx-padding: 0.166667em 0.25em 0.166667em 0em; /* 2 3 2 3 */
 
-.hyperlink > .text {
-    -fx-fill: accent_color;
+    hyperlink_color: accent_color;
+    -fx-text-fill: hyperlink_color;
 }
 
-.hyperlink:hover > .text {
-    -fx-fill: hyperlink_hover_color;
+.hyperlink,
+.hyperlink:focused,
+.hyperlink:hover,
+.hyperlink:visited,
+.hyperlink:hover:visited,
+.hyperlink:visited:armed {
+    -fx-underline: true;
 }
 
-.hyperlink:pressed > .text {
-    -fx-fill: hyperlink_pressed_color;
+.hyperlink:hover {
+    -fx-text-fill: hyperlink_hover_color;
+}
+
+.hyperlink:pressed {
+    -fx-text-fill: hyperlink_pressed_color;
+}
+
+.hyperlink:disabled {
+    -fx-text-fill: hyperlink_disabled_color;
 }
 
 /*******************************************************************************
