@@ -551,12 +551,14 @@
 .tree-table-view {
     table_border_color: #e9e9e9;
     table_background_color: white;
-    table_text_fill_color: #111;
-    table_text_fill_hover_color: #fff;
+    table_text_color: #111;
+    table_text_selected_color: #111;
     table_hover_color: #e6e6e6;
     table_unactive_color: gray;
     table_column_vline_color: #e6e6e6;
-    table_selected_color: derive(accent_color, 15%)
+
+    table_selected_color: derive(accent_color, 60%);
+    table_selected_hover_color: derive(accent_color, 60%);
 }
 
 /*******************************************************************************

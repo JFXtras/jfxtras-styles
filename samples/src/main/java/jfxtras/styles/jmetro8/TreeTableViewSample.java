@@ -12,7 +12,7 @@ import java.util.List;
 
 public class TreeTableViewSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     List<Employee> employees = Arrays.asList(
             new Employee("Ethan Williams", "ethan.williams@example.com", "25", "Manager", "San Francisco"),
