@@ -1523,6 +1523,12 @@
     -fx-table-cell-border-color: table_selected_color;
 }
 
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:hover,
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:hover {
+    -fx-background-color: table_selected_hover_color;
+    -fx-table-cell-border-color: table_selected_hover_color;
+}
+
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected > *,
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected > * {
     -fx-text-fill: table_text_fill_hover_color;
