@@ -548,7 +548,7 @@
     table_hover_color: #3e3e3e;
     table_unactive_color: #444;
     table_column_vline_color: #3e3e3e;
-    table_selected_color: derive(accent_color, -15%)
+    table_selected_color: derive(accent_color, -35%)
 }
 
 /*******************************************************************************
