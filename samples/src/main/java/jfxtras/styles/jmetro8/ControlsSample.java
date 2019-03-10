@@ -60,8 +60,9 @@ public class ControlsSample extends Application {
     static final private String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
     static final private String TITLED_PANE_RESOURCE = "JMetro TitledPane.fxml";
     static final private String ACCORDION_RESOURCE = "JMetro Accordion.fxml";
+    static final private String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
 
-    static final private String RESOURCE = TEXT_FIELD_RESOURCE;
+    static final private String RESOURCE = MENU_BUTTON_RESOURCE;
     static final private JMetro.Style STYLE = JMetro.Style.DARK;
 
     @Override
@@ -72,7 +73,6 @@ public class ControlsSample extends Application {
         primaryStage.setTitle("JMetro");
 
         new JMetro(STYLE).applyTheme(root);
-
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
