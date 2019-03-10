@@ -1499,6 +1499,11 @@
     -fx-font-size: 1.166667em;
 }
 
+.tree-table-cell {
+    -fx-padding: 0.25em 0 0 0.333333em; /* 3 0 0 4 - The top padding will make the text centered inside the cell at the given font size */
+}
+
+
 .tree-table-view .column-drag-header {
     -fx-background: accent_color;
     -fx-background-color: accent_color;
@@ -1544,9 +1549,6 @@
     -fx-text-fill: table_text_fill_color;
 }
 
-.tree-table-cell {
-    -fx-padding: 0 0 0 8;
-}
 
 .tree-table-view .arrow {
     -fx-background-color: table_text_fill_color;
