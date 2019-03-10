@@ -42,6 +42,8 @@ public class TableViewSample extends Application {
 
     @Override
     public void start(Stage stage) {
+        System.setProperty("prism.lcdtext", "false");
+
         VBox vbox = new VBox();
         Scene scene = new Scene(vbox);
         stage.setTitle("Table View Sample");
@@ -58,18 +60,15 @@ public class TableViewSample extends Application {
 
         TableColumn firstNameCol = new TableColumn("First Name");
         firstNameCol.setMinWidth(150);
-        firstNameCol.setCellValueFactory(
-                new PropertyValueFactory<Person, String>("firstName"));
+        firstNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("firstName"));
 
         TableColumn lastNameCol = new TableColumn("Last Name");
         lastNameCol.setMinWidth(150);
-        lastNameCol.setCellValueFactory(
-                new PropertyValueFactory<Person, String>("lastName"));
+        lastNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("lastName"));
 
         TableColumn emailCol = new TableColumn("Email");
         emailCol.setMinWidth(250);
-        emailCol.setCellValueFactory(
-                new PropertyValueFactory<Person, String>("email"));
+        emailCol.setCellValueFactory(new PropertyValueFactory<Person, String>("email"));
 
         table.setItems(data);
         table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
