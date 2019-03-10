@@ -31,11 +31,23 @@
   -->
 
 <AnchorPane xmlns="http://javafx.com/javafx"
-            prefHeight="250.0" prefWidth="373.0" styleClass="background">
+            prefHeight="350.0" prefWidth="373.0" styleClass="background">
     <Label layoutX="43.0" layoutY="20.0" styleClass="header" text="MenuButton" />
 
-    <Label layoutX="43.0" layoutY="132.0" styleClass="item-title" text="Normal" />
+    <Label layoutX="43.0" layoutY="132.0" styleClass="item-title" text="Side Bottom / Top" />
     <MenuButton layoutX="43.0" layoutY="154.0" mnemonicParsing="false" text="Button" focusTraversable="false">
+        <items>
+            <MenuItem text="Copy" />
+            <MenuItem text="Cut" />
+            <MenuItem text="Paste" />
+            <MenuItem text="Duplicate" />
+            <SeparatorMenuItem />
+            <MenuItem text="Delete" />
+        </items>
+    </MenuButton>
+
+    <Label layoutX="43.0" layoutY="223.0" styleClass="item-title" text="Side Right / Left" />
+    <MenuButton layoutX="43.0" layoutY="245.0" mnemonicParsing="false" text="Button" focusTraversable="false" popupSide="RIGHT">
         <items>
             <MenuItem text="Copy" />
             <MenuItem text="Cut" />
