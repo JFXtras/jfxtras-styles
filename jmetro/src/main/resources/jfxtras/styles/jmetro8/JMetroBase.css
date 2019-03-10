@@ -714,6 +714,68 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Menu Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-button {
+    -shrink-animate-on-press: true;
+    -fx-background-color: menu_button_background_color;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+}
+
+.menu-button > .label,
+.menu-button:openvertically > .label {
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 16;
+    -fx-padding: 3 20 3 20;
+    -fx-label-padding: 0 -7 0 -7;
+    -fx-text-fill: menu_button_text_field_color;
+}
+
+.menu-button:hover {
+    -fx-border-color: menu_border_hover_color;
+}
+
+.menu-button:pressed {
+    -fx-border-color: menu_button_pressed_color;
+    -fx-background-color: menu_button_pressed_color;
+}
+
+.menu-button:focused {
+    -fx-border-color: transparent, white;
+    -fx-border-width: 1, 1;
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.menu-button:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: menu_button_background_color;
+    -fx-text-fill: menu_button_text_field_color;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0 12 0 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-background-color: menu_button_text_field_color;
+    -fx-shape: "M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z ";
+}
+
+.menu-button:openvertically > .arrow-button > .arrow {
+    -fx-background-color: menu_button_text_field_color;
+    -fx-shape: "M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z ";
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Password Field                                                              *
  *                                                                             *
  ******************************************************************************/
