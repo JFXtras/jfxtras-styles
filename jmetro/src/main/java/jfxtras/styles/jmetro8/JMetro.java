@@ -348,7 +348,6 @@ public class JMetro {
      * what initialized in applyTheme method.
      *
      * @param style theme style.
-     * @throws NullPointerException Initial reference to scene
      * and parent apparently have null reference.
      */
     public void setTheme(Style style) {
@@ -381,7 +380,6 @@ public class JMetro {
      * what initialized in applyTheme method.
      *
      * @param accent accent color from Accent enum.
-     * @throws NullPointerException Initial reference to scene
      * and parent apparently have null reference.
      */
     public void setAccent(Accent accent) {
@@ -404,10 +402,9 @@ public class JMetro {
      * what initialized in applyTheme method.
      *
      * @param accent custom accent color.
-     * @throws NullPointerException Initial reference to scene
      * and parent apparently have null reference.
      */
-    public void setAccent(Color accent) {
+    public void setKnownAccent(Color accent) {
         String accentColorFormatted =
                 accent.toString().split("x")[1];
 
