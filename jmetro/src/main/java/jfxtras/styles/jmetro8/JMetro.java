@@ -350,7 +350,7 @@ public class JMetro {
      * @param style theme style.
      * and parent apparently have null reference.
      */
-    public void setTheme(Style style) {
+    public void setStyle(Style style) {
         scene.getStylesheets().removeIf(css -> {
             String[] cssFile = css.split("/");
             return cssFile[cssFile.length - 1].equals("JMetroLightTheme.css");
@@ -373,7 +373,7 @@ public class JMetro {
     /**
      * @return theme style in current class instance.
      */
-    public Style getTheme() { return style; }
+    public Style getStyle() { return style; }
 
     /**
      * It method change accent color on scene or parent
