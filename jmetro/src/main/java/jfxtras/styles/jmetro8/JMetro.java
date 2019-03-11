@@ -382,7 +382,7 @@ public class JMetro {
      * @param accent accent color from Accent enum.
      * and parent apparently have null reference.
      */
-    public void setAccent(Accent accent) {
+    public void setKnownAccent(Accent accent) {
         if (scene != null) {
             scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
             this.accent = accent;
@@ -404,7 +404,7 @@ public class JMetro {
      * @param accent custom accent color.
      * and parent apparently have null reference.
      */
-    public void setKnownAccent(Color accent) {
+    public void setAccent(Color accent) {
         String accentColorFormatted =
                 accent.toString().split("x")[1];
 
