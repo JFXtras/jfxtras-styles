@@ -56,10 +56,12 @@ public class JMetro {
     }
 
     public void applyTheme(Scene scene){
+        scene.getStylesheets().add(getClass().getResource("JMetroBase.css").toExternalForm());
         scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
     }
 
     public void applyTheme(Parent parent){
+        parent.getStylesheets().add(getClass().getResource("JMetroBase.css").toExternalForm());
         parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
     }
 
