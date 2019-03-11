@@ -368,8 +368,6 @@ public class JMetro {
         } else if (parent != null) {
             parent.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
             this.style = style;
-        } else {
-            throw new NullPointerException("Initial reference to scene and parent apparently have null reference.");
         }
     }
 
@@ -393,8 +391,6 @@ public class JMetro {
         } else if (parent != null) {
             parent.setStyle(String.format("accent_color: %s", accent.getColorName()));
             this.accent = accent;
-        } else {
-            throw new NullPointerException("Initial reference to scene and parent apparently have null reference.");
         }
     }
 
@@ -421,8 +417,6 @@ public class JMetro {
         } else if (parent != null) {
             parent.setStyle(String.format("accent_color: %s", accentColorFormatted));
             accentColor = accent;
-        } else {
-            throw new NullPointerException("Initial reference to scene and parent apparently have null reference.");
         }
     }
 
