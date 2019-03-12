@@ -380,11 +380,11 @@
     border_color: #111;
 
     cell_hover_color: #dadada;
-    cell_pressed_color: #a2a2a2;
+    cell_pressed_color: #c2c2c2;
 
-    cell_selected_color: accent_color;
-    cell_selected_hover_color: derive(accent_color, 15%);
-    cell_selected_pressed_color: derive(accent_color, 25%);
+    cell_selected_color: derive(accent_color, 90%);
+    cell_selected_hover_color: derive(accent_color, 70%);
+    cell_selected_pressed_color: derive(accent_color, 60%);
 }
 
 /*******************************************************************************
