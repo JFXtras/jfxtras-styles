@@ -7,14 +7,8 @@ public enum Style {
     protected String getStyleSheetFileName() {
         String stylesheet = null;
 
-        switch (this) {
-            case LIGHT:
-                stylesheet = "JMetroLightTheme.css";
-                break;
-            case DARK:
-                stylesheet = "JMetroDarkTheme.css";
-                break;
-        }
+        if (this == Style.LIGHT) stylesheet = "JMetroLightTheme.css";
+        else if (this == Style.DARK) stylesheet = "JMetroDarkTheme.css";
 
         return stylesheet;
     }
