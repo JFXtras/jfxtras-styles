@@ -106,156 +106,7 @@ public class JMetro {
         YELLOW_GOLD;
 
         private String getColorName() {
-            String color = "JMETRO_BLUE";
-
-            switch (this) {
-                case YELLOW_GOLD:
-                    color = "JMETRO_YELLOW_GOLD";
-                    break;
-                case GOLD:
-                    color = "JMETRO_GOLD";
-                    break;
-                case ORANGE_BRIGHT:
-                    color = "JMETRO_ORANGE_BRIGHT";
-                    break;
-                case ORANGE_DARK:
-                    color = "JMETRO_ORANGE_DARK";
-                    break;
-                case RUST:
-                    color = "JMETRO_RUST";
-                    break;
-                case PALE_RUST:
-                    color = "JMETRO_PALE_RUST";
-                    break;
-                case BRICK_RED:
-                    color = "JMETRO_BRICK_RED";
-                    break;
-                case MOD_RED:
-                    color = "JMETRO_MOD_RED";
-                    break;
-                case PALE_RED:
-                    color = "JMETRO_PALE_RED";
-                    break;
-                case RED:
-                    color = "JMETRO_RED";
-                    break;
-                case ROSE_BRIGHT:
-                    color = "JMETRO_ROSE_BRIGHT";
-                    break;
-                case ROSE:
-                    color = "JMETRO_ROSE";
-                    break;
-                case PLUM_LIGHT:
-                    color = "JMETRO_PLUM_LIGHT";
-                    break;
-                case PLUM:
-                    color = "JMETRO_PLUM";
-                    break;
-                case ORCHID_LIGHT:
-                    color = "JMETRO_ORCHID_LIGHT";
-                    break;
-                case ORCHID:
-                    color = "JMETRO_ORCHID";
-                    break;
-                case BLUE:
-                    color = "JMETRO_BLUE";
-                    break;
-                case NAVY_BLUE:
-                    color = "JMETRO_NAVY_BLUE";
-                    break;
-                case PURPLE_SHADOW:
-                    color = "JMETRO_PURPLE_SHADOW";
-                    break;
-                case PURPLE_SHADOW_DARK:
-                    color = "JMETRO_PURPLE_SHADOW_DARK";
-                    break;
-                case IRIS_PASTEL:
-                    color = "JMETRO_IRIS_PASTEL";
-                    break;
-                case IRIS_SPRING:
-                    color = "JMETRO_IRIS_SPRING";
-                    break;
-                case VIOLET_RED_LIGHT:
-                    color = "JMETRO_VIOLET_RED_LIGHT";
-                    break;
-                case VIOLET_RED:
-                    color = "JMETRO_VIOLET_RED";
-                    break;
-                case COOL_BLUE_BRIGHT:
-                    color = "JMETRO_COOL_BLUE_BRIGHT";
-                    break;
-                case COOL_BLUE:
-                    color = "JMETRO_COOL_BLUE";
-                    break;
-                case SEAFOAM:
-                    color = "JMETRO_SEAFOAM";
-                    break;
-                case SEAFOAM_TEAL:
-                    color = "JMETRO_SEAFOAM_TEAL";
-                    break;
-                case MINT_LIGHT:
-                    color = "JMETRO_MINT_LIGHT";
-                    break;
-                case MINT_DARK:
-                    color = "JMETRO_MINT_DARK";
-                    break;
-                case TURF_GREEN:
-                    color = "JMETRO_TURF_GREEN";
-                    break;
-                case SPORT_GREEN:
-                    color = "JMETRO_SPORT_GREEN";
-                    break;
-                case GRAY:
-                    color = "JMETRO_GRAY";
-                    break;
-                case GRAY_BROWN:
-                    color = "JMETRO_GRAY_BROWN";
-                    break;
-                case STEEL_BLUE:
-                    color = "JMETRO_STEEL_BLUE";
-                    break;
-                case METAL_BLUE:
-                    color = "JMETRO_METAL_BLUE";
-                    break;
-                case PALE_MOSS:
-                    color = "JMETRO_PALE_MOSS";
-                    break;
-                case MOSS:
-                    color = "JMETRO_MOSS";
-                    break;
-                case MEADOW_GREEN:
-                    color = "JMETRO_MEADOW_GREEN";
-                    break;
-                case GREEN:
-                    color = "JMETRO_GREEN";
-                    break;
-                case OVERCAST:
-                    color = "JMETRO_OVERCAST";
-                    break;
-                case STORM:
-                    color = "JMETRO_STORM";
-                    break;
-                case BLUE_GRAY:
-                    color = "JMETRO_BLUE_GRAY";
-                    break;
-                case GRAY_DARK:
-                    color = "JMETRO_GRAY_DARK";
-                    break;
-                case LIDDY_GREEN:
-                    color = "JMETRO_LIDDY_GREEN";
-                    break;
-                case SAGE:
-                    color = "JMETRO_SAGE";
-                    break;
-                case CAMOUFLAGE_DESERT:
-                    color = "JMETRO_CAMOUFLAGE_DESERT";
-                    break;
-                case CAMOUFLAGE:
-                    color = "JMETRO_CAMOUFLAGE";
-                    break;
-            }
-
-            return color;
+            return "JMETRO_" + name();
         }
     }
 
@@ -407,6 +258,10 @@ public class JMetro {
     public void setAccent(Color accent) {
         String accentColorFormatted =
                 accent.toString().split("x")[1];
+
+        if (!accentColorFormatted.contains("#")) {
+            accentColorFormatted = "#" + accentColorFormatted;
+        }
 
         if (scene != null) {
             scene.getRoot().setStyle(String.format("accent_color: %s", accentColorFormatted));
