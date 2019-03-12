@@ -91,7 +91,6 @@ public class JMetro {
         scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
 
         if (accentColor != null) {
-            //String accentColorFormatted = 0xd2691eff;
             String accentColorFormatted =
                     accentColor.toString().split("x")[1];
             scene.getRoot().setStyle(String.format("accent_color: %s", accentColorFormatted));
@@ -158,7 +157,7 @@ public class JMetro {
      * @param accent accent color from Accent enum.
      * and parent apparently have null reference.
      */
-    public void setKnownAccent(Accent accent) {
+    public void setAccent(Accent accent) {
         if (scene != null) {
             scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
             this.accent = accent;
@@ -180,7 +179,7 @@ public class JMetro {
      * @param accent custom accent color.
      * and parent apparently have null reference.
      */
-    public void setAccent(Color accent) {
+    public void setAccentAsColor(Color accent) {
         String accentColorFormatted =
                 accent.toString().split("x")[1];
 
