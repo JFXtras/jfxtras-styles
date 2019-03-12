@@ -398,11 +398,6 @@
     cell_selected_color: accent_color;
     cell_selected_hover_color: derive(accent_color, 15%);
     cell_selected_pressed_color: derive(accent_color, 25%);
-
-    cell_pressed_text_color: white;
-    cell_selected_text_color: white;
-    cell_selected_hover_text_color: white;
-    cell_selected_pressed_text_color: white;
 }
 
 /*******************************************************************************
