@@ -5,11 +5,9 @@ public enum Style {
     DARK;
 
     protected String getStyleSheetFileName() {
-        String stylesheet = null;
+        if (this == Style.LIGHT) return "JMetroLightTheme.css";
+        else if (this == Style.DARK) return "JMetroDarkTheme.css";
 
-        if (this == Style.LIGHT) stylesheet = "JMetroLightTheme.css";
-        else if (this == Style.DARK) stylesheet = "JMetroDarkTheme.css";
-
-        return stylesheet;
+        return "JMetroLightTheme.css";
     }
 }
