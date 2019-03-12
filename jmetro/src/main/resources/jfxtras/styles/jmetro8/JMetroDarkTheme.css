@@ -361,9 +361,14 @@
     cell_hover_color: #515151;
     cell_pressed_color: #3e3e3e;
 
-    cell_selected_color: derive(accent_color, 20%);
-    cell_selected_hover_color: derive(accent_color, 40%);
-    cell_selected_pressed_color: derive(accent_color, 50%);
+    cell_selected_color: accent_color;
+    cell_selected_hover_color: derive(accent_color, 15%);
+    cell_selected_pressed_color: derive(accent_color, 25%);
+
+    cell_pressed_text_color: white;
+    cell_selected_text_color: white;
+    cell_selected_hover_text_color: white;
+    cell_selected_pressed_text_color: white;
 }
 
 /*******************************************************************************
