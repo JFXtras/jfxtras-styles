@@ -93,6 +93,11 @@ public class JMetro {
         if (accentColor != null) {
             String accentColorFormatted =
                     accentColor.toString().split("x")[1];
+
+            if (!accentColorFormatted.contains("#")) {
+                accentColorFormatted = "#" + accentColorFormatted;
+            }
+
             scene.getRoot().setStyle(String.format("accent_color: %s", accentColorFormatted));
         }
 
@@ -112,6 +117,11 @@ public class JMetro {
         if (accentColor != null) {
             String accentColorFormatted =
                     accentColor.toString().split("x")[1];
+
+            if (!accentColorFormatted.contains("#")) {
+                accentColorFormatted = "#" + accentColorFormatted;
+            }
+
             parent.setStyle(String.format("accent_color: %s", accentColorFormatted));
         }
 
