@@ -96,6 +96,23 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Hyperlink                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.hyperlink {
+    hyperlink_hover_color: derive(accent_color, 25%);
+    hyperlink_pressed_color: derive(accent_color, -15%);
+
+    hyperlink_disabled_color: #999999;
+}
+
+.hyperlink:disabled {
+    -fx-opacity: 0.5;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Radio Button                                                                *
  *                                                                             *
  ******************************************************************************/
@@ -222,9 +239,26 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Menu Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-button {
+    menu_button_background_color: #333;
+    menu_button_text_field_color: white;
+    menu_border_hover_color: #858585;
+    menu_button_pressed_color: #666;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Progress Bar                                                                *
  *                                                                             *
  ******************************************************************************/
+
+.progress-bar {
+    progress_background_color: #333;
+}
 
 /*******************************************************************************
  *                                                                             *
@@ -533,6 +567,26 @@
     arrow_color: white;
     arrow__hover_color: text_hover_color;
     arrow_selected_hover_color: text_selected_color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Tree TableView                                                              *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-table-view {
+    table_border_color: #171717;
+    table_background_color: #333;
+    table_text_color: #fff;
+    table_text_selected_color: #fff;
+    table_hover_color: #3e3e3e;
+
+    table_column_vline_color: #3e3e3e;
+
+    table_selected_color: derive(accent_color, -35%);
+    table_selected_hover_color: derive(accent_color, -30%);
+    table_selected_unfocused_color: table_selected_color;
 }
 
 /*******************************************************************************

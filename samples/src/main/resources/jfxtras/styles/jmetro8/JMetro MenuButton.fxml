@@ -2,11 +2,9 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?scenebuilder-stylesheet JMetroLightTheme.css?>
-<?scenebuilder-stylesheet JMetroDarkTheme.css?>
 
 <!--
-  ~ Copyright (c) 2011-2018 JFXtras
+  ~ Copyright (c) 2011-2019 JFXtras
   ~  All rights reserved.
   ~
   ~  Redistribution and use in source and binary forms, with or without
@@ -32,19 +30,34 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="373.0" styleClass="background" >
-  <Label layoutX="43.0" layoutY="20.0" styleClass="header" text="Button" />
+<AnchorPane xmlns="http://javafx.com/javafx"
+            prefHeight="350.0" prefWidth="373.0" styleClass="background">
+    <Label layoutX="43.0" layoutY="20.0" styleClass="header" text="MenuButton" />
 
-  <Label layoutX="43.0" layoutY="132.0" styleClass="item-title" text="Normal" />
-  <Button layoutX="43.0" layoutY="154.0" mnemonicParsing="false" text="Button" focusTraversable="false" />
+    <Label layoutX="43.0" layoutY="132.0" styleClass="item-title" text="Side Bottom / Top" />
+    <MenuButton layoutX="43.0" layoutY="154.0" mnemonicParsing="false" text="Button" focusTraversable="false">
+        <items>
+            <MenuItem text="Copy" />
+            <MenuItem text="Cut" />
+            <MenuItem text="Paste" />
+            <MenuItem text="Duplicate" />
+            <SeparatorMenuItem />
+            <MenuItem text="Delete" />
+        </items>
+    </MenuButton>
 
-  <Label layoutX="210.0" layoutY="132.0" styleClass="item-title" text="Default" />
-  <Button layoutX="210.0" layoutY="154.0" mnemonicParsing="false" text="Button" defaultButton="true" focusTraversable="false" />
+    <Label layoutX="43.0" layoutY="223.0" styleClass="item-title" text="Side Right / Left" />
+    <MenuButton layoutX="43.0" layoutY="245.0" mnemonicParsing="false" text="Button" focusTraversable="false" popupSide="RIGHT">
+        <items>
+            <MenuItem text="Copy" />
+            <MenuItem text="Cut" />
+            <MenuItem text="Paste" />
+            <MenuItem text="Duplicate" />
+            <SeparatorMenuItem />
+            <MenuItem text="Delete" />
+        </items>
+    </MenuButton>
 
-  <Label layoutX="43.0" layoutY="223.0" styleClass="item-title" text="Disabled" />
-  <Button layoutX="43.0" layoutY="245.0" mnemonicParsing="false" text="Button" disable="true" />
-
-  <Label layoutX="210.0" layoutY="223.0" styleClass="item-title" text="Disabled" />
-  <Button layoutX="210.0" layoutY="245.0" mnemonicParsing="false" text="Button" defaultButton="true" disable="true" />
+    <Label layoutX="210.0" layoutY="132.0" styleClass="item-title" text="Disabled" />
+    <MenuButton layoutX="210.0" layoutY="154.0" mnemonicParsing="false" text="Button" disable="true" />
 </AnchorPane>
