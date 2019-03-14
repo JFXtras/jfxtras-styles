@@ -30,6 +30,7 @@ package jfxtras.styles.jmetro8;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import jfxtras.styles.jmetro8.controls.FluentButton;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,6 +41,7 @@ public class JMetro {
     private Color accentColor;
     private Scene scene;
     private Parent parent;
+    public FluentButton button;
 
     /**
      * JMetro class constructor.
@@ -61,6 +63,7 @@ public class JMetro {
     public JMetro(Style style, Accent accent) {
         this.style = style;
         this.accent = accent;
+        this.button = new FluentButton();
         validateJavaVersion();
     }
 
@@ -77,6 +80,7 @@ public class JMetro {
         this.style = style;
         this.accent = Accent.BLUE;
         this.accentColor = accent;
+        this.button = new FluentButton();
         validateJavaVersion();
     }
 
@@ -102,6 +106,7 @@ public class JMetro {
         }
 
         this.scene = scene;
+        this.button.init(scene);
     }
 
     /**
@@ -126,6 +131,7 @@ public class JMetro {
         }
 
         this.parent = parent;
+        this.button.init(parent);
     }
 
     /**
