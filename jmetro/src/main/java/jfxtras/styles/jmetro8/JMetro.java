@@ -86,6 +86,7 @@ public class JMetro {
      * @param scene your reference on window scene.
      */
     public void applyTheme(Scene scene) {
+        this.scene = scene;
         applyTheme(scene.getRoot());
     }
 
