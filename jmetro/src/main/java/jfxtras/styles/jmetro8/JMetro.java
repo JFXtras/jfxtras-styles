@@ -86,22 +86,7 @@ public class JMetro {
      * @param scene your reference on window scene.
      */
     public void applyTheme(Scene scene) {
-        scene.getStylesheets().add(getClass().getResource(style.getStyleSheetFileName()).toExternalForm());
-        scene.getStylesheets().add(getClass().getResource("JMetroColors.css").toExternalForm());
-        scene.getRoot().setStyle(String.format("accent_color: %s", accent.getColorName()));
-
-        if (accentColor != null) {
-            String accentColorFormatted =
-                    accentColor.toString().split("x")[1];
-
-            if (!accentColorFormatted.contains("#")) {
-                accentColorFormatted = "#" + accentColorFormatted;
-            }
-
-            scene.getRoot().setStyle(String.format("accent_color: %s", accentColorFormatted));
-        }
-
-        this.scene = scene;
+        applyTheme(scene.getRoot());
     }
 
     /**
