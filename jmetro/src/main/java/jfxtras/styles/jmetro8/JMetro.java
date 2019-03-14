@@ -31,6 +31,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import jfxtras.styles.jmetro8.controls.FluentButton;
+import jfxtras.styles.jmetro8.controls.FluentMenuButton;
 import jfxtras.styles.jmetro8.controls.FluentToggleButton;
 
 import java.util.logging.Level;
@@ -44,6 +45,7 @@ public class JMetro {
     private Parent parent;
     public FluentButton button;
     public FluentToggleButton toggleButton;
+    public FluentMenuButton menuButton;
 
     /**
      * JMetro class constructor.
@@ -67,6 +69,7 @@ public class JMetro {
         this.accent = accent;
         this.button = new FluentButton();
         this.toggleButton = new FluentToggleButton();
+        this.menuButton = new FluentMenuButton();
         validateJavaVersion();
     }
 
@@ -85,6 +88,7 @@ public class JMetro {
         this.accentColor = accent;
         this.button = new FluentButton();
         this.toggleButton = new FluentToggleButton();
+        this.menuButton = new FluentMenuButton();
         validateJavaVersion();
     }
 
@@ -122,6 +126,7 @@ public class JMetro {
         this.parent = parent;
         this.button.init(parent);
         this.toggleButton.init(parent);
+        this.menuButton.init(scene);
     }
 
     /**
