@@ -580,7 +580,7 @@
     table_column_vline_color: #3e3e3e;
 
     table_selected_color: derive(accent_color, -35%);
-    table_selected_hover_color: derive(accent_color, -30%);
+    table_selected_hover_color: derive(accent_color, -20%);
     table_selected_unfocused_color: table_selected_color;
 }
 
