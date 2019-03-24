@@ -33,7 +33,7 @@
 <?import javafx.scene.control.Hyperlink?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="280.0" prefWidth="500" styleClass="background" >
-    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Rating" />
+    <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Hyperlink" />
 
     <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" />
     <Hyperlink layoutX="43.0" layoutY="187.0" text="This is an hyperlink" focusTraversable="false" />
