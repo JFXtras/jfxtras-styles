@@ -49,20 +49,9 @@ public class ThemeTester extends Application {
     private static String MODENA_STYLESHEET_URL;
     private static String MODENA_EMBEDDED_STYLESHEET_URL;
     private static String MODENA_STYLESHEET_BASE;
-//    private static String CASPIAN_STYLESHEET_URL;
-//    private static String CASPIAN_STYLESHEET_BASE;
 
     static {
         try {
-            // these are not supported ways to find the platform themes and may
-            // change release to release. Just used here for testing.
-//            File caspianCssFile = new File("../../../modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/caspian/caspian.css");
-//            if (!caspianCssFile.exists()) {
-//                caspianCssFile = new File("rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/caspian/caspian.css");
-//            }
-//            CASPIAN_STYLESHEET_URL = caspianCssFile.exists() ?
-//                    caspianCssFile.toURI().toURL().toExternalForm() :
-//                    com.sun.javafx.scene.control.skin.ButtonSkin.class.getResource("caspian/caspian.css").toExternalForm();
             File modenaCssFile = new File("../../../modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/modena/modena.css");
             if (!modenaCssFile.exists()) {
                 modenaCssFile = new File("rt/modules/controls/src/main/resources/com/sun/javafx/scene/control/skin/modena/modena.css");
@@ -73,7 +62,6 @@ public class ThemeTester extends Application {
                     modenaCssFile.toURI().toURL().toExternalForm() :
                     com.sun.javafx.scene.control.skin.ButtonSkin.class.getResource("modena/modena.css").toExternalForm();
             MODENA_STYLESHEET_BASE = MODENA_STYLESHEET_URL.substring(0,MODENA_STYLESHEET_URL.lastIndexOf('/')+1);
-//            CASPIAN_STYLESHEET_BASE = CASPIAN_STYLESHEET_URL.substring(0,CASPIAN_STYLESHEET_URL.lastIndexOf('/')+1);
             MODENA_EMBEDDED_STYLESHEET_URL = MODENA_STYLESHEET_BASE + "modena-embedded-performance.css";
             System.out.println("MODENA_EMBEDDED_STYLESHEET_URL = " + MODENA_EMBEDDED_STYLESHEET_URL);
         } catch (MalformedURLException ex) {
@@ -161,7 +149,18 @@ public class ThemeTester extends Application {
         // build UI
         rebuildUI(true,false,0, null);
         // show UI
-        scene = new Scene(outerRoot, 1024, 768);
+        double sceneWidth = 1500;
+        double sceneHeight = 768;
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        if (screenSize.getWidth() < sceneWidth) {
+            sceneWidth = screenSize.getWidth();
+        }
+        if (screenSize.getHeight() < sceneHeight) {
+            sceneHeight = screenSize.getHeight();
+        }
+        scene = new Scene(outerRoot, sceneWidth, sceneHeight);
+
+
         scene.getStylesheets().add(TEST_APP_CSS_URL);
 
         stage.setScene(scene);
@@ -198,27 +197,7 @@ public class ThemeTester extends Application {
     private void updateTheme(Theme theme, JMetro.Style style) {
         final SamplePage.Section scrolledSection = samplePageNavigation == null ? null : samplePageNavigation.getCurrentSection();
 
-//        styleSheetContent = theme == Theme.MODENA ?
-//                loadUrl(MODENA_STYLESHEET_URL) :
-//                "";
         styleSheetContent = loadUrl(MODENA_STYLESHEET_URL);
-
-
-//        if (!(theme == Theme.MODENA) &&
-//                (baseColor == null || baseColor == Color.TRANSPARENT) &&
-//                (backgroundColor == null || backgroundColor == Color.TRANSPARENT) &&
-//                (accentColor == null || accentColor == Color.TRANSPARENT) &&
-//                (fontName == null)) {
-//            // no customizations
-//            System.out.println("USING NO CUSTIMIZATIONS TO CSS, stylesheet = " + theme.getThemeName());
-//
-//            // load theme
-//            setUserAgentStylesheet("internal:stylesheet" + Math.random() + ".css");
-//            if (root != null) root.requestLayout();
-//            // restore scrolled section
-//            Platform.runLater(() -> samplePageNavigation.setCurrentSection(scrolledSection));
-//            return;
-//        }
 
         if ((theme == Theme.MODENA) && embeddedPerformanceMode) {
             styleSheetContent += loadUrl(MODENA_EMBEDDED_STYLESHEET_URL);
@@ -243,11 +222,6 @@ public class ThemeTester extends Application {
             styleSheetContent += "    -fx-font:"+fontSize+"px \""+fontName+"\";\n";
         }
         styleSheetContent += "}\n";
-
-//        // set white background for caspian
-//        if (!modena) {
-//            styleSheetContent += ".needs-background {\n-fx-background-color: white;\n}";
-//        }
 
         if (scene != null) {
             scene.getStylesheets().clear();
