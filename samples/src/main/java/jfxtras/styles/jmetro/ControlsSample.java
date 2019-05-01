@@ -25,7 +25,7 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package jfxtras.styles.jmetro8;
+package jfxtras.styles.jmetro;
 
 
 import javafx.application.Application;
@@ -35,6 +35,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro8.JMetro;
 //import org.scenicview.ScenicView;
 
 public class ControlsSample extends Application {
@@ -63,7 +64,7 @@ public class ControlsSample extends Application {
     private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
 
-    static final private String RESOURCE = HYPERLINK_RESOURCE;
+    static final private String RESOURCE = MENU_BUTTON_RESOURCE;
     static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override

@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro8;
+package jfxtras.styles.jmetro;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.layout.VBox;
+import jfxtras.styles.jmetro8.JMetro;
 //import org.scenicview.ScenicView;
 
 public class TreeViewSample extends Application {

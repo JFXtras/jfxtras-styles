@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?scenebuilder-stylesheet JMetroDarkTheme.css?>
 
 <!--
@@ -35,8 +32,7 @@
   -->
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0000999999975" prefWidth="371.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
-  <children>
-    <Label layoutX="72.0" layoutY="146.0" styleClass="item-title" text="Right click here to bring up the context menu">
+    <Label layoutX="50.0" layoutY="146.0" styleClass="item-title" text="Right click here to bring up the context menu">
       <contextMenu>
         <ContextMenu>
           <items>
@@ -49,5 +45,4 @@
       </contextMenu>
     </Label>
     <Label layoutX="35.0" layoutY="22.0" styleClass="header" text="Context Menu" />
-  </children>
 </AnchorPane>

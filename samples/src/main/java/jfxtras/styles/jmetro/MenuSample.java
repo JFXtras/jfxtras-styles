@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro8;
+package jfxtras.styles.jmetro;
 
 import java.util.AbstractMap.SimpleEntry;
 import java.util.Map.Entry;
@@ -15,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.input.*;
+import jfxtras.styles.jmetro8.JMetro;
 
 public class MenuSample extends Application {
 

@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro8;
+package jfxtras.styles.jmetro;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -6,6 +6,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro8.JMetro;
 
 public class TabPaneSample extends Application {
 

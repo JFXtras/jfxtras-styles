@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro8.controlssample;
+package jfxtras.styles.jmetro.controlssample;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;

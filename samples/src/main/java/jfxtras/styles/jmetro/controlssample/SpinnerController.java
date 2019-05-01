@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro8.controlssample;
+package jfxtras.styles.jmetro.controlssample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
