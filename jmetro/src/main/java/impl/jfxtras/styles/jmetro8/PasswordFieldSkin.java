@@ -31,7 +31,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class PasswordFieldSkin extends TextFieldWithButtonSkin{
-    private boolean shouldMaskText = true;
+    private boolean isMaskTextDisabled = false;
 
     public PasswordFieldSkin(TextField textField) {
         super(textField);
@@ -40,9 +40,9 @@ public class PasswordFieldSkin extends TextFieldWithButtonSkin{
     @Override
     protected void rightButtonPressed() {
         TextField textField = getSkinnable();
-        shouldMaskText = false;
+        isMaskTextDisabled = true;
         textField.setText(textField.getText());
-        shouldMaskText = true;
+        isMaskTextDisabled = false;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class PasswordFieldSkin extends TextFieldWithButtonSkin{
     }
 
     @Override protected String maskText(String txt) {
-        if (getSkinnable() instanceof PasswordField && shouldMaskText) {
+        if (getSkinnable() instanceof PasswordField && !isMaskTextDisabled) {
             int n = txt.length();
             StringBuilder passwordBuilder = new StringBuilder(n);
             for (int i = 0; i < n; i++) {
