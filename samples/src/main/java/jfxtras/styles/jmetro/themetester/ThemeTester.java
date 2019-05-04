@@ -159,7 +159,7 @@ public class ThemeTester extends Application {
         // set user agent stylesheet
         updateTheme(Theme.JMETRO, JMetro.Style.LIGHT);
         // build UI
-        rebuildUI(true,false,0, null);
+        rebuildUI(false,false,0, null);
 
 
         scene.getStylesheets().add(TEST_APP_CSS_URL);
