@@ -140,14 +140,10 @@ public class ThemeTester extends Application {
             test = true;
         }
         mainStage = stage;
-        // set user agent stylesheet
-        updateTheme(Theme.MODENA, null);
         // build Menu Bar
         outerRoot = new BorderPane();
         outerRoot.setTop(buildMenuBar());
         outerRoot.setCenter(root);
-        // build UI
-        rebuildUI(true,false,0, null);
         // show UI
         double sceneWidth = 1500;
         double sceneHeight = 768;
@@ -159,6 +155,11 @@ public class ThemeTester extends Application {
             sceneHeight = screenSize.getHeight();
         }
         scene = new Scene(outerRoot, sceneWidth, sceneHeight);
+
+        // set user agent stylesheet
+        updateTheme(Theme.JMETRO, JMetro.Style.LIGHT);
+        // build UI
+        rebuildUI(true,false,0, null);
 
 
         scene.getStylesheets().add(TEST_APP_CSS_URL);
