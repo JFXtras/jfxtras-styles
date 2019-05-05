@@ -265,7 +265,7 @@ public class ThemeTester extends Application {
                     ).build(),
                     TabBuilder.create().text("Alignment Test").content(
                             ScrollPaneBuilder.create().content(
-                                    heightTest = (Node)FXMLLoader.load(ThemeTester.class.getResource("SameHeightTest.fxml"))
+                                    heightTest = (Node)FXMLLoader.load(ThemeTester.class.getResource("AlignmentTest.fxml"))
                             ).build()
                     ).build(),
                     TabBuilder.create().text("Combinations").content(
