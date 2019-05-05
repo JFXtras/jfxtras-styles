@@ -1386,7 +1386,7 @@
     -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
 
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.333333em; /* 16 */
+    -fx-font-size: 1em; /* 12 */
 }
 
 .choice-box > .label {
@@ -1414,7 +1414,7 @@
 
 /* ARROW */
 .choice-box > .open-button > .arrow {
-    -fx-padding: 3.5px 6px 3.5px 6px;
+    -fx-padding: 0.333333em 0.5em 0.333333em 0.5em; /* 4 6 4 6 */
     -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
     -fx-background-insets: 0 0 0 0, 0;
     -fx-background-color: arrow_color;

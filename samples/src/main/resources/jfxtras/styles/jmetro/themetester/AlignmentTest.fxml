@@ -41,7 +41,7 @@
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </SplitMenuButton>
-            <ChoiceBox prefWidth="60.0">
+            <ChoiceBox prefWidth="100.0">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
@@ -50,7 +50,7 @@
                 </FXCollections>
               </items>
             </ChoiceBox>
-            <ComboBox prefWidth="60.0">
+            <ComboBox prefWidth="100.0">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
@@ -59,7 +59,7 @@
                 </FXCollections>
               </items>
             </ComboBox>
-            <ComboBox editable="true" prefWidth="60.0" promptText="Choose">
+            <ComboBox editable="true" prefWidth="100.0" promptText="Choose">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
@@ -102,7 +102,7 @@
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </SplitMenuButton>
-            <ChoiceBox prefWidth="60.0">
+            <ChoiceBox prefWidth="100.0">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
@@ -111,7 +111,7 @@
                 </FXCollections>
               </items>
             </ChoiceBox>
-            <ComboBox prefWidth="60.0">
+            <ComboBox prefWidth="100.0">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
@@ -120,7 +120,7 @@
                 </FXCollections>
               </items>
             </ComboBox>
-            <ComboBox editable="true" prefWidth="60.0" promptText="Choose">
+            <ComboBox editable="true" prefWidth="100.0" promptText="Choose">
               <items>
                 <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Item 1" />
@@ -173,7 +173,7 @@
                             <MenuItem mnemonicParsing="false" text="Sample SplitMenuButton Item 2" />
                           </items>
                         </SplitMenuButton>
-                        <ChoiceBox prefWidth="60.0">
+                        <ChoiceBox prefWidth="100.0">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
                               <String fx:value="Sample ChoiceBox Item 1" />
@@ -181,7 +181,7 @@
                             </FXCollections>
                           </items>
                         </ChoiceBox>
-                        <ComboBox prefWidth="60.0">
+                        <ComboBox prefWidth="100.0">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
                               <String fx:value="Sample ComboBox Item 1" />
@@ -189,7 +189,7 @@
                             </FXCollections>
                           </items>
                         </ComboBox>
-                        <ComboBox editable="true" prefWidth="60.0" promptText="Choose">
+                        <ComboBox editable="true" prefWidth="100.0" promptText="Choose">
                           <items>
                             <FXCollections fx:factory="observableArrayList">
                               <String fx:value="Sample ComboBox Item 1" />
