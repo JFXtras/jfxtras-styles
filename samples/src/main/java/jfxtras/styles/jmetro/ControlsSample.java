@@ -36,7 +36,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
-//import org.scenicview.ScenicView;
 
 public class ControlsSample extends Application {
     private static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";

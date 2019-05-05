@@ -368,7 +368,7 @@
             <HBox id="HBox" alignment="CENTER_RIGHT" spacing="10.0">
               <children>
                 <Label text="DatePicker" />
-                <DatePicker promptText="Enter date" />
+                <DatePicker promptText="Enter date" prefWidth="150.0"/>
               </children>
             </HBox>
           </children>
