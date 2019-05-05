@@ -1434,7 +1434,7 @@
     -fx-border-color: border_color;
     -fx-border-width: 1px;
 
-    -fx-font-size: 1.166667em; /* 14 */
+    -fx-font-size: 1em; /* 12 */
 }
 
 .list-view:focused {
