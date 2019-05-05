@@ -1492,8 +1492,8 @@
 }
 
 .tree-view .tree-cell {
-    -fx-font-size: 1.166667em; /* 14 */
-    -fx-padding: 1em;
+    -fx-font-size: 1em; /* 12 */
+    -fx-padding: 0.5em; /* 6 */
     -fx-background-color: tree_view_background_color;
     -fx-text-fill: text_color;
 }
@@ -1502,7 +1502,7 @@
 .tree-view .tree-cell .label{
     -fx-font-family: "Segoe UI";
 
-    -fx-padding: 0 3px 0 0;
+    -fx-padding: 0 0.25em 0 0; /* 0 3 0 0 */
 }
 
 .tree-view .tree-cell {
@@ -1550,12 +1550,12 @@
 
 /*********** Expand/Collapse icon **********/
 .tree-cell > .tree-disclosure-node {
-    -fx-padding: 0.333333em 1em 0.333333em 1em;
+    -fx-padding: 0.333333em 0.75em 0.333333em 0.75em; /* 4 9 4 9 */
 }
 
 .tree-cell > .tree-disclosure-node > .arrow {
     -fx-background-color: arrow_color;
-    -fx-padding: 0.416667em 0.333333em 0.416667em 0.333333em;
+    -fx-padding: 0.416667em 0.333333em 0.416667em 0.333333em; /* 5 4 5 4 */
     -fx-shape: "M8.06,20.938L7,20l8-8L7,4l1.06-0.938L16.917,12L8.06,20.938z";
 }
 
