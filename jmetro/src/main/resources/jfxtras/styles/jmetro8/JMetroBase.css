@@ -61,8 +61,8 @@
     -fx-background-insets: 0;
     -fx-background-color: background_color;
 
-    -fx-font-family: "Segoe UI Semilight";
-    -fx-font-size: 1.333333em; /* 16 */
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1em; /* 12 */
     -fx-text-fill: text_color;
 }
 
@@ -162,7 +162,7 @@
     -fx-border-width: 2px;
     -fx-border-style: solid;
 
-    -fx-padding: 2px 0px 2px 0px;
+    -fx-padding: 0.166667em 0px 0.166667em 0px;     /* 2 0 2 0 */
 }
 
 /* hover */
@@ -261,8 +261,7 @@
 }
 
 /* disabled */
-.check-box:disabled
-{
+.check-box:disabled {
     -fx-opacity: 0.4;
 }
 
@@ -339,7 +338,7 @@
     -fx-background-insets: 0;
     -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
 
-    -fx-padding: 5px; /* 3 -- radius of the inner black dot when selected */
+    -fx-padding: 0.416667em; /* 5px -- radius of the inner black dot when selected */
 }
 
 /* hover */
@@ -517,12 +516,12 @@
 
 .scroll-bar:vertical > .increment-button > .increment-arrow,
 .scroll-bar:vertical > .decrement-button > .decrement-arrow {
-    -fx-padding: 2.5px 4px 2.5px 4px;
+    -fx-padding: 2.5px 4px 2.5px 4px; /* TODO: convert this to ems */
 }
 
 .scroll-bar:horizontal > .increment-button > .increment-arrow,
 .scroll-bar:horizontal > .decrement-button > .decrement-arrow {
-    -fx-padding: 4px 2.5px 4px 2.5px;
+    -fx-padding: 4px 2.5px 4px 2.5px; /* TODO: convert this to ems */
     -fx-translate-y: -1; /* HACK:  Somehow the arrow is not centered so we add this to center it */
 }
 
@@ -562,7 +561,7 @@
     -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
 
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.333333em; /* 16 */
+    -fx-font-size: 1em; /* 12 */
 }
 
 .combo-box-base > .list-cell {
@@ -615,7 +614,7 @@
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
     -fx-font-family: "Segoe UI";
     -fx-font-size: 11pt;
-    -fx-padding: 4 0 4 5;
+    -fx-padding: 4 0 4 5; /* TODO: convert to ems */
 
     -fx-background-color: list_cell_color;
 }
@@ -645,7 +644,7 @@
     -fx-border-color: transparent;
     -fx-shape: "M147.421,249.541l6.152,4.854l-2.393,7.355l6.521-4.361l6.549,4.361l-2.393-7.355l6.152-4.854h-7.738l-2.571-7.396l-2.543,7.396H147.421z";
     -fx-background-image: null;
-    -fx-padding: 16 16;
+    -fx-padding: 16 16; /* TODO: convert to ems */
     -fx-background-repeat: no-repeat;
 }
 
@@ -693,7 +692,7 @@
     -fx-highlight-fill: highlight_color;
     -fx-highlight-text-fill: highlighted_text_color;
 
-    -fx-font-size: 1.166667em; /* 14 */
+    -fx-font-size: 1em; /* 12 */
 
     -fx-text-fill: text_color;
 }
@@ -762,9 +761,9 @@
 .menu-button > .label,
 .menu-button:openvertically > .label {
     -fx-font-family: "Segoe UI Semilight";
-    -fx-font-size: 16;
-    -fx-padding: 3 20 3 20;
-    -fx-label-padding: 0 -7 0 -7;
+    -fx-font-size: 1em; /* 12 */
+    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /* 3 20 3 20 */
+    -fx-label-padding: 0 -0.583333em 0 -0.583333em;
     -fx-text-fill: menu_button_text_field_color;
 }
 
@@ -793,11 +792,11 @@
 }
 
 .menu-button:openvertically > .arrow-button {
-    -fx-padding: 0 12 0 0;
+    -fx-padding: 0 1em 0 0;          /* 0 12 0 0 */
 }
 
 .menu-button > .arrow-button {
-    -fx-padding: 0 12px 0 2px;
+    -fx-padding: 0 1em 0 0.166667em; /* 0 12 0 2 */
 }
 
 .menu-button > .arrow-button > .arrow {
@@ -821,7 +820,7 @@
 }
 
 .password-field > .right-button {
-    -fx-padding: 0 2px 0 2px;
+    -fx-padding: 0 0.166667em 0 0.166667em;
 }
 
 .password-field > .right-button > .right-button-graphic {
@@ -911,7 +910,7 @@
 
 .progress-bar:indeterminate .dot {
     -fx-background-radius: 1em;
-    -fx-padding: 2px;
+    -fx-padding: 0.166667em;
 
     -fx-background-color: dot_color;
 }
@@ -933,15 +932,15 @@
 .slider .thumb {
     -fx-background-color: accent_color;
     -fx-background-insets: 0;
-    -fx-background-radius: 6px;
+    -fx-background-radius: 0.5em; /* 6 */
 
-    -fx-padding: 12px 4px 12px 4px;
+    -fx-padding: 1em 0.333333em 1em 0.333333em;  /* 12 4 12 4 */
 
     -fx-effect: null;
 }
 
 .slider:vertical .thumb {
-    -fx-padding: 4px 12px  4px 12px;
+    -fx-padding: 0.333333em 1em 0.333333em 1em; /* 4 12 4 12 */
 }
 
 .slider .track {
@@ -983,7 +982,7 @@
 
     -fx-text-fill: #111;
 
-    -fx-padding: 0.5em 0.75em 0.5em 0.75em;
+    -fx-padding: 0.5em 0.75em 0.5em 0.75em; /* 6 9 6 9 */
 }
 
 /*******************************************************************************
@@ -1009,18 +1008,18 @@
 
 .toggle-switch .thumb {
     -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-    -fx-padding: 5px;
+    -fx-padding: 0.416667em; /* 5 */
 }
 
 .toggle-switch .thumb-area{
-    -fx-background-radius: 10px;
+    -fx-background-radius: 0.833333em; /* 10 */
 
-    -fx-border-width: 2px;
-    -fx-border-radius: 10px;
+    -fx-border-width: 0.166667em; /* 2 */
+    -fx-border-radius: 0.833333em;
 
     -fx-pref-width: 44px;
-    -fx-pref-height: 20px;
-    -fx-padding: 5px 5px 5px 5px;
+    -fx-pref-height: 1.666666em; /* 20 */
+    -fx-padding: 0.416667em 0.416667em 0.416667em 0.416667em; /* 5 5 5 5 */
 }
 
 /* unselected */
@@ -1241,7 +1240,7 @@
     -fx-shape: "M24,8.136v14H8v-14h3v-1h1v1h8v-1h1v1H24z M9,9.136v2h14v-2h-2v1h-1v-1h-8v1h-1v-1H9z M23,21.137v-9H9v9H23zM11,15.136h1v1h-1V15.136z M11,17.137h1v1h-1V17.137z M11,19.137h1v1h-1V19.137z M14,13.136h1v1h-1V13.136z M14,15.136h1v1h-1V15.136z M14,17.137h1v1h-1V17.137z M14,19.137h1v1h-1V19.137z M17,13.136h1v1h-1V13.136z M17,15.136h1v1h-1V15.136z M17,17.137h1v1h-1V17.137z M17,19.137h1v1h-1V19.137z M20,13.136h1v1h-1V13.136z M20,15.136h1v1h-1V15.136z M20,17.137h1v1h-1V17.137z";
     -fx-background-color: graphic_color;
     -fx-background-insets: 0;
-    -fx-padding: 0.833334em 0.833334em 0.666666em 0.666666em; /* 10 10 8 8 */
+    -fx-padding: 0.666667em 0.583333em 0.5em 0.416667em; /* 10 10 8 8 */
     -fx-scale-shape: true;
 }
 
@@ -1257,7 +1256,8 @@
     -fx-background-color: white;
 }
 
-/* Date Picker popup */
+/***************************** Date Picker popup ********************************/
+
 .date-picker-popup {
     -fx-border-color: popup_border_color;
     -fx-border-width: 2px;
