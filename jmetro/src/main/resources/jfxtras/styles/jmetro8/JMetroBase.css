@@ -1737,7 +1737,7 @@
 
 .tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
     -fx-text-fill: tab_text_color;
-    -fx-font-size: 1.333333em; /* 16 */
+    -fx-font-size: 1em; /* 12 */
     -fx-font-family: "Segoe UI";
 }
 
