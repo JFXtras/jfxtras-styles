@@ -63,7 +63,7 @@ public class ControlsSample extends Application {
     private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
 
-    static final private String RESOURCE = BUTTON_RESOURCE;
+    static final private String RESOURCE = CONTEXT_MENU_RESOURCE;
     static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
