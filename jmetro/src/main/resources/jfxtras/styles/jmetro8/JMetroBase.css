@@ -1903,7 +1903,7 @@
     -fx-fill: text_color;
 
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.166667em; /* 14 */
+    -fx-font-size: 1em; /* 12 */
 }
 
 /* Title header area */
@@ -1937,6 +1937,8 @@
 
     -fx-background-color: border_color, content_background_color;
     -fx-background-insets: -1 0 0 0, 0 1 1 1;
+
+    -fx-padding: 0.166667em 0 0.166667em 0; /* 2 0 2 0 */
 }
 
 /* Disabled */
