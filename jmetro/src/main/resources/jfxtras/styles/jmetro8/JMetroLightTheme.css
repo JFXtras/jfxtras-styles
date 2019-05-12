@@ -27,6 +27,13 @@
 
 @import "JMetroBase.css";
 
+.root {
+    background_color: white;
+    scroll_pane_background_color: #e9e9e9;
+
+    tab_pane_background_color: white;
+}
+
 .background{
     -fx-background-color: white;
 }
@@ -46,7 +53,7 @@
  ******************************************************************************/
 
 .button, .toggle-button {
-    background_color: #cccccc;
+    button_background_color: #cccccc;
     background_pressed_color: #999999;
 
     border_hover_color: #7a7a7a;
@@ -110,7 +117,7 @@
 .radio-button {
     text_color: #111;
 
-    background_color: white;
+    radio_background_color: white;
     background_pressed_color: white;
 
     border_color: #333333;
@@ -130,9 +137,19 @@
  ******************************************************************************/
 
 .tooltip {
-    background_color: #f2f2f2;
+    tooltip_background_color: #f2f2f2;
     border_color: #cccccc;
     text_color: #111;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ToolBar                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.tool-bar {
+    background_color: white;
 }
 
 /*******************************************************************************
@@ -156,12 +173,6 @@
     arrow_pressed_color: white;
 }
 
-/**************************** Scroll Pane *************************************/
-
-.scroll-pane {
-    background_color: #e9e9e9;
-}
-
 /*******************************************************************************
  *                                                                             *
  * Combo Box                                                                   *
@@ -174,7 +185,7 @@
     border_focused_color: #5c5c5c;
     border_pressed_color: border_color;
 
-    background_color: white;
+    combo_box_background_color: white;
     background_pressed_color: #cccccc;
 
     arrow_color: #111;
@@ -327,7 +338,7 @@
 
     text_days_from_other_months_color: derive(text_color, 60%);
 
-    background_color: white;
+    date_picker_background_color: white;
     background_hover_color: white;
 
     border_color: #999999;
@@ -361,7 +372,7 @@
     border_focused_color: #7a7a7a;
     border_pressed_color: border_color;
 
-    background_color: white;
+    choice_box_background_color: white;
     background_pressed_color: #cccccc;
 
     arrow_color: #111;
@@ -376,7 +387,7 @@
 .list-view {
     text_color: #111;
 
-    background_color: white;
+    list_view_background_color: white;
     border_color: #111;
 
     cell_hover_color: #dadada;
@@ -598,7 +609,6 @@
  ******************************************************************************/
 
 .tab-pane {
-    tab_pane_background_color: white;
     tab_pane_bottom_border_color: #cccccc;
 
     tab_text_color: #767676;

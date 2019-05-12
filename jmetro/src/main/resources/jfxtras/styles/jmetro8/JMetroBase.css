@@ -35,6 +35,10 @@
     -fx-font-family: "Segoe UI";
 }
 
+Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, TextFlow, TilePane, VBox {
+    -fx-background-color: background_color;
+}
+
 .root {
     /* Root variables */
     accent_color: #0078d7;
@@ -59,7 +63,7 @@
 
     -fx-background-radius: 0;
     -fx-background-insets: 0;
-    -fx-background-color: background_color;
+    -fx-background-color: button_background_color;
 
     -fx-font-family: "Segoe UI";
     -fx-font-size: 1em; /* 12 */
@@ -89,7 +93,7 @@
 .button:disabled, .button:default:disabled, .toggle-button:disabled
 {
     -fx-opacity: 0.4;
-    -fx-background-color: background_color;
+    -fx-background-color: button_background_color;
     -fx-text-fill: text_color;
 }
 
@@ -315,7 +319,7 @@
 }
 
 .radio-button > .radio  {
-    -fx-background-color: background_color;
+    -fx-background-color: radio_background_color;
     -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
     -fx-background-insets: 0;
 
@@ -343,7 +347,7 @@
 
 /* hover */
 .radio-button:hover > .radio {
-    -fx-background-color: background_color;
+    -fx-background-color: radio_background_color;
     -fx-border-color: border_hover_color, transparent;
 }
 
@@ -416,7 +420,7 @@
  ******************************************************************************/
 
 .tooltip {
-    -fx-background-color: background_color;
+    -fx-background-color: tooltip_background_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0 0 0 0;
 
@@ -430,6 +434,16 @@
     -fx-border-width: 1px;
 
     -fx-effect: null;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ToolBar                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.tool-bar {
+    -fx-background-color: background_color;
 }
 
 /*******************************************************************************
@@ -545,8 +559,12 @@
 
 .scroll-pane .corner {
     -fx-background-radius: 0 0 0 0;
-    -fx-background-color: background_color;
+    -fx-background-color: scroll_pane_background_color;
     -fx-background-insets: 0 0 0 0;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: scroll_pane_background_color;
 }
 
 /*******************************************************************************
@@ -556,7 +574,7 @@
  ******************************************************************************/
 
 .combo-box-base  {
-    -fx-background-color: transparent, border_color, transparent, background_color;
+    -fx-background-color: transparent, border_color, transparent, combo_box_background_color;
     -fx-background-radius: 0, 0, 0, 0;
     -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
 
@@ -569,18 +587,18 @@
 }
 
 .combo-box-base:hover {
-    -fx-background-color: transparent, border_hover_color, transparent, background_color;
+    -fx-background-color: transparent, border_hover_color, transparent, combo_box_background_color;
 }
 
 .combo-box-base:focused {
-    -fx-background-color: transparent, border_focused_color, transparent, background_color;
+    -fx-background-color: transparent, border_focused_color, transparent, combo_box_background_color;
     -fx-background-insets: -1.4, 0, 1, 2;
 
     -fx-background-radius: 0, 0, 0, 0;
 }
 
 .combo-box-base:focused:hover {
-    -fx-background-color: transparent, border_hover_color, transparent, background_color;
+    -fx-background-color: transparent, border_hover_color, transparent, combo_box_background_color;
 }
 
 .combo-box-base:pressed, .combo-box-base:focused:pressed {
@@ -1201,7 +1219,7 @@
  ******************************************************************************/
 
 .date-picker.combo-box-base {
-    -fx-background-color: border_color, background_color;
+    -fx-background-color: border_color, date_picker_background_color;
     -fx-background-insets: 0, 2;
 }
 
@@ -1212,7 +1230,7 @@
 }
 
 .date-picker.combo-box-base:pressed {
-    -fx-background-color: #666666, background_color;
+    -fx-background-color: #666666, date_picker_background_color;
     -fx-background-insets: 0, 2;
 }
 
@@ -1381,7 +1399,7 @@
  ******************************************************************************/
 
 .choice-box  {
-    -fx-background-color: transparent, border_color, transparent, background_color;
+    -fx-background-color: transparent, border_color, transparent, choice_box_background_color;
     -fx-background-radius: 0, 0, 0, 0;
     -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
 
@@ -1394,18 +1412,18 @@
 }
 
 .choice-box:hover {
-    -fx-background-color: transparent, border_hover_color, transparent, background_color;
+    -fx-background-color: transparent, border_hover_color, transparent, choice_box_background_color;
 }
 
 .choice-box:focused {
-    -fx-background-color: transparent, border_focused_color, transparent, background_color;
+    -fx-background-color: transparent, border_focused_color, transparent, choice_box_background_color;
     -fx-background-insets: -1.4, 0, 1, 2;
 
     -fx-background-radius: 0, 0, 0, 0;
 }
 
 .choice-box:focused:hover {
-    -fx-background-color: transparent, border_hover_color, transparent, background_color;
+    -fx-background-color: transparent, border_hover_color, transparent, choice_box_background_color;
 }
 
 .choice-box:disabled {
@@ -1427,7 +1445,7 @@
  ******************************************************************************/
 
 .list-view {
-    -fx-background-color: background_color;
+    -fx-background-color: list_view_background_color;
     -fx-background-insets: 0;
     -fx-padding: 0;
 
