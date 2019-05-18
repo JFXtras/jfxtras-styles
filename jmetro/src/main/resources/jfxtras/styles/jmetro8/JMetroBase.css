@@ -1951,8 +1951,16 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-background-radius: 0;
 }
 
+.titled-pane > .title > .arrow-button {
+    -fx-background-color: title_background_color;
+}
+
 .titled-pane > .title:hover {
     -fx-background-color: border_color, title_background_hover_color;
+}
+
+.titled-pane > .title:hover > .arrow-button {
+    -fx-background-color: title_background_hover_color;
 }
 
 /* Arrow (for collapsing/expanding) */
@@ -1971,7 +1979,8 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 /* Content */
 .titled-pane > .content {
-    -fx-border-width: 0;
+    -fx-border-width: 0.083333em; /* 1 */
+    -fx-border-color: border_color;
 
     -fx-background-color: border_color, content_background_color;
     -fx-background-insets: -1 0 0 0, 0 1 1 1;
