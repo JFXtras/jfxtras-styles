@@ -715,16 +715,23 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-text-fill: text_color;
 }
 
+/* hover */
 .text-input:hover{
     -fx-background-color: border_hover_color, background_hover_color;
 }
 
+/* focused */
 .text-input:focused{
     -fx-background-color: accent_color, background_focused_color;
 
     -fx-text-fill: text_focused_color;
 }
 
+.text-input:focused > Pane {
+    -fx-background-color: background_focused_color;
+}
+
+/* disabled */
 .text-input:disabled
 {
     -fx-opacity: 1;
