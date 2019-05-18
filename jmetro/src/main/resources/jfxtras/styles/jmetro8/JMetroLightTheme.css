@@ -243,7 +243,7 @@
 
 .menu-button {
     menu_button_background_color: #ccc;
-    menu_button_text_field_color: #111;
+    menu_button_text_color: #111;
     menu_border_hover_color: #7a7a7a;
     menu_button_pressed_color: #999;
 }
@@ -628,7 +628,7 @@
 /****************************** Context Menu **********************************/
 
 .context-menu {
-    context_menu_background_color: #f2f2f2;
+    menu_background_color: #f2f2f2;
     context_menu_border_color: #cccccc;
 
     separator_color: #c3c3c3;
@@ -646,6 +646,8 @@
 
 .menu-item {
     text_color: #111;
+
+    menu_background_color: #f2f2f2;
 
     graphic_color: #0a0a0a;
 

@@ -256,7 +256,7 @@
 
 .menu-button {
     menu_button_background_color: #333;
-    menu_button_text_field_color: white;
+    menu_button_text_color: white;
     menu_border_hover_color: #858585;
     menu_button_pressed_color: #666;
 }
@@ -621,7 +621,7 @@
 /****************************** Context Menu **********************************/
 
 .context-menu {
-    context_menu_background_color: #2b2b2b;
+    menu_background_color: #2b2b2b;
     context_menu_border_color: #777677;
 
     separator_color: #555555;
@@ -639,6 +639,8 @@
 
 .menu-item {
     text_color: white;
+
+    menu_background_color: #2b2b2b;
 
     graphic_color: #aaaaaa;
 

@@ -776,13 +776,16 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-border-width: 2;
 }
 
-.menu-button > .label,
-.menu-button:openvertically > .label {
+.menu-button > .label {
     -fx-font-family: "Segoe UI Semilight";
     -fx-font-size: 1em; /* 12 */
     -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /* 3 20 3 20 */
     -fx-label-padding: 0 -0.583333em 0 -0.583333em;
-    -fx-text-fill: menu_button_text_field_color;
+    -fx-text-fill: menu_button_text_color;
+}
+
+.menu-button > .arrow-button {
+    -fx-background-color: menu_button_background_color;
 }
 
 .menu-button:hover {
@@ -806,7 +809,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 .menu-button:disabled {
     -fx-opacity: 0.4;
     -fx-background-color: menu_button_background_color;
-    -fx-text-fill: menu_button_text_field_color;
+    -fx-text-fill: menu_button_text_color;
 }
 
 .menu-button:openvertically > .arrow-button {
@@ -818,12 +821,11 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 .menu-button > .arrow-button > .arrow {
-    -fx-background-color: menu_button_text_field_color;
+    -fx-background-color: menu_button_text_color;
     -fx-shape: "M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z ";
 }
 
 .menu-button:openvertically > .arrow-button > .arrow {
-    -fx-background-color: menu_button_text_field_color;
     -fx-shape: "M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z ";
 }
 
@@ -1793,7 +1795,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 /****************************** Context Menu **********************************/
 
 .context-menu {
-    -fx-background-color: context_menu_background_color;
+    -fx-background-color: menu_background_color;
     -fx-background-insets: 0, 1, 2;
     -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
     -fx-padding: 0.5em 0em 0.5em 0em; /* 6 0 6 0 */
@@ -1842,8 +1844,13 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 .menu-item {
     -fx-text-fill: text_color;
-    -fx-background-color: transparent;
+    -fx-background-color: menu_background_color;
     -fx-padding: 0.583333em 1em 0.583333em 1em;   /*7 12 7 12 */
+}
+
+.menu-item > .right-container,
+.menu-item > .left-container {
+    -fx-background-color: menu_background_color;
 }
 
 .menu-item .label {
@@ -1893,12 +1900,18 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 /* hover */
 .menu-item:hover,
-.menu-item:focused {
+.menu-item:focused,
+.menu-item:hover > .right-container,
+.menu-item:hover > .left-container,
+.menu-item:focused > .right-container,
+.menu-item:focused > .left-container {
     -fx-background-color: hover_color;
 }
 
 /* pressed */
-.menu-item:pressed {
+.menu-item:pressed,
+.menu-item:pressed > .right-container,
+.menu-item:pressed > .left-container {
     -fx-background-color: pressed_color;
 }
 
