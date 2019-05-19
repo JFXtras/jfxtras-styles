@@ -6,6 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
 
@@ -99,6 +100,16 @@ public class TreeTableViewSample extends Application {
         treeTableView.setShowRoot(false);
 
         sceneRoot.setCenter(treeTableView);
+
+        // Customization controls
+        HBox hBox = new HBox();
+        CheckBox cellSelection = new CheckBox("Cell Selection");
+        cellSelection.setOnAction(event -> {
+            treeTableView.getSelectionModel().setCellSelectionEnabled(cellSelection.isSelected());
+        });
+        hBox.getChildren().add(cellSelection);
+        sceneRoot.setBottom(hBox);
+
         stage.setScene(scene);
 
         new JMetro(STYLE).applyTheme(scene);

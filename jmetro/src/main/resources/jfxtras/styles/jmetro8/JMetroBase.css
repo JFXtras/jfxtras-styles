@@ -1624,6 +1624,11 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-font-size: 1em; /* 12 */
 }
 
+.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > .tree-disclosure-node,
+.tree-table-view > .column-header-background > .nested-column-header > .column-header > GridPane {
+    -fx-background-color: transparent;
+}
+
 .tree-table-cell {
     -fx-padding: 0.5em 0 0.5em 0.333333em; /* 6 0 6 4 */
 }
@@ -1639,6 +1644,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-opacity: 0.3;
 }
 
+/* Selected */
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected {
     -fx-background-color: table_selected_unfocused_color;
@@ -1651,17 +1657,19 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-table-cell-border-color: table_selected_color;
 }
 
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected > *,
+.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected > * {
+    -fx-text-fill: table_text_selected_color;
+}
+
+/* Selected - hover */
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:hover,
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:hover {
     -fx-background-color: table_selected_hover_color;
     -fx-table-cell-border-color: table_selected_hover_color;
 }
 
-.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected > *,
-.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected > * {
-    -fx-text-fill: table_text_selected_color;
-}
-
+/* Hover */
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:empty:hover {
     -fx-background-color: table_background_color;
     -fx-table-cell-border-color: table_background_color;
@@ -1699,37 +1707,37 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-padding: 0.0em 0.0416667em 0.0em 0.0416667em; /* 0 0.571429 0 0.571429 */
 }
 
-.tree-table-view:row-selection > .column-header-background > * {
+.tree-table-view > .column-header-background > * {
     -fx-background-color: table_background_color;
     -fx-border-insets: 0 0 0 0;
     -fx-border-width: 0 0 1 0;
     -fx-border-color: table_border_color;
 }
 
-.tree-table-view:row-selection > *,
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > *,
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header * {
+.tree-table-view > *,
+.tree-table-view > .column-header-background > .nested-column-header > *,
+.tree-table-view > .column-header-background > .nested-column-header > .nested-column-header * {
     -fx-background-color: table_background_color;
 }
 
-.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > *:hover,
-.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > *:pressed,
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header *:hover,
-.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > .nested-column-header *:hover,
-.tree-table-view:row-selection:focused > .column-header-background > .nested-column-header > .nested-column-header *:pressed {
+.tree-table-view:focused > .column-header-background > .nested-column-header > *:hover,
+.tree-table-view:focused > .column-header-background > .nested-column-header > *:pressed,
+.tree-table-view > .column-header-background > .nested-column-header > .nested-column-header *:hover,
+.tree-table-view:focused > .column-header-background > .nested-column-header > .nested-column-header *:hover,
+.tree-table-view:focused > .column-header-background > .nested-column-header > .nested-column-header *:pressed {
     -fx-background-color: table_hover_color;
 }
 
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .table-column,
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header > .table-column,
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .table-column:last-visible,
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header > .table-column:last-visible {
+.tree-table-view > .column-header-background > .nested-column-header > .table-column,
+.tree-table-view > .column-header-background > .nested-column-header > .nested-column-header > .table-column,
+.tree-table-view > .column-header-background > .nested-column-header > .table-column:last-visible,
+.tree-table-view > .column-header-background > .nested-column-header > .nested-column-header > .table-column:last-visible {
     -fx-border-insets: 0 0 0 0;
     -fx-border-width: 0 0 0 0;
 }
 
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .table-column > .label,
-.tree-table-view:row-selection > .column-header-background > .nested-column-header > .nested-column-header > .table-column > .label {
+.tree-table-view > .column-header-background > .nested-column-header > .table-column > .label,
+.tree-table-view > .column-header-background > .nested-column-header > .nested-column-header > .table-column > .label {
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: table_text_color;
     -fx-padding: 0.666667em; /* 8 */
