@@ -1256,12 +1256,27 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 .date-picker > .text-input{
     -fx-background-radius: 0;
-
-    -fx-background-color: transparent;
     -fx-background-insets: 0;
 }
 
+.date-picker > .text-input > Pane {
+    -fx-background-color: transparent;
+}
+
 /* Icon */
+
+.date-picker > .arrow-button {
+    -fx-background-color: date_picker_background_color;
+}
+
+.date-picker:focused > .arrow-button {
+    -fx-background-color: background_focused_color;
+    -fx-border-color: background_focused_color;
+}
+
+.date-picker:focused > .arrow-button > .arrow {
+    -fx-background-color: graphic_focused_color;
+}
 
 .date-picker > .arrow-button > .arrow {
     -fx-shape: "M24,8.136v14H8v-14h3v-1h1v1h8v-1h1v1H24z M9,9.136v2h14v-2h-2v1h-1v-1h-8v1h-1v-1H9z M23,21.137v-9H9v9H23zM11,15.136h1v1h-1V15.136z M11,17.137h1v1h-1V17.137z M11,19.137h1v1h-1V19.137z M14,13.136h1v1h-1V13.136z M14,15.136h1v1h-1V15.136z M14,17.137h1v1h-1V17.137z M14,19.137h1v1h-1V19.137z M17,13.136h1v1h-1V13.136z M17,15.136h1v1h-1V15.136z M17,17.137h1v1h-1V17.137z M17,19.137h1v1h-1V19.137z M20,13.136h1v1h-1V13.136z M20,15.136h1v1h-1V15.136z M20,17.137h1v1h-1V17.137z";
@@ -1281,6 +1296,12 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 .date-picker > .arrow-button:pressed > .arrow {
     -fx-background-color: white;
+}
+
+/* Disabled */
+
+.date-picker:disabled > .arrow-button {
+    -fx-background-color: text_field_disabled_background_color;
 }
 
 /***************************** Date Picker popup ********************************/

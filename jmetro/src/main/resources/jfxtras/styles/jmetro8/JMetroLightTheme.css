@@ -330,16 +330,20 @@
 
 .date-picker {
     graphic_color: #111;
+    graphic_focused_color: #111;
+
 
     text_color: #111;
+    text_focused_color: #111;
 
-    text_selected_color: white;
+    text_selected_color: #fff;
     text_hover_color: text_color;
 
     text_days_from_other_months_color: derive(text_color, 60%);
 
-    date_picker_background_color: white;
-    background_hover_color: white;
+    date_picker_background_color: #fff;
+    background_focused_color: #fff;
+    background_hover_color: #fff;
 
     border_color: #999999;
     border_hover_color: #666666;
@@ -348,7 +352,7 @@
 
     spinner_button_hover_color: #dadada;
 
-    cell_background_color: white;
+    cell_background_color: #fff;
 
     day_cell_background_color: #e6e6e6;
     day_cell_border_hover_color: #666;
@@ -356,6 +360,8 @@
     day_cell_background_days_from_other_months_color: #f2f2f2;
 
     today_border_color: derive(accent_color, 90%);
+
+    text_field_disabled_background_color: #eaeaea;
 }
 
 /*******************************************************************************

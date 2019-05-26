@@ -342,20 +342,24 @@
  ******************************************************************************/
 
 .date-picker {
-    graphic_color: #111;
+    graphic_color: white;
+    graphic_focused_color: #111;
+    graphic_disabled_color: #333;
 
     text_color: white;
+    text_focused_color: #111;
 
     text_selected_color: white;
     text_hover_color: white;
 
     text_days_from_other_months_color: #7c7c7c;
 
-    date_picker_background_color: white;
-    background_hover_color: white;
+    date_picker_background_color: #111;
+    background_focused_color: #fff;
+    background_hover_color: date_picker_background_color;
 
-    border_color: #d2d2d2;
-    border_hover_color: white;
+    border_color: #616161;
+    border_hover_color: #999999;
 
     popup_border_color: #111;
 
@@ -369,6 +373,8 @@
     day_cell_background_days_from_other_months_color: #2b2b2b;
 
     today_border_color: derive(accent_color, -60%);
+
+    text_field_disabled_background_color: #111;
 }
 
 /*******************************************************************************
