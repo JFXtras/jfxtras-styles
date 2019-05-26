@@ -725,6 +725,10 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-text-fill: text_color;
 }
 
+.text-input > Pane {
+    -fx-background-color: transparent;
+}
+
 /* hover */
 .text-input:hover{
     -fx-background-color: border_hover_color, background_hover_color;
@@ -735,10 +739,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-background-color: accent_color, background_focused_color;
 
     -fx-text-fill: text_focused_color;
-}
-
-.text-input:focused > Pane {
-    -fx-background-color: background_focused_color;
 }
 
 /* disabled */
