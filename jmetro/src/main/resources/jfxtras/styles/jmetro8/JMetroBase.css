@@ -35,6 +35,7 @@
     -fx-font-family: "Segoe UI";
 }
 
+/* Layout containers */
 Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, TextFlow, TilePane, VBox {
     -fx-background-color: background_color;
 }

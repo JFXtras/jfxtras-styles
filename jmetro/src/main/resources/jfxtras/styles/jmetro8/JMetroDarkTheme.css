@@ -28,14 +28,14 @@
 @import "JMetroBase.css";
 
 .root {
-    background_color: #111;
-    scroll_pane_background_color: #111;
+    background_color: #252525;
+    scroll_pane_background_color: background_color;
 
-    tab_pane_background_color: #252526;
+    tab_pane_background_color: #2e2e2e;
 }
 
 .background{
-    -fx-background-color: #1d1d1d;
+    -fx-background-color: #252525;
 }
 
 .header{
