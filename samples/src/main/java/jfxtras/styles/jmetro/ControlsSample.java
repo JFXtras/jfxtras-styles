@@ -63,8 +63,8 @@ public class ControlsSample extends Application {
     private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
 
-    static final private String RESOURCE = MENU_BUTTON_RESOURCE;
-    static final private JMetro.Style STYLE = JMetro.Style.DARK;
+    static final private String RESOURCE = CHOICE_BOX_RESOURCE;
+    static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

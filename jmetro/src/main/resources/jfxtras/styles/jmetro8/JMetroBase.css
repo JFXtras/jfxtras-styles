@@ -791,7 +791,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-background-radius: 0;
     -fx-background-insets: 0;
 
-    -fx-padding: 0.25em 0 0.25em 0;
+    -fx-padding: 0.25em 0 0.25em 0; /* 3 0 3 0 */
 
     -fx-border-color: transparent;
     -fx-border-width: 2;
@@ -1447,10 +1447,14 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 .choice-box  {
     -fx-background-color: transparent, border_color, transparent, choice_box_background_color;
     -fx-background-radius: 0, 0, 0, 0;
-    -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2px 2 2px*/
+    -fx-padding: 0.166667em 0.166667em 0.166667em 0.166667em; /* 2 2 2 2*/
 
     -fx-font-family: "Segoe UI";
     -fx-font-size: 1em; /* 12 */
+}
+
+.choice-box > .open-button {
+    -fx-background-color: transparent;
 }
 
 .choice-box > .label {
@@ -1883,12 +1887,12 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 .menu-bar > .container > .menu-button {
-    -fx-padding: 0.5em 1em 0.5em 0.666667em; /* 6 8 6 8 */
+    -fx-padding: 0.5em 1em 0.5em 0.666667em; /* 6 12 6 8 */
     -fx-border-width: 0;
 }
 
 .menu-bar > .container > .menu-button > .arrow-button > .arrow {
-    -fx-padding: 0.167em 0 0.250em 0; /* 2 0 3 0 */
+    -fx-padding: 0.167em 0 0.25em 0; /* 2 0 3 0 */
 }
 
 .menu-bar > .container > .menu-button > .label {
@@ -1897,7 +1901,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 .menu-bar > .container > .menu > .arrow-button {
-    -fx-padding: 0.500em 0 0.500em 0; /* 6 0 6 0 */
+    -fx-padding: 0.5em 0 0.5em 0; /* 6 0 6 0 */
 }
 
 .menu-bar > .container > .menu-button:hover,
