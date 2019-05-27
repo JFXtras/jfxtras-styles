@@ -19,7 +19,7 @@ import jfxtras.styles.jmetro8.JMetro;
 
 public class MenuSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     private final Entry[] effects = new Entry[] {
             new SimpleEntry<>("Sepia Tone", new SepiaTone()),
@@ -91,10 +91,7 @@ public class MenuSample extends Application {
 
         ((VBox) scene.getRoot()).getChildren().addAll(menuBar);
 
-
         new JMetro(STYLE).applyTheme(scene);
-//        ScenicView.show(scene);
-
 
         stage.setScene(scene);
         stage.show();

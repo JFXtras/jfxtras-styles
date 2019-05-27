@@ -790,6 +790,9 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-background-color: menu_button_background_color;
     -fx-background-radius: 0;
     -fx-background-insets: 0;
+
+    -fx-padding: 0.25em 0 0.25em 0;
+
     -fx-border-color: transparent;
     -fx-border-width: 2;
 }
@@ -797,8 +800,10 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 .menu-button > .label {
     -fx-font-family: "Segoe UI Semilight";
     -fx-font-size: 1em; /* 12 */
-    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /* 3 20 3 20 */
+
+    -fx-padding: 0em 1.666666em 0em 1.666666em; /* 3 20 3 20 */
     -fx-label-padding: 0 -0.583333em 0 -0.583333em;
+
     -fx-text-fill: menu_button_text_color;
 }
 
@@ -1867,17 +1872,39 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-background-color: menu_bar_background_color;
     -fx-background-insets: 0 0 0 0;
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 1em; /* 12 */
+}
+
+.menu-bar > .container {
+    -fx-background-color: transparent;
 }
 
 .menu-bar > .container > .menu-button {
-    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 6 8 6 8 */
+    -fx-background-color: transparent;
+}
+
+.menu-bar > .container > .menu-button {
+    -fx-padding: 0.5em 1em 0.5em 0.666667em; /* 6 8 6 8 */
+    -fx-border-width: 0;
+}
+
+.menu-bar > .container > .menu-button > .arrow-button > .arrow {
+    -fx-padding: 0.167em 0 0.250em 0; /* 2 0 3 0 */
+}
+
+.menu-bar > .container > .menu-button > .label {
+    -fx-padding: 0;
+    -fx-label-padding: 0 0 0 0;
+}
+
+.menu-bar > .container > .menu > .arrow-button {
+    -fx-padding: 0.500em 0 0.500em 0; /* 6 0 6 0 */
 }
 
 .menu-bar > .container > .menu-button:hover,
 .menu-bar > .container > .menu-button:focused,
 .menu-bar > .container > .menu-button:showing {
     -fx-background-color: menu_button_hover_color;
+
 }
 
 .menu-bar > .container > .menu-button > .label,
