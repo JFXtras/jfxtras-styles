@@ -794,7 +794,11 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-padding: 0.25em 0 0.25em 0; /* 3 0 3 0 */
 
     -fx-border-color: transparent;
-    -fx-border-width: 2;
+    -fx-border-width: 2px;
+}
+
+.menu-button > .arrow-button {
+    -fx-background-color: transparent;
 }
 
 .menu-button > .label {
@@ -805,10 +809,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-label-padding: 0 -0.583333em 0 -0.583333em;
 
     -fx-text-fill: menu_button_text_color;
-}
-
-.menu-button > .arrow-button {
-    -fx-background-color: menu_button_background_color;
 }
 
 .menu-button:hover {
