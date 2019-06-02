@@ -2161,3 +2161,343 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 .progress-indicator:indeterminate .segment11 {
     -fx-shape:"M45.0 26.0 a3.5,3.5 0 1,1 0,1 Z";
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Charts                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+/*
+ * For now most of the CSS in this section and all sections below for Charts are equal to modena.css because the changes introduced by
+ * JMetro broke the styles of Charts. There is a change to modena default style to make Chart Legend text color correct.
+ */
+
+.chart {
+    -fx-padding: 5px;
+}
+.chart-plot-background {
+    -fx-background-color: -fx-background;
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+.chart-title {
+    -fx-font-size: 1.4em;
+}
+.chart-legend {
+    -fx-background-color: -fx-shadow-highlight-color,
+    linear-gradient(to bottom, derive(-fx-background, -10%), derive(-fx-background, -5%)),
+    linear-gradient(from 0px 0px to 0px 4px, derive(-fx-background, -4%), derive(-fx-background, 10%));
+    -fx-background-insets: 0 0 -1 0, 0,1;
+    -fx-background-radius: 4,4,3;
+    -fx-padding: 6px;
+}
+
+.chart-legend > .label {
+    -fx-text-fill: #111;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Axis                                                                        *
+ *                                                                             *
+ ******************************************************************************/
+
+.axis {
+    AXIS_COLOR: derive(-fx-background,-20%);
+    -fx-tick-label-font-size: 0.833333em; /* 10px */
+    -fx-tick-label-fill: derive(-fx-text-background-color, 30%);
+}
+.axis:top {
+    -fx-border-color: transparent transparent AXIS_COLOR transparent;
+}
+.axis:right {
+    -fx-border-color: transparent transparent transparent AXIS_COLOR;
+}
+.axis:bottom {
+    -fx-border-color: AXIS_COLOR transparent transparent transparent;
+}
+.axis:left {
+    -fx-border-color: transparent AXIS_COLOR transparent transparent;
+}
+.axis:top > .axis-label,
+.axis:left > .axis-label {
+    -fx-padding: 0 0 4px 0;
+}
+.axis:bottom > .axis-label,
+.axis:right > .axis-label {
+    -fx-padding: 4px 0 0 0;
+}
+.axis-tick-mark,
+.axis-minor-tick-mark {
+    -fx-fill: null;
+    -fx-stroke: AXIS_COLOR;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ChartPlot                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart-vertical-grid-lines {
+    -fx-stroke: derive(-fx-background,-10%);
+    -fx-stroke-dash-array: 0.25em, 0.25em;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: derive(-fx-background,-10%);
+    -fx-stroke-dash-array: 0.25em, 0.25em;
+}
+.chart-alternative-column-fill {
+    -fx-fill: null;
+    -fx-stroke: null;
+}
+.chart-alternative-row-fill {
+    -fx-fill: null;
+    -fx-stroke: null;
+}
+.chart-vertical-zero-line,
+.chart-horizontal-zero-line {
+    -fx-stroke: derive(-fx-text-background-color, 40%);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ScatterChart                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart-symbol { /* solid circle */
+    -fx-background-color: CHART_COLOR_1;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+.default-color1.chart-symbol { /* solid square */
+    -fx-background-color: CHART_COLOR_2;
+    -fx-background-radius: 0;
+}
+.default-color2.chart-symbol { /* solid diamond */
+    -fx-background-color: CHART_COLOR_3;
+    -fx-background-radius: 0;
+    -fx-padding: 7px 5px 7px 5px;
+    -fx-shape: "M5,0 L10,9 L5,18 L0,9 Z";
+}
+.default-color3.chart-symbol { /* cross */
+    -fx-background-color: CHART_COLOR_4;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "M2,0 L5,4 L8,0 L10,0 L10,2 L6,5 L10,8 L10,10 L8,10 L5,6 L2,10 L0,10 L0,8 L4,5 L0,2 L0,0 Z";
+}
+.default-color4.chart-symbol { /* solid triangle */
+    -fx-background-color: CHART_COLOR_5;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "M5,0 L10,8 L0,8 Z";
+}
+.default-color5.chart-symbol { /* hollow circle */
+    -fx-background-color: CHART_COLOR_6, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+.default-color6.chart-symbol { /* hollow square */
+    -fx-background-color: CHART_COLOR_7, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 0;
+}
+.default-color7.chart-symbol { /* hollow diamond */
+    -fx-background-color: CHART_COLOR_8, white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 2.5;
+    -fx-padding: 7px 5px 7px 5px;
+    -fx-shape: "M5,0 L10,9 L5,18 L0,9 Z";
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * LineChart                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart-line-symbol {
+    -fx-background-color: CHART_COLOR_1, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+.chart-series-line {
+    -fx-stroke: CHART_COLOR_1;
+    -fx-stroke-width: 3px;
+}
+.default-color0.chart-line-symbol { -fx-background-color: CHART_COLOR_1, white; }
+.default-color1.chart-line-symbol { -fx-background-color: CHART_COLOR_2, white; }
+.default-color2.chart-line-symbol { -fx-background-color: CHART_COLOR_3, white; }
+.default-color3.chart-line-symbol { -fx-background-color: CHART_COLOR_4, white; }
+.default-color4.chart-line-symbol { -fx-background-color: CHART_COLOR_5, white; }
+.default-color5.chart-line-symbol { -fx-background-color: CHART_COLOR_6, white; }
+.default-color6.chart-line-symbol { -fx-background-color: CHART_COLOR_7, white; }
+.default-color7.chart-line-symbol { -fx-background-color: CHART_COLOR_8, white; }
+.default-color0.chart-series-line { -fx-stroke: CHART_COLOR_1; }
+.default-color1.chart-series-line { -fx-stroke: CHART_COLOR_2; }
+.default-color2.chart-series-line { -fx-stroke: CHART_COLOR_3; }
+.default-color3.chart-series-line { -fx-stroke: CHART_COLOR_4; }
+.default-color4.chart-series-line { -fx-stroke: CHART_COLOR_5; }
+.default-color5.chart-series-line { -fx-stroke: CHART_COLOR_6; }
+.default-color6.chart-series-line { -fx-stroke: CHART_COLOR_7; }
+.default-color7.chart-series-line { -fx-stroke: CHART_COLOR_8; }
+
+/*******************************************************************************
+ *                                                                             *
+ * AreaChart                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart-area-symbol {
+    -fx-background-color: CHART_COLOR_1, white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 4px; /* makes sure this remains circular */
+    -fx-padding: 3px;
+}
+.default-color0.chart-area-symbol { -fx-background-color: CHART_COLOR_1, white; }
+.default-color1.chart-area-symbol { -fx-background-color: CHART_COLOR_2, white; }
+.default-color2.chart-area-symbol { -fx-background-color: CHART_COLOR_3, white; }
+.default-color3.chart-area-symbol { -fx-background-color: CHART_COLOR_4, white; }
+.default-color4.chart-area-symbol { -fx-background-color: CHART_COLOR_5, white; }
+.default-color5.chart-area-symbol { -fx-background-color: CHART_COLOR_6, white; }
+.default-color6.chart-area-symbol { -fx-background-color: CHART_COLOR_7, white; }
+.default-color7.chart-area-symbol { -fx-background-color: CHART_COLOR_8, white; }
+.chart-series-area-line {
+    -fx-stroke: CHART_COLOR_1;
+    -fx-stroke-width: 1px;
+}
+.default-color0.chart-series-area-line { -fx-stroke: CHART_COLOR_1; }
+.default-color1.chart-series-area-line { -fx-stroke: CHART_COLOR_2; }
+.default-color2.chart-series-area-line { -fx-stroke: CHART_COLOR_3; }
+.default-color3.chart-series-area-line { -fx-stroke: CHART_COLOR_4; }
+.default-color4.chart-series-area-line { -fx-stroke: CHART_COLOR_5; }
+.default-color5.chart-series-area-line { -fx-stroke: CHART_COLOR_6; }
+.default-color6.chart-series-area-line { -fx-stroke: CHART_COLOR_7; }
+.default-color7.chart-series-area-line { -fx-stroke: CHART_COLOR_8; }
+.chart-series-area-fill {
+    -fx-stroke: null;
+    -fx-fill: CHART_COLOR_1_TRANS_20;
+}
+.default-color0.chart-series-area-fill { -fx-fill: CHART_COLOR_1_TRANS_20; }
+.default-color1.chart-series-area-fill { -fx-fill: CHART_COLOR_2_TRANS_20; }
+.default-color2.chart-series-area-fill { -fx-fill: CHART_COLOR_3_TRANS_20; }
+.default-color3.chart-series-area-fill { -fx-fill: CHART_COLOR_4_TRANS_20; }
+.default-color4.chart-series-area-fill { -fx-fill: CHART_COLOR_5_TRANS_20; }
+.default-color5.chart-series-area-fill { -fx-fill: CHART_COLOR_6_TRANS_20; }
+.default-color6.chart-series-area-fill { -fx-fill: CHART_COLOR_7_TRANS_20; }
+.default-color7.chart-series-area-fill { -fx-fill: CHART_COLOR_8_TRANS_20; }
+.area-legend-symbol {
+    -fx-padding: 6px;
+    -fx-background-radius: 6px; /* makes sure this remains circular */
+    -fx-background-insets: 0, 3;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * BubbleChart                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.bubble-legend-symbol {
+    -fx-background-radius: 8px;
+    -fx-padding: 8px;
+}
+.chart-bubble {
+    -fx-bubble-fill: CHART_COLOR_1_TRANS_70;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 80%, derive(-fx-bubble-fill,20%), derive(-fx-bubble-fill,-30%));
+}
+.default-color0.chart-bubble { -fx-bubble-fill: CHART_COLOR_1_TRANS_70; }
+.default-color1.chart-bubble { -fx-bubble-fill: CHART_COLOR_2_TRANS_70; }
+.default-color2.chart-bubble { -fx-bubble-fill: CHART_COLOR_3_TRANS_70; }
+.default-color3.chart-bubble { -fx-bubble-fill: CHART_COLOR_4_TRANS_70; }
+.default-color4.chart-bubble { -fx-bubble-fill: CHART_COLOR_5_TRANS_70; }
+.default-color5.chart-bubble { -fx-bubble-fill: CHART_COLOR_6_TRANS_70; }
+.default-color6.chart-bubble { -fx-bubble-fill: CHART_COLOR_7_TRANS_70; }
+.default-color7.chart-bubble { -fx-bubble-fill: CHART_COLOR_8_TRANS_70; }
+
+/*******************************************************************************
+ *                                                                             *
+ * BarChart                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart-bar {
+    -fx-bar-fill: CHART_COLOR_1;
+    -fx-background-color:   linear-gradient(to right,
+    derive(-fx-bar-fill, -4%),
+    derive(-fx-bar-fill, -1%),
+    derive(-fx-bar-fill, 0%),
+    derive(-fx-bar-fill, -1%),
+    derive(-fx-bar-fill, -6%)
+    );
+    -fx-background-insets: 0;
+}
+.chart-bar.negative {
+    -fx-background-insets: 1 0 0 0;
+}
+.bar-chart:horizontal .chart-bar {
+    -fx-background-insets: 0 0 0 1;
+}
+.bar-chart:horizontal .chart-bar,
+.stacked-bar-chart:horizontal .chart-bar {
+    -fx-background-color:   linear-gradient(to bottom,
+    derive(-fx-bar-fill, -4%),
+    derive(-fx-bar-fill, -1%),
+    derive(-fx-bar-fill, 0%),
+    derive(-fx-bar-fill, -1%),
+    derive(-fx-bar-fill, -6%)
+    );
+}
+.default-color0.chart-bar { -fx-bar-fill: CHART_COLOR_1; }
+.default-color1.chart-bar { -fx-bar-fill: CHART_COLOR_2; }
+.default-color2.chart-bar { -fx-bar-fill: CHART_COLOR_3; }
+.default-color3.chart-bar { -fx-bar-fill: CHART_COLOR_4; }
+.default-color4.chart-bar { -fx-bar-fill: CHART_COLOR_5; }
+.default-color5.chart-bar { -fx-bar-fill: CHART_COLOR_6; }
+.default-color6.chart-bar { -fx-bar-fill: CHART_COLOR_7; }
+.default-color7.chart-bar { -fx-bar-fill: CHART_COLOR_8; }
+.bar-legend-symbol {
+    -fx-padding: 8px;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * PieChart                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.chart-pie {
+    -fx-pie-color: CHART_COLOR_1;
+    -fx-background-color: radial-gradient(radius 100%, derive(-fx-pie-color,20%), derive(-fx-pie-color,-10%));
+    -fx-background-insets: 1;
+    -fx-border-color: -fx-background;
+}
+.chart-pie-label {
+    -fx-padding: 3px;
+    -fx-fill: -fx-text-base-color;
+}
+.chart-pie-label-line {
+    -fx-stroke: derive(-fx-background,-20%);
+}
+.default-color0.chart-pie { -fx-pie-color: CHART_COLOR_1; }
+.default-color1.chart-pie { -fx-pie-color: CHART_COLOR_2; }
+.default-color2.chart-pie { -fx-pie-color: CHART_COLOR_3; }
+.default-color3.chart-pie { -fx-pie-color: CHART_COLOR_4; }
+.default-color4.chart-pie { -fx-pie-color: CHART_COLOR_5; }
+.default-color5.chart-pie { -fx-pie-color: CHART_COLOR_6; }
+.default-color6.chart-pie { -fx-pie-color: CHART_COLOR_7; }
+.default-color7.chart-pie { -fx-pie-color: CHART_COLOR_8; }
+.negative.chart-pie {
+    -fx-pie-color: transparent;
+    -fx-background-color: white;
+}
+.pie-legend-symbol.chart-pie {
+    -fx-background-radius: 8px;
+    -fx-padding: 8px;
+    -fx-border-color: null;
+}
