@@ -2079,3 +2079,85 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 .accordion > .first-titled-pane > .title {
     -fx-background-insets: 0, 1;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Progress Indicator                                                          *
+ *                                                                             *
+ ******************************************************************************/
+
+/*
+ * For now most of the CSS in this section is equal to modena.css because the changes introduced by JMetro broke the
+ * styles of Progress Indicator. Also accent color now changes according to the accent color defined by JMetro.
+ */
+
+.progress-indicator {
+    -fx-indeterminate-segment-count: 12;
+    -fx-spin-enabled: true;
+}
+.progress-indicator > .determinate-indicator > .indicator {
+    -fx-background-color: -fx-box-border,
+    radial-gradient(center 50% 50%, radius 50%, -fx-control-inner-background 70%, derive(-fx-control-inner-background, -9%) 100%),
+    -fx-control-inner-background;
+    -fx-background-insets: 0, 1, 5 2 1 2;
+    -fx-padding: 0.166667em; /* 2px */
+}
+.progress-indicator > .determinate-indicator > .progress {
+    -fx-background-color: accent_color;
+    -fx-padding: 0.083333em; /* 1px */
+}
+.progress-indicator > .determinate-indicator > .tick {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 0.666667em; /* 8 */
+    -fx-shape: "M-0.25,6.083c0.843-0.758,4.583,4.833,5.75,4.833S14.5-1.5,15.917-0.917c1.292,0.532-8.75,17.083-10.5,17.083C3,16.167-1.083,6.833-0.25,6.083z";
+}
+.progress-indicator > .determinate-indicator > .percentage {
+    -fx-fill: text_color;
+    -fx-font-family: "Segoe UI";
+}
+.progress-indicator:indeterminate > .spinner {
+    /** Applying to undo styling from .spinner, reported in RT-37965 */
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+.progress-indicator:indeterminate .segment {
+    -fx-background-color: accent_color;
+}
+.progress-indicator:indeterminate .segment0 {
+    -fx-shape:"M41.98 14.74 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment1 {
+    -fx-shape:"M33.75 6.51 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment2 {
+    -fx-shape:"M22.49 3.5 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment3 {
+    -fx-shape:"M11.24 6.51 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment4 {
+    -fx-shape:"M3.01 14.74 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment5 {
+    -fx-shape:"M0.0 26.0 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment6 {
+    -fx-shape:"M3.01 37.25 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment7 {
+    -fx-shape:"M11.25 45.48 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment8 {
+    -fx-shape:"M22.5 48.5 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment9 {
+    -fx-shape:"M33.75 45.48 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment10 {
+    -fx-shape:"M41.98 37.25 a3.5,3.5 0 1,1 0,1 Z";
+}
+.progress-indicator:indeterminate .segment11 {
+    -fx-shape:"M45.0 26.0 a3.5,3.5 0 1,1 0,1 Z";
+}

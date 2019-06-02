@@ -52,6 +52,7 @@ public class ControlsSample extends Application {
     private static final String TEXT_AREA_RESOURCE = "JMetro TextArea.fxml";
     private static final String PASSWORD_FIELD_RESOURCE = "JMetro PasswordField.fxml";
     private static final String PROGRESS_BAR_RESOURCE = "JMetro ProgressBar.fxml";
+    private static final String PROGRESS_INDICATOR_RESOURCE = "JMetro ProgressIndicator.fxml";
     private static final String SLIDER_RESOURCE = "JMetro Slider.fxml";
     private static final String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
     private static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
@@ -63,7 +64,7 @@ public class ControlsSample extends Application {
     private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
 
-    static final private String RESOURCE = MENU_BUTTON_RESOURCE;
+    static final private String RESOURCE = PROGRESS_INDICATOR_RESOURCE;
     static final private JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     @Override

@@ -30,14 +30,13 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="374.0" styleClass="background"
-            xmlns:fx="http://javafx.com/fxml" fx:controller="jfxtras.styles.jmetro.controlssample.ProgressBarController">
-    <Label layoutX="31.0" layoutY="17.5"  styleClass="header" text="Progress Bar"/>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="306.0" prefWidth="425.0" styleClass="background"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="jfxtras.styles.jmetro.controlssample.ProgressIndicatorController">
+    <Label layoutX="31.0" layoutY="17.5"  styleClass="header" text="Progress Indicator"/>
 
     <Label layoutX="70" layoutY="140" text="Determinate" styleClass="item-title"/>
-    <ProgressBar fx:id="determinateProgressBar" layoutX="70" layoutY="171.5" prefWidth="200" minWidth="200" progress="0.4"/>
-    <Label fx:id="progressLabel" layoutX="290" layoutY="164.5" styleClass="item-title" />
+    <ProgressIndicator fx:id="determinateProgressIndicator" layoutX="70" layoutY="171.5" progress="0.4"/>
 
-    <Label layoutX="70" layoutY="220" text="Indeterminate" styleClass="item-title"/>
-    <ProgressBar layoutX="70" layoutY="251.5" prefWidth="200" minWidth="200" />
+    <Label layoutX="270" layoutY="140" text="Indeterminate" styleClass="item-title"/>
+    <ProgressIndicator layoutX="270" layoutY="171.5" />
 </AnchorPane>
