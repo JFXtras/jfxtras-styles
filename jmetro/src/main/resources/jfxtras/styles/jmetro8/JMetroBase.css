@@ -1511,7 +1511,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-padding: 1.25em 1em 1.25em 1em;
+    -fx-padding: 0.666667em 1em 0.666667em 1em; /* 8 12 8 12 */
     -fx-font-family: "Segoe UI";
     -fx-text-fill: text_color;
 }
@@ -1650,7 +1650,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 /*******************************************************************************
  *                                                                             *
- * Tree TableView                                                              *
+ * Tree Table View                                                             *
  *                                                                             *
  ******************************************************************************/
 

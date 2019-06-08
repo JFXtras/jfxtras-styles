@@ -416,15 +416,15 @@
 .list-view {
     text_color: white;
 
-    list_view_background_color: #111;
-    border_color: #666;
+    list_view_background_color: #333;
+    border_color: #171717;
 
     cell_hover_color: #515151;
     cell_pressed_color: #3e3e3e;
 
-    cell_selected_color: derive(accent_color, 20%);
-    cell_selected_hover_color: derive(accent_color, 40%);
-    cell_selected_pressed_color: derive(accent_color, 50%);
+    cell_selected_color: derive(accent_color, -35%);
+    cell_selected_hover_color: derive(accent_color, -20%);
+    cell_selected_pressed_color: derive(accent_color, -10%);
 }
 
 /*******************************************************************************
@@ -593,7 +593,7 @@
 
 /*******************************************************************************
  *                                                                             *
- * Tree TableView                                                              *
+ * Tree Table View                                                             *
  *                                                                             *
  ******************************************************************************/
 
@@ -666,7 +666,7 @@
 
 /*******************************************************************************
  *                                                                             *
- * TitledPane                                                                  *
+ * Titled Pane                                                                 *
  *                                                                             *
  ******************************************************************************/
 
