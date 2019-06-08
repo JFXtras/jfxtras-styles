@@ -1566,6 +1566,10 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-text-fill: text_color;
 }
 
+.tree-view .tree-cell > .tree-disclosure-node {
+    -fx-background-color: transparent;
+}
+
 /********** Label **********/
 .tree-view .tree-cell .label{
     -fx-font-family: "Segoe UI";
