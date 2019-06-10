@@ -5,23 +5,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
-//import org.scenicview.ScenicView;
 
 public class TableViewSample extends Application {
 
@@ -51,9 +40,9 @@ public class TableViewSample extends Application {
         stage.setWidth(650);
         stage.setHeight(600);
 
-        final Label label = new Label("Table View");
-        label.setPadding(new Insets(0, 0, 0, 5));
-        label.setFont(new Font("Segoe UI", 36));
+        final Label header = new Label("Table View");
+        header.setPadding(new Insets(0, 0, 0, 5));
+        header.getStyleClass().add("header");
 
         table.setEditable(true);
         table.getSelectionModel().setCellSelectionEnabled(true);
@@ -74,25 +63,17 @@ public class TableViewSample extends Application {
         table.setItems(data);
         table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
 
+        CheckBox cellSelection = new CheckBox("Cell Selection");
+        cellSelection.setOnAction(event -> {
+            table.getSelectionModel().setCellSelectionEnabled(cellSelection.isSelected());
+        });
+        cellSelection.setSelected(cellSelection.isSelected());
+
         vbox.setSpacing(40);
         vbox.setPadding(new Insets(10, 10, 0, 10));
-        vbox.getChildren().addAll(label, table);
-
-
-        if (STYLE.equals(JMetro.Style.LIGHT)) {
-            vbox.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
-            table.setStyle("-fx-border-color: #E5E5E5; -fx-border-width: 1px; -fx-border-style: solid;");
-            label.setStyle("-fx-text-fill: #111;");
-        }
-        else if (STYLE.equals(JMetro.Style.DARK)){
-            vbox.setBackground(new Background(new BackgroundFill(Paint.valueOf("#111"), CornerRadii.EMPTY, Insets.EMPTY)));
-            table.setStyle("-fx-border-color: #1D1D1D; -fx-border-width: 1px; -fx-border-style: solid;");
-            label.setStyle("-fx-text-fill: white;");
-        }
+        vbox.getChildren().addAll(header, table, cellSelection);
 
         new JMetro(STYLE).applyTheme(scene);
-
-//        ScenicView.show(scene);
 
         stage.setScene(scene);
         stage.show();

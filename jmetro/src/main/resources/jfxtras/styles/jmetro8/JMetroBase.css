@@ -1549,6 +1549,160 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 /*******************************************************************************
  *                                                                             *
+ * Table View                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.table-view{
+    -fx-cell-focus-inner-border: table_selected_color; /* focused */
+
+    -fx-background-color: transparent, transparent;
+
+    -fx-border-color: table_view_border_color;
+
+    -fx-padding: 0;
+}
+
+.table-view .column-header {
+    -fx-padding: 0em 0em 0em 1em;
+}
+
+.table-view .column-header .label {
+    -fx-padding: 0.666666em 2em 0.666666em 0; /* 8 24 8 0 */
+}
+
+.table-cell {
+    -fx-padding: 0.833333em 2em 0.5em 1em; /* 10 24 6 12 */
+}
+
+/****** Column Header ******/
+.table-view > .column-header-background > .nested-column-header > .column-header > GridPane {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header:last-visible {
+    -fx-border-color: transparent transparent table_view_border_color transparent;
+}
+
+.table-view .filler {
+    -fx-border-color: transparent transparent table_view_border_color transparent;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: text_color;
+    -fx-font-family: "Segoe UI SemiBold";
+    -fx-font-size: 1em;  /* 12 */
+    -fx-alignment: center-left;
+}
+
+.table-view .column-header:hover{
+    -fx-background-color: table_selected_hover_color;
+}
+
+.table-view .column-header:hover .label{
+    -fx-text-fill: hover_text_color;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: table_background_color;
+}
+
+.table-view .column-header, .table-view .filler{
+    /* borders around table header */
+    -fx-background-color: table_background_color;
+    -fx-border-color: transparent transparent table_view_border_color transparent;
+}
+
+.table-view .filler {
+    -fx-background-color: transparent, table_background_color;
+    -fx-background-insets: 0 0 0 0, 1 0 1 0;
+}
+
+.table-view .column-header.table-column-selected {
+    -fx-background: table_background_color;
+}
+
+/* Header Sort Arrows */
+.table-view > .column-header-background > .nested-column-header > .column-header .arrow {
+    -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5 */
+    -fx-shape: "M 15 4 L 15 24.0625 L 8.21875 17.28125 L 6.78125 18.71875 L 15.28125 27.21875 L 16 27.90625 L 16.71875 27.21875 L 25.21875 18.71875 L 23.78125 17.28125 L 17 24.0625 L 17 4 Z ";
+    -fx-background-color: sort_arrow_color;
+}
+
+/****** Table View "body"  ******/
+
+.table-cell {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1em;  /* 12 */
+    -fx-alignment: center-left;
+
+    -fx-border-width: 0;
+}
+
+.table-cell:last-visible {
+    -fx-border-color: transparent transparent transparent transparent;
+}
+
+.table-cell:filled:hover {
+    -fx-background-color: table_selected_hover_color;
+}
+
+.table-cell .text {
+    -fx-fill: text_color;
+}
+
+.table-cell:hover .text {
+    -fx-fill: hover_text_color;
+}
+
+/* Selected cell */
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
+    -fx-fill: selected_text_color;
+}
+
+/* - when focused */
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
+    -fx-background: table_selected_color;
+    -fx-border-width: 0;
+}
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
+    -fx-background-color: table_selected_hover_color;
+}
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text {
+    -fx-fill: selected_text_color;
+}
+
+/* - when not focused */
+
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
+    -fx-background: table_selected_unfocused_color;
+}
+
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text {
+    -fx-fill: selected_unfocused_text_color;
+}
+
+/*.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{*/
+/*    -fx-background: white;*/
+/*    -fx-border-color: transparent transparent table_view_border_color transparent, transparent #034f95 transparent #034f95;*/
+/*    -fx-border-width: 1px 2px 1px 2px, 1px 2px 1px 2px;*/
+/*}*/
+
+.table-row-cell {
+    -fx-background-color: table_background_color;
+    -fx-background-insets: 0;
+}
+
+/*!* - focused *!*/
+/*.table-view .table-cell:focused {*/
+/*    -fx-background-color: -fx-background, table_selected_color, -fx-background;*/
+/*}*/
+
+/*******************************************************************************
+ *                                                                             *
  * Tree View                                                                   *
  *                                                                             *
  ******************************************************************************/

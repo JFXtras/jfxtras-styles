@@ -421,158 +421,20 @@
  ******************************************************************************/
 
 .table-view {
-    /* This is a var */
-    table_view_border_color: #f4f4f4;
-    light_accent_color: derive(accent_color, 95%);
+    table_background_color: white;
+    table_view_border_color: #e9e9e9;
+
+    table_selected_color: derive(accent_color, 60%);
+    table_selected_hover_color: derive(accent_color, 30%);
+
+    table_selected_unfocused_color: #ddd;
 
     text_color: #111;
     hover_text_color: #111;
-    selected_text_color: white;
-}
+    selected_text_color: #111;
+    selected_unfocused_text_color: #111;
 
-.table-view{
-    -fx-cell-focus-inner-border: light_accent_color; /* focused */
-
-    -fx-background-color: transparent, transparent;
-
-    -fx-padding: 0;
-}
-
-/****** Column Header ******/
-
-.table-view .column-header-background {
-    -fx-background-color: white;
-}
-
-.table-view .column-header, .table-view .filler{
-    /* borders around table header */
-    -fx-background-color: white;
-    -fx-border-color: transparent transparent table_view_border_color transparent;
-}
-
-.table-view .filler {
-    -fx-background-color: transparent, white;
-    -fx-background-insets: 0 0 0 0, 1 0 1 0;
-}
-
-.table-view .column-header:last-visible {
-    -fx-border-color: transparent transparent table_view_border_color transparent;
-}
-
-.table-view .filler {
-    -fx-border-color: transparent transparent table_view_border_color transparent;
-}
-
-.table-view .column-header .label{
-    -fx-text-fill: text_color;
-    -fx-font-family: "Segoe UI SemiBold";
-    -fx-font-size: 1.166667em;  /* 14 */
-    -fx-alignment: center-left;
-
-    -fx-padding: 0.666666em 2em 0.666666em 2em;
-}
-
-.table-view .column-header:hover{
-    -fx-background-color: light_accent_color;
-}
-
-.table-view .column-header:hover .label{
-    -fx-text-fill: hover_text_color;
-}
-
-.table-view .column-header.table-column-selected {
-    -fx-background: white;
-    -fx-border-color: #034f95 #034f95 transparent #034f95;
-    -fx-border-width: 2px;
-}
-
-/****** Table View "body"  ******/
-
-.table-row-cell {
-    -fx-background-color: white;
-    -fx-background-insets: 0;
-}
-
-.table-cell {
-    -fx-border-color: transparent transparent transparent transparent;
-    -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.166667em;  /* 14 */
-    -fx-alignment: center-left;
-    -fx-padding: 0.833333em 2em 0.5em 2em;
-}
-
-.table-cell:last-visible {
-    -fx-border-color: transparent transparent transparent transparent;
-}
-
-.table-cell:filled:hover {
-    -fx-background-color: light_accent_color;
-}
-
-.table-cell .text {
-    -fx-fill: text_color;
-}
-
-.table-cell:hover .text {
-    -fx-fill: hover_text_color;
-}
-
-/* Selected cell */
-.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
-    -fx-fill: selected_text_color;
-}
-
-/* - when focused */
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
-    -fx-background: accent_color;
-    -fx-border-color: #034f95;
-}
-
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
-    -fx-background-color: light_accent_color;
-}
-
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{
-    -fx-background: white;
-    -fx-border-color: transparent transparent table_view_border_color transparent, transparent #034f95 transparent #034f95;
-    -fx-border-width: 1px 2px 1px 2px, 1px 2px 1px 2px;
-}
-
-/* - when focused and selected */
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
-    -fx-border-color: #034f95;
-}
-
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
-    -fx-fill: selected_text_color;
-}
-
-/* When hover */
-.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:hover .text,
-.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:hover:selected .text{
-    -fx-fill: hover_text_color;
-}
-
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
-    -fx-background-color: light_accent_color;
-}
-
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{
-    -fx-background: white;
-    -fx-border-color: transparent transparent table_view_border_color transparent, transparent #034f95 transparent #034f95;
-    -fx-border-width: 1px 2px 1px 2px, 1px 2px 1px 2px;
-}
-
-/* - focused */
-.table-view .table-cell:focused {
-    -fx-background-color: -fx-background, light_accent_color, -fx-background;
-}
-
-/* Header Sort Arrows */
-.table-view /*> column-header-background > nested-column-header >*/ .arrow {
-    -fx-padding: 0.5em 0.3125em 0.5em 0.3125em; /* 3 3.75 3 3.75 */
-    -fx-shape: "M26.488,211.891h17.656V53H81L35.316,0L-13,53h39.488V211.891z";
-
+    sort_arrow_color: #111;
 }
 
 /*******************************************************************************
