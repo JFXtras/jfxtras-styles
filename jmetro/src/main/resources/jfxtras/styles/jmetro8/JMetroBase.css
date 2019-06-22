@@ -1660,33 +1660,38 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-fill: hover_text_color;
 }
 
-/* Selected cell */
-.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text{
+/* Selected cells and rows */
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text,
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell .text {
     -fx-fill: selected_text_color;
 }
 
 /* - when focused */
-
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
     -fx-background-color: table_selected_color;
     -fx-border-width: 0;
 }
 
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover{
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover,
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover .table-cell{
     -fx-background-color: table_selected_hover_color;
 }
 
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text {
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text,
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell > .text {
     -fx-fill: selected_text_color;
 }
 
 /* - when not focused */
 
-.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected{
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
     -fx-background-color: table_selected_unfocused_color;
 }
 
-.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text {
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text,
+.table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell > .text {
     -fx-fill: selected_unfocused_text_color;
 }
 

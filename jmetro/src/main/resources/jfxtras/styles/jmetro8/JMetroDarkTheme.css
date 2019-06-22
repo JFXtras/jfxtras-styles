@@ -440,7 +440,7 @@
     table_selected_color: derive(accent_color, -35%);
     table_selected_hover_color: derive(accent_color, -20%);
 
-    table_selected_unfocused_color: #999;
+    table_selected_unfocused_color: #666666;
 
     text_color: white;
     hover_text_color: white;
