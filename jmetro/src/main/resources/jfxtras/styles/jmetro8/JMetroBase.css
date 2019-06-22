@@ -1576,10 +1576,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 /****** Column Header ******/
-.table-view > .column-header-background > .nested-column-header > .column-header > GridPane {
-    -fx-background-color: transparent;
-}
-
 .table-view .column-header:last-visible {
     -fx-border-color: transparent transparent table_view_border_color transparent;
 }
@@ -1623,10 +1619,19 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 /* Header Sort Arrows */
-.table-view > .column-header-background > .nested-column-header > .column-header .arrow {
+/* There can be nested column headers inside other nested column so this declaration is a bit loose. Not sure we can be
+totally specific (always using direct child) and cover all cases, which would be more performant. */
+.table-view > .column-header-background .nested-column-header > .column-header > GridPane > .arrow {
     -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5 */
     -fx-shape: "M 15 4 L 15 24.0625 L 8.21875 17.28125 L 6.78125 18.71875 L 15.28125 27.21875 L 16 27.90625 L 16.71875 27.21875 L 25.21875 18.71875 L 23.78125 17.28125 L 17 24.0625 L 17 4 Z ";
     -fx-background-color: sort_arrow_color;
+}
+.table-view > .column-header-background .nested-column-header > .column-header > GridPane {
+    -fx-background-color: transparent;
+}
+
+.table-view > .column-header-background .nested-column-header > .column-header > GridPane > .sort-order-dots-container {
+    -fx-background-color: transparent;
 }
 
 /****** Table View "body"  ******/
