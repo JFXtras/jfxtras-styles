@@ -437,6 +437,13 @@
     sort_arrow_color: #111;
 }
 
+/* Check Box Table Cell */
+.check-box-table-cell {
+    table_check_box_cell_box_background_color: transparent;
+    table_check_box_cell_box_border_color: #111;
+    table_check_box_cell_mark_color: #111;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Tree View                                                                   *

@@ -1684,7 +1684,6 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 /* - when not focused */
-
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
     -fx-background-color: table_selected_unfocused_color;
@@ -1695,21 +1694,25 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-fill: selected_unfocused_text_color;
 }
 
-/*.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell.table-column-selected{*/
-/*    -fx-background: white;*/
-/*    -fx-border-color: transparent transparent table_view_border_color transparent, transparent #034f95 transparent #034f95;*/
-/*    -fx-border-width: 1px 2px 1px 2px, 1px 2px 1px 2px;*/
-/*}*/
-
 .table-row-cell {
     -fx-background-color: table_background_color;
     -fx-background-insets: 0;
 }
 
-/*!* - focused *!*/
-/*.table-view .table-cell:focused {*/
-/*    -fx-background-color: -fx-background, table_selected_color, -fx-background;*/
-/*}*/
+/* Check box in Table View */
+.check-box-table-cell > .check-box {
+    -fx-opacity: 1;
+}
+
+.check-box-table-cell > .check-box > .box {
+    -fx-background-color: table_check_box_cell_box_background_color;
+    -fx-border-color: table_check_box_cell_box_border_color;
+    -fx-background-insets: 0;
+}
+
+.check-box-table-cell > .check-box:selected > .box > .mark {
+    -fx-background-color: table_check_box_cell_mark_color;
+}
 
 /*******************************************************************************
  *                                                                             *
