@@ -424,6 +424,8 @@
     table_background_color: white;
     table_view_border_color: #e9e9e9;
 
+    table_hover_color: #ddd;
+
     table_selected_color: derive(accent_color, 60%);
     table_selected_hover_color: derive(accent_color, 30%);
 
@@ -435,6 +437,7 @@
     selected_unfocused_text_color: #111;
 
     sort_arrow_color: #111;
+    show_hide_image_color: sort_arrow_color;
 }
 
 /* Check Box Table Cell */

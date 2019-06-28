@@ -1592,7 +1592,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 .table-view .column-header:hover{
-    -fx-background-color: table_selected_hover_color;
+    -fx-background-color: table_hover_color;
 }
 
 .table-view .column-header:hover .label{
@@ -1649,7 +1649,7 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 .table-cell:filled:hover {
-    -fx-background-color: table_selected_hover_color;
+    -fx-background-color: table_hover_color;
 }
 
 .table-cell .text {
@@ -1699,7 +1699,8 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-background-insets: 0;
 }
 
-/* Check box in Table View */
+/*********************** Check box in Table View *****************************/
+
 .check-box-table-cell > .check-box {
     -fx-opacity: 1;
 }
@@ -1712,6 +1713,28 @@ totally specific (always using direct child) and cover all cases, which would be
 
 .check-box-table-cell > .check-box:selected > .box > .mark {
     -fx-background-color: table_check_box_cell_mark_color;
+}
+
+/****************************** Plus Symbol ***********************************/
+
+.table-view > .column-header-background > .show-hide-columns-button,
+.tree-table-view > .column-header-background > .show-hide-columns-button {
+    -fx-background-color: table_background_color;
+    -fx-background-insets: 0;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em;
+}
+
+.table-view > .column-header-background > .show-hide-columns-button:hover,
+.tree-table-view > .column-header-background > .show-hide-columns-button:hover {
+    -fx-background-color: table_hover_color;
+}
+
+.table-view .show-hide-column-image,
+.tree-table-view .show-hide-column-image {
+    -fx-background-color: show_hide_image_color;
+    -fx-padding: 0.083333em; /* 3px */
+    -fx-scale-shape: false;
+    -fx-shape: "M33.561,25.389c0,0.828-0.672,1.5-1.5,1.5s-1.5-0.672-1.5-1.5c0-0.828,0.672-1.5,1.5-1.5S33.561,24.561,33.561,25.389z M32.061,30.532c-0.828,0-1.5,0.672-1.5,1.5c0,0.828,0.672,1.5,1.5,1.5s1.5-0.672,1.5-1.5C33.561,31.204,32.889,30.532,32.061,30.532z M32,37.107c-0.828,0-1.5,0.672-1.5,1.5c0,0.828,0.672,1.5,1.5,1.5s1.5-0.672,1.5-1.5C33.5,37.779,32.828,37.107,32,37.107z";
 }
 
 /*******************************************************************************
