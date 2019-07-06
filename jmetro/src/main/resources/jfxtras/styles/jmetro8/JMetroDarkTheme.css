@@ -49,6 +49,27 @@
 
 /*******************************************************************************
  *                                                                             *
+ * Common Styles                                                               *
+ *                                                                             *
+ * These are styles that give a standard look to a whole range of controls     *
+ *                                                                             *
+ ******************************************************************************/
+
+/* ====   CONTROLS WITH CELLS   ============================================= */
+
+.list-view, .table-view, .tree-view, .tree-table-view {
+    cell_hover_color: #515151;
+    cell_pressed_color: #3e3e3e;
+
+    cell_selected_unfocused_color: cell_hover_color;
+
+    cell_selected_color: derive(accent_color, -35%);
+    cell_selected_hover_color: derive(accent_color, -20%);
+    cell_selected_pressed_color: derive(accent_color, 60%);
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Label                                                                       *
  *                                                                             *
  ******************************************************************************/
@@ -418,13 +439,6 @@
 
     list_view_background_color: #333;
     border_color: #171717;
-
-    cell_hover_color: #515151;
-    cell_pressed_color: #3e3e3e;
-
-    cell_selected_color: derive(accent_color, -35%);
-    cell_selected_hover_color: derive(accent_color, -20%);
-    cell_selected_pressed_color: derive(accent_color, -10%);
 }
 
 /*******************************************************************************
@@ -436,13 +450,6 @@
 .table-view {
     table_background_color: #333;
     table_view_border_color: #171717;
-
-    table_hover_color: #666666;
-
-    table_selected_color: derive(accent_color, -35%);
-    table_selected_hover_color: derive(accent_color, -20%);
-
-    table_selected_unfocused_color: #666666;
 
     text_color: white;
     hover_text_color: white;
@@ -469,11 +476,7 @@
 .tree-view {
     tree_view_background_color: #333;
 
-    hover_color: #3e3e3e;
     pressed_color: derive(hover_color, 15%);
-
-    cell_selected_color: derive(accent_color, -35%);
-    cell_selected_hover_color: derive(accent_color, -20%);
 
     text_color: white;
     text_selected_color: white;
@@ -493,15 +496,11 @@
 .tree-table-view {
     table_border_color: #171717;
     table_background_color: #333;
+
     table_text_color: #fff;
     table_text_selected_color: #fff;
-    table_hover_color: #3e3e3e;
 
     table_column_vline_color: #3e3e3e;
-
-    table_selected_color: derive(accent_color, -35%);
-    table_selected_hover_color: derive(accent_color, -20%);
-    table_selected_unfocused_color: table_selected_color;
 }
 
 /*******************************************************************************

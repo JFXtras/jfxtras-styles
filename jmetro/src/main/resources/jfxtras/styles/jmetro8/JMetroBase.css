@@ -1554,7 +1554,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
  ******************************************************************************/
 
 .table-view{
-    -fx-cell-focus-inner-border: table_selected_color; /* focused */
+    -fx-cell-focus-inner-border: cell_selected_color; /* focused */
 
     -fx-background-color: transparent, transparent;
 
@@ -1592,7 +1592,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 }
 
 .table-view .column-header:hover{
-    -fx-background-color: table_hover_color;
+    -fx-background-color: cell_hover_color;
 }
 
 .table-view .column-header:hover .label{
@@ -1649,7 +1649,7 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 .table-cell:filled:hover {
-    -fx-background-color: table_hover_color;
+    -fx-background-color: cell_hover_color;
 }
 
 .table-cell .text {
@@ -1669,13 +1669,13 @@ totally specific (always using direct child) and cover all cases, which would be
 /* - when focused */
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
-    -fx-background-color: table_selected_color;
+    -fx-background-color: cell_selected_color;
     -fx-border-width: 0;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover,
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover .table-cell{
-    -fx-background-color: table_selected_hover_color;
+    -fx-background-color: cell_selected_hover_color;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text,
@@ -1686,7 +1686,7 @@ totally specific (always using direct child) and cover all cases, which would be
 /* - when not focused */
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
-    -fx-background-color: table_selected_unfocused_color;
+    -fx-background-color: cell_selected_unfocused_color;
 }
 
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text,
@@ -1726,7 +1726,7 @@ totally specific (always using direct child) and cover all cases, which would be
 
 .table-view > .column-header-background > .show-hide-columns-button:hover,
 .tree-table-view > .column-header-background > .show-hide-columns-button:hover {
-    -fx-background-color: table_hover_color;
+    -fx-background-color: cell_hover_color;
 }
 
 .table-view .show-hide-column-image,
@@ -1773,7 +1773,7 @@ totally specific (always using direct child) and cover all cases, which would be
 
 /* Hover */
 .tree-view .tree-cell:filled:hover {
-    -fx-background-color: hover_color;
+    -fx-background-color: cell_hover_color;
 
     -fx-text-fill: text_hover_color;
 }
@@ -1882,14 +1882,14 @@ totally specific (always using direct child) and cover all cases, which would be
 /* Selected */
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected {
-    -fx-background-color: table_selected_unfocused_color;
-    -fx-table-cell-border-color: table_selected_unfocused_color;
+    -fx-background-color: cell_selected_unfocused_color;
+    -fx-table-cell-border-color: cell_selected_unfocused_color;
 }
 
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected {
-    -fx-background-color: table_selected_color;
-    -fx-table-cell-border-color: table_selected_color;
+    -fx-background-color: cell_selected_color;
+    -fx-table-cell-border-color: cell_selected_color;
 }
 
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected > *,
@@ -1900,8 +1900,8 @@ totally specific (always using direct child) and cover all cases, which would be
 /* Selected - hover */
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:hover,
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:hover {
-    -fx-background-color: table_selected_hover_color;
-    -fx-table-cell-border-color: table_selected_hover_color;
+    -fx-background-color: cell_selected_hover_color;
+    -fx-table-cell-border-color: cell_selected_hover_color;
 }
 
 /* Hover */
@@ -1911,8 +1911,8 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:hover {
-    -fx-background-color: table_hover_color;
-    -fx-table-cell-border-color: table_hover_color;
+    -fx-background-color: cell_hover_color;
+    -fx-table-cell-border-color: cell_hover_color;
 }
 
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > * {
@@ -1960,7 +1960,7 @@ totally specific (always using direct child) and cover all cases, which would be
 .tree-table-view > .column-header-background > .nested-column-header > .nested-column-header *:hover,
 .tree-table-view:focused > .column-header-background > .nested-column-header > .nested-column-header *:hover,
 .tree-table-view:focused > .column-header-background > .nested-column-header > .nested-column-header *:pressed {
-    -fx-background-color: table_hover_color;
+    -fx-background-color: cell_hover_color;
 }
 
 .tree-table-view > .column-header-background > .nested-column-header > .table-column,
