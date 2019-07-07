@@ -2356,6 +2356,24 @@ totally specific (always using direct child) and cover all cases, which would be
 
 /*******************************************************************************
  *                                                                             *
+ * Separator                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.separator:horizontal .line {
+    -fx-border-color: transparent transparent transparent transparent,
+                      border_color transparent transparent transparent;
+    -fx-border-insets: 0, 1 0 0 0;
+}
+.separator:vertical .line {
+    -fx-border-color: transparent transparent transparent border_color,
+                      transparent transparent transparent transparent;
+    -fx-border-width: 1, 1;
+    -fx-border-insets: 0, 0 0 0 1;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Charts                                                                      *
  *                                                                             *
  ******************************************************************************/
