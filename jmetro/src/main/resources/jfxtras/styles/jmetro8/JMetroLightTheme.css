@@ -54,6 +54,14 @@
  *                                                                             *
  ******************************************************************************/
 
+/* ====   CONTROLS WITH ARROW BUTTONS ======================================= */
+
+.menu-button,
+.choice-box,
+.combo-box-base {
+    arrow_color: #111;
+}
+
 /* ====   CONTROLS WITH CELLS   ============================================= */
 
 .list-view, .table-view, .tree-view, .tree-table-view {
@@ -208,8 +216,6 @@
 
     combo_box_background_color: white;
     background_pressed_color: #cccccc;
-
-    arrow_color: #111;
 
     text_color: #111;
 
@@ -411,8 +417,6 @@
 
     choice_box_background_color: white;
     background_pressed_color: #cccccc;
-
-    arrow_color: #111;
 }
 
 /*******************************************************************************

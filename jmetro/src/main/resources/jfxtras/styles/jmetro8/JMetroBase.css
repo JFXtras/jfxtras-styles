@@ -61,6 +61,8 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 .menu-button > .arrow-button > .arrow {
     -fx-padding: 0.208em 0.358em 0.208em 0.358em; /* 2.5px 4.29px 2.5px 4.29px */
     -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
+
+    -fx-background-color: arrow_color;
 }
 
 /*.menu-button:openvertically > .arrow-button {*/
@@ -656,7 +658,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 /* ------- ARROW ------- */
 .combo-box-base > .arrow-button > .arrow {
     -fx-background-insets: 0 0 0 0, 0;
-    -fx-background-color: arrow_color;
 }
 
 /* LIST (Popup)*/
@@ -855,10 +856,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-opacity: 0.4;
     -fx-background-color: menu_button_background_color;
     -fx-text-fill: menu_button_text_color;
-}
-
-.menu-button > .arrow-button > .arrow {
-    -fx-background-color: menu_button_text_color;
 }
 
 /*******************************************************************************
@@ -1492,7 +1489,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 /* ARROW */
 .choice-box > .open-button > .arrow {
     -fx-background-insets: 0 0 0 0, 0;
-    -fx-background-color: arrow_color;
 }
 
 /*******************************************************************************
