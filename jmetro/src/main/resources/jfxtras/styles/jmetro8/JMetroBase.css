@@ -67,8 +67,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 
 .button, .toggle-button {
-    -fx-padding: 0.25em 1.666666em 0.25em 1.666666em; /*3 20 3 20*/
-
     -fx-border-color: transparent;
     -fx-border-width: 2;
 
