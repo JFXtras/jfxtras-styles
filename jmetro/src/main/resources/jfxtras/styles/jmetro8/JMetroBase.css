@@ -45,6 +45,36 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     accent_color: #0078d7;
 }
 
+
+/*******************************************************************************
+ *                                                                             *
+ * Common Styles                                                               *
+ *                                                                             *
+ * These are styles that give a standard look to a whole range of controls     *
+ *                                                                             *
+ ******************************************************************************/
+
+/* ====   CONTROLS WITH ARROW BUTTONS ======================================= */
+
+.combo-box-base > .arrow-button > .arrow,
+.choice-box > .open-button > .arrow,
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0.208em 0.358em 0.208em 0.358em; /* 2.5px 4.29px 2.5px 4.29px */
+    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
+}
+
+/*.menu-button:openvertically > .arrow-button {*/
+/*    -fx-padding: 0 1em 0 0;          !* 0 12 0 0 *!*/
+/*}*/
+
+/*.menu-button > .arrow-button {*/
+/*    -fx-padding: 0 1em 0 0.166667em; !* 0 12 0 2 *!*/
+/*}*/
+
+.menu-button:openvertically > .arrow-button > .arrow {
+    -fx-shape: "M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z ";
+}
+
 /*******************************************************************************
  *                                                                             *
  * Label                                                                       *
@@ -625,8 +655,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 /* ------- ARROW ------- */
 .combo-box-base > .arrow-button > .arrow {
-    -fx-padding: 3.5px 6px 3.5px 6px;
-    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
     -fx-background-insets: 0 0 0 0, 0;
     -fx-background-color: arrow_color;
 }
@@ -788,8 +816,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-background-color: menu_button_background_color;
     -fx-background-radius: 0;
     -fx-background-insets: 0;
-
-    -fx-padding: 0.25em 0 0.25em 0; /* 3 0 3 0 */
+    -fx-padding: 0em 0em 0em 0em; /* 0 8 0 8 */
 
     -fx-border-color: transparent;
     -fx-border-width: 2px;
@@ -802,9 +829,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 .menu-button > .label {
     -fx-font-family: "Segoe UI Semilight";
     -fx-font-size: 1em; /* 12 */
-
-    -fx-padding: 0em 1.666666em 0em 1.666666em; /* 3 20 3 20 */
-    -fx-label-padding: 0 -0.583333em 0 -0.583333em;
 
     -fx-text-fill: menu_button_text_color;
 }
@@ -833,21 +857,8 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-text-fill: menu_button_text_color;
 }
 
-.menu-button:openvertically > .arrow-button {
-    -fx-padding: 0 1em 0 0;          /* 0 12 0 0 */
-}
-
-.menu-button > .arrow-button {
-    -fx-padding: 0 1em 0 0.166667em; /* 0 12 0 2 */
-}
-
 .menu-button > .arrow-button > .arrow {
     -fx-background-color: menu_button_text_color;
-    -fx-shape: "M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z ";
-}
-
-.menu-button:openvertically > .arrow-button > .arrow {
-    -fx-shape: "M 4.21875 10.78125 L 2.78125 12.21875 L 15.28125 24.71875 L 16 25.40625 L 16.71875 24.71875 L 29.21875 12.21875 L 27.78125 10.78125 L 16 22.5625 Z ";
 }
 
 /*******************************************************************************
@@ -1480,8 +1491,6 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 /* ARROW */
 .choice-box > .open-button > .arrow {
-    -fx-padding: 0.333333em 0.5em 0.333333em 0.5em; /* 4 6 4 6 */
-    -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
     -fx-background-insets: 0 0 0 0, 0;
     -fx-background-color: arrow_color;
 }
