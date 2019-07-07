@@ -640,7 +640,7 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 11pt;
+    -fx-font-size: 1em;
     -fx-padding: 4 0 4 5; /* TODO: convert to ems */
 
     -fx-background-color: list_cell_color;
