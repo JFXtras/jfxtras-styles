@@ -689,6 +689,10 @@ Pane, AnchorPane, BorderPane, DialogPane, FlowPane, GridPane, HBox, StackPane, T
     -fx-background-color: derive(accent_color, 70%);
 }
 
+/*==========================  Editable ComboBox  =============================*/
+
+
+
 /*******************************************************************************
  *                                                                             *
  * Rating (ControlsFX)                                                         *

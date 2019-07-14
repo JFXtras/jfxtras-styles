@@ -14,7 +14,7 @@ import jfxtras.styles.jmetro8.JMetro;
 
 public class TableViewSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
 
     private TableView<Person> table = new TableView<>();
     private final ObservableList<Person> data =
@@ -38,7 +38,7 @@ public class TableViewSample extends Application {
         Scene scene = new Scene(vbox);
         stage.setTitle("Table View Sample");
         stage.setWidth(650);
-        stage.setHeight(600);
+        stage.setHeight(450);
 
         final Label header = new Label("Table View");
         header.setPadding(new Insets(0, 0, 0, 5));
@@ -63,14 +63,15 @@ public class TableViewSample extends Application {
         table.setItems(data);
         table.getColumns().addAll(firstNameCol, lastNameCol, emailCol);
 
+        table.getSelectionModel().setCellSelectionEnabled(false);
         CheckBox cellSelection = new CheckBox("Cell Selection");
         cellSelection.setOnAction(event -> {
             table.getSelectionModel().setCellSelectionEnabled(cellSelection.isSelected());
         });
-        cellSelection.setSelected(cellSelection.isSelected());
+        cellSelection.setSelected(table.getSelectionModel().isCellSelectionEnabled());
 
         vbox.setSpacing(40);
-        vbox.setPadding(new Insets(10, 10, 0, 10));
+        vbox.setPadding(new Insets(10, 10, 10, 10));
         vbox.getChildren().addAll(header, table, cellSelection);
 
         new JMetro(STYLE).applyTheme(scene);
