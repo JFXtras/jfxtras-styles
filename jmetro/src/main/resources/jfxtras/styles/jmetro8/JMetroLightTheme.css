@@ -428,8 +428,8 @@
 .list-view {
     text_color: #111;
 
-    list_view_background_color: white;
-    border_color: #111;
+    list_view_background_color: #f2f2f2;
+    border_color: transparent;
 }
 
 /*******************************************************************************
