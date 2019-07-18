@@ -68,8 +68,6 @@ public class TreeViewSample extends Application {
 
         TreeView<String> treeView = new TreeView<>(rootNode);
 
-
-//        ScenicView.show(scene);
         new JMetro(STYLE).applyTheme(scene);
 
         box.getChildren().add(treeView);
