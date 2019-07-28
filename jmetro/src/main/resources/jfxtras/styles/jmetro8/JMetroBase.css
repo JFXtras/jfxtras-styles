@@ -2061,6 +2061,10 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-border-style: solid;
 }
 
+.context-menu StackPane {
+    -fx-background-color: transparent;
+}
+
 /* separator */
 .context-menu .separator {
     -fx-padding: 0.58333275em 1em 0.58333275em 1em;  /*7 12 7 12 */
