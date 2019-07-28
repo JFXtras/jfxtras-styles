@@ -16,10 +16,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.input.*;
 import jfxtras.styles.jmetro8.JMetro;
+import jfxtras.styles.jmetro8.Style;
 
 public class MenuSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
+    private static final Style STYLE = Style.LIGHT;
 
     private final Entry[] effects = new Entry[] {
             new SimpleEntry<>("Sepia Tone", new SepiaTone()),
@@ -83,7 +84,7 @@ public class MenuSample extends Application {
         menuBar.getMenus().addAll(menuFile, menuEdit, menuView);
 
 
-        if (STYLE.equals(JMetro.Style.LIGHT)) {
+        if (STYLE.equals(Style.LIGHT)) {
             scene.getRoot().setStyle("-fx-background-color: #F9F9F9;");
         } else {
             scene.getRoot().setStyle("-fx-background-color: #333333;");
@@ -91,7 +92,7 @@ public class MenuSample extends Application {
 
         ((VBox) scene.getRoot()).getChildren().addAll(menuBar);
 
-        new JMetro(STYLE).applyTheme(scene);
+        new JMetro(scene, STYLE);
 
         stage.setScene(scene);
         stage.show();

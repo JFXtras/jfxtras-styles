@@ -12,10 +12,11 @@ import javafx.stage.Stage;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.layout.VBox;
 import jfxtras.styles.jmetro8.JMetro;
+import jfxtras.styles.jmetro8.Style;
 //import org.scenicview.ScenicView;
 
 public class TreeViewSample extends Application {
-    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+    private static final Style STYLE = Style.DARK;
 
     private List<Employee> employees = Arrays.asList(
             new Employee("Jacob Smith", "Accounts Department"),
@@ -68,7 +69,7 @@ public class TreeViewSample extends Application {
 
         TreeView<String> treeView = new TreeView<>(rootNode);
 
-        new JMetro(STYLE).applyTheme(scene);
+        new JMetro(scene, STYLE);
 
         box.getChildren().add(treeView);
         stage.setScene(scene);

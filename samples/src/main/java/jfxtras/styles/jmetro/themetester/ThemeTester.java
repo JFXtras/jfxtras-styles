@@ -26,6 +26,7 @@ import javafx.scene.transform.Scale;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
+import jfxtras.styles.jmetro8.Style;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -88,6 +89,8 @@ public class ThemeTester extends Application {
     private ToggleButton modenaButton,retinaButton,rtlButton,embeddedPerformanceButton;
     private TabPane contentTabs;
     private ComboBox<String> styleComboBox;
+
+    private JMetro jMetro = new JMetro();
 
     private Scene scene;
 
@@ -156,8 +159,10 @@ public class ThemeTester extends Application {
         }
         scene = new Scene(outerRoot, sceneWidth, sceneHeight);
 
+        jMetro.setScene(scene);
+
         // set user agent stylesheet
-        updateTheme(Theme.JMETRO, JMetro.Style.LIGHT);
+        updateTheme(Theme.JMETRO, Style.LIGHT);
         // build UI
         rebuildUI(false,false,0, null);
 
@@ -192,10 +197,10 @@ public class ThemeTester extends Application {
     }
 
     private void updateTheme() {
-        updateTheme(modenaButton.isSelected() ? Theme.MODENA : Theme.JMETRO, styleComboBox.getValue().equals("Light") ? JMetro.Style.LIGHT : JMetro.Style.DARK);
+        updateTheme(modenaButton.isSelected() ? Theme.MODENA : Theme.JMETRO, styleComboBox.getValue().equals("Light") ? Style.LIGHT : Style.DARK);
     }
 
-    private void updateTheme(Theme theme, JMetro.Style style) {
+    private void updateTheme(Theme theme, Style style) {
         final SamplePage.Section scrolledSection = samplePageNavigation == null ? null : samplePageNavigation.getCurrentSection();
 
         styleSheetContent = loadUrl(MODENA_STYLESHEET_URL);
@@ -232,7 +237,7 @@ public class ThemeTester extends Application {
         setUserAgentStylesheet("internal:stylesheet"+Math.random()+".css");
 
         if (theme == Theme.JMETRO) {
-            new JMetro(style).applyTheme(scene);
+            new JMetro(scene, style);
         }
 
         if (root != null) root.requestLayout();
@@ -404,7 +409,7 @@ public class ThemeTester extends Application {
         ComboBox<String> styleComboBox = new ComboBox<>();
         styleComboBox.getItems().addAll("Light", "Dark");
         styleComboBox.setValue("Light");
-        styleComboBox.valueProperty().addListener(((observable, oldValue, newValue) -> updateTheme(Theme.JMETRO, styleComboBox.getValue().equals("Light") ? JMetro.Style.LIGHT : JMetro.Style.DARK)));
+        styleComboBox.valueProperty().addListener(((observable, oldValue, newValue) -> updateTheme(Theme.JMETRO, styleComboBox.getValue().equals("Light") ? Style.LIGHT : Style.DARK)));
         return styleComboBox;
     }
 

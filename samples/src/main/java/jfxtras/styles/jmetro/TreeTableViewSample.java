@@ -9,13 +9,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
+import jfxtras.styles.jmetro8.Style;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class TreeTableViewSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.DARK;
+    private static final Style STYLE = Style.DARK;
 
     List<Employee> employees = Arrays.asList(
             new Employee("Ethan Williams", "ethan.williams@example.com", "25", "Manager", "San Francisco"),
@@ -112,7 +113,7 @@ public class TreeTableViewSample extends Application {
 
         stage.setScene(scene);
 
-        new JMetro(STYLE).applyTheme(scene);
+        new JMetro(scene, STYLE);
 
         stage.show();
     }

@@ -11,10 +11,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
+import jfxtras.styles.jmetro8.Style;
 
 public class TableViewSample extends Application {
 
-    private static final JMetro.Style STYLE = JMetro.Style.LIGHT;
+    private static final Style STYLE = Style.LIGHT;
 
     private TableView<Person> table = new TableView<>();
     private final ObservableList<Person> data =
@@ -74,7 +75,7 @@ public class TableViewSample extends Application {
         vbox.setPadding(new Insets(10, 10, 10, 10));
         vbox.getChildren().addAll(header, table, cellSelection);
 
-        new JMetro(STYLE).applyTheme(scene);
+        new JMetro(scene, STYLE);
 
         stage.setScene(scene);
         stage.show();

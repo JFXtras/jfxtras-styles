@@ -27,42 +27,119 @@
 
 package jfxtras.styles.jmetro8;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+/**
+ * This class is used to apply the JMetro theme to a {@link Parent} or {@link Scene}.
+ * It has various properties that tweak the theme.
+ */
 public class JMetro {
-    public enum Style {
-        LIGHT,
-        DARK;
+    private static final String BASE_STYLE_SHEET_URL = JMetro.class.getResource("JMetroBase.css").toExternalForm();
 
-        private String getStyleSheetFileName() {
-            String stylesheet = null;
-            switch (this) {
-                case LIGHT:
-                    stylesheet = "JMetroLightTheme.css";
-                    break;
-                case DARK:
-                    stylesheet = "JMetroDarkTheme.css";
-                    break;
+    /**
+     * The {@link Scene} that JMetro will be applied to. Setting this property to a {@link Scene} instance will make
+     * the {@Link #parent parent} property null.
+     */
+    private ObjectProperty<Scene> scene = new SimpleObjectProperty<Scene>() {
+        @Override
+        protected void invalidated() {
+            if (get() == null) {
+                return;
             }
-            return stylesheet;
+            parent.set(null);
+
+            get().getStylesheets().add(BASE_STYLE_SHEET_URL);
+            get().getStylesheets().add(getStyle().getStyleStylesheetURL());
+        }
+    };
+
+    /**
+     * The {@Link Parent} that JMetro will be applied to. Settings this property to a {@link Parent} instance will make
+     * the {@Link #scene scene} property null.
+     */
+    private ObjectProperty<Parent> parent = new SimpleObjectProperty<Parent>() {
+        @Override
+        protected void invalidated() {
+            if (get() == null) {
+                return;
+            }
+            scene.set(null);
+
+            get().getStylesheets().add(BASE_STYLE_SHEET_URL);
+            get().getStylesheets().add(getStyle().getStyleStylesheetURL());
+        }
+    };
+
+    /**
+     * The {@link Style} that should be applied
+     */
+    private ObjectProperty<Style> style = new SimpleObjectProperty<Style>(Style.LIGHT) {
+        @Override
+        protected void invalidated() {
+            reApplyTheme();
+        }
+    };
+
+    public JMetro() {}
+
+    public JMetro(Scene scene, Style style) {
+        this.style.set(style);
+        this.scene.set(scene);
+    }
+
+    public JMetro(Parent parent, Style style) {
+        this.style.set(style);
+        this.parent.set(parent);
+    }
+
+    /**
+     * Reapplies the theme in the specified parent or scene if the stylesheets don't exist in the stylesheets list of the
+     * parent or scene.
+     */
+    public void reApplyTheme() {
+        if (getScene() != null) {
+            // Remove existing style stylesheets
+            getScene().getStylesheets().remove(Style.LIGHT.getStyleStylesheetURL());
+            getScene().getStylesheets().remove(Style.DARK.getStyleStylesheetURL());
+
+            int baseStylesheetIndex = getScene().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
+            if (baseStylesheetIndex == -1) {
+                getScene().getStylesheets().add(BASE_STYLE_SHEET_URL);
+                baseStylesheetIndex = getScene().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
+            }
+
+            getScene().getStylesheets().add(baseStylesheetIndex + 1, getStyle().getStyleStylesheetURL());
+        } else if (getParent() != null) {
+            // Remove existing style stylesheets
+            getParent().getStylesheets().remove(Style.LIGHT.getStyleStylesheetURL());
+            getParent().getStylesheets().remove(Style.DARK.getStyleStylesheetURL());
+
+            int baseStylesheetIndex = getParent().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
+            if (baseStylesheetIndex == -1) {
+                getParent().getStylesheets().add(BASE_STYLE_SHEET_URL);
+                baseStylesheetIndex =  getParent().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
+            }
+
+            getParent().getStylesheets().add(baseStylesheetIndex + 1, getStyle().getStyleStylesheetURL());
         }
     }
 
-    private Style style;
+    // --- style
+    public Style getStyle() { return style.get(); }
+    public ObjectProperty<Style> styleProperty() { return style; }
+    public void setStyle(Style style) { this.style.set(style); }
 
-    public JMetro(Style style) {
-        this.style = style;
-    }
+    // --- scene
+    public Scene getScene() { return scene.get(); }
+    public ObjectProperty<Scene> sceneProperty() { return scene; }
+    public void setScene(Scene scene) { this.scene.set(scene); }
 
-    public void applyTheme(Scene scene){
-        scene.getStylesheets().add(JMetro.class.getResource("JMetroBase.css").toExternalForm());
-        scene.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-    }
-
-    public void applyTheme(Parent parent){
-        parent.getStylesheets().add(JMetro.class.getResource("JMetroBase.css").toExternalForm());
-        parent.getStylesheets().add(JMetro.class.getResource(style.getStyleSheetFileName()).toExternalForm());
-    }
+    // --- parent
+    public Parent getParent() { return parent.get(); }
+    public ObjectProperty<Parent> parentProperty() { return parent; }
+    public void setParent(Parent parent) { this.parent.set(parent); }
 }
 

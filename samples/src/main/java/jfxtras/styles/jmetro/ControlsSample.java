@@ -36,6 +36,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
+import jfxtras.styles.jmetro8.Style;
 
 public class ControlsSample extends Application {
     private static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
@@ -65,7 +66,7 @@ public class ControlsSample extends Application {
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
 
     static final private String RESOURCE = LIST_VIEW_RESOURCE;
-    static final private JMetro.Style STYLE = JMetro.Style.DARK;
+    static final private Style STYLE = Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -74,7 +75,7 @@ public class ControlsSample extends Application {
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
 
-        new JMetro(STYLE).applyTheme(root);
+        new JMetro(root, STYLE);
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
