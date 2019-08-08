@@ -31,6 +31,8 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -40,8 +42,8 @@ import javafx.scene.Scene;
  * It has various properties that tweak the theme.
  */
 public class JMetro {
-    private static final String BASE_STYLE_SHEET_URL = JMetro.class.getResource("JMetroBase.css").toExternalForm();
-    private static final String PANES_STYLE_SHEET_URL = JMetro.class.getResource("JMetroPanes.css").toExternalForm();
+    private static final String BASE_STYLESHEET_URL = JMetro.class.getResource("JMetroBase.css").toExternalForm();
+    private static final String PANES_STYLESHEET_URL = JMetro.class.getResource("JMetroPanes.css").toExternalForm();
 
     /**
      * The {@link Scene} that JMetro will be applied to. Setting this property to a {@link Scene} instance will make
@@ -103,16 +105,39 @@ public class JMetro {
         }
     };
 
-    public JMetro() {}
+    private ObservableList<String> overridingStylesheets = FXCollections.observableArrayList();
+
+    public JMetro() {
+        overridingStylesheets.addListener(this::overridingStylesheetsChanged);
+    }
 
     public JMetro(Scene scene, Style style) {
+        this();
         this.style.set(style);
         this.scene.set(scene);
     }
 
     public JMetro(Parent parent, Style style) {
+        this();
         this.style.set(style);
         this.parent.set(parent);
+    }
+
+    private void overridingStylesheetsChanged(ListChangeListener.Change<? extends String> changed) {
+        ObservableList<String> stylesheetsListBeingApplied = getAppliedStylesheetsList();
+
+        // Currently this only supports adding and removing of stylesheets of the overriding stylesheets list
+        while(changed.next()) {
+            if (changed.wasRemoved()) {
+                for (String stylesheetURL : changed.getRemoved()) {
+                    stylesheetsListBeingApplied.remove(stylesheetURL);
+                }
+            }
+            if (changed.wasAdded()) {
+                // For now we just add at the bottom of the list
+                stylesheetsListBeingApplied.addAll(changed.getAddedSubList());
+            }
+        }
     }
 
     /**
@@ -120,36 +145,64 @@ public class JMetro {
      * parent or scene.
      */
     public void reApplyTheme() {
+        ObservableList<String> stylesheetsList = getAppliedStylesheetsList();
+
+        /* Order:
+           1 - Style (Light or Dark) stylesheet
+           2 - "Panes" Stylesheet
+           3-  Base stylesheet
+           4 - Overriding stylesheets */
+
+        if (stylesheetsList != null) {
+            // Remove existing JMetro style stylesheets
+            stylesheetsList.remove(Style.LIGHT.getStyleStylesheetURL());
+            stylesheetsList.remove(Style.DARK.getStyleStylesheetURL());
+            stylesheetsList.remove(PANES_STYLESHEET_URL);
+
+            int baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
+
+            // Add BASE_STYLESHEET before all other JMetro stylesheets
+            if (baseStylesheetIndex == -1) {
+                stylesheetsList.add(getStyle().getStyleStylesheetURL());
+                stylesheetsList.add(BASE_STYLESHEET_URL);
+                baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
+            } else {
+                stylesheetsList.add(baseStylesheetIndex++, getStyle().getStyleStylesheetURL());
+            }
+
+            if (isAutomaticallyColorPanes()) {
+                if (!stylesheetsList.contains(PANES_STYLESHEET_URL)) {
+                    stylesheetsList.add(baseStylesheetIndex, PANES_STYLESHEET_URL);
+                }
+            }
+        }
+    }
+
+    /**
+     * Gets the list of stylesheets that is being applied. If the {@link #scene} property is set it returns the scene's stylesheets list.
+     * If the {@link #parent} property is set it returns the parent's stylesheet list.
+     *
+     * @return the list of stylesheets of the parent or scene
+     */
+    private ObservableList<String> getAppliedStylesheetsList() {
         ObservableList<String> stylesheetsList = null;
         if (getScene() != null) {
             stylesheetsList = getScene().getStylesheets();
         } else if (getParent() != null) {
             stylesheetsList = getParent().getStylesheets();
         }
-
-        if (stylesheetsList != null) {
-            // Remove existing JMetro style stylesheets
-            stylesheetsList.remove(Style.LIGHT.getStyleStylesheetURL());
-            stylesheetsList.remove(Style.DARK.getStyleStylesheetURL());
-            stylesheetsList.remove(PANES_STYLE_SHEET_URL);
-
-            int baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLE_SHEET_URL);
-
-            if (baseStylesheetIndex == -1) {
-                stylesheetsList.add(getStyle().getStyleStylesheetURL());
-                stylesheetsList.add(BASE_STYLE_SHEET_URL);
-                baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLE_SHEET_URL);
-            } else {
-                stylesheetsList.add(baseStylesheetIndex++, getStyle().getStyleStylesheetURL());
-            }
-
-            if (isAutomaticallyColorPanes()) {
-                if (!stylesheetsList.contains(PANES_STYLE_SHEET_URL)) {
-                    stylesheetsList.add(baseStylesheetIndex, PANES_STYLE_SHEET_URL);
-                }
-            }
-        }
+        return stylesheetsList;
     }
+
+    // --- overriding stylesheets
+
+    /**
+     * The list of stylesheet urls specified here will be present after JMetro stylesheets that make up this theme definition.
+     * These stylesheets will be added to the specified {@link #parent} or {@link #scene}.
+     *
+     * @return the list of stylesheets that will be present after the JMetro stylesheets that compose this theme
+     */
+    public ObservableList<String> getOverridingStylesheets() { return overridingStylesheets; }
 
     // --- style
     public Style getStyle() { return style.get(); }
