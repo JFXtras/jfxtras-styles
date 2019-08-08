@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 JFXtras
+ * Copyright (c) 2011-2019 JFXtras
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -34,6 +34,7 @@
     tab_pane_background_color: #2e2e2e;
 }
 
+/* To be used in "background" Panes */
 .background{
     -fx-background-color: #252525;
 }

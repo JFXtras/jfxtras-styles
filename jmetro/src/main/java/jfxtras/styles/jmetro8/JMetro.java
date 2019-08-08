@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 JFXtras
+ * Copyright (c) 2011-2019 JFXtras
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -27,8 +27,11 @@
 
 package jfxtras.styles.jmetro8;
 
+import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
@@ -38,10 +41,11 @@ import javafx.scene.Scene;
  */
 public class JMetro {
     private static final String BASE_STYLE_SHEET_URL = JMetro.class.getResource("JMetroBase.css").toExternalForm();
+    private static final String PANES_STYLE_SHEET_URL = JMetro.class.getResource("JMetroPanes.css").toExternalForm();
 
     /**
      * The {@link Scene} that JMetro will be applied to. Setting this property to a {@link Scene} instance will make
-     * the {@Link #parent parent} property null.
+     * the {@link #parent parent} property null.
      */
     private ObjectProperty<Scene> scene = new SimpleObjectProperty<Scene>() {
         @Override
@@ -51,14 +55,13 @@ public class JMetro {
             }
             parent.set(null);
 
-            get().getStylesheets().add(BASE_STYLE_SHEET_URL);
-            get().getStylesheets().add(getStyle().getStyleStylesheetURL());
+            reApplyTheme();
         }
     };
 
     /**
-     * The {@Link Parent} that JMetro will be applied to. Settings this property to a {@link Parent} instance will make
-     * the {@Link #scene scene} property null.
+     * The {@link Parent} that JMetro will be applied to. Settings this property to a {@link Parent} instance will make
+     * the {@link #scene scene} property null.
      */
     private ObjectProperty<Parent> parent = new SimpleObjectProperty<Parent>() {
         @Override
@@ -68,8 +71,7 @@ public class JMetro {
             }
             scene.set(null);
 
-            get().getStylesheets().add(BASE_STYLE_SHEET_URL);
-            get().getStylesheets().add(getStyle().getStyleStylesheetURL());
+            reApplyTheme();
         }
     };
 
@@ -77,6 +79,24 @@ public class JMetro {
      * The {@link Style} that should be applied
      */
     private ObjectProperty<Style> style = new SimpleObjectProperty<Style>(Style.LIGHT) {
+        @Override
+        protected void invalidated() {
+            reApplyTheme();
+        }
+    };
+
+    /**
+     * If true, all Panes (e.g. BorderPane, AnchorPane, StackPane, Pane, etc) will automatically
+     * have their background color set. If the style is {@link Style#DARK DARK} the background will be dark (like black),
+     * if the style is {@link Style#LIGHT LIGHT} the background will be light (like white).
+     * This has the disadvantage that if you have custom controls that have Panes as intermediate children, you'll
+     * usually need to redefine their background to transparent or else you might get whitish/blackish background
+     * patches in your custom controls.
+     * Alternatively, if this property is set to false (the default), you can add the style class ".background" to the
+     * Panes that are supposed to be in the background of your application. They will then automatically change their
+     * background color according to the {@link #style} property value.
+     */
+    private BooleanProperty automaticallyColorPanes = new SimpleBooleanProperty(false) {
         @Override
         protected void invalidated() {
             reApplyTheme();
@@ -100,30 +120,34 @@ public class JMetro {
      * parent or scene.
      */
     public void reApplyTheme() {
+        ObservableList<String> stylesheetsList = null;
         if (getScene() != null) {
-            // Remove existing style stylesheets
-            getScene().getStylesheets().remove(Style.LIGHT.getStyleStylesheetURL());
-            getScene().getStylesheets().remove(Style.DARK.getStyleStylesheetURL());
-
-            int baseStylesheetIndex = getScene().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
-            if (baseStylesheetIndex == -1) {
-                getScene().getStylesheets().add(BASE_STYLE_SHEET_URL);
-                baseStylesheetIndex = getScene().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
-            }
-
-            getScene().getStylesheets().add(baseStylesheetIndex + 1, getStyle().getStyleStylesheetURL());
+            stylesheetsList = getScene().getStylesheets();
         } else if (getParent() != null) {
-            // Remove existing style stylesheets
-            getParent().getStylesheets().remove(Style.LIGHT.getStyleStylesheetURL());
-            getParent().getStylesheets().remove(Style.DARK.getStyleStylesheetURL());
+            stylesheetsList = getParent().getStylesheets();
+        }
 
-            int baseStylesheetIndex = getParent().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
+        if (stylesheetsList != null) {
+            // Remove existing JMetro style stylesheets
+            stylesheetsList.remove(Style.LIGHT.getStyleStylesheetURL());
+            stylesheetsList.remove(Style.DARK.getStyleStylesheetURL());
+            stylesheetsList.remove(PANES_STYLE_SHEET_URL);
+
+            int baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLE_SHEET_URL);
+
             if (baseStylesheetIndex == -1) {
-                getParent().getStylesheets().add(BASE_STYLE_SHEET_URL);
-                baseStylesheetIndex =  getParent().getStylesheets().indexOf(BASE_STYLE_SHEET_URL);
+                stylesheetsList.add(getStyle().getStyleStylesheetURL());
+                stylesheetsList.add(BASE_STYLE_SHEET_URL);
+                baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLE_SHEET_URL);
+            } else {
+                stylesheetsList.add(baseStylesheetIndex++, getStyle().getStyleStylesheetURL());
             }
 
-            getParent().getStylesheets().add(baseStylesheetIndex + 1, getStyle().getStyleStylesheetURL());
+            if (isAutomaticallyColorPanes()) {
+                if (!stylesheetsList.contains(PANES_STYLE_SHEET_URL)) {
+                    stylesheetsList.add(baseStylesheetIndex, PANES_STYLE_SHEET_URL);
+                }
+            }
         }
     }
 
@@ -141,5 +165,10 @@ public class JMetro {
     public Parent getParent() { return parent.get(); }
     public ObjectProperty<Parent> parentProperty() { return parent; }
     public void setParent(Parent parent) { this.parent.set(parent); }
+
+    // --- automatically color panes
+    public boolean isAutomaticallyColorPanes() { return automaticallyColorPanes.get(); }
+    public BooleanProperty automaticallyColorPanesProperty() { return automaticallyColorPanes; }
+    public void setAutomaticallyColorPanes(boolean automaticallyColorPanes) { this.automaticallyColorPanes.set(automaticallyColorPanes); }
 }
 
