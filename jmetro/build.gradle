@@ -2,18 +2,23 @@ plugins {
     id "com.jfrog.bintray" version "1.8.4"
     id "java-library"
     id "maven-publish"
+    id 'org.openjfx.javafxplugin' version '0.0.8'
 }
 
-sourceCompatibility = '1.8'
+sourceCompatibility = JavaVersion.VERSION_11
 
-version = '8.5.7'
+version = '11.5.7'
 def versionDescription = 'JMetro'
 
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls' ]
+}
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 dependencies {
-    implementation 'org.controlsfx:controlsfx:8.40.14'
+    implementation 'org.controlsfx:controlsfx:11.0.0'
 }
 
 repositories {

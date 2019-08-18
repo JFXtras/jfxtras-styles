@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web', 'javafx.graphics' ]
+}
+
+mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+
+dependencies {
+    compile project(':jmetro')
+    compile 'org.controlsfx:controlsfx:11.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
