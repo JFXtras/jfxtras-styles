@@ -1,11 +1,24 @@
 package impl.jfxtras.styles.jmetro;
 
+import javafx.animation.FadeTransition;
+import javafx.beans.property.BooleanProperty;
+import javafx.css.CssMetaData;
+import javafx.css.SimpleStyleableBooleanProperty;
+import javafx.css.Styleable;
+import javafx.css.StyleableProperty;
+import javafx.css.converter.BooleanConverter;
 import javafx.geometry.Orientation;
+import javafx.geometry.Point2D;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.control.SkinBase;
 import javafx.scene.control.Slider;
-import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.util.Duration;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
     private StackPane fill = new StackPane();
@@ -13,6 +26,10 @@ public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
     private StackPane thumb, track;
 
     private double trackToTickGap = 2;
+
+    private SliderPopup popup = new SliderPopup();
+    private static final int POPUP_DISTANCE_FROM_THUMB = 50;
+    private static final Duration POPUP_FADE_DURATION = Duration.millis(200);
 
     public SliderSkin(Slider control) {
         super(control);
@@ -36,28 +53,85 @@ public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
         thumb.addEventHandler(MouseEvent.MOUSE_RELEASED, this::mouseReleasedFromThumb);
     }
 
-    private void mouseDraggedOnTrack(MouseEvent mouseEvent) {
-
+    private void mousePressedOnTrack(MouseEvent mouseEvent) {
+        showValuePopup();
     }
 
-    private void mousePressedOnTrack(MouseEvent mouseEvent) {
-
+    private void mouseDraggedOnTrack(MouseEvent mouseEvent) {
+        displaceValuePopup();
     }
 
     private void mouseReleasedFromTrack(MouseEvent mouseEvent) {
-
-    }
-
-    private void mouseDraggedOnThumb(MouseEvent mouseEvent) {
-
+        hideValuePopup();
     }
 
     private void mousePressedOnThumb(MouseEvent mouseEvent) {
+        showValuePopup();
+    }
 
+    private void mouseDraggedOnThumb(MouseEvent mouseEvent) {
+        displaceValuePopup();
     }
 
     private void mouseReleasedFromThumb(MouseEvent mouseEvent) {
+        hideValuePopup();
+    }
 
+    private void showValuePopup() {
+        if (!isShowValueOnInteraction()) {
+            return;
+        }
+
+
+        popup.setValue(getSkinnable().getValue());
+
+        Point2D thumbScreenPos = thumb.localToScreen(thumb.getBoundsInLocal().getMinX(), thumb.getBoundsInLocal().getMinY());
+
+        Orientation orientation = getSkinnable().getOrientation();
+        if (orientation.equals(Orientation.HORIZONTAL)) {
+            popup.show(thumb, thumbScreenPos.getX() + thumb.getWidth() / 2, thumbScreenPos.getY() - POPUP_DISTANCE_FROM_THUMB);
+            popup.setX(popup.getX() - popup.getWidth() / 2); /* We only know the Popup's bounds after we show it */
+        } else if (orientation.equals(Orientation.VERTICAL)){
+            popup.show(thumb, thumbScreenPos.getX() - POPUP_DISTANCE_FROM_THUMB, thumbScreenPos.getY() + thumb.getHeight() / 2);
+            popup.setY(popup.getY() - popup.getHeight() / 2); /* We only know the Popup's bounds after we show it */
+        }
+
+        FadeTransition fadeInTransition = new FadeTransition(POPUP_FADE_DURATION, popup.getScene().getRoot());
+        fadeInTransition.setFromValue(0);
+        fadeInTransition.setToValue(1);
+        fadeInTransition.play();
+    }
+
+    private void displaceValuePopup() {
+        if (!isShowValueOnInteraction()) {
+            return;
+        }
+
+        if (popup.isShowing()) {
+            popup.setValue(getSkinnable().getValue());
+
+            Point2D thumbScreenPos = thumb.localToScreen(thumb.getBoundsInLocal().getMinX(), thumb.getBoundsInLocal().getMinY());
+
+            Orientation orientation = getSkinnable().getOrientation();
+            if (orientation.equals(Orientation.HORIZONTAL)) {
+                popup.setX(thumbScreenPos.getX() + thumb.getWidth() / 2 - popup.getWidth() / 2);
+            } else if (orientation.equals(Orientation.VERTICAL)) {
+                popup.setY(thumbScreenPos.getY() + thumb.getHeight() / 2 - popup.getHeight() / 2);
+            }
+        }
+    }
+
+    private void hideValuePopup() {
+        if (!isShowValueOnInteraction()) {
+            return;
+        }
+
+        FadeTransition fadeOutTransition = new FadeTransition(POPUP_FADE_DURATION, popup.getScene().getRoot());
+        fadeOutTransition.setFromValue(1);
+        fadeOutTransition.setToValue(0);
+        fadeOutTransition.setOnFinished(actionEvent -> popup.hide());
+
+        fadeOutTransition.play();
     }
 
     @Override
@@ -106,5 +180,57 @@ public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
                     trackWidth,
                     trackLength - thumb.getLayoutY());
         }
+    }
+
+    /********** CSS Properties ****************/
+
+    private static final CssMetaData<Slider, Boolean> SHOW_VALUE_ON_INTERACTION_META_DATA =
+            new CssMetaData<>("-show-value-on-interaction",
+                    BooleanConverter.getInstance(), true) {
+
+                @Override
+                public boolean isSettable(Slider slider) {
+                    final SliderSkin skin = (SliderSkin) slider.getSkin();
+                    return !skin.showValueOnInteraction.isBound();
+                }
+
+                @Override
+                public StyleableProperty<Boolean> getStyleableProperty(Slider slider) {
+                    final SliderSkin skin = (SliderSkin) slider.getSkin();
+                    return (StyleableProperty<Boolean>) skin.showValueOnInteractionProperty();
+                }
+            };
+
+    private BooleanProperty showValueOnInteraction = new SimpleStyleableBooleanProperty(SHOW_VALUE_ON_INTERACTION_META_DATA, true);
+
+    private BooleanProperty showValueOnInteractionProperty() { return showValueOnInteraction; }
+
+    private boolean isShowValueOnInteraction() { return showValueOnInteraction.get(); }
+
+
+    /* Setup styleables for this Skin */
+    private static final List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
+
+    static {
+        final List<CssMetaData<? extends Styleable, ?>> styleables =
+                new ArrayList<>(SkinBase.getClassCssMetaData());
+        styleables.add(SHOW_VALUE_ON_INTERACTION_META_DATA);
+        STYLEABLES = Collections.unmodifiableList(styleables);
+    }
+
+    /**
+     * @return The CssMetaData associated with this class, which may include the
+     * CssMetaData of its super classes.
+     */
+    public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
+        return STYLEABLES;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
+        return getClassCssMetaData();
     }
 }
