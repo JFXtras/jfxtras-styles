@@ -2,6 +2,7 @@ package impl.jfxtras.styles.jmetro;
 
 import javafx.animation.FadeTransition;
 import javafx.beans.property.BooleanProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.css.CssMetaData;
 import javafx.css.SimpleStyleableBooleanProperty;
 import javafx.css.Styleable;
@@ -51,6 +52,18 @@ public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
         thumb.addEventHandler(MouseEvent.MOUSE_PRESSED, this::mousePressedOnThumb);
         thumb.addEventHandler(MouseEvent.MOUSE_DRAGGED, this::mouseDraggedOnThumb);
         thumb.addEventHandler(MouseEvent.MOUSE_RELEASED, this::mouseReleasedFromThumb);
+
+        registerChangeListener(control.showTickMarksProperty(), this::thickMarksChanged);
+        registerChangeListener(control.showTickLabelsProperty(), this::thickMarksChanged);
+    }
+
+    private void thickMarksChanged(ObservableValue<?> observableValue) {
+        /* When this method is called setShowTickMarks of super class has already been called
+           on that method the children's list has been cleared so we need to re-add any Nodes that this Class adds
+           to the Slider */
+
+        // Add fill right above track
+        getChildren().add(getChildren().indexOf(track) + 1, fill);
     }
 
     private void mousePressedOnTrack(MouseEvent mouseEvent) {
