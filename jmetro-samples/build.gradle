@@ -8,7 +8,8 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web', 'javafx.graphics' ]
 }
 
-mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+//mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 dependencies {
     compile project(':jmetro')

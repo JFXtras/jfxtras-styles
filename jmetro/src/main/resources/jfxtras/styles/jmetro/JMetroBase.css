@@ -969,10 +969,11 @@
  *                                                                             *
  ******************************************************************************/
 /* SliderSkin still no yet ported to java9+ */
-/*.slider {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.SliderSkin";
+.slider {
+    -fx-skin: "impl.jfxtras.styles.jmetro.SliderSkin";
 }
 
+/*
 .slider {
     -show-value-on-interaction: true;
 }*/
