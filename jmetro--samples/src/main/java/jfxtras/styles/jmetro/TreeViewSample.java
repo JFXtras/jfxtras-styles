@@ -11,8 +11,6 @@ import javafx.stage.Stage;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.layout.VBox;
-import jfxtras.styles.jmetro8.JMetro;
-import jfxtras.styles.jmetro8.Style;
 //import org.scenicview.ScenicView;
 
 public class TreeViewSample extends Application {

@@ -10,8 +10,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro8.JMetro;
-import jfxtras.styles.jmetro8.Style;
 
 public class TableViewSample extends Application {
 

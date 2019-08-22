@@ -25,7 +25,7 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package jfxtras.styles.jmetro8;
+package jfxtras.styles.jmetro;
 
 /**
  * Defined the JMetro style. This can be either dark or light.

@@ -25,7 +25,7 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package jfxtras.styles.jmetro8;
+package jfxtras.styles.jmetro;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;

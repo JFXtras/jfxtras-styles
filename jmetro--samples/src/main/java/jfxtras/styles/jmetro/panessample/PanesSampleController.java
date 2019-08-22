@@ -4,8 +4,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
-import jfxtras.styles.jmetro8.JMetro;
-import jfxtras.styles.jmetro8.Style;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.Style;
 
 import java.net.URL;
 import java.util.ResourceBundle;

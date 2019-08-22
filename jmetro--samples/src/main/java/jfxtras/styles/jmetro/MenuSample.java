@@ -15,8 +15,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.input.*;
-import jfxtras.styles.jmetro8.JMetro;
-import jfxtras.styles.jmetro8.Style;
 
 public class MenuSample extends Application {
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 JFXtras
+ * Copyright (c) 2011-2019 JFXtras
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -25,194 +25,117 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+@import "JMetroBase.css";
+
+.root {
+    background_color: white;
+    scroll_pane_background_color: background_color;
+
+    tab_pane_background_color: white;
+}
+
+/* To be used in "background" Panes */
 .background{
     -fx-background-color: white;
 }
 
 .header{
-    -fx-font-size: 42pt;
-    -fx-font-family: "Segoe UI Light";
     -fx-text-fill: black;
 }
 
 .item-title{
-    -fx-font-size: 11pt;
-    -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: black;
-    -fx-opacity: 0.6;
-     
 }
 
 /*******************************************************************************
  *                                                                             *
- * Push Button                                                                 *
+ * Common Styles                                                               *
+ *                                                                             *
+ * These are styles that give a standard look to a whole range of controls     *
  *                                                                             *
  ******************************************************************************/
+
+/* ====   CONTROLS WITH ARROW BUTTONS ======================================= */
+
+.menu-button,
+.choice-box,
+.combo-box-base {
+    arrow_color: #111;
+}
+
+/* ====   CONTROLS WITH CELLS   ============================================= */
+
+.list-view, .table-view, .tree-view, .tree-table-view {
+    cell_hover_color: #dadada;
+    cell_pressed_color: #c2c2c2;
+
+    cell_selected_unfocused_color: cell_hover_color;
+
+    cell_selected_color: derive(accent_color, 90%);
+    cell_selected_hover_color: derive(accent_color, 70%);
+    cell_selected_pressed_color: derive(accent_color, 60%);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Button and ToggleButton                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.button, .toggle-button {
+    button_background_color: #cccccc;
+    background_pressed_color: #999999;
+
+    border_hover_color: #7a7a7a;
+
+    text_color: #111;
+    default_button_text_color: white;
+
+    focus_ring_border_color: white;
+}
 
 .button {
-    -fx-padding: 5 22 5 22;   
-    -fx-border-style: null; 
-    -fx-background-radius: 0;
-
-    -fx-background-color: #cccccc;
-  
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: black;
+    border_hover_default_color: derive(accent_color, -40%);
 }
-
-.button:hover{
-    -fx-background-color: #d8d8d8;
-}
-
-.button:pressed, .button:default:hover:pressed
-{
-  -fx-background-color: black;
-  -fx-text-fill: white;
-}
-
-.button:focused
-{
-    -fx-border-color: black;
-    -fx-border-width: 1;
-    -fx-border-style: segments(1, 1);
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;   
-}
-
-.button:disabled, .button:default:disabled
-{
-    -fx-opacity: 0.4;
-    -fx-background-color: #cccccc;
-    -fx-text-fill: #212121;
-}
-
-.button:default
-{
-    -fx-background-color: #008287;
-    -fx-text-fill: #ffffff;
-}
-
-.button:default:hover{
-    -fx-background-color: #219297;
-}
-
-
-/*******************************************************************************
- *                                                                             *
- * Toggle Button                                                               *
- *                                                                             *
- ******************************************************************************/
 
 .toggle-button {
-    -fx-padding: 5 22 5 22;   
-    -fx-border-style: null; 
-    -fx-background-radius: 0;
-
-    -fx-background-color: #cccccc;
-  
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: black;
+    border_hover_selected_color: derive(accent_color, -40%);
 }
-
-.toggle-button:focused {
-    -fx-border-color: black;
-    -fx-border-width: 1;
-    -fx-border-style: segments(1, 1);
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;   
-}
-
-.toggle-button:hover {
-    -fx-background-color: #d8d8d8;
-    -fx-text-fill: black;
-}
-
-.toggle-button:selected {
-    -fx-background-color: black;
-    -fx-text-fill: white;
-}
-
-.toggle-button:selected:hover {
-    -fx-background-color: #666;
-    -fx-text-fill: white;
-}
-
-.toggle-button:disabled {
-    -fx-opacity: -fx-disabled-opacity;
-}
-
 
 /*******************************************************************************
  *                                                                             *
  * Check Box                                                                   *
  *                                                                             *
  ******************************************************************************/
-
 .check-box {
-    -fx-text-fill: black;
+    text_color: #111;
+
+    box_background_color: white;
+
+    box_border_color: #333333;
+    box_border_hover_color: #333333;
+
+    indeterminate_mark_color: #333333;
+    indeterminate_box_pressed_color: white;
+
+    focus_ring_color: #111;
 }
 
-.check-box .box {
-    -fx-background-color: white;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-    -fx-border-color: #bababa;
-    -fx-border-width: 2px;
-    -fx-border-style: solid;
-    -fx-padding: 1;
+/*******************************************************************************
+ *                                                                             *
+ * Hyperlink                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.hyperlink {
+    hyperlink_hover_color: derive(accent_color, -25%);
+    hyperlink_pressed_color: derive(accent_color, -70%);
+
+    hyperlink_disabled_color: #999999;
 }
 
-.check-box .mark {
-    -fx-background-color: transparent;
-    -fx-background-insets: 0;
-    
-    -fx-padding:7px;
-    -fx-shape: "M1,10L3,8L7,12L14,5L16,7L7,16Z"
-}
-
-.check-box:focused .box{
-    -fx-background-color: white;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-    -fx-border-color: black, #bababa;
-    -fx-border-width: 1, 2;
-    -fx-border-style: segments(1, 1), solid;
-    -fx-border-insets: -3, 0;
-}
-
-.check-box:selected .mark {
-    -fx-background-color: black;
-}
-
-.check-box:indeterminate .mark {
-   -fx-background-color: black; 
-   -fx-background-insets: 2.8; 
-   -fx-padding:7px;
-   -fx-shape: null;
-}
-
-.check-box:disabled
-{
-    -fx-opacity: 0.4;
-}
-
-.check-box:disabled .box
-{
-    -fx-background-color: #cdcdcd;
-    -fx-border-color: #aaa;
-
-}
-
-.check-box:armed .box
-{
-    -fx-background-color: white, black;
-    -fx-background-insets: -1, 2;
-    -fx-background-radius: 0, 0;
-}
-
-.check-box:armed .box .mark
-{
-  -fx-background-color: white;
+.hyperlink:disabled {
+    -fx-opacity: 0.7;
 }
 
 /*******************************************************************************
@@ -222,96 +145,19 @@
  ******************************************************************************/
 
 .radio-button {
-    -fx-text-fill: #212121;
-}
+    text_color: #111;
 
-.radio-button .radio  {
-   -fx-background-color: white;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-background-insets: 0;
-   
-   -fx-border-radius: 1.0em;
-   -fx-border-color: #bababa;
-    
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
-}
+    radio_background_color: white;
+    background_pressed_color: white;
 
-.radio-button:hover .radio {
-    -fx-border-color: #919191;
-}
+    border_color: #333333;
+    border_hover_color: #333333;
 
+    dot_color: white;
+    dot_selected_color: #333333;
+    dot_selected_hover_color: #111;
 
-.radio-button .dot {
-   -fx-background-color: transparent;
-   -fx-background-insets: 0;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-padding: 6px; /* 3 -- radius of the inner black dot when selected */
-}
-
-.radio-button:selected .dot {
-   -fx-background-color: #212121;
-}
-
-.radio-button:disabled
-{
-    -fx-opacity: 0.5;
-}
-
-.radio-button:disabled .radio
-{
-    -fx-background-color: #e6e6e6;
-    -fx-border-color: #d9d9d9;
-}
-
-.radio-button:focused .radio
-{
-   -fx-background-color: white;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-background-insets: 0;
-   
-   -fx-border-style: solid, segments(1, 1);
-   -fx-border-radius: 1.0em, 0;
-   -fx-border-color: #bababa, black;
-   -fx-border-insets: 0px, -2px;
-   -fx-border-width: 1px, 1px;
-    
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
-}
-
-.radio-button:armed .radio {
-    -fx-background-color: #212121;
-    -fx-border-color: #212121;
-}
-
-.radio-button:pressed .radio
-{
-    -fx-background-color: #212121;
-    -fx-border-color: #212121;
-}
-
-.radio-button:pressed:selected .dot
-{
-    -fx-background-color: white;
-}
-
-.radio-button:armed .dot
-{
-    -fx-background-color: black;
-}
-
-.radio-button:focused:armed .radio
-{
-   -fx-background-color: #212121;
-   -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
-   -fx-background-insets: 0;
-   
-   -fx-border-style: solid, segments(1, 1);
-   -fx-border-radius: 1.0em, 0;
-   -fx-border-color: #212121, #212121;
-   -fx-border-insets: 0px, -2px;
-   -fx-border-width: 1px, 1px;
-    
-   -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
+    focus_ring_color: #333333;
 }
 
 /*******************************************************************************
@@ -320,335 +166,424 @@
  *                                                                             *
  ******************************************************************************/
 
-/*.tooltip {
-    -fx-background-color: white;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0 0 0 0;
-    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em;  4 8 4 8 
-    -fx-effect: dropshadow( one-pass-box , #808080 , 5, 0.0 , 0 , 0 );
-    -fx-font-family: "Segoe UI Semilight", "Segoe UI Light", "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-text-fill: #949494;
+.tooltip {
+    tooltip_background_color: #f2f2f2;
+    border_color: #cccccc;
+    text_color: #111;
 }
-
-.page-corner {
-    -fx-padding: 4.5 4.5 4.5 4.5;
-    -fx-background-color: transparent;
-    -fx-shape: null;
-    -fx-effect: null;
-}*/
-
 
 /*******************************************************************************
  *                                                                             *
- * PopupMenu                                                                   *
+ * ToolBar                                                                     *
  *                                                                             *
  ******************************************************************************/
+
+.tool-bar {
+    background_color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Scroll Bar and Scroll Pane                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-bar {
+    thumb_color: #c2c7ca;
+    thumb_hover_color: #838689;
+    thumb_pressed_color: #585a5c;
+
+    track_color: #e9e9e9;
+
+    inc_dec_button_color: #e8e6e3;
+    inc_dec_button_hover_color: #c6cacf;
+    inc_dec_button_pressed_color: #585a5c;
+
+    arrow_color: #5a5a59;
+    arrow_pressed_color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Combo Box                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.combo-box-base {
+    border_color: #999999;
+    border_hover_color: #666666;
+    border_focused_color: #5c5c5c;
+    border_pressed_color: border_color;
+
+    combo_box_background_color: white;
+    background_pressed_color: #cccccc;
+
+    text_color: #111;
+
+    list_cell_color: #f2f2f2;
+    list_cell_hover_color: #dedede;
+
+    list_cell_border_color: #cccccc;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Rating (ControlsFX)                                                         *
+ *                                                                             *
+ ******************************************************************************/
+
+.rating {
+    star_color: #bababa;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Text Common (TextField, PasswordField, TextArea)                            *
+ *                                                                             *
+ ******************************************************************************/
+
+.text-input {
+    border_color: #999999;
+    border_hover_color: #666666;
+    border_disabled_color: #d9d9d9;
+
+    text_input_background_color: white;
+    background_focused_color: white;
+    background_hover_color: white;
+    background_disabled_color: #eaeaea;
+
+    text_color: #111;
+    text_focused_color: #111;
+    text_disabled_color: #adadad;
+    prompt_text_color: #666666;
+
+    highlight_color: accent_color;
+    highlighted_text_color: white;
+
+    graphic_color: #747474;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Menu Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-button {
+    menu_button_background_color: #ccc;
+    menu_button_text_color: #111;
+    menu_border_hover_color: #7a7a7a;
+    menu_button_pressed_color: #999;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Progress Bar                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.progress-bar {
+    progress_background_color: #ccc;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Slider                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.slider {
+    track_hover_color: #666666;
+    thumb_hover_color: #171717;
+
+    thumb_pressed_color: #cccccc;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Toggle Switch (ControlsFX)                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.toggle-switch {
+    text_color: #111;
+
+    /* Unselected */
+    unselected_color: white;
+    unselected_border_color: #111;
+    thumb_unselected_color: #111;
+    /* --    hover */
+    unselected_hover_color: unselected_color;
+    unselected_border_hover_color: #111;
+    thumb_unselected_hover_color: thumb_unselected_color;
+
+    /* Selected */
+    selected_color: accent_color;
+    selected_border_color: accent_color;
+    thumb_selected_color: white;
+    /* --    hover */
+    selected_hover_color: derive(accent_color, 40%);
+
+    /* Pressed */
+    pressed_color: #666666;
+    pressed_border_color: pressed_color;
+    thumb_pressed_color: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Spinner                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.spinner {
+    spinner_background_color: #f0f0f0;
+
+    arrow_button_hover_color: #dadada;
+    arrow_button_pressed_color: #606060;
+
+    arrow_color: -fx-mark-color;
+    arrow_pressed_color: white;
+}
+
+.spinner > .text-field {
+    text_color: #111;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Date Picker                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.date-picker {
+    graphic_color: #111;
+    graphic_focused_color: #111;
+
+
+    text_color: #111;
+    text_focused_color: #111;
+
+    text_selected_color: #fff;
+    text_hover_color: text_color;
+
+    text_days_from_other_months_color: derive(text_color, 60%);
+
+    date_picker_background_color: #fff;
+    background_focused_color: #fff;
+    background_hover_color: #fff;
+
+    border_color: #999999;
+    border_hover_color: #666666;
+
+    popup_border_color: #e6e6e6;
+
+    spinner_button_hover_color: #dadada;
+
+    cell_background_color: #fff;
+
+    day_cell_background_color: #e6e6e6;
+    day_cell_border_hover_color: #666;
+
+    day_cell_background_days_from_other_months_color: #f2f2f2;
+
+    today_border_color: derive(accent_color, 90%);
+
+    text_field_disabled_background_color: #eaeaea;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Label                                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.label {
+    text_color: #111;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Choice Box                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.choice-box {
+    text_color: #111;
+
+    border_color: #999999;
+    border_hover_color: #666666;
+    border_focused_color: #7a7a7a;
+    border_pressed_color: border_color;
+
+    choice_box_background_color: white;
+    background_pressed_color: #cccccc;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * List View                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.list-view {
+    text_color: #111;
+
+    list_view_background_color: #f2f2f2;
+    border_color: transparent;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Table View                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.table-view {
+    table_background_color: white;
+    table_view_border_color: #e9e9e9;
+
+    text_color: #111;
+    hover_text_color: #111;
+    selected_text_color: #111;
+    selected_unfocused_text_color: #111;
+
+    sort_arrow_color: #111;
+    show_hide_image_color: sort_arrow_color;
+}
+
+/* Check Box Table Cell */
+.check-box-table-cell {
+    table_check_box_cell_box_background_color: transparent;
+    table_check_box_cell_box_border_color: #111;
+    table_check_box_cell_mark_color: #111;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Tree View                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-view {
+    tree_view_background_color: white;
+
+    pressed_color: derive(hover_color, -10%);
+
+    text_color: #111;
+    text_selected_color: #111;
+    text_hover_color: text_color;
+
+    arrow_color: #111;
+    arrow__hover_color: text_hover_color;
+    arrow_selected_hover_color: text_selected_color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Tree Table View                                                             *
+ *                                                                             *
+ ******************************************************************************/
+
+.tree-table-view {
+    table_border_color: #e9e9e9;
+    table_background_color: white;
+
+    table_text_color: #111;
+    table_text_selected_color: #111;
+
+    table_column_vline_color: #e6e6e6;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Tab Pane and Tabs                                                           *
+ *                                                                             *
+ ******************************************************************************/
+
+.tab-pane {
+    tab_pane_bottom_border_color: #cccccc;
+
+    tab_text_color: #767676;
+    tab_text_hover_color: accent_color;
+    tab_text_selected_hover_color: derive(accent_color, 30%);
+
+    tab_selected_background_color: white;
+    tab_selected_border_color: tab_pane_bottom_border_color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Context Menu, Menus, MenuBar and MenuItem                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+/****************************** Context Menu **********************************/
 
 .context-menu {
-    -fx-background-color: white;
-    -fx-background-insets: 0, 1, 2;
-    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
-    -fx-padding: 0.333333em 0em 0.333333em 0em; /* 4 1 4 1 */
-    
-    /* TODO: the border color below is not being respected - it appears as gray instead of black*/
-    -fx-border-color: #212121;
-    -fx-border-style: solid;
+    menu_background_color: #f2f2f2;
+    context_menu_border_color: #cccccc;
+
+    separator_color: #c3c3c3;
 }
 
-.context-menu .separator .line{
-    -fx-padding: 0.0em 0.333333em 0.0em 0.333333em;  /*0 4 0 4 */
-    -fx-border-style: solid;
-    -fx-background-color: #c2c2c2;
-    -fx-border-width: 0.5px;
+/********************************* Menu Bar ************************************/
+
+.menu-bar {
+    menu_bar_background_color: white;
+
+    text_color: #111;
+
+    menu_button_hover_color: #dadada;
 }
 
-/* TODO: try to scope the menu-item style to the contextmenu */
 .menu-item {
-    -fx-background-color: transparent;
-    -fx-padding: 0.666666em 0.999999em 0.4999995em 0.999999em;   /*6 12 6 12 */
-}
+    text_color: #111;
 
-.menu-item .label {
-    -fx-padding: 0em 0.5em 0em 0em;
-    -fx-text-fill: #212121;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-}
+    menu_background_color: #f2f2f2;
 
+    graphic_color: #0a0a0a;
 
-.menu-item:focused {
-     -fx-background: -fx-accent;
-     -fx-background-color: #dedede;
-}
-
-.menu-item:pressed
-{
-    -fx-background-color: #212121;
-    -fx-text-fill: white;
-}
-
-.menu-item:pressed .label
-{
-    -fx-text-fill: white;
+    hover_color: #dadada;
+    pressed_color: #c2c2c2;
 }
 
 /*******************************************************************************
  *                                                                             *
- * ScrollBar                                                                   *
+ * Titled Pane                                                                 *
  *                                                                             *
  ******************************************************************************/
 
-.scroll-bar .thumb{
-    -fx-background-color: #cdcdcd;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
+.titled-pane {
+    text_color: #111;
 
-.scroll-bar .thumb:hover {
-    -fx-color: #dadada;
-}
+    title_background_color: #e6e6e6;
+    title_background_hover_color: #d6d6d6;
 
-/* The following is not working. Maybe related to RT-10521*/
-.scroll-bar .thumb:pressed {
-    -fx-background-color: #606060;
-}
+    border_color: #7a7a7a;
 
+    arrow_color: #111;
 
-.scroll-bar .track {
-     -fx-background-color: #f0f0f0;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-}
-.scroll-bar .track-background {
-     -fx-background-color: #f0f0f0;
-    -fx-background-insets: 0;
-}
-
-.scroll-bar .increment-button, .scroll-bar .decrement-button {
-    -fx-background-color: #f0f0f0;
-    -fx-background-insets: 0;
-    -fx-background-radius: 0;
-    
-    -fx-padding: 0.25em; /* 3 */
-}
-
-.scroll-bar .increment-button:hover, .scroll-bar .decrement-button:hover  {
-    -fx-background-color: #dadada;
-}
-
-.scroll-bar .increment-button:pressed, .scroll-bar .decrement-button:pressed {
-    -fx-background-color: #606060;
-}
-
-.scroll-bar:horizontal .increment-arrow {
-    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
-    -fx-background-insets: 1 0 -1 0, 0;
-    -fx-padding: 0.5em 0.333333em 0.0em 0.0em; /* 6 4 0 0 */
-    -fx-shape: "M7.626,12.876L4.251,8.751H7.14L11,12.876L7.14,17H4.251L7.626,12.876z";
-}
-
-.scroll-bar:vertical .increment-arrow {
-    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
-    -fx-background-insets: 1 0 -1 0, 0;
-    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
-    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
-}
-
-.scroll-bar .increment-button:pressed .increment-arrow {
-    -fx-background-color: white, white;
-}
-
-.scroll-bar:horizontal .decrement-arrow {
-    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
-    -fx-background-insets: 1 0 -1 0, 0;
-    -fx-padding: 0.5em 0.333333em 0.0em 0.0em; /* 6 4 0 0 */
-    -fx-shape: "M11,17H8.111l-3.86-4.124l3.86-4.125H11l-3.375,4.125L11,17z";
-}
-
-.scroll-bar:vertical .decrement-arrow {
-    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
-    -fx-background-insets: 1 0 -1 0, 0;
-    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
-    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
-}
-
-.scroll-bar .decrement-button:pressed .decrement-arrow {
-    -fx-background-color: white, white;
-}
-
-.scroll-bar:disabled {
-    -fx-opacity: 0.4;
+    content_background_color: #fff;
 }
 
 /*******************************************************************************
  *                                                                             *
- * ScrollPane                                                                  *
+ * Progress Indicator                                                          *
  *                                                                             *
  ******************************************************************************/
 
-.scroll-pane {
-    -fx-background-color: transparent,-fx-background;
+.progress-indicator {
+    text_color: #111;
 }
-
-.scroll-pane .corner {
-    -fx-background-color: white, #f0f0f0;
-}
-
 
 /*******************************************************************************
  *                                                                             *
- * ComboBox                                                                    *
+ * Separator                                                                   *
  *                                                                             *
  ******************************************************************************/
 
-.combo-box-base  {
-    -fx-background-color: transparent, #bababa, transparent, white;
-    -fx-background-radius: 0, 0, 0, 0;
-    -fx-padding: 0.166667em; /* 2 */
+.separator{
+    border_color: #999;
 }
-
-.combo-box-base:hover {
-    -fx-background-color: transparent, #909090, transparent, white;
-    
-}
-
-/*.combo-box-base:focused {
-    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
-    -fx-background-radius: 6.4, 4, 5, 3;
-    -fx-background-insets: -1.4, 0, 1, 2;
-}*/
-
-.combo-box-base:disabled {
-    -fx-opacity: .4;
-}
-
-/* ------- OPEN BUTTON ------- */
-.combo-box-base .arrow-button {
-    -fx-background-color: transparent, transparent, white;
-}
-
-/* ------- ARROW* ------- */
-.combo-box-base .arrow {
-    -fx-padding: 0.333333em 0.333333em 0.333333em 0.333333em; /* 4 4 4 4 */
-    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
-}
-
-.combo-box-popup .list-view {
-    -fx-background-color: #909090, -fx-control-inner-background;
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0) , 8, 0.0 , 0 , 0 );
-}
-
-.combo-box-popup .list-view .list-cell:hover{
-    -fx-background-color: #dedede;
-    -fx-text-fill: #1d1d1d;
-}
-
-.combo-box-popup .list-view .list-cell:filled:selected{
-    -fx-background-color: #55c4fe;
-}
-
-.combo-box-popup .list-view .list-cell:filled:selected:hover {
-    -fx-background-color: #6dcdff;
-}
-
-.combo-box-popup .list-view .list-cell:filled:pressed, .combo-box-popup .list-view .list-cell:filled:selected:pressed
-{
-    -fx-background-color: #d3d3d3;
-    -fx-text-fill: #1d1d1d;
-}
-
-
-/*******************************************************************************
- *                                                                             *
- * ListSpinner (Jfxtras)                                                       *
- *                                                                             *
- ******************************************************************************/
-
-.list-spinner { 
-    -fx-skin: "jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
-    -fx-background-color: #f0f0f0;
-    -fx-background-insets: 0 0 0 0;
-    -fx-background-radius: 0;
-    -fx-padding: 0em 0em 0em 0em;
-    -fx-text-fill: #212121;
-}
-
-.list-spinner:hover {
-    -fx-color: #f0f0f0;
-}
-
-/*.ListSpinner:focused { 
-    -fx-color: -fx-focused-base;
-    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
-    -fx-background-insets: -1.4, 0, 1, 2;
-    -fx-background-radius: 6.4, 5, 4, 3;	
-}*/
-
-.list-spinner .value-pane { 
-    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
-}
-
-.list-spinner .decrement-button, .list-spinner .increment-button
-{
-    -fx-background-color: #f0f0f0;
-    -fx-padding: 1.2500em 0.5000em 1.2500em 0.5000em; /* 15 6 15 6*/
-}
-
-.list-spinner .left-arrow { 
-    -fx-shape: "M301,415.5l-4.5,4.5l4.5,4.5h-3l-4.5-4.5l4.5-4.5H301z";
-    -fx-scale-shape: false;
-}
-
-.list-spinner .decrement-button:hover {
-    -fx-background-color: #dadada;
-}
-
-.list-spinner .decrement-button:pressed {
-    -fx-background-color: #606060;
-    
-}
-.list-spinner .decrement-button:pressed .left-arrow{ 
-    -fx-background-color: white;
-}
-
-.list-spinner .right-arrow { 
-    -fx-shape: "M296.5,415.5l4.5,4.5l-4.5,4.5h-3l4.5-4.5l-4.5-4.5H296.5z";
-    -fx-scale-shape: false;
-}
-
-.list-spinner .increment-button:hover {
-    -fx-background-color: #dadada;
-}
-
-.list-spinner .increment-button:pressed {
-    -fx-background-color: #606060;
-    
-}
-.list-spinner .increment-button:pressed .right-arrow {
-    -fx-background-color: white;
-}
-
-.list-spinner .down-arrow { 
-    -fx-shape: "M292.5,416.25l4.5,4.5l4.5-4.5v3l-4.5,4.5l-4.5-4.5V416.25z";
-    -fx-scale-shape: false;
-}
-.list-spinner .up-arrow { 
-    -fx-shape: "M292.5,420.75l4.5-4.5l4.5,4.5v3l-4.5-4.5l-4.5,4.5V420.75z";
-    -fx-scale-shape: false;
-}
-
-.list-spinner .text
-{
-    -fx-font-family: "Segoe UI"
-}
-
-.list-spinner:disabled {
-    -fx-opacity: .4;
-}
-
-
-
-
-
-
 

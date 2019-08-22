@@ -6,8 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro.panessample.PanesSampleController;
-import jfxtras.styles.jmetro8.JMetro;
-import jfxtras.styles.jmetro8.Style;
 
 public class PanesSample extends Application {
     private static final String PANES_RESOURCE = "JMetro Panes.fxml";
