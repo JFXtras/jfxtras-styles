@@ -1327,6 +1327,9 @@
 }
 
 /***************************** Date Picker popup ********************************/
+.date-picker-popup .button {
+    -fx-skin: "javafx.scene.control.skin.ButtonSkin"; /* Without also specifying this an exception sometimes happens when opening the DatePicker for the second time */
+}
 
 .date-picker-popup {
     -fx-border-color: popup_border_color;
