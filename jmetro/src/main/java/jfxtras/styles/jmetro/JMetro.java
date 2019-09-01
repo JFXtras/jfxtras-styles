@@ -43,6 +43,7 @@ import javafx.scene.Scene;
  */
 public class JMetro {
     private static final String BASE_STYLESHEET_URL = JMetro.class.getResource("JMetroBase.css").toExternalForm();
+    private static final String BASE_EXTRAS_STYLESHEET_URL = JMetro.class.getResource("JMetroBase_Extras.css").toExternalForm();
     private static final String PANES_STYLESHEET_URL = JMetro.class.getResource("JMetroPanes.css").toExternalForm();
 
     /**
@@ -165,6 +166,7 @@ public class JMetro {
             if (baseStylesheetIndex == -1) {
                 stylesheetsList.add(getStyle().getStyleStylesheetURL());
                 stylesheetsList.add(BASE_STYLESHEET_URL);
+                stylesheetsList.add(BASE_EXTRAS_STYLESHEET_URL);
                 baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
             } else {
                 stylesheetsList.add(baseStylesheetIndex++, getStyle().getStyleStylesheetURL());

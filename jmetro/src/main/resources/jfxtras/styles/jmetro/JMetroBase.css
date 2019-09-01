@@ -482,6 +482,28 @@
     -fx-background-color: background_color;
 }
 
+/*================================ buttons ====================================*/
+
+.tool-bar .button {
+    -fx-background-color: transparent;
+ }
+
+.tool-bar .button:hover {
+    -fx-background-color: #d5d4d4;
+    -fx-border-color: transparent;
+}
+
+.tool-bar .button:pressed {
+    -fx-background-color: #c2c2c2;
+}
+
+.tool-bar .button:focused {
+    -fx-border-color: border_hover_color;
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-border-insets: 0;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Scroll Bar and Scroll Pane                                                  *
