@@ -82,10 +82,10 @@ public class ToolbarButtonSample extends Application {
         Button delete = new Button();
         delete.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("trash-16.png").toExternalForm()));
         delete.setFocusTraversable(FOCUS_TRAVERSAL);
-        Button selectAll = new Button();
+        ToggleButton selectAll = new ToggleButton();
         selectAll.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("tick-box-16.png").toExternalForm()));
         selectAll.setFocusTraversable(FOCUS_TRAVERSAL);
-        Button unselectAll = new Button();
+        ToggleButton unselectAll = new ToggleButton();
         unselectAll.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("unchecked-checkbox-16.png").toExternalForm()));
         unselectAll.setFocusTraversable(FOCUS_TRAVERSAL);
         toolBar.getItems().addAll(copy, delete, new Separator(), selectAll, unselectAll);

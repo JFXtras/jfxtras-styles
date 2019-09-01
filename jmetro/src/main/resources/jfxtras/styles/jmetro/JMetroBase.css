@@ -482,26 +482,41 @@
     -fx-background-color: background_color;
 }
 
-/*================================ buttons ====================================*/
+/*======================= buttons and toggle buttons ==========================*/
 
-.tool-bar .button {
+.tool-bar .button, .tool-bar .toggle-button {
     -fx-background-color: transparent;
  }
 
-.tool-bar .button:hover {
+.tool-bar .button:hover,  .tool-bar .toggle-button:hover {
     -fx-background-color: #d5d4d4;
     -fx-border-color: transparent;
 }
 
-.tool-bar .button:pressed {
+.tool-bar .button:pressed, .tool-bar .toggle-button:pressed {
     -fx-background-color: #c2c2c2;
 }
 
-.tool-bar .button:focused {
+.tool-bar .button:focused, .tool-bar .toggle-button:focused {
     -fx-border-color: border_hover_color;
     -fx-border-style: solid;
     -fx-border-width: 2;
     -fx-border-insets: 0;
+}
+
+/*============================= toggle buttons ===============================*/
+
+.tool-bar .toggle-button:selected {
+    -fx-background-color: accent_color;
+    -fx-text-fill: white;
+}
+
+.tool-bar .toggle-button:selected:hover {
+    -fx-background-color: derive(accent_color, 40%);
+}
+
+.tool-bar .toggle-button:selected:pressed {
+    -fx-background-color: derive(accent_color, -40%);
 }
 
 /*******************************************************************************
