@@ -603,12 +603,12 @@
 
 .scroll-bar:vertical > .increment-button > .increment-arrow,
 .scroll-bar:vertical > .decrement-button > .decrement-arrow {
-    -fx-padding: 2.5px 4px 2.5px 4px; /* TODO: convert this to ems */
+    -fx-padding: 0.208333em 0.333333em 0.208333em 0.333333em; /* 2.5 4 2.5 4*/
 }
 
 .scroll-bar:horizontal > .increment-button > .increment-arrow,
 .scroll-bar:horizontal > .decrement-button > .decrement-arrow {
-    -fx-padding: 4px 2.5px 4px 2.5px; /* TODO: convert this to ems */
+    -fx-padding: 0.333333em 0.208333em 0.333333em 0.208333em; /* 4 2.5 4 2.5 */
     -fx-translate-y: -1; /* HACK:  Somehow the arrow is not centered so we add this to center it */
 }
 
@@ -703,7 +703,7 @@
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
     -fx-font-family: "Segoe UI";
     -fx-font-size: 1em;
-    -fx-padding: 4 0 4 5; /* TODO: convert to ems */
+    -fx-padding: 0.333333em 0 0.333333em 0.416667em; /* 4 0 4 5 */
 
     -fx-background-color: list_cell_color;
 }
@@ -737,7 +737,7 @@
     -fx-border-color: transparent;
     -fx-shape: "M147.421,249.541l6.152,4.854l-2.393,7.355l6.521-4.361l6.549,4.361l-2.393-7.355l6.152-4.854h-7.738l-2.571-7.396l-2.543,7.396H147.421z";
     -fx-background-image: null;
-    -fx-padding: 16 16; /* TODO: convert to ems */
+    -fx-padding: 1.333333em; /* 16 */
     -fx-background-repeat: no-repeat;
 }
 
