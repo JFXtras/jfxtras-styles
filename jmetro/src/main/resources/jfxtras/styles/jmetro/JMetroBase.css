@@ -685,6 +685,7 @@
 /* ------- OPEN BUTTON ------- */
 .combo-box-base > .arrow-button {
     -fx-background-color: transparent, transparent, transparent;
+    -fx-padding: 0.5em 0.667em 0.5em 0em; /* 6 8 6 0 */
 }
 
 /* ------- ARROW ------- */

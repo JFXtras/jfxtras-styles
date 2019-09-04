@@ -33,7 +33,7 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Combo Box" />
     <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" textFill="WHITE" />
     <Label layoutX="270.0" layoutY="165.0" styleClass="item-title" text="Disabled" />
@@ -51,6 +51,41 @@
       </items>
       <value>
         <String fx:value="Times New Roman" />
+      </value>
+    </ComboBox>
+
+    <ComboBox layoutX="43.0" layoutY="250.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Times New Roman" />
+          <String fx:value="Open Sans" />
+          <String fx:value="Comic Sans" />
+          <String fx:value="Helvetica" />
+          <String fx:value="Roboto" />
+          <String fx:value="Segoe UI" />
+          <String fx:value="Arial" />
+          <String fx:value="PT Sans" />
+          <String fx:value="Franklin Gothic" />
+          <String fx:value="Baskerville" />
+          <String fx:value="Futura" />
+          <String fx:value="Garamond" />
+        </FXCollections>
+      </items>
+      <value>
+        <String fx:value="Segoe UI" />
+      </value>
+    </ComboBox>
+
+    <ComboBox layoutX="43.0" layoutY="313.0" maxWidth="145">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="This is a Long textttt" />
+          <String fx:value="This is a Long textttt 2" />
+          <String fx:value="This is a Long textttt 3" />
+        </FXCollections>
+      </items>
+      <value>
+        <String fx:value="This is a Long textttt" />
       </value>
     </ComboBox>
 
