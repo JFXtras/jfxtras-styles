@@ -48,11 +48,7 @@ public class TabPaneSample extends Application {
 
         BorderPane root = new BorderPane(tabPane);
 
-        if (STYLE.equals(Style.DARK)) {
-            root.setStyle("-fx-background-color: #111;");
-        } else {
-            root.setStyle("-fx-background-color: white;");
-        }
+        root.getStyleClass().add("background");
 
         Scene scene = new Scene(root, 500, 200);
 
