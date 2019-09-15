@@ -723,8 +723,36 @@
 }
 
 /*==========================  Editable ComboBox  =============================*/
+.combo-box-base:editable > .text-input {
+    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin"
+}
 
+.combo-box-base:editable > .text-input {
+    -fx-background-color: transparent, transparent;
+}
 
+/*==== Focused =====*/
+.combo-box-base:editable:focused {
+    -fx-background-color: transparent, accent_color, transparent, combo_box_editable_focused_background_color;
+}
+
+/* Arrow Button */
+.combo-box-base:editable:focused > .arrow-button > .arrow {
+    -fx-background-color: combo_box_editable_focused_arrow_color;
+}
+
+/* Arrow Button */
+.combo-box-base:editable > .arrow-button {
+    -fx-background-insets: 0 0 0 -8;
+    -fx-background-radius: 0;
+}
+.combo-box-base:editable > .arrow-button:hover {
+    -fx-background-color: combo_box_editable_button_hover_color;
+}
+
+.combo-box-base:editable:focused > .arrow-button:hover {
+    -fx-background-color: combo_box_editable_focused_button_hover_color;
+}
 
 /*******************************************************************************
  *                                                                             *

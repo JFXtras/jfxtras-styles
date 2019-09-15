@@ -230,16 +230,25 @@
  ******************************************************************************/
 
 .combo-box-base {
+    text_color: white;
+
+    /* border */
     border_color: #666666;
     border_hover_color: #999999;
     border_focused_color: white;
     border_pressed_color: #666666;
 
+    /* background */
     combo_box_background_color: #111;
     background_pressed_color: #333333;
 
-    text_color: white;
+    /* editable */
+    combo_box_editable_button_hover_color: #444;
+    combo_box_editable_focused_button_hover_color: #e6e6e6;
+    combo_box_editable_focused_background_color: white;
+    combo_box_editable_focused_arrow_color: #111;
 
+    /* Popup - listcell */
     list_cell_color: #2b2b2b;
     list_cell_hover_color: #545454;
 
