@@ -33,10 +33,11 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="background" xmlns:fx="http://javafx.com/fxml">
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Combo Box" />
     <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" textFill="WHITE" />
-    <Label layoutX="270.0" layoutY="165.0" styleClass="item-title" text="Disabled" />
+    <Label layoutX="270.0" layoutY="165.0" styleClass="item-title" text="Editable" />
+    <Label layoutX="497.0" layoutY="165.0" styleClass="item-title" text="Disabled" />
 
     <ComboBox layoutX="43.0" layoutY="187.0">
       <items>
@@ -111,7 +112,23 @@
       </value>
     </ComboBox>
 
-    <ComboBox disable="true" layoutX="270.0" layoutY="187.0">
+    <ComboBox editable="true" layoutX="270.0" layoutY="187.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Times New Roman" />
+          <String fx:value="Open Sans" />
+          <String fx:value="Comic Sans" />
+          <String fx:value="Helvetica" />
+          <String fx:value="Roboto" />
+          <String fx:value="Segoe UI" />
+        </FXCollections>
+      </items>
+      <value>
+        <String fx:value="Times New Roman" />
+      </value>
+    </ComboBox>
+
+    <ComboBox disable="true" layoutX="497.0" layoutY="187.0">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <String fx:value="Times New Roman" />
