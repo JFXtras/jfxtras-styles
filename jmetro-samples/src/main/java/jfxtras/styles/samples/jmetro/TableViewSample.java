@@ -69,9 +69,20 @@ public class TableViewSample extends Application {
         cellSelection.setOnAction(event -> table.getSelectionModel().setCellSelectionEnabled(cellSelection.isSelected()));
         cellSelection.setSelected(table.getSelectionModel().isCellSelectionEnabled());
 
+        CheckBox tableButtonCheckBox = new CheckBox("Table Menu Button");
+        tableButtonCheckBox.setOnAction(event -> {
+            table.setTableMenuButtonVisible(true);
+        });
+        tableButtonCheckBox.setSelected(table.isTableMenuButtonVisible());
+
         vbox.setSpacing(40);
         vbox.setPadding(new Insets(10, 10, 10, 10));
-        vbox.getChildren().addAll(header, table, cellSelection);
+
+        VBox controlsVBox = new VBox();
+        controlsVBox.getChildren().addAll(cellSelection, tableButtonCheckBox);
+        controlsVBox.setSpacing(10);
+
+        vbox.getChildren().addAll(header, table, controlsVBox);
 
         new JMetro(scene, STYLE);
 

@@ -13,7 +13,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.layout.VBox;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
-//import org.scenicview.ScenicView;
 
 public class TreeViewSample extends Application {
     private static final Style STYLE = Style.DARK;

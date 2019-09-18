@@ -103,11 +103,26 @@ public class TreeTableViewSample extends Application {
         sceneRoot.setCenter(treeTableView);
 
         // Customization controls
-        HBox hBox = new HBox();
-        CheckBox cellSelection = new CheckBox("Cell Selection");
-        cellSelection.setOnAction(event -> treeTableView.getSelectionModel().setCellSelectionEnabled(cellSelection.isSelected()));
-        hBox.getChildren().add(cellSelection);
-        sceneRoot.setBottom(hBox);
+        HBox controlsVBox = new HBox();
+        controlsVBox.setSpacing(10);
+
+        CheckBox cellSelectionCheckBox = new CheckBox("Cell Selection");
+        cellSelectionCheckBox.setOnAction(event -> {
+            treeTableView.getSelectionModel().setCellSelectionEnabled(cellSelectionCheckBox.isSelected());
+        });
+        cellSelectionCheckBox.setSelected(treeTableView.getSelectionModel().isCellSelectionEnabled());
+
+        CheckBox tableButtonCheckBox = new CheckBox("Table Menu Button");
+        tableButtonCheckBox.setOnAction(event -> {
+            treeTableView.setTableMenuButtonVisible(tableButtonCheckBox.isSelected());
+        });
+        tableButtonCheckBox.setSelected(treeTableView.isTableMenuButtonVisible());
+
+
+        controlsVBox.getChildren().addAll(cellSelectionCheckBox, tableButtonCheckBox);
+        sceneRoot.setBottom(controlsVBox);
+
+        controlsVBox.getStyleClass().add("background");
 
         stage.setScene(scene);
 
