@@ -731,23 +731,23 @@
     -fx-background-color: transparent, transparent;
 }
 
-/*==== Focused =====*/
-.combo-box-base:editable:focused {
-    -fx-background-color: transparent, accent_color, transparent, combo_box_editable_focused_background_color;
-}
-
-/* Arrow Button */
-.combo-box-base:editable:focused > .arrow-button > .arrow {
-    -fx-background-color: combo_box_editable_focused_arrow_color;
-}
-
-/* Arrow Button */
+/*===== Arrow Button =====*/
 .combo-box-base:editable > .arrow-button {
     -fx-background-insets: 0 0 0 -8;
     -fx-background-radius: 0;
 }
 .combo-box-base:editable > .arrow-button:hover {
     -fx-background-color: combo_box_editable_button_hover_color;
+}
+
+/*====== Focused =======*/
+.combo-box-base:editable:focused {
+    -fx-background-color: transparent, accent_color, transparent, combo_box_editable_focused_background_color;
+}
+
+/* - Arrow Button */
+.combo-box-base:editable:focused > .arrow-button > .arrow {
+    -fx-background-color: combo_box_editable_focused_arrow_color;
 }
 
 .combo-box-base:editable:focused > .arrow-button:hover {
@@ -1786,7 +1786,7 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-background-color: table_check_box_cell_mark_color;
 }
 
-/****************************** Plus Symbol ***********************************/
+/********************* Table Menu Button (Plus Symbol)  **********************/
 
 .table-view > .column-header-background > .show-hide-columns-button,
 .tree-table-view > .column-header-background > .show-hide-columns-button {
@@ -2000,12 +2000,6 @@ totally specific (always using direct child) and cover all cases, which would be
 .tree-table-row-cell .arrow {
     -fx-padding: 0.416667em 0.333333em 0.416667em 0.333333em; /* 5 4 5 4 */
     -fx-shape: "M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z ";
-}
-
-.tree-table-view .show-hide-column-image {
-    -fx-background-color: table_text_color;
-    -fx-padding: 0.25em; /* 3 */
-    -fx-shape: "M 15 5 L 15 15 L 5 15 L 5 17 L 15 17 L 15 27 L 17 27 L 17 17 L 27 17 L 27 15 L 17 15 L 17 5 Z ";
 }
 
 .tree-table-view .column-resize-line {

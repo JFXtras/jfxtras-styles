@@ -515,6 +515,9 @@
     table_text_selected_color: #fff;
 
     table_column_vline_color: #3e3e3e;
+
+    /* Color of button that filters columns */
+    show_hide_image_color: white;
 }
 
 /*******************************************************************************

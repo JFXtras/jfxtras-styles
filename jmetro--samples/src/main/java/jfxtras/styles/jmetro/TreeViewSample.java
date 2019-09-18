@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.layout.VBox;
-//import org.scenicview.ScenicView;
 
 public class TreeViewSample extends Application {
     private static final Style STYLE = Style.DARK;
