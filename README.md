@@ -10,7 +10,6 @@ JFXtras uses the [new BSD](http://en.wikipedia.org/wiki/BSD_licenses#3-clause_li
 The project sources have changed place.
 - JMetro is under "jmetro" ("jmetro" directory)   
 - JMetro samples, that show JMetro in action are under "jmetro-samples" ("jmetro-samples" directory)
-- You'll find themes that are only comprised of stylesheets under "stylesheets" project ("stylesheets" directory).   
 
 ## JMetro
 Documentation on JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
