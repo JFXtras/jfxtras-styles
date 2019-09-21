@@ -67,10 +67,12 @@ public class ToolbarButtonSample extends Application {
         }
 
         stage.setTitle("Tree View Sample");
-        VBox box = new VBox();
-        box.setPadding(new Insets(30, 0, 0, 0));
 
-        final Scene scene = new Scene(box, 400, 300);
+        VBox vBox = new VBox();
+        vBox.setPadding(new Insets(15, 0, 0, 0));
+        vBox.getStyleClass().add("background");
+
+        final Scene scene = new Scene(vBox, 400, 300);
         scene.setFill(Color.LIGHTGRAY);
 
         TreeView<String> treeView = new TreeView<>(rootNode);
@@ -92,7 +94,7 @@ public class ToolbarButtonSample extends Application {
 
         new JMetro(scene, STYLE);
 
-        box.getChildren().addAll(toolBar, treeView);
+        vBox.getChildren().addAll(toolBar, treeView);
 
         stage.setScene(scene);
         stage.show();
