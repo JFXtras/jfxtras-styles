@@ -489,12 +489,12 @@
  }
 
 .tool-bar .button:hover,  .tool-bar .toggle-button:hover {
-    -fx-background-color: #d5d4d4;
+    -fx-background-color: button_hover_color;
     -fx-border-color: transparent;
 }
 
 .tool-bar .button:pressed, .tool-bar .toggle-button:pressed {
-    -fx-background-color: #c2c2c2;
+    -fx-background-color: button_pressed_color;
 }
 
 .tool-bar .button:focused, .tool-bar .toggle-button:focused {
@@ -508,7 +508,7 @@
 
 .tool-bar .toggle-button:selected {
     -fx-background-color: accent_color;
-    -fx-text-fill: white;
+    -fx-text-fill: text_color;
 }
 
 .tool-bar .toggle-button:selected:hover {
