@@ -65,7 +65,7 @@ public class ControlsSample extends Application {
     private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
 
-    static final private String RESOURCE = TOGGLE_BUTTON_RESOURCE;
+    static final private String RESOURCE = COMBOBOX_RESOURCE;
     static final private Style STYLE = Style.LIGHT;
 
     @Override
