@@ -6,7 +6,7 @@ plugins {
 
 sourceCompatibility = '1.8'
 
-version = '8.5.9'
+version = '8.5.10'
 def versionDescription = 'JMetro'
 
 
