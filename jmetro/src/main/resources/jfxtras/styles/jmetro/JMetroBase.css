@@ -53,7 +53,8 @@
 
 .combo-box-base > .arrow-button > .arrow,
 .choice-box > .open-button > .arrow,
-.menu-button > .arrow-button > .arrow {
+.menu-button > .arrow-button > .arrow,
+.split-menu-button > .arrow-button > .arrow {
     -fx-padding: 0.208em 0.358em 0.208em 0.358em; /* 2.5px 4.29px 2.5px 4.29px */
     -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
 
@@ -2442,6 +2443,90 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-border-width: 1, 1;
     -fx-border-insets: 7 0 7 0, 0 0 0 1;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * SplitMenuButton                                                             *
+ *                                                                             *
+ ******************************************************************************/
+
+.split-menu-button {
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+
+    -fx-background-color: button_background_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-font-family: "Segoe UI";
+}
+
+.split-menu-button > .label {
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+
+    -fx-text-fill: text_color;
+
+    -fx-background-color: button_background_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.split-menu-button > .arrow-button {
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+
+    -fx-background-color: button_background_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/* - hover */
+.split-menu-button > .label:hover {
+    -fx-border-color: border_hover_color;
+}
+
+.split-menu-button > .arrow-button:hover {
+    -fx-border-color: border_hover_color;
+}
+
+/* - pressed */
+.split-menu-button > .label:pressed {
+    -fx-border-color: background_pressed_color;
+    -fx-background-color: background_pressed_color;
+}
+
+.split-menu-button > .arrow-button:pressed {
+    -fx-border-color: background_pressed_color;
+    -fx-background-color: background_pressed_color;
+}
+
+/* - focused */
+
+.split-menu-button:focused {
+    -fx-border-color: transparent, focus_ring_border_color;
+    -fx-border-width: 1, 1;
+
+    -fx-border-style: solid, segments(1, 2);
+
+    -fx-background-color: button_background_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+/*
+.split-menu-button:focused > .label {
+    -fx-background-color: -fx-inner-border, -fx-body-color, -fx-faint-focus-color, -fx-body-color;
+    -fx-background-insets: 1 0 1 1, 2 1 2 2, -1.4 0 -1.4 -1.4, 2.6 1.6 2.6 2.6;
+    -fx-background-radius: 2 0 0 2, 1 0 0 1, 4 0 0 4, 0;
+}
+.split-menu-button:focused > .arrow-button {
+    -fx-background-color: -fx-inner-border, -fx-body-color, -fx-faint-focus-color, -fx-body-color;
+    -fx-background-insets: 1, 2, -1.4, 2.6;
+    -fx-background-radius: 0 2 2 0, 0 1 1 0, 0 4 4 0, 0;
+}
+*/
+
 
 /*******************************************************************************
  *                                                                             *
