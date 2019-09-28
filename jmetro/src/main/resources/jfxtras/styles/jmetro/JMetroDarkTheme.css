@@ -60,7 +60,8 @@
 
 .menu-button,
 .choice-box,
-.combo-box-base {
+.combo-box-base,
+.split-menu-button {
     arrow_color: white;
 }
 
@@ -613,3 +614,20 @@
 .separator{
     border_color: #777;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * SplitMenuButton                                                             *
+ *                                                                             *
+ ******************************************************************************/
+
+ .split-menu-button {
+    button_background_color: #333333;
+    background_pressed_color: #666666;
+
+    border_hover_color: #858585;
+
+    text_color: white;
+
+    focus_ring_border_color: white;
+ }

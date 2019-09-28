@@ -64,8 +64,9 @@ public class ControlsSample extends Application {
     private static final String ACCORDION_RESOURCE = "JMetro Accordion.fxml";
     private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
+    private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
 
-    static final private String RESOURCE = COMBOBOX_RESOURCE;
+    static final private String RESOURCE = SPLIT_MEU_BUTTON_RESOURCE;
     static final private Style STYLE = Style.LIGHT;
 
     @Override
