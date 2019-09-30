@@ -5,8 +5,12 @@ mainClassName = 'jfxtras.styles.jmetro.ControlsSample'
 dependencies {
     compile project(':jmetro')
     compile 'org.controlsfx:controlsfx:8.40.14'
+//    compile name: 'ScenicView'
 }
 
 repositories {
     mavenCentral()
+//    flatDir {
+//        dirs 'lib'
+//    }
 }

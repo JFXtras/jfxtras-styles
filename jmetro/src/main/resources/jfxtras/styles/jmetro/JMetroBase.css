@@ -2451,9 +2451,6 @@ totally specific (always using direct child) and cover all cases, which would be
  ******************************************************************************/
 
 .split-menu-button {
-    -fx-border-color: transparent;
-    -fx-border-width: 2;
-
     -fx-background-color: button_background_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
@@ -2502,31 +2499,19 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 /* - focused */
-
 .split-menu-button:focused {
-    -fx-border-color: transparent, focus_ring_border_color;
-    -fx-border-width: 1, 1;
+    -fx-border-color: focus_ring_border_color;
+    -fx-border-width: 1px;
+    -fx-border-insets: -2;
 
-    -fx-border-style: solid, segments(1, 2);
+    -fx-border-style: segments(1, 2) outside;
+
+    -fx-padding: 0px;
 
     -fx-background-color: button_background_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
-    -fx-border-insets: 1 1 1 1, 0;
 }
-/*
-.split-menu-button:focused > .label {
-    -fx-background-color: -fx-inner-border, -fx-body-color, -fx-faint-focus-color, -fx-body-color;
-    -fx-background-insets: 1 0 1 1, 2 1 2 2, -1.4 0 -1.4 -1.4, 2.6 1.6 2.6 2.6;
-    -fx-background-radius: 2 0 0 2, 1 0 0 1, 4 0 0 4, 0;
-}
-.split-menu-button:focused > .arrow-button {
-    -fx-background-color: -fx-inner-border, -fx-body-color, -fx-faint-focus-color, -fx-body-color;
-    -fx-background-insets: 1, 2, -1.4, 2.6;
-    -fx-background-radius: 0 2 2 0, 0 1 1 0, 0 4 4 0, 0;
-}
-*/
-
 
 /*******************************************************************************
  *                                                                             *
