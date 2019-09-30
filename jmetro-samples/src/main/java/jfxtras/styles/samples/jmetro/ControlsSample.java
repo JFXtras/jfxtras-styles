@@ -79,6 +79,9 @@ public class ControlsSample extends Application {
         new JMetro(root, STYLE);
 
         Scene scene = new Scene(root);
+
+//        ScenicView.show(root);
+
         primaryStage.setScene(scene);
         primaryStage.show();
 
