@@ -78,7 +78,7 @@ public class TreeViewSample extends Application {
         private final SimpleStringProperty name;
         private final SimpleStringProperty department;
 
-        private Employee(String name, String department) {
+        public  Employee(String name, String department) {
             this.name = new SimpleStringProperty(name);
             this.department = new SimpleStringProperty(department);
         }
