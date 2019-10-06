@@ -96,7 +96,7 @@ public class TableViewSample extends Application {
         private final SimpleStringProperty lastName;
         private final SimpleStringProperty email;
 
-        private Person(String fName, String lName, String email) {
+        public Person(String fName, String lName, String email) {
             this.firstName = new SimpleStringProperty(fName);
             this.lastName = new SimpleStringProperty(lName);
             this.email = new SimpleStringProperty(email);

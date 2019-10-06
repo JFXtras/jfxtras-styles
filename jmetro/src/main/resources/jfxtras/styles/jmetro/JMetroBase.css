@@ -2516,6 +2516,23 @@ totally specific (always using direct child) and cover all cases, which would be
 
 /*******************************************************************************
  *                                                                             *
+ * SplitPane                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+/* horizontal the two nodes are placed to the left/right of each other. */
+.split-pane:horizontal > .split-pane-divider {
+   -fx-background-color: background_color, border_color;
+   -fx-background-insets: 0, 0 2 0 2;
+}
+/* vertical the two nodes are placed on top of each other. */
+.split-pane:vertical > .split-pane-divider {
+   -fx-background-color: background_color, border_color;
+    -fx-background-insets: 0, 2 0 2 0;
+}
+
+/*******************************************************************************
+ *                                                                             *
  * Charts                                                                      *
  *                                                                             *
  ******************************************************************************/
