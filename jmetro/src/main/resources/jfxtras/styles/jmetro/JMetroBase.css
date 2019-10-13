@@ -633,7 +633,7 @@
 
 .scroll-pane .corner {
     -fx-background-radius: 0 0 0 0;
-    -fx-background-color: scroll_pane_background_color;
+    -fx-background-color: corner_background_color;
     -fx-background-insets: 0 0 0 0;
 }
 

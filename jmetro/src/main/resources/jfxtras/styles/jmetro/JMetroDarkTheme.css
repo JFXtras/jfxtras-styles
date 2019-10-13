@@ -226,6 +226,10 @@
     arrow_pressed_color: #111;
 }
 
+.scroll-pane {
+    corner_background_color: #29292a;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Combo Box                                                                   *
