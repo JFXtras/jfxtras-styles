@@ -51,9 +51,108 @@
     -fx-background-color: #c2c2c2;
 }
 
- .button:focused.light {
+.button:focused.light {
     -fx-border-color: border_hover_color;
     -fx-border-style: solid;
     -fx-border-width: 2;
     -fx-border-insets: 0;
- }
+}
+
+ /*===================== Pill button inside Toolbar ==========================*/
+
+.tool-bar .button.left-pill,
+.tool-bar .button.center-pill,
+.tool-bar .button.right-pill,
+.tool-bar .toggle-button.left-pill,
+.tool-bar .toggle-button.center-pill,
+.tool-bar .toggle-button.right-pill {
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: button_background_color;
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: text_color;
+}
+
+/* hover */
+.tool-bar .button:hover.left-pill,
+.tool-bar .button:hover.center-pill,
+.tool-bar .button:hover.right-pill,
+.tool-bar .toggle-button:hover.left-pill,
+.tool-bar .toggle-button:hover.center-pill,
+.tool-bar .toggle-button:hover.right-pill {
+    -fx-border-color: border_hover_color;
+}
+
+/* pressed */
+.tool-bar .button:pressed.left-pill,
+.tool-bar .button:pressed.center-pill,
+.tool-bar .button:pressed.right-pill,
+.tool-bar .toggle-button:pressed.left-pill,
+.tool-bar .toggle-button:pressed.center-pill,
+.tool-bar .toggle-button:pressed.right-pill {
+    -fx-border-color: background_pressed_color;
+    -fx-background-color: background_pressed_color;
+}
+
+/* focused */
+.tool-bar .button:focused.left-pill,
+.tool-bar .button:focused.center-pill,
+.tool-bar .button:focused.right-pill,
+.tool-bar .toggle-button:focused.left-pill,
+.tool-bar .toggle-button:focused.center-pill,
+.tool-bar .toggle-button:focused.right-pill {
+    -fx-border-color: transparent, focus_ring_border_color;
+    -fx-border-width: 1, 1;
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+/* disabled */
+.tool-bar .button:disabled.left-pill,
+.tool-bar .button:disabled.center-pill,
+.tool-bar .button:disabled.right-pill,
+.tool-bar .toggle-button:disabled.left-pill,
+.tool-bar .toggle-button:disabled.center-pill,
+.tool-bar .toggle-button:disabled.right-pill {
+    -fx-opacity: 0.4;
+    -fx-background-color: button_background_color;
+    -fx-text-fill: text_color;
+}
+
+/* selected */
+.tool-bar .button:selected.left-pill,
+.tool-bar .button:selected.center-pill,
+.tool-bar .button:selected.right-pill,
+.tool-bar .toggle-button:selected.left-pill,
+.tool-bar .toggle-button:selected.center-pill,
+.tool-bar .toggle-button:selected.right-pill {
+    -fx-background-color: accent_color;
+    -fx-text-fill: white;
+}
+
+/* selected - hover */
+.tool-bar .button:selected:hover.left-pill,
+.tool-bar .button:selected:hover.center-pill,
+.tool-bar .button:selected:hover.right-pill,
+.tool-bar .toggle-button:selected:hover.left-pill,
+.tool-bar .toggle-button:selected:hover.center-pill,
+.tool-bar .toggle-button:selected:hover.right-pill {
+    -fx-border-color: border_hover_selected_color;
+}
+
+/* selected - pressed */
+.tool-bar .button:selected:pressed.left-pill,
+.tool-bar .button:selected:pressed.center-pill,
+.tool-bar .button:selected:pressed.right-pill,
+.tool-bar .toggle-button:selected:pressed.left-pill,
+.tool-bar .toggle-button:selected:pressed.center-pill,
+.tool-bar .toggle-button:selected:pressed.right-pill {
+    -fx-background-color: derive(accent_color, -40%);
+}
