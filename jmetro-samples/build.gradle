@@ -10,7 +10,8 @@ javafx {
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.ToolbarButtonSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
-mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSample'
+//mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 
 dependencies {
     compile project(':jmetro')

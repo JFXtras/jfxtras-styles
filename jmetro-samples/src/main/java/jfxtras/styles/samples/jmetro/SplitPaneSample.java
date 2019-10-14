@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro;
+package jfxtras.styles.samples.jmetro;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -9,13 +9,15 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.Style;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class SplitPaneSample extends Application {
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.LIGHT;
 
     private TableView<TableViewSample.Person> table = new TableView<>();
     private final ObservableList<TableViewSample.Person> data =
