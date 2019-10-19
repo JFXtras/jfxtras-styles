@@ -2103,6 +2103,31 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-border-color: transparent, transparent;
 }
 
+/* TabPane button to see more tabs (when space is constricted) */
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0 0 4 0;
+    -fx-padding: 4 8 9 8;
+    -fx-background-radius: 0;
+}
+
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:hover {
+    -fx-background-color: more_button_hover_color;
+}
+
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:pressed {
+    -fx-background-color: more_button_pressed_color;
+}
+
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button > .arrow  {
+    -fx-padding: 0.083333em; /* 3px */
+    -fx-scale-shape: false;
+    -fx-shape: "M13.576,7.495c0,0.829-0.672,1.5-1.5,1.5c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5C12.904,5.995,13.576,6.667,13.576,7.495z M12.076,10.995c-0.828,0-1.5,0.672-1.5,1.5c0,0.829,0.672,1.5,1.5,1.5c0.828,0,1.5-0.672,1.5-1.5C13.576,11.667,12.904,10.995,12.076,10.995z M12.076,15.995c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5c0.828,0,1.5-0.672,1.5-1.5S12.904,15.995,12.076,15.995z";
+
+    -fx-background-insets: 0;
+    -fx-background-color: more_button_icon_color;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Context Menu, Menus, MenuBar and MenuItem                                   *

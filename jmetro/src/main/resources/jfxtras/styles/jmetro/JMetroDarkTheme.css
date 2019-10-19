@@ -542,6 +542,10 @@
 
     tab_selected_background_color: #1e1e1e;
     tab_selected_border_color: #1e1e1e;
+
+    more_button_hover_color: #444;
+    more_button_pressed_color: #333333;
+    more_button_icon_color: white;
 }
 
 /*******************************************************************************
