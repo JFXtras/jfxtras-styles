@@ -529,6 +529,10 @@
 
     tab_selected_background_color: white;
     tab_selected_border_color: tab_pane_bottom_border_color;
+
+    more_button_hover_color: #d5d4d4;
+    more_button_pressed_color: #c2c2c2;
+    more_button_icon_color: #555;
 }
 
 /*******************************************************************************
