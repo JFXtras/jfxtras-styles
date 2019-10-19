@@ -725,7 +725,7 @@
 
 /*==========================  Editable ComboBox  =============================*/
 .combo-box-base:editable > .text-input {
-    -fx-skin: "com.sun.javafx.scene.control.skin.TextFieldSkin"
+    -fx-skin: "javafx.scene.control.skin.TextFieldSkin"
 }
 
 .combo-box-base:editable > .text-input {
