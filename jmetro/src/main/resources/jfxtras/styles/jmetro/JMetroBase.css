@@ -1884,7 +1884,7 @@ totally specific (always using direct child) and cover all cases, which would be
 .tree-view .tree-cell:filled:selected:pressed,
 .tree-view .tree-cell:selected:pressed,
 .tree-view .tree-cell:pressed{
-    -fx-background-color: pressed_color;
+    -fx-background-color: cell_pressed_color;
 }
 
 /*********** Expand/Collapse icon **********/
