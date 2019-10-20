@@ -137,7 +137,7 @@
 /****************************** Button ****************************************/
 
 .button {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentButtonSkin";
+    -fx-skin: "impl.jfxtras.styles.jmetro.FluentButtonSkin";
 }
 
 .button:default
@@ -157,7 +157,7 @@
 /**************************** Toggle Button ***********************************/
 
 .toggle-button {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.FluentToggleButtonSkin";
+    -fx-skin: "impl.jfxtras.styles.jmetro.FluentToggleButtonSkin";
 }
 
 .toggle-button:selected {
@@ -857,7 +857,7 @@
  ******************************************************************************/
 
 .text-field{
-    -fx-skin: "impl.jfxtras.styles.jmetro8.TextFieldSkin";
+    -fx-skin: "impl.jfxtras.styles.jmetro.TextFieldSkin";
 }
 
 .text-field > .right-button > .right-button-graphic {
@@ -936,7 +936,7 @@
  ******************************************************************************/
 
 .password-field {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.PasswordFieldSkin";
+    -fx-skin: "impl.jfxtras.styles.jmetro.PasswordFieldSkin";
 }
 
 .password-field > .right-button {
@@ -1004,7 +1004,7 @@
 }
 
 .progress-bar {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.ProgressBarSkin";
+    -fx-skin: "impl.jfxtras.styles.jmetro.ProgressBarSkin";
 }
 
 .progress-bar > .bar {
@@ -1042,7 +1042,7 @@
  ******************************************************************************/
 
 .slider {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.SliderSkin";
+    -fx-skin: "impl.jfxtras.styles.jmetro.SliderSkin";
 }
 
 .slider {
@@ -1112,7 +1112,7 @@
  ******************************************************************************/
 
 .toggle-switch {
-    -fx-skin: "impl.jfxtras.styles.jmetro8.ToggleSwitchSkin";
+    -fx-skin: "impl.jfxtras.styles.jmetro.ToggleSwitchSkin";
 }
 
 .toggle-switch {

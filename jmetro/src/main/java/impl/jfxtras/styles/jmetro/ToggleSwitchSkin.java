@@ -1,4 +1,4 @@
-package impl.jfxtras.styles.jmetro8;
+package impl.jfxtras.styles.jmetro;
 
 import com.sun.javafx.css.converters.EnumConverter;
 import com.sun.javafx.css.converters.SizeConverter;

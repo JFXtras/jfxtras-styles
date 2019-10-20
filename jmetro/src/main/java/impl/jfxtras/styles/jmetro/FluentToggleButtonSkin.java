@@ -1,4 +1,4 @@
-package impl.jfxtras.styles.jmetro8;
+package impl.jfxtras.styles.jmetro;
 
 import com.sun.javafx.css.converters.BooleanConverter;
 import com.sun.javafx.scene.control.skin.ToggleButtonSkin;

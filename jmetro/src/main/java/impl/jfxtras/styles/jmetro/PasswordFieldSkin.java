@@ -25,18 +25,45 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package impl.jfxtras.styles.jmetro8;
+package impl.jfxtras.styles.jmetro;
 
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class TextFieldSkin extends TextFieldWithButtonSkin{
-    public TextFieldSkin(TextField textField) {
+public class PasswordFieldSkin extends TextFieldWithButtonSkin{
+    private boolean isMaskTextDisabled = false;
+
+    public PasswordFieldSkin(TextField textField) {
         super(textField);
     }
 
-    protected void rightButtonPressed()
-    {
-        getSkinnable().setText("");
+    @Override
+    protected void rightButtonPressed() {
+        TextField textField = getSkinnable();
+        isMaskTextDisabled = true;
+        textField.setText(textField.getText());
+        isMaskTextDisabled = false;
     }
 
+    @Override
+    protected  void rightButtonReleased()
+    {
+        TextField textField = getSkinnable();
+        textField.setText(textField.getText());
+        textField.end();
+    }
+
+    @Override protected String maskText(String txt) {
+        if (getSkinnable() instanceof PasswordField && !isMaskTextDisabled) {
+            int n = txt.length();
+            StringBuilder passwordBuilder = new StringBuilder(n);
+            for (int i = 0; i < n; i++) {
+                passwordBuilder.append(BULLET);
+            }
+
+            return passwordBuilder.toString();
+        } else {
+            return txt;
+        }
+    }
 }

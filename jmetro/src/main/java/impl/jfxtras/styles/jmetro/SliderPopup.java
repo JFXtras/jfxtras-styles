@@ -1,4 +1,4 @@
-package impl.jfxtras.styles.jmetro8;
+package impl.jfxtras.styles.jmetro;
 
 import javafx.beans.binding.StringBinding;
 import javafx.beans.property.DoubleProperty;
