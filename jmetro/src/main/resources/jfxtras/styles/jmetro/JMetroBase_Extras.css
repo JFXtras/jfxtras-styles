@@ -38,9 +38,9 @@
  ******************************************************************************/
 
  /*========================= Light Button ===================================*/
- .button.light {
+.button.light {
     -fx-background-color: transparent;
- }
+}
 
 .button:hover.light {
     -fx-background-color: #d5d4d4;

@@ -484,8 +484,6 @@
 .tree-view {
     tree_view_background_color: white;
 
-    pressed_color: derive(hover_color, -10%);
-
     text_color: #111;
     text_selected_color: #111;
     text_hover_color: text_color;
