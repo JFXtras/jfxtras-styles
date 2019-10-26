@@ -148,6 +148,7 @@ public class ThemeTester extends Application {
         mainStage = stage;
         // build Menu Bar
         outerRoot = new BorderPane();
+        outerRoot.getStyleClass().add("background");
         outerRoot.setTop(buildMenuBar());
         outerRoot.setCenter(root);
         // show UI
