@@ -38,7 +38,7 @@ public class PasswordFieldSkin extends TextFieldWithButtonSkin{
     }
 
     @Override
-    protected void rightButtonPressed() {
+    protected void onRightButtonPressed() {
         TextField textField = getSkinnable();
         isMaskTextDisabled = true;
         textField.setText(textField.getText());
@@ -46,7 +46,7 @@ public class PasswordFieldSkin extends TextFieldWithButtonSkin{
     }
 
     @Override
-    protected  void rightButtonReleased()
+    protected  void onRightButtonReleased()
     {
         TextField textField = getSkinnable();
         textField.setText(textField.getText());

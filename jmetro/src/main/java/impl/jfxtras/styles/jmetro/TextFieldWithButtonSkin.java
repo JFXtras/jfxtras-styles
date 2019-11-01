@@ -28,6 +28,7 @@
 package impl.jfxtras.styles.jmetro;
 
 import com.sun.javafx.scene.control.skin.TextFieldSkin;
+import javafx.beans.InvalidationListener;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.control.TextField;
@@ -35,6 +36,9 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
 public class TextFieldWithButtonSkin extends TextFieldSkin{
+    private InvalidationListener textChanged = observable -> onTextChanged();
+    private InvalidationListener focusChanged = observable -> onFocusChanged();
+
     private StackPane rightButton;
     private Region rightButtonGraphic;
 
@@ -66,16 +70,15 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
     }
 
     private void setupListeners() {
-
         final TextField textField = getSkinnable();
-        rightButton.setOnMousePressed(event -> rightButtonPressed());
-        rightButton.setOnMouseReleased(event -> rightButtonReleased());
+        rightButton.setOnMousePressed(event -> onRightButtonPressed());
+        rightButton.setOnMouseReleased(event -> onRightButtonReleased());
 
-        textField.textProperty().addListener((observable, oldValue, newValue) -> textChanged());
-        textField.focusedProperty().addListener((observable, oldValue, newValue) -> focusChanged());
+        textField.textProperty().addListener(textChanged);
+        textField.focusedProperty().addListener(focusChanged);
     }
 
-    protected void textChanged()
+    protected void onTextChanged()
     {
         if (textField.getText() == null)
             return;
@@ -87,13 +90,22 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
         rightButtonGraphic.setVisible(!isEmpty && hasFocus);
     }
 
-    protected void focusChanged()
+    protected void onFocusChanged()
     {
         if (textField.getText() == null)
             return;
 
         rightButton.setVisible(textField.isFocused() && !textField.getText().isEmpty());
         rightButtonGraphic.setVisible(textField.isFocused() && !textField.getText().isEmpty());
+    }
+
+    protected void onRightButtonPressed()
+    {
+    }
+
+    protected void onRightButtonReleased()
+    {
+
     }
 
     @Override
@@ -109,13 +121,11 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
                 clearButtonWidth, h, 0, HPos.CENTER, VPos.CENTER);
     }
 
-    protected void rightButtonPressed()
-    {
+    @Override
+    public void dispose() {
+        textField.textProperty().removeListener(textChanged);
+        textField.focusedProperty().removeListener(focusChanged);
+
+        super.dispose();
     }
-
-    protected void rightButtonReleased()
-    {
-
-    }
-
 }
