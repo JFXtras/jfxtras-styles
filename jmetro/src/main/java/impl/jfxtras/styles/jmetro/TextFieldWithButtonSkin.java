@@ -80,8 +80,11 @@ public class TextFieldWithButtonSkin extends TextFieldSkin {
         if (textField.getText() == null)
             return;
 
-        rightButton.setVisible(!textField.getText().isEmpty());
-        rightButtonGraphic.setVisible(!textField.getText().isEmpty());
+        boolean hasFocus = textField.isFocused();
+        boolean isEmpty = textField.getText().isEmpty();
+
+        rightButton.setVisible(!isEmpty && hasFocus);
+        rightButtonGraphic.setVisible(!isEmpty && hasFocus);
     }
 
     protected void focusChanged()
