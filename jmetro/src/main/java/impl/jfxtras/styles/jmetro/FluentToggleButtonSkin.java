@@ -14,11 +14,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class FluentToggleButtonSkin extends ToggleButtonSkin {
+    private ButtonAnimationHelper buttonAnimationHelper;
 
     public FluentToggleButtonSkin(ToggleButton button) {
         super(button);
 
-        ButtonAnimationHelper.setupButton(button, shrinkAnimateOnPressProperty());
+        buttonAnimationHelper = ButtonAnimationHelper.setupButton(button, shrinkAnimateOnPressProperty());
     }
 
     /********** CSS Properties ****************/
@@ -73,4 +74,10 @@ public class FluentToggleButtonSkin extends ToggleButtonSkin {
         return getClassCssMetaData();
     }
 
+    @Override
+    public void dispose() {
+        buttonAnimationHelper.dispose();
+
+        super.dispose();
+    }
 }
