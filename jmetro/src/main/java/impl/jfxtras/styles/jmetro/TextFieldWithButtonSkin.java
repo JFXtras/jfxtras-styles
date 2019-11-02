@@ -28,21 +28,41 @@
 package impl.jfxtras.styles.jmetro;
 
 import javafx.beans.InvalidationListener;
+import javafx.beans.property.BooleanProperty;
+import javafx.css.CssMetaData;
+import javafx.css.SimpleStyleableBooleanProperty;
+import javafx.css.Styleable;
+import javafx.css.StyleableProperty;
+import javafx.css.converter.BooleanConverter;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
+import javafx.scene.control.SkinBase;
 import javafx.scene.control.TextField;
 import javafx.scene.control.skin.TextFieldSkin;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 
-public class TextFieldWithButtonSkin extends TextFieldSkin {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class TextFieldWithButtonSkin extends TextFieldSkin{
+    private static final String RIGHT_BUTTON_VISIBLE_PROPERTY_NAME = "-right-button-visible";
+
     private InvalidationListener textChanged = observable -> onTextChanged();
     private InvalidationListener focusChanged = observable -> onFocusChanged();
+    private InvalidationListener rightButtonVisibleChanged = observable -> onRightButtonVisibilityChanged();
 
     private StackPane rightButton;
     private Region rightButtonGraphic;
 
     protected TextField textField;
+
+    /**************************************************************************
+     *                                                                        *
+     *  Constructor                                                           *
+     *                                                                        *
+     *************************************************************************/
 
     public TextFieldWithButtonSkin(TextField textField) {
         super(textField);
@@ -69,35 +89,109 @@ public class TextFieldWithButtonSkin extends TextFieldSkin {
         setupListeners();
     }
 
-    private void setupListeners() {
+    /**************************************************************************
+     *                                                                        *
+     *  CSS                                                                   *
+     *                                                                        *
+     *************************************************************************/
 
+    /*====================== Right Button Visible ===========================*/
+
+    private static final CssMetaData<TextField, Boolean> RIGHT_BUTTON_VISIBLE_META_DATA =
+            new CssMetaData<TextField, Boolean>(RIGHT_BUTTON_VISIBLE_PROPERTY_NAME,
+                    BooleanConverter.getInstance(), true) {
+
+                @Override
+                public boolean isSettable(TextField textField) {
+                    final TextFieldWithButtonSkin skin = (TextFieldWithButtonSkin) textField.getSkin();
+                    return !skin.rightButtonVisible.isBound();
+                }
+
+                @Override
+                public StyleableProperty<Boolean> getStyleableProperty(TextField textField) {
+                    final TextFieldWithButtonSkin skin = (TextFieldWithButtonSkin) textField.getSkin();
+                    return (StyleableProperty<Boolean>) skin.rightButtonVisibleProperty();
+                }
+            };
+
+    private BooleanProperty rightButtonVisible = new SimpleStyleableBooleanProperty(RIGHT_BUTTON_VISIBLE_META_DATA, true);
+
+    private BooleanProperty rightButtonVisibleProperty() { return rightButtonVisible; }
+
+    private boolean getRightButtonVisible() { return rightButtonVisible.get(); }
+
+
+    /*=================== General handling of CSS ===========================*/
+
+    /* Setup styleables for this Skin */
+    private static final List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
+
+    static {
+        final List<CssMetaData<? extends Styleable, ?>> styleables =
+                new ArrayList<>(SkinBase.getClassCssMetaData());
+        styleables.add(RIGHT_BUTTON_VISIBLE_META_DATA);
+        STYLEABLES = Collections.unmodifiableList(styleables);
+    }
+
+    /**
+     * @return The CssMetaData associated with this class, which may include the
+     * CssMetaData of its super classes.
+     */
+    public static List<CssMetaData<? extends Styleable, ?>> getClassCssMetaData() {
+        return STYLEABLES;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<CssMetaData<? extends Styleable, ?>> getCssMetaData() {
+        return getClassCssMetaData();
+    }
+
+    /**************************************************************************
+     *                                                                        *
+     *  Other methods                                                         *
+     *                                                                        *
+     *************************************************************************/
+
+    private void setupListeners() {
         final TextField textField = getSkinnable();
         rightButton.setOnMousePressed(event -> onRightButtonPressed());
         rightButton.setOnMouseReleased(event -> onRightButtonReleased());
 
         textField.textProperty().addListener(textChanged);
         textField.focusedProperty().addListener(focusChanged);
+        rightButtonVisible.addListener(rightButtonVisibleChanged);
     }
 
     protected void onTextChanged()
     {
-        if (textField.getText() == null)
-            return;
-
-        boolean hasFocus = textField.isFocused();
-        boolean isEmpty = textField.getText().isEmpty();
-
-        rightButton.setVisible(!isEmpty && hasFocus);
-        rightButtonGraphic.setVisible(!isEmpty && hasFocus);
+        updateRightButtonVisibility();
     }
 
     protected void onFocusChanged()
     {
-        if (textField.getText() == null)
-            return;
+        updateRightButtonVisibility();
+    }
 
-        rightButton.setVisible(textField.isFocused() && !textField.getText().isEmpty());
-        rightButtonGraphic.setVisible(textField.isFocused() && !textField.getText().isEmpty());
+    protected void onRightButtonVisibilityChanged() {
+        updateRightButtonVisibility();
+    }
+
+    private void updateRightButtonVisibility() {
+        if (textField.getText() == null) {
+            return;
+        }
+
+        boolean hasFocus = textField.isFocused();
+        boolean isEmpty = textField.getText().isEmpty();
+        boolean isRightButtonVisible = rightButtonVisible.get();
+
+        boolean shouldBeVisible = isRightButtonVisible && hasFocus && !isEmpty;
+
+        rightButton.setVisible(shouldBeVisible);
+        rightButtonGraphic.setVisible(shouldBeVisible);
     }
 
     protected void onRightButtonPressed()
@@ -126,6 +220,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin {
     public void dispose() {
         textField.textProperty().removeListener(textChanged);
         textField.focusedProperty().removeListener(focusChanged);
+        rightButtonVisible.removeListener(rightButtonVisibleChanged);
 
         super.dispose();
     }
