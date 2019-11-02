@@ -15,11 +15,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class FluentButtonSkin extends ButtonSkin {
+    private ButtonAnimationHelper buttonAnimationHelper;
 
     public FluentButtonSkin(Button button) {
         super(button);
 
-        ButtonAnimationHelper.setupButton(button, shrinkAnimateOnPressProperty());
+        buttonAnimationHelper = ButtonAnimationHelper.setupButton(button, shrinkAnimateOnPressProperty());
     }
 
 
@@ -75,4 +76,10 @@ public class FluentButtonSkin extends ButtonSkin {
         return getClassCssMetaData();
     }
 
+    @Override
+    public void dispose() {
+        buttonAnimationHelper.dispose();
+
+        super.dispose();
+    }
 }
