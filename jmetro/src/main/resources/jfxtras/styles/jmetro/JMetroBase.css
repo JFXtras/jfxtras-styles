@@ -858,6 +858,8 @@
 
 .text-field{
     -fx-skin: "impl.jfxtras.styles.jmetro.TextFieldSkin";
+
+    -right-button-visible: true;
 }
 
 .text-field > .right-button > .right-button-graphic {
@@ -937,6 +939,8 @@
 
 .password-field {
     -fx-skin: "impl.jfxtras.styles.jmetro.PasswordFieldSkin";
+
+    -right-button-visible: true;
 }
 
 .password-field > .right-button {
