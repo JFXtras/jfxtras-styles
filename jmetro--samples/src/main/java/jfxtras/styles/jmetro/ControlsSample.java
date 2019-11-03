@@ -64,7 +64,7 @@ public class ControlsSample extends Application {
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
     private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
 
-    static final private String RESOURCE = TEXT_FIELD_RESOURCE;
+    static final private String RESOURCE = BUTTON_RESOURCE;
     static final private Style STYLE = Style.LIGHT;
 
     @Override
