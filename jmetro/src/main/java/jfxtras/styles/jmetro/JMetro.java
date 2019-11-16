@@ -36,6 +36,10 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Dialog;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 /**
  * This class is used to apply the JMetro theme to a {@link Parent} or {@link Scene}.
@@ -112,6 +116,11 @@ public class JMetro {
         overridingStylesheets.addListener(this::overridingStylesheetsChanged);
     }
 
+    public JMetro(Style style) {
+        this();
+        this.style.set(style);
+    }
+
     public JMetro(Scene scene, Style style) {
         this();
         this.style.set(style);
@@ -122,6 +131,34 @@ public class JMetro {
         this();
         this.style.set(style);
         this.parent.set(parent);
+    }
+
+    public static <R> Dialog<R> newDialog(String headerText, String contentText, JMetro jMetro) {
+        Dialog<R> dialog = new Dialog<>();
+        dialog.setHeaderText(headerText);
+        dialog.setContentText(contentText);
+
+        Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
+        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
+        stage.getIcons().add(whiteIcon);
+
+        jMetro.setScene(dialog.getDialogPane().getScene());
+
+        return dialog;
+    }
+
+    public static Alert newAlert(String headerText, String contentText, Alert.AlertType alertType, JMetro jMetro) {
+        Alert alert = new Alert(alertType);
+        alert.setHeaderText(headerText);
+        alert.setContentText(contentText);
+
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
+        stage.getIcons().add(whiteIcon);
+
+        jMetro.setScene(alert.getDialogPane().getScene());
+
+        return alert;
     }
 
     private void overridingStylesheetsChanged(ListChangeListener.Change<? extends String> changed) {
@@ -164,17 +201,17 @@ public class JMetro {
 
             // Add BASE_STYLESHEET before all other JMetro stylesheets
             if (baseStylesheetIndex == -1) {
-                stylesheetsList.add(getStyle().getStyleStylesheetURL());
                 stylesheetsList.add(BASE_STYLESHEET_URL);
+                stylesheetsList.add(getStyle().getStyleStylesheetURL()); // This needs to be added after base stylesheet so that specific, overriding styles here are applied
                 stylesheetsList.add(BASE_EXTRAS_STYLESHEET_URL);
                 baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
             } else {
-                stylesheetsList.add(baseStylesheetIndex++, getStyle().getStyleStylesheetURL());
+                stylesheetsList.add(++baseStylesheetIndex, getStyle().getStyleStylesheetURL());
             }
 
             if (isAutomaticallyColorPanes()) {
                 if (!stylesheetsList.contains(PANES_STYLESHEET_URL)) {
-                    stylesheetsList.add(baseStylesheetIndex, PANES_STYLESHEET_URL);
+                    stylesheetsList.add(++baseStylesheetIndex, PANES_STYLESHEET_URL);
                 }
             }
         }
