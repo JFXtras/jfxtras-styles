@@ -130,6 +130,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
         final List<CssMetaData<? extends Styleable, ?>> styleables =
                 new ArrayList<>(SkinBase.getClassCssMetaData());
         styleables.add(RIGHT_BUTTON_VISIBLE_META_DATA);
+        styleables.addAll(TextFieldSkin.getClassCssMetaData());
         STYLEABLES = Collections.unmodifiableList(styleables);
     }
 
