@@ -25,27 +25,26 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@import "JMetroBase.css";
+@import "base.css";
 
 .root {
-    background_color: #252525;
+    background_color: white;
     scroll_pane_background_color: background_color;
 
-    tab_pane_background_color: #2e2e2e;
+    tab_pane_background_color: white;
 }
 
 /* To be used in "background" Panes */
 .background{
-    -fx-background-color: #252525;
+    -fx-background-color: white;
 }
 
 .header{
-    -fx-text-fill: white;
+    -fx-text-fill: black;
 }
 
 .item-title{
-    -fx-text-fill: white;
-    -fx-opacity: 0.6;
+    -fx-text-fill: black;
 }
 
 /*******************************************************************************
@@ -62,30 +61,20 @@
 .choice-box,
 .combo-box-base,
 .split-menu-button {
-    arrow_color: white;
+    arrow_color: #111;
 }
 
 /* ====   CONTROLS WITH CELLS   ============================================= */
 
 .list-view, .table-view, .tree-view, .tree-table-view {
-    cell_hover_color: #515151;
-    cell_pressed_color: #3e3e3e;
+    cell_hover_color: #dadada;
+    cell_pressed_color: #c2c2c2;
 
     cell_selected_unfocused_color: cell_hover_color;
 
-    cell_selected_color: derive(accent_color, -35%);
-    cell_selected_hover_color: derive(accent_color, -20%);
+    cell_selected_color: derive(accent_color, 90%);
+    cell_selected_hover_color: derive(accent_color, 70%);
     cell_selected_pressed_color: derive(accent_color, 60%);
-}
-
-/*******************************************************************************
- *                                                                             *
- * Label                                                                       *
- *                                                                             *
- ******************************************************************************/
-
-.label {
-    text_color: white;
 }
 
 /*******************************************************************************
@@ -95,23 +84,23 @@
  ******************************************************************************/
 
 .button, .toggle-button {
-    button_background_color: #333333;
-    background_pressed_color: #666666;
+    button_background_color: #cccccc;
+    background_pressed_color: #999999;
 
-    border_hover_color: #858585;
+    border_hover_color: #7a7a7a;
 
-    text_color: white;
+    text_color: #111;
     default_button_text_color: white;
 
     focus_ring_border_color: white;
 }
 
 .button {
-    border_hover_default_color: derive(accent_color, 70%);
+    border_hover_default_color: derive(accent_color, -40%);
 }
 
 .toggle-button {
-    border_hover_selected_color: derive(accent_color, 70%);
+    border_hover_selected_color: derive(accent_color, -40%);
 }
 
 /*******************************************************************************
@@ -120,26 +109,17 @@
  *                                                                             *
  ******************************************************************************/
 .check-box {
-    text_color: white;
+    text_color: #111;
 
-    box_background_color: #111;
-    box_border_color: #cccccc;
-    box_border_hover_color: white;
+    box_background_color: white;
 
-    indeterminate_mark_color: #cccccc;
-    indeterminate_box_pressed_color: #111;
+    box_border_color: #333333;
+    box_border_hover_color: #333333;
 
-    focus_ring_color: white;
-}
+    indeterminate_mark_color: #333333;
+    indeterminate_box_pressed_color: white;
 
-/* -- indeterminate - hover */
-.check-box:indeterminate:hover > .box > .mark {
-    -fx-background-color: white;
-}
-
-/* -- focused - hover */
-.check-box:focused:hover > .box{
-    -fx-border-color: focus_ring_color, box_border_hover_color;
+    focus_ring_color: #111;
 }
 
 /*******************************************************************************
@@ -149,14 +129,14 @@
  ******************************************************************************/
 
 .hyperlink {
-    hyperlink_hover_color: derive(accent_color, 25%);
-    hyperlink_pressed_color: derive(accent_color, -15%);
+    hyperlink_hover_color: derive(accent_color, -25%);
+    hyperlink_pressed_color: derive(accent_color, -70%);
 
     hyperlink_disabled_color: #999999;
 }
 
 .hyperlink:disabled {
-    -fx-opacity: 0.5;
+    -fx-opacity: 0.7;
 }
 
 /*******************************************************************************
@@ -166,19 +146,19 @@
  ******************************************************************************/
 
 .radio-button {
-    text_color: white;
+    text_color: #111;
 
-    radio_background_color: #111;
-    background_pressed_color: #111;
+    radio_background_color: white;
+    background_pressed_color: white;
 
-    border_color: #cccccc;
-    border_hover_color: white;
+    border_color: #333333;
+    border_hover_color: #333333;
 
-    dot_color: #111;
-    dot_selected_color: #cccccc;
-    dot_selected_hover_color: white;
+    dot_color: white;
+    dot_selected_color: #333333;
+    dot_selected_hover_color: #111;
 
-    focus_ring_color: white;
+    focus_ring_color: #333333;
 }
 
 /*******************************************************************************
@@ -188,9 +168,9 @@
  ******************************************************************************/
 
 .tooltip {
-    tooltip_background_color: #2b2b2b;
-    border_color: #767676;
-    text_color: white;
+    tooltip_background_color: #f2f2f2;
+    border_color: #cccccc;
+    text_color: #111;
 }
 
 /*******************************************************************************
@@ -200,9 +180,9 @@
  ******************************************************************************/
 
 .tool-bar {
-    background_color: #252526;
-    button_hover_color: #444;
-    button_pressed_color: #333333;
+    background_color: white;
+    button_hover_color: #d5d4d4;
+    button_pressed_color: #c2c2c2;
 }
 
 /*******************************************************************************
@@ -212,22 +192,22 @@
  ******************************************************************************/
 
 .scroll-bar {
-    thumb_color: #52565a;
-    thumb_hover_color: #7d8183;
-    thumb_pressed_color: #a9abad;
+    thumb_color: #c2c7ca;
+    thumb_hover_color: #838689;
+    thumb_pressed_color: #585a5c;
 
-    track_color: #29292a;
+    track_color: #e9e9e9;
 
-    inc_dec_button_color: #2a2d30;
-    inc_dec_button_hover_color: #3c4145;
-    inc_dec_button_pressed_color: #a8abac;
+    inc_dec_button_color: #e8e6e3;
+    inc_dec_button_hover_color: #c6cacf;
+    inc_dec_button_pressed_color: #585a5c;
 
-    arrow_color: white;
-    arrow_pressed_color: #111;
+    arrow_color: #5a5a59;
+    arrow_pressed_color: white;
 }
 
 .scroll-pane {
-    corner_background_color: #29292a;
+    corner_background_color: #e9e9e9;
 }
 
 /*******************************************************************************
@@ -237,29 +217,29 @@
  ******************************************************************************/
 
 .combo-box-base {
-    text_color: white;
+    text_color: #111;
 
     /* border */
-    border_color: #666666;
-    border_hover_color: #999999;
-    border_focused_color: white;
-    border_pressed_color: #666666;
+    border_color: #999999;
+    border_hover_color: #666666;
+    border_focused_color: #5c5c5c;
+    border_pressed_color: border_color;
 
     /* background */
-    combo_box_background_color: #111;
-    background_pressed_color: #333333;
+    combo_box_background_color: white;
+    background_pressed_color: #cccccc;
 
     /* editable */
-    combo_box_editable_button_hover_color: #444;
-    combo_box_editable_focused_button_hover_color: #e6e6e6;
+    combo_box_editable_button_hover_color: #e6e6e6;
+    combo_box_editable_focused_button_hover_color: combo_box_editable_button_hover_color;
     combo_box_editable_focused_background_color: white;
-    combo_box_editable_focused_arrow_color: #111;
+    combo_box_editable_focused_arrow_color: arrow_color;
 
     /* Popup - listcell */
-    list_cell_color: #2b2b2b;
-    list_cell_hover_color: #545454;
+    list_cell_color: #f2f2f2;
+    list_cell_hover_color: #dedede;
 
-    list_cell_border_color: #767676;
+    list_cell_border_color: #cccccc;
 }
 
 /*******************************************************************************
@@ -269,10 +249,7 @@
  ******************************************************************************/
 
 .rating {
-    star_color: #6d6d6d;
-}
-.rating:disabled{
-    -fx-opacity: .8;
+    star_color: #bababa;
 }
 
 /*******************************************************************************
@@ -282,19 +259,19 @@
  ******************************************************************************/
 
 .text-input {
-    border_color: #666;
-    border_hover_color: #999;
-    border_disabled_color: #333;
+    border_color: #999999;
+    border_hover_color: #666666;
+    border_disabled_color: #d9d9d9;
 
-    text_input_background_color: #111;
-    background_focused_color: #fff;
-    background_hover_color: #111;
-    background_disabled_color: #111;
+    text_input_background_color: white;
+    background_focused_color: white;
+    background_hover_color: white;
+    background_disabled_color: #eaeaea;
 
-    text_color: white;
+    text_color: #111;
     text_focused_color: #111;
-    text_disabled_color: #333;
-    prompt_text_color: #777;
+    text_disabled_color: #adadad;
+    prompt_text_color: #666666;
 
     highlight_color: accent_color;
     highlighted_text_color: white;
@@ -309,10 +286,10 @@
  ******************************************************************************/
 
 .menu-button {
-    menu_button_background_color: #333;
-    menu_button_text_color: white;
-    menu_border_hover_color: #858585;
-    menu_button_pressed_color: #666;
+    menu_button_background_color: #ccc;
+    menu_button_text_color: #111;
+    menu_border_hover_color: #7a7a7a;
+    menu_button_pressed_color: #999;
 }
 
 /*******************************************************************************
@@ -322,7 +299,7 @@
  ******************************************************************************/
 
 .progress-bar {
-    progress_background_color: #333;
+    progress_background_color: #ccc;
 }
 
 /*******************************************************************************
@@ -332,10 +309,10 @@
  ******************************************************************************/
 
 .slider {
-    track_hover_color: #999999;
-    thumb_hover_color: #f2f2f2;
+    track_hover_color: #666666;
+    thumb_hover_color: #171717;
 
-    thumb_pressed_color: #767676;
+    thumb_pressed_color: #cccccc;
 }
 
 /*******************************************************************************
@@ -345,26 +322,26 @@
  ******************************************************************************/
 
 .toggle-switch {
-    text_color: white;
+    text_color: #111;
 
     /* Unselected */
-    unselected_color: #111;
-    unselected_border_color: #cccccc;
-    thumb_unselected_color: #cccccc;
+    unselected_color: white;
+    unselected_border_color: #111;
+    thumb_unselected_color: #111;
     /* --    hover */
-    unselected_hover_color: #111;
-    unselected_border_hover_color: white;
-    thumb_unselected_hover_color: white;
+    unselected_hover_color: unselected_color;
+    unselected_border_hover_color: #111;
+    thumb_unselected_hover_color: thumb_unselected_color;
 
     /* Selected */
     selected_color: accent_color;
     selected_border_color: accent_color;
     thumb_selected_color: white;
     /* --    hover */
-    selected_hover_color: derive(accent_color, -20%);
+    selected_hover_color: derive(accent_color, 40%);
 
     /* Pressed */
-    pressed_color: #999999;
+    pressed_color: #666666;
     pressed_border_color: pressed_color;
     thumb_pressed_color: white;
 }
@@ -376,17 +353,17 @@
  ******************************************************************************/
 
 .spinner {
-    spinner_background_color: #4a4a4a;
+    spinner_background_color: #f0f0f0;
 
-    arrow_button_hover_color: #3c4145;
-    arrow_button_pressed_color: #a8abac;
+    arrow_button_hover_color: #dadada;
+    arrow_button_pressed_color: #606060;
 
-    arrow_color: #999;
-    arrow_pressed_color: #5e6060;
+    arrow_color: -fx-mark-color;
+    arrow_pressed_color: white;
 }
 
 .spinner > .text-field {
-    text_color: white;
+    text_color: #111;
 }
 
 /*******************************************************************************
@@ -396,39 +373,49 @@
  ******************************************************************************/
 
 .date-picker {
-    graphic_color: white;
+    graphic_color: #111;
     graphic_focused_color: #111;
-    graphic_disabled_color: #333;
 
-    text_color: white;
+
+    text_color: #111;
     text_focused_color: #111;
 
-    text_selected_color: white;
-    text_hover_color: white;
+    text_selected_color: #fff;
+    text_hover_color: text_color;
 
-    text_days_from_other_months_color: #7c7c7c;
+    text_days_from_other_months_color: derive(text_color, 60%);
 
-    date_picker_background_color: #111;
+    date_picker_background_color: #fff;
     background_focused_color: #fff;
-    background_hover_color: date_picker_background_color;
+    background_hover_color: #fff;
 
-    border_color: #616161;
-    border_hover_color: #999999;
+    border_color: #999999;
+    border_hover_color: #666666;
 
-    popup_border_color: #111;
+    popup_border_color: #e6e6e6;
 
-    spinner_button_hover_color: #999;
+    spinner_button_hover_color: #dadada;
 
-    cell_background_color: #111;
+    cell_background_color: #fff;
 
-    day_cell_background_color: #1f1f1f;
-    day_cell_border_hover_color: #999;
+    day_cell_background_color: #e6e6e6;
+    day_cell_border_hover_color: #666;
 
-    day_cell_background_days_from_other_months_color: #2b2b2b;
+    day_cell_background_days_from_other_months_color: #f2f2f2;
 
-    today_border_color: derive(accent_color, -60%);
+    today_border_color: derive(accent_color, 90%);
 
-    text_field_disabled_background_color: #111;
+    text_field_disabled_background_color: #eaeaea;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Label                                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.label {
+    text_color: #111;
 }
 
 /*******************************************************************************
@@ -438,15 +425,15 @@
  ******************************************************************************/
 
 .choice-box {
-    text_color: white;
+    text_color: #111;
 
-    border_color: #666666;
-    border_hover_color: #999999;
-    border_focused_color: white;
-    border_pressed_color: #666666;
+    border_color: #999999;
+    border_hover_color: #666666;
+    border_focused_color: #7a7a7a;
+    border_pressed_color: border_color;
 
-    choice_box_background_color: #111;
-    background_pressed_color: #333333;
+    choice_box_background_color: white;
+    background_pressed_color: #cccccc;
 }
 
 /*******************************************************************************
@@ -456,10 +443,10 @@
  ******************************************************************************/
 
 .list-view {
-    text_color: white;
+    text_color: #111;
 
-    list_view_background_color: #333;
-    border_color: #171717;
+    list_view_background_color: #f2f2f2;
+    border_color: transparent;
 }
 
 /*******************************************************************************
@@ -469,23 +456,23 @@
  ******************************************************************************/
 
 .table-view {
-    table_background_color: #333;
-    table_view_border_color: #171717;
+    table_background_color: white;
+    table_view_border_color: #e9e9e9;
 
-    text_color: white;
-    hover_text_color: white;
-    selected_text_color: white;
-    selected_unfocused_text_color: white;
+    text_color: #111;
+    hover_text_color: #111;
+    selected_text_color: #111;
+    selected_unfocused_text_color: #111;
 
-    sort_arrow_color: white;
+    sort_arrow_color: #111;
     show_hide_image_color: sort_arrow_color;
 }
 
 /* Check Box Table Cell */
 .check-box-table-cell {
     table_check_box_cell_box_background_color: transparent;
-    table_check_box_cell_box_border_color: white;
-    table_check_box_cell_mark_color: white;
+    table_check_box_cell_box_border_color: #111;
+    table_check_box_cell_mark_color: #111;
 }
 
 /*******************************************************************************
@@ -495,13 +482,13 @@
  ******************************************************************************/
 
 .tree-view {
-    tree_view_background_color: #333;
+    tree_view_background_color: white;
 
-    text_color: white;
-    text_selected_color: white;
+    text_color: #111;
+    text_selected_color: #111;
     text_hover_color: text_color;
 
-    arrow_color: white;
+    arrow_color: #111;
     arrow__hover_color: text_hover_color;
     arrow_selected_hover_color: text_selected_color;
 }
@@ -513,16 +500,16 @@
  ******************************************************************************/
 
 .tree-table-view {
-    table_border_color: #171717;
-    table_background_color: #333;
+    table_border_color: #e9e9e9;
+    table_background_color: white;
 
-    table_text_color: #fff;
-    table_text_selected_color: #fff;
+    table_text_color: #111;
+    table_text_selected_color: #111;
 
-    table_column_vline_color: #3e3e3e;
+    table_column_vline_color: #e6e6e6;
 
     /* Color of button that filters columns */
-    show_hide_image_color: white;
+    show_hide_image_color: #111;
 }
 
 /*******************************************************************************
@@ -532,18 +519,18 @@
  ******************************************************************************/
 
 .tab-pane {
-    tab_pane_bottom_border_color: tab_pane_background_color;
+    tab_pane_bottom_border_color: #cccccc;
 
-    tab_text_color: white;
-    tab_text_hover_color: derive(accent_color, 50%);
+    tab_text_color: #767676;
+    tab_text_hover_color: accent_color;
     tab_text_selected_hover_color: derive(accent_color, 30%);
 
-    tab_selected_background_color: #1e1e1e;
-    tab_selected_border_color: #1e1e1e;
+    tab_selected_background_color: white;
+    tab_selected_border_color: tab_pane_bottom_border_color;
 
-    more_button_hover_color: #444;
-    more_button_pressed_color: #333333;
-    more_button_icon_color: white;
+    more_button_hover_color: #d5d4d4;
+    more_button_pressed_color: #c2c2c2;
+    more_button_icon_color: #555;
 }
 
 /*******************************************************************************
@@ -555,31 +542,31 @@
 /****************************** Context Menu **********************************/
 
 .context-menu {
-    menu_background_color: #2b2b2b;
-    context_menu_border_color: #777677;
+    menu_background_color: #f2f2f2;
+    context_menu_border_color: #cccccc;
 
-    separator_color: #555555;
+    separator_color: #c3c3c3;
 }
 
 /********************************* Menu Bar ************************************/
 
 .menu-bar {
-    menu_bar_background_color: #111;
+    menu_bar_background_color: white;
 
-    text_color: white;
+    text_color: #111;
 
-    menu_button_hover_color: #404040;
+    menu_button_hover_color: #dadada;
 }
 
 .menu-item {
-    text_color: white;
+    text_color: #111;
 
-    menu_background_color: #2b2b2b;
+    menu_background_color: #f2f2f2;
 
-    graphic_color: #aaaaaa;
+    graphic_color: #0a0a0a;
 
-    hover_color: #404040;
-    pressed_color: #555555;
+    hover_color: #dadada;
+    pressed_color: #c2c2c2;
 }
 
 /*******************************************************************************
@@ -589,16 +576,16 @@
  ******************************************************************************/
 
 .titled-pane {
-    text_color: white;
+    text_color: #111;
 
-    title_background_color: #1f1f1f;
-    title_background_hover_color: #4a4a4a;
+    title_background_color: #e6e6e6;
+    title_background_hover_color: #d6d6d6;
 
-    border_color: #494949;
+    border_color: #7a7a7a;
 
-    arrow_color: white;
+    arrow_color: #111;
 
-    content_background_color: #111;
+    content_background_color: #fff;
 }
 
 /*******************************************************************************
@@ -608,7 +595,7 @@
  ******************************************************************************/
 
 .progress-indicator {
-    text_color: white;
+    text_color: #111;
 }
 
 /*******************************************************************************
@@ -618,7 +605,7 @@
  ******************************************************************************/
 
 .separator{
-    border_color: #777;
+    border_color: #999;
 }
 
 /*******************************************************************************
@@ -628,12 +615,12 @@
  ******************************************************************************/
 
  .split-menu-button {
-    button_background_color: #333333;
-    background_pressed_color: #666666;
+    button_background_color: #cccccc;
+    background_pressed_color: #999999;
 
-    border_hover_color: #858585;
+    border_hover_color: #7a7a7a;
 
-    text_color: white;
+    text_color: #111;
 
     focus_ring_border_color: white;
  }
@@ -645,16 +632,6 @@
  ******************************************************************************/
 
 .split-pane {
-    background_color: #333;
-    border_color: #252525;
+    background_color: #fff;
+    border_color: #ddd;
 }
-
-/*******************************************************************************
- *                                                                             *
- * Dialogs                                                                     *
- *                                                                             *
- ******************************************************************************/
-
- .dialog-pane {
-     -fx-padding: 0.75em 0.5em 0.5em 0.5em;
- }

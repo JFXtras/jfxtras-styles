@@ -46,9 +46,9 @@ import javafx.stage.Stage;
  * It has various properties that tweak the theme.
  */
 public class JMetro {
-    private static final String BASE_STYLESHEET_URL = JMetro.class.getResource("JMetroBase.css").toExternalForm();
-    private static final String BASE_EXTRAS_STYLESHEET_URL = JMetro.class.getResource("JMetroBase_Extras.css").toExternalForm();
-    private static final String PANES_STYLESHEET_URL = JMetro.class.getResource("JMetroPanes.css").toExternalForm();
+    private static final String BASE_STYLESHEET_URL = JMetro.class.getResource("base.css").toExternalForm();
+    private static final String BASE_EXTRAS_STYLESHEET_URL = JMetro.class.getResource("base_extras.css").toExternalForm();
+    private static final String PANES_STYLESHEET_URL = JMetro.class.getResource("panes.css").toExternalForm();
 
     /**
      * The {@link Scene} that JMetro will be applied to. Setting this property to a {@link Scene} instance will make
