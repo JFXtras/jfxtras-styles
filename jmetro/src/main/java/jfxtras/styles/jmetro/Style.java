@@ -34,8 +34,8 @@ public enum Style {
     LIGHT,
     DARK;
 
-    private static final String LIGHT_STYLE_SHEET_URL = Style.class.getResource("JMetroLightTheme.css").toExternalForm();
-    private static final String DARK_STYLE_SHEET_URL = Style.class.getResource("JMetroDarkTheme.css").toExternalForm();
+    private static final String LIGHT_STYLE_SHEET_URL = Style.class.getResource("light_theme.css").toExternalForm();
+    private static final String DARK_STYLE_SHEET_URL = Style.class.getResource("dark_theme.css").toExternalForm();
 
     /**
      * Returns the stylesheet that defines the variable override that make up this {@link Style} instance.
