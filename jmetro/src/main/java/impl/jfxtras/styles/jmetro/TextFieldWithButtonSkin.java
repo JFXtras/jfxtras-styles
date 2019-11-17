@@ -27,6 +27,7 @@
 
 package impl.jfxtras.styles.jmetro;
 
+import javafx.beans.InvalidationListener;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.control.TextField;
