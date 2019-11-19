@@ -149,6 +149,7 @@ public class JMetro {
 
     public static <R> Dialog<R> newDialog(String headerText, String contentText, JMetro jMetro) {
         Dialog<R> dialog = new Dialog<>();
+        dialog.setTitle("");
         dialog.setHeaderText(headerText);
         dialog.setContentText(contentText);
 
@@ -167,6 +168,7 @@ public class JMetro {
 
     public static Alert newAlert(String headerText, String contentText, Alert.AlertType alertType, JMetro jMetro) {
         Alert alert = new Alert(alertType);
+        alert.setTitle("");
         alert.setHeaderText(headerText);
         alert.setContentText(contentText);
 
@@ -183,8 +185,9 @@ public class JMetro {
         return newAlert("", "", alertType, jMetro);
     }
 
-    public static TextInputDialog newTextInputDialog(String headerText, String contentText, JMetro jMetro) {
-        TextInputDialog textInputDialog = new TextInputDialog();
+    public static TextInputDialog newTextInputDialog(String headerText, String contentText, String defaultValue, JMetro jMetro) {
+        TextInputDialog textInputDialog = new TextInputDialog(defaultValue);
+        textInputDialog.setTitle("");
         textInputDialog.setHeaderText(headerText);
         textInputDialog.setContentText(contentText);
 
@@ -197,12 +200,17 @@ public class JMetro {
         return textInputDialog;
     }
 
+    public static TextInputDialog newTextInputDialog(JMetro jMetro, String defaultValue) {
+        return newTextInputDialog("", "", defaultValue, jMetro);
+    }
+
     public static TextInputDialog newTextInputDialog(JMetro jMetro) {
-        return newTextInputDialog("", "", jMetro);
+        return newTextInputDialog("", "", "", jMetro);
     }
 
     public static <T> ChoiceDialog<T> newChoiceDialog(String headerText, String contentText, JMetro jMetro) {
         ChoiceDialog<T> choiceDialog = new ChoiceDialog<>();
+        choiceDialog.setTitle("");
         choiceDialog.setHeaderText(headerText);
         choiceDialog.setContentText(contentText);
 

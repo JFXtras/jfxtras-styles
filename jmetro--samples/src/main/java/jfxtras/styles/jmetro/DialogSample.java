@@ -119,7 +119,6 @@ public class DialogSample extends Application {
         JMetro jMetro = new JMetro(STYLE);
         Alert.AlertType alertType = Alert.AlertType.CONFIRMATION;
         Alert alert = JMetro.newAlert("Save your work?", "Lorem ipsum dolor sit amet, adispisicing elit.", alertType, jMetro);
-        alert.setTitle("");
         alert.showAndWait();
     }
 
@@ -127,7 +126,6 @@ public class DialogSample extends Application {
         JMetro jMetro = new JMetro(STYLE);
         Alert.AlertType alertType = Alert.AlertType.CONFIRMATION;
         Alert alert = JMetro.newAlert("","Save your work before quitting this application?", alertType, jMetro);
-        alert.setTitle("");
         alert.showAndWait();
     }
 
@@ -135,7 +133,6 @@ public class DialogSample extends Application {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText("Save your work?");
         alert.setContentText("Lorem ipsum dolor sit amet, adispisicing elit.");
-        alert.setTitle("");
 
         new JMetro(alert.getDialogPane().getScene(), STYLE);
 
