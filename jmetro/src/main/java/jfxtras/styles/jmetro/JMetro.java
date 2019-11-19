@@ -37,7 +37,9 @@ import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -179,6 +181,42 @@ public class JMetro {
 
     public static Alert newAlert(Alert.AlertType alertType, JMetro jMetro) {
         return newAlert("", "", alertType, jMetro);
+    }
+
+    public static TextInputDialog newTextInputDialog(String headerText, String contentText, JMetro jMetro) {
+        TextInputDialog textInputDialog = new TextInputDialog();
+        textInputDialog.setHeaderText(headerText);
+        textInputDialog.setContentText(contentText);
+
+        Stage stage = (Stage) textInputDialog.getDialogPane().getScene().getWindow();
+        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
+        stage.getIcons().add(whiteIcon);
+
+        jMetro.setScene(textInputDialog.getDialogPane().getScene());
+
+        return textInputDialog;
+    }
+
+    public static TextInputDialog newTextInputDialog(JMetro jMetro) {
+        return newTextInputDialog("", "", jMetro);
+    }
+
+    public static <T> ChoiceDialog<T> newChoiceDialog(String headerText, String contentText, JMetro jMetro) {
+        ChoiceDialog<T> choiceDialog = new ChoiceDialog<>();
+        choiceDialog.setHeaderText(headerText);
+        choiceDialog.setContentText(contentText);
+
+        Stage stage = (Stage) choiceDialog.getDialogPane().getScene().getWindow();
+        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
+        stage.getIcons().add(whiteIcon);
+
+        jMetro.setScene(choiceDialog.getDialogPane().getScene());
+
+        return choiceDialog;
+    }
+
+    public static <T> ChoiceDialog<T> newChoiceDialog(JMetro jMetro) {
+        return newChoiceDialog("", "", jMetro);
     }
 
     /**
