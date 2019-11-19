@@ -112,6 +112,12 @@ public class JMetro {
 
     private ObservableList<String> overridingStylesheets = FXCollections.observableArrayList();
 
+    /***************************************************************************
+     *                                                                         *
+     *                        Constructors                                     *
+     *                                                                         *
+     **************************************************************************/
+
     public JMetro() {
         overridingStylesheets.addListener(this::overridingStylesheetsChanged);
     }
@@ -133,6 +139,12 @@ public class JMetro {
         this.parent.set(parent);
     }
 
+    /***************************************************************************
+     *                                                                         *
+     *                           Public API                                    *
+     *                                                                         *
+     **************************************************************************/
+
     public static <R> Dialog<R> newDialog(String headerText, String contentText, JMetro jMetro) {
         Dialog<R> dialog = new Dialog<>();
         dialog.setHeaderText(headerText);
@@ -145,6 +157,10 @@ public class JMetro {
         jMetro.setScene(dialog.getDialogPane().getScene());
 
         return dialog;
+    }
+
+    public static <R> Dialog<R> newDialog(JMetro jMetro) {
+        return newDialog("", "", jMetro);
     }
 
     public static Alert newAlert(String headerText, String contentText, Alert.AlertType alertType, JMetro jMetro) {
@@ -161,21 +177,8 @@ public class JMetro {
         return alert;
     }
 
-    private void overridingStylesheetsChanged(ListChangeListener.Change<? extends String> changed) {
-        ObservableList<String> stylesheetsListBeingApplied = getAppliedStylesheetsList();
-
-        // Currently this only supports adding and removing of stylesheets of the overriding stylesheets list
-        while(changed.next()) {
-            if (changed.wasRemoved()) {
-                for (String stylesheetURL : changed.getRemoved()) {
-                    stylesheetsListBeingApplied.remove(stylesheetURL);
-                }
-            }
-            if (changed.wasAdded()) {
-                // For now we just add at the bottom of the list
-                stylesheetsListBeingApplied.addAll(changed.getAddedSubList());
-            }
-        }
+    public static Alert newAlert(Alert.AlertType alertType, JMetro jMetro) {
+        return newAlert("", "", alertType, jMetro);
     }
 
     /**
@@ -217,6 +220,30 @@ public class JMetro {
         }
     }
 
+    /***************************************************************************
+     *                                                                         *
+     *                          Private API                                    *
+     *                                                                         *
+     **************************************************************************/
+
+    private void overridingStylesheetsChanged(ListChangeListener.Change<? extends String> changed) {
+        ObservableList<String> stylesheetsListBeingApplied = getAppliedStylesheetsList();
+
+        // Currently this only supports adding and removing of stylesheets of the overriding stylesheets list
+        while(changed.next()) {
+            if (changed.wasRemoved()) {
+                for (String stylesheetURL : changed.getRemoved()) {
+                    stylesheetsListBeingApplied.remove(stylesheetURL);
+                }
+            }
+            if (changed.wasAdded()) {
+                // For now we just add at the bottom of the list
+                stylesheetsListBeingApplied.addAll(changed.getAddedSubList());
+            }
+        }
+    }
+
+
     /**
      * Gets the list of stylesheets that is being applied. If the {@link #scene} property is set it returns the scene's stylesheets list.
      * If the {@link #parent} property is set it returns the parent's stylesheet list.
@@ -232,6 +259,13 @@ public class JMetro {
         }
         return stylesheetsList;
     }
+
+
+    /***************************************************************************
+     *                                                                         *
+     *                            Properties                                   *
+     *                                                                         *
+     **************************************************************************/
 
     // --- overriding stylesheets
 
