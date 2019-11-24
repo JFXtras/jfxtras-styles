@@ -1,0 +1,234 @@
+/*
+ * Copyright (c) 2011-2019 JFXtras
+ *  All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *      * Redistributions of source code must retain the above copyright
+ *        notice, this list of conditions and the following disclaimer.
+ *      * Redistributions in binary form must reproduce the above copyright
+ *        notice, this list of conditions and the following disclaimer in the
+ *        documentation and/or other materials provided with the distribution.
+ *      * Neither the name of the organization nor the
+ *        names of its contributors may be used to endorse or promote products
+ *        derived from this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ *  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ *  DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+ *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/***************************************************************************************/
+/*  This stylesheet is contains other styles for controls of often used third party    */
+/*  libraries                                                                          */
+/***************************************************************************************/
+
+/*******************************************************************************
+ *                                                                             *
+ * List Spinner (Jfxtras)                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.ListSpinner {
+    -fx-skin: "impl.jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
+    -fx-background-color: #f0f0f0;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.266667em 0.233333em 0.25em 0.233333em;
+    -fx-text-fill: #212121;
+}
+
+.ListSpinner:hover {
+    -fx-color: #f0f0f0;
+}
+
+.ListSpinner:focused {
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;
+}
+
+.ListSpinner .valuePane {
+    -fx-padding: 0.0em 0.2em 0.0em 0.2em;
+}
+
+.ListSpinner .left-arrow {
+    -fx-shape: "M4,-4 L0,0 L4,4 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .right-arrow {
+    -fx-shape: "M0,-4 L4,0 L0,4 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .down-arrow {
+    -fx-shape: "M-4,-2 L0,2 L4,-2 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .up-arrow {
+    -fx-shape: "M4,2 L-4,2 L0,-2 Z";
+    -fx-scale-shape: false;
+}
+.ListSpinner .idle {
+    -fx-background-color: -fx-mark-color;
+}
+.ListSpinner .clicked {
+    -fx-background-color: -fx-focus-color;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Rating (ControlsFX)                                                         *
+ *                                                                             *
+ ******************************************************************************/
+
+.rating > .container > .button {
+    -fx-background-color: star_color;
+    -fx-border-color: transparent;
+    -fx-shape: "M147.421,249.541l6.152,4.854l-2.393,7.355l6.521-4.361l6.549,4.361l-2.393-7.355l6.152-4.854h-7.738l-2.571-7.396l-2.543,7.396H147.421z";
+    -fx-background-image: null;
+    -fx-padding: 1.333333em; /* 16 */
+    -fx-background-repeat: no-repeat;
+}
+
+.rating > .container > .button.strong {
+    -fx-background-color: accent_color;
+    -fx-border-color: transparent;
+    -fx-background-image: null;
+
+}
+
+.rating > .container:hover > .button.strong {
+    -fx-background-color: derive(accent_color, 30%);
+}
+
+.rating > .container > .button:hover {
+    -fx-effect: null;
+}
+
+.rating > .container:pressed > .button.strong {
+    -fx-background-color: derive(accent_color, 40%);
+}
+
+.rating > .container > .button:pressed {
+    -fx-background-color: derive(accent_color, 40%);
+}
+
+.rating:disabled{
+    -fx-opacity: .6;
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Toggle Switch (ControlsFX)                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.toggle-switch {
+    -fx-skin: "impl.jfxtras.styles.jmetro.ToggleSwitchSkin";
+}
+
+.toggle-switch {
+    -thumb-move-animation-time: 100;
+    -toggle-display: left;
+}
+
+.toggle-switch .text {
+    -fx-fill: text_color;
+    -fx-font-size: 1em;
+    -fx-font-family: "Segoe UI";
+}
+
+.toggle-switch .thumb {
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-padding: 0.416667em; /* 5 */
+}
+
+.toggle-switch .thumb-area{
+    -fx-background-radius: 0.833333em; /* 10 */
+
+    -fx-border-width: 0.166667em; /* 2 */
+    -fx-border-radius: 0.833333em;
+
+    -fx-pref-width: 44px;
+    -fx-pref-height: 1.666666em; /* 20 */
+    -fx-padding: 0.416667em 0.416667em 0.416667em 0.416667em; /* 5 5 5 5 */
+}
+
+/* unselected */
+.toggle-switch .thumb-area{
+    -fx-background-insets: 0;
+    -fx-background-color: unselected_color;
+
+    -fx-border-color: unselected_border_color;
+}
+
+.toggle-switch .thumb {
+    -fx-background-color: thumb_unselected_color;
+}
+
+/* unselected - hover */
+.toggle-switch:hover .thumb-area {
+    -fx-background-color: unselected_hover_color;
+
+    -fx-border-color: unselected_border_hover_color;
+}
+
+.toggle-switch:hover .thumb {
+    -fx-background-color: thumb_unselected_hover_color;
+}
+
+/* selected */
+.toggle-switch:selected .thumb-area{
+    -fx-background-insets: 0;
+    -fx-background-color: selected_color;
+
+    -fx-border-color: selected_border_color;
+}
+
+.toggle-switch:selected .thumb{
+    -fx-background-color: thumb_selected_color;
+}
+
+/* selected - hover */
+.toggle-switch:selected:hover .thumb-area {
+    -fx-background-color: selected_hover_color;
+    -fx-border-color: selected_hover_color;
+}
+
+/* pressed */
+.toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area{
+    -fx-background-insets: 0;
+
+    -fx-background-color: pressed_color;
+    -fx-border-color: pressed_border_color;
+}
+
+.toggle-switch:pressed .thumb {
+    -fx-background-color: thumb_pressed_color;
+}
+
+/* disabled */
+.toggle-switch:disabled
+{
+    -fx-opacity: 0.4;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Status Bar (ControlsFX)                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.status-bar {
+	-fx-background-color: background_color;
+	-fx-background-insets: 0;
+}
