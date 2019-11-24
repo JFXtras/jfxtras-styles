@@ -2370,7 +2370,11 @@ totally specific (always using direct child) and cover all cases, which would be
 /* vertical the two nodes are placed on top of each other. */
 .split-pane:vertical > .split-pane-divider {
    -fx-background-color: background_color, border_color;
-    -fx-background-insets: 0, 2 0 2 0;
+   -fx-background-insets: 0, 2 0 2 0;
+}
+
+.split-pane {
+    -fx-background-color: background_color, background_color;
 }
 
 /*******************************************************************************
