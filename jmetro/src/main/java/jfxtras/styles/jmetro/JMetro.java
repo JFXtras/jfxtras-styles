@@ -49,6 +49,7 @@ import javafx.stage.Stage;
  */
 public class JMetro {
     private static final String BASE_STYLESHEET_URL = JMetro.class.getResource("base.css").toExternalForm();
+    private static final String BASE_OTHER_LIBRARIES_STYLESHEET_URL = JMetro.class.getResource("base_other_libraries.css").toExternalForm();
     private static final String BASE_EXTRAS_STYLESHEET_URL = JMetro.class.getResource("base_extras.css").toExternalForm();
     private static final String PANES_STYLESHEET_URL = JMetro.class.getResource("panes.css").toExternalForm();
 
@@ -235,13 +236,13 @@ public class JMetro {
         ObservableList<String> stylesheetsList = getAppliedStylesheetsList();
 
         /* Order:
-           1 - Style (Light or Dark) stylesheet
+           1 - Base stylesheets (base, extra stylesheets, other library stylesheets)
            2 - "Panes" Stylesheet
-           3-  Base stylesheet
+           3-  Style (Light or Dark) stylesheet
            4 - Overriding stylesheets */
 
         if (stylesheetsList != null) {
-            // Remove existing JMetro style stylesheets
+            // Remove existing JMetro style stylesheets that are configurable
             stylesheetsList.remove(Style.LIGHT.getStyleStylesheetURL());
             stylesheetsList.remove(Style.DARK.getStyleStylesheetURL());
             stylesheetsList.remove(PANES_STYLESHEET_URL);
@@ -249,12 +250,11 @@ public class JMetro {
             int baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
 
             // Add BASE_STYLESHEET before all other JMetro stylesheets
-            if (baseStylesheetIndex == -1) {
-                stylesheetsList.add(BASE_STYLESHEET_URL);
+            if (baseStylesheetIndex == -1) { // There are no base stylesheets added yet
+                addBaseStylesheets(stylesheetsList);
                 stylesheetsList.add(getStyle().getStyleStylesheetURL()); // This needs to be added after base stylesheet so that specific, overriding styles here are applied
-                stylesheetsList.add(BASE_EXTRAS_STYLESHEET_URL);
                 baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
-            } else {
+            } else { // base stylesheets were already added
                 stylesheetsList.add(++baseStylesheetIndex, getStyle().getStyleStylesheetURL());
             }
 
@@ -264,6 +264,12 @@ public class JMetro {
                 }
             }
         }
+    }
+
+    private void addBaseStylesheets(ObservableList<String> stylesheetsList) {
+        stylesheetsList.add(BASE_STYLESHEET_URL);
+        stylesheetsList.add(BASE_EXTRAS_STYLESHEET_URL);
+        stylesheetsList.add(BASE_OTHER_LIBRARIES_STYLESHEET_URL);
     }
 
     /***************************************************************************
