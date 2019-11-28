@@ -2385,28 +2385,28 @@ totally specific (always using direct child) and cover all cases, which would be
 
 .dialog-pane {
     -fx-background-color: background_color;
-    -fx-padding: 0 0.5em 0.5em 0.5em;
+    -fx-padding: 0 0.5em 0.5em 0.5em; /* 0 6 6 6 */
 }
 
 .dialog-pane:header .header-panel {
     -fx-background-color: background_color;
     -fx-background-insets: 0;
 
-    -fx-padding: 0em 0.833em 0 0.833em; /* 10 10 0 10*/
+    -fx-padding: 0em 0.833em 0 0.833em; /* 0 10 0 10*/
 }
 
 .dialog-pane:header .header-panel .label {
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.583333em;
+    -fx-font-size: 1.666667em; /* 20 */
 }
 
 .dialog-pane > .content.label {
     -fx-font-family: "Segoe UI";
-    -fx-font-size: 1.166667em;
+    -fx-font-size: 1.166667em; /* 14 */
 }
 
 .dialog-pane > .content {
-    -fx-padding: 0.833333em 0.833em 2.5em 0.833em; /* 10 */
+    -fx-padding: 1.083333em 0.833em 2.5em 0.833em; /* 13 10 30 10 */
 }
 
 .alert.confirmation.dialog-pane,
