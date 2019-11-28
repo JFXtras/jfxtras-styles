@@ -3,10 +3,12 @@ package jfxtras.styles.samples.jmetro;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -20,8 +22,10 @@ import java.util.List;
 import java.util.Optional;
 
 public class DialogSample extends Application {
+    private ToggleButton withOwner;
+    private ComboBox<Style> styleComboBox;
 
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.DARK;
 
     public static void main(String[] args) {
         launch(args);
@@ -32,6 +36,36 @@ public class DialogSample extends Application {
 
     @Override
     public void start(Stage stage) {
+        JMetro mainStageJMetro = new JMetro(Style.LIGHT);
+
+        BorderPane borderPane = new BorderPane();
+        borderPane.getStyleClass().add("background");
+        ToolBar topLeftToolbar = new ToolBar();
+
+        withOwner = new ToggleButton("With Owner");
+
+        styleComboBox = new ComboBox<>();
+        styleComboBox.getItems().addAll(Style.LIGHT, Style.DARK);
+        styleComboBox.setValue(Style.LIGHT);
+
+        topLeftToolbar.getItems().addAll(withOwner, styleComboBox);
+
+        ToolBar topRightToolBar = new ToolBar();
+        ComboBox<Style> mainStageStyleComboBox = new ComboBox<>();
+        mainStageStyleComboBox.getItems().addAll(Style.LIGHT, Style.DARK);
+        mainStageStyleComboBox.setValue(mainStageJMetro.getStyle());
+        mainStageStyleComboBox.valueProperty().addListener(observable -> {
+            mainStageJMetro.setStyle(mainStageStyleComboBox.getValue());
+        });
+        topRightToolBar.getItems().add(mainStageStyleComboBox);
+
+        BorderPane topToolBarBorderPane = new BorderPane();
+        topToolBarBorderPane.getStyleClass().add("background");
+        topToolBarBorderPane.setLeft(topLeftToolbar);
+        topToolBarBorderPane.setRight(topRightToolBar);
+
+        borderPane.setTop(topToolBarBorderPane);
+
         VBox vBox = new VBox();
         vBox.getStyleClass().add("background");
         vBox.setSpacing(15);
@@ -40,15 +74,21 @@ public class DialogSample extends Application {
         HBox jmetroDialogs = new HBox();
         jmetroDialogs.setSpacing(4);
         Button jMetroDialog = new Button("JMetro Dialog");
-        jMetroDialog.setOnAction(actionEvent -> showJMetroDialog());
+        jMetroDialog.setOnAction(actionEvent -> showJMetroDialog(stage));
 
         Button jMetroAlert = new Button("JMetro Alert");
-        jMetroAlert.setOnAction(actionEvent -> showJMetroAlert());
+        jMetroAlert.setOnAction(actionEvent -> showJMetroAlert(stage));
 
         Button jMetroAlertWithoutHeader = new Button("JMetro Alert Without Header");
-        jMetroAlertWithoutHeader.setOnAction(actionEvent -> showJMetroAlertWithoutHeader());
+        jMetroAlertWithoutHeader.setOnAction(actionEvent -> showJMetroAlertWithoutHeader(stage));
 
-        jmetroDialogs.getChildren().addAll(jMetroDialog, jMetroAlert, jMetroAlertWithoutHeader);
+        Button jMetroTextInputDialog = new Button("JMetro TextInputDialog");
+        jMetroTextInputDialog.setOnAction(actionEvent -> showJMetroTextInputDialog(stage));
+
+        Button jMetroChoiceDialog = new Button("JMetro ChoiceDialog");
+        jMetroChoiceDialog.setOnAction(actionEvent -> showJMetroChoiceDialog(stage));
+
+        jmetroDialogs.getChildren().addAll(jMetroDialog, jMetroAlert, jMetroAlertWithoutHeader, jMetroTextInputDialog, jMetroChoiceDialog);
         jmetroDialogs.getStyleClass().add("background");
         jmetroDialogs.setAlignment(Pos.CENTER);
 
@@ -56,11 +96,11 @@ public class DialogSample extends Application {
         HBox simpleAlerts = new HBox();
         simpleAlerts.setSpacing(4);
         Button informationDialog = new Button("Information Dialog");
-        informationDialog.setOnAction(actionEvent -> showInformationDialog());
+        informationDialog.setOnAction(actionEvent -> showInformationDialog(stage));
         Button warningDialog = new Button("Warning Dialog");
-        warningDialog.setOnAction(actionEvent -> showWarningDialog());
+        warningDialog.setOnAction(actionEvent -> showWarningDialog(stage));
         Button errorDialog = new Button("Error Dialog");
-        errorDialog.setOnAction(actionEvent -> showErrorDialog());
+        errorDialog.setOnAction(actionEvent -> showErrorDialog(stage));
         simpleAlerts.getChildren().addAll(informationDialog, warningDialog, errorDialog);
         simpleAlerts.getStyleClass().add("background");
         simpleAlerts.setAlignment(Pos.CENTER);
@@ -69,11 +109,11 @@ public class DialogSample extends Application {
         HBox complexAlerts = new HBox();
         complexAlerts.setSpacing(4);
         Button confirmationDialog = new Button("Confirmation Dialog");
-        confirmationDialog.setOnAction(actionEvent -> showConfirmationDialog());
+        confirmationDialog.setOnAction(actionEvent -> showConfirmationDialog(stage));
         Button textInputDialog = new Button("Text Input Dialog");
-        textInputDialog.setOnAction(actionEvent -> showTextInputDialog());
+        textInputDialog.setOnAction(actionEvent -> showTextInputDialog(stage));
         Button choiceDialog = new Button("Choice Dialog");
-        choiceDialog.setOnAction(actionEvent -> showChoiceDialog());
+        choiceDialog.setOnAction(actionEvent -> showChoiceDialog(stage));
         complexAlerts.getChildren().addAll(confirmationDialog, textInputDialog, choiceDialog);
         complexAlerts.getStyleClass().add("background");
         complexAlerts.setAlignment(Pos.CENTER);
@@ -81,22 +121,27 @@ public class DialogSample extends Application {
         HBox dialogsWithoutHeaderText = new HBox();
         dialogsWithoutHeaderText.setSpacing(4);
         Button alertWithoutHeaderText = new Button("Alert Without Header Text");
-        alertWithoutHeaderText.setOnAction(actionEvent -> showAlertWithoutHeaderText());
+        alertWithoutHeaderText.setOnAction(actionEvent -> showAlertWithoutHeaderText(stage));
         dialogsWithoutHeaderText.getChildren().add(alertWithoutHeaderText);
         dialogsWithoutHeaderText.setAlignment(Pos.CENTER);
 
         HBox regularDialogHBox = new HBox();
         regularDialogHBox.setSpacing(4);
         Button regularDialog = new Button("Regular Dialog");
-        regularDialog.setOnAction(actionEvent -> showRegularDialog());
+        regularDialog.setOnAction(actionEvent -> showRegularDialog(stage));
         regularDialogHBox.getChildren().add(regularDialog);
         regularDialogHBox.setAlignment(Pos.CENTER);
 
-        vBox.getChildren().addAll(jmetroDialogs, simpleAlerts, complexAlerts, dialogsWithoutHeaderText, regularDialogHBox);
+        vBox.getChildren().addAll(jmetroDialogs,
+                                  new Separator(Orientation.HORIZONTAL),
+                                  simpleAlerts, complexAlerts, dialogsWithoutHeaderText, regularDialogHBox);
+        VBox.setMargin(jmetroDialogs, new Insets(30, 0, 0, 0));
 
-        Scene scene = new Scene(vBox, 500, 250);
+        borderPane.setCenter(vBox);
 
-        new JMetro(scene, STYLE);
+        Scene scene = new Scene(borderPane, 800, 250);
+
+        mainStageJMetro.setScene(scene);
 
 //        ScenicView.show(scene);
 
@@ -105,74 +150,172 @@ public class DialogSample extends Application {
         stage.show();
     }
 
-    private void showJMetroDialog() {
-        JMetro jMetro = new JMetro(STYLE);
-        Dialog<?> dialog = JMetro.newDialog("Save your work?", "Lorem ipsum dolor sit amet, adispisicing elit.", jMetro);
+    private void showJMetroDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+        FlatDialog<ButtonType> dialog = new FlatDialog<>();
+        dialog.setHeaderText("Save your work?");
+        dialog.setContentText("Lorem ipsum dolor sit amet, adispisicing elit.");
 
-        Button closeButton = new Button();
-        closeButton.setOnAction(event -> dialog.close());
+        if (withOwner.isSelected()) {
+            dialog.initOwner(owner);
+        } else {
+            jMetro.setScene(dialog.getDialogPane().getScene());
+        }
 
         dialog.getDialogPane().getButtonTypes().addAll(ButtonType.CANCEL);
 
-        dialog.showAndWait();
+        Optional<ButtonType> result = dialog.showAndWait();
+
+        result.ifPresent(buttonType -> System.out.println("Result is = " + buttonType));
     }
 
-    private void showJMetroAlert() {
-        JMetro jMetro = new JMetro(STYLE);
-        Alert.AlertType alertType = Alert.AlertType.CONFIRMATION;
-        Alert alert = JMetro.newAlert("Save your work?", "Lorem ipsum dolor sit amet, adispisicing elit.", alertType, jMetro);
+    private void showJMetroAlert(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
+        FlatAlert alert = new FlatAlert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText("Save your work?");
+        alert.setContentText("Lorem ipsum dolor sit amet, adispisicing elit.");
+
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
+
         alert.showAndWait();
     }
 
-    private void showJMetroAlertWithoutHeader() {
-        JMetro jMetro = new JMetro(STYLE);
-        Alert.AlertType alertType = Alert.AlertType.CONFIRMATION;
-        Alert alert = JMetro.newAlert("","Save your work before quitting this application?", alertType, jMetro);
+    private void showJMetroAlertWithoutHeader(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
+        FlatAlert alert = new FlatAlert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText(null);
+        alert.setContentText("Save your work before quitting this application?");
+
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
+
         alert.showAndWait();
     }
 
-    private void showInformationDialog() {
+    private void showJMetroTextInputDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
+        FlatTextInputDialog textInputDialog = new FlatTextInputDialog();
+        textInputDialog.setHeaderText("Look, a Text Input Dialog");
+        textInputDialog.setContentText("Please enter your name:");
+
+        if (withOwner.isSelected()) {
+            textInputDialog.initOwner(owner);
+        } else {
+            jMetro.setScene(textInputDialog.getDialogPane().getScene());
+        }
+
+        // Traditional way to get the response value.
+        Optional<String> result = textInputDialog.showAndWait();
+        if (result.isPresent()){
+            System.out.println("Your name: " + result.get());
+        }
+
+        // The Java 8 way to get the response value (with lambda expression).
+        result.ifPresent(name -> System.out.println("Your name: " + name));
+
+    }
+
+    private void showJMetroChoiceDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
+        List<String> choices = new ArrayList<>();
+        choices.add("a");
+        choices.add("b");
+        choices.add("c");
+
+        FlatChoiceDialog<String> dialog = new FlatChoiceDialog<>("b", choices);
+        dialog.setHeaderText("Look, a Choice Dialog");
+        dialog.setContentText("Look, a Choice Dialog");
+
+        if (withOwner.isSelected()) {
+            dialog.initOwner(owner);
+        } else {
+            jMetro.setScene(dialog.getDialogPane().getScene());
+        }
+
+        // Traditional way to get the response value.
+        Optional<String> result = dialog.showAndWait();
+
+        // The Java 8 way to get the response value (with lambda expression).
+        result.ifPresent(name -> System.out.println("Your choice: " + name));
+    }
+
+    private void showInformationDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText("Save your work?");
         alert.setContentText("Lorem ipsum dolor sit amet, adispisicing elit.");
 
-        new JMetro(alert.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
 
         alert.showAndWait();
     }
 
-    private void showWarningDialog() {
+    private void showWarningDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         Alert alert = new Alert(Alert.AlertType.WARNING);
 
         alert.setHeaderText("Look, a Warning Dialog");
         alert.setContentText("Careful with the next step!");
         alert.setTitle("");
 
-        new JMetro(alert.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
 
         alert.showAndWait();
     }
 
-    private void showErrorDialog() {
+    private void showErrorDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error Dialog");
         alert.setHeaderText("Look, an Error Dialog");
         alert.setContentText("Ooops, there was an error!");
         alert.setTitle("");
 
-        new JMetro(alert.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
 
         alert.showAndWait();
     }
 
-    private void showConfirmationDialog() {
+    private void showConfirmationDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation Dialog");
         alert.setHeaderText("Look, a Confirmation Dialog");
         alert.setContentText("Are you ok with this?");
         alert.setTitle("");
 
-        new JMetro(alert.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
@@ -182,14 +325,20 @@ public class DialogSample extends Application {
         }
     }
 
-    private void showTextInputDialog() {
+    private void showTextInputDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         TextInputDialog dialog = new TextInputDialog("walter");
         dialog.setTitle("Text Input Dialog");
         dialog.setHeaderText("Look, a Text Input Dialog");
         dialog.setContentText("Please enter your name:");
         dialog.setTitle("");
 
-        new JMetro(dialog.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            dialog.initOwner(owner);
+        } else {
+            jMetro.setScene(dialog.getDialogPane().getScene());
+        }
 
         // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
@@ -201,7 +350,9 @@ public class DialogSample extends Application {
         result.ifPresent(name -> System.out.println("Your name: " + name));
     }
 
-    private void showChoiceDialog() {
+    private void showChoiceDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         List<String> choices = new ArrayList<>();
         choices.add("a");
         choices.add("b");
@@ -213,7 +364,11 @@ public class DialogSample extends Application {
         dialog.setContentText("Choose your letter:");
         dialog.setTitle("");
 
-        new JMetro(dialog.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            dialog.initOwner(owner);
+        } else {
+            jMetro.setScene(dialog.getDialogPane().getScene());
+        }
 
         // Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
@@ -225,32 +380,42 @@ public class DialogSample extends Application {
         result.ifPresent(letter -> System.out.println("Your choice: " + letter));
     }
 
-    private void showAlertWithoutHeaderText() {
+    private void showAlertWithoutHeaderText(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         Alert alert = new Alert(Alert.AlertType.WARNING);
 
         alert.setContentText("Careful with the next step!");
         alert.setHeaderText("");
         alert.setTitle("");
 
-        new JMetro(alert.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
 
         alert.showAndWait();
     }
 
-    private void showRegularDialog() {
+    private void showRegularDialog(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
         // Create the custom dialog.
         Dialog<Pair<String, String>> dialog = new Dialog<>();
         dialog.setHeaderText("Login Credentials");
         dialog.setTitle("");
 
-        // Set the icon (must be included in the project).
-//        dialog.setGraphic(new ImageView(this.getClass().getResource("login.png").toString()));
-
         // Set the button types.
         ButtonType loginButtonType = new ButtonType("Login", ButtonBar.ButtonData.OK_DONE);
         dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
 
-        new JMetro(dialog.getDialogPane().getScene(), STYLE);
+        if (withOwner.isSelected()) {
+            dialog.initOwner(owner);
+        } else {
+            jMetro.setScene(dialog.getDialogPane().getScene());
+        }
+
 
         // Create the username and password labels and fields.
         GridPane grid = new GridPane();

@@ -36,12 +36,6 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceDialog;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.TextInputDialog;
-import javafx.scene.image.Image;
-import javafx.stage.Stage;
 
 /**
  * This class is used to apply the JMetro theme to a {@link Parent} or {@link Scene}.
@@ -148,86 +142,6 @@ public class JMetro {
      *                                                                         *
      **************************************************************************/
 
-    public static <R> Dialog<R> newDialog(String headerText, String contentText, JMetro jMetro) {
-        Dialog<R> dialog = new Dialog<>();
-        dialog.setTitle("");
-        dialog.setHeaderText(headerText);
-        dialog.setContentText(contentText);
-
-        Stage stage = (Stage) dialog.getDialogPane().getScene().getWindow();
-        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
-        stage.getIcons().add(whiteIcon);
-
-        jMetro.setScene(dialog.getDialogPane().getScene());
-
-        return dialog;
-    }
-
-    public static <R> Dialog<R> newDialog(JMetro jMetro) {
-        return newDialog("", "", jMetro);
-    }
-
-    public static Alert newAlert(String headerText, String contentText, Alert.AlertType alertType, JMetro jMetro) {
-        Alert alert = new Alert(alertType);
-        alert.setTitle("");
-        alert.setHeaderText(headerText);
-        alert.setContentText(contentText);
-
-        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
-        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
-        stage.getIcons().add(whiteIcon);
-
-        jMetro.setScene(alert.getDialogPane().getScene());
-
-        return alert;
-    }
-
-    public static Alert newAlert(Alert.AlertType alertType, JMetro jMetro) {
-        return newAlert("", "", alertType, jMetro);
-    }
-
-    public static TextInputDialog newTextInputDialog(String headerText, String contentText, String defaultValue, JMetro jMetro) {
-        TextInputDialog textInputDialog = new TextInputDialog(defaultValue);
-        textInputDialog.setTitle("");
-        textInputDialog.setHeaderText(headerText);
-        textInputDialog.setContentText(contentText);
-
-        Stage stage = (Stage) textInputDialog.getDialogPane().getScene().getWindow();
-        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
-        stage.getIcons().add(whiteIcon);
-
-        jMetro.setScene(textInputDialog.getDialogPane().getScene());
-
-        return textInputDialog;
-    }
-
-    public static TextInputDialog newTextInputDialog(JMetro jMetro, String defaultValue) {
-        return newTextInputDialog("", "", defaultValue, jMetro);
-    }
-
-    public static TextInputDialog newTextInputDialog(JMetro jMetro) {
-        return newTextInputDialog("", "", "", jMetro);
-    }
-
-    public static <T> ChoiceDialog<T> newChoiceDialog(String headerText, String contentText, JMetro jMetro) {
-        ChoiceDialog<T> choiceDialog = new ChoiceDialog<>();
-        choiceDialog.setTitle("");
-        choiceDialog.setHeaderText(headerText);
-        choiceDialog.setContentText(contentText);
-
-        Stage stage = (Stage) choiceDialog.getDialogPane().getScene().getWindow();
-        Image whiteIcon = new Image(JMetro.class.getResource("whiteIcon.png").toExternalForm());
-        stage.getIcons().add(whiteIcon);
-
-        jMetro.setScene(choiceDialog.getDialogPane().getScene());
-
-        return choiceDialog;
-    }
-
-    public static <T> ChoiceDialog<T> newChoiceDialog(JMetro jMetro) {
-        return newChoiceDialog("", "", jMetro);
-    }
-
     /**
      * Reapplies the theme in the specified parent or scene if the stylesheets don't exist in the stylesheets list of the
      * parent or scene.
@@ -237,8 +151,8 @@ public class JMetro {
 
         /* Order:
            1 - Base stylesheets (base, extra stylesheets, other library stylesheets)
-           2 - "Panes" Stylesheet
-           3-  Style (Light or Dark) stylesheet
+           2-  Style (Light or Dark) stylesheet
+           3 - "Panes" Stylesheet
            4 - Overriding stylesheets */
 
         if (stylesheetsList != null) {
@@ -266,17 +180,17 @@ public class JMetro {
         }
     }
 
-    private void addBaseStylesheets(ObservableList<String> stylesheetsList) {
-        stylesheetsList.add(BASE_STYLESHEET_URL);
-        stylesheetsList.add(BASE_EXTRAS_STYLESHEET_URL);
-        stylesheetsList.add(BASE_OTHER_LIBRARIES_STYLESHEET_URL);
-    }
-
     /***************************************************************************
      *                                                                         *
      *                          Private API                                    *
      *                                                                         *
      **************************************************************************/
+
+    private void addBaseStylesheets(ObservableList<String> stylesheetsList) {
+        stylesheetsList.add(BASE_STYLESHEET_URL);
+        stylesheetsList.add(BASE_EXTRAS_STYLESHEET_URL);
+        stylesheetsList.add(BASE_OTHER_LIBRARIES_STYLESHEET_URL);
+    }
 
     private void overridingStylesheetsChanged(ListChangeListener.Change<? extends String> changed) {
         ObservableList<String> stylesheetsListBeingApplied = getAppliedStylesheetsList();
