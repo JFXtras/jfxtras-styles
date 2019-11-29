@@ -25,16 +25,6 @@
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-.header{
-    -fx-font-size: 3.5em;
-    -fx-font-family: "Segoe UI Light";
-}
-
-.item-title{
-    -fx-font-size: 1em;
-    -fx-font-family: "Segoe UI";
-}
-
 .root {
     /* Root variables */
     accent_color: #0078d7;
@@ -75,12 +65,35 @@
 
 /*******************************************************************************
  *                                                                             *
- * Label                                                                       *
+ * Text Nodes                                                                  *
  *                                                                             *
  ******************************************************************************/
 
+/*====================== Label ===========================*/
 .label {
     -fx-text-fill: text_color;
+    -fx-font-family: "Segoe UI";
+}
+
+/*====================== Text ===========================*/
+Text {
+    -fx-font-family: "Segoe UI";
+    -fx-fill: text_color;
+}
+
+/*=================== Other styles ======================*/
+.text {
+    -fx-font-family: "Segoe UI";
+}
+
+.label.header, .label.header .text {
+    -fx-font-size: 3.5em;
+    -fx-font-family: "Segoe UI Light";
+}
+
+.label.item-title, .label.item-title .text {
+    -fx-font-size: 1em;
+    -fx-font-family: "Segoe UI";
 }
 
 /*******************************************************************************

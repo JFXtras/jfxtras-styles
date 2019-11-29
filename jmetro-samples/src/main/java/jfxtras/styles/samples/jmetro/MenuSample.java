@@ -20,7 +20,7 @@ import jfxtras.styles.jmetro.Style;
 
 public class MenuSample extends Application {
 
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.DARK;
 
     private final Entry[] effects = new Entry[] {
             new SimpleEntry<>("Sepia Tone", new SepiaTone()),
@@ -35,7 +35,9 @@ public class MenuSample extends Application {
     @Override
     public void start(Stage stage) {
         stage.setTitle("Menu Sample");
-        Scene scene = new Scene(new VBox(), 400, 350);
+        VBox mainContainer = new VBox();
+        mainContainer.getStyleClass().add("background");
+        Scene scene = new Scene(mainContainer, 400, 350);
 
         MenuBar menuBar = new MenuBar();
 
@@ -82,13 +84,6 @@ public class MenuSample extends Application {
         menuView.getItems().addAll(titleView, binNameView, picView,
                 descriptionView);
         menuBar.getMenus().addAll(menuFile, menuEdit, menuView);
-
-
-        if (STYLE.equals(Style.LIGHT)) {
-            scene.getRoot().setStyle("-fx-background-color: #F9F9F9;");
-        } else {
-            scene.getRoot().setStyle("-fx-background-color: #333333;");
-        }
 
         ((VBox) scene.getRoot()).getChildren().addAll(menuBar);
 
