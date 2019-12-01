@@ -319,8 +319,7 @@ Text {
     -fx-opacity: 0.4;
 }
 
-.check-box:disabled > .box
-{
+.check-box:disabled > .box {
     -fx-background-color: #cdcdcd;
     -fx-border-color: #aaa;
 }
