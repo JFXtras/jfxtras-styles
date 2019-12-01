@@ -14,8 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Pair;
-import jfxtras.styles.jmetro.JMetro;
-import jfxtras.styles.jmetro.Style;
+import jfxtras.styles.jmetro.*;
 
 import java.util.ArrayList;
 import java.util.List;
