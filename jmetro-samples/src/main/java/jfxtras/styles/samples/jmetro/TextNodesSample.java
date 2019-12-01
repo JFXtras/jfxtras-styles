@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro;
+package jfxtras.styles.samples.jmetro;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -9,8 +9,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.Style;
 
-public class TextNodesSample  extends Application {
+public class TextNodesSample extends Application {
 
     public static void main(String[] args) {
         launch(args);
