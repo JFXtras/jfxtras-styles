@@ -229,6 +229,7 @@
  ******************************************************************************/
 
 .status-bar {
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
 	-fx-background-color: background_color;
 	-fx-background-insets: 0;
 }

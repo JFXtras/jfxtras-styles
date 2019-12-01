@@ -70,7 +70,7 @@ public class StatusBarSample extends Application {
 
         StatusBar statusBar = new StatusBar();
         statusBar.setProgress(0.4);
-        statusBar.setText("Auto saving project");
+        statusBar.setText("Auto saving project..");
 
 
         BorderPane root = new BorderPane(mainSplitPane);
