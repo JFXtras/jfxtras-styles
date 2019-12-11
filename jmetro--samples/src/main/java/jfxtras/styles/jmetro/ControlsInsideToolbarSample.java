@@ -16,36 +16,36 @@ import java.util.List;
 /**
  * This sample uses icons from icons8 - https://icons8.com.
  */
-public class ToolbarButtonSample extends Application {
+public class ControlsInsideToolbarSample extends Application {
     private static final Style STYLE = Style.LIGHT;
     private static final boolean FOCUS_TRAVERSAL = false;
 
-    private List<ToolbarButtonSample.Employee> employees = Arrays.asList(
-            new ToolbarButtonSample.Employee("Jacob Smith", "Accounts Department"),
-            new ToolbarButtonSample.Employee("Isabella Johnson", "Accounts Department"),
-            new ToolbarButtonSample.Employee("Ethan Williams", "Sales Department"),
-            new ToolbarButtonSample.Employee("Emma Jones", "Sales Department"),
-            new ToolbarButtonSample.Employee("Michael Brown", "Sales Department"),
-            new ToolbarButtonSample.Employee("Anna Black", "Sales Department"),
-            new ToolbarButtonSample.Employee("Rodger York", "Sales Department"),
-            new ToolbarButtonSample.Employee("Susan Collins", "Sales Department"),
-            new ToolbarButtonSample.Employee("Mike Graham", "IT Support"),
-            new ToolbarButtonSample.Employee("Judy Mayer", "IT Support"),
-            new ToolbarButtonSample.Employee("Gregory Smith", "IT Support"));
+    private List<ControlsInsideToolbarSample.Employee> employees = Arrays.asList(
+            new ControlsInsideToolbarSample.Employee("Jacob Smith", "Accounts Department"),
+            new ControlsInsideToolbarSample.Employee("Isabella Johnson", "Accounts Department"),
+            new ControlsInsideToolbarSample.Employee("Ethan Williams", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Emma Jones", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Michael Brown", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Anna Black", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Rodger York", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Susan Collins", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Mike Graham", "IT Support"),
+            new ControlsInsideToolbarSample.Employee("Judy Mayer", "IT Support"),
+            new ControlsInsideToolbarSample.Employee("Gregory Smith", "IT Support"));
     private TreeItem<String> rootNode;
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    public ToolbarButtonSample() {
+    public ControlsInsideToolbarSample() {
         this.rootNode = new TreeItem<>("MyCompany Human Resources");
     }
 
     @Override
     public void start(Stage stage) {
         rootNode.setExpanded(true);
-        for (ToolbarButtonSample.Employee employee : employees) {
+        for (ControlsInsideToolbarSample.Employee employee : employees) {
             TreeItem<String> empLeaf = new TreeItem<>(employee.getName());
             boolean found = false;
             for (TreeItem<String> depNode : rootNode.getChildren()) {
@@ -77,18 +77,29 @@ public class ToolbarButtonSample extends Application {
 
         ToolBar toolBar = new ToolBar();
         Button copy = new Button();
-        copy.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("copy-16.png").toExternalForm()));
+        copy.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("copy-16.png").toExternalForm()));
         copy.setFocusTraversable(FOCUS_TRAVERSAL);
         Button delete = new Button();
-        delete.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("trash-16.png").toExternalForm()));
+        delete.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("trash-16.png").toExternalForm()));
         delete.setFocusTraversable(FOCUS_TRAVERSAL);
         ToggleButton selectAll = new ToggleButton();
-        selectAll.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("tick-box-16.png").toExternalForm()));
+        selectAll.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("tick-box-16.png").toExternalForm()));
         selectAll.setFocusTraversable(FOCUS_TRAVERSAL);
         ToggleButton unselectAll = new ToggleButton();
-        unselectAll.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("unchecked-checkbox-16.png").toExternalForm()));
+        unselectAll.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("unchecked-checkbox-16.png").toExternalForm()));
         unselectAll.setFocusTraversable(FOCUS_TRAVERSAL);
-        toolBar.getItems().addAll(copy, delete, new Separator(), selectAll, unselectAll);
+
+        MenuItem copyMenuItem = new MenuItem("Copy");
+        MenuItem cutMenuItem = new MenuItem("Cut");
+        MenuItem pasteMenuItem = new MenuItem("Paste");
+        MenuItem duplicateMenuItem = new MenuItem("Duplicate");
+        SeparatorMenuItem separatorMenuItem = new SeparatorMenuItem();
+        MenuItem deleteMenuItem = new MenuItem("Delete");
+        MenuButton settingsButton = new MenuButton();
+        settingsButton.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("settings-16.png").toExternalForm()));
+        settingsButton.getItems().addAll(copyMenuItem, cutMenuItem, pasteMenuItem, duplicateMenuItem, separatorMenuItem, deleteMenuItem);
+
+        toolBar.getItems().addAll(copy, delete, new Separator(), selectAll, unselectAll, settingsButton);
 
         new JMetro(scene, STYLE);
 

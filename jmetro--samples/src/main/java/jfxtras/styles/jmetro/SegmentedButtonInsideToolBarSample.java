@@ -76,10 +76,10 @@ public class SegmentedButtonInsideToolBarSample extends Application {
 
         ToolBar toolBar = new ToolBar();
         Button copy = new Button();
-        copy.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("copy-16.png").toExternalForm()));
+        copy.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("copy-16.png").toExternalForm()));
         copy.setFocusTraversable(FOCUS_TRAVERSAL);
         Button delete = new Button();
-        delete.setGraphic(new ImageView(ToolbarButtonSample.class.getResource("trash-16.png").toExternalForm()));
+        delete.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("trash-16.png").toExternalForm()));
         delete.setFocusTraversable(FOCUS_TRAVERSAL);
 
         HBox emptyBox = new HBox();

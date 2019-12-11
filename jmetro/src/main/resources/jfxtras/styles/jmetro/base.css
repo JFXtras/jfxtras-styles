@@ -495,18 +495,28 @@ Text {
     -fx-background-color: background_color;
 }
 
-/*======================= buttons and toggle buttons ==========================*/
+/*==================== buttons, toggle buttons, menu button ==================*/
 
-.tool-bar .button, .tool-bar .toggle-button {
+.tool-bar .button,
+.tool-bar .toggle-button,
+.tool-bar .menu-button {
     -fx-background-color: transparent;
  }
 
-.tool-bar .button:hover,  .tool-bar .toggle-button:hover {
+.tool-bar .button:hover,
+.tool-bar .toggle-button:hover,
+.tool-bar .menu-button:hover {
     -fx-background-color: button_hover_color;
+}
+
+.tool-bar .button:hover,
+.tool-bar .toggle-button:hover {
     -fx-border-color: transparent;
 }
 
-.tool-bar .button:pressed, .tool-bar .toggle-button:pressed {
+.tool-bar .button:pressed,
+.tool-bar .toggle-button:pressed,
+.tool-bar .menu-button:pressed {
     -fx-background-color: button_pressed_color;
 }
 
@@ -530,6 +540,11 @@ Text {
 
 .tool-bar .toggle-button:selected:pressed {
     -fx-background-color: derive(accent_color, -40%);
+}
+
+/*============================= Menu Buttons =================================*/
+.tool-bar .menu-button:showing {
+    -fx-background-color: button_pressed_color;
 }
 
 /*******************************************************************************
