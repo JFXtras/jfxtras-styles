@@ -545,6 +545,10 @@ Text {
 }
 
 /*============================= Menu Buttons =================================*/
+.tool-bar .menu-button {
+    -fx-border-color: transparent;
+}
+
 .tool-bar .menu-button:showing {
     -fx-background-color: button_pressed_color;
 }
