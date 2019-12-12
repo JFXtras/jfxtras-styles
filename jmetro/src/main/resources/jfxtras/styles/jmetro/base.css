@@ -499,13 +499,15 @@ Text {
 
 .tool-bar .button,
 .tool-bar .toggle-button,
-.tool-bar .menu-button {
+.tool-bar .menu-button,
+.tool-bar .split-menu-button, .tool-bar .split-menu-button > .label, .tool-bar .split-menu-button > .arrow-button {
     -fx-background-color: transparent;
- }
+}
 
 .tool-bar .button:hover,
 .tool-bar .toggle-button:hover,
-.tool-bar .menu-button:hover {
+.tool-bar .menu-button:hover,
+.tool-bar .split-menu-button:hover > .label, .tool-bar .split-menu-button:hover > .arrow-button {
     -fx-background-color: button_hover_color;
 }
 
@@ -544,6 +546,23 @@ Text {
 
 /*============================= Menu Buttons =================================*/
 .tool-bar .menu-button:showing {
+    -fx-background-color: button_pressed_color;
+}
+
+/*=========================== Split Menu Button ==============================*/
+.tool-bar .split-menu-button > .label {
+    -fx-padding: 0.333333em 0.333333em 0.333333em 0.5em; /* 4 4 4 6 */
+}
+
+.tool-bar .split-menu-button > .arrow-button {
+    -fx-padding: 0.5em 0.583333em 0.5em 0.333333em; /* 6 7 6 4 */
+}
+
+.tool-bar .split-menu-button:showing > .arrow-button {
+    -fx-background-color: button_pressed_color;
+}
+
+.tool-bar .split-menu-button:showing > .label {
     -fx-background-color: button_pressed_color;
 }
 

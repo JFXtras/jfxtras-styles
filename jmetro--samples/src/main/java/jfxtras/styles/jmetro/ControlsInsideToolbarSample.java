@@ -89,6 +89,7 @@ public class ControlsInsideToolbarSample extends Application {
         unselectAll.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("unchecked-checkbox-16.png").toExternalForm()));
         unselectAll.setFocusTraversable(FOCUS_TRAVERSAL);
 
+        // Menu Button
         MenuItem copyMenuItem = new MenuItem("Copy");
         MenuItem cutMenuItem = new MenuItem("Cut");
         MenuItem pasteMenuItem = new MenuItem("Paste");
@@ -99,7 +100,15 @@ public class ControlsInsideToolbarSample extends Application {
         settingsButton.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("settings-16.png").toExternalForm()));
         settingsButton.getItems().addAll(copyMenuItem, cutMenuItem, pasteMenuItem, duplicateMenuItem, separatorMenuItem, deleteMenuItem);
 
-        toolBar.getItems().addAll(copy, delete, new Separator(), selectAll, unselectAll, settingsButton);
+        // Split Menu Button
+        MenuItem runMenuItem = new MenuItem("Run Single");
+        MenuItem runAllMenuItem = new MenuItem("Run All");
+        MenuItem runAllSelected = new MenuItem("Run All Selected");
+        SplitMenuButton splitMenuButton = new SplitMenuButton();
+        splitMenuButton.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("play-16.png").toExternalForm()));
+        splitMenuButton.getItems().addAll(runMenuItem, runAllMenuItem, runAllSelected);
+
+        toolBar.getItems().addAll(copy, delete, new Separator(), selectAll, unselectAll, settingsButton,splitMenuButton);
 
         new JMetro(scene, STYLE);
 
