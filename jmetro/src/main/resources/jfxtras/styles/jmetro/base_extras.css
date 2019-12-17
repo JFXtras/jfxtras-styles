@@ -156,3 +156,47 @@
 .tool-bar .toggle-button:selected:pressed.right-pill {
     -fx-background-color: derive(accent_color, -40%);
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * TabPane With Underline                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.tab-pane.underlined > .tab-header-area > .headers-region > .tab:selected {
+    -fx-background-color: transparent, transparent, transparent;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.tab-pane.underlined > .tab-header-area > .tab-header-background {
+    -fx-background-color:
+            transparent,
+            transparent,
+            tab_pane_background_color;
+    -fx-background-insets: 1 1 0 1, 0 0 1 0, 1;
+}
+
+.tab-pane.underlined > .tab-header-area > .headers-region > .tab {
+    -fx-padding: 0.083333em 1em 0.0769em 1em; /* 1 12 0.99 12 */
+}
+
+.tab-pane.underlined > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-text-fill: tab_not_selected_text_color;
+
+    -fx-padding: 0 0.083333em 0.25em 0; /* 0 1 3 0 */
+
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.tab-pane.underlined > .tab-header-area > .headers-region > .tab:hover > .tab-container > .tab-label {
+    -fx-text-fill: tab_hover_text_color;
+}
+
+.tab-pane.underlined > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+    -fx-text-fill: text_color;
+    -fx-font-size: 1em; /* 12 */
+
+    -fx-border-color: transparent transparent accent_color transparent;
+}
+

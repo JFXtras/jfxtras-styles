@@ -650,3 +650,15 @@ Text {
 .status-bar {
 	background_color: white;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * TabPane With Underline                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
+.tab-pane.underlined {
+    text_color: #111;
+    tab_not_selected_text_color: #999;
+    tab_hover_text_color: #555;
+}

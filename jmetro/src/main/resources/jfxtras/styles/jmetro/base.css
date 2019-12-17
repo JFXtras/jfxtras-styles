@@ -1925,7 +1925,7 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 .tab-pane > .tab-header-area {
-    -fx-padding: 0 0.166667em 0em 0.416667em; /* 0 2 5 5 */
+    -fx-padding: 0 0.166667em 0em 0.416667em; /* 0 2 0 5 */
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab {
