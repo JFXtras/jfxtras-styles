@@ -33,25 +33,29 @@
 
 /*******************************************************************************
  *                                                                             *
- * Button and ToggleButton                                                     *
+ * Light style for Buttons, ToggleButtons and PillButtons inside Toolbar       *
  *                                                                             *
  ******************************************************************************/
 
- /*========================= Light Button ===================================*/
-.button.light {
+ /*==================== Light Button and ToggleButton ========================*/
+.button.light,
+.toggle-button.light {
     -fx-background-color: transparent;
 }
 
-.button:hover.light {
+.button:hover.light,
+.toggle-button:hover.light {
     -fx-background-color: #d5d4d4;
     -fx-border-color: transparent;
 }
 
-.button:pressed.light {
+.button:pressed.light,
+.toggle-button:pressed.light {
     -fx-background-color: #c2c2c2;
 }
 
-.button:focused.light {
+.button:focused.light,
+.toggle-button:focused.light {
     -fx-border-color: border_hover_color;
     -fx-border-style: solid;
     -fx-border-width: 2;
