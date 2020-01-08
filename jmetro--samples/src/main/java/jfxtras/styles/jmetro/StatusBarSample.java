@@ -16,7 +16,7 @@ import java.util.List;
 
 public class StatusBarSample extends Application {
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.LIGHT;
 
     private TableView<TableViewSample.Person> table = new TableView<>();
     private final ObservableList<TableViewSample.Person> data =

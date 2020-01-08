@@ -8,13 +8,13 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -84,7 +84,11 @@ public class DialogSample extends Application {
         Button jMetroChoiceDialog = new Button("JMetro ChoiceDialog");
         jMetroChoiceDialog.setOnAction(actionEvent -> showJMetroChoiceDialog(stage));
 
-        jmetroDialogs.getChildren().addAll(jMetroDialog, jMetroAlert, jMetroAlertWithoutHeader, jMetroTextInputDialog, jMetroChoiceDialog);
+        Button jMetroAlertWithExpandableContent = new Button("JMetro Alert With Expandable Content");
+        jMetroAlertWithExpandableContent.setOnAction(actionEvent -> showJMetroAlertWithExpandableContent(stage));
+
+        jmetroDialogs.getChildren().addAll(jMetroDialog, jMetroAlert, jMetroAlertWithoutHeader, jMetroTextInputDialog,
+                jMetroChoiceDialog, jMetroAlertWithExpandableContent);
         jmetroDialogs.getStyleClass().add("background");
         jmetroDialogs.setAlignment(Pos.CENTER);
 
@@ -244,6 +248,49 @@ public class DialogSample extends Application {
 
         // The Java 8 way to get the response value (with lambda expression).
         result.ifPresent(name -> System.out.println("Your choice: " + name));
+    }
+
+    private void showJMetroAlertWithExpandableContent(Stage owner) {
+        JMetro jMetro = new JMetro(styleComboBox.getValue());
+
+        FlatAlert alert = new FlatAlert(Alert.AlertType.ERROR);
+        alert.setHeaderText("Look, an Exception Dialog");
+        alert.setContentText("Could not find file blabla.txt!");
+
+        Exception ex = new FileNotFoundException("Could not find file blabla.txt");
+
+// Create expandable Exception.
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        ex.printStackTrace(pw);
+        String exceptionText = sw.toString();
+
+        Label label = new Label("The exception stacktrace was:");
+
+        TextArea textArea = new TextArea(exceptionText);
+        textArea.setEditable(false);
+        textArea.setWrapText(true);
+
+//        textArea.setMaxWidth(Double.MAX_VALUE);
+//        textArea.setMaxHeight(Double.MAX_VALUE);
+//        GridPane.setVgrow(textArea, Priority.ALWAYS);
+//        GridPane.setHgrow(textArea, Priority.ALWAYS);
+
+        GridPane expContent = new GridPane();
+        expContent.setMaxWidth(Double.MAX_VALUE);
+        expContent.add(label, 0, 0);
+        expContent.add(textArea, 0, 1);
+
+// Set expandable Exception into the dialog pane.
+        alert.getDialogPane().setExpandableContent(expContent);
+
+        if (withOwner.isSelected()) {
+            alert.initOwner(owner);
+        } else {
+            jMetro.setScene(alert.getDialogPane().getScene());
+        }
+
+        alert.showAndWait();
     }
 
     private void showInformationDialog(Stage owner) {
