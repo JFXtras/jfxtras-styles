@@ -4,8 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -39,6 +42,9 @@ public class TreeViewSample extends Application {
 
     @Override
     public void start(Stage stage) {
+        Style startingStyle = Style.LIGHT;
+        JMetro jMetro = new JMetro(startingStyle);
+
         rootNode.setExpanded(true);
         for (Employee employee : employees) {
             TreeItem<String> empLeaf = new TreeItem<>(employee.getName());
@@ -61,14 +67,39 @@ public class TreeViewSample extends Application {
 
         stage.setTitle("Tree View Sample");
         VBox box = new VBox();
+        box.getStyleClass().add("background");
+
         final Scene scene = new Scene(box, 400, 300);
         scene.setFill(Color.LIGHTGRAY);
 
+
         TreeView<String> treeView = new TreeView<>(rootNode);
 
-        new JMetro(scene, STYLE);
+        jMetro.setScene(scene);
 
-        box.getChildren().add(treeView);
+        HBox controlsContainer = new HBox();
+
+        ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
+        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.setValue(startingStyle);
+        jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
+
+        CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
+        alternatingRowColors.setOnAction(event -> {
+            String alternatingRowColorsStyleClass = "alternating-row-colors";
+            boolean isSelected = alternatingRowColors.isSelected();
+            if (isSelected) {
+                if (!treeView.getStyleClass().contains(alternatingRowColorsStyleClass)) {
+                    treeView.getStyleClass().add(alternatingRowColorsStyleClass);
+                }
+            } else {
+                treeView.getStyleClass().remove(alternatingRowColorsStyleClass);
+            }
+        });
+
+        controlsContainer.getChildren().addAll(jmetroStyleComboBox, alternatingRowColors);
+
+        box.getChildren().addAll(treeView, controlsContainer);
         stage.setScene(scene);
         stage.show();
     }

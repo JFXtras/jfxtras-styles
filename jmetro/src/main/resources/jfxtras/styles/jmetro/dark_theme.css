@@ -463,6 +463,8 @@ Text {
 .list-view {
     text_color: white;
 
+    alternate_row_color: #3c3c3c;
+
     list_view_background_color: #333;
     border_color: #171717;
 }
@@ -476,6 +478,8 @@ Text {
 .table-view {
     table_background_color: #333;
     table_view_border_color: #171717;
+
+    alternate_row_color: #3c3c3c;
 
     text_color: white;
     hover_text_color: white;
@@ -502,6 +506,8 @@ Text {
 .tree-view {
     tree_view_background_color: #333;
 
+    alternate_row_color: #3c3c3c;
+
     text_color: white;
     text_selected_color: white;
     text_hover_color: text_color;
@@ -520,6 +526,8 @@ Text {
 .tree-table-view {
     table_border_color: #171717;
     table_background_color: #333;
+
+    alternate_row_color: #3c3c3c;
 
     table_text_color: #fff;
     table_text_selected_color: #fff;

@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -31,6 +32,9 @@ public class TableViewSample extends Application {
 
     @Override
     public void start(Stage stage) {
+        Style startingStyle = Style.LIGHT;
+        JMetro jMetro = new JMetro(startingStyle);
+
         System.setProperty("prism.lcdtext", "false");
 
         VBox vbox = new VBox();
@@ -71,20 +75,43 @@ public class TableViewSample extends Application {
 
         CheckBox tableButtonCheckBox = new CheckBox("Table Menu Button");
         tableButtonCheckBox.setOnAction(event -> {
-            table.setTableMenuButtonVisible(true);
+            table.setTableMenuButtonVisible(tableButtonCheckBox.isSelected());
         });
         tableButtonCheckBox.setSelected(table.isTableMenuButtonVisible());
 
+        CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
+        alternatingRowColors.setOnAction(event -> {
+            String alternatingRowColorsStyleClass = "alternating-row-colors";
+            boolean isSelected = alternatingRowColors.isSelected();
+            if (isSelected) {
+                if (!table.getStyleClass().contains(alternatingRowColorsStyleClass)) {
+                    table.getStyleClass().add(alternatingRowColorsStyleClass);
+                }
+            } else {
+                table.getStyleClass().remove(alternatingRowColorsStyleClass);
+            }
+        });
+
         vbox.setSpacing(40);
         vbox.setPadding(new Insets(10, 10, 10, 10));
+        vbox.getStyleClass().add("background");
 
+        BorderPane controlsBorderPane = new BorderPane();
         VBox controlsVBox = new VBox();
-        controlsVBox.getChildren().addAll(cellSelection, tableButtonCheckBox);
+        controlsVBox.getChildren().addAll(cellSelection, tableButtonCheckBox, alternatingRowColors);
         controlsVBox.setSpacing(10);
 
-        vbox.getChildren().addAll(header, table, controlsVBox);
+        ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
+        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.setValue(startingStyle);
+        jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
-        new JMetro(scene, STYLE);
+        controlsBorderPane.setLeft(controlsVBox);
+        controlsBorderPane.setRight(jmetroStyleComboBox);
+
+        vbox.getChildren().addAll(header, table, controlsBorderPane);
+
+        jMetro.setScene(scene);
 
         stage.setScene(scene);
         stage.show();
