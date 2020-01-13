@@ -691,3 +691,16 @@ Text {
      tab_not_selected_text_color: #999;
      tab_hover_text_color: #ddd;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Range Slider (ControlsFX)                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+ .range-slider {
+    track_hover_color: #999999;
+    thumb_hover_color: #f2f2f2;
+
+    thumb_pressed_color: #767676;
+ }

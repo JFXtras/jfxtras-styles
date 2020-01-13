@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 JFXtras
+ * Copyright (c) 2011-2020 JFXtras
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without

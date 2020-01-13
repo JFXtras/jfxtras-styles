@@ -4,7 +4,7 @@ mainClassName = 'jfxtras.styles.jmetro.ControlsSample'
 
 dependencies {
     compile project(':jmetro')
-    compile 'org.controlsfx:controlsfx:8.40.14'
+    compile 'org.controlsfx:controlsfx:8.40.16'
 //    compile name: 'ScenicView'
 }
 

@@ -67,13 +67,14 @@ public class ControlsSample extends Application {
     private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
     private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
+    private static final String RANGE_SLIDER_RESOURCE = "JMetro RangeSlider.fxml";
 
-    static final private String RESOURCE = LIST_VIEW_RESOURCE;
-    static final private Style STYLE = Style.DARK;
+    static final private String RESOURCE = RANGE_SLIDER_RESOURCE;
+    static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Style startingStyle = Style.LIGHT;
+        Style startingStyle = STARTING_STYLE;
         JMetro jMetro = new JMetro(startingStyle);
 
         System.setProperty("prism.lcdtext", "false");
@@ -109,8 +110,12 @@ public class ControlsSample extends Application {
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
         ToolBar controlsToolBar = new ToolBar();
-        controlsToolBar.getItems().addAll(jmetroStyleComboBox, alternatingRowColors);
+        controlsToolBar.getItems().addAll(alternatingRowColors);
 
+        ToolBar topToolbar = new ToolBar();
+        topToolbar.getItems().add(jmetroStyleComboBox);
+
+        rootContainer.setTop(topToolbar);
         rootContainer.setBottom(controlsToolBar);
 
         Scene scene = new Scene(rootContainer);

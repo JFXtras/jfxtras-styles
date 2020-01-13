@@ -233,3 +233,104 @@
 	-fx-background-color: background_color;
 	-fx-background-insets: 0;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Range Slider (ControlsFX)                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.range-slider {
+    -fx-skin: "impl.jfxtras.styles.jmetro.JMetroRangeSliderSkin"
+}
+
+.range-slider .low-thumb,
+.range-slider .high-thumb {
+    -fx-background-color: accent_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0.5em;
+
+    -fx-padding: 1em 0.333333em 1em 0.333333em;  /* 12 4 12 4 */
+
+    -fx-effect: null;
+}
+
+.range-slider:vertical .low-thumb,
+.range-slider:vertical .high-thumb {
+    -fx-background-color: accent_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0.5em;
+
+    -fx-padding: 0.333333em 1em 0.333333em 1em; /* 4 12 4 12 */
+
+    -fx-effect: null;
+}
+
+.range-slider:focused .low-thumb,
+.range-slider:focused .high-thumb {
+    -fx-background-radius: 0.5em;
+}
+
+.range-slider .low-thumb:focused,
+.range-slider .high-thumb:focused {
+    -fx-background-color: accent_color;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0.5em;
+}
+
+.range-slider .range-bar {
+    -fx-background-color: accent_color;
+}
+
+.range-slider .track {
+    -fx-background-color: #c6c6c6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.083333em; /* 1 */
+}
+
+.range-slider:vertical .track {
+    -fx-background-color: #c6c6c6;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.083333em; /* 1 */
+}
+
+/* Hover */
+.range-slider:hover .track,
+.range-slider:vertical:hover .track {
+    -fx-background-color: track_hover_color;
+}
+
+.range-slider:hover .low-thumb,
+.range-slider:hover .high-thumb,
+.range-slider:vertical:hover .low-thumb,
+.range-slider:vertical:hover .high-thumb {
+    -fx-background-color: thumb_hover_color;
+}
+
+/* Pressed */
+.range-slider .low-thumb:pressed,
+.range-slider .high-thumb:pressed,
+.range-slider:vertical .low-thumb:pressed,
+.range-slider:vertical .high-thumb:pressed {
+    -fx-background-color: thumb_pressed_color;
+}
+
+/* Disabled */
+.range-slider:disabled {
+    -fx-opacity: 0.2;
+}
+
+/* Axis */
+.range-slider > .axis {
+    -fx-tick-label-fill: derive(-fx-text-background-color, 30%);
+    -fx-tick-length: 5px;
+    -fx-minor-tick-length: 3px;
+    -fx-border-color: null;
+}
+
+.range-slider > .axis Text,
+.range-slider > .axis .label {
+    -fx-font-size: 0.833333em; /* 10px */
+}
