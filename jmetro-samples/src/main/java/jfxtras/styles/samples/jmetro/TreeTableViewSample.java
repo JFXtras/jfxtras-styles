@@ -46,6 +46,9 @@ public class TreeTableViewSample extends Application {
 
     @Override
     public void start(Stage stage) {
+        Style startingStyle = Style.LIGHT;
+        JMetro jMetro = new JMetro(startingStyle);
+
         System.setProperty("prism.lcdtext", "false");
 
         root.getChildren().add(salesRoot);
@@ -103,8 +106,8 @@ public class TreeTableViewSample extends Application {
         sceneRoot.setCenter(treeTableView);
 
         // Customization controls
-        HBox controlsVBox = new HBox();
-        controlsVBox.setSpacing(10);
+        HBox controlsHBox = new HBox();
+        controlsHBox.setSpacing(10);
 
         CheckBox cellSelectionCheckBox = new CheckBox("Cell Selection");
         cellSelectionCheckBox.setOnAction(event -> {
@@ -118,15 +121,32 @@ public class TreeTableViewSample extends Application {
         });
         tableButtonCheckBox.setSelected(treeTableView.isTableMenuButtonVisible());
 
+        CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
+        alternatingRowColors.setOnAction(event -> {
+            String alternatingRowColorsStyleClass = "alternating-row-colors";
+            boolean isSelected = alternatingRowColors.isSelected();
+            if (isSelected) {
+                if (!treeTableView.getStyleClass().contains(alternatingRowColorsStyleClass)) {
+                    treeTableView.getStyleClass().add(alternatingRowColorsStyleClass);
+                }
+            } else {
+                treeTableView.getStyleClass().remove(alternatingRowColorsStyleClass);
+            }
+        });
 
-        controlsVBox.getChildren().addAll(cellSelectionCheckBox, tableButtonCheckBox);
-        sceneRoot.setBottom(controlsVBox);
+        ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
+        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.setValue(startingStyle);
+        jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
-        controlsVBox.getStyleClass().add("background");
+        controlsHBox.getChildren().addAll(jmetroStyleComboBox, cellSelectionCheckBox, tableButtonCheckBox, alternatingRowColors);
+        sceneRoot.setBottom(controlsHBox);
+
+        controlsHBox.getStyleClass().add("background");
 
         stage.setScene(scene);
 
-        new JMetro(scene, STYLE);
+        jMetro.setScene(scene);
 
         stage.show();
     }

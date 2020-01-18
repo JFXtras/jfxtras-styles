@@ -8,6 +8,11 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web', 'javafx.graphics' ]
 }
 
+/* Controls that have cells */
+//mainClassName = 'jfxtras.styles.samples.jmetro.TableViewSample'
+mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
+//mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
+
 //mainClassName = 'jfxtras.styles.samples.jmetro.TabPaneWithUnderlineStyleSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextNodesSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.StatusBarSample'
@@ -18,7 +23,7 @@ javafx {
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldTextSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
 
-mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+//mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 dependencies {
     compile project(':jmetro')

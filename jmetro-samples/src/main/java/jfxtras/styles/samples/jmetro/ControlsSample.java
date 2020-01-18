@@ -33,7 +33,11 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ToolBar;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
@@ -66,19 +70,54 @@ public class ControlsSample extends Application {
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
     private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
 
-    static final private String RESOURCE = TEXT_FIELD_RESOURCE;
+    static final private String RESOURCE = LIST_VIEW_RESOURCE;
     static final private Style STYLE = Style.DARK;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        Style startingStyle = Style.LIGHT;
+        JMetro jMetro = new JMetro(startingStyle);
+
         System.setProperty("prism.lcdtext", "false");
+
+        BorderPane rootContainer = new BorderPane();
 
         Parent root = FXMLLoader.load(getClass().getResource(RESOURCE));
         primaryStage.setTitle("JMetro");
 
-        new JMetro(root, STYLE);
+        rootContainer.setCenter(root);
 
-        Scene scene = new Scene(root);
+        CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
+        alternatingRowColors.setOnAction(event -> {
+            String alternatingRowColorsStyleClass = "alternating-row-colors";
+            boolean isSelected = alternatingRowColors.isSelected();
+            ListView listView = (ListView) root.lookup(".list-view");
+            if (listView == null) {
+                return;
+            }
+
+            if (isSelected) {
+                if (!listView.getStyleClass().contains(alternatingRowColorsStyleClass)) {
+                    listView.getStyleClass().add(alternatingRowColorsStyleClass);
+                }
+            } else {
+                listView.getStyleClass().remove(alternatingRowColorsStyleClass);
+            }
+        });
+
+        ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
+        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.setValue(startingStyle);
+        jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
+
+        ToolBar controlsToolBar = new ToolBar();
+        controlsToolBar.getItems().addAll(jmetroStyleComboBox, alternatingRowColors);
+
+        rootContainer.setBottom(controlsToolBar);
+
+        Scene scene = new Scene(rootContainer);
+
+        jMetro.setScene(scene);
 
 //        ScenicView.show(root);
 
