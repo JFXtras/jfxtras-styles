@@ -17,5 +17,6 @@ module org.jfxtras.styles.samples.jmetro {
     exports jfxtras.styles.samples.jmetro.themetester to javafx.graphics;
 
     opens jfxtras.styles.samples.jmetro.controlssample to javafx.fxml;
+    opens jfxtras.styles.samples.jmetro to javafx.base;
     opens jfxtras.styles.samples.jmetro.themetester;
 }

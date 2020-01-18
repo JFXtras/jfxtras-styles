@@ -9,8 +9,8 @@ javafx {
 }
 
 /* Controls that have cells */
-//mainClassName = 'jfxtras.styles.samples.jmetro.TableViewSample'
-mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
+mainClassName = 'jfxtras.styles.samples.jmetro.TableViewSample'
+//mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.TabPaneWithUnderlineStyleSample'
