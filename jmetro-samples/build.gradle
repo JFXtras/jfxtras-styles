@@ -8,15 +8,17 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web', 'javafx.graphics' ]
 }
 
+mainClassName = 'jfxtras.styles.samples.jmetro.TabPaneWithUnderlineStyleSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextNodesSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.StatusBarSample'
-mainClassName = 'jfxtras.styles.samples.jmetro.ControlsInsideToolbarSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+//mainClassName = 'jfxtras.styles.samples.jmetro.ControlsInsideToolbarSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldTextSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
+
+//mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 dependencies {
     compile project(':jmetro')
