@@ -6,47 +6,48 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
-import org.controlsfx.control.SegmentedButton;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class SegmentedButtonInsideToolBarSample extends Application {
+/**
+ * This sample uses icons from icons8 - https://icons8.com.
+ */
+public class ControlsInsideToolbarSample extends Application {
     private static final Style STYLE = Style.LIGHT;
     private static final boolean FOCUS_TRAVERSAL = false;
 
-    private List<SegmentedButtonInsideToolBarSample.Employee> employees = Arrays.asList(
-            new SegmentedButtonInsideToolBarSample.Employee("Jacob Smith", "Accounts Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Isabella Johnson", "Accounts Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Ethan Williams", "Sales Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Emma Jones", "Sales Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Michael Brown", "Sales Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Anna Black", "Sales Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Rodger York", "Sales Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Susan Collins", "Sales Department"),
-            new SegmentedButtonInsideToolBarSample.Employee("Mike Graham", "IT Support"),
-            new SegmentedButtonInsideToolBarSample.Employee("Judy Mayer", "IT Support"),
-            new SegmentedButtonInsideToolBarSample.Employee("Gregory Smith", "IT Support"));
+    private List<ControlsInsideToolbarSample.Employee> employees = Arrays.asList(
+            new ControlsInsideToolbarSample.Employee("Jacob Smith", "Accounts Department"),
+            new ControlsInsideToolbarSample.Employee("Isabella Johnson", "Accounts Department"),
+            new ControlsInsideToolbarSample.Employee("Ethan Williams", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Emma Jones", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Michael Brown", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Anna Black", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Rodger York", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Susan Collins", "Sales Department"),
+            new ControlsInsideToolbarSample.Employee("Mike Graham", "IT Support"),
+            new ControlsInsideToolbarSample.Employee("Judy Mayer", "IT Support"),
+            new ControlsInsideToolbarSample.Employee("Gregory Smith", "IT Support"));
     private TreeItem<String> rootNode;
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    public SegmentedButtonInsideToolBarSample() {
+    public ControlsInsideToolbarSample() {
         this.rootNode = new TreeItem<>("MyCompany Human Resources");
     }
 
     @Override
     public void start(Stage stage) {
         rootNode.setExpanded(true);
-        for (SegmentedButtonInsideToolBarSample.Employee employee : employees) {
+        for (ControlsInsideToolbarSample.Employee employee : employees) {
             TreeItem<String> empLeaf = new TreeItem<>(employee.getName());
             boolean found = false;
             for (TreeItem<String> depNode : rootNode.getChildren()) {
@@ -65,7 +66,7 @@ public class SegmentedButtonInsideToolBarSample extends Application {
             }
         }
 
-        stage.setTitle("SegmentedButton Sample");
+        stage.setTitle("Tree View Sample");
 
         VBox vBox = new VBox();
         vBox.setPadding(new Insets(15, 0, 0, 0));
@@ -83,17 +84,24 @@ public class SegmentedButtonInsideToolBarSample extends Application {
         Button delete = new Button();
         delete.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("trash-16.png").toExternalForm()));
         delete.setFocusTraversable(FOCUS_TRAVERSAL);
+        ToggleButton selectAll = new ToggleButton();
+        selectAll.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("tick-box-16.png").toExternalForm()));
+        selectAll.setFocusTraversable(FOCUS_TRAVERSAL);
+        ToggleButton unselectAll = new ToggleButton();
+        unselectAll.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("unchecked-checkbox-16.png").toExternalForm()));
+        unselectAll.setFocusTraversable(FOCUS_TRAVERSAL);
 
-        HBox emptyBox = new HBox();
-        emptyBox.setPadding(new Insets(0, 10, 0, 0));
+        MenuItem copyMenuItem = new MenuItem("Copy");
+        MenuItem cutMenuItem = new MenuItem("Cut");
+        MenuItem pasteMenuItem = new MenuItem("Paste");
+        MenuItem duplicateMenuItem = new MenuItem("Duplicate");
+        SeparatorMenuItem separatorMenuItem = new SeparatorMenuItem();
+        MenuItem deleteMenuItem = new MenuItem("Delete");
+        MenuButton settingsButton = new MenuButton();
+        settingsButton.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("settings-16.png").toExternalForm()));
+        settingsButton.getItems().addAll(copyMenuItem, cutMenuItem, pasteMenuItem, duplicateMenuItem, separatorMenuItem, deleteMenuItem);
 
-        ToggleButton floorButton = new ToggleButton("Floor");
-        ToggleButton ceilingButton = new ToggleButton("Ceiling");
-        SegmentedButton segmentedButton = new SegmentedButton();
-        segmentedButton.getButtons().addAll(floorButton, ceilingButton);
-        floorButton.setSelected(true);
-
-        toolBar.getItems().addAll(segmentedButton, emptyBox, copy, delete);
+        toolBar.getItems().addAll(copy, delete, new Separator(), selectAll, unselectAll, settingsButton);
 
         new JMetro(scene, STYLE);
 

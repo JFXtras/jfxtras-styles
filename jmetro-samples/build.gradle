@@ -8,9 +8,9 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web', 'javafx.graphics' ]
 }
 
-mainClassName = 'jfxtras.styles.samples.jmetro.TextNodesSample'
+//mainClassName = 'jfxtras.styles.samples.jmetro.TextNodesSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.StatusBarSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.ToolbarButtonSample'
+mainClassName = 'jfxtras.styles.samples.jmetro.ControlsInsideToolbarSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 //mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample'
