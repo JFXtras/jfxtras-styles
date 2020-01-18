@@ -1131,6 +1131,9 @@ Text {
     -fx-background-color: spinner_background_color;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
+
+    -fx-border-color: spinner_border_color;
+    -fx-border-width: 1px;
 }
 
 .spinner > .text-field {
@@ -2030,7 +2033,7 @@ totally specific (always using direct child) and cover all cases, which would be
 /********************************* Menu Bar ************************************/
 
 .menu-bar {
-    -fx-background-color: menu_bar_background_color;
+    -fx-background-color: background_color;
     -fx-background-insets: 0 0 0 0;
     -fx-font-family: "Segoe UI";
 }
@@ -2434,12 +2437,12 @@ totally specific (always using direct child) and cover all cases, which would be
  ******************************************************************************/
 
 .dialog-pane {
-    -fx-background-color: background_color;
+    -fx-background-color: dialog_background_color;
     -fx-padding: 0 0.5em 0.5em 0.5em; /* 0 6 6 6 */
 }
 
 .dialog-pane:header .header-panel {
-    -fx-background-color: background_color;
+    -fx-background-color: dialog_background_color;
     -fx-background-insets: 0;
 
     -fx-padding: 0em 0.833em 0 0.833em; /* 0 10 0 10*/
@@ -2468,7 +2471,35 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-graphic: null;
 }
 
+/* Have all Dialog backgrounds (the Panes inside) be dialog_background_color unless the "background" styleclass is set */
 
+.dialog-pane Pane,
+.dialog-pane AnchorPane,
+.dialog-pane BorderPane,
+.dialog-pane DialogPane,
+.dialog-pane FlowPane,
+.dialog-pane GridPane,
+.dialog-pane HBox,
+.dialog-pane StackPane,
+.dialog-pane TextFlow,
+.dialog-pane TilePane,
+.dialog-pane VBox {
+    -fx-background-color: dialog_background_color;
+}
+
+.dialog-pane Pane.background,
+.dialog-pane AnchorPane.background,
+.dialog-pane BorderPane.background,
+.dialog-pane DialogPane.background,
+.dialog-pane FlowPane.background,
+.dialog-pane GridPane.background,
+.dialog-pane HBox.background,
+.dialog-pane StackPane.background,
+.dialog-pane TextFlow.background,
+.dialog-pane TilePane.background,
+.dialog-pane VBox.background {
+    -fx-background-color: background_color;
+}
 
 /*******************************************************************************
  *                                                                             *

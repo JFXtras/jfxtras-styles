@@ -28,15 +28,15 @@
 @import "base.css";
 
 .root {
-    background_color: white;
+    background_color: #f3f3f3;
     scroll_pane_background_color: background_color;
-
-    tab_pane_background_color: white;
+    dialog_background_color: white;
+    tab_pane_background_color: #f3f3f3;
 }
 
 /* To be used in "background" Panes */
 .background{
-    -fx-background-color: white;
+    -fx-background-color: #f3f3f3;
 }
 
 .header{
@@ -180,8 +180,6 @@
  ******************************************************************************/
 
 .tool-bar {
-    background_color: white;
-
     button_hover_color: #d5d4d4;
     button_pressed_color: #c2c2c2;
 }
@@ -354,7 +352,8 @@
  ******************************************************************************/
 
 .spinner {
-    spinner_background_color: #f0f0f0;
+    spinner_background_color: white;
+    spinner_border_color: #ddd;
 
     arrow_button_hover_color: #dadada;
     arrow_button_pressed_color: #606060;
@@ -450,7 +449,7 @@ Text {
 .list-view {
     text_color: #111;
 
-    list_view_background_color: #f2f2f2;
+    list_view_background_color: white;
     border_color: transparent;
 }
 
@@ -524,13 +523,13 @@ Text {
  ******************************************************************************/
 
 .tab-pane {
-    tab_pane_bottom_border_color: #cccccc;
+    tab_pane_bottom_border_color: #ccc;
 
     tab_text_color: #767676;
     tab_text_hover_color: accent_color;
     tab_text_selected_hover_color: derive(accent_color, 30%);
 
-    tab_selected_background_color: white;
+    tab_selected_background_color: #f8f8f8;
     tab_selected_border_color: tab_pane_bottom_border_color;
 
     more_button_hover_color: #d5d4d4;
@@ -556,8 +555,6 @@ Text {
 /********************************* Menu Bar ************************************/
 
 .menu-bar {
-    menu_bar_background_color: white;
-
     text_color: #111;
 
     menu_button_hover_color: #dadada;
@@ -646,10 +643,6 @@ Text {
  * Status Bar (ControlsFX)                                                     *
  *                                                                             *
  ******************************************************************************/
-
-.status-bar {
-	background_color: white;
-}
 
 /*******************************************************************************
  *                                                                             *

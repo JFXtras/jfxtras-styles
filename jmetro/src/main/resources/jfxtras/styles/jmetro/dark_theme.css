@@ -30,6 +30,7 @@
 .root {
     background_color: #252525;
     scroll_pane_background_color: background_color;
+    dialog_background_color: background_color;
 
     tab_pane_background_color: #2e2e2e;
 }
@@ -204,7 +205,6 @@ Text {
  ******************************************************************************/
 
 .tool-bar {
-    background_color: #252526;
     button_hover_color: #444;
     button_pressed_color: #333333;
 }
@@ -380,7 +380,8 @@ Text {
  ******************************************************************************/
 
 .spinner {
-    spinner_background_color: #4a4a4a;
+    spinner_background_color: #111;
+    spinner_border_color: #444;
 
     arrow_button_hover_color: #3c4145;
     arrow_button_pressed_color: #a8abac;
@@ -568,8 +569,6 @@ Text {
 /********************************* Menu Bar ************************************/
 
 .menu-bar {
-    menu_bar_background_color: #111;
-
     text_color: white;
 
     menu_button_hover_color: #404040;
