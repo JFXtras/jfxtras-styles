@@ -1867,13 +1867,22 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 /* Selected */
-.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
-.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected,
-.tree-table-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:odd,
-.tree-table-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:odd {
+
+/* - row selection mode */
+.tree-table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
+.tree-table-view.alternating-row-colors:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:odd {
     -fx-background-color: cell_selected_unfocused_color;
     -fx-table-cell-border-color: cell_selected_unfocused_color;
 }
+
+/* - cell selection mode */
+.tree-table-view:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected,
+.tree-table-view.alternating-row-colors:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:odd {
+    -fx-background-color: cell_selected_unfocused_color;
+    -fx-table-cell-border-color: cell_selected_unfocused_color;
+}
+
+/* -- When focused */
 
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected,
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected,
@@ -1889,15 +1898,24 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 /* Selected - hover */
-.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:hover,
-.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:hover,
-.tree-table-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:hover:odd,
-.tree-table-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:hover:odd {
+
+/* - row selection mode */
+.tree-table-view:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:hover,
+.tree-table-view.alternating-row-colors:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:hover:odd {
+    -fx-background-color: cell_selected_hover_color;
+    -fx-table-cell-border-color: cell_selected_hover_color;
+}
+
+/* - cell selection mode */
+.tree-table-view:focused:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:hover,
+.tree-table-view.alternating-row-colors:focused:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:selected:hover:odd {
     -fx-background-color: cell_selected_hover_color;
     -fx-table-cell-border-color: cell_selected_hover_color;
 }
 
 /* Hover */
+
+/* - empty */
 .tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:empty:hover {
     -fx-background-color: table_background_color;
     -fx-table-cell-border-color: table_background_color;
@@ -1908,16 +1926,27 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-table-cell-border-color: alternate_row_color;
 }
 
-.tree-table-view:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:hover,
-.tree-table-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:hover:odd {
+/* - focused hover */
+
+/* - row selection mode */
+.tree-table-view:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:hover,
+.tree-table-view.alternating-row-colors:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:hover:odd {
     -fx-background-color: cell_hover_color;
     -fx-table-cell-border-color: cell_hover_color;
 }
 
+/* - cell selection mode */
+.tree-table-view:focused:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:hover,
+.tree-table-view.alternating-row-colors:focused:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:hover{
+    -fx-background-color: cell_hover_color;
+    -fx-table-cell-border-color: cell_hover_color;
+}
+
+
+
 .tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > * {
     -fx-text-fill: table_text_color;
 }
-
 
 .tree-table-view .arrow {
     -fx-background-color: table_text_color;
