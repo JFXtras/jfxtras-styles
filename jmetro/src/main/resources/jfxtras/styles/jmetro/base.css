@@ -1618,13 +1618,18 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-fill: hover_text_color;
 }
 
+/* hover row (row selection mode) */
+.table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:hover {
+    -fx-background-color: cell_hover_color;
+}
+
 /* Selected cells and rows */
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected .text,
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell .text {
     -fx-fill: selected_text_color;
 }
 
-/* - when focused */
+/* - when focused (with cell selection mode) */
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
     -fx-background-color: cell_selected_color;
@@ -1641,6 +1646,16 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-fill: selected_text_color;
 }
 
+/* -- when row selection mode */
+
+.table-view:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected {
+    -fx-background-color: cell_selected_color;
+}
+
+.table-view:focused:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover {
+    -fx-background-color: cell_selected_hover_color;
+}
+
 /* - when not focused */
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected,
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell {
@@ -1650,6 +1665,12 @@ totally specific (always using direct child) and cover all cases, which would be
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text,
 .table-view > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell > .text {
     -fx-fill: selected_unfocused_text_color;
+}
+
+/* -- when row selection mode */
+
+.table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected {
+    -fx-background-color: cell_selected_unfocused_color;
 }
 
 .table-row-cell {
