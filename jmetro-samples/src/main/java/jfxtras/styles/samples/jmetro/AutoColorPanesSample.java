@@ -5,12 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.samples.jmetro.panessample.AutoColorPanesSampleController;
 import jfxtras.styles.jmetro.Style;
-import jfxtras.styles.samples.jmetro.panessample.PanesSampleController;
+import jfxtras.styles.jmetro.JMetro;
 
-public class PanesSample extends Application {
-    private static final String PANES_RESOURCE = "JMetro Panes.fxml";
+public class AutoColorPanesSample extends Application {
+    private static final String PANES_RESOURCE = "JMetro AutoColorPanes.fxml";
 
     static final private Style STYLE = Style.LIGHT;
 
@@ -20,7 +20,7 @@ public class PanesSample extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent root = fxmlLoader.load(getClass().getResource(PANES_RESOURCE).openStream());
-        PanesSampleController controller = fxmlLoader.getController();
+        AutoColorPanesSampleController controller = fxmlLoader.getController();
         primaryStage.setTitle("JMetro");
 
         JMetro jMetro = new JMetro(root, STYLE);
