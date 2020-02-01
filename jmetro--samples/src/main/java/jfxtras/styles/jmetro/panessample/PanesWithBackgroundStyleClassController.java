@@ -2,7 +2,6 @@ package jfxtras.styles.jmetro.panessample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
@@ -10,11 +9,9 @@ import jfxtras.styles.jmetro.Style;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PanesSampleController implements Initializable {
+public class PanesWithBackgroundStyleClassController implements Initializable {
     @FXML
     private ComboBox<String> styleComboBox;
-    @FXML
-    private CheckBox autoColorPanes;
 
     private JMetro jMetro;
 
@@ -28,8 +25,6 @@ public class PanesSampleController implements Initializable {
     public void init(JMetro jmetro) {
         this.jMetro = jmetro;
 
-        autoColorPanes.selectedProperty().bindBidirectional(jmetro.automaticallyColorPanesProperty());
-
         styleComboBox.setValue(jmetro.getStyle().equals(Style.LIGHT) ? "Light" : "Dark");
         styleComboBox.valueProperty().addListener(observable -> {
             if (styleComboBox.getValue().equals("Light")) {
@@ -40,4 +35,3 @@ public class PanesSampleController implements Initializable {
         });
     }
 }
-

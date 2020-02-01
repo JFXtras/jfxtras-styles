@@ -5,10 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro.panessample.PanesSampleController;
+import jfxtras.styles.jmetro.panessample.PanesWithBackgroundStyleClassController;
 
-public class PanesSample extends Application {
-    private static final String PANES_RESOURCE = "JMetro Panes.fxml";
+public class PanesWithBackgroundStyleClassSample extends Application {
+    private static final String PANES_RESOURCE = "JMetro PanesWithBackgroundStyleClass.fxml";
 
     static final private Style STYLE = Style.LIGHT;
 
@@ -18,7 +18,7 @@ public class PanesSample extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent root = fxmlLoader.load(getClass().getResource(PANES_RESOURCE).openStream());
-        PanesSampleController controller = fxmlLoader.getController();
+        PanesWithBackgroundStyleClassController controller = fxmlLoader.getController();
         primaryStage.setTitle("JMetro");
 
         JMetro jMetro = new JMetro(root, STYLE);
@@ -36,3 +36,4 @@ public class PanesSample extends Application {
     }
 
 }
+
