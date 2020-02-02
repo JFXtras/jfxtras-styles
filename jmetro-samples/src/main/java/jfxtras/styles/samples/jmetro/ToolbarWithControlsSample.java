@@ -15,6 +15,8 @@ import jfxtras.styles.jmetro.Style;
 import java.util.Arrays;
 import java.util.List;
 
+import static jfxtras.styles.jmetro.JMetroStyleClass.*;
+
 /**
  * This sample uses icons from icons8 - https://icons8.com.
  */
@@ -70,7 +72,8 @@ public class ToolbarWithControlsSample extends Application {
 
         VBox vBox = new VBox();
         vBox.setPadding(new Insets(15, 0, 0, 0));
-        vBox.getStyleClass().add("background");
+
+        addIfNotPresent(vBox.getStyleClass(), BACKGROUND);
 
         final Scene scene = new Scene(vBox, 400, 300);
         scene.setFill(Color.LIGHTGRAY);

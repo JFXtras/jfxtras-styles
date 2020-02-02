@@ -40,6 +40,7 @@ import javafx.scene.control.ToolBar;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.JMetroStyleClass;
 import jfxtras.styles.jmetro.Style;
 
 public class ControlsSample extends Application {
@@ -71,11 +72,11 @@ public class ControlsSample extends Application {
     private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
 
     static final private String RESOURCE = LIST_VIEW_RESOURCE;
-    static final private Style STYLE = Style.DARK;
+    static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Style startingStyle = Style.LIGHT;
+        Style startingStyle = STARTING_STYLE;
         JMetro jMetro = new JMetro(startingStyle);
 
         System.setProperty("prism.lcdtext", "false");
@@ -89,7 +90,6 @@ public class ControlsSample extends Application {
 
         CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
         alternatingRowColors.setOnAction(event -> {
-            String alternatingRowColorsStyleClass = "alternating-row-colors";
             boolean isSelected = alternatingRowColors.isSelected();
             ListView listView = (ListView) root.lookup(".list-view");
             if (listView == null) {
@@ -97,11 +97,9 @@ public class ControlsSample extends Application {
             }
 
             if (isSelected) {
-                if (!listView.getStyleClass().contains(alternatingRowColorsStyleClass)) {
-                    listView.getStyleClass().add(alternatingRowColorsStyleClass);
-                }
+                JMetroStyleClass.addIfNotPresent(listView.getStyleClass(), JMetroStyleClass.ALTERNATING_ROW_COLORS);
             } else {
-                listView.getStyleClass().remove(alternatingRowColorsStyleClass);
+                listView.getStyleClass().remove(JMetroStyleClass.ALTERNATING_ROW_COLORS);
             }
         });
 
@@ -111,8 +109,12 @@ public class ControlsSample extends Application {
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
         ToolBar controlsToolBar = new ToolBar();
-        controlsToolBar.getItems().addAll(jmetroStyleComboBox, alternatingRowColors);
+        controlsToolBar.getItems().addAll(alternatingRowColors);
 
+        ToolBar topToolbar = new ToolBar();
+        topToolbar.getItems().add(jmetroStyleComboBox);
+
+        rootContainer.setTop(topToolbar);
         rootContainer.setBottom(controlsToolBar);
 
         Scene scene = new Scene(rootContainer);

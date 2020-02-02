@@ -7,6 +7,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.JMetroStyleClass;
 import jfxtras.styles.jmetro.Style;
 
 public class TabPaneSample extends Application {
@@ -46,11 +47,12 @@ public class TabPaneSample extends Application {
 
         tabPane.getTabs().addAll(fileTab, homeTab, insertTab, tableTab, optionsTab);
 
-        BorderPane root = new BorderPane(tabPane);
+        BorderPane borderPane = new BorderPane();
+        borderPane.setTop(tabPane);
 
-        root.getStyleClass().add("background");
+        borderPane.getStyleClass().add(JMetroStyleClass.BACKGROUND);
 
-        Scene scene = new Scene(root, 500, 200);
+        Scene scene = new Scene(borderPane, 500, 200);
 
         new JMetro(scene, STYLE);
 
