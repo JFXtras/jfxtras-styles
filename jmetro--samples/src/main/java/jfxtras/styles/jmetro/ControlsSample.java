@@ -69,7 +69,7 @@ public class ControlsSample extends Application {
     private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
     private static final String RANGE_SLIDER_RESOURCE = "JMetro RangeSlider.fxml";
 
-    static final private String RESOURCE = RANGE_SLIDER_RESOURCE;
+    static final private String RESOURCE = TEXT_FIELD_RESOURCE;
     static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override

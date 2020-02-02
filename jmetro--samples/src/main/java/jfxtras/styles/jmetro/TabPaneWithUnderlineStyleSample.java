@@ -7,9 +7,11 @@ import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import static jfxtras.styles.jmetro.JMetroStyleClass.*;
+
 public class TabPaneWithUnderlineStyleSample extends Application {
 
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.DARK;
 
     public static void main(String[] args) {
         launch(args);
@@ -21,7 +23,8 @@ public class TabPaneWithUnderlineStyleSample extends Application {
     @Override
     public void start(Stage stage) {
         TabPane tabPane = new TabPane();
-        tabPane.getStyleClass().add("underlined");
+
+        addIfNotPresent(tabPane.getStyleClass(), UNDERLINE_TAB_PANE);
 
         Tab fileTab = new Tab();
         fileTab.setClosable(false);
@@ -47,7 +50,7 @@ public class TabPaneWithUnderlineStyleSample extends Application {
 
         BorderPane root = new BorderPane(tabPane);
 
-        root.getStyleClass().add("background");
+        addIfNotPresent(root.getStyleClass(), BACKGROUND);
 
         Scene scene = new Scene(root, 500, 200);
 
@@ -56,7 +59,7 @@ public class TabPaneWithUnderlineStyleSample extends Application {
 //        ScenicView.show(scene);
 
 
-        stage.setTitle("TabPane Sample");
+        stage.setTitle("TabPane With Underline Sample");
         stage.setScene(scene);
         stage.show();
     }

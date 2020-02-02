@@ -13,39 +13,41 @@ import javafx.stage.Stage;
 import java.util.Arrays;
 import java.util.List;
 
+import static jfxtras.styles.jmetro.JMetroStyleClass.*;
+
 /**
  * This sample uses icons from icons8 - https://icons8.com.
  */
-public class ControlsInsideToolbarSample extends Application {
-    private static final Style STYLE = Style.LIGHT;
+public class ToolbarWithControlsSample extends Application {
+    private static final Style STYLE = Style.DARK;
     private static final boolean FOCUS_TRAVERSAL = false;
 
-    private List<ControlsInsideToolbarSample.Employee> employees = Arrays.asList(
-            new ControlsInsideToolbarSample.Employee("Jacob Smith", "Accounts Department"),
-            new ControlsInsideToolbarSample.Employee("Isabella Johnson", "Accounts Department"),
-            new ControlsInsideToolbarSample.Employee("Ethan Williams", "Sales Department"),
-            new ControlsInsideToolbarSample.Employee("Emma Jones", "Sales Department"),
-            new ControlsInsideToolbarSample.Employee("Michael Brown", "Sales Department"),
-            new ControlsInsideToolbarSample.Employee("Anna Black", "Sales Department"),
-            new ControlsInsideToolbarSample.Employee("Rodger York", "Sales Department"),
-            new ControlsInsideToolbarSample.Employee("Susan Collins", "Sales Department"),
-            new ControlsInsideToolbarSample.Employee("Mike Graham", "IT Support"),
-            new ControlsInsideToolbarSample.Employee("Judy Mayer", "IT Support"),
-            new ControlsInsideToolbarSample.Employee("Gregory Smith", "IT Support"));
+    private List<ToolbarWithControlsSample.Employee> employees = Arrays.asList(
+            new ToolbarWithControlsSample.Employee("Jacob Smith", "Accounts Department"),
+            new ToolbarWithControlsSample.Employee("Isabella Johnson", "Accounts Department"),
+            new ToolbarWithControlsSample.Employee("Ethan Williams", "Sales Department"),
+            new ToolbarWithControlsSample.Employee("Emma Jones", "Sales Department"),
+            new ToolbarWithControlsSample.Employee("Michael Brown", "Sales Department"),
+            new ToolbarWithControlsSample.Employee("Anna Black", "Sales Department"),
+            new ToolbarWithControlsSample.Employee("Rodger York", "Sales Department"),
+            new ToolbarWithControlsSample.Employee("Susan Collins", "Sales Department"),
+            new ToolbarWithControlsSample.Employee("Mike Graham", "IT Support"),
+            new ToolbarWithControlsSample.Employee("Judy Mayer", "IT Support"),
+            new ToolbarWithControlsSample.Employee("Gregory Smith", "IT Support"));
     private TreeItem<String> rootNode;
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    public ControlsInsideToolbarSample() {
+    public ToolbarWithControlsSample() {
         this.rootNode = new TreeItem<>("MyCompany Human Resources");
     }
 
     @Override
     public void start(Stage stage) {
         rootNode.setExpanded(true);
-        for (ControlsInsideToolbarSample.Employee employee : employees) {
+        for (ToolbarWithControlsSample.Employee employee : employees) {
             TreeItem<String> empLeaf = new TreeItem<>(employee.getName());
             boolean found = false;
             for (TreeItem<String> depNode : rootNode.getChildren()) {
@@ -68,7 +70,8 @@ public class ControlsInsideToolbarSample extends Application {
 
         VBox vBox = new VBox();
         vBox.setPadding(new Insets(15, 0, 0, 0));
-        vBox.getStyleClass().add("background");
+
+        addIfNotPresent(vBox.getStyleClass(), BACKGROUND);
 
         final Scene scene = new Scene(vBox, 400, 300);
         scene.setFill(Color.LIGHTGRAY);
@@ -77,16 +80,16 @@ public class ControlsInsideToolbarSample extends Application {
 
         ToolBar toolBar = new ToolBar();
         Button copy = new Button();
-        copy.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("copy-16.png").toExternalForm()));
+        copy.setGraphic(new ImageView(ToolbarWithControlsSample.class.getResource("copy-16.png").toExternalForm()));
         copy.setFocusTraversable(FOCUS_TRAVERSAL);
         Button delete = new Button();
-        delete.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("trash-16.png").toExternalForm()));
+        delete.setGraphic(new ImageView(ToolbarWithControlsSample.class.getResource("trash-16.png").toExternalForm()));
         delete.setFocusTraversable(FOCUS_TRAVERSAL);
         ToggleButton selectAll = new ToggleButton();
-        selectAll.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("tick-box-16.png").toExternalForm()));
+        selectAll.setGraphic(new ImageView(ToolbarWithControlsSample.class.getResource("tick-box-16.png").toExternalForm()));
         selectAll.setFocusTraversable(FOCUS_TRAVERSAL);
         ToggleButton unselectAll = new ToggleButton();
-        unselectAll.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("unchecked-checkbox-16.png").toExternalForm()));
+        unselectAll.setGraphic(new ImageView(ToolbarWithControlsSample.class.getResource("unchecked-checkbox-16.png").toExternalForm()));
         unselectAll.setFocusTraversable(FOCUS_TRAVERSAL);
 
         // Menu Button
@@ -97,7 +100,7 @@ public class ControlsInsideToolbarSample extends Application {
         SeparatorMenuItem separatorMenuItem = new SeparatorMenuItem();
         MenuItem deleteMenuItem = new MenuItem("Delete");
         MenuButton settingsButton = new MenuButton();
-        settingsButton.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("settings-16.png").toExternalForm()));
+        settingsButton.setGraphic(new ImageView(ToolbarWithControlsSample.class.getResource("settings-16.png").toExternalForm()));
         settingsButton.getItems().addAll(copyMenuItem, cutMenuItem, pasteMenuItem, duplicateMenuItem, separatorMenuItem, deleteMenuItem);
 
         // Split Menu Button
@@ -105,7 +108,7 @@ public class ControlsInsideToolbarSample extends Application {
         MenuItem runAllMenuItem = new MenuItem("Run All");
         MenuItem runAllSelected = new MenuItem("Run All Selected");
         SplitMenuButton splitMenuButton = new SplitMenuButton();
-        splitMenuButton.setGraphic(new ImageView(ControlsInsideToolbarSample.class.getResource("play-16.png").toExternalForm()));
+        splitMenuButton.setGraphic(new ImageView(ToolbarWithControlsSample.class.getResource("play-16.png").toExternalForm()));
         splitMenuButton.getItems().addAll(runMenuItem, runAllMenuItem, runAllSelected);
 
         toolBar.getItems().addAll(copy, delete, new Separator(), selectAll, unselectAll, settingsButton,splitMenuButton);

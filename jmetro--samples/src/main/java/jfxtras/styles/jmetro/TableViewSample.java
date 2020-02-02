@@ -12,6 +12,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import static jfxtras.styles.jmetro.JMetroStyleClass.*;
+
 public class TableViewSample extends Application {
 
     private static final Style STYLE = Style.LIGHT;
@@ -81,20 +83,18 @@ public class TableViewSample extends Application {
 
         CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
         alternatingRowColors.setOnAction(event -> {
-            String alternatingRowColorsStyleClass = "alternating-row-colors";
             boolean isSelected = alternatingRowColors.isSelected();
             if (isSelected) {
-                if (!table.getStyleClass().contains(alternatingRowColorsStyleClass)) {
-                    table.getStyleClass().add(alternatingRowColorsStyleClass);
-                }
+                addIfNotPresent(table.getStyleClass(), ALTERNATING_ROW_COLORS);
             } else {
-                table.getStyleClass().remove(alternatingRowColorsStyleClass);
+                table.getStyleClass().remove(ALTERNATING_ROW_COLORS);
             }
         });
 
         vbox.setSpacing(40);
         vbox.setPadding(new Insets(10, 10, 10, 10));
-        vbox.getStyleClass().add("background");
+
+        addIfNotPresent(vbox.getStyleClass(), BACKGROUND);
 
         BorderPane controlsBorderPane = new BorderPane();
         VBox controlsVBox = new VBox();
