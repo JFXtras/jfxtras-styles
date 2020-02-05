@@ -23,8 +23,8 @@ public class JMetroStyleClass {
     public static final String UNDERLINE_TAB_PANE = "underlined";
 
     /**
-     * StyleClass that defines an alternate style for Buttons and ToggleButtons. With this style these controls look less prominent
-     * and more integrated with their container (for instance, they don't show a border around them).
+     * StyleClass that defines an alternate style for Buttons, ToggleButtons, MenuButtons and SplitMenuButtons. With this style
+     * these controls look less prominent and more integrated with their container (for instance, they don't show a border around them).
      */
     public static final String LIGHT_BUTTONS = "light";
 
