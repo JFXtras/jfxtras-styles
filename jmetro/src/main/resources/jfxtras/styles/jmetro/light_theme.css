@@ -179,7 +179,8 @@
  *                                                                             *
  ******************************************************************************/
 
-.tool-bar {
+/* Toolbar and light buttons, togglebuttons, menubuttons, splitmenubuttons style */
+.tool-bar, .light {
     button_hover_color: #d5d4d4;
     button_pressed_color: #c2c2c2;
 }

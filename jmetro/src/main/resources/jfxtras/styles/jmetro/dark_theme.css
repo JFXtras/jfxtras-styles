@@ -204,7 +204,8 @@ Text {
  *                                                                             *
  ******************************************************************************/
 
-.tool-bar {
+/* Toolbar and light buttons, togglebuttons, menubuttons, splitmenubuttons style */
+.tool-bar, .light {
     button_hover_color: #444;
     button_pressed_color: #333333;
 }
