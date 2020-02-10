@@ -11,7 +11,7 @@ import static jfxtras.styles.jmetro.JMetroStyleClass.*;
 
 public class TabPaneWithUnderlineStyleSample extends Application {
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.LIGHT;
 
     public static void main(String[] args) {
         launch(args);
@@ -46,7 +46,13 @@ public class TabPaneWithUnderlineStyleSample extends Application {
         optionsTab.setClosable(false);
         optionsTab.setText("Options");
 
-        tabPane.getTabs().addAll(fileTab, homeTab, insertTab, tableTab, optionsTab);
+        // disabled tab
+        Tab results = new Tab();
+        results.setClosable(false);
+        results.setDisable(true);
+        results.setText("Results");
+
+        tabPane.getTabs().addAll(fileTab, homeTab, insertTab, tableTab, optionsTab, results);
 
         BorderPane root = new BorderPane(tabPane);
 

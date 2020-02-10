@@ -2033,12 +2033,12 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-font-family: "Segoe UI";
 }
 
-.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
-    -fx-text-fill: accent_color;
-}
-
 .tab-pane > .tab-header-area > .headers-region > .tab:hover > .tab-container > .tab-label {
     -fx-text-fill: tab_text_hover_color;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+    -fx-text-fill: accent_color;
 }
 
 .tab-pane > .tab-header-area > .headers-region > .tab:selected:hover > .tab-container > .tab-label {
@@ -2059,6 +2059,7 @@ totally specific (always using direct child) and cover all cases, which would be
 }
 
 /* TabPane button to see more tabs (when space is constricted) */
+
 .tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button {
     -fx-background-color: transparent;
     -fx-background-insets: 0 0 4 0;
