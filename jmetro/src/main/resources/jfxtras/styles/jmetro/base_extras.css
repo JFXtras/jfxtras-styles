@@ -219,6 +219,8 @@
     -fx-background-insets: 1 1 0 1, 0 0 1 0, 1;
 }
 
+/*=========================== Tab ========================================*/
+
 .tab-pane.underlined > .tab-header-area > .headers-region > .tab {
     -fx-padding: 0.083333em 1em 0.0769em 1em; /* 1 12 0.99 12 */
 }
@@ -241,5 +243,11 @@
     -fx-font-size: 1em; /* 12 */
 
     -fx-border-color: transparent transparent accent_color transparent;
+}
+
+.tab-pane.underlined > .tab-header-area > .headers-region > .tab:disabled > .tab-container > .tab-label,
+.tab-pane.underlined > .tab-header-area > .headers-region > .tab:disabled:hover > .tab-container > .tab-label {
+    -fx-text-fill: text_color;
+    -fx-opacity: 0.4;
 }
 
