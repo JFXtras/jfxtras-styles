@@ -69,7 +69,7 @@ public class ControlsSample extends Application {
     private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
     private static final String RANGE_SLIDER_RESOURCE = "JMetro RangeSlider.fxml";
 
-    static final private String RESOURCE = TEXT_FIELD_RESOURCE;
+    static final private String RESOURCE = COMBOBOX_RESOURCE;
     static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override
@@ -90,7 +90,7 @@ public class ControlsSample extends Application {
         alternatingRowColors.setOnAction(event -> {
             String alternatingRowColorsStyleClass = "alternating-row-colors";
             boolean isSelected = alternatingRowColors.isSelected();
-            ListView listView = (ListView) root.lookup(".list-view");
+            ListView<?> listView = (ListView<?>) root.lookup(".list-view");
             if (listView == null) {
                 return;
             }
@@ -129,7 +129,7 @@ public class ControlsSample extends Application {
 
         Platform.runLater(() -> {
             if (RESOURCE.equals(LIST_VIEW_RESOURCE)) {
-                ListView listView = (ListView) scene.lookup(".list-view");
+                ListView<?> listView = (ListView<?>) scene.lookup(".list-view");
                 listView.getSelectionModel().select(2);
             }
         });

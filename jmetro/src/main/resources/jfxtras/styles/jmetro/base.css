@@ -735,7 +735,11 @@ Text {
     -fx-background-color: transparent, border_hover_color, transparent, combo_box_background_color;
 }
 
-.combo-box-base:pressed, .combo-box-base:focused:pressed {
+.combo-box-base:pressed,
+.combo-box-base:focused:pressed,
+.combo-box-base:showing,
+.combo-box-base:showing:hover,
+.combo-box-base:editable:showing {
     -fx-background-color: transparent, border_pressed_color, transparent, background_pressed_color;
 }
 
