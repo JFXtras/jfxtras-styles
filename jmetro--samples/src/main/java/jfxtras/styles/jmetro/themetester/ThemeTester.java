@@ -149,7 +149,7 @@ public class ThemeTester extends Application {
         outerRoot.setTop(buildMenuBar());
         outerRoot.setCenter(root);
         // show UI
-        double sceneWidth = 1500;
+        double sceneWidth = 1600;
         double sceneHeight = 768;
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         if (screenSize.getWidth() < sceneWidth) {
