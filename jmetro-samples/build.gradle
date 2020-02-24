@@ -21,8 +21,9 @@ javafx {
 //mainClassName = 'jfxtras.styles.samples.jmetro.StatusBarSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.ToolbarWithControlsSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSample'
+mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSimpleSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample'
-mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+//mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldTextSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
 

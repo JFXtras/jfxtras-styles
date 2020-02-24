@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro;
+package jfxtras.styles.samples.jmetro;
 
 import javafx.application.Application;
 import javafx.geometry.Orientation;
@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.JMetroStyleClass;
+import jfxtras.styles.jmetro.Style;
 
 public class SplitPaneSimpleSample extends Application {
 
