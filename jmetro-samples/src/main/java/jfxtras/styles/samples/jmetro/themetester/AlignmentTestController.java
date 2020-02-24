@@ -51,7 +51,7 @@ import java.util.ResourceBundle;
 /**
  * Controller to auto align guidelines
  */
-public class SameHeightTestController implements Initializable {
+public class AlignmentTestController implements Initializable {
     
     private @FXML
     Button horizFirstButton;
