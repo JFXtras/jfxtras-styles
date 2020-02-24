@@ -71,7 +71,7 @@ public class ControlsSample extends Application {
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
     private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
 
-    static final private String RESOURCE = LIST_VIEW_RESOURCE;
+    static final private String RESOURCE = COMBOBOX_RESOURCE;
     static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override
@@ -91,7 +91,7 @@ public class ControlsSample extends Application {
         CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
         alternatingRowColors.setOnAction(event -> {
             boolean isSelected = alternatingRowColors.isSelected();
-            ListView listView = (ListView) root.lookup(".list-view");
+            ListView<?> listView = (ListView<?>) root.lookup(".list-view");
             if (listView == null) {
                 return;
             }
@@ -128,7 +128,7 @@ public class ControlsSample extends Application {
 
         Platform.runLater(() -> {
             if (RESOURCE.equals(LIST_VIEW_RESOURCE)) {
-                ListView listView = (ListView) scene.lookup(".list-view");
+                ListView<?> listView = (ListView<?>) scene.lookup(".list-view");
                 listView.getSelectionModel().select(2);
             }
         });
