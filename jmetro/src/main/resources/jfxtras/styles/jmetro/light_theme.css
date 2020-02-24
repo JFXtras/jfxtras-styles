@@ -663,3 +663,28 @@ Text {
     tab_not_selected_text_color: #999;
     tab_hover_text_color: #555;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Range Slider (ControlsFX)                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+ /* NEED TO DO A PR ON CONTROLSFX FIRST TO FIX THE RANGE SLIDER SKIN, LIKE I FIXED
+ IT IN THE MASTER (JAVA 8) BRANCH
+ .range-slider {
+    track_hover_color: #666666;
+    thumb_hover_color: #171717;
+
+    thumb_pressed_color: #cccccc;
+ }*/
+
+ /*******************************************************************************
+  *                                                                             *
+  * Segoe MDL2 Icon Font                                                        *
+  *                                                                             *
+  ******************************************************************************/
+
+.mdl2-assets {
+    text_color: #111;
+}

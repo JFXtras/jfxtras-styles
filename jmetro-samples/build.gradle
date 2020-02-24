@@ -27,7 +27,9 @@ javafx {
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldTextSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
 
-mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+mainClassName = 'jfxtras.styles.samples.jmetro.MDL2IconFontSample'
+
+//mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 dependencies {
     compile project(':jmetro')
