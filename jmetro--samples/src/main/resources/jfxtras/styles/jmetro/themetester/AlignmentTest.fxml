@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml"
             fx:controller="jfxtras.styles.jmetro.themetester.SameHeightTestController">
@@ -75,7 +74,7 @@
       <DatePicker promptText="Enter date"/>
       <Spinner>
         <valueFactory>
-          <IntegerSpinnerValueFactory min="0" max="10"/>
+          <SpinnerValueFactory.IntegerSpinnerValueFactory min="0" max="10"/>
         </valueFactory>
       </Spinner>
     </HBox>
