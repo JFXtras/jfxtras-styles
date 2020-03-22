@@ -78,11 +78,11 @@ public class MDL2IconFontSample extends Application {
         HBox iconsCollections = createIconsContainer();
         VBox iconsCollectionsContainer = createSection("Icons combined", iconsCollections);
 
-        MDL2IconFont heartFill = new MDL2IconFont("\uEB52");
-        MDL2IconFont heart = new MDL2IconFont("\uEB51");
-        MDL2IconCollection collection1 = new MDL2IconCollection(heartFill, heart);
-        heartFill.setStyle("-fx-text-fill: red;");
-        collection1.setStyle("-fx-font-size: 30px;");
+        MDL2IconFont starFill = new MDL2IconFont("\uE735");
+        starFill.getStyleClass().add("star-fill");
+        MDL2IconFont star = new MDL2IconFont("\uE734");
+        MDL2IconCollection collection1 = new MDL2IconCollection(starFill, star);
+        collection1.getStyleClass().add("star-icons");
 
         MDL2IconFont statusWarning = new MDL2IconFont("\uEC1E");
         MDL2IconFont statusVPN = new MDL2IconFont("\uE889");

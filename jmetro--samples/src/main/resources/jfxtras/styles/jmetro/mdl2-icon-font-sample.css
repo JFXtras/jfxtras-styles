@@ -2,3 +2,11 @@
     -fx-text-fill: orange;
     -fx-font-size: 26px;
 }
+
+.star-icons {
+    -fx-font-size: 30px;
+}
+
+.star-icons .star-fill {
+    -fx-text-fill: orange;
+}
