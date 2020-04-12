@@ -1,10 +1,12 @@
-package jfxtras.styles.jmetro;
+package jfxtras.styles.samples.jmetro;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.Style;
 
 public class ColorPickerThrowsRuntimeException extends Application {
 
