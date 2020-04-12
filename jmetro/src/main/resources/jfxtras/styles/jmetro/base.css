@@ -878,7 +878,10 @@ Text {
  *                                                                             *
  ******************************************************************************/
 
-.text-field{
+/* Issue #149: Need to use TextField because ColorPicker has custom textfields with "text-field" styleclass that aren't actually of type
+   TextField which will cause an IllegalArgumentException when creating the impl.jfxtras.styles.jmetro.TextFieldSkin object and passing it,
+   for instance, the WebColorField */
+TextField {
     -fx-skin: "impl.jfxtras.styles.jmetro.TextFieldSkin";
 
     -right-button-visible: true;
@@ -900,57 +903,6 @@ Text {
 
 .text-field > .right-button:hover > .right-button-graphic {
     -fx-background-color: accent_color;
-}
-
-/*******************************************************************************
- *                                                                             *
- * Menu Button                                                                 *
- *                                                                             *
- ******************************************************************************/
-
-.menu-button {
-    -fx-background-color: menu_button_background_color;
-    -fx-background-radius: 0;
-    -fx-background-insets: 0;
-    -fx-padding: 0em 0em 0em 0em; /* 0 8 0 8 */
-
-    -fx-border-color: transparent;
-    -fx-border-width: 2px;
-}
-
-.menu-button > .arrow-button {
-    -fx-background-color: transparent;
-}
-
-.menu-button > .label {
-    -fx-font-family: "Segoe UI Semilight";
-    -fx-font-size: 1em; /* 12 */
-
-    -fx-text-fill: menu_button_text_color;
-}
-
-.menu-button:hover {
-    -fx-border-color: menu_border_hover_color;
-}
-
-.menu-button:pressed {
-    -fx-border-color: menu_button_pressed_color;
-    -fx-background-color: menu_button_pressed_color;
-}
-
-.menu-button:focused {
-    -fx-border-color: transparent, white;
-    -fx-border-width: 1, 1;
-    /*noinspection CssInvalidFunction*/
-    -fx-border-style: solid, segments(1, 2);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
-}
-
-.menu-button:disabled {
-    -fx-opacity: 0.4;
-    -fx-background-color: menu_button_background_color;
-    -fx-text-fill: menu_button_text_color;
 }
 
 /*******************************************************************************
@@ -2428,6 +2380,57 @@ totally specific (always using direct child) and cover all cases, which would be
                       transparent transparent transparent transparent;
     -fx-border-width: 1, 1;
     -fx-border-insets: 7 0 7 0, 0 0 0 1;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Menu Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.menu-button {
+    -fx-background-color: menu_button_background_color;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0em 0em 0em 0em; /* 0 8 0 8 */
+
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+}
+
+.menu-button > .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.menu-button > .label {
+    -fx-font-family: "Segoe UI Semilight";
+    -fx-font-size: 1em; /* 12 */
+
+    -fx-text-fill: menu_button_text_color;
+}
+
+.menu-button:hover {
+    -fx-border-color: menu_border_hover_color;
+}
+
+.menu-button:pressed {
+    -fx-border-color: menu_button_pressed_color;
+    -fx-background-color: menu_button_pressed_color;
+}
+
+.menu-button:focused {
+    -fx-border-color: transparent, white;
+    -fx-border-width: 1, 1;
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.menu-button:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: menu_button_background_color;
+    -fx-text-fill: menu_button_text_color;
 }
 
 /*******************************************************************************
