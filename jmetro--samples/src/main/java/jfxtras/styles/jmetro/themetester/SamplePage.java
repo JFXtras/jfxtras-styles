@@ -326,6 +326,14 @@ public class SamplePage extends GridPane {
                 withState(ColorPickerBuilder.create().value(Color.RED).styleClass(ColorPicker.STYLE_CLASS_SPLIT_BUTTON).build(), "disabled")
                 );
         newSection(
+                "Color Picker\n '-fx-color-label-visible: false':",
+                ColorPickerBuilder.create().value(Color.RED).style("-fx-color-label-visible: false;").build(),
+                withState(ColorPickerBuilder.create().value(Color.RED).style("-fx-color-label-visible: false;").build(), "hover"),
+                withState(ColorPickerBuilder.create().value(Color.RED).style("-fx-color-label-visible: false;").build(), "showing"),
+                withState(ColorPickerBuilder.create().value(Color.RED).style("-fx-color-label-visible: false;").build(), "focused"),
+                withState(ColorPickerBuilder.create().value(Color.RED).style("-fx-color-label-visible: false;").build(), "disabled")
+        );
+        newSection(
                 "MenuButton:",
                 MenuButtonBuilder.create().items(createMenuItems(20)).text("right").popupSide(Side.RIGHT).build(),
                 MenuButtonBuilder.create().items(createMenuItems(20)).text("normal").build(),
