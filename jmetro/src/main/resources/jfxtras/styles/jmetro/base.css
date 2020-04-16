@@ -159,7 +159,10 @@ Text {
 
 /****************************** Button ****************************************/
 
-.button {
+/* We must use the actual Button class instead of the "button" styleclass because ColorPicker also uses
+that styleclass but isn't an actual button
+*/
+Button {
     -fx-skin: "impl.jfxtras.styles.jmetro.FluentButtonSkin";
 }
 
