@@ -440,9 +440,12 @@ public class SamplePage extends GridPane {
                     spinners[2]
             );
         }
+
+        // Color Picker
         newSection("Color Picker:", new ColorPicker(Color.RED), withState(new ColorPicker(Color.RED), "hover"),
                 withState(new ColorPicker(Color.RED), "showing"), withState(new ColorPicker(Color.RED), "focused"),
                 withState(new ColorPicker(Color.RED), "disabled"));
+
         ColorPicker cp1 = new ColorPicker(Color.RED);
         cp1.getStyleClass().add(ColorPicker.STYLE_CLASS_SPLIT_BUTTON);
         ColorPicker cp2 = new ColorPicker(Color.RED);
@@ -459,6 +462,24 @@ public class SamplePage extends GridPane {
                 withState(cp3,"showing"),
                 withState(cp4, "focused"),
                 withState(cp5,"disabled"));
+
+        ColorPicker cp6 = new ColorPicker(Color.RED);
+        cp6.setStyle("-fx-color-label-visible: false;");
+        ColorPicker cp7 = new ColorPicker(Color.RED);
+        cp7.setStyle("-fx-color-label-visible: false;");
+        ColorPicker cp8 = new ColorPicker(Color.RED);
+        cp8.setStyle("-fx-color-label-visible: false;");
+        ColorPicker cp9 = new ColorPicker(Color.RED);
+        cp9.setStyle("-fx-color-label-visible: false;");
+        ColorPicker cp10 = new ColorPicker(Color.RED);
+        cp10.setStyle("-fx-color-label-visible: false;");
+        newSection(
+                "Color Picker\n '-fx-color-label-visible: false':", cp6,
+                withState(cp7, "hover"),
+                withState(cp8,"showing"),
+                withState(cp9, "focused"),
+                withState(cp10,"disabled"));
+
         MenuButton mb1 = new MenuButton();
         mb1.getItems().addAll(createMenuItems(20));
         mb1.setText("right");

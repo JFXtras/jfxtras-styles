@@ -29,9 +29,9 @@ javafx {
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.MDL2IconFontSample'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
-mainClassName = 'jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException'
+//mainClassName = 'jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException'
 
 dependencies {
     compile project(':jmetro')
