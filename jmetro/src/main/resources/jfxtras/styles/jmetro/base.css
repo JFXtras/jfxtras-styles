@@ -2532,7 +2532,47 @@ totally specific (always using direct child) and cover all cases, which would be
  *                                                                             *
  ******************************************************************************/
 
+.color-picker.button {
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
 
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: button_background_color;
+
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: text_color;
+}
+
+.color-picker.button:hover,
+.color-picker.button:focused:hover {
+    -fx-border-color: border_hover_color;
+}
+
+.color-picker.button:pressed,
+.color-picker.button:focused:pressed {
+    -fx-border-color: background_pressed_color;
+    -fx-background-color: background_pressed_color;
+}
+
+.color-picker.button:focused {
+    -fx-border-color: transparent, focus_ring_border_color;
+    -fx-border-width: 1, 1;
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.color-picker.button:showing {
+    -fx-border-color: transparent, focus_ring_border_color;
+    -fx-background-color: background_pressed_color;
+    -fx-border-width: 1, 1;
+    /*noinspection CssInvalidFunction*/
+    -fx-border-style: solid, segments(1, 2);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
 
 /*******************************************************************************
  *                                                                             *

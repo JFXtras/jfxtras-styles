@@ -686,3 +686,20 @@ Text {
 .mdl2-assets {
     text_color: #111;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * ColorPicker                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+ .color-picker.button {
+     button_background_color: #cccccc;
+     background_pressed_color: #999999;
+
+     border_hover_color: #7a7a7a;
+
+     text_color: #111;
+
+     focus_ring_border_color: white;
+ }

@@ -714,3 +714,20 @@ Text {
 .mdl2-assets {
     text_color: white;
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * ColorPicker                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.color-picker.button {
+    button_background_color: #333333;
+    background_pressed_color: #666666;
+
+    border_hover_color: #858585;
+
+    text_color: white;
+
+    focus_ring_border_color: white;
+}
