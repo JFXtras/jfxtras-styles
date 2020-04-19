@@ -2532,6 +2532,23 @@ totally specific (always using direct child) and cover all cases, which would be
  *                                                                             *
  ******************************************************************************/
 
+.color-palette {
+    -fx-background-radius: 0;
+
+    -fx-background-color: popup_background_color;
+    -fx-border-color: popup_border_color;
+}
+
+/* Custom Color Dialog */
+.custom-color-dialog  {
+    -fx-background-color: dialog_background_color;
+}
+
+.custom-color-dialog .controls-pane .customcolor-controls-background {
+    -fx-background-color: controls_border_color, controls_background_color;
+}
+
+/* With Button styleclass */
 .color-picker.button {
     -fx-border-color: transparent;
     -fx-border-width: 2;

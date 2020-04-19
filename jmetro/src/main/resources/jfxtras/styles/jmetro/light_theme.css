@@ -694,14 +694,24 @@ Text {
  * ColorPicker                                                                 *
  *                                                                             *
  ******************************************************************************/
+.color-palette {
+    popup_background_color: #f2f2f2;
+    popup_border_color: #cccccc;
+}
 
- .color-picker.button {
-     button_background_color: #cccccc;
-     background_pressed_color: #999999;
+.custom-color-dialog {
+    controls_background_color: #f2f2f2;
+    controls_border_color: #cccccc;
+}
 
-     border_hover_color: #7a7a7a;
+.color-picker.button {
+    button_background_color: #cccccc;
+    background_pressed_color: #999999;
 
-     text_color: #111;
+    border_hover_color: #7a7a7a;
 
-     focus_ring_border_color: white;
- }
+    text_color: #111;
+
+    focus_ring_border_color: white;
+}
+
