@@ -666,9 +666,9 @@ Text {
  *                                                                             *
  ******************************************************************************/
 
- .dialog-pane {
-     -fx-padding: 0.75em 0.5em 0.5em 0.5em;
- }
+.dialog-pane {
+    -fx-padding: 0.75em 0.5em 0.5em 0.5em;
+}
 
 /*******************************************************************************
  *                                                                             *
@@ -676,9 +676,9 @@ Text {
  *                                                                             *
  ******************************************************************************/
 
- .status-bar {
- 	background_color: #252525;
- }
+.status-bar {
+    background_color: #252525;
+}
 
 /*******************************************************************************
  *                                                                             *
@@ -720,6 +720,16 @@ Text {
  * ColorPicker                                                                 *
  *                                                                             *
  ******************************************************************************/
+
+.color-palette {
+    popup_background_color: #2b2b2b;
+    popup_border_color: #767676;
+}
+
+.custom-color-dialog {
+    controls_background_color: #2b2b2b;
+    controls_border_color: #767676;
+}
 
 .color-picker.button {
     button_background_color: #333333;
