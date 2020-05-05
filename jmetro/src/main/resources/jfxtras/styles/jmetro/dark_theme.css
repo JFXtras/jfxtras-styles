@@ -259,8 +259,9 @@ Text {
     combo_box_editable_focused_button_hover_color: #e6e6e6;
     combo_box_editable_focused_background_color: white;
     combo_box_editable_focused_arrow_color: #111;
+}
 
-    /* Popup - listcell */
+.combo-box-popup {
     list_cell_color: #2b2b2b;
     list_cell_hover_color: #545454;
 
