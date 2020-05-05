@@ -234,8 +234,9 @@
     combo_box_editable_focused_button_hover_color: combo_box_editable_button_hover_color;
     combo_box_editable_focused_background_color: white;
     combo_box_editable_focused_arrow_color: arrow_color;
+}
 
-    /* Popup - listcell */
+.combo-box-popup {
     list_cell_color: #f2f2f2;
     list_cell_hover_color: #dedede;
 
