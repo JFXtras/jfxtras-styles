@@ -7,7 +7,7 @@
 <?scenebuilder-stylesheet JMetroDarkTheme.css?>
 
 <!--
-  ~ Copyright (c) 2011-2018 JFXtras
+  ~ Copyright (c) 2011-2020 JFXtras
   ~  All rights reserved.
   ~
   ~  Redistribution and use in source and binary forms, with or without
@@ -33,13 +33,18 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="370" styleClass="background" >
-  <ScrollPane layoutX="78.0" layoutY="121.0" prefHeight="200.0" prefWidth="200.0">
+<?import jfxtras.styles.jmetro.JMetroStyleClass?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="370"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <styleClass>
+        <JMetroStyleClass fx:constant="BACKGROUND" />
+    </styleClass>
+    <ScrollPane layoutX="78.0" layoutY="121.0" prefHeight="200.0" prefWidth="200.0">
     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="264.0" prefWidth="414.0">
         <ImageView fitHeight="263.0" fitWidth="526.0" layoutX="0.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@images.jpg" />
         </ImageView>
     </AnchorPane>
-  </ScrollPane>
-  <Label layoutX="27.0" layoutY="28.0" styleClass="header" text="Scroll Pane" />
+    </ScrollPane>
+    <Label layoutX="27.0" layoutY="28.0" styleClass="header" text="Scroll Pane" />
 </AnchorPane>

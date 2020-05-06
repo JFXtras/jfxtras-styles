@@ -139,7 +139,7 @@ public class DialogSample extends Application {
 
         borderPane.setCenter(vBox);
 
-        Scene scene = new Scene(borderPane, 800, 250);
+        Scene scene = new Scene(borderPane, 900, 250);
 
         mainStageJMetro.setScene(scene);
 
