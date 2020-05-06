@@ -1157,6 +1157,20 @@ TextField {
     -fx-background-color: arrow_pressed_color;
 }
 
+/****** Spinner - STYLE_CLASS_SPLIT_ARROWS_HORIZONTAL ******/
+
+/* Increment button is slightly misplaced for some reason */
+.spinner.split-arrows-horizontal .increment-arrow-button {
+    -fx-translate-x: 1;
+}
+
+/****** Spinner - STYLE_CLASS_SPLIT_ARROWS_VERTICAL ******/
+
+/* Decrement button is slightly misplaced for some reason */
+.spinner.split-arrows-vertical .decrement-arrow-button {
+    -fx-translate-y: 1;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Date Picker                                                                 *
