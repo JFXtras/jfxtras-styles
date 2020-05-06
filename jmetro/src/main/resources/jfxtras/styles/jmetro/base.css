@@ -704,6 +704,14 @@ Button {
     -fx-background-color: scroll_pane_background_color;
 }
 
+/* Corner of "ScrollPane" when in a VirtualFlow (it's not exactly a ScrollPane but has the same appearance) */
+.list-view > .virtual-flow > .corner,
+.tree-view > .virtual-flow > .corner,
+.table-view > .virtual-flow > .corner,
+.tree-table-view > .virtual-flow > .corner {
+    -fx-background-color: corner_background_color;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Combo Box                                                                   *

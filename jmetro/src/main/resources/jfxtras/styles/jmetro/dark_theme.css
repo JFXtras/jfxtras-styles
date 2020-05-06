@@ -235,6 +235,13 @@ Text {
     corner_background_color: #29292a;
 }
 
+.list-view > .virtual-flow > .corner,
+.tree-view > .virtual-flow > .corner,
+.table-view > .virtual-flow > .corner,
+.tree-table-view > .virtual-flow > .corner {
+    corner_background_color: #29292a;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Combo Box                                                                   *
