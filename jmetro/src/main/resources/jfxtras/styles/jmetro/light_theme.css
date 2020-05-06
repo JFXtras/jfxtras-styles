@@ -378,11 +378,11 @@ Text {
     spinner_background_color: white;
     spinner_border_color: #ddd;
 
-    arrow_button_hover_color: #dadada;
-    arrow_button_pressed_color: #606060;
+    arrow_button_hover_color: #e6e6e6;
+    arrow_button_pressed_color: #dadada;
 
     arrow_color: -fx-mark-color;
-    arrow_pressed_color: white;
+    arrow_pressed_color: -fx-mark-color;
 }
 
 .spinner > .text-field {

@@ -392,11 +392,11 @@ Text {
     spinner_background_color: #111;
     spinner_border_color: #444;
 
-    arrow_button_hover_color: #3c4145;
-    arrow_button_pressed_color: #a8abac;
+    arrow_button_hover_color: #333;
+    arrow_button_pressed_color: #222;
 
     arrow_color: #999;
-    arrow_pressed_color: #5e6060;
+    arrow_pressed_color: #999;
 }
 
 .spinner > .text-field {
