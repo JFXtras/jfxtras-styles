@@ -1458,12 +1458,12 @@ TextField {
     -fx-background-color: transparent;
 }
 
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:hover,
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
 .list-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:hover:odd {
     -fx-background-color: cell_hover_color;
 }
 
-.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed,
+.list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:pressed,
 .list-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed:odd {
     -fx-background-color: cell_pressed_color;
 }
