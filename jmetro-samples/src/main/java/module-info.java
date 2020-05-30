@@ -20,4 +20,7 @@ module org.jfxtras.styles.samples.jmetro {
     opens jfxtras.styles.samples.jmetro.panessample to javafx.fxml;
     opens jfxtras.styles.samples.jmetro to javafx.base;
     opens jfxtras.styles.samples.jmetro.themetester;
+
+    /* Scenic View */
+    requires org.scenicview.scenicview;
 }

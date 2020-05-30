@@ -36,6 +36,8 @@ mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 dependencies {
     compile project(':jmetro')
     compile 'org.controlsfx:controlsfx:11.0.0'
+
+    implementation files('lib/scenicview.jar')
 }
 
 repositories {

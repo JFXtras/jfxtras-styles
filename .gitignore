@@ -25,6 +25,3 @@ out/
 .gradle/
 .nb-gradle/
 build/
-
-# libraries jars (e.g. ScenicView)
-samples/lib/
