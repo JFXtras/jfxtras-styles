@@ -42,6 +42,7 @@ import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.JMetroStyleClass;
 import jfxtras.styles.jmetro.Style;
+import org.scenicview.ScenicView;
 
 public class ControlsSample extends Application {
     private static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
@@ -123,7 +124,7 @@ public class ControlsSample extends Application {
 
         jMetro.setScene(scene);
 
-//        ScenicView.show(root);
+//        ScenicView.show(scene);
 
         primaryStage.setScene(scene);
         primaryStage.show();
