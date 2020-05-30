@@ -1469,20 +1469,20 @@ TextField {
 }
 
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected,
-.list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:odd {
+.list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
     -fx-background-color: cell_selected_color;
     -fx-background-insets: 0;
 
     -fx-text-fill: text_color;
 }
 
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover,
-.list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover:odd {
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover,
+.list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
     -fx-background-color: cell_selected_hover_color;
 }
 
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover:pressed,
-.list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:selected:hover:pressed:odd {
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover:pressed,
+.list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover:pressed {
     -fx-background-color: cell_selected_pressed_color;
 }
 

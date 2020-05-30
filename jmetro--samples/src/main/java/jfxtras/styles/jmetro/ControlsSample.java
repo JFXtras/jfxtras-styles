@@ -41,47 +41,32 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class ControlsSample extends Application {
-    private static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
-
-    private static final String BUTTON_RESOURCE = "JMetro Button.fxml";
-    private static final String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
-
     private static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
+    private static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
+    private static final String BUTTON_RESOURCE = "JMetro Button.fxml";
     private static final String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
-
     private static final String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
     private static final String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
-
+    private static final String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
     private static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
-    private static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
-    private static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
-
-    private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
-    private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
-
     private static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
     private static final String RATING_RESOURCE = "JMetro Rating.fxml";
-
     private static final String TEXT_FIELD_RESOURCE = "JMetro TextField.fxml";
     private static final String TEXT_AREA_RESOURCE = "JMetro TextArea.fxml";
     private static final String PASSWORD_FIELD_RESOURCE = "JMetro PasswordField.fxml";
-
     private static final String PROGRESS_BAR_RESOURCE = "JMetro ProgressBar.fxml";
     private static final String PROGRESS_INDICATOR_RESOURCE = "JMetro ProgressIndicator.fxml";
-
     private static final String SLIDER_RESOURCE = "JMetro Slider.fxml";
-    private static final String RANGE_SLIDER_RESOURCE = "JMetro RangeSlider.fxml";
-
     private static final String TOGGLE_SWITCH_RESOURCE = "JMetro ToggleSwitch.fxml";
-
+    private static final String DATE_PICKER_RESOURCE = "JMetro DatePicker.fxml";
     private static final String SPINNER_RESOURCE = "JMetro Spinner.fxml";
-
+    private static final String CHOICE_BOX_RESOURCE = "JMetro ChoiceBox.fxml";
     private static final String LIST_VIEW_RESOURCE = "JMetro ListView.fxml";
-
     private static final String TITLED_PANE_RESOURCE = "JMetro TitledPane.fxml";
     private static final String ACCORDION_RESOURCE = "JMetro Accordion.fxml";
-
+    private static final String MENU_BUTTON_RESOURCE = "JMetro MenuButton.fxml";
     private static final String HYPERLINK_RESOURCE = "JMetro Hyperlink.fxml";
+    private static final String SPLIT_MEU_BUTTON_RESOURCE = "JMetro SplitMenuButton.fxml";
 
     private static final String COLOR_PICKER_RESOURCE = "JMetro ColorPicker.fxml";
 
@@ -104,7 +89,6 @@ public class ControlsSample extends Application {
 
         CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
         alternatingRowColors.setOnAction(event -> {
-            String alternatingRowColorsStyleClass = "alternating-row-colors";
             boolean isSelected = alternatingRowColors.isSelected();
             ListView<?> listView = (ListView<?>) root.lookup(".list-view");
             if (listView == null) {
@@ -112,11 +96,9 @@ public class ControlsSample extends Application {
             }
 
             if (isSelected) {
-                if (!listView.getStyleClass().contains(alternatingRowColorsStyleClass)) {
-                    listView.getStyleClass().add(alternatingRowColorsStyleClass);
-                }
+                JMetroStyleClass.addIfNotPresent(listView.getStyleClass(), JMetroStyleClass.ALTERNATING_ROW_COLORS);
             } else {
-                listView.getStyleClass().remove(alternatingRowColorsStyleClass);
+                listView.getStyleClass().remove(JMetroStyleClass.ALTERNATING_ROW_COLORS);
             }
         });
 
