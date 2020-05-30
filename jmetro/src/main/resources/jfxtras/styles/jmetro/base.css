@@ -2645,6 +2645,10 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-padding: 1.083333em 0.833em 2.5em 0.833em; /* 13 10 30 10 */
 }
 
+.dialog-pane > .button-bar > .container > .details-button {
+    -fx-text-fill: text_color;
+}
+
 .alert.confirmation.dialog-pane,
 .text-input-dialog.dialog-pane,
 .choice-dialog.dialog-pane,

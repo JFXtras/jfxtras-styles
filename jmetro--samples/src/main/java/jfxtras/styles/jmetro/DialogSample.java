@@ -259,7 +259,7 @@ public class DialogSample extends Application {
 
         Exception ex = new FileNotFoundException("Could not find file blabla.txt");
 
-// Create expandable Exception.
+        // Create expandable Exception.
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         ex.printStackTrace(pw);
