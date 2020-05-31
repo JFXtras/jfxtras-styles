@@ -1444,30 +1444,32 @@ TextField {
     -fx-background-radius: 0;
 }
 
+/********************* ListView List Cells ********************************/
+
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
     -fx-padding: 0.666667em 1em 0.666667em 1em; /* 8 12 8 12 */
     -fx-font-family: "Segoe UI";
     -fx-text-fill: text_color;
 }
 
-.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: transparent;
-}
-
+.list-view > .virtual-flow > .clipped-container > .sheet > .list-cell,
 .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell {
     -fx-background-color: transparent;
 }
 
+/* Hover style */
 .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
-.list-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:hover:odd {
+.list-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
     -fx-background-color: cell_hover_color;
 }
 
+/* Pressed style */
 .list-view:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:pressed,
-.list-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed:odd {
+.list-view.alternating-row-colors:focused > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:pressed {
     -fx-background-color: cell_pressed_color;
 }
 
+/* Selected style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:selected,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:selected {
     -fx-background-color: cell_selected_color;
@@ -1476,11 +1478,13 @@ TextField {
     -fx-text-fill: text_color;
 }
 
+/* Selected, Hover style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
     -fx-background-color: cell_selected_hover_color;
 }
 
+/* Selected, Hover, Pressed style */
 .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover:pressed,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover:pressed {
     -fx-background-color: cell_selected_pressed_color;
