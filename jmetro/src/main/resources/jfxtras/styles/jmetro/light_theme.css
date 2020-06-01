@@ -66,7 +66,10 @@
 
 /* ====   CONTROLS WITH CELLS   ============================================= */
 
-.list-view, .table-view, .tree-view, .tree-table-view {
+.list-view,
+.table-view,
+.tree-view,
+.tree-table-view {
     cell_hover_color: #dadada;
     cell_pressed_color: #c2c2c2;
 
