@@ -33,6 +33,7 @@ mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException'
+mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch'
 
 dependencies {
     compile project(':jmetro')
