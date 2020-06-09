@@ -7,7 +7,7 @@ plugins {
 
 sourceCompatibility = JavaVersion.VERSION_11
 
-version = '11.6.12'
+version = '11.6.13'
 def versionDescription = 'JMetro'
 
 javafx {
