@@ -70,7 +70,7 @@ public class ControlsSample extends Application {
 
     private static final String COLOR_PICKER_RESOURCE = "JMetro ColorPicker.fxml";
 
-    static final private String RESOURCE = LIST_VIEW_RESOURCE;
+    static final private String RESOURCE = SPLIT_MEU_BUTTON_RESOURCE;
     static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override

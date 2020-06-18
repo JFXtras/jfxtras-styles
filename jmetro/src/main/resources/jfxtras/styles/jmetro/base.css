@@ -517,10 +517,11 @@ Button {
     -fx-background-color: transparent;
 }
 
+/* - hover */
+
 .tool-bar .button:hover,
 .tool-bar .toggle-button:hover,
-.tool-bar .menu-button:hover,
-.tool-bar .split-menu-button:hover > .label, .tool-bar .split-menu-button:hover > .arrow-button {
+.tool-bar .menu-button:hover {
     -fx-background-color: button_hover_color;
 }
 
@@ -529,13 +530,31 @@ Button {
     -fx-border-color: transparent;
 }
 
+.tool-bar .split-menu-button:hover > .label,
+.tool-bar .split-menu-button:hover > .arrow-button {
+    -fx-background-color: button_hover_color;
+}
+
+.tool-bar .split-menu-button > .label:hover {
+    -fx-border-color: light_button_hover_color;
+    -fx-background-color: light_button_hover_color;
+}
+
+.tool-bar .split-menu-button > .arrow-button:hover {
+    -fx-border-color: light_button_hover_color;
+    -fx-background-color: light_button_hover_color;
+}
+
+/* - pressed */
 .tool-bar .button:pressed,
 .tool-bar .toggle-button:pressed,
 .tool-bar .menu-button:pressed {
     -fx-background-color: button_pressed_color;
 }
 
-.tool-bar .button:focused, .tool-bar .toggle-button:focused {
+/* - focused */
+.tool-bar .button:focused,
+.tool-bar .toggle-button:focused {
     -fx-border-color: border_hover_color;
     -fx-border-style: solid;
     -fx-border-width: 2;
