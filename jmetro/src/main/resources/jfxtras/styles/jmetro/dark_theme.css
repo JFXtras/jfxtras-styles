@@ -656,6 +656,8 @@ Text {
 
     border_hover_color: #858585;
 
+    light_button_hover_color: #505050;
+
     text_color: white;
 
     focus_ring_border_color: white;

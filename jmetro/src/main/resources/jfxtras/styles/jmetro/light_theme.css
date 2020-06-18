@@ -642,6 +642,8 @@ Text {
 
     border_hover_color: #7a7a7a;
 
+    light_button_hover_color: #c5c5c5;
+
     text_color: #111;
 
     focus_ring_border_color: white;
