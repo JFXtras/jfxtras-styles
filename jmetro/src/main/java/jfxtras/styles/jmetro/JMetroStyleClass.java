@@ -36,6 +36,8 @@ public class JMetroStyleClass {
      */
     public static final String ALTERNATING_ROW_COLORS = "alternating-row-colors";
 
+    public static final String TABLE_GRID_LINES = "column-grid-lines";
+
     /***************************************************************************
      *                                                                         *
      *                           Methods                                       *

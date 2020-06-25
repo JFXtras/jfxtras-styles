@@ -91,6 +91,16 @@ public class TableViewSample extends Application {
             }
         });
 
+        CheckBox columnGridLines = new CheckBox("Grid Lines");
+        columnGridLines.setOnAction(event -> {
+            boolean isSelected = columnGridLines.isSelected();
+            if (isSelected) {
+                addIfNotPresent(table.getStyleClass(), TABLE_GRID_LINES);
+            } else {
+                table.getStyleClass().remove(TABLE_GRID_LINES);
+            }
+        });
+
         vbox.setSpacing(40);
         vbox.setPadding(new Insets(10, 10, 10, 10));
 
@@ -98,7 +108,7 @@ public class TableViewSample extends Application {
 
         BorderPane controlsBorderPane = new BorderPane();
         VBox controlsVBox = new VBox();
-        controlsVBox.getChildren().addAll(cellSelection, tableButtonCheckBox, alternatingRowColors);
+        controlsVBox.getChildren().addAll(cellSelection, tableButtonCheckBox, alternatingRowColors, columnGridLines);
         controlsVBox.setSpacing(10);
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
