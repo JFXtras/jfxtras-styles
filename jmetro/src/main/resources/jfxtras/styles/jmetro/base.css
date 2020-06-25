@@ -2017,6 +2017,13 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-border-width: 1px;
 }
 
+
+.tree-table-view.column-grid-lines > .column-header-background > * {
+    -fx-border-insets: 0 0 1 0, 0 0 0 0;
+    -fx-border-width: 0 0 1 0, 0 0 1 0;
+    -fx-border-color: table_border_color, derive(table_border_color, 20%);
+}
+
 .tree-table-view.column-grid-lines > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell {
     -fx-border-color: transparent table_border_color transparent transparent;
     -fx-border-width: 1px;
