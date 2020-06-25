@@ -12,6 +12,9 @@ import javafx.stage.Stage;
 import java.util.Arrays;
 import java.util.List;
 
+import static jfxtras.styles.jmetro.JMetroStyleClass.TABLE_GRID_LINES;
+import static jfxtras.styles.jmetro.JMetroStyleClass.addIfNotPresent;
+
 public class TreeTableViewSample extends Application {
 
     private static final Style STYLE = Style.DARK;
@@ -132,12 +135,22 @@ public class TreeTableViewSample extends Application {
             }
         });
 
+        CheckBox columnGridLines = new CheckBox("Grid Lines");
+        columnGridLines.setOnAction(event -> {
+            boolean isSelected = columnGridLines.isSelected();
+            if (isSelected) {
+                addIfNotPresent(treeTableView.getStyleClass(), TABLE_GRID_LINES);
+            } else {
+                treeTableView.getStyleClass().remove(TABLE_GRID_LINES);
+            }
+        });
+
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
         jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
         jmetroStyleComboBox.setValue(startingStyle);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
-        controlsHBox.getChildren().addAll(jmetroStyleComboBox, cellSelectionCheckBox, tableButtonCheckBox, alternatingRowColors);
+        controlsHBox.getChildren().addAll(jmetroStyleComboBox, cellSelectionCheckBox, tableButtonCheckBox, alternatingRowColors, columnGridLines);
         sceneRoot.setBottom(controlsHBox);
 
         controlsHBox.getStyleClass().add("background");
