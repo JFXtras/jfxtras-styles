@@ -41,9 +41,9 @@
 
 /* ====   CONTROLS WITH ARROW BUTTONS ======================================= */
 
-.combo-box-base > .arrow-button > .arrow,
-.choice-box > .open-button > .arrow,
-.menu-button > .arrow-button > .arrow,
+.combo-box-base > .arrow-button > .arrow ,
+.choice-box > .open-button > .arrow ,
+.menu-button > .arrow-button > .arrow ,
 .split-menu-button > .arrow-button > .arrow {
     -fx-padding: 0.208em 0.358em 0.208em 0.358em; /* 2.5px 4.29px 2.5px 4.29px */
     -fx-shape: "M21.361,12.736l0.527,0.527L16,19.152l-5.889-5.889l0.527-0.527L16,18.098L21.361,12.736z";
@@ -71,6 +71,18 @@
 .table-view.alternating-row-colors .table-row-cell:odd,
 .list-view.alternating-row-colors > .virtual-flow > .clipped-container > .sheet > .list-cell:odd {
     -fx-background-color: alternate_row_color;
+}
+
+/* ====   TABLE LIKE CONTROLS  (Tables, TreeTables) ======= */
+
+/* Sort Arrow
+(There can be nested column headers inside other nested column so this declaration is a bit loose. Not sure we can be
+totally specific, always using direct child, and cover all cases, which would be more performant) */
+.table-view > .column-header-background .nested-column-header > .column-header > GridPane > .arrow ,
+.tree-table-view > .column-header-background .nested-column-header > .column-header > GridPane > .arrow {
+    -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5 */
+    -fx-shape: "M 15 4 L 15 24.0625 L 8.21875 17.28125 L 6.78125 18.71875 L 15.28125 27.21875 L 16 27.90625 L 16.71875 27.21875 L 25.21875 18.71875 L 23.78125 17.28125 L 17 24.0625 L 17 4 Z ";
+    -fx-background-color: sort_arrow_color;
 }
 
 /*******************************************************************************
@@ -1581,14 +1593,7 @@ TextField {
     -fx-background-color: table_background_color;
 }
 
-/******************************** Header Sort Arrows **************************************/
-/* There can be nested column headers inside other nested column so this declaration is a bit loose. Not sure we can be
-totally specific (always using direct child) and cover all cases, which would be more performant. */
-.table-view > .column-header-background .nested-column-header > .column-header > GridPane > .arrow {
-    -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5 */
-    -fx-shape: "M 15 4 L 15 24.0625 L 8.21875 17.28125 L 6.78125 18.71875 L 15.28125 27.21875 L 16 27.90625 L 16.71875 27.21875 L 25.21875 18.71875 L 23.78125 17.28125 L 17 24.0625 L 17 4 Z ";
-    -fx-background-color: sort_arrow_color;
-}
+/* Because of Dark style we need to make these panes background color transparent */
 .table-view > .column-header-background .nested-column-header > .column-header > GridPane {
     -fx-background-color: transparent;
 }
@@ -1965,12 +1970,7 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-text-fill: table_text_color;
 }
 
-.tree-table-view .arrow {
-    -fx-background-color: table_text_color;
-    -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5 */
-    -fx-shape: "M 15 4 L 15 24.0625 L 8.21875 17.28125 L 6.78125 18.71875 L 15.28125 27.21875 L 16 27.90625 L 16.71875 27.21875 L 25.21875 18.71875 L 23.78125 17.28125 L 17 24.0625 L 17 4 Z ";
-}
-
+/* TODO: Do we need this style below? */
 .tree-table-row-cell .arrow {
     -fx-padding: 0.416667em 0.333333em 0.416667em 0.333333em; /* 5 4 5 4 */
     -fx-shape: "M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z ";
@@ -2104,7 +2104,7 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-background-color: more_button_pressed_color;
 }
 
-.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button > .arrow  {
+.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button > .arrow {
     -fx-padding: 0.083333em; /* 3px */
     -fx-scale-shape: false;
     -fx-shape: "M13.576,7.495c0,0.829-0.672,1.5-1.5,1.5c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5C12.904,5.995,13.576,6.667,13.576,7.495z M12.076,10.995c-0.828,0-1.5,0.672-1.5,1.5c0,0.829,0.672,1.5,1.5,1.5c0.828,0,1.5-0.672,1.5-1.5C13.576,11.667,12.904,10.995,12.076,10.995z M12.076,15.995c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5c0.828,0,1.5-0.672,1.5-1.5S12.904,15.995,12.076,15.995z";
@@ -2318,7 +2318,7 @@ totally specific (always using direct child) and cover all cases, which would be
     -fx-effect: null;
 }
 
-.titled-pane > .title > .arrow-button > .arrow,
+.titled-pane > .title > .arrow-button > .arrow ,
 .titled-pane:focused > .title > .arrow-button > .arrow {
     -fx-background-insets: 0, 0;
 }
