@@ -115,6 +115,19 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch> {
 
     }
 
+    @Override
+    public void dispose() {
+        thumbDisplay.removeListener(thumbDisplayChanged);
+
+        super.dispose();
+    }
+
+    /***************************************************************************
+     *                                                                         *
+     *                            Properties                                   *
+     *                                                                         *
+     **************************************************************************/
+
     // --- thumb move animation time
 
     private DoubleProperty thumbMoveAnimationTimeProperty() {
@@ -150,6 +163,12 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch> {
 
     private ThumbDisplay getThumbDisplay() { return thumbDisplay.get(); }
 
+
+    /***************************************************************************
+     *                                                                         *
+     *                            CSS Handling                                 *
+     *                                                                         *
+     **************************************************************************/
 
     private static final CssMetaData<ToggleSwitch, Number> THUMB_MOVE_ANIMATION_TIME_META_DATA =
             new CssMetaData<ToggleSwitch, Number>("-thumb-move-animation-time",
@@ -211,6 +230,12 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch> {
         return getClassCssMetaData();
     }
 
+    /****************************************************************************
+     *                                                                          *
+     * Supporting Classes / Enums                                               *
+     *                                                                          *
+     ***************************************************************************/
+
     private enum ThumbDisplay {
         LEFT, RIGHT, THUMB_ONLY
     }
@@ -261,10 +286,6 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch> {
 
         private void selectedStateChanged() {
             ToggleSwitch toggleSwitch = toggleSwitchSkin.getSkinnable();
-//            if(transition != null){
-//                transition.stop();
-//                transition.setDuration(Duration.millis(toggleSwitchSkin.getThumbMoveAnimationTime()));
-//            }
             transition.stop();
             transition.setDuration(Duration.millis(toggleSwitchSkin.getThumbMoveAnimationTime()));
 

@@ -149,7 +149,7 @@
     -fx-spacing: 10;
 }
 
-.toggle-switch > .main-container .text {
+.toggle-switch > .main-container > .label-container > .label > .text {
     -fx-fill: text_color;
     -fx-font-size: 1em;
     -fx-font-family: "Segoe UI";
