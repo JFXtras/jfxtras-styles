@@ -1,0 +1,11 @@
+.root {
+    accent_color: green;
+}
+
+.toggle-switch.toggle-display-right {
+    -toggle-display: right;
+}
+
+.toggle-switch.toggle-display-thumb {
+    -toggle-display: thumb_only;
+}

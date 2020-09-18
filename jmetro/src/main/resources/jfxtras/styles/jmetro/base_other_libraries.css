@@ -139,86 +139,96 @@
 .toggle-switch {
     -thumb-move-animation-time: 100;
     -toggle-display: left;
+
+    -fx-pref-height: 1.666666em; /* 20 */
+    -fx-max-height: 1.666666em; /* 20 */
+    -fx-min-height: 1.666666em; /* 20 */
 }
 
-.toggle-switch .text {
+.toggle-switch > .main-container {
+    -fx-spacing: 10;
+}
+
+.toggle-switch > .main-container .text {
     -fx-fill: text_color;
     -fx-font-size: 1em;
     -fx-font-family: "Segoe UI";
 }
 
-.toggle-switch .thumb {
+.toggle-switch > .main-container > .thumb-area > .thumb {
     -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
     -fx-padding: 0.416667em; /* 5 */
 }
 
-.toggle-switch .thumb-area{
+.toggle-switch > .main-container > .thumb-area {
     -fx-background-radius: 0.833333em; /* 10 */
 
     -fx-border-width: 0.166667em; /* 2 */
     -fx-border-radius: 0.833333em;
 
     -fx-pref-width: 44px;
-    -fx-pref-height: 1.666666em; /* 20 */
+    -fx-max-width: 44px;
+    -fx-min-width: 44px;
+
     -fx-padding: 0.416667em 0.416667em 0.416667em 0.416667em; /* 5 5 5 5 */
 }
 
 /* unselected */
-.toggle-switch .thumb-area{
+.toggle-switch > .main-container > .thumb-area {
     -fx-background-insets: 0;
     -fx-background-color: unselected_color;
 
     -fx-border-color: unselected_border_color;
 }
 
-.toggle-switch .thumb {
+.toggle-switch > .main-container > .thumb-area > .thumb {
     -fx-background-color: thumb_unselected_color;
 }
 
 /* unselected - hover */
-.toggle-switch:hover .thumb-area {
+.toggle-switch:hover > .main-container > .thumb-area {
     -fx-background-color: unselected_hover_color;
 
     -fx-border-color: unselected_border_hover_color;
 }
 
-.toggle-switch:hover .thumb {
+.toggle-switch:hover > .main-container > .thumb-area > .thumb {
     -fx-background-color: thumb_unselected_hover_color;
 }
 
 /* selected */
-.toggle-switch:selected .thumb-area{
+.toggle-switch:selected > .main-container > .thumb-area{
     -fx-background-insets: 0;
     -fx-background-color: selected_color;
 
     -fx-border-color: selected_border_color;
 }
 
-.toggle-switch:selected .thumb{
+.toggle-switch:selected > .main-container > .thumb-area > .thumb {
     -fx-background-color: thumb_selected_color;
 }
 
 /* selected - hover */
-.toggle-switch:selected:hover .thumb-area {
+.toggle-switch:selected:hover > .main-container > .thumb-area {
     -fx-background-color: selected_hover_color;
     -fx-border-color: selected_hover_color;
 }
 
 /* pressed */
-.toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area{
+.toggle-switch:pressed > .main-container > .thumb-area,
+.toggle-switch:selected:pressed > .main-container > .thumb-area{
     -fx-background-insets: 0;
 
     -fx-background-color: pressed_color;
     -fx-border-color: pressed_border_color;
 }
 
-.toggle-switch:pressed .thumb {
+.toggle-switch:pressed > .main-container > .thumb-area > .thumb {
     -fx-background-color: thumb_pressed_color;
 }
 
 /* disabled */
-.toggle-switch:disabled
-{
+.toggle-switch:disabled {
     -fx-opacity: 0.4;
 }
 

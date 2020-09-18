@@ -27,7 +27,6 @@
 
 package jfxtras.styles.jmetro;
 
-
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -70,7 +69,7 @@ public class ControlsSample extends Application {
 
     private static final String COLOR_PICKER_RESOURCE = "JMetro ColorPicker.fxml";
 
-    static final private String RESOURCE = SPLIT_MEU_BUTTON_RESOURCE;
+    static final private String RESOURCE = TOGGLE_SWITCH_RESOURCE;
     static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override
@@ -120,7 +119,7 @@ public class ControlsSample extends Application {
 
         jMetro.setScene(scene);
 
-//        ScenicView.show(root);
+//        ScenicView.show(scene);
 
         primaryStage.setScene(scene);
         primaryStage.show();
