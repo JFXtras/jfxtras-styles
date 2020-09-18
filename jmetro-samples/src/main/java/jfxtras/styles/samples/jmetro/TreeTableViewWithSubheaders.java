@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro;
+package jfxtras.styles.samples.jmetro;
 
 import javafx.application.Application;
 import javafx.beans.property.*;
@@ -7,6 +7,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.Style;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package jfxtras.styles.jmetro;
+package jfxtras.styles.samples.jmetro;
 
 import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
@@ -11,6 +11,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.Style;
 
 import static jfxtras.styles.jmetro.JMetroStyleClass.*;
 import static jfxtras.styles.jmetro.JMetroStyleClass.BACKGROUND;
