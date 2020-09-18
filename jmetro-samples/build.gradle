@@ -29,12 +29,12 @@ javafx {
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.MDL2IconFontSample'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch'
-mainClassName = 'jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug'
+//mainClassName = 'jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug'
 
 dependencies {
     compile project(':jmetro')
