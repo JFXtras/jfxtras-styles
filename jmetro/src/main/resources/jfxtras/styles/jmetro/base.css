@@ -1551,10 +1551,6 @@ TextField {
 
 /****************************** Column Header ************************************/
 
-.table-view .column-header:last-visible {
-    -fx-border-color: transparent transparent table_view_border_color transparent;
-}
-
 .table-view .column-header .label{
     -fx-text-fill: text_color;
     -fx-font-family: "Segoe UI SemiBold";
@@ -1574,10 +1570,13 @@ TextField {
     -fx-background-color: table_background_color;
 }
 
-.table-view .column-header,
-.table-view .filler {
-    /* borders around table header */
-    -fx-border-color: transparent transparent table_view_border_color transparent;
+/* Bottom border on tableview header area */
+.table-view > .column-header-background > .nested-column-header,
+.table-view > .column-header-background > .filler {
+    -fx-background-color: table_background_color;
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: table_view_border_color;
 }
 
 .table-view .column-header {
@@ -1728,16 +1727,35 @@ TextField {
 
 /********************* TableView with column grid lines  **********************/
 
-.table-view.column-grid-lines .column-header {
-    -fx-border-color: transparent table_view_border_color table_view_border_color transparent;
+.table-view.column-grid-lines > .column-header-background > .nested-column-header > .table-column {
+    -fx-border-color: transparent table_view_border_color transparent transparent;
     -fx-border-width: 1px;
-    -fx-border-insets: -1px 0px 0px -1px;
+}
+
+.table-view.column-grid-lines > .column-header-background > * {
+    -fx-border-insets: 0 0 1 0, 0 0 0 0;
+    -fx-border-width: 0 0 1 0, 0 0 1 0;
+    -fx-border-color: table_view_border_color, derive(table_view_border_color, 20%);
 }
 
 .table-view.column-grid-lines > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell {
     -fx-border-color: transparent table_view_border_color transparent transparent;
     -fx-border-width: 1px;
-    -fx-border-insets: -1px 0px -1px -1px;
+    -fx-border-insets: 0px 0px 0px 0px;
+}
+
+/* Header Grid Lines */
+
+.table-view.column-grid-lines > .column-header-background > .nested-column-header > .nested-column-header > .column-header.table-column {
+    -fx-border-color: table_view_border_color table_view_border_color transparent transparent;
+    -fx-border-width: 1px;
+    -fx-border-insets: -1 0 0 0;
+}
+
+.table-view.column-grid-lines > .column-header-background > .nested-column-header > .column-header.table-column {
+    -fx-border-color: table_view_border_color table_view_border_color transparent transparent;
+    -fx-border-width: 1px;
+    -fx-border-insets: -1 0 0 0;
 }
 
 /*******************************************************************************
@@ -1981,7 +1999,9 @@ TextField {
     -fx-padding: 0.0em 0.0416667em 0.0em 0.0416667em; /* 0 0.571429 0 0.571429 */
 }
 
-.tree-table-view > .column-header-background > * {
+/* Header with bottom border */
+.tree-table-view > .column-header-background > .nested-column-header,
+.tree-table-view > .column-header-background > .filler {
     -fx-background-color: table_background_color;
     -fx-border-insets: 0 0 0 0;
     -fx-border-width: 0 0 1 0;
@@ -2017,7 +2037,6 @@ TextField {
     -fx-border-width: 1px;
 }
 
-
 .tree-table-view.column-grid-lines > .column-header-background > * {
     -fx-border-insets: 0 0 1 0, 0 0 0 0;
     -fx-border-width: 0 0 1 0, 0 0 1 0;
@@ -2028,6 +2047,20 @@ TextField {
     -fx-border-color: transparent table_border_color transparent transparent;
     -fx-border-width: 1px;
     -fx-border-insets: 0px 0px 0px 0px;
+}
+
+/* Header Grid Lines */
+
+.tree-table-view.column-grid-lines > .column-header-background > .nested-column-header > .nested-column-header > .column-header.table-column {
+    -fx-border-color: table_border_color table_border_color transparent transparent;
+    -fx-border-width: 1px;
+    -fx-border-insets: -1 0 0 0;
+}
+
+.tree-table-view.column-grid-lines > .column-header-background > .nested-column-header > .column-header.table-column {
+    -fx-border-color: table_border_color table_border_color transparent transparent;
+    -fx-border-width: 1px;
+    -fx-border-insets: -1 0 0 0;
 }
 
 /*******************************************************************************

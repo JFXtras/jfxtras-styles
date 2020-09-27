@@ -28,6 +28,10 @@ public class JMetroStyleClass {
      */
     public static final String LIGHT_BUTTONS = "light";
 
+    /*===========================================================================*/
+    /*                      Table like controls StyleClasses                     */
+    /*===========================================================================*/
+
     /**
      * StyleClass that defines an alternate style for TableView, TreeTableView, TreeView and ListViews. With this style these
      * controls will have their rows with alternate colors (i.e. one color for even rows another color for odd rows).
@@ -36,6 +40,9 @@ public class JMetroStyleClass {
      */
     public static final String ALTERNATING_ROW_COLORS = "alternating-row-colors";
 
+    /**
+     * Styleclass that adds grid lines to table like controls
+     */
     public static final String TABLE_GRID_LINES = "column-grid-lines";
 
     /***************************************************************************
