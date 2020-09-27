@@ -99,6 +99,9 @@ public class JMetro {
      * Alternatively, if this property is set to false (the default), you can add the style class ".background" to the
      * Panes that are supposed to be in the background of your application. They will then automatically change their
      * background color according to the {@link #style} property value.
+     *
+     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
+     * instead.
      */
     private BooleanProperty automaticallyColorPanes = new SimpleBooleanProperty(false) {
         @Override
@@ -259,8 +262,22 @@ public class JMetro {
     public void setParent(Parent parent) { this.parent.set(parent); }
 
     // --- automatically color panes
+    /**
+     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
+     * instead.
+     */
     public boolean isAutomaticallyColorPanes() { return automaticallyColorPanes.get(); }
+
+    /**
+     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
+     * instead.
+     */
     public BooleanProperty automaticallyColorPanesProperty() { return automaticallyColorPanes; }
+
+    /**
+     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
+     * instead.
+     */
     public void setAutomaticallyColorPanes(boolean automaticallyColorPanes) { this.automaticallyColorPanes.set(automaticallyColorPanes); }
 }
 
