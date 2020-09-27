@@ -46,7 +46,7 @@ public class TableViewWithSubheadersSample extends Application {
         Scene scene = new Scene(vbox);
         stage.setTitle("Table View  With Subheaders Sample");
         stage.setWidth(650);
-        stage.setHeight(450);
+        stage.setHeight(800);
 
         final Label header = new Label("Table View");
         header.setPadding(new Insets(0, 0, 0, 5));
