@@ -1727,17 +1727,14 @@ TextField {
 
 /********************* TableView with column grid lines  **********************/
 
-.table-view.column-grid-lines > .column-header-background > .nested-column-header > .table-column {
-    -fx-border-color: transparent table_view_border_color transparent transparent;
-    -fx-border-width: 1px;
-}
-
+/* Increase header bottom border "thickness" */
 .table-view.column-grid-lines > .column-header-background > * {
     -fx-border-insets: 0 0 1 0, 0 0 0 0;
     -fx-border-width: 0 0 1 0, 0 0 1 0;
     -fx-border-color: table_view_border_color, derive(table_view_border_color, 20%);
 }
 
+/* table body */
 .table-view.column-grid-lines > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell {
     -fx-border-color: transparent table_view_border_color transparent transparent;
     -fx-border-width: 1px;
@@ -1745,13 +1742,7 @@ TextField {
 }
 
 /* Header Grid Lines */
-
-.table-view.column-grid-lines > .column-header-background > .nested-column-header > .nested-column-header > .column-header.table-column {
-    -fx-border-color: table_view_border_color table_view_border_color transparent transparent;
-    -fx-border-width: 1px;
-    -fx-border-insets: -1 0 0 0;
-}
-
+.table-view.column-grid-lines > .column-header-background > .nested-column-header > .nested-column-header > .column-header.table-column,
 .table-view.column-grid-lines > .column-header-background > .nested-column-header > .column-header.table-column {
     -fx-border-color: table_view_border_color table_view_border_color transparent transparent;
     -fx-border-width: 1px;
@@ -2032,17 +2023,14 @@ TextField {
 
 /********************* TreeTableView with column grid lines  **********************/
 
-.tree-table-view.column-grid-lines > .column-header-background > .nested-column-header > .table-column {
-    -fx-border-color: transparent table_border_color transparent transparent;
-    -fx-border-width: 1px;
-}
-
+/* Increase header bottom border "thickness" */
 .tree-table-view.column-grid-lines > .column-header-background > * {
     -fx-border-insets: 0 0 1 0, 0 0 0 0;
     -fx-border-width: 0 0 1 0, 0 0 1 0;
     -fx-border-color: table_border_color, derive(table_border_color, 20%);
 }
 
+/* table body */
 .tree-table-view.column-grid-lines > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell {
     -fx-border-color: transparent table_border_color transparent transparent;
     -fx-border-width: 1px;
@@ -2050,13 +2038,7 @@ TextField {
 }
 
 /* Header Grid Lines */
-
-.tree-table-view.column-grid-lines > .column-header-background > .nested-column-header > .nested-column-header > .column-header.table-column {
-    -fx-border-color: table_border_color table_border_color transparent transparent;
-    -fx-border-width: 1px;
-    -fx-border-insets: -1 0 0 0;
-}
-
+.tree-table-view.column-grid-lines > .column-header-background > .nested-column-header > .nested-column-header > .column-header.table-column,
 .tree-table-view.column-grid-lines > .column-header-background > .nested-column-header > .column-header.table-column {
     -fx-border-color: table_border_color table_border_color transparent transparent;
     -fx-border-width: 1px;
