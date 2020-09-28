@@ -2,8 +2,6 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 <?scenebuilder-stylesheet JMetroLightTheme.css?>
 
 <!--
@@ -33,7 +31,9 @@
   ~  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500" styleClass="background" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0"
+            prefWidth="500" styleClass="background">
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Text Field" />
 
     <Label layoutX="43.0" layoutY="165.0" styleClass="item-title" text="Normal" />

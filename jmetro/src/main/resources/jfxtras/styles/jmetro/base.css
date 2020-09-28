@@ -872,7 +872,7 @@ Button {
  *                                                                             *
  ******************************************************************************/
 
-.text-input{
+.text-input {
     -fx-background-radius: 0, 0;
 
     -fx-background-color: border_color, text_input_background_color;

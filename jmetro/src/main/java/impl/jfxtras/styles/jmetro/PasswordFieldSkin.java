@@ -30,7 +30,7 @@ package impl.jfxtras.styles.jmetro;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class PasswordFieldSkin extends TextFieldWithButtonSkin{
+public class PasswordFieldSkin extends TextFieldWithButtonSkin {
     private boolean isMaskTextDisabled = false;
 
     public PasswordFieldSkin(TextField textField) {
