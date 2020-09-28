@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011-2018 JFXtras
+ * Copyright (c) 2011-2020 JFXtras
  *  All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,7 @@ package impl.jfxtras.styles.jmetro;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class PasswordFieldSkin extends TextFieldWithButtonSkin{
+public class PasswordFieldSkin extends TextFieldWithButtonSkin {
     private static final char BULLET = '\u25cf';
 
     private boolean isMaskTextDisabled = false;
