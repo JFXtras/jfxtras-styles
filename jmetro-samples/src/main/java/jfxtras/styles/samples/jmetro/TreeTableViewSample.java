@@ -3,6 +3,7 @@ package jfxtras.styles.samples.jmetro;
 import javafx.application.Application;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
@@ -147,6 +148,7 @@ public class TreeTableViewSample extends Application {
         jmetroStyleComboBox.setValue(STARTING_STYLE);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
+        controlsHBox.setAlignment(Pos.CENTER_LEFT);
         controlsHBox.getChildren().addAll(jmetroStyleComboBox, cellSelectionCheckBox, tableButtonCheckBox, alternatingRowColors, columnGridLines);
         sceneRoot.setBottom(controlsHBox);
 
