@@ -1884,6 +1884,10 @@ TextField {
     -fx-background-color: transparent;
 }
 
+.tree-table-view > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: collapse_expand_arrow_color;
+}
+
 .tree-table-cell {
     -fx-padding: 0.5em 0 0.5em 0.333333em; /* 6 0 6 4 */
 }

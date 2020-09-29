@@ -544,6 +544,7 @@ Text {
     table_text_color: #fff;
     table_text_selected_color: #fff;
 
+    collapse_expand_arrow_color: table_text_color;
     sort_arrow_color: table_text_color;
 
     table_column_vline_color: #3e3e3e;

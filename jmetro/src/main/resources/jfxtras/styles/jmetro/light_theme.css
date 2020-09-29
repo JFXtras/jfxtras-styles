@@ -530,6 +530,7 @@ Text {
     table_text_color: #111;
     table_text_selected_color: #111;
 
+    collapse_expand_arrow_color: table_text_color;
     sort_arrow_color: table_text_color;
 
     table_column_vline_color: #e6e6e6;

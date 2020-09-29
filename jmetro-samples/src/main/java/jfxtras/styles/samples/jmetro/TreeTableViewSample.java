@@ -19,7 +19,7 @@ import static jfxtras.styles.jmetro.JMetroStyleClass.addIfNotPresent;
 
 public class TreeTableViewSample extends Application {
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STARTING_STYLE = Style.DARK;
 
     List<Employee> employees = Arrays.asList(
             new Employee("Ethan Williams", "ethan.williams@example.com", "25", "Manager", "San Francisco"),
@@ -49,8 +49,7 @@ public class TreeTableViewSample extends Application {
 
     @Override
     public void start(Stage stage) {
-        Style startingStyle = Style.LIGHT;
-        JMetro jMetro = new JMetro(startingStyle);
+        JMetro jMetro = new JMetro(STARTING_STYLE);
 
         System.setProperty("prism.lcdtext", "false");
 
@@ -113,15 +112,11 @@ public class TreeTableViewSample extends Application {
         controlsHBox.setSpacing(10);
 
         CheckBox cellSelectionCheckBox = new CheckBox("Cell Selection");
-        cellSelectionCheckBox.setOnAction(event -> {
-            treeTableView.getSelectionModel().setCellSelectionEnabled(cellSelectionCheckBox.isSelected());
-        });
+        cellSelectionCheckBox.setOnAction(event -> treeTableView.getSelectionModel().setCellSelectionEnabled(cellSelectionCheckBox.isSelected()));
         cellSelectionCheckBox.setSelected(treeTableView.getSelectionModel().isCellSelectionEnabled());
 
         CheckBox tableButtonCheckBox = new CheckBox("Table Menu Button");
-        tableButtonCheckBox.setOnAction(event -> {
-            treeTableView.setTableMenuButtonVisible(tableButtonCheckBox.isSelected());
-        });
+        tableButtonCheckBox.setOnAction(event -> treeTableView.setTableMenuButtonVisible(tableButtonCheckBox.isSelected()));
         tableButtonCheckBox.setSelected(treeTableView.isTableMenuButtonVisible());
 
         CheckBox alternatingRowColors = new CheckBox("Alternating Row Colors");
@@ -149,7 +144,7 @@ public class TreeTableViewSample extends Application {
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
         jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
-        jmetroStyleComboBox.setValue(startingStyle);
+        jmetroStyleComboBox.setValue(STARTING_STYLE);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
         controlsHBox.getChildren().addAll(jmetroStyleComboBox, cellSelectionCheckBox, tableButtonCheckBox, alternatingRowColors, columnGridLines);
