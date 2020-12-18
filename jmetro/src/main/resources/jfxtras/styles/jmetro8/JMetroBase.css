@@ -745,6 +745,10 @@
     -fx-background-color: accent_color;
 }
 
+.text-field:readonly {
+	-right-button-visible: false;
+}
+
 /*******************************************************************************
  *                                                                             *
  * Menu Button                                                                 *
