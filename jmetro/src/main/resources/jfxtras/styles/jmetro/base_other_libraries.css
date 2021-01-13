@@ -37,7 +37,7 @@
  ******************************************************************************/
 
 .ListSpinner {
-    -fx-skin: "impl.jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
+    -fx-skin: "jfxtras.internal.scene.control.skin.ListSpinnerSkin";
     -fx-background-color: #f0f0f0;
     -fx-background-insets: 0 0 0 0;
     -fx-background-radius: 0;
