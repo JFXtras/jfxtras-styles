@@ -5,26 +5,10 @@ JavaFX themes / styles that can be used to give applications a different look an
 
 
 ## JMetro
-
-<div style="margin: 0 40px;">
-
 ![Sample CAD app using JMetro](./Hero-model-view-1024x555.png)
-
-</div>
-<div style="margin: 0 40px; display: flex">
-<div style="display: inline-block;">
-
 ![Sample DansoftOnwer FXTaskbarProgressBar](./JMetroSample-DansoftOwner_FXTaskbarProgressBar.jpg)
 
-</div>
-<div style="display: inline-block; width: 50%; margin: auto 20px; ">
-
-![Sample KEITHAYA Tutorial youtube](./JMetroSample-KEITHAYA_Tutorial.jpg)
-
-</div>
-</div>
-
-
+### Documentation 
 Documentation of JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
 
 ### Getting JMetro
