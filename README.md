@@ -21,8 +21,9 @@ We have two important branches:
 * **Master** -> JavaFX 8 / Java 8  
 * **11** -> JavaFX 9 and above / Java 9 and above 
 
-The 11 branch is being tested using JavaFX 11.  
-If you want to quickly see JMetro in action you can run one of the samples from the jmetro-samples subproject.
+The 11 branch is being tested using JavaFX 11.
+
+The jmetro-samples subproject has samples that you can run and check out how to use JMetro.
 
 ### Pull Requests (PR)
 We welcome contributions via PR.  
