@@ -5,7 +5,7 @@ JavaFX themes / styles that can be used to give applications a different look an
 
 
 ## JMetro
-![Sample CAD app using JMetro](./Hero-model-view-1024x555.png)
+![Sample CAD app using JMetro](./Hero-model-view-1024x555(2).png)
 ![Sample DansoftOnwer FXTaskbarProgressBar](./JMetroSample-DansoftOwner_FXTaskbarProgressBar.jpg)
 
 ### Documentation 
