@@ -12,26 +12,30 @@ JavaFX themes / styles that can be used to give applications a different look an
 Documentation of JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
 
 ### Getting JMetro
-You can download the jar from the [releases tab](https://github.com/JFXtras/jfxtras-styles/releases) or get it through
-JCenter or Maven Central. 
+You can get the jar from Maven Central or download it from the [releases tab](https://github.com/JFXtras/jfxtras-styles/releases)  
 
 ### Source code
 We have two important branches:
 
-* **Master** -> JavaFX 8 / Java 8  
-* **11** -> JavaFX 9 and above / Java 9 and above 
+* **master** -> JavaFX 11 and above / Java 11 and above (actively developed branch)
+* **jdk-8** -> JavaFX 8 / Java 8 (maintenance mode, no active development is ongoing) 
 
-The 11 branch is being tested using JavaFX 11.
+The master branch is being tested using JavaFX 11.
 
 The jmetro-samples subproject has samples that you can run and check out how to use JMetro.
 
+### Java 8 version
+The "jdk-8" branch has the code for versions 8 of JMetro which are meant to run with Java 8. It is in maintenance mode, 
+no active development is ongoing. If you want me to add features or make backports from the "master" branch please consider
+sponsoring those changes.
+
 ### Pull Requests (PR)
 We welcome contributions via PR.  
-Before submitting a PR please, please file an issue for prior discussion. This will avoid you wasting time with a PR that
+Before submitting a PR, please file an issue for prior discussion. This will avoid you wasting time with a PR that
 might not be approved because for instance might be outside the intended scope of the project.
 
 ### Feedback request
-Please send pictures of your application that is using JMetro, or a site that shows your application. This is very important for us
+Please show pictures of your application that is using JMetro or share it through social media. This is very important for us
 to know how users are effectively using it and make adjustments accordingly to make JMetro better.  And, only if you allow it, to showcase example uses.    
 Seeing JMetro get used also always motivates me to keep working on it.
 
