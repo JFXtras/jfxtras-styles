@@ -10,7 +10,7 @@ javafx {
 
 /* Controls that have cells */
 //mainClassName = 'jfxtras.styles.samples.jmetro.TableViewSample'
-mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
+//mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewWithSubheaders'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TableViewWithSubheadersSample'
@@ -38,6 +38,7 @@ mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch'
 //mainClassName = 'jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldDarkStyleIssue'
+mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroAppliedToParent'
 
 dependencies {
     compile project(':jmetro')

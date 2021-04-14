@@ -51,6 +51,13 @@ public class JMetroStyleClass {
      *                                                                         *
      **************************************************************************/
 
+    /**
+     * Adds a style class to a List if it is not already there.
+     * The List is usually the styleClass collection of a JavaFX Node.
+     *
+     * @param collection the collection of styleclasses
+     * @param styleclass the styleclass to add
+     */
     public static void addIfNotPresent(List<String> collection, String styleclass) {
         if (!collection.contains(styleclass)) {
             collection.add(styleclass);

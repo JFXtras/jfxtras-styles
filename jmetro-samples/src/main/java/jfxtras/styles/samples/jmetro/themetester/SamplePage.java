@@ -480,6 +480,7 @@ public class SamplePage extends GridPane {
                 withState(cp9, "focused"),
                 withState(cp10,"disabled"));
 
+        // Menu
         MenuButton mb1 = new MenuButton();
         mb1.getItems().addAll(createMenuItems(20));
         mb1.setText("right");

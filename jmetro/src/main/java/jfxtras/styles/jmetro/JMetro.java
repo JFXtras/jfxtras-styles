@@ -75,6 +75,8 @@ public class JMetro {
             }
             scene.set(null);
 
+            JMetroStyleClass.addIfNotPresent(get().getStyleClass(), "root");
+
             reApplyTheme();
         }
     };
