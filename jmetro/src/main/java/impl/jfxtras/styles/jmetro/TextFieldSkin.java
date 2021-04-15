@@ -48,5 +48,4 @@ public class TextFieldSkin extends TextFieldWithButtonSkin {
     {
         getSkinnable().setText("");
     }
-
 }

@@ -942,9 +942,9 @@ TextField {
 
 .text-field > .right-button {
     -fx-cursor: default;
-    
+
     -fx-background-color: transparent;
-	-fx-background-insets: -0.3333333em -0.5833333em -0.3333333em -0.5833333em; /* 4 7 4 7 px in em */
+    -fx-background-insets: -0.3333333em -0.5833333em -0.3333333em -0.5833333em; /* 4 7 4 7 px in em */
 }
 
 .text-field > .right-button:pressed {
