@@ -929,6 +929,10 @@ TextField {
     -right-button-visible: true;
 }
 
+.text-field {
+    -fx-padding: 0.3333333em 3em 0.3333333em 0.5833333em;
+}
+
 .text-field > .right-button > .right-button-graphic {
     -fx-shape: "M221.738,305.873l6.135,6.16l-2.875,2.863l-6.135-6.159l-6.263,6.237l-2.864-2.875l6.263-6.238l-6.177-6.202l2.875-2.863l6.177,6.201l6.244-6.22l2.864,2.876L221.738,305.873z";
 
@@ -936,15 +940,19 @@ TextField {
     -fx-background-color: graphic_color;
 }
 
-.text-field > .right-button{
+.text-field > .right-button {
     -fx-cursor: default;
-
-    -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
-    -fx-background-color: background_focused_color;  /* We must give it a color so that it reacts to the mouse */
+    
+    -fx-background-color: transparent;
+	-fx-background-insets: -0.3333333em -0.5833333em -0.3333333em -0.5833333em; /* 4 7 4 7 px in em */
 }
 
-.text-field > .right-button:hover > .right-button-graphic {
+.text-field > .right-button:pressed {
     -fx-background-color: accent_color;
+}
+
+.text-field > .right-button:pressed > .right-button-graphic {
+    -fx-background-color: white;
 }
 
 /*******************************************************************************
@@ -959,22 +967,10 @@ TextField {
     -right-button-visible: true;
 }
 
-.password-field > .right-button {
-    -fx-padding: 0 0.166667em 0 0.166667em;
-}
-
 .password-field > .right-button > .right-button-graphic {
-    -fx-shape            : "M307.688,399.564c0,1.484-1.203,2.688-2.688,2.688c-1.484,0-2.688-1.203-2.688-2.688s1.203-2.688,2.688-2.688C306.484,396.876,307.688,398.08,307.688,399.564z M297.5,399h2.5c0,0,1.063-4,5-4c3.688,0,5,4,5,4h2.5c0,0-2.063-6.5-7.5-6.5C299,392.5,297.5,399,297.5,399z";
+    -fx-shape: "M307.688,399.564c0,1.484-1.203,2.688-2.688,2.688c-1.484,0-2.688-1.203-2.688-2.688s1.203-2.688,2.688-2.688C306.484,396.876,307.688,398.08,307.688,399.564z M297.5,399h2.5c0,0,1.063-4,5-4c3.688,0,5,4,5,4h2.5c0,0-2.063-6.5-7.5-6.5C299,392.5,297.5,399,297.5,399z";
     -fx-scale-shape: false;
     -fx-background-color: #111;
-}
-
-.password-field > .right-button:pressed {
-    -fx-background-color: accent_color;
-}
-
-.password-field > .right-button:pressed > .right-button-graphic {
-    -fx-background-color: white;
 }
 
 /*******************************************************************************
@@ -2249,7 +2245,7 @@ TextField {
 .check-menu-item:checked > .left-container > .check {
     -fx-shape: "M17.939,5.439L7.5,15.889l-5.439-5.449l0.879-0.879L7.5,14.111 l9.561-9.551L17.939,5.439z";
 
-    -fx-padding: 0.416667em 0.583333em 0.416667em 0.583333em;; /* 5 7 5 7 */
+    -fx-padding: 0.416667em 0.583333em 0.416667em 0.583333em; /* 5 7 5 7 */
     -fx-scale-shape: true;
 }
 

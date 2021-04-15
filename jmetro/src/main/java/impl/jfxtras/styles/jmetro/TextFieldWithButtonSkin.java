@@ -211,10 +211,10 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
 
         final double clearGraphicWidth = snapSizeX(rightButtonGraphic.prefWidth(-1));
         final double clearButtonWidth = rightButton.snappedLeftInset() + clearGraphicWidth + rightButton.snappedRightInset();
-
+        
         rightButton.resize(clearButtonWidth, h);
         positionInArea(rightButton,
-                (x+w) - clearButtonWidth, y,
+                (x+w) + textField.snappedLeftInset() + textField.snappedRightInset() - (h + textField.snappedTopInset() + textField.snappedBottomInset()), y,
                 clearButtonWidth, h, 0, HPos.CENTER, VPos.CENTER);
     }
 
