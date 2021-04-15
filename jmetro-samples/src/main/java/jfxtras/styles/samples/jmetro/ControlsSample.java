@@ -27,7 +27,6 @@
 
 package jfxtras.styles.samples.jmetro;
 
-
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -42,7 +41,6 @@ import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.JMetroStyleClass;
 import jfxtras.styles.jmetro.Style;
-import org.scenicview.ScenicView;
 
 public class ControlsSample extends Application {
     private static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
@@ -74,7 +72,7 @@ public class ControlsSample extends Application {
 
     private static final String COLOR_PICKER_RESOURCE = "JMetro ColorPicker.fxml";
 
-    static final private String RESOURCE = TOGGLE_SWITCH_RESOURCE;
+    static final private String RESOURCE = DATE_PICKER_RESOURCE;
     static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override

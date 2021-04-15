@@ -1371,6 +1371,9 @@ TextField {
     -fx-font-size: 0.75em;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: text_color;
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
 }
 
 .date-picker-popup > * > .day-name-cell {

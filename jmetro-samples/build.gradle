@@ -31,14 +31,15 @@ javafx {
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.MDL2IconFontSample'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.ControlsSample'
 //mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 //mainClassName = 'jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch'
 //mainClassName = 'jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug'
 //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldDarkStyleIssue'
-mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroAppliedToParent'
+//mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroAppliedToParent'
+//mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroDirectoryChooserTest'
 
 dependencies {
     compile project(':jmetro')
