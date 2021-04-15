@@ -44,7 +44,7 @@ public class TextFieldSkin extends TextFieldWithButtonSkin {
         });
     }
 
-    protected void onRightButtonPressed()
+    protected void onRightButtonReleased()
     {
         getSkinnable().setText("");
     }
