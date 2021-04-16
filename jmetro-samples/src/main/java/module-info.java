@@ -22,5 +22,5 @@ module org.jfxtras.styles.samples.jmetro {
     opens jfxtras.styles.samples.jmetro.themetester;
 
     /* Scenic View */
-    requires org.scenicview.scenicview;
+//    requires org.scenicview.scenicview;
 }

@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
 import org.controlsfx.control.ToggleSwitch;
-import org.scenicview.ScenicView;
+//import org.scenicview.ScenicView;
 
 public class ToggleSwitchThumbDisplacementBug extends Application {
 

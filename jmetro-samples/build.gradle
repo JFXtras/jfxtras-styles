@@ -8,38 +8,41 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web', 'javafx.graphics' ]
 }
 
-/* Controls that have cells */
-//mainClassName = 'jfxtras.styles.samples.jmetro.TableViewSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewWithSubheaders'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TableViewWithSubheadersSample'
+application {
+    /* Controls that have cells */
+    mainClassName = 'jfxtras.styles.samples.jmetro.TableViewSample'
+    //mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.TreeTableViewSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewWithSubheaders'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TableViewWithSubheadersSample'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.AutoColorPanesSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.PanesWithBackgroundStyleClassSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.AutoColorPanesSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.PanesWithBackgroundStyleClassSample'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.TabPaneWithUnderlineStyleSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TextNodesSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.StatusBarSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.ToolbarWithControlsSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSimpleSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldTextSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TabPaneWithUnderlineStyleSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TextNodesSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.StatusBarSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.ToolbarWithControlsSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.SplitPaneSimpleSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldTextSample'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
+    //mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.DialogSample'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.MDL2IconFontSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.MDL2IconFontSample'
 
-mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.ControlsSample'
-//mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+    //mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.ControlsSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
-//mainClassName = 'jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch'
-//mainClassName = 'jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug'
-//mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldDarkStyleIssue'
-//mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroAppliedToParent'
-//mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroDirectoryChooserTest'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.TextFieldDarkStyleIssue'
+    //mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroAppliedToParent'
+    //mainClassName = 'org.jfxtras.styles.samples.jmetro/jfxtras.styles.samples.jmetro.JMetroDirectoryChooserTest'
+
+}
 
 dependencies {
     compile project(':jmetro')

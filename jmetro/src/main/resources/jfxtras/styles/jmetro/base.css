@@ -1631,7 +1631,7 @@ TextField {
 }
 
 /* hover row (row selection mode) */
-.table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:hover {
+.table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:filled:hover {
     -fx-background-color: cell_hover_color;
 }
 
