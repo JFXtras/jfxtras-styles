@@ -2,7 +2,7 @@ plugins {
     id 'signing'
     id "java-library"
     id "maven-publish"
-    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
@@ -33,7 +33,7 @@ jar {
 }
 
 task javadocJar(type: Jar) {
-    classifier = 'javadoc'
+    getArchiveClassifier().set('javadoc')
     from javadoc
 }
 
