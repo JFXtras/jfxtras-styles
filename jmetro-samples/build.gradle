@@ -10,14 +10,13 @@ javafx {
 
 application {
     /* Controls that have cells */
-    mainClass.set('jfxtras.styles.samples.jmetro.TableViewSample')
+//    mainClass.set('jfxtras.styles.samples.jmetro.TableViewSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeViewSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewWithSubheaders')
     //mainClass.set('jfxtras.styles.samples.jmetro.TableViewWithSubheadersSample')
 
-    //mainClass.set('jfxtras.styles.samples.jmetro.AutoColorPanesSample')
-    //mainClass.set('jfxtras.styles.samples.jmetro.PanesWithBackgroundStyleClassSample')
+//    mainClass.set('jfxtras.styles.samples.jmetro.PanesWithBackgroundStyleClassSample')
 
     //mainClass.set('jfxtras.styles.samples.jmetro.TabPaneWithUnderlineStyleSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TextNodesSample')
@@ -33,14 +32,14 @@ application {
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ControlsSample')
-    //mainClass.set('jfxtras.styles.samples.jmetro.themetester.ThemeTester')
+//    mainClass.set('jfxtras.styles.samples.jmetro.themetester.ThemeTester')
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException')
-    //mainClass.set('jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch')
+    mainClass.set('jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch')
     //mainClass.set('jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug')
     //mainClass.set('jfxtras.styles.samples.jmetro.TextFieldDarkStyleIssue')
     //mainClass.set('jfxtras.styles.samples.jmetro.JMetroAppliedToParent')
-    //mainClass.set('jfxtras.styles.samples.jmetro.JMetroDirectoryChooserTest')
+//    mainClass.set('jfxtras.styles.samples.jmetro.JMetroDirectoryChooserTest')
 
 }
 

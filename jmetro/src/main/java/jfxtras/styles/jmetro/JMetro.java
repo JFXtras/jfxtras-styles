@@ -45,7 +45,6 @@ public class JMetro {
     private static final String BASE_STYLESHEET_URL = JMetro.class.getResource("base.css").toExternalForm();
     private static final String BASE_OTHER_LIBRARIES_STYLESHEET_URL = JMetro.class.getResource("base_other_libraries.css").toExternalForm();
     private static final String BASE_EXTRAS_STYLESHEET_URL = JMetro.class.getResource("base_extras.css").toExternalForm();
-    private static final String PANES_STYLESHEET_URL = JMetro.class.getResource("panes.css").toExternalForm();
 
     /**
      * The {@link Scene} that JMetro will be applied to. Setting this property to a {@link Scene} instance will make
@@ -85,27 +84,6 @@ public class JMetro {
      * The {@link Style} that should be applied
      */
     private ObjectProperty<Style> style = new SimpleObjectProperty<>(Style.LIGHT) {
-        @Override
-        protected void invalidated() {
-            reApplyTheme();
-        }
-    };
-
-    /**
-     * If true, all Panes (e.g. BorderPane, AnchorPane, StackPane, Pane, etc) will automatically
-     * have their background color set. If the style is {@link Style#DARK DARK} the background will be dark (like black),
-     * if the style is {@link Style#LIGHT LIGHT} the background will be light (like white).
-     * This has the disadvantage that if you have custom controls that have Panes as intermediate children, you'll
-     * usually need to redefine their background to transparent or else you might get whitish/blackish background
-     * patches in your custom controls.
-     * Alternatively, if this property is set to false (the default), you can add the style class ".background" to the
-     * Panes that are supposed to be in the background of your application. They will then automatically change their
-     * background color according to the {@link #style} property value.
-     *
-     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
-     * instead.
-     */
-    private BooleanProperty automaticallyColorPanes = new SimpleBooleanProperty(false) {
         @Override
         protected void invalidated() {
             reApplyTheme();
@@ -164,7 +142,6 @@ public class JMetro {
             // Remove existing JMetro style stylesheets that are configurable
             stylesheetsList.remove(Style.LIGHT.getStyleStylesheetURL());
             stylesheetsList.remove(Style.DARK.getStyleStylesheetURL());
-            stylesheetsList.remove(PANES_STYLESHEET_URL);
 
             int baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
 
@@ -175,12 +152,6 @@ public class JMetro {
                 baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
             } else { // base stylesheets were already added
                 stylesheetsList.add(++baseStylesheetIndex, getStyle().getStyleStylesheetURL());
-            }
-
-            if (isAutomaticallyColorPanes()) {
-                if (!stylesheetsList.contains(PANES_STYLESHEET_URL)) {
-                    stylesheetsList.add(++baseStylesheetIndex, PANES_STYLESHEET_URL);
-                }
             }
         }
     }
@@ -262,24 +233,5 @@ public class JMetro {
     public Parent getParent() { return parent.get(); }
     public ObjectProperty<Parent> parentProperty() { return parent; }
     public void setParent(Parent parent) { this.parent.set(parent); }
-
-    // --- automatically color panes
-    /**
-     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
-     * instead.
-     */
-    public boolean isAutomaticallyColorPanes() { return automaticallyColorPanes.get(); }
-
-    /**
-     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
-     * instead.
-     */
-    public BooleanProperty automaticallyColorPanesProperty() { return automaticallyColorPanes; }
-
-    /**
-     * @deprecated This property has been deprecated and will be removed soon in a later version. Use {@link JMetroStyleClass#BACKGROUND}
-     * instead.
-     */
-    public void setAutomaticallyColorPanes(boolean automaticallyColorPanes) { this.automaticallyColorPanes.set(automaticallyColorPanes); }
 }
 
