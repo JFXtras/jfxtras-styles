@@ -1833,11 +1833,9 @@ TextField {
 .tree-view .tree-cell:filled:pressed,
 .tree-view .tree-cell:filled:selected:pressed,
 .tree-view .tree-cell:selected:pressed,
-.tree-view .tree-cell:pressed,
 .tree-view.alternating-row-colors .tree-cell:filled:pressed:odd,
 .tree-view.alternating-row-colors .tree-cell:filled:selected:pressed:odd,
-.tree-view.alternating-row-colors .tree-cell:selected:pressed:odd,
-.tree-view.alternating-row-colors .tree-cell:pressed:odd {
+.tree-view.alternating-row-colors .tree-cell:selected:pressed:odd {
     -fx-background-color: cell_pressed_color;
 }
 
