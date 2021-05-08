@@ -71,7 +71,8 @@
 .list-view,
 .table-view,
 .tree-view,
-.tree-table-view {
+.tree-table-view,
+.combo-box-popup {
     cell_hover_color: #515151;
     cell_pressed_color: #3e3e3e;
 

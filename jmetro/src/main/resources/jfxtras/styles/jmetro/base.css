@@ -817,20 +817,28 @@ Button {
     -fx-padding: 0.333333em 0 0.333333em 0.416667em; /* 4 0 4 5 */
 
     -fx-background-color: list_cell_color;
-}
 
-.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover{
-    -fx-background-color: list_cell_hover_color;
     -fx-text-fill: text_color;
 }
 
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover{
+    -fx-background-color: cell_hover_color;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:pressed{
+    -fx-background-color: cell_pressed_color;
+}
+
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected{
-    -fx-background-color: derive(accent_color, 90%);
-    -fx-text-fill: #111;
+    -fx-background-color: cell_selected_color;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover{
-    -fx-background-color: derive(accent_color, 70%);
+    -fx-background-color: cell_selected_hover_color;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:pressed{
+    -fx-background-color: cell_selected_pressed_color;
 }
 
 /*==========================  Editable ComboBox  =============================*/

@@ -32,10 +32,10 @@ application {
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ControlsSample')
-//    mainClass.set('jfxtras.styles.samples.jmetro.themetester.ThemeTester')
+    mainClass.set('jfxtras.styles.samples.jmetro.themetester.ThemeTester')
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException')
-    mainClass.set('jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch')
+//    mainClass.set('jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch')
     //mainClass.set('jfxtras.styles.samples.jmetro.ToggleSwitchThumbDisplacementBug')
     //mainClass.set('jfxtras.styles.samples.jmetro.TextFieldDarkStyleIssue')
     //mainClass.set('jfxtras.styles.samples.jmetro.JMetroAppliedToParent')
