@@ -12,7 +12,7 @@ application {
     /* Controls that have cells */
 //    mainClass.set('jfxtras.styles.samples.jmetro.TableViewSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewSample')
-    mainClass.set('jfxtras.styles.samples.jmetro.TreeViewSample')
+    mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewWithSubheaders')
     //mainClass.set('jfxtras.styles.samples.jmetro.TableViewWithSubheadersSample')
 
