@@ -12,7 +12,7 @@ application {
     /* Controls that have cells */
 //    mainClass.set('jfxtras.styles.samples.jmetro.TableViewSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewSample')
-    mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
+//    mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewWithSubheaders')
     //mainClass.set('jfxtras.styles.samples.jmetro.TableViewWithSubheadersSample')
 
@@ -31,7 +31,7 @@ application {
 
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
-//    mainClass.set('jfxtras.styles.samples.jmetro.ControlsSample')
+    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 //    mainClass.set('jfxtras.styles.samples.jmetro.themetester.ThemeTester')
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException')
