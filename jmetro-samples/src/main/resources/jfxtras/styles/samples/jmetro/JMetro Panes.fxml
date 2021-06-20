@@ -96,8 +96,6 @@
             <Label text="JavaFX Containers Demo" />
             <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="7.0" />
             <ComboBox fx:id="styleComboBox" prefWidth="150.0" />
-            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="8.0" />
-            <CheckBox fx:id="autoColorPanes" mnemonicParsing="false" text="Auto Color Panes" />
         </items>
       </ToolBar>
    </top>

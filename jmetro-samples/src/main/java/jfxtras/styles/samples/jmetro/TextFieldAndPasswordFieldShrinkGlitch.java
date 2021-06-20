@@ -26,7 +26,6 @@ public class TextFieldAndPasswordFieldShrinkGlitch extends Application {
 
         Scene scene = new Scene(container);
         JMetro metro = new JMetro(scene, Style.LIGHT);
-        metro.setAutomaticallyColorPanes(true);
 
         primaryStage.setScene(scene);
         primaryStage.show();
