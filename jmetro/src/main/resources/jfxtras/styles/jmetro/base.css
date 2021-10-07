@@ -896,25 +896,25 @@ Button {
     -fx-text-fill: text_color;
 }
 
-.text-input > Pane {
+.text-input.text-field > Pane,
+.text-input.password-field > Pane {
     -fx-background-color: transparent;
 }
 
 /* hover */
-.text-input:hover{
+.text-input:hover {
     -fx-background-color: border_hover_color, background_hover_color;
 }
 
 /* focused */
-.text-input:focused{
+.text-input:focused {
     -fx-background-color: accent_color, background_focused_color;
 
     -fx-text-fill: text_focused_color;
 }
 
 /* disabled */
-.text-input:disabled
-{
+.text-input:disabled {
     -fx-opacity: 1;
     -fx-background-insets: 0, 2;
     -fx-background-color: border_disabled_color, background_disabled_color;
@@ -944,7 +944,7 @@ TextField {
     -fx-background-color: graphic_color;
 }
 
-.text-field > .right-button{
+.text-field > .right-button {
     -fx-cursor: default;
 
     -fx-background-insets: -0.1666665em -0.45em -0.1666665em -0.45em; /* 4 7 4 7 -> this values are subtracted by 2px in em because of the border of the textfield */
