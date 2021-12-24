@@ -18,7 +18,7 @@ javafx {
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 dependencies {
-    implementation 'org.controlsfx:controlsfx:11.0.0'
+    compileOnly 'org.controlsfx:controlsfx:11.0.0'
 }
 
 repositories {
