@@ -11,7 +11,7 @@ javafx {
 application {
     /* Controls that have cells */
 //    mainClass.set('jfxtras.styles.samples.jmetro.TableViewSample')
-    //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewSample')
+//    mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
 //    mainClassName = 'jfxtras.styles.samples.jmetro.TreeViewSample'
     //mainClass.set('jfxtras.styles.samples.jmetro.TreeTableViewWithSubheaders')
     //mainClass.set('jfxtras.styles.samples.jmetro.TableViewWithSubheadersSample')
@@ -27,12 +27,12 @@ application {
     //mainClass.set('jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TextFieldTextSample')
 
-    //mainClass.set('jfxtras.styles.samples.jmetro.DialogSample')
+//    mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
 
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
 //    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
-//    mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+    mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException')
 //    mainClass.set('jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch')
@@ -41,7 +41,7 @@ application {
     //mainClass.set('jfxtras.styles.samples.jmetro.JMetroAppliedToParent')
 //    mainClass.set('jfxtras.styles.samples.jmetro.JMetroDirectoryChooserTest')
 
-    mainClassName = 'jfxtras.styles.samples.jmetro.DialogWithTextFieldSample'
+//    mainClassName = 'jfxtras.styles.samples.jmetro.DialogWithTextFieldSample'
 }
 
 dependencies {
