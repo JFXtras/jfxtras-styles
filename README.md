@@ -12,7 +12,19 @@ JavaFX themes / styles that can be used to give applications a different look an
 Documentation of JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
 
 ### Getting JMetro
-You can get the jar from Maven Central or download it from the [releases tab](https://github.com/JFXtras/jfxtras-styles/releases)  
+You can get the jar from Maven Central or download it from the [releases tab](https://github.com/JFXtras/jfxtras-styles/releases)
+
+```groovy
+implementation 'org.jfxtras:jmetro:11.6.15'
+```
+
+```xml
+<dependency>
+    <groupId>org.jfxtras</groupId>
+    <artifactId>jmetro</artifactId>
+    <version>11.6.15</version>
+</dependency>
+```
 
 ### Source code
 We have two important branches:
