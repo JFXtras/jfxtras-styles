@@ -46,9 +46,9 @@ public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
         track.addEventHandler(MouseEvent.MOUSE_PRESSED, this::mousePressedOnTrack);
         track.addEventHandler(MouseEvent.MOUSE_DRAGGED, this::mouseDraggedOnTrack);
         track.addEventHandler(MouseEvent.MOUSE_RELEASED, this::mouseReleasedFromTrack);
-        fill.addEventHandler(MouseEvent.MOUSE_PRESSED, this::mousePressedOnTrack);
-        fill.addEventHandler(MouseEvent.MOUSE_DRAGGED, this::mouseDraggedOnTrack);
-        fill.addEventHandler(MouseEvent.MOUSE_RELEASED, this::mouseReleasedFromTrack);
+
+        fill.setEventDispatcher(track.eventDispatcherProperty().get());
+
         thumb.addEventHandler(MouseEvent.MOUSE_PRESSED, this::mousePressedOnThumb);
         thumb.addEventHandler(MouseEvent.MOUSE_DRAGGED, this::mouseDraggedOnThumb);
         thumb.addEventHandler(MouseEvent.MOUSE_RELEASED, this::mouseReleasedFromThumb);

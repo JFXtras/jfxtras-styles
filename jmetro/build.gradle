@@ -7,7 +7,7 @@ plugins {
 
 sourceCompatibility = JavaVersion.VERSION_11
 
-version = '11.6.15'
+version = '11.6.16-SNAPSHOT'
 def versionDescription = 'JMetro'
 
 javafx {
@@ -18,7 +18,7 @@ javafx {
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 dependencies {
-    implementation 'org.controlsfx:controlsfx:11.0.0'
+    compileOnly 'org.controlsfx:controlsfx:11.0.0'
 }
 
 repositories {
