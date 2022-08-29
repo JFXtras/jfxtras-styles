@@ -27,9 +27,7 @@
 
 package jfxtras.styles.jmetro;
 
-import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
@@ -50,7 +48,7 @@ public class JMetro {
      * The {@link Scene} that JMetro will be applied to. Setting this property to a {@link Scene} instance will make
      * the {@link #parent parent} property null.
      */
-    private ObjectProperty<Scene> scene = new SimpleObjectProperty<>() {
+    private final ObjectProperty<Scene> scene = new SimpleObjectProperty<>() {
         @Override
         protected void invalidated() {
             if (get() == null) {
@@ -66,7 +64,7 @@ public class JMetro {
      * The {@link Parent} that JMetro will be applied to. Settings this property to a {@link Parent} instance will make
      * the {@link #scene scene} property null.
      */
-    private ObjectProperty<Parent> parent = new SimpleObjectProperty<>() {
+    private final ObjectProperty<Parent> parent = new SimpleObjectProperty<>() {
         @Override
         protected void invalidated() {
             if (get() == null) {
@@ -83,20 +81,20 @@ public class JMetro {
     /**
      * The {@link Style} that should be applied
      */
-    private ObjectProperty<Style> style = new SimpleObjectProperty<>(Style.LIGHT) {
+    private final ObjectProperty<Style> style = new SimpleObjectProperty<>(Style.LIGHT) {
         @Override
         protected void invalidated() {
             reApplyTheme();
         }
     };
 
-    private ObservableList<String> overridingStylesheets = FXCollections.observableArrayList();
+    private final ObservableList<String> overridingStylesheets = FXCollections.observableArrayList();
 
-    /***************************************************************************
+    /*=*************************************************************************
      *                                                                         *
      *                        Constructors                                     *
      *                                                                         *
-     **************************************************************************/
+     *************************************************************************=*/
 
     public JMetro() {
         overridingStylesheets.addListener(this::overridingStylesheetsChanged);
@@ -119,11 +117,11 @@ public class JMetro {
         this.parent.set(parent);
     }
 
-    /***************************************************************************
+    /*=*************************************************************************
      *                                                                         *
      *                           Public API                                    *
      *                                                                         *
-     **************************************************************************/
+     *************************************************************************=*/
 
     /**
      * Reapplies the theme in the specified parent or scene if the stylesheets don't exist in the stylesheets list of the
@@ -156,11 +154,11 @@ public class JMetro {
         }
     }
 
-    /***************************************************************************
+    /*=*************************************************************************
      *                                                                         *
      *                          Private API                                    *
      *                                                                         *
-     **************************************************************************/
+     *************************************************************************=*/
 
     private void addBaseStylesheets(ObservableList<String> stylesheetsList) {
         stylesheetsList.add(BASE_STYLESHEET_URL);
@@ -169,6 +167,10 @@ public class JMetro {
     }
 
     private void overridingStylesheetsChanged(ListChangeListener.Change<? extends String> changed) {
+        if (parent.get() == null && scene.get() == null) {
+            throw new NullPointerException("Scene and Parent can't be null, they must be set by the programmer");
+        }
+
         ObservableList<String> stylesheetsListBeingApplied = getAppliedStylesheetsList();
 
         // Currently this only supports adding and removing of stylesheets of the overriding stylesheets list
@@ -179,7 +181,7 @@ public class JMetro {
                 }
             }
             if (changed.wasAdded()) {
-                // For now we just add at the bottom of the list
+                // For now, we just add at the bottom of the list
                 stylesheetsListBeingApplied.addAll(changed.getAddedSubList());
             }
         }
@@ -203,11 +205,11 @@ public class JMetro {
     }
 
 
-    /***************************************************************************
+    /*=*************************************************************************
      *                                                                         *
      *                            Properties                                   *
      *                                                                         *
-     **************************************************************************/
+     *************************************************************************=*/
 
     // --- overriding stylesheets
 

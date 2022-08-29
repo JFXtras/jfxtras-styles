@@ -31,7 +31,7 @@ application {
 
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
-    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+//    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 //    mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException')
@@ -42,6 +42,11 @@ application {
 //    mainClass.set('jfxtras.styles.samples.jmetro.JMetroDirectoryChooserTest')
 
 //    mainClassName = 'jfxtras.styles.samples.jmetro.DialogWithTextFieldSample'
+
+//    mainClassName = 'jfxtras.styles.samples.jmetro.OverridingStylesheetSample'
+
+    /* Testing for errors */
+    mainClassName = 'jfxtras.styles.samples.jmetro.OverridingStylesheetsMethodException'
 }
 
 dependencies {
