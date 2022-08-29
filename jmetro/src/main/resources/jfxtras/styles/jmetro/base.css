@@ -154,7 +154,10 @@ Text {
     -fx-text-fill: text_color;
 }
 
-.button:hover, .toggle-button:hover{
+.button:hover,
+.toggle-button:hover,
+.button:focused:hover,
+.toggle-button:focused:hover {
     -fx-border-color: border_hover_color;
 }
 

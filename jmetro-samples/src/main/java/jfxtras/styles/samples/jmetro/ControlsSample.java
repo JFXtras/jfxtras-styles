@@ -45,11 +45,13 @@ import jfxtras.styles.jmetro.Style;
 public class ControlsSample extends Application {
     private static final String CHECK_BOX_RESOURCE = "JMetro CheckBox.fxml";
     private static final String CONTEXT_MENU_RESOURCE = "JMetro ContextMenu.fxml";
-    private static final String BUTTON_RESOURCE = "JMetro Button.fxml";
     private static final String RADIO_BUTTON_RESOURCE = "JMetro RadioButton.fxml";
     private static final String SCROLL_BAR_RESOURCE = "JMetro ScrollBar.fxml";
     private static final String SCROLL_PANE_RESOURCE = "JMetro ScrollPane.fxml";
+
+    private static final String BUTTON_RESOURCE = "JMetro Button.fxml";
     private static final String TOGGLE_BUTTON_RESOURCE = "JMetro ToggleButton.fxml";
+
     private static final String COMBOBOX_RESOURCE = "JMetro ComboBox.fxml";
     private static final String TOOLTIP_RESOURCE = "JMetro Tooltip.fxml";
     private static final String RATING_RESOURCE = "JMetro Rating.fxml";
@@ -72,7 +74,7 @@ public class ControlsSample extends Application {
 
     private static final String COLOR_PICKER_RESOURCE = "JMetro ColorPicker.fxml";
 
-    static final private String RESOURCE = DATE_PICKER_RESOURCE;
+    static final private String RESOURCE = BUTTON_RESOURCE;
     static final private Style STARTING_STYLE = Style.LIGHT;
 
     @Override
