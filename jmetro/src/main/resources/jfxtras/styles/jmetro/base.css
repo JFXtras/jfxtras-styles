@@ -1672,13 +1672,17 @@ TextField {
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover,
-.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover .table-cell{
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover .table-cell {
     -fx-background-color: cell_selected_hover_color;
 }
 
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected > .text,
 .table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected .table-cell > .text {
     -fx-fill: selected_text_color;
+}
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell .table-cell:selected:hover:pressed {
+    -fx-background-color: cell_selected_pressed_color;
 }
 
 /* -- when row selection mode */
@@ -1706,6 +1710,14 @@ TextField {
 
 .table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected {
     -fx-background-color: cell_selected_unfocused_color;
+}
+
+.table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover:pressed {
+    -fx-background-color: cell_selected_pressed_color;
+}
+
+.table-view:focused > .virtual-flow > .clipped-container > .sheet > .table-row-cell:selected:hover:pressed .table-cell {
+    -fx-background-color: cell_selected_pressed_color;
 }
 
 .table-row-cell {
@@ -1846,12 +1858,16 @@ TextField {
 
 /* Pressed */
 .tree-view .tree-cell:filled:pressed,
+.tree-view.alternating-row-colors .tree-cell:filled:pressed:odd {
+    -fx-background-color: cell_pressed_color;
+}
+
+/* Pressed, Selected */
 .tree-view .tree-cell:filled:selected:pressed,
 .tree-view .tree-cell:selected:pressed,
-.tree-view.alternating-row-colors .tree-cell:filled:pressed:odd,
 .tree-view.alternating-row-colors .tree-cell:filled:selected:pressed:odd,
 .tree-view.alternating-row-colors .tree-cell:selected:pressed:odd {
-    -fx-background-color: cell_pressed_color;
+    -fx-background-color: cell_selected_pressed_color;
 }
 
 /*********** Expand/Collapse icon **********/
@@ -1962,6 +1978,22 @@ TextField {
 .tree-table-view.alternating-row-colors:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:filled:selected:hover {
     -fx-background-color: cell_selected_hover_color;
     -fx-table-cell-border-color: cell_selected_hover_color;
+}
+
+/* Selected - pressed */
+
+/* - row selection mode */
+.tree-table-view:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:pressed,
+.tree-table-view.alternating-row-colors:row-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell:filled:selected:pressed {
+    -fx-background-color: cell_selected_pressed_color;
+    -fx-table-cell-border-color: cell_selected_pressed_color;
+}
+
+/* - cell selection mode */
+.tree-table-view:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:filled:selected:pressed,
+.tree-table-view.alternating-row-colors:cell-selection > .virtual-flow > .clipped-container > .sheet > .tree-table-row-cell .tree-table-cell:filled:selected:pressed {
+    -fx-background-color: cell_selected_pressed_color;
+    -fx-table-cell-border-color: cell_selected_pressed_color;
 }
 
 /* Hover */

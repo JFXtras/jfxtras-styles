@@ -32,7 +32,7 @@ application {
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
 //    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
-//    mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
+    mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException')
 //    mainClass.set('jfxtras.styles.samples.jmetro.TextFieldAndPasswordFieldShrinkGlitch')
@@ -46,7 +46,7 @@ application {
 //    mainClassName = 'jfxtras.styles.samples.jmetro.OverridingStylesheetSample'
 
     /* Testing for errors */
-    mainClassName = 'jfxtras.styles.samples.jmetro.OverridingStylesheetsMethodException'
+//    mainClassName = 'jfxtras.styles.samples.jmetro.OverridingStylesheetsMethodException'
 }
 
 dependencies {
