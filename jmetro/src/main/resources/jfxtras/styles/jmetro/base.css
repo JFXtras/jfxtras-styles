@@ -952,6 +952,10 @@ TextField {
     -right-button-visible: true;
 }
 
+TextField:readonly {
+    -right-button-visible: false;
+}
+
 .text-field > .right-button > .right-button-graphic {
     -fx-shape: "M221.738,305.873l6.135,6.16l-2.875,2.863l-6.135-6.159l-6.263,6.237l-2.864-2.875l6.263-6.238l-6.177-6.202l2.875-2.863l6.177,6.201l6.244-6.22l2.864,2.876L221.738,305.873z";
 

@@ -31,10 +31,10 @@ application {
 
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
-//    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 //    mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
-    mainClassName = 'jfxtras.styles.samples.jmetro.DatePickerAlignmentTestSample'
+//    mainClassName = 'jfxtras.styles.samples.jmetro.DatePickerAlignmentTestSample'
 
 
     //mainClass.set('jfxtras.styles.samples.jmetro.ColorPickerThrowsRuntimeException')

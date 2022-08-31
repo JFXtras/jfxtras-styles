@@ -32,7 +32,7 @@
   -->
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0"
+            prefHeight="450.0"
             prefWidth="500" styleClass="background">
     <Label layoutX="43.0" layoutY="37.0" styleClass="header" text="Text Field" />
 
@@ -44,6 +44,9 @@
 
     <Label layoutX="43.0" layoutY="291" styleClass="item-title" text="Without Right Button" />
     <TextField layoutX="43.0" layoutY="313.0"  style="-right-button-visible: false;"/>
+
+    <Label layoutX="43.0" layoutY="354" styleClass="item-title" text="Read Only" />
+    <TextField layoutX="43.0" layoutY="376.0"  editable="false" text="Sample text" />
 
     <Label layoutX="274.0" layoutY="165.0" styleClass="item-title" text="Disabled" />
     <TextField disable="true" layoutX="274.0" layoutY="188.0" text="Sample text" />
