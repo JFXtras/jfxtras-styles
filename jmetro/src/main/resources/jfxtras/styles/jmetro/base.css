@@ -1247,18 +1247,19 @@ TextField {
     -fx-background-insets: 0, 2;
 }
 
-.date-picker.combo-box-base:focused, .date-picker.combo-box-base:focused:hover {
+.date-picker.combo-box-base:focused,
+.date-picker.combo-box-base:focused:hover {
     -fx-background-color: accent_color, background_hover_color;
     -fx-background-insets: 0, 2;
 }
 
 /* "Textfield"  - most properties will be inherited by what was defined for the textfield */
 
-.date-picker > .text-field{
+.date-picker > .text-field {
     -fx-skin: "javafx.scene.control.skin.TextFieldSkin";
 }
 
-.date-picker > .text-input{
+.date-picker > .text-input {
     -fx-background-radius: 0;
     -fx-background-insets: 0;
 }
@@ -1271,15 +1272,6 @@ TextField {
 
 .date-picker > .arrow-button {
     -fx-background-color: date_picker_background_color;
-}
-
-.date-picker:focused > .arrow-button {
-    -fx-background-color: background_focused_color;
-    -fx-border-color: background_focused_color;
-}
-
-.date-picker:focused > .arrow-button > .arrow {
-    -fx-background-color: graphic_focused_color;
 }
 
 .date-picker > .arrow-button > .arrow {
