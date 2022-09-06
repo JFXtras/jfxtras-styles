@@ -55,7 +55,6 @@ When filing bugs it's most often good practice to attach a small sample app (as 
 The reason for this is the limited amount of resources and time I have and also because in the process of filing a bug, developers sometimes discover that the bug isn't in the library but somewhere else.   
 Without a small example app the issue might be closed prematurely.  
 
-
 ### Feedback request
 Please show pictures of your application that is using JMetro or share it through social media. This is very important for us
 to know how users are effectively using it and make adjustments accordingly, to make JMetro better, and, only if you allow it, to showcase example uses.    
