@@ -1,6 +1,6 @@
 plugins {
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
 javafx {
@@ -9,6 +9,8 @@ javafx {
 }
 
 application {
+    mainModule = 'org.jfxtras.styles.samples.jmetro'
+
     /* Controls that have cells */
 //    mainClass.set('jfxtras.styles.samples.jmetro.TableViewSample')
 //    mainClassName = 'jfxtras.styles.samples.jmetro.TreeTableViewSample'
@@ -27,11 +29,11 @@ application {
     //mainClass.set('jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TextFieldTextSample')
 
-//    mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
+    mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
 
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
-    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
+//    mainClassName = 'jfxtras.styles.samples.jmetro.ControlsSample'
 //    mainClassName = 'jfxtras.styles.samples.jmetro.themetester.ThemeTester'
 
 //    mainClassName = 'jfxtras.styles.samples.jmetro.DatePickerAlignmentTestSample'
