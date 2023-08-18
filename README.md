@@ -11,6 +11,20 @@ JavaFX themes / styles that can be used to give applications a different look an
 ### Documentation 
 Documentation of JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
 
+### Strengths and Key Principles
+* Modern look and feel
+* Zero tight coupling with this library:
+    * No new controls. Functionality is added "behind the curtains" to existing JavaFX controls through the Skin API
+    * Setting and unsetting is seamless and easy (only 1 line of code) even on already existing apps that don't use this theme
+* Looks integrated on Windows (80%/90% of desktop users use Windows) also works well on other OSes
+* Light and Dark versions;
+* Easily override and customize colors by overriding JavaFX CSS variables
+* Only relies on JavaFX CSS, JavaFX API and Java code (no other "foreign" technologies)
+* Samples and theme tester app on samples sub-project
+* Lots of real world, recognized Java apps already using it (NASA's applications, applications used in the White House, etc, etc)
+
+Check [documentation](https://pixelduke.com/java-javafx-theme-jmetro) for a deeper dive.
+
 ### Getting JMetro
 You can get the jar from Maven Central or download it from the [releases tab](https://github.com/JFXtras/jfxtras-styles/releases)  
 
