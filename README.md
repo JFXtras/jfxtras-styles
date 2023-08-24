@@ -23,6 +23,10 @@ Documentation of JMetro can be found in this link: [JMetro Java, Javafx theme do
 * Samples and theme tester app on samples sub-project
 * Lots of real world, recognized Java apps already using it (NASA's applications, applications used in the White House, etc, etc)
 
+This is a “pluggable” JavaFX theme. This means there’s zero coupling because this theme doesn’t define any new Controls,
+instead, it adds features to the existing JavaFX controls that you regularly use (controls from the standard JavaFX API or from known
+third party libraries) by leveraging the JavaFX Skin API.
+
 Check [documentation](https://pixelduke.com/java-javafx-theme-jmetro) for a deeper dive.
 
 ### Getting JMetro
