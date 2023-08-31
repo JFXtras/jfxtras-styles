@@ -5,12 +5,11 @@ JavaFX themes / styles that can be used to give applications a different look an
 
 
 ## JMetro
-_<ins>[Also check out [Transit Theme](https://pixelduke.com/transit-java-javafx-theme) another theme I've created that builds upon lessons
-learned while developing JMetro]</ins>_  
-
+**_<ins>[Also check out [Transit Theme](https://pixelduke.com/transit-java-javafx-theme) another theme I've created that builds upon lessons
+learned while developing JMetro]</ins>_**
+  
 ![Sample CAD app using JMetro](./Hero-model-view-1024x555(2).png)
 ![Sample DansoftOnwer FXTaskbarProgressBar](./JMetroSample-DansoftOwner_FXTaskbarProgressBar.jpg)
-
 ### Documentation 
 Documentation of JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
 
