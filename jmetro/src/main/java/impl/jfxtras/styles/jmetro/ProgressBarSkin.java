@@ -109,7 +109,7 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
 
     private Transition createAnimationForDot(Region dot, int dotNumber) {
         double controlWidth = getSkinnable().getBoundsInLocal().getWidth();
-        double firstStop = 0.6 * controlWidth;
+        double firstStop = 0.5 * controlWidth;
 
         SequentialTransition sequentialTransition = new SequentialTransition();
 
