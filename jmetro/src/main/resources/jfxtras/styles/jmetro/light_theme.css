@@ -398,7 +398,7 @@ Text {
  *                                                                             *
  ******************************************************************************/
 
-.date-picker {
+.date-picker, .date-picker-popup {
     graphic_color: #111;
     graphic_focused_color: #111;
 

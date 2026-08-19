@@ -20,17 +20,12 @@ import static jfxtras.styles.jmetro.FlatDialog.initDialogIcon;
  * @param <T> The type of the items to show to the user, and the type that is returned via Dialog.getResult() when the dialog is dismissed.
  */
 public class FlatChoiceDialog<T> extends ChoiceDialog<T> {
-    private BooleanProperty iconless = new SimpleBooleanProperty(true);
+    private final BooleanProperty iconless = new SimpleBooleanProperty(true);
 
     private boolean isResettingIcon;
 
     public FlatChoiceDialog() {
         super();
-        init();
-    }
-
-    public FlatChoiceDialog(T defaultChoice, T... choices) {
-        super(defaultChoice, choices);
         init();
     }
 

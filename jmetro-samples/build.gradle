@@ -1,10 +1,10 @@
 plugins {
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 javafx {
-    version = "11.0.2"
+    version = "25.0.4"
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.web', 'javafx.graphics' ]
 }
 
@@ -29,7 +29,7 @@ application {
     //mainClass.set('jfxtras.styles.samples.jmetro.SegmentedButtonInsideToolBarSample')
     //mainClass.set('jfxtras.styles.samples.jmetro.TextFieldTextSample')
 
-    mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
+    //mainClassName = 'jfxtras.styles.samples.jmetro.DialogSample'
 
     //mainClass.set('jfxtras.styles.samples.jmetro.MDL2IconFontSample')
 
