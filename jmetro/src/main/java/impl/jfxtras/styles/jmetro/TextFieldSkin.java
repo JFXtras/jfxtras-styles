@@ -31,7 +31,13 @@ import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.scene.control.TextField;
 
+/** Text-field skin whose right-hand button clears the text when pressed. */
 public class TextFieldSkin extends TextFieldWithButtonSkin {
+    /**
+     * Creates a skin for the given text field.
+     *
+     * @param textField the text field to skin
+     */
     public TextFieldSkin(TextField textField) {
         super(textField);
 

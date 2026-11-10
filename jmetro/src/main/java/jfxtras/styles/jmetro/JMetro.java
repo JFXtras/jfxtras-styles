@@ -96,21 +96,39 @@ public class JMetro {
      *                                                                         *
      *************************************************************************=*/
 
+    /** Creates an unattached theme using {@link Style#WIN10_LIGHT}. */
     public JMetro() {
         overridingStylesheets.addListener(this::overridingStylesheetsChanged);
     }
 
+    /**
+     * Creates an unattached theme using the specified style.
+     *
+     * @param style the Windows generation and color scheme to use
+     */
     public JMetro(Style style) {
         this();
         this.style.set(style);
     }
 
+    /**
+     * Creates and applies a theme to a scene.
+     *
+     * @param scene the scene to style
+     * @param style the Windows generation and color scheme to use
+     */
     public JMetro(Scene scene, Style style) {
         this();
         this.style.set(style);
         this.scene.set(scene);
     }
 
+    /**
+     * Creates and applies a theme to a parent and its descendants.
+     *
+     * @param parent the parent to style
+     * @param style the Windows generation and color scheme to use
+     */
     public JMetro(Parent parent, Style style) {
         this();
         this.style.set(style);

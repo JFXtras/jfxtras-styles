@@ -57,7 +57,7 @@ application {
 
 dependencies {
     implementation project(':jmetro')
-    implementation 'org.controlsfx:controlsfx:11.1.0'
+    implementation 'org.controlsfx:controlsfx:11.2.6'
 
     implementation files('lib/scenicview.jar')
 }

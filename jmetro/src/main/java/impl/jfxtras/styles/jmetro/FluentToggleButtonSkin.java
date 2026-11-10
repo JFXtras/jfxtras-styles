@@ -14,9 +14,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/** Toggle button skin with a CSS-configurable shrink animation on press. */
 public class FluentToggleButtonSkin extends ToggleButtonSkin {
     private ButtonAnimationHelper buttonAnimationHelper;
 
+    /**
+     * Creates a skin for the given toggle button.
+     *
+     * @param button the toggle button to skin
+     */
     public FluentToggleButtonSkin(ToggleButton button) {
         super(button);
 
@@ -60,6 +66,8 @@ public class FluentToggleButtonSkin extends ToggleButtonSkin {
     }
 
     /**
+     * Returns the CSS metadata supported by this skin.
+     *
      * @return The CssMetaData associated with this class, which may include the
      * CssMetaData of its super classes.
      */

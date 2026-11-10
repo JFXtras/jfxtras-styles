@@ -17,6 +17,7 @@ import javafx.util.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+/** Progress-bar skin with animated dots for indeterminate progress. */
 public class ProgressBarSkin extends SkinBase<ProgressBar> {
 
     private static final int NUMBER_DOTS = 5;
@@ -32,6 +33,7 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
     private StackPane bar;
     private StackPane track;
 
+    /** The regions used for the indeterminate progress animation. */
     protected List<Region> dots;
 
     private Animation indeterminateAnimation;
@@ -59,6 +61,7 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
         initialize();
     }
 
+    /** Creates the track, bar and dots used by the skin. */
     protected void initialize() {
         createDots();
         clip = new Rectangle();
@@ -73,6 +76,7 @@ public class ProgressBarSkin extends SkinBase<ProgressBar> {
         getChildren().addAll(dots);
     }
 
+    /** Recalculates the bar width and requests layout for determinate progress. */
     protected void updateProgress() {
         ProgressIndicator control = getSkinnable();
 

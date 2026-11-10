@@ -17,8 +17,8 @@ javafx {
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
 dependencies {
-    compileOnly 'org.controlsfx:controlsfx:11.2.3'
-    testImplementation 'org.controlsfx:controlsfx:11.2.3'
+    compileOnly 'org.controlsfx:controlsfx:11.2.6'
+    testImplementation 'org.controlsfx:controlsfx:11.2.6'
     testImplementation 'junit:junit:4.13.2'
 }
 
@@ -47,13 +47,25 @@ tasks.register('sourceJar', Jar) {
     archiveClassifier.set('sources')
 }
 
+tasks.named('assemble') {
+    dependsOn tasks.named('sourceJar'), tasks.named('javadocJar')
+}
+
+configurations {
+    signingArtifacts {
+        canBeConsumed = false
+        canBeResolved = false
+    }
+}
+
 artifacts {
-    archives sourceJar
-    archives javadocJar
+    signingArtifacts tasks.named('jar')
+    signingArtifacts tasks.named('sourceJar')
+    signingArtifacts tasks.named('javadocJar')
 }
 
 signing {
-    sign configurations.archives
+    sign configurations.signingArtifacts
 }
 
 /* Publishing */
@@ -72,10 +84,10 @@ publishing {
         maven {
             def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
             def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots"
-            url version.toString().endsWith("SNAPSHOT")? snapshotsRepoUrl : releasesRepoUrl
+            url = version.toString().endsWith("SNAPSHOT") ? snapshotsRepoUrl : releasesRepoUrl
             credentials {
-                username System.getenv('MAVEN_USERNAME')
-                password System.getenv('MAVEN_PASSWORD')
+                username = System.getenv('MAVEN_USERNAME')
+                password = System.getenv('MAVEN_PASSWORD')
             }
         }
     }
@@ -92,7 +104,7 @@ def customizePom(pom) {
 
         // add all items necessary for maven central publication
         root.children().last() + {
-            resolveStrategy = Closure.DELEGATE_FIRST
+            resolveStrategy = DELEGATE_FIRST
 
             description "A theme / look and feel for JavaFX inspired (but not a copy) by Microsoft's Fluent Design"
             name project.name
@@ -120,13 +132,11 @@ def customizePom(pom) {
     }
 }
 
-model {
-    tasks.generatePomFileForMavenJavaPublication {
-        destination = file("$buildDir/generated-pom.xml")
-    }
-    tasks.publishMavenJavaPublicationToMavenRepository {
-        dependsOn project.tasks.signArchives
-    }
+tasks.named('generatePomFileForMavenJavaPublication') {
+    destination = layout.buildDirectory.file('generated-pom.xml').get().asFile
 }
 
+tasks.named('publishMavenJavaPublicationToMavenRepository') {
+    dependsOn tasks.named('signSigningArtifacts')
+}
 

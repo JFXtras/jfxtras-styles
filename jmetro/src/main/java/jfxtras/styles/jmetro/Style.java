@@ -31,9 +31,13 @@ package jfxtras.styles.jmetro;
  * The Windows design generation and color scheme used by JMetro.
  */
 public enum Style {
+    /** Windows 10-inspired light color scheme. */
     WIN10_LIGHT("light_theme.css"),
+    /** Windows 10-inspired dark color scheme. */
     WIN10_DARK("dark_theme.css"),
+    /** Windows 11 / WinUI 3-inspired light color scheme. */
     WIN11_LIGHT("win11_light.css"),
+    /** Windows 11 / WinUI 3-inspired dark color scheme. */
     WIN11_DARK("win11_dark.css");
 
     private final String stylesheetURL;
@@ -43,9 +47,9 @@ public enum Style {
     }
 
     /**
-     * Returns the stylesheet that defines the variable override that make up this {@link Style} instance.
+     * Returns the URL of the stylesheet defining this style's palette and overrides.
      *
-     * @return returns the stylesheet that defines the variable override that make up this {@link Style} instance.
+     * @return the stylesheet URL as an external-form string
      */
     public String getStyleStylesheetURL() {
         return stylesheetURL;

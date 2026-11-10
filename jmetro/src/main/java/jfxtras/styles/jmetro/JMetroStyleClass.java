@@ -2,7 +2,12 @@ package jfxtras.styles.jmetro;
 
 import java.util.List;
 
+/** Style-class names and helpers for opting in to JMetro control variants. */
 public class JMetroStyleClass {
+
+    /** Creates a style-class helper. */
+    public JMetroStyleClass() {
+    }
 
     /***************************************************************************
      *                                                                         *

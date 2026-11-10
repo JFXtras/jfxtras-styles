@@ -14,9 +14,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/** Button skin with a CSS-configurable shrink animation on press. */
 public class FluentButtonSkin extends ButtonSkin {
     private ButtonAnimationHelper buttonAnimationHelper;
 
+    /**
+     * Creates a skin for the given button.
+     *
+     * @param button the button to skin
+     */
     public FluentButtonSkin(Button button) {
         super(button);
 
@@ -61,6 +67,8 @@ public class FluentButtonSkin extends ButtonSkin {
     }
 
     /**
+     * Returns the CSS metadata supported by this skin.
+     *
      * @return The CssMetaData associated with this class, which may include the
      * CssMetaData of its super classes.
      */

@@ -30,11 +30,17 @@ package impl.jfxtras.styles.jmetro;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+/** Password-field skin with a right-hand button for revealing masked text. */
 public class PasswordFieldSkin extends TextFieldWithButtonSkin {
     private static final char BULLET = '\u25cf';
 
     private boolean isMaskTextDisabled = false;
 
+    /**
+     * Creates a skin for the given text field.
+     *
+     * @param textField the text field to skin
+     */
     public PasswordFieldSkin(TextField textField) {
         super(textField);
     }

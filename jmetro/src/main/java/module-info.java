@@ -1,3 +1,4 @@
+/** JavaFX themes and controls styled by JMetro. */
 module org.jfxtras.styles.jmetro {
     requires transitive javafx.controls;
     requires static org.controlsfx.controls;

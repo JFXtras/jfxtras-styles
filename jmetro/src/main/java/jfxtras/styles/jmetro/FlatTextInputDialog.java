@@ -12,19 +12,26 @@ import static jfxtras.styles.jmetro.FlatDialog.initDialogIcon;
 
 /**
  * A dialog with a flat style.
- * For example, by default it will appear without a window icon (can be configured via iconless property) and without
- * a window title.
+ * The title is initially empty and a white placeholder icon is added by default.
+ * The {@link #iconlessProperty() iconless} property controls whether that icon
+ * is added again when the window's icon list changes.
  */
 public class FlatTextInputDialog extends TextInputDialog {
     private BooleanProperty iconless = new SimpleBooleanProperty(true);
 
     private boolean isResettingIcon;
 
+    /** Creates a text input dialog with an empty initial value. */
     public FlatTextInputDialog() {
         super();
         init();
     }
 
+    /**
+     * Creates a text input dialog with the specified initial value.
+     *
+     * @param defaultValue the initial text
+     */
     public FlatTextInputDialog(String defaultValue) {
         super(defaultValue);
         init();
@@ -53,6 +60,13 @@ public class FlatTextInputDialog extends TextInputDialog {
 
     // --- iconless
     public boolean isIconless() { return iconless.get(); }
+    /**
+     * Controls whether a white placeholder icon is added when the window's
+     * icons change. Initially {@code true}; changing it does not immediately
+     * alter the existing icons.
+     *
+     * @return the iconless property
+     */
     public BooleanProperty iconlessProperty() { return iconless; }
     public void setIconless(boolean iconless) { this.iconless.set(iconless); }
 }

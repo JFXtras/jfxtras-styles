@@ -14,8 +14,9 @@ import static jfxtras.styles.jmetro.FlatDialog.initDialogIcon;
 
 /**
  * A dialog with a flat style.
- * For example, by default it will appear without a window icon (can be configured via iconless property) and without
- * a window title.
+ * The title is initially empty and a white placeholder icon is added by default.
+ * The {@link #iconlessProperty() iconless} property controls whether that icon
+ * is added again when the window's icon list changes.
  *
  * @param <T> The type of the items to show to the user, and the type that is returned via Dialog.getResult() when the dialog is dismissed.
  */
@@ -24,11 +25,18 @@ public class FlatChoiceDialog<T> extends ChoiceDialog<T> {
 
     private boolean isResettingIcon;
 
+    /** Creates an initially empty choice dialog. */
     public FlatChoiceDialog() {
         super();
         init();
     }
 
+    /**
+     * Creates a choice dialog with the specified initial selection and items.
+     *
+     * @param defaultChoice the initial selection
+     * @param choices the choices presented to the user
+     */
     public FlatChoiceDialog(T defaultChoice, Collection<T> choices) {
         super(defaultChoice, choices);
         init();
@@ -57,6 +65,13 @@ public class FlatChoiceDialog<T> extends ChoiceDialog<T> {
 
     // --- iconless
     public boolean isIconless() { return iconless.get(); }
+    /**
+     * Controls whether a white placeholder icon is added when the window's
+     * icons change. Initially {@code true}; changing it does not immediately
+     * alter the existing icons.
+     *
+     * @return the iconless property
+     */
     public BooleanProperty iconlessProperty() { return iconless; }
     public void setIconless(boolean iconless) { this.iconless.set(iconless); }
 }

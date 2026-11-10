@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/** Slider skin with a filled track and an optional value popup on interaction. */
 public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
     private StackPane fill = new StackPane();
 
@@ -32,6 +33,11 @@ public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
     private static final int POPUP_DISTANCE_FROM_THUMB = 50;
     private static final Duration POPUP_FADE_DURATION = Duration.millis(200);
 
+    /**
+     * Creates a skin for the given slider.
+     *
+     * @param control the slider to skin
+     */
     public SliderSkin(Slider control) {
         super(control);
 
@@ -232,6 +238,8 @@ public class SliderSkin extends javafx.scene.control.skin.SliderSkin {
     }
 
     /**
+     * Returns the CSS metadata supported by this skin.
+     *
      * @return The CssMetaData associated with this class, which may include the
      * CssMetaData of its super classes.
      */

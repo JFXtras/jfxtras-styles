@@ -13,19 +13,32 @@ import static jfxtras.styles.jmetro.FlatDialog.initDialogIcon;
 
 /**
  * An Alert with a flat style.
- * For example, by default it will appear without a window icon (can be configured via iconless property) and without
- * a window title.
+ * The title is initially empty and a white placeholder icon is added by default.
+ * The {@link #iconlessProperty() iconless} property controls whether that icon
+ * is added again when the window's icon list changes.
  */
 public class FlatAlert extends Alert {
     private BooleanProperty iconless = new SimpleBooleanProperty(true);
 
     private boolean isResettingIcon;
 
+    /**
+     * Creates an alert of the given type.
+     *
+     * @param alertType the type of alert
+     */
     public FlatAlert(AlertType alertType) {
         super(alertType);
         init();
     }
 
+    /**
+     * Creates an alert with the specified type, content and buttons.
+     *
+     * @param alertType the type of alert
+     * @param contentText the content text
+     * @param buttons the buttons available to dismiss the alert
+     */
     public FlatAlert(AlertType alertType, String contentText, ButtonType... buttons) {
         super(alertType, contentText, buttons);
         init();
@@ -54,6 +67,13 @@ public class FlatAlert extends Alert {
 
     // --- iconless
     public boolean isIconless() { return iconless.get(); }
+    /**
+     * Controls whether a white placeholder icon is added when the window's
+     * icons change. Initially {@code true}; changing it does not immediately
+     * alter the existing icons.
+     *
+     * @return the iconless property
+     */
     public BooleanProperty iconlessProperty() { return iconless; }
     public void setIconless(boolean iconless) { this.iconless.set(iconless); }
 }

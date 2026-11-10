@@ -46,6 +46,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/** Base text-field skin with a CSS-configurable button at its right edge. */
 public class TextFieldWithButtonSkin extends TextFieldSkin{
     private static final String RIGHT_BUTTON_VISIBLE_PROPERTY_NAME = "-right-button-visible";
 
@@ -56,6 +57,7 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
     private StackPane rightButton;
     private Region rightButtonGraphic;
 
+    /** The text field associated with this skin. */
     protected TextField textField;
 
     /**************************************************************************
@@ -64,6 +66,11 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
      *                                                                        *
      *************************************************************************/
 
+    /**
+     * Creates a skin and its right-hand button for the given text field.
+     *
+     * @param textField the text field to skin
+     */
     public TextFieldWithButtonSkin(TextField textField) {
         super(textField);
 
@@ -136,6 +143,8 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
     }
 
     /**
+     * Returns the CSS metadata supported by this skin.
+     *
      * @return The CssMetaData associated with this class, which may include the
      * CssMetaData of its super classes.
      */
@@ -167,16 +176,19 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
         rightButtonVisible.addListener(rightButtonVisibleChanged);
     }
 
+    /** Recalculates button visibility after the text changes. */
     protected void onTextChanged()
     {
         updateRightButtonVisibility();
     }
 
+    /** Recalculates button visibility after the focus changes. */
     protected void onFocusChanged()
     {
         updateRightButtonVisibility();
     }
 
+    /** Recalculates button visibility after its CSS setting changes. */
     protected void onRightButtonVisibilityChanged() {
         updateRightButtonVisibility();
     }
@@ -196,10 +208,12 @@ public class TextFieldWithButtonSkin extends TextFieldSkin{
         rightButtonGraphic.setVisible(shouldBeVisible);
     }
 
+    /** Called when the right-hand button is pressed; does nothing by default. */
     protected void onRightButtonPressed()
     {
     }
 
+    /** Called when the right-hand button is released; does nothing by default. */
     protected void onRightButtonReleased()
     {
 
