@@ -25,7 +25,7 @@ public class TextFieldAndPasswordFieldShrinkGlitch extends Application {
         container.getChildren().addAll(textField, passwordField, button);
 
         Scene scene = new Scene(container);
-        JMetro metro = new JMetro(scene, Style.LIGHT);
+        JMetro metro = new JMetro(scene, Style.WIN10_LIGHT);
 
         primaryStage.setScene(scene);
         primaryStage.show();

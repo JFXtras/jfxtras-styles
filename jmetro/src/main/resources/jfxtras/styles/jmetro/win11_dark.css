@@ -1,0 +1,18 @@
+@import "dark_theme.css";
+@import "win11_base.css";
+
+.root {
+    accent_color: #60cdff;
+    win11_background: #202020;
+    win11_surface: #2b2b2b;
+    win11_control: #333333;
+    win11_hover: #3d3d3d;
+    win11_pressed: #292929;
+    win11_border: #454545;
+    win11_stroke: #9a9a9a;
+    win11_text: #ffffff;
+    win11_secondary_text: #cecece;
+    win11_accent_text: #003e5c;
+    win11_selection: #30434d;
+    win11_track: #9a9a9a;
+}

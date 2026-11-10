@@ -1,0 +1,505 @@
+/* Original JavaFX styling inspired by WinUI 3, layered over JMetro's skins. */
+.root {
+    background_color: win11_background;
+    scroll_pane_background_color: win11_background;
+    dialog_background_color: win11_surface;
+    tab_pane_background_color: win11_background;
+    -fx-base: win11_surface;
+    -fx-background: win11_background;
+    -fx-control-inner-background: win11_surface;
+    -fx-text-background-color: win11_text;
+    -fx-accent: accent_color;
+    -fx-focus-color: accent_color;
+    -fx-background-color: win11_background;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+.background {
+    -fx-background-color: win11_background;
+}
+
+.label, Text, .mdl2-assets, .dialog-pane, .progress-indicator {
+    text_color: win11_text;
+}
+
+.header, .item-title {
+    -fx-text-fill: win11_text;
+    -fx-opacity: 1;
+}
+
+.label.header, .label.header .text {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 2em;
+}
+
+.button, .toggle-button, .menu-button, .split-menu-button,
+.choice-box, .combo-box-base {
+    button_background_color: win11_control;
+    menu_button_background_color: win11_control;
+    menu_button_text_color: win11_text;
+    menu_border_hover_color: win11_border;
+    menu_button_pressed_color: win11_pressed;
+    combo_box_background_color: win11_control;
+    choice_box_background_color: win11_control;
+    background_pressed_color: win11_pressed;
+    border_color: win11_border;
+    border_hover_color: win11_border;
+    border_focused_color: win11_text;
+    border_pressed_color: win11_border;
+    border_hover_default_color: transparent;
+    border_hover_selected_color: transparent;
+    text_color: win11_text;
+    default_button_text_color: win11_accent_text;
+    arrow_color: win11_text;
+    focus_ring_border_color: win11_text;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-border-color: win11_border;
+    -fx-padding: 5 11 6 11;
+    -fx-min-height: 32;
+}
+
+.button, .toggle-button {
+    -shrink-animate-on-press: false;
+}
+
+.button:hover, .toggle-button:hover, .menu-button:hover,
+.choice-box:hover, .combo-box-base:hover {
+    -fx-background-color: win11_hover;
+}
+
+.button:pressed, .toggle-button:pressed, .menu-button:pressed,
+.choice-box:showing, .combo-box-base:showing {
+    -fx-background-color: win11_pressed;
+    -fx-border-color: win11_border;
+}
+
+.button:default, .toggle-button:selected {
+    -fx-background-color: accent_color;
+    -fx-border-color: transparent;
+    -fx-text-fill: win11_accent_text;
+}
+
+.button:default:hover, .toggle-button:selected:hover {
+    -fx-background-color: derive(accent_color, 10%);
+    -fx-border-color: transparent;
+}
+
+.button:default:pressed, .toggle-button:selected:pressed {
+    -fx-background-color: derive(accent_color, -10%);
+}
+
+.button:focused, .button:focused:hover,
+.toggle-button:focused, .toggle-button:focused:hover,
+.menu-button:focused, .choice-box:focused, .choice-box:focused:hover,
+.combo-box-base:focused, .combo-box-base:focused:hover {
+    -fx-border-color: win11_text;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+    -fx-border-radius: 4;
+    -fx-border-insets: -3;
+}
+
+.button:disabled, .button:default:disabled, .toggle-button:disabled {
+    -fx-background-color: win11_control;
+    -fx-text-fill: win11_secondary_text;
+    -fx-opacity: 0.5;
+}
+
+.split-menu-button {
+    -fx-padding: 0;
+}
+
+.menu-button, .choice-box, .combo-box-base {
+    -fx-padding: 0;
+    -fx-background-color: win11_control;
+    -fx-background-insets: 0;
+}
+
+.choice-box:focused, .choice-box:focused:hover,
+.combo-box-base:focused, .combo-box-base:focused:hover,
+.combo-box-base.combo-box:editable:focused {
+    -fx-background-color: win11_control;
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+}
+
+.combo-box-base:pressed, .combo-box-base:focused:pressed,
+.combo-box-base:showing, .combo-box-base:showing:hover,
+.combo-box-base:editable:showing {
+    -fx-background-color: win11_pressed;
+}
+
+.combo-box-base > .list-cell, .choice-box > .label {
+    -fx-padding: 5 11 6 11;
+}
+
+.combo-box-base.combo-box:editable > .text-input {
+    -fx-border-width: 0;
+    -fx-min-height: 0;
+}
+
+.split-menu-button > .label {
+    -fx-background-radius: 4 0 0 4;
+}
+
+.split-menu-button > .arrow-button {
+    -fx-background-radius: 0 4 4 0;
+}
+
+.tool-bar, .light {
+    button_hover_color: win11_hover;
+    button_pressed_color: win11_pressed;
+}
+
+.text-input {
+    border_color: win11_border;
+    border_hover_color: win11_stroke;
+    border_disabled_color: win11_border;
+    text_input_background_color: win11_control;
+    background_focused_color: win11_surface;
+    background_hover_color: win11_hover;
+    background_disabled_color: win11_background;
+    text_color: win11_text;
+    text_focused_color: win11_text;
+    text_disabled_color: win11_secondary_text;
+    prompt_text_color: win11_secondary_text;
+    highlighted_text_color: win11_accent_text;
+    graphic_color: win11_secondary_text;
+    -fx-background-color: win11_control;
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+    -fx-border-color: win11_border win11_border win11_stroke win11_border;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 5 11 6 11;
+    -fx-min-height: 32;
+}
+
+.text-input:hover {
+    -fx-background-color: win11_hover;
+}
+
+.text-input:focused {
+    -fx-background-color: win11_surface;
+    -fx-border-color: win11_border win11_border accent_color win11_border;
+    -fx-border-width: 1 1 2 1;
+}
+
+.text-input:disabled {
+    -fx-background-color: win11_background;
+    -fx-background-insets: 0;
+}
+
+.text-area .content, .text-area:hover .content,
+.text-area:focused .content, .text-area:disabled .content {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+}
+
+.text-area .scroll-pane, .text-area .scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.password-field > .right-button > .right-button-graphic {
+    -fx-background-color: win11_secondary_text;
+}
+
+.combo-box-base {
+    combo_box_editable_button_hover_color: win11_hover;
+    combo_box_editable_focused_button_hover_color: win11_hover;
+    combo_box_editable_focused_background_color: win11_surface;
+    combo_box_editable_focused_arrow_color: win11_text;
+}
+
+.check-box, .radio-button {
+    text_color: win11_text;
+    focus_ring_color: win11_text;
+    -fx-label-padding: 0 0 0 8;
+}
+
+.check-box {
+    box_background_color: win11_control;
+    box_border_color: win11_stroke;
+    box_border_hover_color: win11_text;
+    indeterminate_mark_color: win11_accent_text;
+    indeterminate_box_pressed_color: win11_pressed;
+}
+
+.check-box > .box {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+    -fx-padding: 3 2 3 2;
+}
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate > .box > .mark,
+.check-box:indeterminate:hover > .box > .mark {
+    -fx-background-color: win11_accent_text;
+}
+
+.radio-button {
+    radio_background_color: win11_control;
+    background_pressed_color: win11_pressed;
+    border_color: win11_stroke;
+    border_hover_color: win11_text;
+    dot_color: transparent;
+    dot_selected_color: win11_accent_text;
+    dot_selected_hover_color: win11_accent_text;
+}
+
+.radio-button:selected > .radio,
+.radio-button:selected:hover > .radio {
+    -fx-background-color: accent_color;
+}
+
+.radio-button > .radio > .dot {
+    -fx-padding: 4;
+}
+
+.scroll-bar {
+    thumb_color: win11_stroke;
+    thumb_hover_color: win11_secondary_text;
+    thumb_pressed_color: win11_text;
+    track_color: transparent;
+    inc_dec_button_color: transparent;
+    inc_dec_button_hover_color: win11_hover;
+    inc_dec_button_pressed_color: win11_pressed;
+    arrow_color: win11_secondary_text;
+}
+
+.scroll-bar > .thumb {
+    -fx-background-radius: 4;
+}
+
+.scroll-pane {
+    corner_background_color: win11_background;
+}
+
+.list-view, .tree-view, .table-view, .tree-table-view, .combo-box-popup {
+    cell_hover_color: win11_hover;
+    cell_pressed_color: win11_pressed;
+    cell_selected_unfocused_color: win11_selection;
+    cell_selected_color: win11_selection;
+    cell_selected_hover_color: win11_selection;
+    cell_selected_pressed_color: win11_pressed;
+    text_color: win11_text;
+    text_selected_color: win11_text;
+    text_hover_color: win11_text;
+    selected_text_color: win11_text;
+    selected_unfocused_text_color: win11_text;
+    hover_text_color: win11_text;
+    table_text_color: win11_text;
+    table_text_selected_color: win11_text;
+    list_view_background_color: win11_surface;
+    tree_view_background_color: win11_surface;
+    table_background_color: win11_surface;
+    alternate_row_color: win11_control;
+    border_color: win11_border;
+    table_view_border_color: win11_border;
+    table_border_color: win11_border;
+    table_column_vline_color: win11_border;
+    arrow_color: win11_text;
+    collapse_expand_arrow_color: win11_text;
+    sort_arrow_color: win11_text;
+    show_hide_image_color: win11_text;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.combo-box-popup {
+    list_cell_color: win11_surface;
+    list_cell_hover_color: win11_hover;
+    list_cell_border_color: win11_border;
+}
+
+.context-menu, .tooltip, .date-picker-popup, .color-palette {
+    menu_background_color: win11_surface;
+    context_menu_border_color: win11_border;
+    tooltip_background_color: win11_surface;
+    border_color: win11_border;
+    text_color: win11_text;
+    separator_color: win11_border;
+    popup_background_color: win11_surface;
+    popup_border_color: win11_border;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.18), 16, 0.05, 0, 4);
+}
+
+.menu-item {
+    menu_background_color: win11_surface;
+    text_color: win11_text;
+    graphic_color: win11_text;
+    hover_color: win11_hover;
+    pressed_color: win11_pressed;
+    -fx-background-radius: 4;
+}
+
+.menu-bar {
+    text_color: win11_text;
+    menu_button_hover_color: win11_hover;
+}
+
+.date-picker, .date-picker-popup {
+    graphic_color: win11_text;
+    graphic_focused_color: win11_text;
+    text_color: win11_text;
+    text_focused_color: win11_text;
+    text_selected_color: win11_accent_text;
+    text_hover_color: win11_text;
+    text_days_from_other_months_color: win11_secondary_text;
+    date_picker_background_color: win11_control;
+    background_focused_color: win11_surface;
+    background_hover_color: win11_hover;
+    border_color: win11_border;
+    border_hover_color: win11_stroke;
+    popup_border_color: win11_border;
+    spinner_button_hover_color: win11_hover;
+    cell_background_color: win11_surface;
+    day_cell_background_color: win11_hover;
+    day_cell_border_hover_color: win11_stroke;
+    day_cell_background_days_from_other_months_color: win11_surface;
+    today_border_color: accent_color;
+    text_field_disabled_background_color: win11_background;
+}
+
+.date-picker > .text-input {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-min-height: 0;
+}
+
+.date-picker.combo-box-base, .date-picker.combo-box-base:hover,
+.date-picker.combo-box-base:pressed, .date-picker.combo-box-base:focused,
+.date-picker.combo-box-base:focused:hover {
+    -fx-background-color: win11_control;
+    -fx-background-insets: 0;
+    -fx-background-radius: 4;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup > * > .day-cell {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+}
+
+.spinner {
+    spinner_background_color: win11_control;
+    spinner_border_color: win11_border;
+    arrow_button_hover_color: win11_hover;
+    arrow_button_pressed_color: win11_pressed;
+    arrow_color: win11_text;
+    arrow_pressed_color: win11_text;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.spinner > .text-field {
+    text_color: win11_text;
+    -fx-border-width: 0;
+    -fx-min-height: 0;
+}
+
+.progress-bar {
+    progress_background_color: win11_border;
+}
+
+.progress-bar > .bar, .progress-bar > .track {
+    -fx-background-radius: 3;
+}
+
+.slider .track, .slider .fill {
+    -fx-background-radius: 3;
+}
+
+.slider .track, .slider:hover .track {
+    -fx-background-color: win11_track;
+}
+
+.slider .thumb, .slider:vertical .thumb {
+    -fx-shape: null;
+    -fx-background-color: win11_surface, accent_color;
+    -fx-background-insets: 0, 4;
+    -fx-background-radius: 12;
+    -fx-pref-width: 22;
+    -fx-pref-height: 22;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);
+}
+
+.slider:hover .thumb, .slider .thumb:pressed {
+    -fx-background-color: win11_surface, accent_color;
+}
+
+.tab-pane {
+    tab_pane_bottom_border_color: win11_border;
+    tab_text_color: win11_secondary_text;
+    tab_text_hover_color: win11_text;
+    tab_text_selected_hover_color: win11_text;
+    tab_selected_background_color: win11_surface;
+    tab_selected_border_color: win11_border;
+    more_button_hover_color: win11_hover;
+    more_button_pressed_color: win11_pressed;
+    more_button_icon_color: win11_text;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab,
+.tab-pane > .tab-header-area > .headers-region > .tab:selected {
+    -fx-background-radius: 6 6 0 0;
+    -fx-border-radius: 6 6 0 0;
+}
+
+.tab-pane.underlined {
+    text_color: win11_text;
+    tab_not_selected_text_color: win11_secondary_text;
+    tab_hover_text_color: win11_text;
+}
+
+.titled-pane {
+    text_color: win11_text;
+    title_background_color: win11_control;
+    title_background_hover_color: win11_hover;
+    border_color: win11_border;
+    arrow_color: win11_text;
+    content_background_color: win11_surface;
+}
+
+.titled-pane > .title {
+    -fx-background-radius: 4;
+}
+
+.toggle-switch {
+    text_color: win11_text;
+    unselected_color: win11_control;
+    unselected_border_color: win11_stroke;
+    thumb_unselected_color: win11_secondary_text;
+    unselected_hover_color: win11_hover;
+    unselected_border_hover_color: win11_text;
+    thumb_unselected_hover_color: win11_text;
+    selected_color: accent_color;
+    selected_border_color: accent_color;
+    thumb_selected_color: win11_accent_text;
+    selected_hover_color: derive(accent_color, 10%);
+    pressed_color: win11_pressed;
+    pressed_border_color: win11_stroke;
+    thumb_pressed_color: win11_secondary_text;
+}
+
+.separator, .split-pane {
+    border_color: win11_border;
+}
+
+.custom-color-dialog {
+    controls_background_color: win11_surface;
+    controls_border_color: win11_border;
+}

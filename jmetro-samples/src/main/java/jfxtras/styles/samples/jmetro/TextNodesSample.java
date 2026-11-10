@@ -20,7 +20,7 @@ public class TextNodesSample extends Application {
 
     @Override
     public void start(Stage stage) {
-        Style startingStyle = Style.LIGHT;
+        Style startingStyle = Style.WIN10_LIGHT;
         JMetro jMetro = new JMetro(startingStyle);
 
         BorderPane mainContainer = new BorderPane();
@@ -42,7 +42,7 @@ public class TextNodesSample extends Application {
         vBox.setSpacing(10);
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
-        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.getItems().addAll(Style.values());
         jmetroStyleComboBox.setValue(startingStyle);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 

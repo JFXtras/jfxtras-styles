@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SegmentedButtonInsideToolBarSample extends Application {
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.WIN10_LIGHT;
     private static final boolean FOCUS_TRAVERSAL = false;
 
     private List<SegmentedButtonInsideToolBarSample.Employee> employees = Arrays.asList(

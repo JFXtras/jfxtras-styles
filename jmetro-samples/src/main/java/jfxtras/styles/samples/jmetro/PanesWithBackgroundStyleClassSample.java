@@ -12,7 +12,7 @@ import jfxtras.styles.samples.jmetro.panessample.PanesWithBackgroundStyleClassCo
 public class PanesWithBackgroundStyleClassSample extends Application {
     private static final String PANES_RESOURCE = "JMetro PanesWithBackgroundStyleClass.fxml";
 
-    static final private Style STYLE = Style.LIGHT;
+    static final private Style STYLE = Style.WIN10_LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

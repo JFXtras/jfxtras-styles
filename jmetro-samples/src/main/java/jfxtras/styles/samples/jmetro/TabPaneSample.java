@@ -12,7 +12,7 @@ import jfxtras.styles.jmetro.Style;
 
 public class TabPaneSample extends Application {
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.WIN10_DARK;
 
     public static void main(String[] args) {
         launch(args);

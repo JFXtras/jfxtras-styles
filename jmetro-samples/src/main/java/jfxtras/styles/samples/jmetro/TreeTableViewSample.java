@@ -20,7 +20,7 @@ import static jfxtras.styles.jmetro.JMetroStyleClass.addIfNotPresent;
 
 public class TreeTableViewSample extends Application {
 
-    private static final Style STARTING_STYLE = Style.DARK;
+    private static final Style STARTING_STYLE = Style.WIN10_DARK;
 
     List<Employee> employees = Arrays.asList(
             new Employee("Ethan Williams", "ethan.williams@example.com", "25", "Manager", "San Francisco"),
@@ -144,7 +144,7 @@ public class TreeTableViewSample extends Application {
         });
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
-        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.getItems().addAll(Style.values());
         jmetroStyleComboBox.setValue(STARTING_STYLE);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
@@ -218,4 +218,3 @@ public class TreeTableViewSample extends Application {
         public void setLocation(String location) { this.location.set(location); }
     }
 }
-

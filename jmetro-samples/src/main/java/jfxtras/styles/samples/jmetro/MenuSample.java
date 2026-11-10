@@ -20,7 +20,7 @@ import jfxtras.styles.jmetro.Style;
 
 public class MenuSample extends Application {
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.WIN10_DARK;
 
     private final Entry[] effects = new Entry[] {
             new SimpleEntry<>("Sepia Tone", new SepiaTone()),

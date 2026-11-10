@@ -18,7 +18,7 @@ import jfxtras.styles.jmetro.JMetro;
 import jfxtras.styles.jmetro.Style;
 
 public class TreeViewSample extends Application {
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.WIN10_DARK;
 
     private List<Employee> employees = Arrays.asList(
             new Employee("Jacob Smith", "Accounts Department"),
@@ -44,7 +44,7 @@ public class TreeViewSample extends Application {
 
     @Override
     public void start(Stage stage) {
-        Style startingStyle = Style.LIGHT;
+        Style startingStyle = Style.WIN10_LIGHT;
         JMetro jMetro = new JMetro(startingStyle);
 
         rootNode.setExpanded(true);
@@ -82,7 +82,7 @@ public class TreeViewSample extends Application {
         HBox controlsContainer = new HBox();
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
-        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.getItems().addAll(Style.values());
         jmetroStyleComboBox.setValue(startingStyle);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 

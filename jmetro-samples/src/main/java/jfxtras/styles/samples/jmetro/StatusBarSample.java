@@ -18,7 +18,7 @@ import java.util.List;
 
 public class StatusBarSample extends Application {
 
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.WIN10_LIGHT;
 
     private TableView<TableViewSample.Person> table = new TableView<>();
     private final ObservableList<TableViewSample.Person> data =

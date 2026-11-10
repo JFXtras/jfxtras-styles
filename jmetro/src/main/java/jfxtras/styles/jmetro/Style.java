@@ -28,14 +28,19 @@
 package jfxtras.styles.jmetro;
 
 /**
- * Defined the JMetro style. This can be either dark or light.
+ * The Windows design generation and color scheme used by JMetro.
  */
 public enum Style {
-    LIGHT,
-    DARK;
+    WIN10_LIGHT("light_theme.css"),
+    WIN10_DARK("dark_theme.css"),
+    WIN11_LIGHT("win11_light.css"),
+    WIN11_DARK("win11_dark.css");
 
-    private static final String LIGHT_STYLE_SHEET_URL = Style.class.getResource("light_theme.css").toExternalForm();
-    private static final String DARK_STYLE_SHEET_URL = Style.class.getResource("dark_theme.css").toExternalForm();
+    private final String stylesheetURL;
+
+    Style(String stylesheet) {
+        stylesheetURL = Style.class.getResource(stylesheet).toExternalForm();
+    }
 
     /**
      * Returns the stylesheet that defines the variable override that make up this {@link Style} instance.
@@ -43,15 +48,6 @@ public enum Style {
      * @return returns the stylesheet that defines the variable override that make up this {@link Style} instance.
      */
     public String getStyleStylesheetURL() {
-        String stylesheet = null;
-        switch (this) {
-            case LIGHT:
-                stylesheet = LIGHT_STYLE_SHEET_URL;
-                break;
-            case DARK:
-                stylesheet = DARK_STYLE_SHEET_URL;
-                break;
-        }
-        return stylesheet;
+        return stylesheetURL;
     }
 }

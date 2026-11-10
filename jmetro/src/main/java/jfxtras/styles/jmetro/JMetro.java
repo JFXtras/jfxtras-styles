@@ -81,7 +81,7 @@ public class JMetro {
     /**
      * The {@link Style} that should be applied
      */
-    private final ObjectProperty<Style> style = new SimpleObjectProperty<>(Style.LIGHT) {
+    private final ObjectProperty<Style> style = new SimpleObjectProperty<>(Style.WIN10_LIGHT) {
         @Override
         protected void invalidated() {
             reApplyTheme();
@@ -132,25 +132,23 @@ public class JMetro {
 
         /* Order:
            1 - Base stylesheets (base, extra stylesheets, other library stylesheets)
-           2-  Style (Light or Dark) stylesheet
+           2 - Windows generation and color scheme stylesheet
            3 - "Panes" Stylesheet
            4 - Overriding stylesheets */
 
         if (stylesheetsList != null) {
             // Remove existing JMetro style stylesheets that are configurable
-            stylesheetsList.remove(Style.LIGHT.getStyleStylesheetURL());
-            stylesheetsList.remove(Style.DARK.getStyleStylesheetURL());
-
-            int baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
-
-            // Add BASE_STYLESHEET before all other JMetro stylesheets
-            if (baseStylesheetIndex == -1) { // There are no base stylesheets added yet
-                addBaseStylesheets(stylesheetsList);
-                stylesheetsList.add(getStyle().getStyleStylesheetURL()); // This needs to be added after base stylesheet so that specific, overriding styles here are applied
-                baseStylesheetIndex = stylesheetsList.indexOf(BASE_STYLESHEET_URL);
-            } else { // base stylesheets were already added
-                stylesheetsList.add(++baseStylesheetIndex, getStyle().getStyleStylesheetURL());
+            for (Style candidate : Style.values()) {
+                stylesheetsList.removeAll(candidate.getStyleStylesheetURL());
             }
+
+            if (!stylesheetsList.contains(BASE_STYLESHEET_URL)) {
+                addBaseStylesheets(stylesheetsList);
+            }
+            int themeIndex = Math.max(stylesheetsList.indexOf(BASE_STYLESHEET_URL),
+                    Math.max(stylesheetsList.indexOf(BASE_EXTRAS_STYLESHEET_URL),
+                            stylesheetsList.indexOf(BASE_OTHER_LIBRARIES_STYLESHEET_URL))) + 1;
+            stylesheetsList.add(themeIndex, getStyle().getStyleStylesheetURL());
         }
     }
 
@@ -236,4 +234,3 @@ public class JMetro {
     public ObjectProperty<Parent> parentProperty() { return parent; }
     public void setParent(Parent parent) { this.parent.set(parent); }
 }
-

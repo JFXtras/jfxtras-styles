@@ -21,7 +21,7 @@ import static jfxtras.styles.jmetro.JMetroStyleClass.*;
  * This sample uses icons from icons8 - https://icons8.com.
  */
 public class ToolbarWithControlsSample extends Application {
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.WIN10_LIGHT;
     private static final boolean FOCUS_TRAVERSAL = false;
 
     private List<ToolbarWithControlsSample.Employee> employees = Arrays.asList(

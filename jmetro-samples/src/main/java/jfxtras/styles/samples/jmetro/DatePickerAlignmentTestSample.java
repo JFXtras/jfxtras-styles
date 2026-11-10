@@ -22,7 +22,7 @@ public class DatePickerAlignmentTestSample extends Application {
         container.getStyleClass().add(JMetroStyleClass.BACKGROUND);
         Scene scene = new Scene(container, 800, 600);
         stage.setScene(scene);
-        new JMetro(scene, Style.LIGHT);
+        new JMetro(scene, Style.WIN10_LIGHT);
         stage.show();
     }
 
