@@ -52,7 +52,7 @@ public class ToggleSwitchThumbDisplacementBug extends Application {
         primaryStage.setScene(new Scene(root, 200, 80));
 
         //apply JMetro theme
-        new JMetro(Style.LIGHT).setScene(root.getScene());
+        new JMetro(Style.WIN10_LIGHT).setScene(root.getScene());
 
 //        ScenicView.show(root.getScene());
 

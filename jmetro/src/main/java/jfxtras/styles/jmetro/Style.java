@@ -28,30 +28,30 @@
 package jfxtras.styles.jmetro;
 
 /**
- * Defined the JMetro style. This can be either dark or light.
+ * The Windows design generation and color scheme used by JMetro.
  */
 public enum Style {
-    LIGHT,
-    DARK;
+    /** Windows 10-inspired light color scheme. */
+    WIN10_LIGHT("light_theme.css"),
+    /** Windows 10-inspired dark color scheme. */
+    WIN10_DARK("dark_theme.css"),
+    /** Windows 11 / WinUI 3-inspired light color scheme. */
+    WIN11_LIGHT("win11_light.css"),
+    /** Windows 11 / WinUI 3-inspired dark color scheme. */
+    WIN11_DARK("win11_dark.css");
 
-    private static final String LIGHT_STYLE_SHEET_URL = Style.class.getResource("light_theme.css").toExternalForm();
-    private static final String DARK_STYLE_SHEET_URL = Style.class.getResource("dark_theme.css").toExternalForm();
+    private final String stylesheetURL;
+
+    Style(String stylesheet) {
+        stylesheetURL = Style.class.getResource(stylesheet).toExternalForm();
+    }
 
     /**
-     * Returns the stylesheet that defines the variable override that make up this {@link Style} instance.
+     * Returns the URL of the stylesheet defining this style's palette and overrides.
      *
-     * @return returns the stylesheet that defines the variable override that make up this {@link Style} instance.
+     * @return the stylesheet URL as an external-form string
      */
     public String getStyleStylesheetURL() {
-        String stylesheet = null;
-        switch (this) {
-            case LIGHT:
-                stylesheet = LIGHT_STYLE_SHEET_URL;
-                break;
-            case DARK:
-                stylesheet = DARK_STYLE_SHEET_URL;
-                break;
-        }
-        return stylesheet;
+        return stylesheetURL;
     }
 }

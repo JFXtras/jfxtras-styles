@@ -10,7 +10,7 @@ import jfxtras.styles.jmetro.Style;
 
 public class OverridingStylesheetSample extends Application {
     private static final String SLIDER_RESOURCE = "JMetro Slider.fxml";
-    static final private Style STYLE = Style.LIGHT;
+    static final private Style STYLE = Style.WIN10_LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

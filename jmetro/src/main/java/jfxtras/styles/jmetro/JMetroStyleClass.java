@@ -2,7 +2,12 @@ package jfxtras.styles.jmetro;
 
 import java.util.List;
 
+/** Style-class names and helpers for opting in to JMetro control variants. */
 public class JMetroStyleClass {
+
+    /** Creates a style-class helper. */
+    public JMetroStyleClass() {
+    }
 
     /***************************************************************************
      *                                                                         *
@@ -12,7 +17,7 @@ public class JMetroStyleClass {
 
     /**
      * StyleClass that defines a node as a background. Its color will change according to whether JMetro is set with
-     * Style.LIGHT or Style.DARK. You should use this in any Pane that is a background in your application.
+     * the selected Style. You should use this in any Pane that is a background in your application.
      */
     public static final String BACKGROUND = "background";
 

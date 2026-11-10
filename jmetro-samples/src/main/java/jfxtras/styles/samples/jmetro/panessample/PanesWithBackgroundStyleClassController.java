@@ -11,26 +11,20 @@ import java.util.ResourceBundle;
 
 public class PanesWithBackgroundStyleClassController implements Initializable {
     @FXML
-    private ComboBox<String> styleComboBox;
+    private ComboBox<Style> styleComboBox;
 
     private JMetro jMetro;
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        styleComboBox.getItems().addAll("Light", "Dark");
+        styleComboBox.getItems().addAll(Style.values());
     }
 
     public void init(JMetro jmetro) {
         this.jMetro = jmetro;
 
-        styleComboBox.setValue(jmetro.getStyle().equals(Style.LIGHT) ? "Light" : "Dark");
-        styleComboBox.valueProperty().addListener(observable -> {
-            if (styleComboBox.getValue().equals("Light")) {
-                jmetro.setStyle(Style.LIGHT);
-            } else {
-                jmetro.setStyle(Style.DARK);
-            }
-        });
+        styleComboBox.setValue(jmetro.getStyle());
+        styleComboBox.valueProperty().addListener(observable -> jmetro.setStyle(styleComboBox.getValue()));
     }
 }

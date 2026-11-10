@@ -265,6 +265,15 @@ Text {
     list_cell_hover_color: #dedede;
 
     list_cell_border_color: #cccccc;
+
+    text_color: #111;
+    -fx-background: list_cell_color;
+    -fx-control-inner-background: list_cell_color;
+    -fx-text-background-color: text_color;
+    -fx-selection-bar: cell_selected_color;
+    -fx-selection-bar-non-focused: cell_selected_unfocused_color;
+    -fx-selection-bar-text: text_color;
+    -fx-cell-hover-color: cell_hover_color;
 }
 
 /*******************************************************************************
@@ -398,7 +407,7 @@ Text {
  *                                                                             *
  ******************************************************************************/
 
-.date-picker {
+.date-picker, .date-picker-popup {
     graphic_color: #111;
     graphic_focused_color: #111;
 
@@ -740,4 +749,3 @@ Text {
 
     focus_ring_border_color: white;
 }
-

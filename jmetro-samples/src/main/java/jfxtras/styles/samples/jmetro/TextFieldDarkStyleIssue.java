@@ -22,7 +22,7 @@ public class TextFieldDarkStyleIssue extends Application {
         primaryStage.setTitle("Hello World");
 
         Scene mainScene = new Scene(root, LOGIN_WINDOW_WIDTH, LOGIN_WINDOW_HEIGHT);
-        JMetro jMetro = new JMetro(Style.DARK);
+        JMetro jMetro = new JMetro(Style.WIN10_DARK);
         jMetro.setScene(mainScene);
         primaryStage.setScene(mainScene);
 

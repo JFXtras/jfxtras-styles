@@ -9,8 +9,9 @@ import javafx.stage.Stage;
 
 /**
  * A dialog with a flat style.
- * For example, by default it will appear without a window icon (can be configured via iconless property) and without
- * a window title.
+ * The title is initially empty and a white placeholder icon is added by default.
+ * The {@link #iconlessProperty() iconless} property controls whether that icon
+ * is added again when the window's icon list changes.
  *
  * @param <R> The return type of the dialog, via the result property.
  */
@@ -19,11 +20,24 @@ public class FlatDialog<R> extends Dialog<R> {
 
     private boolean isResettingIcon;
 
+    /**
+     * Clears a dialog's title and optionally adds the placeholder icon.
+     *
+     * @param dialog the dialog to initialize
+     * @param iconless whether to add the white placeholder icon
+     */
     public static void initDialog(Dialog<?> dialog, boolean iconless) {
         dialog.setTitle("");
         initDialogIcon(dialog, iconless);
     }
 
+    /**
+     * Adds the white placeholder icon to the dialog's stage if requested.
+     * Existing icons are not removed.
+     *
+     * @param dialog the dialog whose stage receives the icon
+     * @param isIconless whether to add the placeholder icon
+     */
     public static void initDialogIcon(Dialog<?> dialog, boolean isIconless) {
         if (!isIconless) {
             return;
@@ -33,6 +47,7 @@ public class FlatDialog<R> extends Dialog<R> {
         stage.getIcons().add(whiteIcon);
     }
 
+    /** Creates a dialog with an empty title and a placeholder icon. */
     public FlatDialog() {
         init();
     }
@@ -60,6 +75,13 @@ public class FlatDialog<R> extends Dialog<R> {
 
     // --- iconless
     public boolean isIconless() { return iconless.get(); }
+    /**
+     * Controls whether a white placeholder icon is added when the window's
+     * icons change. Initially {@code true}; changing it does not immediately
+     * alter the existing icons.
+     *
+     * @return the iconless property
+     */
     public BooleanProperty iconlessProperty() { return iconless; }
     public void setIconless(boolean iconless) { this.iconless.set(iconless); }
 }

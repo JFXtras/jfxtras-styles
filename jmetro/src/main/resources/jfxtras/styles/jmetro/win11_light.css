@@ -1,0 +1,18 @@
+@import "light_theme.css";
+@import "win11_base.css";
+
+.root {
+    accent_color: #005fb8;
+    win11_background: #f3f3f3;
+    win11_surface: #ffffff;
+    win11_control: #fbfbfb;
+    win11_hover: #f6f6f6;
+    win11_pressed: #ededed;
+    win11_border: #d1d1d1;
+    win11_stroke: #8a8a8a;
+    win11_text: #1a1a1a;
+    win11_secondary_text: #606060;
+    win11_accent_text: #ffffff;
+    win11_selection: #e5eff8;
+    win11_track: #8a8a8a;
+}

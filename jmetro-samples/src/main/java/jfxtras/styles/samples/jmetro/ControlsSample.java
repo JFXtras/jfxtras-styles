@@ -75,7 +75,7 @@ public class ControlsSample extends Application {
     private static final String COLOR_PICKER_RESOURCE = "JMetro ColorPicker.fxml";
 
     static final private String RESOURCE = TEXT_FIELD_RESOURCE;
-    static final private Style STARTING_STYLE = Style.LIGHT;
+    static final private Style STARTING_STYLE = Style.WIN10_LIGHT;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -107,7 +107,7 @@ public class ControlsSample extends Application {
         });
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
-        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.getItems().addAll(Style.values());
         jmetroStyleComboBox.setValue(startingStyle);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 

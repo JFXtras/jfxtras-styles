@@ -13,7 +13,7 @@ import static jfxtras.styles.jmetro.JMetroStyleClass.*;
 
 public class TabPaneWithUnderlineStyleSample extends Application {
 
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.WIN10_LIGHT;
 
     public static void main(String[] args) {
         launch(args);

@@ -822,8 +822,17 @@ Button {
 /* LIST (Popup)*/
 .combo-box-popup > .list-view {
     -fx-effect: null;
+    -fx-background-color: list_cell_color;
+    -fx-background: list_cell_color;
+    -fx-control-inner-background: list_cell_color;
+    -fx-background-insets: 0;
 
     -fx-border-color: list_cell_border_color;
+    -fx-text-background-color: text_color;
+    -fx-selection-bar: cell_selected_color;
+    -fx-selection-bar-non-focused: cell_selected_unfocused_color;
+    -fx-selection-bar-text: text_color;
+    -fx-cell-hover-color: cell_hover_color;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
@@ -832,8 +841,10 @@ Button {
     -fx-padding: 0.333333em 0 0.333333em 0.416667em; /* 4 0 4 5 */
 
     -fx-background-color: list_cell_color;
+    -fx-background: list_cell_color;
 
     -fx-text-fill: text_color;
+    -fx-text-background-color: text_color;
 }
 
 .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover{

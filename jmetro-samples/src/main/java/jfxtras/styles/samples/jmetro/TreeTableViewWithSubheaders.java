@@ -18,7 +18,7 @@ import static jfxtras.styles.jmetro.JMetroStyleClass.addIfNotPresent;
 
 public class TreeTableViewWithSubheaders extends Application {
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.WIN10_DARK;
 
     List<TreeTableViewWithSubheaders.Employee> employees = Arrays.asList(
             new TreeTableViewWithSubheaders.Employee("Ethan Williams", "ethan.williams@example.com", "25", "Manager", "San Francisco", "3000"),
@@ -48,7 +48,7 @@ public class TreeTableViewWithSubheaders extends Application {
 
     @Override
     public void start(Stage stage) {
-        Style startingStyle = Style.LIGHT;
+        Style startingStyle = Style.WIN10_LIGHT;
         JMetro jMetro = new JMetro(startingStyle);
 
         System.setProperty("prism.lcdtext", "false");
@@ -157,7 +157,7 @@ public class TreeTableViewWithSubheaders extends Application {
         });
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
-        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.getItems().addAll(Style.values());
         jmetroStyleComboBox.setValue(startingStyle);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 

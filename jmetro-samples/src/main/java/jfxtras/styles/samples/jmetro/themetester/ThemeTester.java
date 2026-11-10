@@ -91,7 +91,8 @@ public class ThemeTester extends Application {
     private String styleSheetBase = "";
     private ToggleButton modenaButton,retinaButton,rtlButton,embeddedPerformanceButton;
     private TabPane contentTabs;
-    private ComboBox<String> styleComboBox;
+    private ComboBox<Style> styleComboBox;
+    private Style selectedStyle = Style.WIN10_LIGHT;
 
     private JMetro jMetro = new JMetro();
 
@@ -166,7 +167,7 @@ public class ThemeTester extends Application {
         jMetro.setScene(scene);
 
         // set user agent stylesheet
-        updateTheme(Theme.JMETRO, Style.LIGHT);
+        updateTheme(Theme.JMETRO, Style.WIN10_LIGHT);
         // build UI
         rebuildUI(false,false,0, null);
 
@@ -201,10 +202,11 @@ public class ThemeTester extends Application {
     }
 
     private void updateTheme() {
-        updateTheme(modenaButton.isSelected() ? Theme.MODENA : Theme.JMETRO, styleComboBox.getValue().equals("Light") ? Style.LIGHT : Style.DARK);
+        updateTheme(modenaButton.isSelected() ? Theme.MODENA : Theme.JMETRO, styleComboBox.getValue());
     }
 
     private void updateTheme(Theme theme, Style style) {
+        selectedStyle = style;
         final SamplePage.Section scrolledSection = samplePageNavigation == null ? null : samplePageNavigation.getCurrentSection();
 
 //        styleSheetContent = loadUrl(MODENA_STYLESHEET_URL);
@@ -243,7 +245,8 @@ public class ThemeTester extends Application {
         setUserAgentStylesheet("internal:stylesheet"+Math.random()+".css");
 
         if (theme == Theme.JMETRO) {
-            new JMetro(scene, style);
+            jMetro.setStyle(style);
+            jMetro.reApplyTheme();
         }
 
         if (root != null) root.requestLayout();
@@ -403,11 +406,12 @@ public class ThemeTester extends Application {
         updateTheme();
     }
 
-    private ComboBox<String> createStyleComboBox() {
-        ComboBox<String> styleComboBox = new ComboBox<>();
-        styleComboBox.getItems().addAll("Light", "Dark");
-        styleComboBox.setValue("Light");
-        styleComboBox.valueProperty().addListener(((observable, oldValue, newValue) -> updateTheme(Theme.JMETRO, styleComboBox.getValue().equals("Light") ? Style.LIGHT : Style.DARK)));
+    private ComboBox<Style> createStyleComboBox() {
+        ComboBox<Style> styleComboBox = new ComboBox<>();
+        styleComboBox.getItems().addAll(Style.values());
+        styleComboBox.setValue(selectedStyle);
+        styleComboBox.valueProperty().addListener((observable, oldValue, newValue) ->
+                updateTheme(modenaButton.isSelected() ? Theme.MODENA : Theme.JMETRO, newValue));
         return styleComboBox;
     }
 

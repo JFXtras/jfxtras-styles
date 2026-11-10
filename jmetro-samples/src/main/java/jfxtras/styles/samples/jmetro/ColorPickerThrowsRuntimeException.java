@@ -16,7 +16,7 @@ public class ColorPickerThrowsRuntimeException extends Application {
 
             Scene scene = new Scene(new Pane(new ColorPicker()), 800, 600);
             stage.setScene(scene);
-            JMetro jMetro = new JMetro(scene, Style.DARK);
+            JMetro jMetro = new JMetro(scene, Style.WIN10_DARK);
             stage.show();
     }
 

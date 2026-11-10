@@ -13,6 +13,38 @@ learned while developing JMetro]</ins>_**
 ### Documentation 
 Documentation of JMetro can be found in this link: [JMetro Java, Javafx theme documentation](https://pixelduke.com/java-javafx-theme-jmetro).  
 
+### Windows 10 and Windows 11 (11.7.0)
+
+The `11.7.0` branch adds an original JavaFX theme inspired by Windows 11 / WinUI 3,
+alongside the existing Windows 10 theme:
+
+```java
+JMetro jMetro = new JMetro(scene, Style.WIN11_LIGHT);
+jMetro.setStyle(Style.WIN11_DARK); // Switching also works on an existing scene.
+jMetro.setStyle(Style.WIN10_LIGHT);
+jMetro.setStyle(Style.WIN10_DARK);
+```
+
+`new JMetro()` still defaults to Windows 10 light. This release intentionally
+replaces `Style.LIGHT` and `Style.DARK` with `Style.WIN10_LIGHT` and
+`Style.WIN10_DARK`; migrate existing references (including stored enum names).
+Java identifiers cannot start with a digit, so `Style.10_DARK` and `Style.11_DARK`
+are not legal Java syntax.
+
+The Windows 11 variants add rounded controls, neutral surfaces, accent buttons,
+bottom-accent input focus, rounded flyouts and updated spacing. They reuse the
+existing JavaFX skins and ControlsFX integration. Application stylesheets added
+through `getOverridingStylesheets()` retain priority across theme changes.
+The `accent_color` CSS lookup remains customizable. This is a JavaFX
+interpretation, not native WinUI: Mica/Acrylic, native window chrome and automatic
+OS theme/accent detection are not provided. See [README_TODO.md](README_TODO.md).
+
+Run the four-way comparison with `.\gradlew.bat :jmetro-samples:run` on Windows.
+Run `.\gradlew.bat :jmetro:check :jmetro-samples:classes` for the regression checks;
+the JavaFX theme check requires a graphical desktop. This branch uses JDK 25 and
+JavaFX 25, inherited from the two commits moved from `master`.
+The check also writes comparison images to `jmetro\build\theme-snapshots`.
+
 ### Strengths and Key Principles
 * Modern look and feel
 * Zero tight coupling with this library:
@@ -56,6 +88,7 @@ implementation 'org.jfxtras:jmetro:11.6.15'
 We have two important branches:
 
 * **master** -> JavaFX 11 and above / Java 11 and above (actively developed branch)
+* **11.7.0** -> Windows 10 / Windows 11 themes, JDK 25 / JavaFX 25
 * **jdk-8** -> JavaFX 8 / Java 8 (maintenance mode, no active development is ongoing) 
 
 The master branch is being tested using JavaFX 11.
@@ -84,4 +117,3 @@ Seeing JMetro being used is also always a source of motivation to keep working o
 
 ## License
 JFXtras uses the [new BSD](http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22Revised_BSD_License.22.2C_.22New_BSD_License.22.2C_or_.22Modified_BSD_License.22.29) license
-

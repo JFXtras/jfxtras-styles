@@ -24,7 +24,7 @@ public class DialogSample extends Application {
     private ToggleButton withOwner;
     private ComboBox<Style> styleComboBox;
 
-    private static final Style STYLE = Style.DARK;
+    private static final Style STYLE = Style.WIN10_DARK;
 
     public static void main(String[] args) {
         launch(args);
@@ -35,7 +35,7 @@ public class DialogSample extends Application {
 
     @Override
     public void start(Stage stage) {
-        JMetro mainStageJMetro = new JMetro(Style.LIGHT);
+        JMetro mainStageJMetro = new JMetro(Style.WIN10_LIGHT);
 
         BorderPane borderPane = new BorderPane();
         borderPane.getStyleClass().add("background");
@@ -44,14 +44,14 @@ public class DialogSample extends Application {
         withOwner = new ToggleButton("With Owner");
 
         styleComboBox = new ComboBox<>();
-        styleComboBox.getItems().addAll(Style.LIGHT, Style.DARK);
-        styleComboBox.setValue(Style.LIGHT);
+        styleComboBox.getItems().addAll(Style.values());
+        styleComboBox.setValue(Style.WIN10_LIGHT);
 
         topLeftToolbar.getItems().addAll(withOwner, styleComboBox);
 
         ToolBar topRightToolBar = new ToolBar();
         ComboBox<Style> mainStageStyleComboBox = new ComboBox<>();
-        mainStageStyleComboBox.getItems().addAll(Style.LIGHT, Style.DARK);
+        mainStageStyleComboBox.getItems().addAll(Style.values());
         mainStageStyleComboBox.setValue(mainStageJMetro.getStyle());
         mainStageStyleComboBox.valueProperty().addListener(observable -> {
             mainStageJMetro.setStyle(mainStageStyleComboBox.getValue());

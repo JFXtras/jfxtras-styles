@@ -19,7 +19,7 @@ import static jfxtras.styles.jmetro.JMetroStyleClass.BACKGROUND;
 
 public class TableViewWithSubheadersSample extends Application {
 
-    private static final Style STYLE = Style.LIGHT;
+    private static final Style STYLE = Style.WIN10_LIGHT;
 
     private TableView<TableViewWithSubheadersSample.Person> table = new TableView<>();
     private final ObservableList<TableViewWithSubheadersSample.Person> data =
@@ -37,7 +37,7 @@ public class TableViewWithSubheadersSample extends Application {
 
     @Override
     public void start(Stage stage) {
-        Style startingStyle = Style.LIGHT;
+        Style startingStyle = Style.WIN10_LIGHT;
         JMetro jMetro = new JMetro(startingStyle);
 
         System.setProperty("prism.lcdtext", "false");
@@ -118,7 +118,7 @@ public class TableViewWithSubheadersSample extends Application {
         controlsVBox.setSpacing(10);
 
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
-        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.getItems().addAll(Style.values());
         jmetroStyleComboBox.setValue(startingStyle);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 

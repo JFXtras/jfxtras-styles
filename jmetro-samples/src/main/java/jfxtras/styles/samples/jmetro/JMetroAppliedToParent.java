@@ -29,8 +29,8 @@ public class JMetroAppliedToParent extends Application {
         root.setCenter(center);
 
         //we only want to add the JMetro style to the MenuBar, not to the whole BorderPane
-        new JMetro(Style.DARK).setParent(top);
-        //new JMetro(Style.DARK).setParent(root) -> it works, but it's not what I want
+        new JMetro(Style.WIN10_DARK).setParent(top);
+        //new JMetro(Style.WIN10_DARK).setParent(root) -> it works, but it's not what I want
 
         primaryStage.setScene(new Scene(root));
         primaryStage.setTitle("Demo");

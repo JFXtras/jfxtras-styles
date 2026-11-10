@@ -23,7 +23,7 @@ public class MDL2IconFontSample extends Application {
 
     @Override
     public void start(Stage stage) {
-        Style startingStyle = Style.LIGHT;
+        Style startingStyle = Style.WIN10_LIGHT;
         JMetro jMetro = new JMetro(startingStyle);
 
         System.setProperty("prism.lcdtext", "false");
@@ -102,7 +102,7 @@ public class MDL2IconFontSample extends Application {
         
         // Footer
         ComboBox<Style> jmetroStyleComboBox = new ComboBox<>();
-        jmetroStyleComboBox.getItems().addAll(Style.DARK, Style.LIGHT);
+        jmetroStyleComboBox.getItems().addAll(Style.values());
         jmetroStyleComboBox.setValue(startingStyle);
         jmetroStyleComboBox.valueProperty().addListener(observable -> jMetro.setStyle(jmetroStyleComboBox.getValue()));
 
@@ -143,4 +143,3 @@ public class MDL2IconFontSample extends Application {
         return hBox;
     }
 }
-

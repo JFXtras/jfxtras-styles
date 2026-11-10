@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/** ControlsFX toggle-switch skin with configurable layout and thumb animation. */
 public class ToggleSwitchSkin extends SkinBase<ToggleSwitch> {
     private HBox mainContainer = new HBox();
 
@@ -188,6 +189,8 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch> {
     }
 
     /**
+     * Returns the CSS metadata supported by this skin.
+     *
      * @return The CssMetaData associated with this class, which may include the
      * CssMetaData of its super classes.
      */
@@ -300,4 +303,3 @@ public class ToggleSwitchSkin extends SkinBase<ToggleSwitch> {
         }
     }
 }
-
